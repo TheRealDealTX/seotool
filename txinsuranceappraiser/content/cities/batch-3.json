@@ -1,0 +1,2550 @@
+{
+ "amarillo": {
+  "local_intro": "Sitting high on the Llano Estacado, Amarillo mixes mid-century brick ranch homes near Wolflin and the medical district with newer subdivisions spreading southwest toward Canyon. Ranching, feedlot, and freight businesses keep a large stock of metal warehouses and commercial roofs in play. Hail is the defining loss here, often arriving with high wind that shreds shingles and pocks siding in minutes. An Amarillo insurance appraiser regularly sees disputes over whether older roofs were already worn or truly storm-damaged.",
+  "neighborhoods": [
+   "Wolflin",
+   "Puckett",
+   "Sleepy Hollow",
+   "Westover Park",
+   "City View",
+   "The Colonies"
+  ],
+  "landmarks": [
+   "I-40",
+   "I-27",
+   "Amarillo Boulevard (Historic Route 66)",
+   "Palo Duro Canyon"
+  ],
+  "weather": "The Panhandle sits in one of the most active hail corridors in the country, and spring supercells regularly drop large stones across Amarillo. Straight-line winds and occasional tornadoes accompany those storms, while winter brings blizzards, ice, and hard freezes that burst pipes in older homes. Dry, windy late-winter conditions also raise grass-fire risk on the city's rural edges, and blowing dust works into roofing and HVAC systems.",
+  "property_mix": "Composition and architectural shingle roofs dominate residential streets, with plenty of brick veneer and older pier-and-beam homes in established neighborhoods. Impact-resistant shingles are increasingly common. Commercial and agricultural properties lean on metal buildings, standing-seam roofs, and flat built-up or TPO systems.",
+  "zip_codes": [
+   "79106",
+   "79109",
+   "79110",
+   "79119"
+  ],
+  "faq_local": {
+   "q": "My Amarillo roof was replaced after a hail storm a few years ago and got hit again. Can appraisal help if the insurer calls it cosmetic?",
+   "a": "Yes, in many cases. When the dispute is about how much damage the hail caused or what repairs cost, the appraisal clause lets each side's appraiser document the loss and an umpire resolves differences. In Amarillo, policies sometimes carry cosmetic-damage exclusions for metal roofing, so the appraiser should review the policy wording and measure functional damage such as fractured mats, lost granules, and broken seals."
+  }
+ },
+ "carrollton": {
+  "local_intro": "Carrollton blends 1970s and 1980s brick homes in its southern half with newer master-planned communities north of the George Bush Turnpike. Old Downtown Carrollton, a busy Koreatown corridor, and light-industrial parks along I-35E add a significant commercial footprint. Many original roofs and plumbing systems are reaching the end of their service life, which makes hail and water claims common and sometimes contested. A Carrollton insurance appraiser often has to separate storm damage from age-related wear on these mature houses.",
+  "neighborhoods": [
+   "Old Downtown Carrollton",
+   "Castle Hills",
+   "Josey Ranch",
+   "Indian Creek",
+   "Country Place",
+   "Hebron"
+  ],
+  "landmarks": [
+   "I-35E",
+   "President George Bush Turnpike",
+   "Sam Rayburn Tollway",
+   "Elm Fork of the Trinity River"
+  ],
+  "weather": "North Dallas County sits squarely in DFW hail alley, with spring storms capable of producing damaging hail and straight-line winds across Carrollton. Tornadoes are less frequent but possible, as the December 2015 outbreak in nearby Rowlett and Garland showed. Winter Storm Uri in February 2021 caused widespread pipe bursts, and the area's expansive clay soils shift foundations during drought and heavy rain cycles.",
+  "property_mix": "Most homes are brick veneer with composition or architectural shingle roofs, many on slab foundations that move with the clay. Townhome and newer communities add some concrete tile. Warehouses and office-flex buildings along the freeways typically use flat TPO, modified-bitumen, or metal roofing.",
+  "zip_codes": [
+   "75006",
+   "75007",
+   "75010"
+  ],
+  "faq_local": {
+   "q": "Is hail damage on an older Carrollton roof still worth disputing through appraisal?",
+   "a": "It can be. Insurers sometimes point to age and granule loss on Carrollton's 1980s-era roofs and offer only partial repairs. An appraiser can test-square slopes, document bruised or fractured shingles, and check whether matching or code upgrades apply under the policy. Appraisal decides the amount of loss, so it works best when coverage is accepted but the scope or price is in dispute."
+  }
+ },
+ "odessa": {
+  "local_intro": "Odessa grew with the Permian Basin oil field, and its housing tells that story, from compact postwar ranch homes near downtown to newer subdivisions built during recent drilling booms. Oilfield service yards, pipe storage, and metal shop buildings line the highways. Hail and fierce wind are the usual culprits behind claims, along with freeze-damaged plumbing. An Odessa insurance appraiser is often called when an adjuster's estimate misses how much labor and material costs climb during busy oil cycles.",
+  "neighborhoods": [
+   "Downtown Odessa",
+   "Country Club Estates",
+   "Northwest Odessa",
+   "West Odessa",
+   "Gardendale",
+   "Mission Dorado"
+  ],
+  "landmarks": [
+   "I-20",
+   "Loop 338",
+   "University of Texas Permian Basin",
+   "Odessa Meteor Crater"
+  ],
+  "weather": "West Texas storms can build quickly over the Permian Basin, producing large hail, damaging downburst winds, and dust storms across Odessa. Tornadoes are possible in spring. Winter cold snaps, including Winter Storm Uri in February 2021, have burst pipes and damaged water heaters in homes not built for extended freezes. Dry conditions and wind also elevate grass-fire risk around the city's rural fringe.",
+  "property_mix": "Expect composition shingle and brick or stucco ranch homes, many with exposed evaporative coolers and rooftop equipment. Newer homes often carry architectural shingles. Commercial and industrial sites rely heavily on metal buildings with standing-seam or R-panel roofs and flat TPO on retail centers.",
+  "zip_codes": [
+   "79761",
+   "79762",
+   "79763",
+   "79765"
+  ],
+  "faq_local": {
+   "q": "Does high demand for contractors in Odessa affect how a claim is valued in appraisal?",
+   "a": "It can. Appraisers estimate the cost to repair at the time and place of loss, so local labor availability and material pricing in Odessa matter. If an insurer's estimate relies on generic pricing that does not reflect Permian Basin conditions, an appraiser can document actual local bids and costs. The umpire then weighs the supported figures when the two appraisers disagree."
+  }
+ },
+ "sugar-land": {
+  "local_intro": "Once a company town built around the Imperial Sugar refinery, Sugar Land is now a polished Fort Bend suburb of master-planned communities, golf course homes, and the Sugar Land Town Square district. Many houses date from the 1980s and 1990s, so roofs, fences, and plumbing are aging together. Tropical wind, heavy rain, and hail drive most claims. A Sugar Land insurance appraiser frequently handles disputes over roof replacement versus repair after a major storm sweeps through.",
+  "neighborhoods": [
+   "First Colony",
+   "Sugar Creek",
+   "Telfair",
+   "Riverstone",
+   "Greatwood",
+   "New Territory"
+  ],
+  "landmarks": [
+   "US 59 (I-69)",
+   "State Highway 6",
+   "Brazos River",
+   "Sugar Land Town Square"
+  ],
+  "weather": "Sugar Land faces Gulf hurricanes and tropical storms, with Hurricane Harvey in 2017 bringing prolonged rain and river flooding along the Brazos, and Hurricane Beryl in 2024 knocking down trees and power across Fort Bend County. Spring hail and severe thunderstorms are recurring threats. Winter Storm Uri in February 2021 burst pipes in many homes, and the area's clay soils can stress foundations.",
+  "property_mix": "Brick veneer homes with composition and architectural shingle roofs are typical, with some concrete tile and slate-look roofs in upscale sections. Slab foundations prevail. Retail and office buildings around Town Square and Highway 6 typically use flat TPO or modified-bitumen roofing.",
+  "zip_codes": [
+   "77478",
+   "77479",
+   "77498"
+  ],
+  "faq_local": {
+   "q": "After a hurricane, my Sugar Land insurer paid for a few shingles. Can appraisal address a full roof replacement?",
+   "a": "Appraisal can address how much the roof damage costs to repair properly. If wind lifted or creased shingles across multiple slopes of a Sugar Land home, an appraiser can document the extent, check whether repairs can be matched, and price the work. If the insurer disputes coverage itself, that issue usually falls outside appraisal, but the amount-of-loss question often resolves most disputes."
+  }
+ },
+ "north-richland-hills": {
+  "local_intro": "North Richland Hills straddles the Mid-Cities between Fort Worth and DFW Airport, with 1960s and 1970s ranch homes on its south side and larger newer houses near Home Town and the northern edges. Retail along Rufe Snow Drive and the NorthEast Mall area adds commercial roofs to the mix. Hail is the big recurring threat, and older homes often see foundation and plumbing issues too. A North Richland Hills insurance appraiser commonly reviews roof and siding claims after spring storms.",
+  "neighborhoods": [
+   "Home Town",
+   "Smithfield",
+   "Richland Hills",
+   "Thornbridge",
+   "Iron Horse",
+   "Fossil Creek area"
+  ],
+  "landmarks": [
+   "Loop 820",
+   "State Highway 26 (Grapevine Highway)",
+   "Rufe Snow Drive",
+   "Iron Horse Golf Course"
+  ],
+  "weather": "Northeast Tarrant County regularly sees spring hailstorms and damaging straight-line winds, with occasional tornadoes during the stormiest months. Flash flooding can affect low areas along local creeks after intense downpours. Winter Storm Uri in February 2021 caused frozen and burst pipes across the city, and the shrink-swell clay soils typical of the Mid-Cities can crack slabs and brick.",
+  "property_mix": "Brick veneer homes with composition shingle roofs dominate, with architectural shingles common on newer builds. Older neighborhoods include some pier-and-beam construction. Retail and light-industrial buildings typically carry flat TPO, built-up, or modified-bitumen roofs.",
+  "zip_codes": [
+   "76180",
+   "76182"
+  ],
+  "faq_local": {
+   "q": "How does appraisal handle hail-damaged siding and gutters on a North Richland Hills home?",
+   "a": "Siding, gutters, window screens, and fences are part of the loss and should be included in the appraisal. In North Richland Hills, hail often dents aluminum gutters and cracks fiber cement or vinyl siding on the storm-facing elevations. An appraiser documents each elevation, checks whether replacement material will match, and prices the full scope so the award reflects more than just the roof."
+  }
+ },
+ "wylie": {
+  "local_intro": "Wylie has transformed from a small railroad town into one of Collin County's fastest-growing suburbs, with a historic downtown on Ballard Avenue surrounded by subdivisions built mostly since the late 1990s. Proximity to Lake Lavon adds lakeside homes and open exposure to storms. Hail and wind claims dominate, often affecting many similar homes in the same neighborhood at once. A Wylie insurance appraiser often compares roofs street by street when insurers settle differently for nearly identical damage.",
+  "neighborhoods": [
+   "Historic Downtown Wylie",
+   "Birmingham Farms",
+   "Woodbridge",
+   "Bozman Farms",
+   "Lakeside Estates",
+   "St. Paul"
+  ],
+  "landmarks": [
+   "State Highway 78",
+   "FM 544",
+   "Lake Lavon",
+   "President George Bush Turnpike"
+  ],
+  "weather": "Wylie lies in the heart of North Texas hail country, and large-hail storms have repeatedly struck the city, including a notable April 2016 event that damaged thousands of roofs. Spring supercells also bring straight-line winds and tornado warnings. Winter freezes such as Winter Storm Uri in February 2021 caused burst pipes, and expansive clay soils move foundations on many newer slabs.",
+  "property_mix": "Most homes are brick or stone veneer with composition or architectural shingle roofs on post-tensioned slabs. Impact-resistant shingles appear on many replacements. Downtown buildings and newer retail use flat TPO and modified-bitumen roofs, with some metal on commercial and rural properties.",
+  "zip_codes": [
+   "75098"
+  ],
+  "faq_local": {
+   "q": "My neighbors in Wylie got full roof replacements, but my insurer only approved repairs. Can appraisal help?",
+   "a": "Appraisal looks at your own roof's damage and repair cost, not your neighbors' outcomes, but similar damage nearby is often a useful sign. A Wylie appraiser can inspect each slope, document hail hits per test square, and evaluate whether shingles can be repaired without damaging surrounding material. If the evidence supports replacement, that is presented to the other appraiser and, if needed, an umpire."
+  }
+ },
+ "port-arthur": {
+  "local_intro": "On the shore of Sabine Lake, Port Arthur is defined by refineries, the ship channel, and neighborhoods of older wood-frame and brick homes, many built during the mid-twentieth century oil boom. Hurricanes and repeated flooding have left a long claims history across the city. Wind-driven rain, roof loss, and flood-versus-wind disputes are common. A Port Arthur insurance appraiser often works through windstorm claims where insurers and owners disagree over what the wind actually caused.",
+  "neighborhoods": [
+   "Downtown Port Arthur",
+   "Lakeview",
+   "Griffing Park",
+   "El Vista",
+   "Pleasure Island",
+   "Sabine Pass"
+  ],
+  "landmarks": [
+   "State Highway 87",
+   "State Highway 73",
+   "Sabine Lake",
+   "Port Arthur Seawall"
+  ],
+  "weather": "Port Arthur is among the most hurricane-exposed cities in Texas. Hurricane Rita in 2005 and Hurricane Ike in 2008 caused severe wind and surge damage, while Hurricane Harvey in 2017 produced catastrophic rainfall flooding across the city. Hurricane Laura in 2020 also brought strong winds to the area. Severe thunderstorms, high humidity, and occasional freezes add roof leaks, mold, and pipe losses.",
+  "property_mix": "Older homes are often pier-and-beam with wood siding and composition shingle roofs, alongside brick ranch homes on slabs. Metal roofs are common on rebuilt homes and outbuildings. Industrial and commercial properties use metal buildings and flat modified-bitumen or TPO systems.",
+  "zip_codes": [
+   "77640",
+   "77642"
+  ],
+  "faq_local": {
+   "q": "Does a windstorm deductible change how my Port Arthur claim is handled in appraisal?",
+   "a": "The deductible is applied after the amount of loss is set, so appraisal still focuses on the full cost of wind damage. Many Port Arthur policies carry a percentage hurricane or windstorm deductible, and coverage may run through TWIA. An appraiser documents roof, siding, and interior water damage tied to wind, which matters because flood damage is typically handled under a separate flood policy."
+  }
+ },
+ "rockwall": {
+  "local_intro": "Rockwall sits on the eastern shore of Lake Ray Hubbard, where upscale lakefront homes, Harbor district condos, and steadily expanding subdivisions share Texas's smallest county. The historic courthouse square anchors an older core, while much of the housing dates from the 1990s onward. Exposure across open water means hail and wind hit hard here. A Rockwall insurance appraiser often handles high-value roofs such as slate-look, tile, and premium architectural shingles where pricing disputes run large.",
+  "neighborhoods": [
+   "The Harbor",
+   "Chandlers Landing",
+   "Downtown Rockwall Square",
+   "Stone Creek",
+   "Heath",
+   "Fate"
+  ],
+  "landmarks": [
+   "I-30",
+   "State Highway 205",
+   "Lake Ray Hubbard",
+   "John King Boulevard"
+  ],
+  "weather": "Rockwall regularly sees spring hail and wind storms rolling east from Dallas, with lake exposure amplifying wind on shoreline homes. The December 2015 tornado outbreak struck nearby Rowlett and Garland, a reminder that tornadoes are a real risk. Winter Storm Uri in February 2021 caused widespread pipe bursts, and the county's dense clay soils shift foundations during wet-dry cycles.",
+  "property_mix": "Brick and stone veneer homes with architectural shingle roofs are standard, with concrete tile, slate-look synthetics, and standing-seam metal accents on custom lakefront homes. The Harbor and retail centers use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "75087",
+   "75032"
+  ],
+  "faq_local": {
+   "q": "My Rockwall home has a premium tile roof. How does appraisal handle hard-to-match materials?",
+   "a": "Matching is a frequent issue on Rockwall's custom homes. If damaged tiles or designer shingles are discontinued or will not match in color and profile, an appraiser can document that and price a uniform repair where the policy and Texas rules support it. The appraiser also accounts for specialized labor, underlayment, and flashing, which are often underestimated on premium roof systems."
+  }
+ },
+ "navasota": {
+  "local_intro": "Navasota is a small Grimes County town known for its Victorian-era downtown, blues heritage, and the surrounding ranch land between Houston and the Brazos Valley. Its housing ranges from older wood-frame homes near the historic district to rural properties with barns and metal outbuildings. Storm wind, hail, and falling trees cause most claims. A Navasota insurance appraiser often deals with rural claims involving detached structures, fencing, and older homes that need careful scoping.",
+  "neighborhoods": [
+   "Historic Downtown Navasota",
+   "Anderson",
+   "Plantersville",
+   "Grimes County rural areas",
+   "Bryan",
+   "College Station"
+  ],
+  "landmarks": [
+   "State Highway 6",
+   "State Highway 105",
+   "Navasota River",
+   "Brazos River"
+  ],
+  "weather": "Navasota sits far enough inland to escape storm surge but close enough to feel tropical systems, as Hurricane Harvey in 2017 brought heavy rain and river flooding to the Brazos and Navasota river bottoms. Spring thunderstorms produce hail, straight-line winds, and occasional tornadoes. Winter Storm Uri in February 2021 froze pipes across Grimes County, and large trees create a constant risk of limb damage.",
+  "property_mix": "Older homes feature wood siding, pier-and-beam foundations, and composition or metal roofs. Newer homes are typically brick veneer with architectural shingles. Rural properties include barns, shops, and equipment sheds with exposed-fastener metal roofs, while downtown has historic masonry commercial buildings.",
+  "zip_codes": [
+   "77868"
+  ],
+  "faq_local": {
+   "q": "Can a Navasota appraisal include damage to my barn and fences, not just the house?",
+   "a": "Yes, if those structures are covered under your policy, usually as other structures. Navasota properties often have barns, pole sheds, and long fence lines that take wind and tree damage. An appraiser can document each structure separately, measure fence runs, and price repairs appropriately. It is important to review coverage limits for other structures, since appraisal sets the loss amount within the policy's terms."
+  }
+ },
+ "waxahachie": {
+  "local_intro": "Known as the Gingerbread City for its Victorian homes and the landmark Ellis County Courthouse, Waxahachie pairs historic architecture with rapidly growing subdivisions along I-35E and US 287. Older homes near downtown carry original wood details, while newer builds follow typical North Texas construction. Hail, wind, and foundation-related water issues shape most claims. A Waxahachie insurance appraiser regularly encounters claims where historic features require specialized repair pricing.",
+  "neighborhoods": [
+   "Historic Downtown Waxahachie",
+   "Garden Valley",
+   "Saddlebrook Estates",
+   "Buffalo Ridge",
+   "Red Oak",
+   "Midlothian"
+  ],
+  "landmarks": [
+   "I-35E",
+   "US 287",
+   "Ellis County Courthouse",
+   "Lake Waxahachie"
+  ],
+  "weather": "Ellis County sits on the southern edge of DFW hail alley, and Waxahachie sees spring hail, damaging straight-line winds, and periodic tornadoes. Heavy rains can flood low-lying areas near creeks. Winter Storm Uri in February 2021 caused frozen pipes and roof ice damage. The Blackland Prairie's highly expansive clay soils are notorious for cracking foundations and brick in local homes.",
+  "property_mix": "Historic homes feature wood siding, decorative trim, pier-and-beam foundations, and composition or metal roofs. Newer subdivisions use brick veneer with architectural shingles on slabs. Downtown masonry buildings and highway retail rely on flat built-up, modified-bitumen, or TPO roofing.",
+  "zip_codes": [
+   "75165",
+   "75167"
+  ],
+  "faq_local": {
+   "q": "How are repairs to a historic Waxahachie home valued in an appraisal?",
+   "a": "Historic homes in Waxahachie often have wood siding profiles, trim, and windows that cost more to replicate than modern materials. An appraiser documents original features and prices like-kind repairs under the policy's replacement cost terms. If local ordinances require specific materials in the historic district, any ordinance or law coverage on the policy may also be relevant to the final award."
+  }
+ },
+ "fulshear": {
+  "local_intro": "Fulshear went from a small farm town to one of the Houston area's fastest-growing cities, with master-planned communities like Cross Creek Ranch and Fulbrook surrounding a modest historic core. Most homes are new, so claims tend to center on storm damage to young roofs, siding, and fences rather than age. Wind, tropical rain, and hail are the main threats. A Fulshear insurance appraiser often reviews whether newer roofs were properly scoped after hurricanes or spring storms.",
+  "neighborhoods": [
+   "Cross Creek Ranch",
+   "Fulbrook on Fulshear Creek",
+   "Firethorne",
+   "Weston Lakes",
+   "Polo Ranch",
+   "Katy"
+  ],
+  "landmarks": [
+   "FM 1093",
+   "FM 359",
+   "Westpark Tollway",
+   "Brazos River"
+  ],
+  "weather": "Fulshear is exposed to Gulf hurricanes and tropical storms; Hurricane Beryl in 2024 brought damaging winds and widespread power loss across Fort Bend County, and Hurricane Harvey in 2017 caused heavy rain and flooding in parts of the area. Spring severe storms bring hail and straight-line winds. Winter Storm Uri in February 2021 burst pipes, and clay soils can affect slab foundations.",
+  "property_mix": "Most homes are brick or stone veneer with architectural composition shingle roofs, with some concrete tile and standing-seam metal accents on custom homes. Slab foundations are standard. Newer retail and commercial buildings use flat TPO roofing.",
+  "zip_codes": [
+   "77441"
+  ],
+  "faq_local": {
+   "q": "My Fulshear home is only a few years old. Why would the insurer deny replacing hail-damaged shingles?",
+   "a": "Insurers sometimes argue that damage to newer roofs is minor or cosmetic. A Fulshear appraiser can document hail impacts, granule displacement, and fractured mats on each slope, and evaluate whether repairs can blend with existing shingles. If coverage is accepted but the scope is disputed, appraisal lets an independent process set the repair amount based on the actual damage."
+  }
+ },
+ "friendswood": {
+  "local_intro": "Friendswood, founded by Quakers in the late 1800s, is a family-oriented suburb split between Galveston and Harris counties, with tree-lined neighborhoods along Clear Creek and newer communities to the west. Homes span from 1970s brick ranches to larger recent builds. Flooding has historically been the city's most severe threat, while wind and hail also generate frequent roof claims. A Friendswood insurance appraiser often helps owners sort out wind-related damage from water losses after tropical storms.",
+  "neighborhoods": [
+   "Wedgewood Village",
+   "Forest Bend",
+   "West Ranch",
+   "Polly Ranch",
+   "Heritage Park",
+   "Friendswood Lakes"
+  ],
+  "landmarks": [
+   "FM 518",
+   "FM 528",
+   "Clear Creek",
+   "Beltway 8"
+  ],
+  "weather": "Friendswood sits along Clear Creek, and Hurricane Harvey in 2017 caused severe flooding across much of the city. Hurricane Ike in 2008 brought damaging winds, and Hurricane Beryl in 2024 downed trees and power lines in the area. Spring storms produce hail and straight-line winds. Winter Storm Uri in February 2021 burst pipes, while humid conditions promote mold after any water intrusion.",
+  "property_mix": "Brick veneer homes with composition and architectural shingle roofs dominate, with some elevated homes rebuilt after flooding. Slab foundations are standard. Commercial strips along FM 518 use flat TPO, modified-bitumen, and metal roofing.",
+  "zip_codes": [
+   "77546"
+  ],
+  "faq_local": {
+   "q": "After a tropical storm in Friendswood, how does appraisal handle wind damage versus flood damage?",
+   "a": "Wind and flood are usually covered under separate policies, so the distinction matters. A Friendswood appraiser documents roof openings, lifted shingles, and the path of water entering from above, which typically falls under the homeowners policy. Rising water from Clear Creek or street flooding is generally handled under a flood policy. Clear documentation helps keep wind-related interior damage from being lumped in with flood."
+  }
+ },
+ "copperas-cove": {
+  "local_intro": "Just west of Fort Cavazos, Copperas Cove is a military community where many residents are active-duty families, veterans, and retirees. Neighborhoods run from older brick homes near the original business district to steady new construction on the city's edges, plus a large share of rental properties. Hail and wind storms crossing the Hill Country edge cause most losses. A Copperas Cove insurance appraiser often works with owners who manage claims remotely while deployed or after relocating on new orders.",
+  "neighborhoods": [
+   "Downtown Copperas Cove",
+   "Kempner",
+   "Killeen",
+   "Gatesville",
+   "Lampasas",
+   "Harker Heights"
+  ],
+  "landmarks": [
+   "US 190",
+   "Fort Cavazos",
+   "State Highway 9",
+   "Lake Belton"
+  ],
+  "weather": "Central Texas storms frequently deliver hail and damaging winds to Copperas Cove, with spring and early summer bringing the most active weather. Tornado warnings are not unusual in Coryell and Bell counties. Flash flooding can hit low-water crossings after heavy rain on the limestone terrain. Winter Storm Uri in February 2021 froze pipes across the area, and drought periods raise grass-fire risk on undeveloped land.",
+  "property_mix": "Single-story brick veneer homes with composition shingle roofs are typical, along with many newer architectural shingle roofs on slab foundations. Rental duplexes and manufactured homes are common. Commercial strips along US 190 use flat TPO, built-up, and metal roofing.",
+  "zip_codes": [
+   "76522"
+  ],
+  "faq_local": {
+   "q": "I'm stationed away from Copperas Cove and my rental home had hail damage. Can appraisal move forward without me there?",
+   "a": "Yes. Appraisal can proceed while you are away, as long as you sign the appraisal demand and give your appraiser access to the property through a tenant, property manager, or lockbox. For Copperas Cove owners on orders, an appraiser can inspect, photograph, and measure the roof and exterior, then share documentation electronically so you can stay informed throughout the process."
+  }
+ },
+ "mission-bend": {
+  "local_intro": "An unincorporated community straddling the Harris and Fort Bend county line, Mission Bend is made up largely of 1980s subdivisions built along State Highway 6 and Bellaire Boulevard. Many roofs, water heaters, and fences are original or on their second cycle, and the population is notably diverse. Wind, hail, and tropical rain cause most claims. A Mission Bend insurance appraiser often reviews claims on aging homes where insurers try to attribute storm damage to wear and tear.",
+  "neighborhoods": [
+   "Alief",
+   "Four Corners",
+   "Stafford",
+   "Sugar Land",
+   "Pecan Grove",
+   "Bellaire Boulevard corridor"
+  ],
+  "landmarks": [
+   "State Highway 6",
+   "Bellaire Boulevard",
+   "Westpark Tollway",
+   "Beltway 8"
+  ],
+  "weather": "Mission Bend faces Gulf hurricanes and tropical storms; Hurricane Harvey in 2017 brought days of heavy rain and flooding to parts of southwest Houston, and Hurricane Beryl in 2024 caused wind damage and long power outages. Spring and summer thunderstorms produce hail and straight-line winds. Winter Storm Uri in February 2021 burst pipes, and clay soils can stress older slab foundations.",
+  "property_mix": "Most homes are one- and two-story brick veneer with wood or fiber-cement siding on upper floors and composition shingle roofs on slab foundations. Strip centers along Highway 6 and Bellaire Boulevard use flat modified-bitumen and TPO roofing.",
+  "zip_codes": [
+   "77083"
+  ],
+  "faq_local": {
+   "q": "My Mission Bend insurer says my roof damage is just old age. How does appraisal deal with that?",
+   "a": "Older roofs in Mission Bend can still suffer real storm damage. An appraiser looks for evidence of a specific event, such as fresh creases, lifted tabs, displaced granules, and impact marks, and separates that from general weathering. Depreciation is accounted for in actual cash value, but the full replacement cost is still documented so the award reflects the true repair scope."
+  }
+ },
+ "san-juan": {
+  "local_intro": "San Juan is home to the Basilica of Our Lady of San Juan del Valle, one of the most visited shrines in Texas, and sits between McAllen and Pharr in the heart of Hidalgo County. Housing ranges from older block and stucco homes to newer subdivisions on former farmland, with local businesses lining Business 83. Hurricanes and flooding are major concerns. A San Juan insurance appraiser frequently handles wind and water claims after tropical systems move inland from the Gulf.",
+  "neighborhoods": [
+   "Pharr",
+   "Alamo",
+   "McAllen",
+   "Edinburg",
+   "Hidalgo",
+   "Donna"
+  ],
+  "landmarks": [
+   "I-2 (US 83)",
+   "Basilica of Our Lady of San Juan del Valle",
+   "Business 83",
+   "Rio Grande"
+  ],
+  "weather": "San Juan is exposed to Gulf hurricanes and tropical storms; Hurricane Hanna in 2020 brought damaging winds and severe flooding to Hidalgo County, and Hurricane Dolly in 2008 also caused widespread wind and rain damage across the Valley. Flat terrain makes heavy rains prone to street and neighborhood flooding. Hail storms and severe thunderstorms occur in spring, and rare freezes, such as Winter Storm Uri in February 2021, burst unprotected pipes.",
+  "property_mix": "Homes are often concrete block or frame with stucco or brick, topped with composition shingle roofs; some older homes have flat or low-slope roofs. Metal roofs appear on rural properties. Commercial buildings along Business 83 use flat modified-bitumen and TPO roofing.",
+  "zip_codes": [
+   "78589"
+  ],
+  "faq_local": {
+   "q": "My San Juan home took on water during a hurricane. Will appraisal cover the interior damage?",
+   "a": "It depends on how the water entered. If wind damaged the roof or windows and rain came in, the interior damage is typically part of the homeowners claim and can be appraised. In San Juan, rising water from flooded streets is generally covered only under a flood policy. An appraiser documents the openings and water path so wind-driven damage is properly valued."
+  }
+ },
+ "seguin": {
+  "local_intro": "Seguin, the seat of Guadalupe County and home of Texas Lutheran University, combines a historic downtown and older homes along the Guadalupe River with growing subdivisions toward I-10 and the San Antonio suburbs. Industrial plants and agricultural land surround the city, and Lake McQueeney adds waterfront homes. Hail, wind, and river flooding drive most losses. A Seguin insurance appraiser commonly sees disputes on older homes where roof, siding, and interior damage overlap after a single storm.",
+  "neighborhoods": [
+   "Historic Downtown Seguin",
+   "Lake McQueeney",
+   "Kingsbury",
+   "Geronimo",
+   "New Braunfels",
+   "Cibolo"
+  ],
+  "landmarks": [
+   "I-10",
+   "State Highway 123",
+   "Guadalupe River",
+   "Texas Lutheran University"
+  ],
+  "weather": "Seguin sees spring and fall thunderstorms that bring hail and damaging winds, and the region is known for flash flooding when heavy rain falls on Hill Country watersheds; the Guadalupe River and its lakes can rise quickly. Tornadoes occur occasionally in Guadalupe County. Winter Storm Uri in February 2021 caused burst pipes, and clay soils east of the Balcones Escarpment can shift foundations.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer subdivisions are brick or stone veneer with architectural shingles on slabs. Industrial and commercial buildings use metal roofing and flat TPO systems.",
+  "zip_codes": [
+   "78155"
+  ],
+  "faq_local": {
+   "q": "Does a Seguin home near Lake McQueeney face special issues in an appraisal claim?",
+   "a": "Lakefront homes in Seguin can face stronger wind exposure, older construction, and boat docks or detached structures that need separate valuation. An appraiser documents damage to the main home, docks, and outbuildings if covered. Flood damage from rising lake water is typically excluded from homeowners policies, so it is important to clearly identify wind and hail damage for the appraisal."
+  }
+ },
+ "del-rio": {
+  "local_intro": "Del Rio sits on the Rio Grande across from Ciudad Acuña, with Laughlin Air Force Base to the east and Amistad Reservoir to the northwest. The city has an older core of adobe, stucco, and brick homes near the San Felipe springs, plus newer housing serving military families and border agencies. Hail and flash flooding are the leading perils. A Del Rio insurance appraiser often works on claims where hail hit stucco, tile, and flat roofs hard.",
+  "neighborhoods": [
+   "San Felipe",
+   "Downtown Del Rio",
+   "Val Verde Park",
+   "Cienegas Terrace",
+   "Laughlin Air Force Base area",
+   "Lake Amistad area"
+  ],
+  "landmarks": [
+   "US 90",
+   "US 277",
+   "Amistad Reservoir",
+   "Laughlin Air Force Base"
+  ],
+  "weather": "Del Rio sees powerful thunderstorms capable of large hail and destructive downburst winds. Flash flooding is a serious threat, as shown by the August 1998 flood from Tropical Storm Charley, which caused devastating damage along San Felipe Creek. Dry conditions and wind can raise wildfire risk in surrounding brushland, and occasional hard freezes, such as Winter Storm Uri in February 2021, burst pipes.",
+  "property_mix": "Homes include stucco and block construction with flat or low-slope roofs, brick ranch homes with composition shingles, and some clay or concrete tile. Metal roofs appear on rural properties. Commercial buildings use flat built-up, modified-bitumen, or TPO roofs.",
+  "zip_codes": [
+   "78840"
+  ],
+  "faq_local": {
+   "q": "Hail damaged both the stucco and the flat roof on my Del Rio home. How does appraisal handle that?",
+   "a": "Each component is documented and priced separately. On Del Rio homes, hail can crack stucco, dent metal flashing, and puncture or bruise flat roof membranes, leading to leaks. An appraiser inspects the roof surface, parapets, and stucco walls, then prices repairs that maintain a uniform finish where required. Interior water damage resulting from roof breaches should also be included."
+  }
+ },
+ "lufkin": {
+  "local_intro": "Deep in the Piney Woods, Lufkin grew around timber and manufacturing, and its neighborhoods are shaded by tall pines and hardwoods that pose a constant threat during storms. Housing spans 1950s ranch homes, older pier-and-beam houses, and newer subdivisions around the loop. Angelina College and regional healthcare add commercial properties. Falling trees, wind, and hail cause most losses. A Lufkin insurance appraiser frequently handles claims where a tree impact damages roofing, framing, and interiors in one event.",
+  "neighborhoods": [
+   "Downtown Lufkin",
+   "Crown Colony",
+   "Hudson",
+   "Diboll",
+   "Huntington",
+   "Zavalla"
+  ],
+  "landmarks": [
+   "US 59",
+   "Loop 287",
+   "Angelina National Forest",
+   "Sam Rayburn Reservoir"
+  ],
+  "weather": "Lufkin is far enough inland to avoid storm surge but still feels tropical systems; Hurricane Rita in 2005 brought destructive winds and widespread tree damage to Deep East Texas. Spring storms produce hail, straight-line winds, and tornadoes. Heavy rain can cause localized flooding, and Winter Storm Uri in February 2021 brought ice that snapped limbs and froze pipes.",
+  "property_mix": "Composition shingle roofs are standard, with many older pier-and-beam homes featuring wood siding and newer homes built with brick veneer on slabs. Metal roofs are common on rural properties and outbuildings. Commercial buildings use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "75901",
+   "75904"
+  ],
+  "faq_local": {
+   "q": "A pine tree fell on my Lufkin home during a storm. What does an appraisal cover?",
+   "a": "When covered, tree impacts often affect more than shingles. A Lufkin appraiser documents roof decking, rafters, ceilings, insulation, drywall, and personal property damage, plus tree removal costs allowed by the policy. Interior water intrusion after the impact is also included. Proper scoping of structural framing is important, since initial estimates sometimes miss hidden damage beneath the roof surface."
+  }
+ },
+ "sachse": {
+  "local_intro": "Sachse spans Dallas and Collin counties near Lake Ray Hubbard, and much of its housing was built during a growth surge from the late 1990s onward, including part of the Woodbridge golf community. Commercial development clusters along State Highway 78 and the President George Bush Turnpike. Hail is the dominant cause of claims, often affecting entire neighborhoods at once. A Sachse insurance appraiser regularly evaluates roof, gutter, and fence damage across homes built around the same time.",
+  "neighborhoods": [
+   "Woodbridge",
+   "Murphy",
+   "Wylie",
+   "Garland",
+   "Rowlett",
+   "Rockwall"
+  ],
+  "landmarks": [
+   "President George Bush Turnpike",
+   "State Highway 78",
+   "Lake Ray Hubbard",
+   "Miles Road"
+  ],
+  "weather": "Sachse is squarely in North Texas hail country, with spring supercells producing large hail and straight-line winds. The December 2015 tornado that devastated parts of Garland and Rowlett passed nearby, showing the area's tornado exposure. Winter Storm Uri in February 2021 caused burst pipes, and the expansive clay soils of Dallas and Collin counties shift foundations during droughts and heavy rains.",
+  "property_mix": "Most homes are brick or stone veneer with composition or architectural shingle roofs on post-tensioned slabs. Impact-resistant shingles are increasingly common on replacements. Retail centers along Highway 78 use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "75048"
+  ],
+  "faq_local": {
+   "q": "Should I upgrade to impact-resistant shingles after a hail claim in Sachse, and does that affect appraisal?",
+   "a": "An upgrade is your choice, but appraisal values the cost to repair or replace with like kind and quality. In Sachse, if your damaged roof was standard architectural shingles, the award reflects that material. Any extra cost for Class 4 shingles is typically paid by the owner, though some insurers offer premium discounts that can offset the upgrade over time."
+  }
+ },
+ "converse": {
+  "local_intro": "Converse sits on San Antonio's northeast side next to Joint Base San Antonio-Randolph, and many residents have ties to the military or nearby employers along I-10 and Loop 1604. The city has seen heavy subdivision growth since the 2000s, alongside older homes near the original town center on FM 78. Hail and wind claims are common. A Converse insurance appraiser often reviews roof claims on tract homes where builder-grade shingles took a beating.",
+  "neighborhoods": [
+   "Universal City",
+   "Live Oak",
+   "Kirby",
+   "Schertz",
+   "Judson area",
+   "Randolph Air Force Base area"
+  ],
+  "landmarks": [
+   "Loop 1604",
+   "I-10",
+   "FM 78",
+   "Joint Base San Antonio-Randolph"
+  ],
+  "weather": "Converse sees spring and early summer thunderstorms that bring hail, sometimes large, and damaging straight-line winds to northeast Bexar County. Heavy rain causes flash flooding at low-water crossings and along creeks. Winter Storm Uri in February 2021 burst pipes across the San Antonio area, and the region's clay soils can crack foundations during long dry spells.",
+  "property_mix": "Most homes are single- or two-story with brick veneer and siding, topped with composition or architectural shingle roofs on slab foundations. Commercial centers along FM 78 and Loop 1604 use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "78109"
+  ],
+  "faq_local": {
+   "q": "How do I start an appraisal for hail damage on my Converse home?",
+   "a": "First, review your policy's appraisal clause and confirm the dispute concerns the amount of loss. Then send a written appraisal demand to your insurer and name a competent, independent appraiser. In Converse, an appraiser will inspect the roof, gutters, siding, and fences, then prepare a detailed estimate. The two appraisers work toward agreement, and an umpire resolves remaining differences."
+  }
+ },
+ "princeton": {
+  "local_intro": "Princeton has grown quickly along US 380 in eastern Collin County, changing from a small farming town into a commuter city with large new subdivisions. Most homes are recently built, and the open terrain near Lake Lavon leaves rooftops exposed to strong storms. Hail and wind claims dominate, along with occasional builder-quality issues that surface after storms. A Princeton insurance appraiser regularly evaluates whether newer roofs and siding were scoped correctly after hail events.",
+  "neighborhoods": [
+   "Downtown Princeton",
+   "Lowry Crossing",
+   "Farmersville",
+   "McKinney",
+   "Melissa",
+   "Lavon"
+  ],
+  "landmarks": [
+   "US 380",
+   "Lake Lavon",
+   "FM 982",
+   "Sister Grove Creek"
+  ],
+  "weather": "Princeton sits in an active part of North Texas hail alley, where spring storms bring large hail, damaging straight-line winds, and tornado warnings. Open land around the city allows wind to build. Winter Storm Uri in February 2021 caused frozen pipes and roof damage from ice, and expansive clay soils can affect newer slab foundations.",
+  "property_mix": "Most homes are brick or stone veneer with architectural composition shingle roofs on post-tensioned slabs. Some newer homes feature fiber cement siding and metal accent roofs. Commercial buildings along US 380 use flat TPO and metal roofing.",
+  "zip_codes": [
+   "75407"
+  ],
+  "faq_local": {
+   "q": "My Princeton home is new. Can the builder warranty affect my hail claim or appraisal?",
+   "a": "Builder warranties generally cover defects in workmanship, while homeowners insurance covers sudden storm damage such as hail. If an insurer claims damage in your Princeton home is due to installation issues, an appraiser can document hail impacts and distinguish them from construction defects. Appraisal decides the amount of storm loss; coverage questions about defects may need separate review."
+  }
+ },
+ "balch-springs": {
+  "local_intro": "Balch Springs is a modest, working-class city in southeast Dallas County, bordered by Mesquite and Dallas, with many homes built in the 1960s through 1980s. Original roofs, older plumbing, and aging foundations are common, and the city has a mix of owner-occupied and rental homes. Hail, wind, and freeze-related water losses lead claims. A Balch Springs insurance appraiser often helps owners whose initial settlements did not account for the full cost of repairs on older homes.",
+  "neighborhoods": [
+   "Mesquite",
+   "Seagoville",
+   "Pleasant Grove",
+   "Kleberg",
+   "Forney",
+   "Dallas"
+  ],
+  "landmarks": [
+   "I-635",
+   "I-20",
+   "US 175",
+   "Lake Ray Hubbard"
+  ],
+  "weather": "Balch Springs sees frequent spring hail and straight-line wind events typical of DFW, with occasional tornadoes. Heavy rains can cause localized street and creek flooding. Winter Storm Uri in February 2021 caused widespread pipe bursts in older homes. Long, hot summers can bring grass-fire risk on open land, and the area's expansive clay soils regularly crack foundations and brick.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, on slab or older pier-and-beam foundations. Some homes have metal roofs. Commercial and industrial buildings use metal roofing and flat built-up or TPO systems.",
+  "zip_codes": [
+   "75180"
+  ],
+  "faq_local": {
+   "q": "My Balch Springs home had a pipe burst during a freeze. Can appraisal help with the water damage claim?",
+   "a": "If the insurer accepts coverage but disputes the repair cost, appraisal can resolve the amount of loss. In Balch Springs, older homes may need drywall, flooring, cabinets, insulation, and baseboards replaced after a pipe burst. An appraiser documents moisture readings, affected materials, and drying costs. Repairs to the pipe itself may be handled differently, depending on your policy."
+  }
+ },
+ "colleyville": {
+  "local_intro": "Colleyville is an affluent Tarrant County suburb near DFW Airport, known for large lots, custom homes, and mature trees. Much of the housing dates from the 1980s through 2000s, often with complex rooflines, premium shingles, or tile. Hail is the dominant peril, and roof claims can run large on these homes. A Colleyville insurance appraiser frequently handles disputes over steep, cut-up roofs where accurate measurement and labor pricing matter significantly.",
+  "neighborhoods": [
+   "Grapevine",
+   "Southlake",
+   "Bedford",
+   "Hurst",
+   "Keller",
+   "Euless"
+  ],
+  "landmarks": [
+   "State Highway 26",
+   "State Highway 121",
+   "DFW International Airport",
+   "Glade Road"
+  ],
+  "weather": "Colleyville is in the heart of DFW hail alley, with spring supercells bringing large hail and damaging winds. Tornadoes are a seasonal risk across northeast Tarrant County. Winter Storm Uri in February 2021 burst pipes in many larger homes, and expansive clay soils can shift foundations. Mature trees also contribute to wind-related roof damage.",
+  "property_mix": "Homes are typically brick or stone veneer with architectural shingles, concrete tile, or slate-look synthetic roofs, often with steep pitches and multiple valleys. Standing-seam metal accents are common. Commercial buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76034"
+  ],
+  "faq_local": {
+   "q": "Why do steep, complex roofs in Colleyville often lead to appraisal disputes?",
+   "a": "Steep pitches, multiple stories, and many hips and valleys increase labor, safety equipment, and waste factors. In Colleyville, estimates sometimes undercount these items or miss high-steep charges and additional layers. An appraiser measures the roof accurately and prices the real labor required. Those details can significantly change the total, which is why accurate roof measurement is important."
+  }
+ },
+ "saginaw": {
+  "local_intro": "North of Fort Worth, Saginaw grew from a rail and grain-elevator town into a suburb with steady subdivision growth near Blue Mound Road and the Alliance corridor. Housing mixes older brick homes with newer tract developments, and industrial facilities sit along the rail lines. Hail and wind storms drive most claims. A Saginaw insurance appraiser often reviews roof and siding claims on builder-grade homes hit by spring storms crossing north Tarrant County.",
+  "neighborhoods": [
+   "Blue Mound",
+   "Watauga",
+   "Haltom City",
+   "Fort Worth Alliance area",
+   "Lake Worth",
+   "Eagle Mountain area"
+  ],
+  "landmarks": [
+   "I-35W",
+   "Loop 820",
+   "Business US 287",
+   "Fort Worth Alliance Airport"
+  ],
+  "weather": "Saginaw is in an active part of DFW hail alley, with spring storms producing large hail, straight-line winds, and tornado threats. Heavy downpours can cause localized flooding near creeks. Winter Storm Uri in February 2021 caused burst pipes throughout north Fort Worth, and expansive clay soils can damage slabs and brick veneer.",
+  "property_mix": "Homes are primarily single-story brick veneer with composition or architectural shingle roofs on slab foundations. Older homes may have wood siding. Industrial and commercial buildings use metal roofs and flat TPO or modified-bitumen systems.",
+  "zip_codes": [
+   "76179"
+  ],
+  "faq_local": {
+   "q": "My Saginaw roof has hail damage, but the adjuster only approved one slope. Is that typical?",
+   "a": "Partial approvals happen when an adjuster finds damage concentrated on certain slopes. A Saginaw appraiser inspects every slope, documents hits per test square, and considers whether repairs to one slope would create mismatched shingles or damage adjacent material. If the evidence supports more work, appraisal allows the full scope to be presented and resolved by the appraisers or an umpire."
+  }
+ },
+ "kerrville": {
+  "local_intro": "Set along the Guadalupe River in the heart of the Hill Country, Kerrville draws retirees, summer camp families, and visitors, and its homes range from historic limestone houses to hillside custom builds and riverside properties. Schreiner University and regional healthcare anchor the commercial side. Hail, flash flooding, and wind are the defining perils. A Kerrville insurance appraiser often handles claims on stone and metal-roofed homes where specialty materials make pricing more involved.",
+  "neighborhoods": [
+   "Downtown Kerrville",
+   "Riverhill",
+   "Ingram",
+   "Center Point",
+   "Hunt",
+   "Comfort"
+  ],
+  "landmarks": [
+   "I-10",
+   "Guadalupe River",
+   "State Highway 16",
+   "Schreiner University"
+  ],
+  "weather": "Kerrville sits in Flash Flood Alley, where heavy rain on steep limestone terrain can send the Guadalupe River rising rapidly, as the catastrophic July 2025 flood in Kerr County tragically showed. Spring storms bring large hail and damaging winds, and occasional tornadoes. Drought and cedar brush raise wildfire risk, and winter freezes such as Winter Storm Uri in February 2021 burst pipes in many homes.",
+  "property_mix": "Homes often feature limestone or stucco exteriors with standing-seam metal or architectural shingle roofs; older homes may have pier-and-beam foundations. Hillside custom homes include tile accents. Commercial buildings use metal roofing and flat TPO or built-up systems.",
+  "zip_codes": [
+   "78028"
+  ],
+  "faq_local": {
+   "q": "Hail dented the standing-seam metal roof on my Kerrville home. Is that covered or just cosmetic?",
+   "a": "It depends on your policy. Some Texas policies exclude cosmetic damage to metal roofs, meaning dents that do not affect function. A Kerrville appraiser reviews the policy language and inspects for functional damage, such as compromised seams, fasteners, coatings, or panels that would allow water entry. If coverage applies and the amount is disputed, appraisal can resolve the repair cost."
+  }
+ },
+ "kingsville": {
+  "local_intro": "Kingsville is closely tied to the King Ranch, Texas A&M University-Kingsville, and Naval Air Station Kingsville, giving it a blend of student rentals, military housing, and long-established family homes. Many houses date from the mid-twentieth century, with brick and frame construction and aging roofs. Hurricane wind, heavy rain, and hail drive claims. A Kingsville insurance appraiser often reviews storm claims on older homes where wind damage and long-term wear are disputed.",
+  "neighborhoods": [
+   "Downtown Kingsville",
+   "Ricardo",
+   "Riviera",
+   "Bishop",
+   "Robstown",
+   "Alice"
+  ],
+  "landmarks": [
+   "US 77 (I-69E)",
+   "King Ranch",
+   "Texas A&M University-Kingsville",
+   "Naval Air Station Kingsville"
+  ],
+  "weather": "Kingsville sits inland from Baffin Bay but within reach of Gulf hurricanes and tropical storms, which bring damaging winds and heavy rain to the Coastal Bend; Hurricane Hanna in 2020 drenched South Texas. Spring and summer thunderstorms produce hail and straight-line winds. Flat terrain contributes to flooding during heavy downpours, and rare freezes like Winter Storm Uri in February 2021 burst unprotected pipes.",
+  "property_mix": "Brick veneer and wood-frame homes with composition shingle roofs are common, including many older pier-and-beam houses. Metal roofs appear on rural properties. University and commercial buildings use flat built-up, modified-bitumen, and TPO roofing.",
+  "zip_codes": [
+   "78363"
+  ],
+  "faq_local": {
+   "q": "Does my Kingsville home need a separate windstorm policy for hurricane damage?",
+   "a": "It depends on your policy and location. Some Kleberg County properties carry wind coverage through the Texas Windstorm Insurance Association, while others have wind included in a standard homeowners policy. Your Kingsville appraiser can review which policy applies to the damage. Appraisal provisions vary between policies, so understanding how each one handles disputes is important before starting the process."
+  }
+ },
+ "horizon-city": {
+  "local_intro": "East of El Paso on the high desert, Horizon City has grown rapidly from a planned community into a commuter suburb with mostly newer stucco and block homes. Wide-open surroundings expose rooftops to wind, blowing dust, and sudden monsoon storms. Hail, wind, and flash flooding are the main perils, along with occasional freeze damage. A Horizon City insurance appraiser often deals with claims involving tile and flat roofs that respond differently to hail than standard shingles.",
+  "neighborhoods": [
+   "Socorro",
+   "Clint",
+   "San Elizario",
+   "Montana Vista",
+   "Homestead Meadows",
+   "El Paso"
+  ],
+  "landmarks": [
+   "I-10",
+   "Loop 375",
+   "Horizon Boulevard",
+   "Fort Bliss"
+  ],
+  "weather": "Horizon City experiences intense summer monsoon storms that bring hail, damaging downburst winds, and flash flooding in arroyos and streets. Spring winds carry dust storms that scour roofs and stucco. While freezes are less frequent, Winter Storm Uri in February 2021 burst pipes in many El Paso County homes. The desert terrain can also see brush and grass fires during dry, windy periods.",
+  "property_mix": "Homes are largely stucco over frame or block, with concrete tile, composition shingle, or flat roofs with parapets. Rooftop evaporative coolers and HVAC units are common. Commercial buildings use flat TPO, modified-bitumen, or foam roofing.",
+  "zip_codes": [
+   "79928"
+  ],
+  "faq_local": {
+   "q": "Hail cracked several concrete tiles on my Horizon City roof. Can appraisal address underlayment too?",
+   "a": "Yes, if the damage affects the underlayment. Concrete tile roofs in Horizon City depend on underlayment for waterproofing, and hail can crack tiles and expose that layer. An appraiser documents broken tiles, checks for leaks, and evaluates whether matching replacement tiles are available. If the underlayment must be replaced to do the work properly, those costs belong in the estimate."
+  }
+ },
+ "ennis": {
+  "local_intro": "Ennis began as a railroad town and is known for its bluebonnet trails and the National Polka Festival, with a historic downtown and Czech heritage. Older frame homes near the center contrast with newer subdivisions along I-45, and industrial plants line the rail corridor. Hail, wind, and clay-soil foundation movement shape most claims. An Ennis insurance appraiser regularly handles roof and siding claims on homes ranging from early twentieth-century houses to recent builds.",
+  "neighborhoods": [
+   "Historic Downtown Ennis",
+   "Garrett",
+   "Bardwell",
+   "Palmer",
+   "Waxahachie",
+   "Red Oak"
+  ],
+  "landmarks": [
+   "I-45",
+   "US 287",
+   "Bardwell Lake",
+   "Texas Motorplex"
+  ],
+  "weather": "Ennis sits on the southern edge of DFW hail alley and sees spring hail, damaging straight-line winds, and occasional tornadoes across Ellis County. Heavy rain can cause creek flooding. Winter Storm Uri in February 2021 caused burst pipes and ice damage, and the Blackland Prairie's expansive clay soils are known for cracking slabs and older pier-and-beam foundations.",
+  "property_mix": "Older homes feature wood siding, pier-and-beam foundations, and composition or metal roofs, while newer subdivisions use brick veneer with architectural shingles on slabs. Industrial and commercial buildings use metal roofing and flat TPO or built-up systems.",
+  "zip_codes": [
+   "75119"
+  ],
+  "faq_local": {
+   "q": "My older Ennis home has both wood siding and a composition roof damaged by hail. How is matching handled?",
+   "a": "Matching can be a key issue in Ennis, where many older homes have wood siding profiles that are hard to find. An appraiser documents damaged boards and evaluates whether replacements will match in profile and finish. For roofs, the appraiser checks shingle availability and color. When repairs would leave an obvious mismatch, the appraisal can address a uniform repair where the policy allows."
+  }
+ },
+ "corinth": {
+  "local_intro": "Corinth sits along I-35E between Denton and Lewisville, close to Lake Lewisville, and is largely made up of subdivisions built from the 1980s through 2000s. Many homes are now on their second roof, while some still have original roofs and plumbing. A campus of North Central Texas College adds institutional buildings. Hail and wind claims are the most common. A Corinth insurance appraiser often reviews hail claims where repairs are disputed on mid-life roofs.",
+  "neighborhoods": [
+   "Lake Dallas",
+   "Shady Shores",
+   "Hickory Creek",
+   "Highland Village",
+   "Denton",
+   "Lewisville"
+  ],
+  "landmarks": [
+   "I-35E",
+   "Lake Lewisville",
+   "FM 2181",
+   "North Central Texas College"
+  ],
+  "weather": "Corinth lies in an active part of North Texas hail alley, with spring storms bringing large hail, straight-line winds, and tornado warnings across Denton County. Lake Lewisville's open water can intensify wind on nearby homes. Winter Storm Uri in February 2021 caused burst pipes, and expansive clay soils can shift foundations during wet-dry cycles.",
+  "property_mix": "Homes are primarily brick veneer with composition or architectural shingle roofs on slab foundations, with some stone accents and fiber cement siding on newer homes. Commercial buildings along I-35E use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76210"
+  ],
+  "faq_local": {
+   "q": "Is there a deadline to request appraisal on my Corinth hail claim?",
+   "a": "Deadlines depend on your policy, and some Texas policies include time limits for invoking appraisal or filing suit. It is wise to review the policy and act promptly once a dispute arises. A Corinth appraiser can help organize photos, estimates, and correspondence. Waiting too long can make it harder to document hail damage, especially if additional storms occur."
+  }
+ },
+ "pecan-grove": {
+  "local_intro": "Pecan Grove is an unincorporated community near Richmond, built around the Pecan Grove Plantation golf course and bordered by the Brazos River. Most homes date from the 1980s and 1990s and sit under mature trees, so roof aging and tree-related damage are common. Hurricanes, heavy rain, and hail drive claims. A Pecan Grove insurance appraiser often handles disputes where wind-thrown limbs and aging shingles complicate the estimate of what storm damage really cost.",
+  "neighborhoods": [
+   "Pecan Grove Plantation",
+   "Richmond",
+   "Rosenberg",
+   "Greatwood",
+   "Sugar Land",
+   "Fulshear"
+  ],
+  "landmarks": [
+   "FM 359",
+   "Brazos River",
+   "US 90A",
+   "Grand Parkway (SH 99)"
+  ],
+  "weather": "Pecan Grove faces Gulf hurricanes and tropical storms; Hurricane Harvey in 2017 brought record rainfall and flooding along the Brazos River, and Hurricane Beryl in 2024 downed trees and power lines across Fort Bend County. Spring storms produce hail and straight-line winds. Winter Storm Uri in February 2021 caused frozen pipes, and clay soils can affect slab foundations.",
+  "property_mix": "Homes are mostly brick veneer with composition or architectural shingle roofs on slab foundations, with some golf course homes featuring tile or slate-look roofing. Commercial buildings nearby use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "77406"
+  ],
+  "faq_local": {
+   "q": "Large oak limbs damaged my Pecan Grove roof during a storm. Does appraisal cover tree removal?",
+   "a": "Tree removal coverage depends on your policy, which often covers debris removal when a tree damages a covered structure, sometimes with a limit. In Pecan Grove, an appraiser documents roof decking, shingles, gutters, and interior damage caused by the limb impact, and includes removal costs where the policy allows. Properly scoping hidden structural damage is often key."
+  }
+ },
+ "stephenville": {
+  "local_intro": "Stephenville, the Erath County seat and home of Tarleton State University, sits amid dairy farms and ranch land southwest of Fort Worth. Housing mixes student rentals, older brick and frame homes near the square, and newer subdivisions on the edges, while rural properties include barns and metal buildings. Hail and wind are the main perils. A Stephenville insurance appraiser often handles claims involving both homes and agricultural structures after spring storms.",
+  "neighborhoods": [
+   "Downtown Stephenville",
+   "Dublin",
+   "Lingleville",
+   "Bluff Dale",
+   "Morgan Mill",
+   "Huckabay"
+  ],
+  "landmarks": [
+   "US 377",
+   "US 67",
+   "US 281",
+   "Tarleton State University"
+  ],
+  "weather": "Stephenville is frequently in the path of spring supercells moving east from West Texas, which produce large hail, damaging straight-line winds, and tornadoes. Heavy rain can cause flash flooding along the Bosque River. Winter freezes like Winter Storm Uri in February 2021 burst pipes, and drought conditions raise wildfire risk on surrounding rangeland.",
+  "property_mix": "Homes include brick veneer ranch houses with composition shingle roofs, older pier-and-beam frame homes, and newer architectural shingle roofs. Rural properties use metal barns and shops with exposed-fastener roofs, while campus and commercial buildings use flat TPO and metal roofing.",
+  "zip_codes": [
+   "76401"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Stephenville home and my metal shop building. Are they handled the same in appraisal?",
+   "a": "They are appraised as separate items, often under different coverage sections. In Stephenville, a home's shingle roof may need replacement while a metal shop building's panels may have dents that raise cosmetic-damage questions. An appraiser reviews the policy for each structure, documents functional damage, and prices repairs separately so each part of the loss is properly valued."
+  }
+ },
+ "terrell": {
+  "local_intro": "Terrell, in Kaufman County along I-20, blends historic homes near downtown with new subdivisions and a growing commercial strip of outlet shopping, distribution centers, and manufacturing. Older wood-frame and brick homes sit alongside rapidly built new neighborhoods. Hail, wind, and freeze-related losses dominate claims. A Terrell insurance appraiser commonly reviews roof claims on both older homes with layered roofing and newer homes with builder-grade shingles.",
+  "neighborhoods": [
+   "Downtown Terrell",
+   "Kaufman",
+   "Forney",
+   "Wills Point",
+   "Elmo",
+   "Poetry"
+  ],
+  "landmarks": [
+   "I-20",
+   "US 80",
+   "State Highway 34",
+   "Southwestern Christian College"
+  ],
+  "weather": "Terrell sees spring hail and damaging straight-line winds typical of the eastern Metroplex, along with occasional tornadoes in Kaufman County. Heavy rains can flood low-lying areas and roadside ditches. Winter Storm Uri in February 2021 caused widespread frozen pipes, and the region's clay soils frequently crack foundations and brick veneer during droughts.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick veneer and architectural shingles on slabs. Distribution centers and retail buildings use metal and flat TPO roofing.",
+  "zip_codes": [
+   "75160"
+  ],
+  "faq_local": {
+   "q": "My older Terrell home has two layers of shingles. Does that affect appraisal?",
+   "a": "Yes, it can increase replacement cost. Removing multiple layers takes more labor and disposal, and local code may require tearing off all layers before installing a new roof. A Terrell appraiser documents the number of layers, decking condition, and any code-required items. Those costs belong in the estimate when the roof needs replacement due to covered storm damage."
+  }
+ },
+ "portland": {
+  "local_intro": "Portland sits on the bluffs across Nueces Bay from Corpus Christi, connected by US 181, and is largely a residential community of brick homes built from the 1960s onward plus newer subdivisions. Industrial facilities and the nearby port employ many residents. Hurricane wind is the defining risk, along with hail and heavy rain. A Portland insurance appraiser often handles windstorm claims where coverage may involve TWIA and percentage deductibles.",
+  "neighborhoods": [
+   "Gregory",
+   "Ingleside",
+   "Taft",
+   "Sinton",
+   "Aransas Pass",
+   "North Beach"
+  ],
+  "landmarks": [
+   "US 181",
+   "Nueces Bay",
+   "Corpus Christi Bay",
+   "Harbor Bridge"
+  ],
+  "weather": "Portland faces direct Gulf hurricane exposure; Hurricane Harvey in 2017 brought destructive winds to the Coastal Bend, and Hurricane Hanna in 2020 brought tropical storm conditions and heavy rain. Bayfront homes face wind and surge risk. Spring thunderstorms can produce hail and straight-line winds, and occasional freezes such as Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically brick veneer with composition or architectural shingle roofs on slab foundations, with some metal roofs and hurricane-rated windows on newer construction. Industrial and commercial buildings use metal roofing and flat TPO systems.",
+  "zip_codes": [
+   "78374"
+  ],
+  "faq_local": {
+   "q": "How does a TWIA windstorm policy affect appraisal on my Portland home?",
+   "a": "Texas Windstorm Insurance Association policies follow their own claims and dispute process, which differs from many private homeowners policies. For Portland homeowners, the appraiser can document wind damage to roofing, siding, windows, and interiors, then follow the procedures and deadlines in the TWIA policy. Reviewing those rules early helps avoid missed steps."
+  }
+ },
+ "angleton": {
+  "local_intro": "Angleton, the Brazoria County seat, combines a historic town center around the courthouse with growing subdivisions along State Highway 288 and older homes shaded by large oaks. Many residents work in petrochemical plants near Freeport. Hurricanes, flooding, and wind dominate claims. An Angleton insurance appraiser often handles storm claims where tree damage, roof loss, and interior water damage combine after a tropical system.",
+  "neighborhoods": [
+   "Downtown Angleton",
+   "Lake Jackson",
+   "Clute",
+   "Danbury",
+   "Brazoria",
+   "Freeport"
+  ],
+  "landmarks": [
+   "State Highway 288",
+   "State Highway 35",
+   "Brazoria County Courthouse",
+   "Oyster Creek"
+  ],
+  "weather": "Angleton is exposed to Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought damaging winds, Hurricane Harvey in 2017 caused severe flooding in Brazoria County, and Hurricane Beryl in 2024 downed trees and power lines across the area. Severe thunderstorms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically brick veneer or wood siding with composition shingle roofs, including older pier-and-beam homes. Metal roofs are common on rural properties. Commercial and industrial buildings use metal roofing and flat TPO or modified-bitumen systems.",
+  "zip_codes": [
+   "77515"
+  ],
+  "faq_local": {
+   "q": "Hurricane winds damaged my Angleton roof and rain soaked the interior. What does appraisal cover?",
+   "a": "When the roof is damaged by wind and rain enters, the interior damage is typically part of the same covered loss. An Angleton appraiser documents the roof openings, ceiling stains, insulation, drywall, flooring, and mold remediation if covered. Clear documentation of how water entered helps distinguish wind-driven damage from flooding, which is usually covered under a separate flood policy."
+  }
+ },
+ "seagoville": {
+  "local_intro": "Seagoville sits in far southeast Dallas County along US 175, a quieter city with older homes, large lots, and rural pockets near the Trinity River bottomlands. Housing ranges from mid-century brick and frame homes to newer subdivisions and manufactured homes. Hail, wind, and freeze damage lead claims. A Seagoville insurance appraiser often handles claims on older homes and outbuildings where repair scope and pricing differ significantly from initial estimates.",
+  "neighborhoods": [
+   "Combine",
+   "Crandall",
+   "Balch Springs",
+   "Mesquite",
+   "Kleberg",
+   "Lancaster"
+  ],
+  "landmarks": [
+   "US 175",
+   "I-20",
+   "Trinity River",
+   "Belt Line Road"
+  ],
+  "weather": "Seagoville sees spring hail and straight-line winds typical of DFW, along with occasional tornadoes in southeast Dallas County. Heavy rain can cause flooding in low areas near the Trinity River. Winter Storm Uri in February 2021 caused frozen and burst pipes, and expansive clay soils regularly shift foundations and crack brick.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, including older pier-and-beam houses and manufactured homes. Metal roofs are common on outbuildings. Commercial buildings use metal and flat built-up roofing.",
+  "zip_codes": [
+   "75159"
+  ],
+  "faq_local": {
+   "q": "My Seagoville property has a home and a detached workshop damaged by hail. How is that appraised?",
+   "a": "The home and workshop are documented separately, usually under dwelling and other structures coverage. In Seagoville, many properties have detached shops, carports, or barns with metal or shingle roofs. An appraiser inspects each structure, documents hail damage, and prices repairs individually. Coverage limits for other structures apply, so understanding those limits helps set expectations."
+  }
+ },
+ "palestine": {
+  "local_intro": "Palestine, the Anderson County seat, is known for the Texas State Railroad, Victorian homes, and spring dogwood displays, with a historic downtown surrounded by older neighborhoods and wooded acreage. Many homes are older wood-frame or brick houses with mature trees nearby. Wind, hail, and tree damage dominate claims. A Palestine insurance appraiser often deals with claims on historic homes where repairs to original materials require specialized pricing.",
+  "neighborhoods": [
+   "Historic Downtown Palestine",
+   "Elkhart",
+   "Frankston",
+   "Tennessee Colony",
+   "Neches",
+   "Montalba"
+  ],
+  "landmarks": [
+   "US 79",
+   "US 84",
+   "US 287",
+   "Texas State Railroad"
+  ],
+  "weather": "Palestine sees spring storms that bring hail, damaging straight-line winds, and tornadoes across East Texas. Tropical systems moving inland can bring heavy rain and wind. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, while mature trees increase the risk of roof and structural damage during storms.",
+  "property_mix": "Older homes feature wood siding, decorative trim, and pier-and-beam foundations with composition or metal roofs. Newer homes use brick veneer and architectural shingles on slabs. Downtown masonry buildings use flat built-up or modified-bitumen roofing.",
+  "zip_codes": [
+   "75801",
+   "75803"
+  ],
+  "faq_local": {
+   "q": "A storm damaged the wood siding on my historic Palestine home. Can appraisal account for custom millwork?",
+   "a": "Yes. Historic homes in Palestine often have siding profiles, trim, and details that require custom milling or specialized carpentry. An appraiser documents the existing materials and prices like-kind replacement under the policy's terms. If modern materials would not match the original appearance, the appraisal can address the cost of matching where the policy and Texas rules support it."
+  }
+ },
+ "brenham": {
+  "local_intro": "Brenham, the Washington County seat, is famous for Blue Bell Creameries, rolling bluebonnet country, and a well-preserved downtown of brick storefronts. Victorian and early twentieth-century homes surround the center, while newer subdivisions and rural acreage extend outward. Blinn College adds student housing. Wind, hail, and falling trees cause most claims. A Brenham insurance appraiser often handles claims on older homes and rural properties with barns, fencing, and detached garages.",
+  "neighborhoods": [
+   "Historic Downtown Brenham",
+   "Chappell Hill",
+   "Burton",
+   "Independence",
+   "Washington",
+   "Navasota"
+  ],
+  "landmarks": [
+   "US 290",
+   "State Highway 36",
+   "Washington-on-the-Brazos State Historic Site",
+   "Blinn College"
+  ],
+  "weather": "Brenham lies inland but feels tropical systems; Hurricane Harvey in 2017 brought heavy rain and flooding to parts of Washington County, and Hurricane Beryl in 2024 brought strong winds and tree damage to the region. Spring thunderstorms produce hail, damaging winds, and occasional tornadoes. Winter Storm Uri in February 2021 burst pipes, and large trees heighten the risk of limb damage.",
+  "property_mix": "Historic homes feature wood siding, decorative trim, pier-and-beam foundations, and composition or metal roofs. Newer homes use brick veneer and architectural shingles. Rural properties include metal barns and shops, while downtown masonry buildings use flat built-up or modified-bitumen roofs.",
+  "zip_codes": [
+   "77833"
+  ],
+  "faq_local": {
+   "q": "My Brenham home is over a hundred years old. Does that make appraisal harder?",
+   "a": "Older homes in Brenham often have materials and construction methods that are costly to match, which can lead to disputes. An appraiser documents original siding, trim, windows, and roofing and prices like-kind repairs under the policy. Depreciation affects actual cash value, but replacement cost should still reflect the true expense of restoring the home's materials properly."
+  }
+ },
+ "brownwood": {
+  "local_intro": "Brownwood, near the geographic center of Texas, is the Brown County seat and home to Howard Payne University, with Lake Brownwood drawing weekend residents and retirees. Housing includes early twentieth-century homes, mid-century ranch houses, and lake properties with docks and outbuildings. Hail and wind storms dominate claims. A Brownwood insurance appraiser often handles claims on older homes and lake properties after spring storms sweep across the area.",
+  "neighborhoods": [
+   "Downtown Brownwood",
+   "Early",
+   "Bangs",
+   "Blanket",
+   "Lake Brownwood",
+   "Zephyr"
+  ],
+  "landmarks": [
+   "US 377",
+   "US 67",
+   "US 84",
+   "Lake Brownwood"
+  ],
+  "weather": "Brownwood sees spring storms that produce large hail, damaging straight-line winds, and tornadoes, as supercells track across Central and West Central Texas. Heavy rain can cause flash flooding along Pecan Bayou. Winter Storm Uri in February 2021 burst pipes, and drought periods raise wildfire risk on surrounding rangeland and brush.",
+  "property_mix": "Homes include brick veneer ranch houses, older wood-frame homes on pier-and-beam foundations, and composition or metal roofs. Lake properties often have metal-roofed boathouses and docks. Commercial buildings use flat built-up, TPO, or metal roofing.",
+  "zip_codes": [
+   "76801"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Lake Brownwood home and boathouse. Is the boathouse included in appraisal?",
+   "a": "If your policy covers the boathouse, typically under other structures, it can be included in the appraisal. Lake Brownwood boathouses often have metal roofs and framing exposed to wind and hail. An appraiser documents damage to each structure separately and prices repairs accordingly. Reviewing coverage limits and any exclusions for docks or waterfront structures is an important first step."
+  }
+ },
+ "gainesville": {
+  "local_intro": "Gainesville, the Cooke County seat near the Oklahoma border, blends a historic downtown and Victorian homes with ranch land, oil leases, and newer development along I-35. North Central Texas College and the Frank Buck Zoo are local fixtures. Hail and wind storms crossing the Red River area drive most losses. A Gainesville insurance appraiser often handles claims on older homes and rural properties where barns and fences add to the total loss.",
+  "neighborhoods": [
+   "Historic Downtown Gainesville",
+   "Lindsay",
+   "Muenster",
+   "Valley View",
+   "Callisburg",
+   "Lake Kiowa"
+  ],
+  "landmarks": [
+   "I-35",
+   "US 82",
+   "Lake Texoma",
+   "Ray Roberts Lake"
+  ],
+  "weather": "Gainesville lies in an active part of North Texas for severe storms, with spring supercells bringing large hail, straight-line winds, and tornadoes. Heavy rains can flood creeks and low areas. Winter storms bring ice and freezing temperatures, including Winter Storm Uri in February 2021, which burst pipes. Wind and drought can raise grass-fire risk on surrounding ranch land.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick veneer and architectural shingles. Rural properties include metal barns and shops, and downtown masonry buildings use flat built-up roofing.",
+  "zip_codes": [
+   "76240"
+  ],
+  "faq_local": {
+   "q": "Hail hit my Gainesville home and my ranch fencing. How does appraisal value fencing damage?",
+   "a": "Fence damage is typically covered under other structures. In Gainesville, ranch properties may have barbed wire, pipe, or wood fencing affected by wind or falling trees. An appraiser measures the damaged runs, documents materials, and prices repairs based on local labor and materials. Coverage limits for other structures apply, so knowing those limits helps frame the appraisal."
+  }
+ },
+ "alice": {
+  "local_intro": "Alice, the Jim Wells County seat, grew with ranching and the South Texas oil industry, and its neighborhoods include many mid-century brick and frame homes along with newer housing on the edges. Commercial buildings line US 281 and the downtown area. Hurricane wind, heavy rain, and hail are the major perils. An Alice insurance appraiser often handles claims on older homes where storm damage is disputed as wear and tear.",
+  "neighborhoods": [
+   "Downtown Alice",
+   "Orange Grove",
+   "Premont",
+   "San Diego",
+   "Ben Bolt",
+   "Kingsville"
+  ],
+  "landmarks": [
+   "US 281 (I-69C)",
+   "State Highway 44",
+   "Coastal Bend College",
+   "Lake Corpus Christi"
+  ],
+  "weather": "Alice sits inland from the Coastal Bend but is still exposed to tropical storms and hurricanes; Hurricane Hanna in 2020 brought heavy rain and wind to South Texas. Spring and summer thunderstorms produce hail and straight-line winds. Flat terrain can cause localized flooding, and occasional freezes such as Winter Storm Uri in February 2021 burst unprotected pipes.",
+  "property_mix": "Homes are mostly brick veneer or wood siding with composition shingle roofs, including older pier-and-beam houses. Some homes have metal roofs. Commercial buildings along US 281 use flat built-up, modified-bitumen, and TPO roofing.",
+  "zip_codes": [
+   "78332"
+  ],
+  "faq_local": {
+   "q": "My Alice insurer says roof damage is wear and tear, not storm damage. How can appraisal help?",
+   "a": "Appraisal focuses on the amount of loss, but documenting storm damage is part of that process. An Alice appraiser examines shingles for fresh creasing, lifted tabs, impact marks, and recent granule loss, and compares those signs with normal aging. If the evidence shows storm damage, the appraiser presents it to the other side and, if needed, an umpire."
+  }
+ },
+ "taylor": {
+  "local_intro": "Taylor, in eastern Williamson County, has a historic downtown and older homes reflecting its railroad and cotton heritage, and is now growing rapidly around a major semiconductor plant. New subdivisions and industrial construction are spreading across former farmland. Hail and wind dominate claims, along with foundation issues tied to the Blackland Prairie. A Taylor insurance appraiser often handles claims on older homes as well as newer construction near the expanding industrial area.",
+  "neighborhoods": [
+   "Historic Downtown Taylor",
+   "Thrall",
+   "Granger",
+   "Coupland",
+   "Hutto",
+   "Bartlett"
+  ],
+  "landmarks": [
+   "US 79",
+   "State Highway 95",
+   "State Highway 130",
+   "Granger Lake"
+  ],
+  "weather": "Taylor sees spring hail, damaging straight-line winds, and occasional tornadoes across eastern Williamson County. Heavy rains can flood creeks and low areas around town. Winter Storm Uri in February 2021 burst pipes, and the Blackland Prairie's highly expansive clay soils are known for cracking slabs, pier-and-beam foundations, and brick veneer.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer subdivisions use brick or stone veneer with architectural shingles on slabs. Industrial and commercial buildings use metal and flat TPO roofing.",
+  "zip_codes": [
+   "76574"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Taylor home, but the insurer says the cracks in my walls are from foundation movement. What can appraisal address?",
+   "a": "Appraisal addresses the amount of covered loss. In Taylor, clay soils commonly cause foundation-related cracks, which many policies exclude. An appraiser separates hail-related damage, such as roof, siding, and window damage, from settlement cracks. Clear documentation helps ensure covered storm damage is valued, even if some issues fall outside coverage."
+  }
+ },
+ "bellaire": {
+  "local_intro": "Bellaire is a small, affluent city surrounded by Houston, known for its tree-lined streets and a steady wave of teardowns that replaced 1950s ranch homes with large two-story houses. Many newer homes were elevated after past flooding. Wind, hail, and water claims dominate. A Bellaire insurance appraiser frequently handles high-value claims where complex roofs, custom finishes, and interior water damage drive large disputes.",
+  "neighborhoods": [
+   "West University Place",
+   "Southside Place",
+   "Meyerland",
+   "Braeswood Place",
+   "Gulfton",
+   "Bellaire Boulevard corridor"
+  ],
+  "landmarks": [
+   "Loop 610",
+   "US 59 (I-69)",
+   "Bellaire Boulevard",
+   "Brays Bayou"
+  ],
+  "weather": "Bellaire has experienced severe flooding from tropical systems, including Tropical Storm Allison in 2001 and Hurricane Harvey in 2017. Hurricane Ike in 2008 and Hurricane Beryl in 2024 brought damaging winds and toppled trees across the area. Spring thunderstorms can bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes in many homes.",
+  "property_mix": "Newer homes are often two-story with brick, stucco, or stone exteriors and architectural shingle, slate-look, or standing-seam metal roofs. Older ranch homes have composition roofs on slabs. Commercial buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "77401"
+  ],
+  "faq_local": {
+   "q": "My Bellaire home has custom interior finishes damaged by a roof leak. How does appraisal handle high-end materials?",
+   "a": "Appraisal values the cost to repair with like kind and quality. In Bellaire, homes often have custom millwork, hardwood floors, stone countertops, and specialty paint finishes. An appraiser documents each material and its quality, then prices repairs accordingly. Generic pricing can undervalue these finishes, so thorough documentation is important when high-end materials are involved."
+  }
+ },
+ "mercedes": {
+  "local_intro": "Mercedes, in eastern Hidalgo County, is home to the Rio Grande Valley Livestock Show and a busy outlet mall along I-2, with older neighborhoods near downtown and newer homes on former farmland. Many homes are block or frame construction with stucco or brick. Hurricanes, flooding, and wind are the main threats. A Mercedes insurance appraiser often handles claims after tropical systems where wind damage and water intrusion overlap.",
+  "neighborhoods": [
+   "Downtown Mercedes",
+   "Weslaco",
+   "Donna",
+   "La Feria",
+   "Progreso",
+   "Harlingen"
+  ],
+  "landmarks": [
+   "I-2 (US 83)",
+   "Rio Grande Valley Livestock Show grounds",
+   "Rio Grande Valley Premium Outlets",
+   "Rio Grande"
+  ],
+  "weather": "Mercedes faces Gulf hurricane and tropical storm exposure; Hurricane Hanna in 2020 caused damaging winds and flooding across Hidalgo County, and Hurricane Dolly in 2008 brought wind and heavy rain to the Valley. Flat terrain makes heavy rain prone to flooding. Spring storms bring hail and straight-line winds, and rare freezes such as Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically block or frame with stucco or brick exteriors and composition shingle roofs, with some flat roofs on older homes. Metal roofs appear on rural properties. Commercial buildings use flat modified-bitumen and TPO roofing.",
+  "zip_codes": [
+   "78570"
+  ],
+  "faq_local": {
+   "q": "After a hurricane in Mercedes, my insurer offered a low settlement. How do I know if appraisal makes sense?",
+   "a": "Appraisal makes sense when you agree damage is covered but disagree on the amount. In Mercedes, disputes often involve roof replacement versus repair, interior water damage, or the cost of local labor after a storm. An appraiser reviews the insurer's estimate, inspects the property, and identifies missing items. If the gap is significant, appraisal can resolve the dispute."
+  }
+ },
+ "pampa": {
+  "local_intro": "Pampa, the Gray County seat in the eastern Panhandle, grew with oil, gas, and agriculture, and its neighborhoods are full of mid-century brick homes along with older frame houses. Industrial and agricultural buildings surround the city. Hail and wind are frequent and severe, and wildfire is a real concern on the open plains. A Pampa insurance appraiser often handles hail claims on older roofs and metal buildings after spring storms.",
+  "neighborhoods": [
+   "Downtown Pampa",
+   "Lefors",
+   "McLean",
+   "White Deer",
+   "Skellytown",
+   "Borger"
+  ],
+  "landmarks": [
+   "US 60",
+   "State Highway 70",
+   "State Highway 152",
+   "Lake McClellan"
+  ],
+  "weather": "Pampa sits in the Panhandle's hail corridor, where spring supercells bring large hail, damaging winds, and tornadoes. Winter brings blizzards, ice, and hard freezes. Wildfire is a serious threat; the 2006 East Amarillo Complex fires and the 2024 Smokehouse Creek Fire both burned across the eastern Panhandle, including parts of Gray County. Blowing dust also affects roofs and HVAC systems.",
+  "property_mix": "Homes are mostly brick veneer or wood siding with composition shingle roofs, including older pier-and-beam houses. Impact-resistant shingles appear on many replacements. Industrial and agricultural buildings use metal roofing, and commercial buildings use flat built-up or TPO roofs.",
+  "zip_codes": [
+   "79065"
+  ],
+  "faq_local": {
+   "q": "My Pampa home was damaged by smoke from a nearby wildfire. Can appraisal help with smoke damage?",
+   "a": "If your policy covers smoke damage and the dispute is over the amount, appraisal can help. In Pampa, wildfire smoke can penetrate attics, HVAC systems, insulation, and soft goods. An appraiser documents odor, soot residue, and affected materials, and prices cleaning or replacement. Proper testing and documentation are important, since smoke damage is often underestimated in initial estimates."
+  }
+ },
+ "gatesville": {
+  "local_intro": "Gatesville, the Coryell County seat along the Leon River, is known for its historic courthouse and several state correctional facilities, which are major employers. Housing includes older brick and frame homes near downtown, mid-century ranch houses, and rural properties with barns and fencing. Hail, wind, and flash flooding drive claims. A Gatesville insurance appraiser often handles storm claims on older homes and agricultural structures across the county.",
+  "neighborhoods": [
+   "Downtown Gatesville",
+   "Oglesby",
+   "Jonesboro",
+   "Evant",
+   "Flat",
+   "Copperas Cove"
+  ],
+  "landmarks": [
+   "US 84",
+   "State Highway 36",
+   "Leon River",
+   "Fort Cavazos"
+  ],
+  "weather": "Gatesville sees spring storms that produce large hail, damaging straight-line winds, and occasional tornadoes. Heavy rain can cause the Leon River and local creeks to rise quickly, creating flash flooding. Winter Storm Uri in February 2021 burst pipes in homes across the county, and drought conditions raise wildfire risk on surrounding ranch land.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick veneer and architectural shingles on slabs. Rural properties include metal barns and shops. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "76528"
+  ],
+  "faq_local": {
+   "q": "Can appraisal handle damage to multiple buildings on my Gatesville property?",
+   "a": "Yes. In Gatesville, many properties include a home, barns, sheds, and fencing. An appraiser documents each structure separately, noting roof type, materials, and storm damage, and prices repairs individually. The dwelling and other structures typically have different coverage limits, so organizing the appraisal by structure helps make sure each part of the loss is properly valued."
+  }
+ },
+ "buda": {
+  "local_intro": "Buda has grown quickly from a small railroad town into a busy suburb south of Austin along I-35, with a charming historic downtown surrounded by new subdivisions. Most homes are relatively new, but older properties remain near the center and in rural pockets. Hail, wind, and flash flooding drive claims. A Buda insurance appraiser often handles hail claims on newer roofs where insurers dispute whether damage is functional or cosmetic.",
+  "neighborhoods": [
+   "Historic Downtown Buda",
+   "Garlic Creek",
+   "Sunfield",
+   "Kyle",
+   "Manchaca",
+   "Driftwood"
+  ],
+  "landmarks": [
+   "I-35",
+   "FM 967",
+   "FM 1626",
+   "Onion Creek"
+  ],
+  "weather": "Buda sits at the edge of Flash Flood Alley, where heavy rains can send Onion Creek and other local creeks rising quickly. Spring storms bring large hail and damaging straight-line winds, and tornadoes occur occasionally. Winter Storm Uri in February 2021 burst pipes, and the area's clay and limestone soils can cause foundation movement.",
+  "property_mix": "Most homes are brick, stone, or fiber cement with architectural composition shingle roofs on slab foundations. Some custom homes have standing-seam metal roofs. Commercial buildings along I-35 use flat TPO and metal roofing.",
+  "zip_codes": [
+   "78610"
+  ],
+  "faq_local": {
+   "q": "My Buda home has a newer roof with hail dents. Does that mean it needs replacement?",
+   "a": "Not necessarily. Some hail marks are cosmetic, while others fracture the shingle mat, loosen granules, or break seals, affecting roof life. A Buda appraiser inspects each slope and test square for functional damage. If the roof needs replacement, the appraiser documents why. If repairs are possible, the estimate reflects that. Appraisal helps resolve disputes when the two sides disagree."
+  }
+ },
+ "south-houston": {
+  "local_intro": "South Houston is a compact, working-class city near Hobby Airport, made up largely of modest homes built in the 1950s and 1960s. Many properties have original framing, older plumbing, and roofs on their second or third cycle. Wind, hail, and flooding are frequent concerns. A South Houston insurance appraiser often helps homeowners whose claims were undervalued because older homes need more extensive repairs than initial estimates suggest.",
+  "neighborhoods": [
+   "Pasadena",
+   "Pearland",
+   "Hobby Airport area",
+   "Edgebrook",
+   "Webster",
+   "Galena Park"
+  ],
+  "landmarks": [
+   "I-45 (Gulf Freeway)",
+   "Spencer Highway",
+   "William P. Hobby Airport",
+   "Beltway 8"
+  ],
+  "weather": "South Houston faces Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought damaging winds, Hurricane Harvey in 2017 caused widespread flooding in southeast Harris County, and Hurricane Beryl in 2024 brought wind damage and long power outages. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, on slab or older pier-and-beam foundations. Commercial buildings along Spencer Highway and the Gulf Freeway use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "77587"
+  ],
+  "faq_local": {
+   "q": "My South Houston home is older. Will appraisal cover code upgrades needed for roof repairs?",
+   "a": "Code upgrades depend on your policy's ordinance or law coverage. In South Houston, older homes may need new decking, drip edge, or ventilation to meet current code when the roof is replaced. An appraiser identifies code-required items and includes them where the policy allows. Reviewing your coverage helps ensure those costs are not overlooked in the estimate."
+  }
+ },
+ "mineral-wells": {
+  "local_intro": "Mineral Wells, once a famous spa town anchored by the historic Baker Hotel, sits in the rugged hills of Palo Pinto County west of Fort Worth. Housing includes early twentieth-century homes, mid-century ranch houses, and rural acreage with barns and fencing. Hail, wind, and wildfire are the defining perils. A Mineral Wells insurance appraiser often handles claims on older homes and rural properties after spring storms.",
+  "neighborhoods": [
+   "Downtown Mineral Wells",
+   "Palo Pinto",
+   "Graford",
+   "Millsap",
+   "Santo",
+   "Possum Kingdom Lake area"
+  ],
+  "landmarks": [
+   "US 180",
+   "US 281",
+   "Lake Mineral Wells State Park",
+   "Baker Hotel"
+  ],
+  "weather": "Mineral Wells sees spring storms that bring large hail, damaging straight-line winds, and tornadoes. Drought and rugged terrain raise wildfire risk; the 2011 Possum Kingdom Lake area wildfires burned homes in Palo Pinto County. Heavy rain can cause flash flooding, and Winter Storm Uri in February 2021 burst pipes throughout the area.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick veneer and architectural shingles. Rural properties include metal barns and shops. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "76067"
+  ],
+  "faq_local": {
+   "q": "Can appraisal help after a wildfire damages outbuildings on my Mineral Wells property?",
+   "a": "Yes, if the outbuildings are covered and the dispute concerns the amount of loss. In Mineral Wells, wildfires can damage barns, sheds, fencing, and equipment shelters. An appraiser documents each structure, its materials, and the extent of damage, then prices repair or replacement. Coverage limits for other structures apply, so understanding those limits helps guide the appraisal."
+  }
+ },
+ "rio-grande-city": {
+  "local_intro": "Rio Grande City, the Starr County seat, is one of the oldest communities in the Valley, home to historic Fort Ringgold and a downtown of brick and sandstone buildings along the river. Housing ranges from older block and stucco homes to newer subdivisions and rural colonias. Hurricanes, flooding, and hail drive claims. A Rio Grande City insurance appraiser often handles claims where older construction and limited local contractor availability complicate repair pricing.",
+  "neighborhoods": [
+   "Downtown Rio Grande City",
+   "Roma",
+   "La Grulla",
+   "Garceno",
+   "Escobares",
+   "Starr County rural areas"
+  ],
+  "landmarks": [
+   "US 83",
+   "Rio Grande",
+   "Fort Ringgold",
+   "Falcon Lake"
+  ],
+  "weather": "Rio Grande City sits farther inland than most of the Valley but still feels tropical systems; Hurricane Hanna in 2020 brought heavy rain and flooding across Starr County. Severe thunderstorms bring hail and damaging winds in spring. Flash flooding can affect low areas and arroyos, and rare freezes such as Winter Storm Uri in February 2021 burst pipes in homes not built for cold.",
+  "property_mix": "Homes are typically block or frame with stucco or brick, topped with composition shingle or flat roofs, and some older homes feature masonry walls. Metal roofs are common on rural properties. Commercial buildings use flat built-up and modified-bitumen roofing.",
+  "zip_codes": [
+   "78582"
+  ],
+  "faq_local": {
+   "q": "Contractors are hard to find in Rio Grande City after a storm. Does appraisal account for that?",
+   "a": "Appraisal estimates the reasonable cost to repair at the time and place of loss. In Rio Grande City, travel time, limited labor supply, and material delivery can raise costs. An appraiser documents local pricing and contractor availability to support a realistic estimate. If the insurer's figures rely on pricing from larger markets, that difference can be addressed in appraisal."
+  }
+ },
+ "hereford": {
+  "local_intro": "Hereford calls itself the Beef Capital of the World, and the Deaf Smith County seat is surrounded by feedlots, grain elevators, and farmland on the open High Plains. Housing is mostly modest brick and frame homes from the mid-twentieth century, plus newer homes on the edges. Hail and wind are severe and frequent. A Hereford insurance appraiser often handles hail claims involving homes as well as metal agricultural buildings across the county.",
+  "neighborhoods": [
+   "Downtown Hereford",
+   "Dawn",
+   "Friona",
+   "Vega",
+   "Umbarger",
+   "Canyon"
+  ],
+  "landmarks": [
+   "US 60",
+   "US 385",
+   "Tierra Blanca Creek",
+   "Palo Duro Canyon"
+  ],
+  "weather": "Hereford is located in one of the most active hail regions in Texas, where spring supercells bring large hail, damaging winds, and tornadoes across the High Plains. Winter brings blizzards, ice, and hard freezes that burst pipes. Dry, windy conditions raise grass-fire risk on surrounding farmland, and blowing dust affects roofing and HVAC equipment.",
+  "property_mix": "Homes are mostly brick veneer or wood siding with composition shingle roofs, including older pier-and-beam houses. Impact-resistant shingles appear on many replacements. Agricultural and commercial properties use metal buildings, standing-seam roofs, and flat built-up systems.",
+  "zip_codes": [
+   "79045"
+  ],
+  "faq_local": {
+   "q": "My Hereford roof has been hit by hail several times. How does appraisal address prior damage?",
+   "a": "Repeated hail is common in Hereford, so distinguishing new damage from old matters. An appraiser examines the condition of impact marks, granule loss, and exposed mat to identify fresh damage from the reported storm. Documentation such as earlier repair records or photos can help. If the recent storm caused functional damage, the appraisal values that loss under the policy."
+  }
+ },
+ "jacksonville": {
+  "local_intro": "Jacksonville, once known as the Tomato Capital of the World, sits among the rolling hills and pine forests of Cherokee County near Lake Jacksonville. Housing includes historic homes, mid-century brick ranches, and lake properties surrounded by tall trees. Wind, hail, and falling trees cause most claims. A Jacksonville insurance appraiser often handles storm claims where tree impacts damage roofs, framing, and interiors at the same time.",
+  "neighborhoods": [
+   "Downtown Jacksonville",
+   "Lake Jacksonville",
+   "Bullard",
+   "Rusk",
+   "Alto",
+   "Gallatin"
+  ],
+  "landmarks": [
+   "US 69",
+   "US 79",
+   "US 175",
+   "Lake Jacksonville"
+  ],
+  "weather": "Jacksonville sees spring storms that bring hail, damaging straight-line winds, and tornadoes across East Texas. Tropical systems moving inland can bring heavy rain and wind. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, and dense tree cover increases the risk of roof and structural damage during any windstorm.",
+  "property_mix": "Homes include brick veneer ranch houses, older pier-and-beam homes with wood siding, and composition or metal roofs. Lake homes often have docks and boathouses. Commercial buildings use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "75766"
+  ],
+  "faq_local": {
+   "q": "A storm sent a tree into my Jacksonville lake house. What should be included in the appraisal?",
+   "a": "An appraisal should document roof damage, structural framing, interior water damage, and any damage to decks, docks, or boathouses covered by the policy. In Jacksonville, tree impacts often cause hidden damage to rafters and ceiling joists. Tree removal may be covered within policy limits. A thorough inspection helps ensure all damage is captured in the estimate."
+  }
+ },
+ "forest-hill": {
+  "local_intro": "Forest Hill is a small city in southeast Tarrant County, surrounded by Fort Worth and bordered by Everman and Kennedale, with mostly modest homes built from the 1950s through the 1970s. Many properties have older roofs, aging plumbing, and foundations stressed by clay soils. Hail, wind, and freeze losses lead claims. A Forest Hill insurance appraiser often helps owners whose settlements did not reflect the full repair needs of older homes.",
+  "neighborhoods": [
+   "Everman",
+   "Kennedale",
+   "Edgecliff Village",
+   "Rendon",
+   "Southeast Fort Worth",
+   "Arlington"
+  ],
+  "landmarks": [
+   "I-20",
+   "Loop 820",
+   "US 287",
+   "Lake Arlington"
+  ],
+  "weather": "Forest Hill experiences spring hail and straight-line winds common across Tarrant County, along with occasional tornadoes. Heavy rains can cause localized flooding near local creeks, drainage channels, and low-lying streets. Winter Storm Uri in February 2021 burst pipes in many older homes, and the area's expansive clay soils frequently crack slabs and brick.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, on slab or older pier-and-beam foundations. Detached garages and carports are common. Commercial buildings use flat built-up, modified-bitumen, and TPO roofing.",
+  "zip_codes": [
+   "76119",
+   "76140"
+  ],
+  "faq_local": {
+   "q": "My Forest Hill insurer offered actual cash value for my roof. Can appraisal help me recover more?",
+   "a": "Appraisal determines the amount of loss, including replacement cost and depreciation. In Forest Hill, many policies pay actual cash value first and release depreciation after repairs. An appraiser documents the replacement cost and reasonable depreciation. If you have a replacement cost policy, completing repairs within the policy's time limits may allow you to recover withheld depreciation."
+  }
+ },
+ "trophy-club": {
+  "local_intro": "Trophy Club is a master-planned town in southern Denton County, built around a golf course and bordered by Lake Grapevine's northern reaches and the Northwest corridor along State Highway 114. Homes date from the 1970s through recent years, with many large two-story houses on wooded lots. Hail is the dominant peril. A Trophy Club insurance appraiser often handles claims on complex roofs where accurate measurement and labor pricing make a large difference.",
+  "neighborhoods": [
+   "The Highlands at Trophy Club",
+   "Roanoke",
+   "Westlake",
+   "Southlake",
+   "Northlake",
+   "Keller"
+  ],
+  "landmarks": [
+   "State Highway 114",
+   "Lake Grapevine",
+   "Marshall Creek Park",
+   "Trophy Club Country Club"
+  ],
+  "weather": "Trophy Club sits in an active part of DFW hail alley, with spring supercells bringing large hail, damaging winds, and tornado threats. Wind exposure near Lake Grapevine can intensify damage. Winter Storm Uri in February 2021 burst pipes in many homes, and expansive clay soils can shift foundations during dry periods and heavy rains.",
+  "property_mix": "Homes are typically brick or stone veneer with architectural shingles, slate-look synthetics, or concrete tile, often with steep, complex rooflines. Some custom homes use standing-seam metal accents. Commercial buildings use flat TPO roofing.",
+  "zip_codes": [
+   "76262"
+  ],
+  "faq_local": {
+   "q": "My Trophy Club home's roof was measured smaller in the insurer's estimate. How can appraisal fix that?",
+   "a": "Accurate measurement is a key part of appraisal. On Trophy Club homes, steep pitches, dormers, and multiple valleys can make roof area easy to miscalculate. An appraiser measures the roof using physical inspection or aerial reports, accounts for waste, and documents ridges, hips, and valleys. Correcting measurements often resolves a significant portion of the dispute."
+  }
+ },
+ "kilgore": {
+  "local_intro": "Kilgore owes its growth to the East Texas Oil Field, and the derricks of the World's Richest Acre still stand downtown near Kilgore College, home of the famous Rangerettes. Housing includes oil boom-era homes, mid-century brick ranches, and newer subdivisions, all shaded by pine and hardwood trees. Wind, hail, and tree damage dominate claims. A Kilgore insurance appraiser often handles storm claims where trees and wind damage roofs and structures together.",
+  "neighborhoods": [
+   "Downtown Kilgore",
+   "Liberty City",
+   "Overton",
+   "Gladewater",
+   "Longview",
+   "Henderson"
+  ],
+  "landmarks": [
+   "I-20",
+   "US 259",
+   "State Highway 31",
+   "Kilgore College"
+  ],
+  "weather": "Kilgore sees spring storms that produce hail, damaging straight-line winds, and tornadoes across East Texas. Tropical systems moving inland can bring heavy rain and wind. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, and dense tree cover increases the risk of roof and structural damage.",
+  "property_mix": "Homes include older pier-and-beam houses with wood siding, brick veneer ranch homes, and newer homes with architectural shingles. Metal roofs are common on rural properties. Commercial buildings use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "75662"
+  ],
+  "faq_local": {
+   "q": "My Kilgore home has an older roof damaged by wind. Will appraisal consider depreciation?",
+   "a": "Yes. Appraisal determines both replacement cost and actual cash value, which accounts for depreciation. In Kilgore, many homes have older roofs, so depreciation can be significant. An appraiser documents the roof's condition and age and applies reasonable depreciation. If your policy provides replacement cost coverage, recoverable depreciation may be paid after repairs are completed."
+  }
+ },
+ "henderson": {
+  "local_intro": "Henderson, the Rusk County seat, sits in the pine-covered hills of East Texas with a historic downtown, the Depot Museum, and neighborhoods of older homes shaded by tall trees. Oil, timber, and agriculture shape the local economy. Wind, hail, and falling trees drive most claims. A Henderson insurance appraiser often handles claims where trees and wind cause roof, structural, and interior damage in a single storm.",
+  "neighborhoods": [
+   "Downtown Henderson",
+   "Overton",
+   "Tatum",
+   "Mount Enterprise",
+   "Laneville",
+   "New London"
+  ],
+  "landmarks": [
+   "US 79",
+   "US 259",
+   "State Highway 64",
+   "Lake Striker"
+  ],
+  "weather": "Henderson sees spring storms that bring hail, damaging straight-line winds, and tornadoes across East Texas. Tropical systems can bring heavy rain and wind. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, and mature pine and oak trees increase the risk of roof damage during storms.",
+  "property_mix": "Homes include older pier-and-beam houses with wood siding, brick veneer ranch homes, and composition or metal roofs. Rural properties include barns and shops. Commercial buildings use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "75652"
+  ],
+  "faq_local": {
+   "q": "Ice from a winter storm damaged my Henderson roof and gutters. Can appraisal help?",
+   "a": "Yes, if the damage is covered and the amount is disputed. In Henderson, ice storms can break limbs that damage roofs and gutters, and ice dams can cause leaks. An appraiser documents roof, gutter, and interior damage and prices repairs. Some policies treat ice-related damage differently, so reviewing coverage is important before starting appraisal."
+  }
+ },
+ "santa-fe": {
+  "local_intro": "Santa Fe is a semi-rural city in Galveston County, made up of the former communities of Alta Loma, Arcadia, and Algoa, with large lots, older homes, and newer subdivisions. Many properties include barns, shops, and detached structures. Hurricanes, flooding, and wind dominate claims. A Santa Fe insurance appraiser often handles storm claims where multiple structures and long fence lines add to the total loss.",
+  "neighborhoods": [
+   "Alta Loma",
+   "Arcadia",
+   "Algoa",
+   "Hitchcock",
+   "Dickinson",
+   "La Marque"
+  ],
+  "landmarks": [
+   "State Highway 6",
+   "FM 1764",
+   "Highland Bayou",
+   "Galveston Bay"
+  ],
+  "weather": "Santa Fe faces Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought destructive winds to Galveston County, and Hurricane Harvey in 2017 caused severe flooding. Hurricane Beryl in 2024 also brought wind damage and power outages. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes include brick veneer and wood siding houses with composition or metal roofs, including older pier-and-beam homes and manufactured homes. Rural properties often have metal barns and shops. Commercial buildings use flat TPO and metal roofing.",
+  "zip_codes": [
+   "77510",
+   "77517"
+  ],
+  "faq_local": {
+   "q": "My Santa Fe home is on acreage with barns and fences damaged by a hurricane. How does appraisal handle this?",
+   "a": "Each structure is documented and valued separately. In Santa Fe, properties often have barns, shops, and fences that suffer wind damage during hurricanes. An appraiser inspects each structure, measures fence runs, and prices repairs. Coverage limits for other structures apply, and windstorm coverage may be through TWIA or a private policy, so reviewing those terms is important."
+  }
+ },
+ "levelland": {
+  "local_intro": "Levelland, the Hockley County seat west of Lubbock, is home to South Plains College and surrounded by cotton farms and oil leases on the flat South Plains. Housing is mostly modest brick and frame homes, with agricultural buildings and metal shops throughout the area. Hail and wind are frequent and severe. A Levelland insurance appraiser often handles hail claims on homes and agricultural structures after spring storms.",
+  "neighborhoods": [
+   "Downtown Levelland",
+   "Sundown",
+   "Smyer",
+   "Anton",
+   "Ropesville",
+   "Whitharral"
+  ],
+  "landmarks": [
+   "US 385",
+   "State Highway 114",
+   "South Plains College",
+   "Lubbock"
+  ],
+  "weather": "Levelland lies in an active hail corridor on the South Plains, where spring supercells bring large hail, damaging straight-line winds, and tornadoes. Dust storms are common in spring, scouring roofs and siding. Winter brings ice and hard freezes, including Winter Storm Uri in February 2021, which burst pipes. Dry, windy conditions also raise grass-fire risk.",
+  "property_mix": "Homes are mostly brick veneer or wood siding with composition shingle roofs, including older pier-and-beam houses. Impact-resistant shingles appear on replacements. Agricultural and commercial properties use metal buildings and flat built-up roofing.",
+  "zip_codes": [
+   "79336"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Levelland home and my cotton trailer shed. Are both included in appraisal?",
+   "a": "If both are covered under your policy, they can be included. In Levelland, agricultural structures like sheds and barns may be covered under other structures or a separate farm policy. An appraiser reviews coverage for each building, documents hail damage, and prices repairs. Separating the structures clearly helps make sure each is valued under the correct coverage."
+  }
+ },
+ "webster": {
+  "local_intro": "Webster sits in the Clear Lake area near NASA's Johnson Space Center, with a large concentration of medical facilities, retail, and apartments along I-45 and NASA Parkway. Residential areas include older homes and newer developments. Hurricanes, flooding, and wind are the dominant concerns. A Webster insurance appraiser often handles claims on both residential and commercial properties after tropical storms affect the Bay Area.",
+  "neighborhoods": [
+   "Clear Lake",
+   "Nassau Bay",
+   "Seabrook",
+   "League City",
+   "Friendswood",
+   "El Lago"
+  ],
+  "landmarks": [
+   "I-45 (Gulf Freeway)",
+   "NASA Parkway",
+   "Clear Lake",
+   "NASA Johnson Space Center"
+  ],
+  "weather": "Webster faces Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought destructive winds and surge to the Clear Lake area, and Hurricane Harvey in 2017 caused widespread flooding. Hurricane Beryl in 2024 brought wind damage and power outages. Spring storms produce hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically brick veneer with composition or architectural shingle roofs on slab foundations. Apartment complexes and medical buildings use flat TPO and modified-bitumen roofing, and commercial buildings along I-45 use metal and flat roofing.",
+  "zip_codes": [
+   "77598"
+  ],
+  "faq_local": {
+   "q": "My Webster commercial building had roof damage from a tropical storm. Does appraisal work for commercial claims?",
+   "a": "Yes. Many commercial property policies include an appraisal clause. In Webster, flat TPO or modified-bitumen roofs on commercial buildings can suffer membrane damage, flashing failure, and interior water intrusion. An appraiser documents roof damage, moisture, and business interruption impacts if covered. Commercial appraisal often involves larger losses and more detailed estimates."
+  }
+ },
+ "el-campo": {
+  "local_intro": "El Campo, in Wharton County, is a rice-farming town with a strong Czech and Scandinavian heritage, surrounded by flat agricultural land along US 59. Housing includes older frame homes, mid-century brick ranches, and newer subdivisions, along with agricultural buildings and grain dryers. Hurricanes, wind, and flooding drive claims. An El Campo insurance appraiser often handles storm claims involving homes and agricultural structures after tropical systems pass through.",
+  "neighborhoods": [
+   "Downtown El Campo",
+   "Louise",
+   "Wharton",
+   "Hungerford",
+   "Danevang",
+   "Ganado"
+  ],
+  "landmarks": [
+   "US 59 (I-69)",
+   "State Highway 71",
+   "Tres Palacios Creek",
+   "Colorado River"
+  ],
+  "weather": "El Campo faces Gulf hurricanes and tropical storms; Hurricane Harvey in 2017 brought heavy rain and flooding to Wharton County, and Hurricane Beryl in 2024 made landfall nearby in Matagorda County, bringing damaging winds to the area. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes include brick veneer ranch houses, older wood-frame homes on pier-and-beam foundations, and composition or metal roofs. Agricultural properties include metal barns and grain structures. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "77437"
+  ],
+  "faq_local": {
+   "q": "Hurricane winds damaged my El Campo home and farm buildings. How does appraisal work for both?",
+   "a": "Appraisal can address both if they are covered and the amount is disputed. In El Campo, homes may be covered under a homeowners policy while farm buildings fall under a farm or commercial policy. An appraiser reviews each policy, documents wind damage, and prices repairs separately. Clear organization helps make sure each structure is valued correctly."
+  }
+ },
+ "fair-oaks-ranch": {
+  "local_intro": "Fair Oaks Ranch is an upscale Hill Country city northwest of San Antonio, spanning parts of Bexar, Kendall, and Comal counties, with large wooded lots, custom homes, and a golf club community. Many homes feature stone exteriors and premium roofing. Hail and wind are the main perils. A Fair Oaks Ranch insurance appraiser often handles high-value claims involving tile, metal, and designer shingle roofs where pricing disputes can be substantial.",
+  "neighborhoods": [
+   "Fair Oaks Ranch Golf and Country Club",
+   "Boerne",
+   "Leon Springs",
+   "Timberwood Park",
+   "Helotes",
+   "The Dominion"
+  ],
+  "landmarks": [
+   "I-10",
+   "Ralph Fair Road",
+   "Dietz-Elkhorn Road",
+   "Cibolo Creek"
+  ],
+  "weather": "Fair Oaks Ranch sees spring storms that can produce large hail and damaging straight-line winds across the Hill Country. Heavy rain can cause flash flooding along Cibolo Creek and low-water crossings. Winter Storm Uri in February 2021 burst pipes in many homes, and drought conditions raise wildfire risk in wooded and brushy areas.",
+  "property_mix": "Homes are typically stone or stucco with concrete tile, standing-seam metal, or premium architectural shingle roofs, often with complex rooflines. Custom homes feature high-end finishes. Commercial buildings use flat TPO and metal roofing.",
+  "zip_codes": [
+   "78015"
+  ],
+  "faq_local": {
+   "q": "My Fair Oaks Ranch home has a concrete tile roof damaged by hail. What makes these claims complicated?",
+   "a": "Concrete tile roofs require careful inspection because cracked tiles can be hard to spot and walking the roof can cause additional breakage. In Fair Oaks Ranch, matching tile color and profile can also be difficult. An appraiser documents damaged tiles, underlayment condition, and availability of matching materials, and prices labor accordingly. These details often drive significant differences in estimates."
+  }
+ },
+ "port-lavaca": {
+  "local_intro": "Port Lavaca, the Calhoun County seat on Lavaca Bay, is a working waterfront town shaped by shrimping, fishing, and nearby petrochemical plants. Bayfront homes, older frame houses, and mid-century brick ranches make up most neighborhoods. Hurricanes and storm surge are the defining risks, along with wind-driven rain and hail. A Port Lavaca insurance appraiser often handles windstorm claims where TWIA coverage and percentage deductibles shape how the loss is settled.",
+  "neighborhoods": [
+   "Downtown Port Lavaca",
+   "Point Comfort",
+   "Seadrift",
+   "Magnolia Beach",
+   "Port O'Connor",
+   "Six Mile"
+  ],
+  "landmarks": [
+   "State Highway 35",
+   "US 87",
+   "Lavaca Bay",
+   "Matagorda Bay"
+  ],
+  "weather": "Port Lavaca has deep hurricane history, from Hurricane Carla in 1961 to Hurricane Claudette in 2003, which made landfall near Port O'Connor. Hurricane Harvey in 2017 brought damaging winds to Calhoun County, and Hurricane Beryl in 2024 made landfall nearby in Matagorda County. Storm surge threatens bayfront areas, and severe thunderstorms bring hail and wind. Freezes such as Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes include elevated bayfront houses, older pier-and-beam frame homes, and brick ranch homes with composition or metal roofs. Newer construction often uses hurricane-rated windows and straps. Commercial and industrial buildings use metal and flat TPO roofing.",
+  "zip_codes": [
+   "77979"
+  ],
+  "faq_local": {
+   "q": "How does a hurricane deductible affect appraisal on my Port Lavaca home?",
+   "a": "The deductible is applied after the total loss is determined. Many Port Lavaca properties have a percentage windstorm or hurricane deductible, often through TWIA, which can be significant. An appraiser documents the full scope of wind damage to roofing, siding, windows, and interiors so the total reflects the actual loss. The deductible is then subtracted from that amount."
+  }
+ },
+ "burkburnett": {
+  "local_intro": "Burkburnett sits on the Red River just north of Wichita Falls, and its oil boom history inspired the film Boom Town. Today it is a quiet residential community with many homes tied to Sheppard Air Force Base and Wichita Falls employers. Housing ranges from mid-century brick homes to newer subdivisions. Hail, wind, and tornadoes are the dominant risks. A Burkburnett insurance appraiser often handles roof claims after spring storms cross the Red River valley.",
+  "neighborhoods": [
+   "Downtown Burkburnett",
+   "Wichita Falls",
+   "Iowa Park",
+   "Electra",
+   "Sheppard Air Force Base area"
+  ],
+  "landmarks": [
+   "I-44",
+   "Red River",
+   "Sheppard Air Force Base",
+   "Lake Wichita"
+  ],
+  "weather": "Burkburnett lies in an active corridor for severe weather, with spring supercells bringing large hail, damaging winds, and tornadoes across North Texas and southern Oklahoma; the 1979 Wichita Falls tornado is a lasting reminder of the region's risk. Winter storms bring ice and hard freezes, including Winter Storm Uri in February 2021. Drought and wind raise grass-fire risk on surrounding land.",
+  "property_mix": "Homes are mostly brick veneer with composition shingle roofs on slab foundations, with some older pier-and-beam homes. Impact-resistant shingles appear on many replacements. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "76354"
+  ],
+  "faq_local": {
+   "q": "My Burkburnett home was hit by hail and high winds in the same storm. Does appraisal separate those?",
+   "a": "Appraisal values the total covered loss, and documenting both causes helps support the estimate. In Burkburnett, storms often bring hail that bruises shingles and winds that lift or remove them. An appraiser identifies both types of damage, documents roof, siding, and window impacts, and prices repairs. Combined damage often supports broader repairs than either cause alone."
+  }
+ },
+ "roanoke": {
+  "local_intro": "Roanoke calls itself the Unique Dining Capital of Texas, with restaurants lining historic Oak Street, and has grown rapidly near the Alliance corridor and State Highway 114. Housing includes newer subdivisions, some older homes near downtown, and commercial development serving nearby distribution centers. Hail and wind drive most claims. A Roanoke insurance appraiser often handles hail claims on newer roofs and commercial buildings across the area.",
+  "neighborhoods": [
+   "Historic Oak Street",
+   "Trophy Club",
+   "Northlake",
+   "Westlake",
+   "Haslet",
+   "Keller"
+  ],
+  "landmarks": [
+   "State Highway 114",
+   "State Highway 170",
+   "I-35W",
+   "Fort Worth Alliance Airport"
+  ],
+  "weather": "Roanoke sits in an active part of DFW hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats. Open land nearby allows wind to build. Winter Storm Uri in February 2021 burst pipes in many homes, and the area's expansive clay soils can shift foundations during dry spells and heavy rains.",
+  "property_mix": "Homes are mostly brick or stone veneer with architectural composition shingle roofs on slab foundations. Some newer homes feature metal accents. Commercial and distribution buildings use flat TPO, modified-bitumen, and metal roofing.",
+  "zip_codes": [
+   "76262"
+  ],
+  "faq_local": {
+   "q": "My Roanoke restaurant had hail damage to its flat roof. Can appraisal handle commercial roofs?",
+   "a": "Commercial policies commonly carry an appraisal clause too. In Roanoke, flat TPO or modified-bitumen roofs on restaurants and retail buildings can be punctured or bruised by hail, leading to leaks. An appraiser documents membrane damage, rooftop equipment, and interior water damage. Business interruption may also be part of the claim if covered by the policy."
+  }
+ },
+ "bellmead": {
+  "local_intro": "Bellmead is a small city on the northeast edge of Waco, with a mix of mid-century homes, manufactured housing, and commercial properties along I-35 and Loop 340. Many residents work in Waco and nearby industrial facilities. Older roofs and aging homes are common. Hail, wind, and freeze damage lead claims. A Bellmead insurance appraiser often helps owners whose settlements did not account for the repair needs of older homes.",
+  "neighborhoods": [
+   "Lacy Lakeview",
+   "Elm Mott",
+   "Waco",
+   "Robinson",
+   "Hewitt",
+   "Woodway"
+  ],
+  "landmarks": [
+   "I-35",
+   "Loop 340",
+   "Brazos River",
+   "Lake Waco"
+  ],
+  "weather": "Bellmead sees spring storms that produce hail, damaging straight-line winds, and occasional tornadoes across Central Texas. Heavy rains can cause flash flooding in low areas. Winter Storm Uri in February 2021 burst pipes in many older homes, and the region's clay soils can crack foundations and brick veneer during long dry periods.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, including older pier-and-beam homes and manufactured homes. Commercial buildings along I-35 use flat built-up, TPO, and metal roofing.",
+  "zip_codes": [
+   "76705"
+  ],
+  "faq_local": {
+   "q": "Does appraisal work for manufactured homes in Bellmead?",
+   "a": "Yes, if the manufactured home is insured under a policy with an appraisal clause. In Bellmead, manufactured homes can suffer roof, siding, and skirting damage from hail and wind. An appraiser documents damage to the roof, walls, windows, and undercarriage, and prices repairs using appropriate materials. Coverage terms for manufactured homes can vary, so reviewing the policy is important."
+  }
+ },
+ "robstown": {
+  "local_intro": "Robstown is an agricultural town west of Corpus Christi, home to the Richard M. Borchard Regional Fairgrounds and surrounded by cotton and grain farms. Housing is mostly modest frame and brick homes, many built in the mid-twentieth century. Hurricanes, wind, and heavy rain drive claims. A Robstown insurance appraiser often handles storm claims on older homes where initial estimates did not capture the full scope of damage.",
+  "neighborhoods": [
+   "Downtown Robstown",
+   "Banquete",
+   "Driscoll",
+   "Bishop",
+   "Calallen",
+   "Agua Dulce"
+  ],
+  "landmarks": [
+   "US 77 (I-69E)",
+   "State Highway 44",
+   "Richard M. Borchard Regional Fairgrounds",
+   "Nueces River"
+  ],
+  "weather": "Robstown is exposed to Gulf hurricanes and tropical storms; Hurricane Harvey in 2017 brought damaging winds to the Coastal Bend, and Hurricane Hanna in 2020 caused heavy rain and flooding across Nueces County. Spring and summer thunderstorms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes in homes not built for cold.",
+  "property_mix": "Homes are mostly single-story frame or brick veneer with composition shingle roofs, including older pier-and-beam houses. Metal roofs appear on rural properties. Commercial and agricultural buildings use metal and flat built-up roofing.",
+  "zip_codes": [
+   "78380"
+  ],
+  "faq_local": {
+   "q": "My Robstown home had roof damage from tropical storm winds. How do I know if appraisal is worth it?",
+   "a": "Appraisal is worth considering when coverage is accepted but you believe the estimate is too low. In Robstown, disputes often involve partial roof repairs versus replacement or missing interior damage. An appraiser reviews the insurer's estimate, inspects the home, and identifies gaps. If the difference is significant, appraisal can provide a structured way to resolve it."
+  }
+ },
+ "galena-park": {
+  "local_intro": "Galena Park sits along the Houston Ship Channel, surrounded by refineries, terminals, and industrial facilities, with modest homes built mostly in the mid-twentieth century. Many residents work in nearby plants and port operations. Older roofs, aging plumbing, and flood exposure are common. A Galena Park insurance appraiser often helps homeowners whose claims were undervalued after hurricanes or severe storms.",
+  "neighborhoods": [
+   "Jacinto City",
+   "Pasadena",
+   "Cloverleaf",
+   "Channelview",
+   "Denver Harbor",
+   "Pleasantville"
+  ],
+  "landmarks": [
+   "Houston Ship Channel",
+   "I-610",
+   "I-10 (East Freeway)",
+   "Clinton Drive"
+  ],
+  "weather": "Galena Park faces Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought damaging winds, Hurricane Harvey in 2017 caused widespread flooding in east Harris County, and Hurricane Beryl in 2024 brought wind damage and long power outages. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are mostly single-story wood siding or brick veneer with composition shingle roofs, on slab or older pier-and-beam foundations. Many homes have detached garages or sheds. Industrial and commercial buildings use metal and flat built-up roofing.",
+  "zip_codes": [
+   "77547"
+  ],
+  "faq_local": {
+   "q": "My Galena Park home had wind and water damage after a hurricane. What should I document for appraisal?",
+   "a": "Document roof damage, missing shingles, ceiling stains, wet insulation, damaged drywall, and flooring. In Galena Park, it is also important to note how water entered, since wind-driven rain is typically covered under homeowners policies while rising floodwater is covered by flood insurance. Photos, dates, and repair receipts help your appraiser build a complete estimate."
+  }
+ },
+ "raymondville": {
+  "local_intro": "Raymondville, the Willacy County seat, is a farming community surrounded by cotton, grain, and citrus fields, with Port Mansfield on the coast to the east. Housing includes older frame and block homes, mid-century brick ranches, and agricultural buildings. Hurricanes, wind, and flooding drive claims. A Raymondville insurance appraiser often handles storm claims involving older homes and agricultural structures after tropical systems pass through.",
+  "neighborhoods": [
+   "Downtown Raymondville",
+   "Lyford",
+   "San Perlita",
+   "Sebastian",
+   "Lasara",
+   "Port Mansfield"
+  ],
+  "landmarks": [
+   "US 77 (I-69E)",
+   "State Highway 186",
+   "Laguna Madre",
+   "Port Mansfield"
+  ],
+  "weather": "Raymondville is exposed to Gulf hurricanes and tropical storms; Hurricane Hanna in 2020 made landfall on Padre Island not far from Port Mansfield and brought damaging winds and flooding to Willacy County. Hurricane Dolly in 2008 also affected the area. Flat terrain contributes to flooding, and spring storms bring hail and straight-line winds. Rare freezes, such as Winter Storm Uri in February 2021, burst pipes.",
+  "property_mix": "Homes are mostly frame or block with stucco or brick exteriors and composition shingle roofs, including older pier-and-beam homes. Metal roofs are common on rural properties. Agricultural and commercial buildings use metal and flat built-up roofing.",
+  "zip_codes": [
+   "78580"
+  ],
+  "faq_local": {
+   "q": "My Raymondville home had hurricane damage, but my insurer delayed the claim. Can appraisal speed things up?",
+   "a": "Appraisal can help when the dispute is over the amount of loss, though it does not replace claim-handling deadlines under Texas law. In Raymondville, delays often happen after major storms when adjusters are stretched thin. An appraiser can document damage and prepare an estimate. If the insurer disputes the amount, invoking appraisal creates a structured process to resolve it."
+  }
+ },
+ "pecos": {
+  "local_intro": "Pecos, the Reeves County seat, sits along the Pecos River in the Delaware Basin and claims to be home to the world's first rodeo. Oilfield growth has brought new housing, RV parks, and industrial yards alongside older adobe, stucco, and brick homes. Hail, wind, and dust storms drive claims. A Pecos insurance appraiser often handles claims where oilfield-driven labor costs make accurate repair pricing especially important.",
+  "neighborhoods": [
+   "Downtown Pecos",
+   "Balmorhea",
+   "Toyah",
+   "Saragosa",
+   "Barstow",
+   "Monahans"
+  ],
+  "landmarks": [
+   "I-20",
+   "Pecos River",
+   "US 285",
+   "Balmorhea State Park"
+  ],
+  "weather": "Pecos experiences intense thunderstorms that bring hail, damaging downburst winds, and dust storms across the Trans-Pecos. Tornadoes are possible; a deadly 1987 tornado struck nearby Saragosa in Reeves County. Flash flooding can occur in low areas during heavy rains, and winter freezes such as Winter Storm Uri in February 2021 burst pipes in homes not built for prolonged cold.",
+  "property_mix": "Homes include adobe, stucco, and brick construction with composition shingle, flat, or metal roofs. Manufactured homes and RV parks are common. Industrial and commercial buildings use metal roofing and flat built-up or TPO systems.",
+  "zip_codes": [
+   "79772"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Pecos home, but contractor costs are high due to oilfield demand. How does appraisal handle that?",
+   "a": "Repair costs are measured where and when the loss happened. In Pecos, oilfield activity can drive up labor and material costs. An appraiser documents local contractor pricing and availability to support a realistic estimate. If the insurer's estimate uses pricing from lower-cost areas, that difference can be addressed during appraisal."
+  }
+ },
+ "vernon": {
+  "local_intro": "Vernon, the Wilbarger County seat near the Red River, is a ranching and farming town tied to the historic Waggoner Ranch, with Vernon College and a modest downtown. Housing includes early twentieth-century homes, mid-century brick ranches, and rural properties with barns and shops. Hail, wind, and tornadoes dominate claims. A Vernon insurance appraiser often handles storm claims on older homes and agricultural structures after spring storms.",
+  "neighborhoods": [
+   "Downtown Vernon",
+   "Lockett",
+   "Odell",
+   "Harrold",
+   "Oklaunion",
+   "Chillicothe"
+  ],
+  "landmarks": [
+   "US 287",
+   "US 70",
+   "US 183",
+   "Pease River"
+  ],
+  "weather": "Vernon lies in a very active severe-weather corridor, with spring supercells bringing large hail, damaging winds, and tornadoes across the Red River region. Winter storms bring ice and hard freezes, including Winter Storm Uri in February 2021. Drought and wind raise grass-fire risk on surrounding ranch land, and blowing dust can affect roofs and HVAC systems.",
+  "property_mix": "Homes include older wood-frame houses on pier-and-beam foundations, brick veneer ranch homes, and composition or metal roofs. Rural properties include metal barns and shops. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "76384"
+  ],
+  "faq_local": {
+   "q": "A tornado damaged my Vernon home and outbuildings. What should I expect from the appraisal process?",
+   "a": "Tornado claims often involve extensive damage to multiple structures. In Vernon, an appraiser documents damage to the home's roof, framing, windows, and interiors, along with barns, sheds, and fencing. Each structure is priced separately under applicable coverage. Detailed documentation is important, since tornado damage can be complex and initial estimates may miss structural issues."
+  }
+ },
+ "woodway": {
+  "local_intro": "Woodway is an affluent residential city on Waco's southwest side, known for wooded lots, custom homes, and the Carleen Bright Arboretum. Many homes date from the 1970s onward and feature premium finishes, complex rooflines, and stone or brick exteriors. Hail is the dominant peril. A Woodway insurance appraiser often handles high-value roof claims where accurate measurement and labor pricing drive significant differences.",
+  "neighborhoods": [
+   "Hewitt",
+   "Waco",
+   "Robinson",
+   "Lorena",
+   "China Spring",
+   "Bellmead"
+  ],
+  "landmarks": [
+   "State Highway 6",
+   "US 84",
+   "Lake Waco",
+   "Carleen Bright Arboretum"
+  ],
+  "weather": "Woodway sees spring storms that produce large hail, damaging straight-line winds, and occasional tornadoes across Central Texas. Heavy rains can cause flash flooding in low areas and along creeks feeding the Bosque River. Winter Storm Uri in February 2021 burst pipes in many homes, and the region's clay soils can cause foundation movement.",
+  "property_mix": "Homes are typically brick or stone veneer with architectural shingles, slate-look synthetics, or tile, often with steep, complex rooflines. Some homes feature standing-seam metal accents. Commercial buildings use flat TPO roofing.",
+  "zip_codes": [
+   "76712"
+  ],
+  "faq_local": {
+   "q": "My Woodway home has a complex roof with many valleys. Why does that matter in appraisal?",
+   "a": "Complex roofs require more labor, flashing, and materials than simple roofs. In Woodway, steep pitches and multiple valleys can increase installation time and waste. An appraiser measures the roof carefully, documents valleys, hips, and ridges, and accounts for labor and safety requirements. These details often explain large differences between estimates."
+  }
+ },
+ "whitehouse": {
+  "local_intro": "Whitehouse is a growing suburb southeast of Tyler, known for its schools and quiet neighborhoods near Lake Tyler. Housing ranges from older homes to newer subdivisions, many surrounded by pine and hardwood trees. Wind, hail, and falling trees are the main risks. A Whitehouse insurance appraiser often handles storm claims where tree impacts and wind damage roofs and structures at the same time.",
+  "neighborhoods": [
+   "Tyler",
+   "Troup",
+   "Arp",
+   "Bullard",
+   "Noonday",
+   "Lake Tyler area"
+  ],
+  "landmarks": [
+   "State Highway 110",
+   "Toll 49",
+   "Lake Tyler",
+   "Lake Tyler East"
+  ],
+  "weather": "Whitehouse sees spring storms that bring hail, damaging straight-line winds, and tornadoes across East Texas. Tropical systems can bring heavy rain and wind. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, and dense tree cover increases the risk of roof and structural damage.",
+  "property_mix": "Homes are mostly brick veneer with composition or architectural shingle roofs on slab foundations, with some older pier-and-beam homes. Lake homes may include boathouses. Commercial buildings use flat TPO and built-up roofing.",
+  "zip_codes": [
+   "75791"
+  ],
+  "faq_local": {
+   "q": "A falling limb damaged my Whitehouse roof and gutters. Can appraisal help if the insurer only paid for patching?",
+   "a": "Yes, if coverage is accepted and the amount is disputed. In Whitehouse, limb impacts can crack decking, damage rafters, and dent gutters beyond the visible shingle damage. An appraiser inspects the roof structure, gutters, and interior for related damage, then prices repairs that properly restore the roof. Patching may not be adequate if structural components were affected."
+  }
+ },
+ "jacinto-city": {
+  "local_intro": "Jacinto City is a small, densely built city in east Harris County, made up mostly of modest single-family homes from the 1940s and 1950s. Many properties have aging roofs, older plumbing, and foundations affected by clay soils. Hurricanes, flooding, and wind dominate claims. A Jacinto City insurance appraiser often helps homeowners whose claims were undervalued because older homes need more extensive repairs.",
+  "neighborhoods": [
+   "Galena Park",
+   "Cloverleaf",
+   "Channelview",
+   "Denver Harbor",
+   "Pleasantville",
+   "Northshore"
+  ],
+  "landmarks": [
+   "I-10 (East Freeway)",
+   "Loop 610",
+   "Houston Ship Channel"
+  ],
+  "weather": "Jacinto City faces Gulf hurricanes and tropical storms; Hurricane Ike in 2008 brought damaging winds, Hurricane Harvey in 2017 caused widespread flooding in east Harris County, and Hurricane Beryl in 2024 brought wind damage and power outages. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are mostly single-story wood siding or brick veneer with composition shingle roofs, on slab or older pier-and-beam foundations. Older homes may have replacement windows and vinyl siding over original wood. Commercial buildings use flat built-up and TPO roofing.",
+  "zip_codes": [
+   "77029"
+  ],
+  "faq_local": {
+   "q": "Hurricane winds tore shingles off my Jacinto City home, but the insurer says the roof was already failing. What can appraisal do?",
+   "a": "Appraisal sets the amount of covered loss, and that includes separating fresh wind damage from prior wear. In Jacinto City, many roofs are older, so an appraiser looks for torn tabs, exposed nail lines, displaced ridge caps, and recent leaks tied to the storm date. Depreciation is applied for actual cash value, but replacement cost is still documented in full."
+  }
+ },
+ "pearsall": {
+  "local_intro": "Pearsall, the Frio County seat along I-35 south of San Antonio, is a farming and ranching town known for peanuts, and more recently for Eagle Ford Shale oil activity. Housing includes older frame homes, mid-century brick ranches, manufactured homes, and rural properties with barns and fencing. Hail, wind, and flash flooding drive claims. A Pearsall insurance appraiser often handles claims where rural structures and older homes require careful scoping.",
+  "neighborhoods": [
+   "Downtown Pearsall",
+   "Dilley",
+   "Moore",
+   "Bigfoot",
+   "Devine",
+   "Pleasanton"
+  ],
+  "landmarks": [
+   "I-35",
+   "Frio River",
+   "State Highway 85",
+   "US 57"
+  ],
+  "weather": "Pearsall sees spring and early summer thunderstorms that can bring large hail and damaging downburst winds to the Brush Country. Heavy rain can cause flash flooding along the Frio River and low-water crossings. Tropical systems occasionally bring heavy rain inland, and freezes such as Winter Storm Uri in February 2021 burst pipes. Drought and wind raise brush-fire risk on surrounding ranch land.",
+  "property_mix": "Homes include older wood-frame houses on pier-and-beam foundations, brick veneer ranch homes, and manufactured homes with composition or metal roofs. Rural properties have metal barns and shops. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "78061"
+  ],
+  "faq_local": {
+   "q": "Hail damaged my Pearsall ranch house and barn. How does appraisal value rural structures?",
+   "a": "Each structure is documented and priced separately. In Pearsall, ranch properties often include barns, equipment sheds, and fencing. An appraiser inspects each structure, notes materials and damage, and prices repairs using local labor and material costs. Coverage for other structures may have separate limits, so understanding those limits helps frame what the appraisal can recover."
+  }
+ },
+ "graham": {
+  "local_intro": "Graham, the Young County seat, is known for its expansive downtown square and sits between Lake Graham and Possum Kingdom Lake in rolling ranch country. Oil, ranching, and lake tourism shape the economy. Housing includes early twentieth-century homes, mid-century brick ranches, and lake and rural properties. Hail, wind, and wildfire are key perils. A Graham insurance appraiser often handles claims on older homes and rural structures after spring storms.",
+  "neighborhoods": [
+   "Downtown Graham Square",
+   "Newcastle",
+   "Olney",
+   "Loving",
+   "Bryson",
+   "South Bend"
+  ],
+  "landmarks": [
+   "US 380",
+   "State Highway 16",
+   "Lake Graham",
+   "Possum Kingdom Lake"
+  ],
+  "weather": "Graham sees spring supercells that bring large hail, damaging winds, and tornadoes across North Central Texas. Drought and rugged terrain raise wildfire risk, as seen in the 2011 wildfires around Possum Kingdom Lake. Heavy rain can cause flash flooding, and winter storms such as Winter Storm Uri in February 2021 bring ice and burst pipes.",
+  "property_mix": "Homes include older wood-frame houses on pier-and-beam foundations, brick veneer ranch homes, and composition or metal roofs. Lake properties include boathouses and docks. Rural properties have metal barns, and downtown buildings use flat built-up roofing.",
+  "zip_codes": [
+   "76450"
+  ],
+  "faq_local": {
+   "q": "My Graham home has a metal roof dented by hail. Is that covered damage?",
+   "a": "It depends on your policy. Some policies exclude cosmetic damage to metal roofs, meaning dents that do not affect function. A Graham appraiser reviews your policy and inspects for functional damage, such as compromised seams, fasteners, or coatings that could lead to leaks. If coverage applies and the amount is disputed, appraisal can help resolve the repair cost."
+  }
+ },
+ "houston": {
+  "local_intro": "Houston's vast sprawl takes in historic bungalows in the Heights, mansions in River Oaks, mid-century ranch homes in Meyerland, high-rise condos, and sprawling suburban subdivisions, along with one of the largest industrial and port economies in the country. That variety means claims span nearly every property type. Hurricanes, flooding, wind, and hail are constant concerns. A Houston insurance appraiser frequently handles everything from roof claims on 1960s homes to large commercial losses after tropical storms and derechos.",
+  "neighborhoods": [
+   "The Heights",
+   "Montrose",
+   "River Oaks",
+   "Meyerland",
+   "Kingwood",
+   "Clear Lake"
+  ],
+  "landmarks": [
+   "I-610 Loop",
+   "Beltway 8",
+   "Buffalo Bayou",
+   "Houston Ship Channel"
+  ],
+  "weather": "Houston has endured some of the most damaging storms in Texas history, including Hurricane Ike in 2008, Hurricane Harvey in 2017 with its catastrophic flooding, the May 2024 derecho that shattered windows downtown, and Hurricane Beryl in 2024, which knocked out power to millions. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes citywide.",
+  "property_mix": "Residential construction includes pier-and-beam bungalows, brick ranch homes, two-story stucco and brick homes, and townhomes with composition or architectural shingle roofs. High-rises and commercial buildings use flat TPO, modified-bitumen, and built-up roofing.",
+  "zip_codes": [
+   "77007",
+   "77008",
+   "77019",
+   "77024"
+  ],
+  "faq_local": {
+   "q": "After the May 2024 derecho, my Houston insurer underpaid my window and roof claim. Can appraisal help?",
+   "a": "Yes, if coverage is accepted and the amount is disputed. The derecho caused significant wind damage across Houston, including broken windows, lifted shingles, and fallen trees. An appraiser documents each damaged item, verifies replacement costs for windows and roofing, and includes interior damage from water intrusion. If the two appraisers disagree, an umpire helps resolve the difference."
+  }
+ },
+ "waco": {
+  "local_intro": "Waco, home to Baylor University and the revitalized riverfront along the Brazos, blends historic neighborhoods of Victorian and Craftsman homes with mid-century ranches and new subdivisions spreading toward Lake Waco and the suburbs. Commercial growth downtown and along I-35 adds offices and retail. Hail, wind, and tornadoes dominate claims. A Waco insurance appraiser often handles roof claims on older homes as well as student rentals near campus.",
+  "neighborhoods": [
+   "Castle Heights",
+   "Sanger Heights",
+   "Downtown Waco",
+   "Brook Oaks",
+   "North Waco",
+   "Woodway"
+  ],
+  "landmarks": [
+   "I-35",
+   "Brazos River",
+   "Lake Waco",
+   "Baylor University"
+  ],
+  "weather": "Waco sits in an active severe-weather corridor; the deadly May 1953 tornado that struck downtown remains one of the most destructive in Texas history. Spring storms continue to bring large hail, damaging straight-line winds, and tornadoes. Heavy rain can cause flash flooding in low areas. Winter Storm Uri in February 2021 burst pipes, and clay soils can crack foundations.",
+  "property_mix": "Historic homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick veneer and architectural shingles on slabs. Commercial buildings downtown and along I-35 use flat TPO and built-up roofing.",
+  "zip_codes": [
+   "76701",
+   "76706",
+   "76708",
+   "76710"
+  ],
+  "faq_local": {
+   "q": "I own a rental near Baylor in Waco that had hail damage. Can I use appraisal as a landlord?",
+   "a": "Yes. If your Waco rental property policy includes an appraisal clause, you can invoke it when you disagree with the amount of loss. An appraiser documents roof, siding, window, and interior damage and prices repairs. Rental properties may also have loss-of-rent coverage, which can be part of the claim if the property becomes uninhabitable during repairs."
+  }
+ },
+ "temple": {
+  "local_intro": "Temple grew as a railroad hub and is now anchored by a major medical center and industrial employers along I-35. Neighborhoods include historic homes near downtown, mid-century brick ranches, and new subdivisions toward Lake Belton. Hail and wind are the dominant perils, with occasional tornadoes. A Temple insurance appraiser often handles roof and siding claims on homes ranging from early twentieth-century houses to new construction.",
+  "neighborhoods": [
+   "Downtown Temple",
+   "West Temple",
+   "Morgan's Point Resort",
+   "Troy",
+   "Little River-Academy",
+   "Belton"
+  ],
+  "landmarks": [
+   "I-35",
+   "Lake Belton",
+   "Temple College",
+   "Santa Fe Depot"
+  ],
+  "weather": "Temple sees spring storms that bring large hail, damaging straight-line winds, and tornadoes across Central Texas. Heavy rain can cause flash flooding along creeks. Winter Storm Uri in February 2021 burst pipes, and the Blackland Prairie clay soils east of I-35 are known for causing foundation movement and cracking in brick veneer.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer subdivisions use brick or stone veneer with architectural shingles on slabs. Medical and commercial buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76501",
+   "76502",
+   "76504"
+  ],
+  "faq_local": {
+   "q": "My Temple home has hail damage, but the insurer offered only a partial roof repair. How does appraisal decide?",
+   "a": "Appraisal looks at the extent of damage and the cost to repair it properly. In Temple, an appraiser inspects each slope, counts hail impacts, and evaluates whether repairs can be done without damaging surrounding shingles or creating a mismatch. If the evidence supports replacement, the appraiser presents it. An umpire resolves differences if the appraisers cannot agree."
+  }
+ },
+ "belton": {
+  "local_intro": "Belton, the Bell County seat and home of the University of Mary Hardin-Baylor, sits between Lake Belton and Stillhouse Hollow Lake along I-35. Its historic downtown and older neighborhoods contrast with newer subdivisions and lake properties. Hail, wind, and flash flooding drive claims. A Belton insurance appraiser often handles roof claims on homes near the lakes and older homes near Nolan Creek after spring storms.",
+  "neighborhoods": [
+   "Downtown Belton",
+   "Morgan's Point Resort",
+   "Salado",
+   "Temple",
+   "Harker Heights",
+   "Nolanville"
+  ],
+  "landmarks": [
+   "I-35",
+   "Lake Belton",
+   "Stillhouse Hollow Lake",
+   "University of Mary Hardin-Baylor"
+  ],
+  "weather": "Belton sees spring storms that produce large hail, damaging straight-line winds, and occasional tornadoes. Heavy rain can cause Nolan Creek and the Leon River to rise quickly, leading to flash flooding. Winter Storm Uri in February 2021 burst pipes, and clay soils in parts of the area can cause foundation movement.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick or stone veneer with architectural shingles on slabs. Lake homes may include boathouses. Commercial buildings use flat TPO roofing.",
+  "zip_codes": [
+   "76513"
+  ],
+  "faq_local": {
+   "q": "Flash flooding from Nolan Creek damaged my Belton home. Can appraisal help?",
+   "a": "Flood damage from rising water is typically covered under a separate flood policy, not standard homeowners insurance. If you have flood coverage through the National Flood Insurance Program, its own dispute process applies. For Belton homeowners, an appraiser can still help with wind or hail damage from the same storm under the homeowners policy, keeping each claim properly separated."
+  }
+ },
+ "el-paso": {
+  "local_intro": "El Paso stretches around the Franklin Mountains along the Rio Grande, with historic neighborhoods near downtown and UTEP, mid-century homes on the central and east sides, and fast-growing subdivisions in the far east and northwest. Fort Bliss anchors a large military community. Hail, wind, and monsoon flooding are the dominant perils. An El Paso insurance appraiser often handles claims on stucco, tile, and flat-roofed homes where hail damage behaves differently than on shingles.",
+  "neighborhoods": [
+   "Kern Place",
+   "Sunset Heights",
+   "Upper Valley",
+   "Mission Valley",
+   "Northeast El Paso",
+   "Westside"
+  ],
+  "landmarks": [
+   "I-10",
+   "Loop 375",
+   "Franklin Mountains State Park",
+   "Fort Bliss"
+  ],
+  "weather": "El Paso's summer monsoon brings intense thunderstorms with hail, damaging downburst winds, and flash flooding, as seen in the severe August 2006 floods that damaged homes across the city. Spring winds carry dust storms. Freezes are uncommon but damaging, and the February 2011 freeze and Winter Storm Uri in February 2021 both burst pipes across El Paso.",
+  "property_mix": "Homes are often stucco over block or frame with flat roofs, parapets, and rooftop evaporative coolers, along with concrete tile and composition shingle roofs. Older homes may feature brick. Commercial buildings use flat TPO, modified-bitumen, and foam roofing.",
+  "zip_codes": [
+   "79902",
+   "79912",
+   "79925",
+   "79936"
+  ],
+  "faq_local": {
+   "q": "Hail damaged the flat roof and evaporative cooler on my El Paso home. Can appraisal include both?",
+   "a": "Yes. Flat roofs and rooftop equipment are both part of the covered loss when damaged by hail. In El Paso, hail can puncture or bruise roof membranes and dent evaporative coolers, ductwork, and flashing. An appraiser documents the roof surface, parapets, drains, and equipment, then prices repairs. Interior water damage from roof leaks should also be included."
+  }
+ },
+ "plano": {
+  "local_intro": "Plano grew from a farm town into a major corporate center, with corporate campuses at Legacy and Legacy West alongside neighborhoods built mostly from the 1970s through the 1990s. Many homes now have aging roofs, original plumbing, and foundations stressed by clay soils. Hail is the most frequent and costly peril. A Plano insurance appraiser regularly handles roof, siding, and fence claims after spring storms move across Collin County.",
+  "neighborhoods": [
+   "Legacy West",
+   "Willow Bend",
+   "Deerfield",
+   "Historic Downtown Plano",
+   "Russell Creek",
+   "Los Rios"
+  ],
+  "landmarks": [
+   "Dallas North Tollway",
+   "President George Bush Turnpike",
+   "US 75",
+   "Sam Rayburn Tollway"
+  ],
+  "weather": "Plano lies in the heart of DFW hail alley, where spring supercells regularly bring large hail and damaging straight-line winds across Collin County. Tornado warnings are not uncommon. Winter Storm Uri in February 2021 caused widespread pipe bursts, and the area's expansive clay soils shift foundations during drought and heavy rain.",
+  "property_mix": "Homes are mostly brick veneer with composition or architectural shingle roofs on slab foundations, with some concrete tile and slate-look roofs in upscale areas. Corporate and retail buildings use flat TPO, modified-bitumen, and built-up roofing.",
+  "zip_codes": [
+   "75023",
+   "75024",
+   "75075",
+   "75093"
+  ],
+  "faq_local": {
+   "q": "My Plano HOA requires a specific shingle color. Can appraisal account for that?",
+   "a": "HOA requirements can affect matching and material choices. In Plano, many communities require specific roof colors or styles. If replacement shingles must meet those requirements and partial repairs would not match, an appraiser can document the issue and price a compliant repair where the policy supports it. Reviewing both the policy and HOA guidelines helps clarify what is required."
+  }
+ },
+ "garland": {
+  "local_intro": "Garland, one of the largest suburbs in Dallas County, has neighborhoods built mostly from the 1950s through the 1980s, with newer development near Firewheel and along Lake Ray Hubbard. Manufacturing and distribution businesses add a strong commercial base. Hail, wind, and tornadoes dominate claims. A Garland insurance appraiser often handles roof and structural claims on older homes, especially in areas hit hard by past severe storms.",
+  "neighborhoods": [
+   "Downtown Garland",
+   "Firewheel",
+   "Lake Ray Hubbard shoreline",
+   "Spring Creek Forest area",
+   "Rowlett",
+   "Sachse"
+  ],
+  "landmarks": [
+   "I-635",
+   "President George Bush Turnpike",
+   "Lake Ray Hubbard",
+   "I-30"
+  ],
+  "weather": "Garland is in DFW hail alley, with spring storms bringing large hail and straight-line winds. The December 26, 2015 tornado that struck Garland and Rowlett caused catastrophic damage and remains a vivid reminder of the area's tornado risk. Winter Storm Uri in February 2021 burst pipes in many older homes, and expansive clay soils shift foundations.",
+  "property_mix": "Homes are mostly brick veneer with composition shingle roofs on slab foundations, with some older pier-and-beam houses. Newer homes use architectural shingles. Industrial and commercial buildings use metal roofing and flat TPO or built-up systems.",
+  "zip_codes": [
+   "75040",
+   "75041",
+   "75043",
+   "75044"
+  ],
+  "faq_local": {
+   "q": "My Garland home had tornado damage. What makes these claims harder to settle?",
+   "a": "Tornado damage often goes beyond the roof, affecting framing, windows, siding, and interiors. In Garland, an appraiser documents structural damage, including wall racking, roof decking, and foundation issues if covered. Code upgrades and debris removal may also apply. Detailed documentation is important because initial estimates can miss hidden damage that becomes apparent only during repairs."
+  }
+ },
+ "grand-prairie": {
+  "local_intro": "Grand Prairie stretches across Dallas, Tarrant, and Ellis counties between Dallas and Fort Worth, with older neighborhoods near downtown, newer subdivisions around Joe Pool Lake, and major industrial, aerospace, and entertainment businesses. That spread means claims cover everything from mid-century homes to new construction and large commercial buildings. Hail and wind drive most losses. A Grand Prairie insurance appraiser often handles claims across this wide range of properties.",
+  "neighborhoods": [
+   "Downtown Grand Prairie",
+   "Lakeridge",
+   "Mira Lagos",
+   "Arlington",
+   "Irving",
+   "Cedar Hill"
+  ],
+  "landmarks": [
+   "I-20",
+   "I-30",
+   "State Highway 360",
+   "Joe Pool Lake"
+  ],
+  "weather": "Grand Prairie lies in the heart of DFW hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats. Heavy rain can cause flooding along the Trinity River and local creeks. Winter Storm Uri in February 2021 caused widespread pipe bursts, and expansive clay soils regularly shift foundations.",
+  "property_mix": "Homes include mid-century brick ranches, newer brick and stone homes with architectural shingle roofs, and lakefront custom homes. Industrial and aerospace facilities use metal and flat TPO roofing, and retail buildings use modified-bitumen systems.",
+  "zip_codes": [
+   "75050",
+   "75051",
+   "75052",
+   "75054"
+  ],
+  "faq_local": {
+   "q": "My Grand Prairie home near Joe Pool Lake had wind damage. Does lake exposure affect the appraisal?",
+   "a": "Lake exposure can mean stronger wind and more extensive damage, which should be reflected in documentation. In Grand Prairie, homes near Joe Pool Lake may experience higher wind speeds during storms. An appraiser documents lifted or missing shingles, damaged siding, fences, and windows, and prices repairs. Exposure itself does not change coverage, but it can explain the extent of damage."
+  }
+ },
+ "denton": {
+  "local_intro": "Denton is a college town home to the University of North Texas and Texas Woman's University, with a lively courthouse square, historic homes, student rentals, and newer subdivisions spreading in every direction. Its housing ranges from early twentieth-century bungalows to recent master-planned communities. Hail is the dominant peril. A Denton insurance appraiser often handles roof claims on rentals, older homes, and newer construction after spring storms.",
+  "neighborhoods": [
+   "Denton Square",
+   "Rayzor Ranch",
+   "Robson Ranch",
+   "Southridge",
+   "Lantana",
+   "Corinth"
+  ],
+  "landmarks": [
+   "I-35",
+   "I-35E",
+   "Ray Roberts Lake",
+   "University of North Texas"
+  ],
+  "weather": "Denton sits in an active part of North Texas hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats across Denton County. Heavy rain can cause flooding along creeks. Winter Storm Uri in February 2021 burst pipes, and the area's clay soils can shift foundations during dry and wet cycles.",
+  "property_mix": "Older homes feature wood siding and pier-and-beam foundations with composition or metal roofs, while newer homes use brick or stone veneer with architectural shingles on slabs. Student housing and commercial buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76201",
+   "76205",
+   "76207",
+   "76209"
+  ],
+  "faq_local": {
+   "q": "My Denton rental near UNT had hail damage. How does appraisal work for rental properties?",
+   "a": "Appraisal works much the same for rental properties as for owner-occupied homes. In Denton, many rentals near UNT have older roofs and exteriors that take hail damage. An appraiser documents roof, siding, and window damage and prices repairs. If the property cannot be rented during repairs, loss-of-rent coverage may also be part of the claim, depending on your policy."
+  }
+ },
+ "mcallen": {
+  "local_intro": "McAllen is the commercial heart of the Rio Grande Valley, with busy retail along Expressway 83, a growing medical sector, and neighborhoods ranging from older homes near downtown to newer subdivisions in the north. Many homes are block or frame with stucco or brick. Hurricanes, flooding, and wind are the main threats. A McAllen insurance appraiser often handles claims after tropical systems where wind damage and water intrusion overlap.",
+  "neighborhoods": [
+   "Downtown McAllen",
+   "North McAllen",
+   "Tres Lagos",
+   "Sharyland",
+   "Pharr",
+   "Edinburg"
+  ],
+  "landmarks": [
+   "I-2 (Expressway 83)",
+   "McAllen International Airport",
+   "Bentsen-Rio Grande Valley State Park",
+   "Rio Grande"
+  ],
+  "weather": "McAllen faces Gulf hurricanes and tropical storms; Hurricane Hanna in 2020 brought damaging winds and severe flooding across Hidalgo County, and Hurricane Dolly in 2008 also caused wind and flood damage. Flat terrain makes heavy rains prone to flooding. Spring storms bring hail and straight-line winds, and rare freezes such as Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically block or frame with stucco or brick exteriors and composition shingle roofs, with some concrete tile on newer homes. Commercial buildings along Expressway 83 use flat TPO, modified-bitumen, and metal roofing.",
+  "zip_codes": [
+   "78501",
+   "78503",
+   "78504"
+  ],
+  "faq_local": {
+   "q": "Hail cracked several concrete tiles on my newer McAllen home. Will the insurer replace the whole roof?",
+   "a": "That depends on how widespread the damage is and whether matching tiles are available. In McAllen, an appraiser documents cracked and broken tiles, checks the underlayment for leaks, and confirms whether the same tile profile and color can still be sourced. If isolated replacement would leave a visible mismatch or disturb sound tiles, a broader repair may be supported under the policy."
+  }
+ },
+ "the-woodlands": {
+  "local_intro": "The Woodlands was carved out of dense pine forest as a master-planned community, and its villages still sit beneath a heavy tree canopy that shapes nearly every storm claim. Homes range from 1970s and 1980s houses in Grogan's Mill to large newer homes in Sterling Ridge and Creekside Park, with offices and retail clustered around The Woodlands Waterway. Much of the work of The Woodlands insurance appraiser involves falling-tree, wind, and hail claims after tropical systems and spring storms.",
+  "neighborhoods": [
+   "Grogan's Mill",
+   "Panther Creek",
+   "Cochran's Crossing",
+   "Alden Bridge",
+   "Sterling Ridge",
+   "Creekside Park"
+  ],
+  "landmarks": [
+   "I-45",
+   "Hardy Toll Road",
+   "The Woodlands Waterway",
+   "Lake Woodlands"
+  ],
+  "weather": "The Woodlands sits inland enough to avoid surge, but tropical systems still bring damaging wind and rain; Hurricane Ike in 2008 toppled thousands of pines, Hurricane Harvey in 2017 flooded areas near Spring Creek, and Hurricane Beryl in 2024 brought widespread tree damage and outages. Spring storms produce hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are mostly brick veneer with fiber cement or wood siding and composition or architectural shingle roofs on slab foundations. Upscale homes may have tile or slate-look roofs. Office and retail buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "77380",
+   "77381",
+   "77382"
+  ],
+  "faq_local": {
+   "q": "A pine tree damaged my roof in The Woodlands during a hurricane. What does the appraisal need to cover?",
+   "a": "Tree impacts in The Woodlands often damage more than shingles. An appraiser should document roof decking, rafters, ceiling joists, insulation, drywall, and interior water damage, plus gutters, fencing, and any covered tree removal. Hidden structural damage is common with large pines, so a careful inspection of the attic and framing helps make sure the estimate reflects the full repair."
+  }
+ },
+ "beaumont": {
+  "local_intro": "Beaumont, birthplace of the Texas oil industry at Spindletop, is home to Lamar University and sits along the Neches River amid refineries and port facilities. Neighborhoods include historic homes in Old Town, mid-century brick ranches, and newer subdivisions toward the west. Hurricanes, flooding, and wind have left a long claims history. A Beaumont insurance appraiser often handles windstorm and water claims where the cause of damage is disputed.",
+  "neighborhoods": [
+   "Old Town",
+   "West End",
+   "North End",
+   "South Park",
+   "Lumberton",
+   "Nederland"
+  ],
+  "landmarks": [
+   "I-10",
+   "US 69",
+   "Neches River",
+   "Lamar University"
+  ],
+  "weather": "Beaumont has been struck repeatedly by tropical systems: Hurricane Rita in 2005 and Hurricane Ike in 2008 brought destructive winds, Hurricane Harvey in 2017 caused catastrophic flooding and cut the city's water supply, and Tropical Storm Imelda in 2019 brought another round of severe flooding. Hurricane Laura in 2020 also brought strong winds. Severe thunderstorms and humidity add hail, leaks, and mold.",
+  "property_mix": "Homes include older pier-and-beam houses with wood siding, brick ranch homes on slabs, and composition or metal roofs. Industrial and commercial properties use metal buildings and flat modified-bitumen or TPO roofing.",
+  "zip_codes": [
+   "77701",
+   "77706",
+   "77707"
+  ],
+  "faq_local": {
+   "q": "My Beaumont home flooded during a tropical storm and also lost shingles. How does appraisal handle both?",
+   "a": "Wind and flood damage are usually covered under separate policies. In Beaumont, an appraiser documents roof damage, wind-driven rain intrusion, and related interior damage under the homeowners policy. Rising floodwater is typically covered by a flood policy with its own process. Clear documentation helps prevent wind-related damage from being dismissed as flood damage, which is a common dispute."
+  }
+ },
+ "wichita-falls": {
+  "local_intro": "Wichita Falls, home to Midwestern State University and Sheppard Air Force Base, has neighborhoods ranging from historic homes in Floral Heights to mid-century brick ranches and newer subdivisions on the south side. The city's history is marked by severe tornadoes, and hail remains a constant concern. A Wichita Falls insurance appraiser often handles roof claims on older homes and storm claims involving extensive structural damage.",
+  "neighborhoods": [
+   "Floral Heights",
+   "Country Club area",
+   "Tanglewood",
+   "Downtown Wichita Falls",
+   "Iowa Park",
+   "Burkburnett"
+  ],
+  "landmarks": [
+   "I-44",
+   "US 287",
+   "Lake Wichita",
+   "Sheppard Air Force Base"
+  ],
+  "weather": "Wichita Falls lies in one of the most active severe-weather areas of Texas. The Terrible Tuesday tornado of April 10, 1979 devastated much of the city, and spring supercells still bring large hail, damaging winds, and tornadoes. Winter storms bring ice and hard freezes, including Winter Storm Uri in February 2021, and drought raises grass-fire risk.",
+  "property_mix": "Homes are mostly brick veneer with composition shingle roofs on slab foundations, with older pier-and-beam homes in historic neighborhoods. Impact-resistant shingles are common on replacements. Commercial buildings use flat built-up and metal roofing.",
+  "zip_codes": [
+   "76301",
+   "76308",
+   "76310"
+  ],
+  "faq_local": {
+   "q": "My Wichita Falls home has had multiple hail claims. Will that affect a new appraisal?",
+   "a": "Prior claims do not prevent appraisal, but they make documentation more important. In Wichita Falls, an appraiser distinguishes new damage from older, previously repaired, or unrepaired damage. Records of past repairs and photos of the roof before the recent storm are helpful. Appraisal focuses on the loss from the current event under your policy terms."
+  }
+ },
+ "atascocita": {
+  "local_intro": "Atascocita is a large unincorporated community on the western shore of Lake Houston, made up of subdivisions built mostly from the 1980s onward under a heavy canopy of pine and oak. Homes range from modest tract houses to lakefront properties, with retail along FM 1960. Wind, falling trees, and flooding drive claims. An Atascocita insurance appraiser often handles storm claims where tree impacts and wind-driven rain damage roofs and interiors.",
+  "neighborhoods": [
+   "Eagle Springs",
+   "Atascocita Forest",
+   "Walden on Lake Houston",
+   "Summerwood",
+   "Kingwood",
+   "Humble"
+  ],
+  "landmarks": [
+   "FM 1960",
+   "US 59 (I-69)",
+   "Lake Houston",
+   "Beltway 8"
+  ],
+  "weather": "Atascocita faces tropical storms and hurricanes; Hurricane Harvey in 2017 caused severe flooding around Lake Houston, Hurricane Ike in 2008 brought damaging winds, and Hurricane Beryl in 2024 toppled trees and knocked out power. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes. Dense tree cover increases roof damage risk.",
+  "property_mix": "Homes are mostly brick veneer with siding accents and composition or architectural shingle roofs on slab foundations. Lakefront homes may include boathouses and docks. Commercial buildings along FM 1960 use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "77346"
+  ],
+  "faq_local": {
+   "q": "My Atascocita home had roof damage from Hurricane Beryl. Is it too late to request appraisal?",
+   "a": "It depends on your policy and Texas law. Many policies include time limits for invoking appraisal or filing suit, so it is important to review your policy and act promptly. For Atascocita homeowners, an appraiser can review claim documents, inspect remaining damage, and prepare an estimate. Waiting can make documentation harder, especially if repairs have been made or additional storms occurred."
+  }
+ },
+ "baytown": {
+  "local_intro": "Baytown sits on Galveston Bay at the mouth of the Houston Ship Channel, with refineries and petrochemical plants that employ many residents. Housing ranges from older frame homes near Texas Avenue to mid-century brick ranches and newer subdivisions along I-10. Hurricanes, flooding, and wind dominate claims. A Baytown insurance appraiser often handles windstorm and water claims where the cause of damage is debated.",
+  "neighborhoods": [
+   "Historic Texas Avenue",
+   "Cedar Bayou",
+   "Highlands",
+   "McNair",
+   "Mont Belvieu",
+   "La Porte"
+  ],
+  "landmarks": [
+   "I-10",
+   "State Highway 146",
+   "Fred Hartman Bridge",
+   "Baytown Nature Center"
+  ],
+  "weather": "Baytown faces direct Gulf hurricane exposure; Hurricane Ike in 2008 brought destructive winds and surge, Hurricane Harvey in 2017 caused widespread flooding, and Hurricane Beryl in 2024 brought wind damage and long power outages. Bayfront areas are vulnerable to storm surge. Spring storms bring hail and straight-line winds, and Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes include older pier-and-beam houses with wood siding, brick ranch homes on slabs, and composition or metal roofs. Industrial and commercial buildings use metal and flat TPO or modified-bitumen roofing.",
+  "zip_codes": [
+   "77520",
+   "77521"
+  ],
+  "faq_local": {
+   "q": "My Baytown home has both a homeowners policy and a TWIA windstorm policy. Which one handles appraisal?",
+   "a": "It depends on which policy covers the damage. In parts of Baytown, wind coverage may be provided through the Texas Windstorm Insurance Association, while the homeowners policy covers other perils. Each policy has its own dispute and appraisal provisions. An appraiser can help identify which policy applies to each part of the loss and follow the correct procedures."
+  }
+ },
+ "mansfield": {
+  "local_intro": "Mansfield spans Tarrant, Johnson, and Ellis counties and has grown quickly from a small town into a suburb of large subdivisions, with a historic downtown along Main Street. Most homes date from the 1990s onward, with many now on their first replacement roof. Hail and wind are the dominant perils. A Mansfield insurance appraiser often handles roof and siding claims on homes hit by spring storms crossing south Tarrant County.",
+  "neighborhoods": [
+   "Historic Downtown Mansfield",
+   "Walnut Creek",
+   "Kennedale",
+   "Arlington",
+   "Grand Prairie",
+   "Burleson"
+  ],
+  "landmarks": [
+   "US 287",
+   "State Highway 360",
+   "FM 157",
+   "Joe Pool Lake"
+  ],
+  "weather": "Mansfield lies in the heart of DFW hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats. Heavy rain can cause flooding along Walnut Creek and other creeks. Winter Storm Uri in February 2021 caused widespread pipe bursts, and expansive clay soils regularly shift foundations and crack brick.",
+  "property_mix": "Homes are mostly brick or stone veneer with composition or architectural shingle roofs on slab foundations. Some upscale homes have concrete tile or slate-look roofs. Commercial buildings use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76063"
+  ],
+  "faq_local": {
+   "q": "Do Mansfield homeowners need a permit for roof replacement, and does appraisal include that cost?",
+   "a": "Many cities, including Mansfield, require permits for roof replacement. Permit fees and code-required items are part of the reasonable cost to repair. An appraiser includes permit costs and any required code upgrades, such as drip edge or ventilation, where the policy allows. These items are sometimes left out of initial estimates, so they are worth checking."
+  }
+ },
+ "harlingen": {
+  "local_intro": "Harlingen sits at the crossroads of the Rio Grande Valley, where I-2 meets I-69E, with Valley International Airport, the Marine Military Academy, and a growing medical sector. Neighborhoods include older homes near downtown, mid-century ranches, and newer subdivisions. Hurricanes, flooding, and wind are the primary perils. A Harlingen insurance appraiser often handles claims after tropical systems where wind and water damage overlap.",
+  "neighborhoods": [
+   "Downtown Harlingen",
+   "Treasure Hills",
+   "Primera",
+   "Combes",
+   "Palm Valley",
+   "San Benito"
+  ],
+  "landmarks": [
+   "I-2 (US 83)",
+   "I-69E (US 77)",
+   "Arroyo Colorado",
+   "Valley International Airport"
+  ],
+  "weather": "Harlingen faces Gulf hurricanes and tropical storms; Hurricane Dolly in 2008 brought damaging winds and flooding to Cameron County, and Hurricane Hanna in 2020 brought heavy rain and wind. Flat terrain and the Arroyo Colorado contribute to flooding. Spring storms bring hail and straight-line winds, and rare freezes such as Winter Storm Uri in February 2021 burst pipes.",
+  "property_mix": "Homes are typically block or frame with stucco or brick exteriors and composition shingle roofs, with some concrete tile on newer homes. Commercial and medical buildings use flat TPO, modified-bitumen, and metal roofing.",
+  "zip_codes": [
+   "78550",
+   "78552"
+  ],
+  "faq_local": {
+   "q": "After a hurricane, my Harlingen insurer's estimate left out my fence and carport. Can appraisal include them?",
+   "a": "Yes, if those structures are covered under your policy, typically as other structures. In Harlingen, hurricane winds often damage fences, carports, and sheds along with the home. An appraiser documents each item, measures fence runs, and prices repairs. Including these items helps make sure the appraisal reflects the full scope of covered damage."
+  }
+ },
+ "little-elm": {
+  "local_intro": "Little Elm sits on the shores of Lewisville Lake and has grown rapidly from a small lake town into a suburb of large subdivisions, with a revitalized lakefront park and retail along US 380 and FM 423. Most homes were built after 2000. Hail and wind are the dominant perils, intensified by lake exposure. A Little Elm insurance appraiser often handles hail claims on newer roofs and siding across neighborhoods near the lake.",
+  "neighborhoods": [
+   "Union Park",
+   "Paloma Creek",
+   "Oak Point",
+   "Providence Village",
+   "Frisco",
+   "The Colony"
+  ],
+  "landmarks": [
+   "US 380",
+   "FM 423",
+   "Lewisville Lake",
+   "Little Elm Park"
+  ],
+  "weather": "Little Elm sits in an active part of North Texas hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats. Open water on Lewisville Lake can intensify winds on nearby homes. Winter Storm Uri in February 2021 burst pipes, and expansive clay soils can shift foundations during dry and wet cycles.",
+  "property_mix": "Homes are mostly brick or stone veneer with architectural composition shingle roofs on post-tensioned slabs, with fiber cement siding on many newer homes. Commercial buildings along FM 423 use flat TPO and metal roofing.",
+  "zip_codes": [
+   "75068"
+  ],
+  "faq_local": {
+   "q": "Hail cracked the fiber cement siding on my Little Elm home. How does appraisal handle siding claims?",
+   "a": "Fiber cement siding can crack or chip from hail, and the damage should be documented on each elevation. In Little Elm, an appraiser inspects all sides of the home, identifies damaged boards, and evaluates whether replacements will match in texture and color. Paint matching is often required, which can extend the repair scope beyond the damaged boards."
+  }
+ },
+ "bedford": {
+  "local_intro": "Bedford sits in the center of the Mid-Cities between Dallas and Fort Worth, with neighborhoods built mostly in the 1970s and 1980s, many now on their second or third roof. Retail and office buildings line State Highway 183 near DFW Airport. Hail is the leading cause of claims, followed by wind and freeze damage. A Bedford insurance appraiser often handles roof claims on mature homes where insurers point to age rather than storm damage.",
+  "neighborhoods": [
+   "Hurst",
+   "Euless",
+   "Colleyville",
+   "North Richland Hills",
+   "Grapevine",
+   "Bedford Boys Ranch area"
+  ],
+  "landmarks": [
+   "State Highway 183 (Airport Freeway)",
+   "State Highway 121",
+   "DFW International Airport",
+   "Bedford Boys Ranch Park"
+  ],
+  "weather": "Bedford lies in the heart of DFW hail alley, with spring supercells bringing large hail and damaging straight-line winds across the Mid-Cities. Tornadoes are a seasonal risk. Winter Storm Uri in February 2021 caused widespread pipe bursts, and the area's expansive clay soils regularly shift foundations and crack brick veneer.",
+  "property_mix": "Homes are mostly brick veneer with composition or architectural shingle roofs on slab foundations, with wood or fiber cement siding on upper floors. Commercial buildings along Highway 183 use flat TPO and modified-bitumen roofing.",
+  "zip_codes": [
+   "76021",
+   "76022"
+  ],
+  "faq_local": {
+   "q": "My Bedford roof is 15 years old. Will the insurer still pay for hail damage?",
+   "a": "Age alone does not exclude hail damage, though some policies pay roofs on an actual cash value basis or use roof schedules that limit payment. In Bedford, an appraiser documents hail impacts and determines the cost to repair or replace the roof. Depreciation may apply, depending on the policy, but storm damage to an older roof can still be covered."
+  }
+ },
+ "haltom-city": {
+  "local_intro": "Haltom City, just northeast of downtown Fort Worth, is a working-class city with mostly mid-century homes, a diverse population, and a strong base of small businesses and light industry along Denton Highway and Belknap Street. Many homes have aging roofs, older plumbing, and foundations affected by clay soils. Hail, wind, and freeze losses lead claims. A Haltom City insurance appraiser often helps owners whose settlements did not reflect the full repair needs of older homes.",
+  "neighborhoods": [
+   "Watauga",
+   "Richland Hills",
+   "North Richland Hills",
+   "Riverside",
+   "Diamond Hill",
+   "Saginaw"
+  ],
+  "landmarks": [
+   "Loop 820",
+   "State Highway 121",
+   "US 377 (Denton Highway)",
+   "Big Fossil Creek"
+  ],
+  "weather": "Haltom City experiences spring hail and straight-line winds common across Tarrant County, along with occasional tornadoes. Heavy rains can cause flooding near Big Fossil Creek and its tributaries. Winter Storm Uri in February 2021 burst pipes in many older homes, and the area's expansive clay soils frequently crack slabs and brick.",
+  "property_mix": "Homes are mostly single-story brick veneer or wood siding with composition shingle roofs, on slab or older pier-and-beam foundations. Small commercial and industrial buildings use metal roofing and flat built-up or TPO systems.",
+  "zip_codes": [
+   "76117"
+  ],
+  "faq_local": {
+   "q": "My Haltom City shop building had hail damage to its metal roof. Can appraisal help?",
+   "a": "Yes, if your commercial or business policy includes an appraisal clause and coverage is accepted. In Haltom City, many small businesses operate from metal buildings that can suffer dented panels, damaged fasteners, and leaks. An appraiser reviews the policy for cosmetic-damage exclusions, documents functional damage, and prices repairs. Business interruption may also apply if covered."
+  }
+ },
+ "midlothian": {
+  "local_intro": "Midlothian, long known as the Cement Capital of Texas, has grown from an industrial town into a suburb of large subdivisions on the rolling prairie of northern Ellis County. Its historic downtown is surrounded by newer homes, with cement plants and industrial facilities nearby. Hail and wind are the dominant perils. A Midlothian insurance appraiser often handles roof claims on newer homes and industrial buildings after spring storms.",
+  "neighborhoods": [
+   "Historic Downtown Midlothian",
+   "Waxahachie",
+   "Cedar Hill",
+   "Mansfield",
+   "Red Oak",
+   "Venus"
+  ],
+  "landmarks": [
+   "US 287",
+   "US 67",
+   "FM 663",
+   "Joe Pool Lake"
+  ],
+  "weather": "Midlothian sits on the southern edge of DFW hail alley, with spring supercells bringing large hail, damaging straight-line winds, and tornado threats. Heavy rain can cause flooding along local creeks. Winter Storm Uri in February 2021 caused burst pipes, and the Blackland Prairie's expansive clay soils are known for shifting foundations.",
+  "property_mix": "Homes are mostly brick or stone veneer with architectural composition shingle roofs on slab foundations. Rural properties include metal barns and shops. Industrial facilities use metal roofing, and commercial buildings use flat TPO systems.",
+  "zip_codes": [
+   "76065"
+  ],
+  "faq_local": {
+   "q": "Can industrial dust from nearby plants affect a hail claim on my Midlothian roof?",
+   "a": "Dust buildup itself is generally not storm damage, but it can make hail damage harder to see. In Midlothian, an appraiser cleans and inspects test areas on the roof to identify impact marks, granule loss, and mat fractures. Proper inspection helps distinguish hail damage from staining or surface residue, so the estimate reflects actual storm damage."
+  }
+ },
+ "nacogdoches": {
+  "local_intro": "Nacogdoches claims to be the oldest town in Texas, with brick streets downtown, historic homes, and Stephen F. Austin State University at its center. Neighborhoods are shaded by tall pines and hardwoods, and rural properties extend into the Piney Woods. Wind, hail, and falling trees drive most claims. A Nacogdoches insurance appraiser often handles storm claims where trees damage roofs, framing, and interiors in a single event.",
+  "neighborhoods": [
+   "Historic Downtown Nacogdoches",
+   "Garrison",
+   "Cushing",
+   "Appleby",
+   "Chireno",
+   "Woden"
+  ],
+  "landmarks": [
+   "US 59",
+   "State Highway 21 (El Camino Real)",
+   "State Highway 7",
+   "Stephen F. Austin State University"
+  ],
+  "weather": "Nacogdoches sees spring storms that bring hail, damaging straight-line winds, and tornadoes across Deep East Texas. Tropical systems moving inland can bring strong winds and heavy rain, as Hurricane Rita did in 2005. Ice storms and freezes, including Winter Storm Uri in February 2021, can snap limbs and burst pipes, and dense tree cover increases roof damage risk.",
+  "property_mix": "Homes include historic wood-frame houses on pier-and-beam foundations, brick veneer ranch homes, and composition or metal roofs. Student rentals are common near campus. Commercial buildings use flat built-up and TPO roofing, and downtown has historic masonry.",
+  "zip_codes": [
+   "75961",
+   "75964",
+   "75965"
+  ],
+  "faq_local": {
+   "q": "My Nacogdoches rental near SFA had storm damage. Can appraisal include lost rent?",
+   "a": "If your policy includes loss-of-rent or fair rental value coverage, those losses may be part of the claim. In Nacogdoches, rental properties near SFA can become uninhabitable after major storm damage. An appraiser documents the physical damage and repair timeline, which helps support any rental income claim. Whether lost rent falls within appraisal depends on your policy's terms."
+  }
+ }
+}
