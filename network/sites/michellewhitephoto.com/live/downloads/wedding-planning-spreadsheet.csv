@@ -1,0 +1,41 @@
+Sheet,Item,Owner,Due,Budget,Actual,Paid,Status,Notes
+Budget,Venue and catering,,,,,,,
+Budget,Photography and video,,,,,,,
+Budget,Flowers and decor,,,,,,,
+Budget,Attire and beauty,,,,,,,
+Budget,Music and entertainment,,,,,,,
+Budget,Stationery and signage,,,,,,,
+Budget,Rings,,,,,,,
+Budget,Transport and lodging,,,,,,,
+Budget,Favors and gifts,,,,,,,
+Budget,Officiant and license,,,,,,,
+Budget,Contingency (10 percent),,,,,,,
+Timeline,Book venue,,12 months out,,,,,
+Timeline,Book photographer,,10 to 12 months out,,,,,
+Timeline,Book florist and caterer,,8 to 10 months out,,,,,
+Timeline,Order dress or suit,,8 months out,,,,,
+Timeline,Send save-the-dates,,6 to 8 months out,,,,,
+Timeline,Book hair and makeup,,6 months out,,,,,
+Timeline,Send invitations,,8 to 10 weeks out,,,,,
+Timeline,Final headcount to caterer,,2 weeks out,,,,,
+Timeline,Confirm vendor timeline,,1 week out,,,,,
+Timeline,Marriage license,,per state rules,,,,,
+Vendors,Venue,,,,,,,contact / contract / deposit
+Vendors,Photographer,,,,,,,contact / contract / deposit
+Vendors,Florist,,,,,,,contact / contract / deposit
+Vendors,Caterer,,,,,,,contact / contract / deposit
+Vendors,DJ or band,,,,,,,contact / contract / deposit
+Vendors,Hair and makeup,,,,,,,contact / contract / deposit
+Vendors,Officiant,,,,,,,contact / contract / deposit
+Vendors,Transport,,,,,,,contact / contract / deposit
+Guests,Name,Address,Invited,RSVP,Meal,Table,Gift,Thank-you sent
+Day-of,Getting ready,,time,,,,,location and who
+Day-of,First look,,time,,,,,location
+Day-of,Ceremony,,time,,,,,
+Day-of,Family photos,,time,,,,,list of groupings
+Day-of,Cocktail hour,,time,,,,,
+Day-of,Reception entrance,,time,,,,,
+Day-of,Toasts,,time,,,,,
+Day-of,Golden-hour portraits,,time,,,,,sunset time minus 60 minutes
+Day-of,Cake and dancing,,time,,,,,
+Day-of,Exit,,time,,,,,
