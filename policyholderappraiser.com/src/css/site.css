@@ -83,7 +83,7 @@ section { padding: clamp(56px, 7vw, 88px) 0; scroll-margin-top: 90px; }
 .site-nav a:hover, .site-nav a[aria-current] { background: var(--sand); color: var(--brass-ink); }
 .site-nav .nav-cta { color: var(--ink); padding: .7em 1.1em; background: var(--brass-2); }
 .site-nav .nav-cta:hover { background: #e6b953; color: var(--ink); }
-.nav-toggle { display: none; align-items: center; gap: 9px; background: var(--sand); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer; color: var(--ink); font: 700 .82rem/1 var(--font); letter-spacing: .04em; text-transform: uppercase; }
+.nav-toggle { display: none; flex: none; white-space: nowrap; align-items: center; gap: 9px; background: var(--sand); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer; color: var(--ink); font: 700 .82rem/1 var(--font); letter-spacing: .04em; text-transform: uppercase; }
 .nav-toggle .bars { display: inline-flex; flex-direction: column; gap: 3px; width: 16px; }
 .nav-toggle .bars i { display: block; height: 2px; background: currentColor; border-radius: 2px; }
 .nav-toggle[aria-expanded="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }

@@ -22,11 +22,24 @@ from content.cities_extra import EXTRA
 from content.storms import STORMS, PUBLISHED as STORMS_PUBLISHED
 from content.teasers import BLOG_TEASERS, HOME_SERVICE, HOME_GUIDE
 
+import hashlib
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 OUT = os.path.join(ROOT, "public")
 PHONE = BIZ["phone_display"]
 TEL = BIZ["phone_href"]
+
+
+def asset_v(rel):
+    """Short content hash so browsers refetch CSS/JS after every deploy
+    (the .htaccess caches both for a month)."""
+    with open(os.path.join(SRC, rel), "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
+
+
+CSS_V = asset_v("css/site.css")
+JS_V = asset_v("js/site.js")
 
 
 def esc(text):
@@ -213,7 +226,7 @@ def head(page, graph):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.css?v={CSS_V}">
 <script type="application/ld+json">{jd({"@context": "https://schema.org", "@graph": graph})}</script>
 </head>
 <body>
@@ -265,7 +278,7 @@ def footer():
 <div class="footer-bottom"><span>&copy; {TODAY[:4]} {BIZ['legal_name']}. All rights reserved.</span><span><a href="/sitemap.xml">Sitemap</a></span></div>
 </div></footer>
 <a class="mobile-call" href="tel:{TEL}">Call {PHONE}</a>
-<script src="/js/site.js" defer></script>
+<script src="/js/site.js?v={JS_V}" defer></script>
 </body>
 </html>
 """
