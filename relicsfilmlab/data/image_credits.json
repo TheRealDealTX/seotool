@@ -259,16 +259,6 @@
   "w": 1000,
   "h": 666
  },
- "olympus-stylus-35-mm-black": {
-  "title": "Olympus Stylus TOUGH TG-3",
-  "url": "https://live.staticflickr.com/5593/14436090718_dcc3e507ce_b.jpg",
-  "page": "https://www.flickr.com/photos/46563758@N04/14436090718",
-  "artist": "Henry S\u00f6derlund",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 667
- },
  "olympus-stylus-epic-zoom-80": {
   "title": "Olympus \u221e Stylus Epic Zoom 80 DELUXE",
   "url": "https://live.staticflickr.com/4083/4837692766_13bdb9d32a_b.jpg",
@@ -299,16 +289,6 @@
   "w": 1000,
   "h": 680
  },
- "nikon-tele-touch": {
-  "title": "Nikon Tele Touch",
-  "url": "https://live.staticflickr.com/7190/6861160862_109257cff4_b.jpg",
-  "page": "https://www.flickr.com/photos/65913850@N00/6861160862",
-  "artist": "Shawn Whisenant",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 680,
-  "h": 1024
- },
  "minolta-xg-1": {
   "title": "Minolta XG-1",
   "url": "https://live.staticflickr.com/734/22798199106_652055603c_b.jpg",
@@ -318,16 +298,6 @@
   "source": "Flickr",
   "w": 1000,
   "h": 666
- },
- "pentax-espio-738": {
-  "title": "Pentax Espio 738",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Pentax_Espio_738.jpg",
-  "page": "https://commons.wikimedia.org/w/index.php?curid=117455295",
-  "artist": "Sgroey",
-  "license": "CC BY-SA 4.0",
-  "source": "Wikimedia",
-  "w": 1000,
-  "h": 1333
  },
  "nikon-f-photomic": {
   "title": "Nikon F Photomic SLR camera, detailed view on viewfinder",
@@ -399,26 +369,6 @@
   "w": 500,
   "h": 334
  },
- "kiev-6c-with-65mm-lens": {
-  "title": "Kiev 6C - 65mm F3.5 MIR 38B lens",
-  "url": "https://live.staticflickr.com/3120/5756920784_d9f229f9b5_b.jpg",
-  "page": "https://www.flickr.com/photos/30399879@N03/5756920784",
-  "artist": "StevenBrace",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 667
- },
- "olympus-stylus-120": {
-  "title": "Madonna, Rebel Heart Tour, Bell Center, Olympus Stylus 1, Montr\u00e9al, 10 September 2015 (120)",
-  "url": "https://live.staticflickr.com/5833/21357788501_f8bee3f3c7_b.jpg",
-  "page": "https://www.flickr.com/photos/43312810@N04/21357788501",
-  "artist": "proacguy1",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 750
- },
  "yashica-electro-35-gsn": {
   "title": "Yashica Electro 35 GSN - Rounding Out The Classic Collection.",
   "url": "https://live.staticflickr.com/4255/34716048153_8297f815d4_b.jpg",
@@ -428,16 +378,6 @@
   "source": "Flickr",
   "w": 768,
   "h": 1024
- },
- "olympus-stylus-infinity-mju-35mm-black-amp-silver": {
-  "title": "Olympus Stylus Infinity",
-  "url": "https://live.staticflickr.com/3785/10357085315_f8b75e7a7c_b.jpg",
-  "page": "https://www.flickr.com/photos/76709862@N05/10357085315",
-  "artist": "\u597d\u5c11\u5e74",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 630
  },
  "yashica-mat-124-g": {
   "title": "Yashica Mat-124 G",
@@ -485,16 +425,6 @@
   "page": "https://www.flickr.com/photos/121434796@N08/47216213591",
   "artist": "The Sasson",
   "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 666
- },
- "canon-sureshot-80u": {
-  "title": "Canon Prima Zoom 80u (Sure Shot 80u) - Grafitti on Public Toilet Window",
-  "url": "https://live.staticflickr.com/663/20846336620_51ed88275c_b.jpg",
-  "page": "https://www.flickr.com/photos/98796230@N03/20846336620",
-  "artist": "Kojotisko",
-  "license": "CC0",
   "source": "Flickr",
   "w": 1000,
   "h": 666
@@ -649,16 +579,6 @@
   "w": 1000,
   "h": 666
  },
- "mamiya-c220-professional": {
-  "title": "mamiya c220 top view 1",
-  "url": "https://live.staticflickr.com/1270/4699632325_acd38b96e1_b.jpg",
-  "page": "https://www.flickr.com/photos/25797459@N06/4699632325",
-  "artist": "zaphad1",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 666
- },
  "porsche-carerra": {
   "title": "Porsche 911 Carrera Classic Copper Brown Metallic 04",
   "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Porsche_911_Carrera_Classic_Copper_Brown_Metallic_04.jpg",
@@ -709,16 +629,6 @@
   "w": 1000,
   "h": 556
  },
- "minolta-x-700-mps-with-50mm-lens": {
-  "title": "Bury St Edmunds Minolta X-700 MPS Minolta 35-105 F3.5-5.6 AGFA APX 100 Home Developed With Ilfosol 3 (1+14) 14-9-2022-28.jpg",
-  "url": "https://live.staticflickr.com/65535/52364862649_226cf15375_b.jpg",
-  "page": "https://www.flickr.com/photos/95012874@N00/52364862649",
-  "artist": "Martin Pettitt",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 720
- },
  "_miss": [
   "28-85mm-lens",
   "28mm-lens",
@@ -735,10 +645,7 @@
   "camera-repair-diagnostic",
   "canon",
   "canon-a1-sureshot-panorama",
-  "canon-af35m-ii",
   "canon-at-1",
-  "canon-elph-sport",
-  "canon-eos-rebel-xs",
   "canon-snappy-20",
   "canon-snappy-lx",
   "canon-snappy-lx-ii",
@@ -747,7 +654,6 @@
   "canon-sure-shot-owl-date",
   "canon-sure-shot-tele",
   "canon-sure-shot-telemax-date",
-  "canon-sure-shot-z-115",
   "canon-sure-shot-zoom-s",
   "canon-sureshot-65-zoom",
   "canon-sureshot-telemax",
@@ -785,10 +691,8 @@
   "kodaks-most-basic-book-of-35mm-photography",
   "konica-hi-precision-zoom-compact",
   "konica-z-up-140-super",
-  "kyocera-samurai-x3-0-red-35mm-half-frame-film-camera",
   "leather-camera-bag-with-red-stripe",
   "linda-mccartney-sun-prints",
-  "mamiyasekor-msx-500",
   "michael-jordan-breakaway-print",
   "michael-jordan-pose-tote-bag",
   "michael-jordan-print",
@@ -799,30 +703,18 @@
   "minolta-camera-bag-with-strap",
   "minolta-freedom-action-zoom",
   "minolta-freedom-af-35r",
-  "minolta-freedom-dual",
   "minolta-freedom-gt",
   "minolta-freedom-sightseer-zoom",
   "minolta-freedom-zoom-105i",
   "minolta-freedom-zoom-130",
   "minolta-freedom-zoom-160-date",
   "minolta-freedom-zoom-70-ex",
-  "minolta-freedom-zoom-90",
-  "minolta-freedom-zoom-supreme-ex",
-  "minolta-hi-matic-af2-m",
-  "minolta-hi-matic-af2-md",
-  "minolta-hi-matic-s2",
-  "minolta-minoltina-p",
   "minolta-silver-streak-zoom",
-  "minolta-srt-200",
-  "minolta-xg-9",
   "more-joy-of-photography-hard-cover-1",
   "nan-goldin-55s",
   "nba-tote-bag",
   "nikon-fun-touch-6",
-  "nikon-lite-touch-zoom-110",
   "nikon-lite-touch-zoom-110-panorama",
-  "nikon-nikonos-iv-a",
-  "nikon-one-touch-zoom-90s",
   "nikon-zoom-touch-600",
   "olympus-infinity-76",
   "olympus-infinity-super-zoom-300",
@@ -831,48 +723,29 @@
   "olympus-infinity-zoom-211",
   "olympus-quick-shooter",
   "olympus-quick-shooter-tele",
-  "olympus-stylus-epic-dlx-w-panoramic",
   "olympus-stylus-epic-zoom-115-deluxe-1",
-  "olympus-stylus-zoom-35-70mm",
-  "olympus-superzoom-760",
-  "olympus-trip-af-50",
-  "olympus-trip-af-60",
   "pentax-iq-zoom-120",
   "pentax-iq-zoom-700",
   "pentax-iq-zoom-80-e",
   "pentax-iqzoom-115v",
   "pentax-iqzoom-160",
-  "pentax-iqzoom-900",
   "pentax-iqzoom-ezy-80",
   "pentax-zoom-70-r",
   "petri-flex-7",
-  "petri-flex-v",
-  "point-and-shoot-a-m-minolta-hi-matic-s",
-  "polaroid-252-bv",
-  "polaroid-600-cool-cam-instant-camera",
-  "polaroid-600-impulse-instant-camera",
-  "polaroid-600-one-step-rainbow-instant-camera",
-  "polaroid-600-one-step-spirit-instant-camera",
-  "polaroid-600-onestep-close-up-instant-camera",
   "polaroid-600-silver-express-instant-camera",
-  "polaroid-impulse-se",
   "polaroid-job-pro-2",
-  "polaroid-photo-magic-system",
   "polaroid-pronto-land-camera",
   "private-film-photography-group-workshop-with-drake-founder-of-relics",
   "quantaray-dakota-rz-2000",
   "ricoh-ff-3-af-super",
-  "ricoh-kr-10m",
   "ricoh-shotmaster-zoom",
   "robert-capa",
   "samsung-evoca-140s-quartz-date",
   "samsung-maxima-1450af",
   "samsung-maxima-60xl",
   "samsung-maxima-zoom-105-xl",
-  "samsung-maxima-zoom-70-xl",
   "scan-only",
   "shaquille-oneal-overhead",
-  "sony-handycam-ccd-sc5",
   "the-ansel-adams-basic-techniques-of-photography",
   "the-complete-kodak-book-of-photography",
   "the-darkroom-book",
@@ -934,16 +807,6 @@
   "w": 1000,
   "h": 750
  },
- "minolta-hi-matic-af-2": {
-  "title": "Minolta Hi-Matic AF2",
-  "url": "https://live.staticflickr.com/3032/3259325565_1341a9bb3f_b.jpg",
-  "page": "https://www.flickr.com/photos/73388888@N00/3259325565",
-  "artist": "Roca Chang",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 663
- },
  "yashica-35-me-1973": {
   "title": "Yashica 35 ME",
   "url": "https://live.staticflickr.com/8297/7845650806_00012c73f9_b.jpg",
@@ -963,16 +826,6 @@
   "source": "Flickr",
   "w": 698,
   "h": 1024
- },
- "yashica-a": {
-  "title": "Yashica: Allison On The Beach",
-  "url": "https://live.staticflickr.com/179/472413139_badd727e79.jpg",
-  "page": "https://www.flickr.com/photos/49503154622@N01/472413139",
-  "artist": "Matt Callow",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 500,
-  "h": 500
  },
  "olympus-pen-ee-1961": {
   "title": "Olympus PEN EE-3 Half-frame Camera (1973-1983)",
@@ -1004,16 +857,6 @@
   "w": 1000,
   "h": 666
  },
- "olympus-xa2-2": {
-  "title": "Olympus XA2 - 018",
-  "url": "https://live.staticflickr.com/2042/2105967200_813442a57b.jpg",
-  "page": "https://www.flickr.com/photos/10129161@N04/2105967200",
-  "artist": "TMMY PHTOG",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 500,
-  "h": 321
- },
  "canon-tl": {
   "title": "Vintage Canon TL QL 35mm SLR Film Camera, Made In Japan, Circa 1968 - 1972",
   "url": "https://live.staticflickr.com/4776/38956939760_b0dde756be_b.jpg",
@@ -1043,16 +886,6 @@
   "source": "Flickr",
   "w": 1000,
   "h": 694
- },
- "zeiss-ikon-contessa-lk-1963": {
-  "title": "Summer meadow | Zeiss Ikon Contessa LK",
-  "url": "https://live.staticflickr.com/65535/48350145761_688f3a3b1d_b.jpg",
-  "page": "https://www.flickr.com/photos/38144390@N04/48350145761",
-  "artist": "Bernt S\u00f8nvisen",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 640
  },
  "nikon-zoom-touch-400": {
   "title": "Nikon Zoom Touch 400",
@@ -1104,16 +937,6 @@
   "w": 1000,
   "h": 750
  },
- "nikon-one-touch-200": {
-  "title": "nikonONE-TOUCH-200_158-009",
-  "url": "https://live.staticflickr.com/7266/7708522734_5552f8b054_b.jpg",
-  "page": "https://www.flickr.com/photos/33227787@N05/7708522734",
-  "artist": "r.nial.bradshaw",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 652
- },
  "canon-a-1-black-1": {
   "title": "Canon A-1",
   "url": "https://live.staticflickr.com/3291/2896478404_4c46cae1c3_b.jpg",
@@ -1144,16 +967,6 @@
   "w": 1000,
   "h": 700
  },
- "olympus-xa2-original-case-a11-electronic-flash": {
-  "title": "Olympus XA2 - 018",
-  "url": "https://live.staticflickr.com/2042/2105967200_813442a57b.jpg",
-  "page": "https://www.flickr.com/photos/10129161@N04/2105967200",
-  "artist": "TMMY PHTOG",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 500,
-  "h": 321
- },
  "petri-7s": {
   "title": "Vintage Petri 7s 35mm Rangefinder Film Camera, ATL (Around The Lens) Selenium Cell Light Meter, f2.8 Lens, Made In Japan, Produced From 1963 - 1973",
   "url": "https://live.staticflickr.com/7645/17220534782_a205d5bbdf_b.jpg",
@@ -1164,26 +977,6 @@
   "w": 1000,
   "h": 760
  },
- "pentax-k-1000-with-50mm-lens-1": {
-  "title": "'Please' / Pentax K1000: 50mm (f/2.0) / Kodak Tri-X 400",
-  "url": "https://live.staticflickr.com/4244/34693594570_5239b47366_b.jpg",
-  "page": "https://www.flickr.com/photos/155164779@N08/34693594570",
-  "artist": "NEW ACCT @ MEANDERGRAPH",
-  "license": "Public Domain Mark",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 713
- },
- "nikon-fe2": {
-  "title": "tires and auto service and blurry skyte - nikon fe2",
-  "url": "https://live.staticflickr.com/1569/25024263911_1491bb641b_b.jpg",
-  "page": "https://www.flickr.com/photos/35034347371@N01/25024263911",
-  "artist": "roland",
-  "license": "CC0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 663
- },
  "canon-canonet-ql-17-giii-1": {
   "title": "Canon Canonet G-III QL17",
   "url": "https://live.staticflickr.com/5772/22021073893_7cce246568_b.jpg",
@@ -1193,26 +986,6 @@
   "source": "Flickr",
   "w": 683,
   "h": 1024
- },
- "hasselblad-503cx": {
-  "title": "Hasselblad 503CX/60 Fuji Acros 100",
-  "url": "https://live.staticflickr.com/7354/9876522116_febf1af7e1.jpg",
-  "page": "https://www.flickr.com/photos/33445922@N04/9876522116",
-  "artist": "Alfred Lilipaly",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 500,
-  "h": 500
- },
- "canon-powershot-a550": {
-  "title": "Canon PowerShot A550",
-  "url": "https://live.staticflickr.com/4137/4792566506_c2864e58ac_b.jpg",
-  "page": "https://www.flickr.com/photos/45818813@N05/4792566506",
-  "artist": "gagstreet",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 750
  },
  "nikon-fg-1982": {
   "title": "Nikon FG-20",
@@ -1284,31 +1057,11 @@
   "w": 1000,
   "h": 750
  },
- "mamiya-rb67-pro-sd": {
-  "title": "2010/06/09 ~MAMIYA RB67 Pro SD \u591c\u9593\u8a66\u6a5f ~5\u5f35 / 5P",
-  "url": "https://live.staticflickr.com/4004/4687610387_2f48b1fdc3.jpg",
-  "page": "https://www.flickr.com/photos/29859646@N06/4687610387",
-  "artist": "Max Chang",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 500,
-  "h": 400
- },
  "nikon-one-touch-zoom": {
   "title": "Nikon One-Touch Zoom 90",
   "url": "https://live.staticflickr.com/4138/4955338102_c5de3c5734_b.jpg",
   "page": "https://www.flickr.com/photos/37089490@N06/4955338102",
   "artist": "thart2009",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 666
- },
- "canon-a35-f-40mm-lens": {
-  "title": "Nasjonalmuseet i Oslo | Canon A35F",
-  "url": "https://live.staticflickr.com/65535/51964653742_347d879d98_b.jpg",
-  "page": "https://www.flickr.com/photos/38144390@N04/51964653742",
-  "artist": "Bernt S\u00f8nvisen",
   "license": "CC BY 2.0",
   "source": "Flickr",
   "w": 1000,
@@ -1353,16 +1106,6 @@
   "source": "Flickr",
   "w": 1000,
   "h": 561
- },
- "hasselblad-500cm": {
-  "title": "Hasselblad 500C/M",
-  "url": "https://live.staticflickr.com/1623/25065107874_ca88411ba1_b.jpg",
-  "page": "https://www.flickr.com/photos/55128416@N05/25065107874",
-  "artist": "brenkee",
-  "license": "CC0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 666
  },
  "pentax-me-super-with-50mm-lens": {
   "title": "Pentax ME Super / Pentax FA 31mm F/1.8 Limited",
@@ -1424,36 +1167,6 @@
   "w": 1000,
   "h": 799
  },
- "vivitar-ic-100": {
-  "title": "Ice drop on pine bush. Vivitar 100 mm macro w/ extension tubes",
-  "url": "https://live.staticflickr.com/7175/6609957747_8162a2198b_b.jpg",
-  "page": "https://www.flickr.com/photos/70589161@N00/6609957747",
-  "artist": "mabris1",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 750
- },
- "canon-af-10": {
-  "title": "Canon AF-10",
-  "url": "https://live.staticflickr.com/7439/13963998799_04efc27da1_b.jpg",
-  "page": "https://www.flickr.com/photos/50841206@N02/13963998799",
-  "artist": "Jay DeFehr",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 736,
-  "h": 1024
- },
- "porsche-progression": {
-  "title": "Porsche 911 GT1 engine subsystems cartoon",
-  "url": "https://live.staticflickr.com/6115/6224577419_0d46f9dc5a_b.jpg",
-  "page": "https://www.flickr.com/photos/9998127@N06/6224577419",
-  "artist": "wbaiv",
-  "license": "CC BY-SA 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 1014
- },
  "nikon-nikkormat-black-with-24mm-wide-angle-lens": {
   "title": "Nikon-Nikkormat FT3",
   "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Nikon-Nikkormat_FT3.jpg",
@@ -1463,16 +1176,6 @@
   "source": "Wikimedia",
   "w": 1000,
   "h": 680
- },
- "agfa-silette-sl": {
-  "title": "At the beach in November | Agfa Silette SL",
-  "url": "https://live.staticflickr.com/65535/50616590466_c11abb4425_b.jpg",
-  "page": "https://www.flickr.com/photos/38144390@N04/50616590466",
-  "artist": "Bernt S\u00f8nvisen",
-  "license": "CC BY 2.0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 639
  },
  "lancia-delta": {
   "title": "Lancia Delta Integrale Evoluzione",
@@ -1494,16 +1197,6 @@
   "w": 1000,
   "h": 754
  },
- "agfa-optima-500": {
-  "title": "Agfa Optima 1a - Floorball Playground",
-  "url": "https://live.staticflickr.com/5706/20904077115_376e893c52_b.jpg",
-  "page": "https://www.flickr.com/photos/98796230@N03/20904077115",
-  "artist": "Kojotisko",
-  "license": "CC0",
-  "source": "Flickr",
-  "w": 1000,
-  "h": 686
- },
  "bolex-580-super-8-camera": {
   "title": "Vintage Bolex 233 Compact Super 8 Movie Camera, Made In Austria, Circa 1971",
   "url": "https://live.staticflickr.com/7175/13295693114_9407d2d766_b.jpg",
@@ -1523,5 +1216,285 @@
   "source": "Wikimedia",
   "w": 1000,
   "h": 797
+ },
+ "canon-af35m-ii": {
+  "title": "Luis Cozeto - CANON - AF35M , Auto Focus, 1980",
+  "url": "https://live.staticflickr.com/7628/16969341157_ef4446115b_b.jpg",
+  "page": "https://www.flickr.com/photos/132420193@N06/16969341157",
+  "artist": "luis cozeto",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 747
+ },
+ "canon-elph-sport": {
+  "title": "Canon ELPH 370Z",
+  "url": "https://live.staticflickr.com/107/283183750_4d083ece21_b.jpg",
+  "page": "https://www.flickr.com/photos/18244673@N00/283183750",
+  "artist": "pointnshoot",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 668
+ },
+ "canon-sure-shot-z-115": {
+  "title": "Canon Prima Super 115",
+  "url": "https://rlp.museum-digital.de/data/rlp/images/55/151098-kape_3411/canon_prima_super_115/canon-prima-super-115-151098-942902.jpg",
+  "page": "https://rlp.museum-digital.de/object/151098",
+  "artist": "Unknown",
+  "license": "CC0",
+  "source": "Europeana",
+  "w": 1000,
+  "h": 666
+ },
+ "mamiyasekor-msx-500": {
+  "title": "Mamiya/Sekor 500 DTL",
+  "url": "https://live.staticflickr.com/4911/32473206388_93acae8d19_b.jpg",
+  "page": "https://www.flickr.com/photos/147008196@N08/32473206388",
+  "artist": "Fran\u00e7oiseEve",
+  "license": "Public Domain Mark",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "minolta-freedom-zoom-90": {
+  "title": "Minolta Freedom Zoom 135EX Back",
+  "url": "https://live.staticflickr.com/8094/8373960135_c1c49f7852_b.jpg",
+  "page": "https://www.flickr.com/photos/12326606@N03/8373960135",
+  "artist": "FotoShipshuck",
+  "license": "CC BY-SA 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "minolta-hi-matic-s2": {
+  "title": "Minolta Hi-Matic 7s",
+  "url": "https://live.staticflickr.com/3547/3824674708_74ae8f53d6_b.jpg",
+  "page": "https://www.flickr.com/photos/76297116@N00/3824674708",
+  "artist": "Thomas Backa",
+  "license": "CC0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 751
+ },
+ "minolta-minoltina-p": {
+  "title": "Minoltina-P",
+  "url": "https://live.staticflickr.com/185/383404862_48b530a4e3.jpg",
+  "page": "https://www.flickr.com/photos/14403813@N00/383404862",
+  "artist": "Ricohmatic",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 500,
+  "h": 375
+ },
+ "minolta-srt-200": {
+  "title": "Minolta SRT 101",
+  "url": "https://live.staticflickr.com/3950/15529445310_ced80119d3_b.jpg",
+  "page": "https://www.flickr.com/photos/92253640@N03/15529445310",
+  "artist": "joejungmann",
+  "license": "Public Domain Mark",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 698
+ },
+ "minolta-xg-9": {
+  "title": "Minolta XG9 camera, location unknown",
+  "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyYW5hbG9nX2FudGlxdWVfYXBlcnR1cmVfYmFja2dyb3VuZF8zLWltYWdlLWt6MmU1ZXQxLmpwZw.jpg",
+  "page": "https://www.rawpixel.com/image/6112604/photo-image-background-public-domain-vintage",
+  "artist": "Unknown",
+  "license": "CC0",
+  "source": "Rawpixel",
+  "w": 1000,
+  "h": 666
+ },
+ "nikon-lite-touch-zoom-110": {
+  "title": "Nikon AF600 (aka Nikon Lite Touch AF)",
+  "url": "https://live.staticflickr.com/65535/47978621408_b8ffb9bce2_b.jpg",
+  "page": "https://www.flickr.com/photos/38144390@N04/47978621408",
+  "artist": "Bernt S\u00f8nvisen",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "nikon-nikonos-iv-a": {
+  "title": "Nikonos IV",
+  "url": "https://live.staticflickr.com/3913/14606287746_6c08f362d0_b.jpg",
+  "page": "https://www.flickr.com/photos/49136729@N00/14606287746",
+  "artist": "lexly87 aka Duc N. Ly",
+  "license": "CC BY-SA 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 750
+ },
+ "nikon-one-touch-zoom-90s": {
+  "title": "Nikon One-Touch Zoom 90",
+  "url": "https://live.staticflickr.com/4138/4955338102_c5de3c5734_b.jpg",
+  "page": "https://www.flickr.com/photos/37089490@N06/4955338102",
+  "artist": "thart2009",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "olympus-stylus-epic-dlx-w-panoramic": {
+  "title": "Olympus Mju-II",
+  "url": "https://live.staticflickr.com/5130/5284217674_f44a3b6c24_b.jpg",
+  "page": "https://www.flickr.com/photos/10456228@N00/5284217674",
+  "artist": "Akairom",
+  "license": "CC0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 597
+ },
+ "olympus-stylus-zoom-35-70mm": {
+  "title": "Rabbit, Kitten and Olympus \u221e Stylus Zoom 115",
+  "url": "https://live.staticflickr.com/65535/49963377913_30b6b9b44f_b.jpg",
+  "page": "https://www.flickr.com/photos/167851365@N07/49963377913",
+  "artist": "\u5b89\u5fb7\u70c8 \u5df4\u5c14\u54c8\u6258\u592b",
+  "license": "CC0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 799
+ },
+ "olympus-trip-af-50": {
+  "title": "Olympus Trip AF",
+  "url": "https://live.staticflickr.com/4135/4882484660_5d0c6c8476_b.jpg",
+  "page": "https://www.flickr.com/photos/38094523@N03/4882484660",
+  "artist": "JohnBanbury",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "olympus-trip-af-60": {
+  "title": "Olympus Trip AF",
+  "url": "https://live.staticflickr.com/4135/4882484660_5d0c6c8476_b.jpg",
+  "page": "https://www.flickr.com/photos/38094523@N03/4882484660",
+  "artist": "JohnBanbury",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "pentax-iqzoom-900": {
+  "title": "Pentax IQZoom 140",
+  "url": "https://live.staticflickr.com/7444/13968757638_c170aa2c4f_b.jpg",
+  "page": "https://www.flickr.com/photos/7467877@N07/13968757638",
+  "artist": "CapCase",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 662
+ },
+ "petri-flex-v": {
+  "title": "My #1961 #PetriFlex V #35mm #SLR with 55mm f/2 #retro #photography #oldschool",
+  "url": "https://live.staticflickr.com/607/23521307161_d61125f062.jpg",
+  "page": "https://www.flickr.com/photos/62195404@N07/23521307161",
+  "artist": "Jon_Callow_Images",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 499,
+  "h": 333
+ },
+ "point-and-shoot-a-m-minolta-hi-matic-s": {
+  "title": "Minolta Hi-Matic 7s",
+  "url": "https://live.staticflickr.com/3547/3824674708_74ae8f53d6_b.jpg",
+  "page": "https://www.flickr.com/photos/76297116@N00/3824674708",
+  "artist": "Thomas Backa",
+  "license": "CC0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 751
+ },
+ "polaroid-252-bv": {
+  "title": "Polaroid Camera",
+  "url": "https://live.staticflickr.com/8251/8469516450_50bf3ec5e0_b.jpg",
+  "page": "https://www.flickr.com/photos/90949166@N00/8469516450",
+  "artist": "davidgsteadman",
+  "license": "Public Domain Mark",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 644
+ },
+ "polaroid-600-cool-cam-instant-camera": {
+  "title": "Polaroid Cool Cam",
+  "url": "https://live.staticflickr.com/5152/8412147666_978350fb7b_b.jpg",
+  "page": "https://www.flickr.com/photos/39241027@N08/8412147666",
+  "artist": "Lea-Kim",
+  "license": "CC BY-SA 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 666
+ },
+ "polaroid-600-impulse-instant-camera": {
+  "title": "Sofortbildkamera Polaroid Impulse",
+  "url": "https://rlp.museum-digital.de/data/rlp/images/55/102747-ton_1185/sofortbildkamera_polaroid/sofortbildkamera-polaroid-impulse-102747-803260.jpg",
+  "page": "https://rlp.museum-digital.de/object/102747",
+  "artist": "Unknown",
+  "license": "CC0",
+  "source": "Europeana",
+  "w": 1000,
+  "h": 666
+ },
+ "polaroid-impulse-se": {
+  "title": "Sofortbildkamera Polaroid Impulse",
+  "url": "https://rlp.museum-digital.de/data/rlp/images/55/102747-ton_1185/sofortbildkamera_polaroid/sofortbildkamera-polaroid-impulse-102747-803260.jpg",
+  "page": "https://rlp.museum-digital.de/object/102747",
+  "artist": "Unknown",
+  "license": "CC0",
+  "source": "Europeana",
+  "w": 1000,
+  "h": 666
+ },
+ "ricoh-kr-10m": {
+  "title": "ricoh kr-10 super",
+  "url": "https://live.staticflickr.com/2635/3875330628_c0771db7f8_b.jpg",
+  "page": "https://www.flickr.com/photos/7214903@N03/3875330628",
+  "artist": "pkmk",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 622
+ },
+ "samsung-maxima-zoom-70-xl": {
+  "title": "Samsung Maxima Zoom 105",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Samsung_Maxima_Zoom_105.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=119160906",
+  "artist": "Sgroey",
+  "license": "CC BY-SA 4.0",
+  "source": "Wikimedia",
+  "w": 1000,
+  "h": 594
+ },
+ "sony-handycam-ccd-sc5": {
+  "title": "Sony Handycam",
+  "url": "https://live.staticflickr.com/3555/3487640265_532d298bba_b.jpg",
+  "page": "https://www.flickr.com/photos/8624431@N08/3487640265",
+  "artist": "Asim Bijarani",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 842
+ },
+ "minolta-x-700-mps-with-50mm-lens": {
+  "title": "Vintage Minolta X-700 35mm SLR Film Camera, Made In Japan, Introduction Year - 1981",
+  "url": "https://live.staticflickr.com/559/20053052159_ce522a520f_b.jpg",
+  "page": "https://www.flickr.com/photos/51764518@N02/20053052159",
+  "artist": "France1978",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 1000,
+  "h": 826
+ },
+ "pentax-k-1000-with-50mm-lens-1": {
+  "title": "Pentax K1000 camera, location unknown",
+  "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyY2FtZXJhX3Bob3RvZ3JhcGhpY19hbmFsb2dfZm9ybWVyXzAtaW1hZ2Uta3oyZTRjeGouanBn.jpg",
+  "page": "https://www.rawpixel.com/image/6112534/photo-image-public-domain-technology-camera",
+  "artist": "Unknown",
+  "license": "CC0",
+  "source": "Rawpixel",
+  "w": 1000,
+  "h": 1000
  }
 }

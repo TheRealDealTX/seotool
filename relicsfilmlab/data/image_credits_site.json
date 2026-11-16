@@ -78,5 +78,25 @@
   "source": "Flickr",
   "w": 908,
   "h": 681
+ },
+ "site:super8": {
+  "title": "Bell & Howell Autoload 309 Super 8 Camera",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Bell_%26_Howell_Autoload_309_Super_8_Camera.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=89504215",
+  "artist": "Allemarique",
+  "license": "CC BY 4.0",
+  "source": "Wikimedia",
+  "w": 1200,
+  "h": 900
+ },
+ "site:slr": {
+  "title": "Vintage Pentax K1000 35mm Film SLR Camera, Made In Hong Kong",
+  "url": "https://live.staticflickr.com/1613/26186020742_04037317a4_b.jpg",
+  "page": "https://www.flickr.com/photos/51764518@N02/26186020742",
+  "artist": "France1978",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 926,
+  "h": 695
  }
 }
