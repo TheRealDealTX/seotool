@@ -26,6 +26,13 @@ function render_page(array $m, string $content): void
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (GTM-5BXPCPWX) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5BXPCPWX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($desc) ?>">
