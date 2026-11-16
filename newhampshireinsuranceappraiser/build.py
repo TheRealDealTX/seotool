@@ -36,8 +36,14 @@ VER = "20261114b"
 FAV = "1"
 STATE = "New Hampshire"
 
-# Google Tag Manager: leave empty until a container ID (GTM-XXXXXXX) is provided.
-GTM_ID = ""
+# Google Tag Manager: leave GTM_ID empty to output nothing. GTM_SNIPPET is the head tag exactly as supplied by the owner.
+GTM_ID = "GTM-P9C4ZZ5Z"
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P9C4ZZ5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -307,9 +313,7 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():

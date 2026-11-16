@@ -10,11 +10,12 @@ slugs and design are new and don't match any sister site.
 | --- | --- |
 | Hostinger website UID | `neutcGqkb` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter selected) |
 | Domain | `newhampshireinsuranceappraiser.com` (attached at creation, primary) |
-| Preview URL | https://lime-manatee-930708.hostingersite.com (use it for live checks until DNS points here) |
+| Live site | https://newhampshireinsuranceappraiser.com (DNS on Hostinger; SSL covers apex + www, expires 2027-02-13) |
+| Preview URL | https://lime-manatee-930708.hostingersite.com (noindex) |
 | Nameservers to set at the registrar | `helios.dns-parking.com`, `aster.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@newhampshireinsuranceappraiser.com (the mailbox is created separately) |
-| Google Tag Manager | `GTM_ID` in `build.py`. It is empty, so no GTM code is output |
+| Email / form inbox | info@newhampshireinsuranceappraiser.com (form delivers via authenticated SMTP; verified Nov 16, 2026) |
+| Google Tag Manager | `GTM-P9C4ZZ5Z` — head snippet exactly as supplied (`GTM_SNIPPET` in `build.py`) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -259,7 +260,9 @@ info@newhampshireinsuranceappraiser.com over authenticated SMTP (`smtp.hostinger
 returns 404 with 0 bytes. Hostinger's file API can't write outside `public_html`, which is why these files sit
 there. `_private/` is in `.gitignore`. **Never commit credentials.**
 
-When the mailbox password is available, upload `public_html/api/_private/config.php` and delete any local copy:
+**Status: live.** `public_html/api/_private/config.php` was uploaded Nov 16, 2026 (no local copy kept). The config
+and log URLs return 404 with 0 bytes, and a labelled test submission logged `"via":"smtp"`. To change the password,
+re-upload the file in this format:
 
 ```php
 <?php
@@ -276,11 +279,16 @@ Then check it:
 
 ## Google Tag Manager
 
-Set `GTM_ID = "GTM-XXXXXXX"` in `build.py`, rebuild, validate and deploy. The head snippet is output right after
-`<meta charset>`, and the `<noscript>` iframe right after `<body>`. If a full snippet is provided, use it exactly
-as given.
+Installed: `GTM_ID = "GTM-P9C4ZZ5Z"`. `GTM_SNIPPET` holds the head tag exactly as the owner supplied it, output
+right after `<meta charset>`; the `<noscript>` iframe is output right after `<body>`. Set `GTM_ID = ""` to remove
+both.
 
-## When the nameservers point here
+## Go-live checks (done Nov 16, 2026)
+
+All passed: SSL names include both hosts; on `/` and four interior pages, http, http-www and https-www 301 to the
+https apex and `/page/index.php` 301s to `/page/`; all 51 sitemap URLs return 200; the real domain sends no
+`X-Robots-Tag` and serves this site's `robots.txt`; the verification file returns 200 with identical bytes.
+Re-run these after any hosting change:
 
 1. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`). Reissue with
    `agency-hosting_ssl_reinstall-website` if `www` is missing.
