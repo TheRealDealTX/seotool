@@ -75,7 +75,7 @@ ob_start(); ?>
 <?php
 $body = (string) ob_get_clean();
 $title = 'What Is an Insurance Appraisal? Texas Appraisal Clause Guide';
-$desc  = 'What is an insurance appraisal? Learn how the appraisal clause works in Texas, what appraisers decide, timelines, costs and when to invoke it. Free claim review.';
+$desc  = 'What is an insurance appraisal? How the appraisal clause works in Texas, what appraisers decide, timelines, costs and when to invoke it.';
 $faqs = [
     ['q' => 'What is an appraisal in insurance?', 'a' => 'In property insurance, an appraisal is a contractual process for resolving disagreements about the amount of a covered loss. Each side appoints an appraiser, the appraisers choose an umpire, and an award signed by any two of them sets the amount the insurer owes, subject to the policy terms.'],
     ['q' => 'Who can demand appraisal — me or the insurance company?', 'a' => 'Most Texas policies let either the policyholder or the insurer demand appraisal in writing when they fail to agree on the amount of loss. Some policies add conditions, such as requiring a proof of loss first, so review your policy’s appraisal clause before sending a demand.'],

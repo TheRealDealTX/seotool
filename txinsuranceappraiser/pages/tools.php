@@ -1,6 +1,6 @@
 <?php
 $title = 'Free Insurance Claim Calculators & Tools | TX Insurance Appraiser';
-$desc  = 'Free tools for Texas property owners: recoverable depreciation calculator, appraisal cost calculator, roof square calculator, claim deadlines and checklist.';
+$desc  = 'Free tools for Texas property owners: depreciation, appraisal cost and roof square calculators, a claim deadline tool and checklist.';
 ob_start(); ?>
 <section class="hero hero-sm">
   <div class="hero-bg" style="background-image:url(/assets/img/site/TX-Insurance-Appraiser-Matterport-Xactimate.webp)"></div>

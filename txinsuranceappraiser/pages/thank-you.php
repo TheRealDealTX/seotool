@@ -17,7 +17,7 @@ ob_start(); ?>
 <?php
 render_page([
     'title' => 'Thank You | TX Insurance Appraiser',
-    'description' => 'Thanks for contacting TX Insurance Appraiser.',
+    'description' => 'Thanks for contacting TX Insurance Appraiser. We received your claim review request and will be in touch shortly, usually the same day.',
     'path' => '/thank-you/',
     'noindex' => true,
 ], (string) ob_get_clean());

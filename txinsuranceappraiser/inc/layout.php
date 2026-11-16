@@ -54,6 +54,7 @@ function render_page(array $m, string $content): void
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/webp" href="<?= SITE['icon'] ?>">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">

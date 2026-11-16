@@ -56,7 +56,7 @@ ob_start(); ?>
 <?php
 $S['appraisal'] = [
     'title' => 'Insurance Appraisal Services in Texas | TX Insurance Appraiser',
-    'description' => 'Policyholder-side insurance appraisal services in Texas for underpaid hail, wind, hurricane, water and fire claims. Experienced property damage appraisers.',
+    'description' => 'Policyholder-side insurance appraisal services in Texas for underpaid hail, wind, hurricane, water and fire claims. Free claim review.',
     'h1' => 'Insurance Appraisal Services in Texas', 'eyebrow' => 'Insurance appraisal',
     'lead' => 'Experienced property damage appraisers who prove the true amount of your loss — and negotiate a fair, binding award when your carrier’s number falls short.',
     'image' => '/assets/img/site/TX-Insurance-Appraiser-Appraisals.webp', 'body' => (string) ob_get_clean(),
@@ -100,7 +100,7 @@ ob_start(); ?>
 <?php
 $S['umpire'] = [
     'title' => 'Insurance Umpire Services in Texas | Appraisal Umpire',
-    'description' => 'Neutral insurance umpire services for Texas property appraisals in Houston, Dallas, Austin, San Antonio, Fort Worth and statewide. Fair, reasoned awards.',
+    'description' => 'Neutral insurance umpire services for Texas property appraisals in Houston, Dallas, Austin, San Antonio and statewide. Fair awards.',
     'h1' => 'Insurance Umpire Services in Texas', 'eyebrow' => 'Appraisal umpire services',
     'lead' => 'A neutral, construction-savvy umpire for Texas appraisals that reach an impasse — fair decisions grounded in the evidence.',
     'image' => '/assets/img/site/TX-Insurance-Appraiser-Offers.webp', 'body' => (string) ob_get_clean(),
@@ -141,7 +141,7 @@ ob_start(); ?>
 <?php
 $S['matterport'] = [
     'title' => 'Matterport 3D Scanning for Insurance Claims in Texas',
-    'description' => 'Matterport 3D scanning services for insurance claims in Texas. Measurable, shareable documentation of storm, water and fire damage for appraisal and claims.',
+    'description' => 'Matterport 3D scanning for insurance claims in Texas. Measurable, shareable documentation of storm, water and fire damage.',
     'h1' => 'Matterport 3D Scanning for Insurance Claims', 'eyebrow' => 'Matterport services',
     'lead' => 'Immersive, measurable 3D scans that preserve every room and every damaged surface — evidence that holds up in appraisal.',
     'image' => '/assets/img/site/TX-Insurance-Appraiser-Matterport.webp', 'body' => (string) ob_get_clean(),
@@ -184,7 +184,7 @@ ob_start(); ?>
 <?php
 $S['xactimate-estimate'] = [
     'title' => 'Xactimate Estimates for Insurance Claims in Texas',
-    'description' => 'Independent Xactimate estimates for Texas insurance claims, priced by ZIP code. Find missing line items, waste and code upgrades in your carrier’s estimate.',
+    'description' => 'Independent Xactimate estimates for Texas insurance claims, priced by ZIP code. Find missing line items, waste and code upgrades.',
     'h1' => 'Xactimate Estimates for Texas Insurance Claims', 'eyebrow' => 'Xactimate estimating',
     'lead' => 'Line-item Xactimate estimates in the carriers’ own format — complete, ZIP-priced, and built to stand up in appraisal.',
     'image' => '/assets/img/site/TX-Insurance-Appraiser-Matterport-Xactimate.webp', 'body' => (string) ob_get_clean(),
@@ -224,7 +224,7 @@ ob_start(); ?>
 <?php
 $S['symbility-estimate'] = [
     'title' => 'Symbility Estimates for Insurance Claims in Texas',
-    'description' => 'Symbility estimating services for Texas property insurance claims. Accurate line-item estimates that match carriers using the CoreLogic Symbility platform.',
+    'description' => 'Symbility estimates for Texas property insurance claims: accurate line-item estimates that match carriers using the Symbility platform.',
     'h1' => 'Symbility Estimates for Insurance Claims', 'eyebrow' => 'Symbility estimating',
     'lead' => 'Precise Symbility estimates that match your carrier’s format — so the conversation is about the damage, not the software.',
     'image' => '/assets/img/site/TX-Insurance-Appraiser-Matterport-Symbility.webp', 'body' => (string) ob_get_clean(),

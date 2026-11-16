@@ -31,16 +31,17 @@ if (mb_strlen($title) > 64) {
 if (mb_strlen($title) > 64) {
     $title = "{$K} | TX Insurance Appraiser";
 }
-$desc = pick([
-    "Looking for a {$K}? TX Insurance Appraiser helps {$county} homeowners and businesses resolve underpaid property claims through appraisal. Free review.",
-    "Hire a trusted {$K} for underpaid hail, wind, water and fire claims. Policyholder-side appraisal in {$N}, TX. Free claim review: (254) 421-5412.",
-    "{$K} services for {$N}, TX property owners: appraisal, umpire, Xactimate and Matterport. Get a fair, documented amount of loss. Free review.",
-], $s, 1);
-if (mb_strlen($desc) > 160) {
-    $desc = "{$K} for underpaid property claims in {$N}, TX. Policyholder-side appraisal, estimates and 3D documentation. Free claim review.";
-}
-if (mb_strlen($desc) > 160) {
-    $desc = "{$K} for underpaid hail, wind & water claims in {$N}, TX. Policyholder-side appraisal. Free review.";
+$descOptions = [
+    "Need a {$K}? TX Insurance Appraiser resolves underpaid hail, wind, water and fire claims in {$N}, TX. Free claim review.",
+    "{$K} for underpaid property claims in {$county}. Policyholder-side appraisal, umpire and Xactimate services. Free review.",
+    "Hire a trusted {$K} for underpaid hail, wind and water claims. Policyholder-side appraisal in {$N}, TX. Free review.",
+    "{$K} for underpaid property claims in {$N}, TX. Appraisal, umpire and estimating services. Free claim review.",
+    "{$K} for underpaid hail, wind and water claims in {$N}, TX. Free claim review.",
+];
+$start = crc32($s . '|1') % 3;
+$desc = end($descOptions);
+foreach (array_merge(array_slice($descOptions, $start), array_slice($descOptions, 0, $start)) as $opt) {
+    if (mb_strlen($opt) <= 145) { $desc = $opt; break; }
 }
 
 $intro2 = pick([

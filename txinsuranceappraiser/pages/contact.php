@@ -1,6 +1,6 @@
 <?php
 $title = 'Contact TX Insurance Appraiser | Free Insurance Claim Review';
-$desc  = 'Contact TX Insurance Appraiser for a free insurance claim review. Call or text (254) 421-5412 or email us. Serving Austin, Waco, Dallas, Houston and all of Texas.';
+$desc  = 'Contact TX Insurance Appraiser for a free insurance claim review. Call or text (254) 421-5412 or email us. Serving all of Texas.';
 $err = isset($_GET['error']);
 ob_start(); ?>
 <section class="hero hero-sm">

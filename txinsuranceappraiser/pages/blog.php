@@ -1,6 +1,6 @@
 <?php
 $title = 'Texas Insurance Claim & Appraisal Blog | TX Insurance Appraiser';
-$desc  = 'Expert guides on Texas insurance appraisal, roof and hail claims, Xactimate estimates, depreciation and commercial property claims from TX Insurance Appraiser.';
+$desc  = 'Expert guides on Texas insurance appraisal, roof and hail claims, Xactimate estimates, depreciation and commercial property claims.';
 $P = posts();
 ob_start(); ?>
 <section class="hero hero-sm">

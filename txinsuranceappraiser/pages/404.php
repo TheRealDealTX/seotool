@@ -18,7 +18,7 @@ ob_start(); ?>
 <?php
 render_page([
     'title' => 'Page Not Found | TX Insurance Appraiser',
-    'description' => 'The page you requested could not be found. Explore TX Insurance Appraiser’s appraisal services, Texas service areas and claim guides.',
+    'description' => 'Page not found. Explore TX Insurance Appraiser’s appraisal services, Texas service areas and insurance claim guides.',
     'path' => '/404/',
     'noindex' => true,
 ], (string) ob_get_clean());

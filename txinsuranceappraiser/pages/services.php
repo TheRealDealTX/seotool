@@ -1,6 +1,6 @@
 <?php
 $title = 'Insurance Appraisal & Estimating Services | TX Insurance Appraiser';
-$desc  = 'Explore TX Insurance Appraiser’s services: insurance appraisal, umpire services, Matterport 3D scans, Xactimate and Symbility estimates for Texas property claims.';
+$desc  = 'Insurance appraisal, umpire services, Matterport 3D scans, and Xactimate and Symbility estimates for Texas property claims.';
 $svc = [
     ['appraisal', 'scale', 'Insurance Appraisal', 'TX-Insurance-Appraiser-Appraisals.webp', 'We act as your appraiser under the policy’s appraisal clause — inspecting, estimating and negotiating a fair award for underpaid claims.'],
     ['umpire', 'gavel', 'Umpire Services', 'TX-Insurance-Appraiser-Offers.webp', 'Neutral umpire services for Texas appraisals when the two appraisers can’t agree on the amount of loss.'],

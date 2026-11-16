@@ -7,7 +7,7 @@ $D = [];
 /* ---------------------------------------------------------- depreciation */
 $D['recoverable-depreciation-calculator'] = [
     'title' => 'Recoverable Depreciation Calculator (RCV vs ACV) | Free',
-    'description' => 'Free recoverable depreciation calculator: enter RCV, depreciation and deductible to see your ACV check now and the depreciation holdback you can recover.',
+    'description' => 'Free recoverable depreciation calculator: enter RCV, depreciation and deductible to see your ACV payment and the holdback you can recover.',
     'h1' => 'Recoverable Depreciation Calculator',
     'lead' => 'See what your insurance company should pay now (actual cash value) and how much recoverable depreciation you can collect after repairs.',
     'form' => <<<HTML
@@ -52,7 +52,7 @@ HTML,
 /* ------------------------------------------------------------- appraisal */
 $D['appraisal-cost-calculator'] = [
     'title' => 'Is Insurance Appraisal Worth It? Free Cost Calculator',
-    'description' => 'Estimate whether insurance appraisal is worth it. Compare the carrier estimate to yours, factor in appraiser and umpire fees, and see your likely net gain.',
+    'description' => 'Is insurance appraisal worth it? Compare the carrier estimate to yours, factor in appraiser and umpire fees, and see your likely net gain.',
     'h1' => 'Is Appraisal Worth It? Cost vs. Recovery Calculator',
     'lead' => 'Compare your insurer’s number to your estimate, factor in appraisal costs, and see a realistic range for what appraisal could put in your pocket.',
     'form' => <<<HTML
@@ -93,7 +93,7 @@ HTML,
 /* ------------------------------------------------------------------ roof */
 $D['roof-square-calculator'] = [
     'title' => 'Roof Square Calculator with Pitch & Waste Factor | Free',
-    'description' => 'Free roof square calculator: convert footprint and pitch to true roof area and squares, add a waste factor, and compare against your insurance estimate.',
+    'description' => 'Free roof square calculator: turn footprint and pitch into true roof squares, add a waste factor, and compare against your estimate.',
     'h1' => 'Roof Square, Pitch & Waste Factor Calculator',
     'lead' => 'Turn a building footprint and roof pitch into true roof squares, apply a waste factor, and check the quantities on your insurance estimate.',
     'form' => <<<HTML
@@ -137,7 +137,7 @@ HTML,
 /* -------------------------------------------------------------- deadlines */
 $D['texas-claim-deadline-calculator'] = [
     'title' => 'Texas Insurance Claim Deadline Calculator (Ch. 542)',
-    'description' => 'Free Texas insurance claim deadline calculator. Map prompt-payment deadlines under Texas Insurance Code Chapter 542 from your claim dates, plus appraisal timelines.',
+    'description' => 'Free Texas insurance claim deadline calculator. Map Chapter 542 prompt-payment deadlines from your claim dates, plus appraisal timelines.',
     'h1' => 'Texas Insurance Claim Deadline Calculator',
     'lead' => 'Enter your claim dates to map the key deadlines Texas Insurance Code Chapter 542 generally sets for insurers — plus common appraisal-clause timelines.',
     'form' => <<<HTML
@@ -184,7 +184,7 @@ foreach ($groups as $g => $items) {
 $chk .= '</div><p style="font-size:.85rem;color:var(--ink-2);margin:18px 0 0">Your progress is saved privately in this browser only.</p></div>';
 $D['claim-documentation-checklist'] = [
     'title' => 'Insurance Claim Documentation Checklist (Printable)',
-    'description' => 'Free interactive insurance claim documentation checklist for Texas property owners. Track the evidence that wins appraisal disputes and print it anytime.',
+    'description' => 'Free interactive insurance claim documentation checklist for Texas property owners. Track the evidence that wins appraisal disputes.',
     'h1' => 'Insurance Claim Documentation Checklist',
     'lead' => 'The evidence that wins appraisal disputes, in one interactive checklist. Tick items off as you go — your progress saves in your browser — and print it anytime.',
     'form' => $chk,

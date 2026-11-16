@@ -1,6 +1,6 @@
 <?php
 $title = 'Texas Insurance Appraiser Service Areas | 288 Cities Served';
-$desc  = 'Find a local insurance appraiser in your Texas city. TX Insurance Appraiser serves 288 cities from Houston, Dallas and Austin to El Paso, Lubbock and the RGV.';
+$desc  = 'Find a local insurance appraiser in your Texas city. TX Insurance Appraiser serves 288 cities, from Houston and Dallas to El Paso and the RGV.';
 $C = cities();
 $byRegion = [];
 foreach ($C as $c) {

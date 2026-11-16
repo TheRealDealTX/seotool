@@ -1,6 +1,6 @@
 <?php
 $title = 'About Us: Joseph Dittman, Texas Insurance Appraiser';
-$desc  = 'Meet Joseph Dittman, lead appraiser at TX Insurance Appraiser — a Texas-licensed public adjuster who inspects, estimates and negotiates property claims statewide.';
+$desc  = 'Meet Joseph Dittman, lead appraiser at TX Insurance Appraiser and a Texas-licensed public adjuster handling property claims statewide.';
 $A = SITE['appraiser'];
 $faqs = [
     ['q' => 'Who is the appraiser at TX Insurance Appraiser?',

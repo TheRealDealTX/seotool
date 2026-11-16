@@ -42,7 +42,7 @@ for p in pages:
     dsc = re.search(r'<meta name="description" content="([^"]*)"', b); dsc = html.unescape(dsc.group(1)) if dsc else ''
     titles[t].append(p); descs[dsc].append(p)
     if not t or len(t) > 70: err(f'{p} title length {len(t)}: {t}')
-    if not (70 <= len(dsc) <= 165): err(f'{p} description length {len(dsc)}')
+    if not (70 <= len(dsc) <= 145): err(f'{p} description length {len(dsc)}')
     h1 = re.findall(r'<h1[ >]', b)
     if len(h1) != 1: err(f'{p} has {len(h1)} h1')
     for j in re.findall(r'<script type="application/ld\+json">(.*?)</script>', b, re.S):

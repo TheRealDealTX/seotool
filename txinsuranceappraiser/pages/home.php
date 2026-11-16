@@ -1,6 +1,6 @@
 <?php
 $title = 'TX Insurance Appraiser | Insurance Appraiser in Texas';
-$desc  = 'TX Insurance Appraiser provides policyholder-side insurance appraisal services for hail, wind, hurricane, water and fire claims across Texas. Free claim review.';
+$desc  = 'TX Insurance Appraiser provides policyholder-side insurance appraisal for hail, wind, hurricane, water and fire claims in Texas. Free review.';
 $C = cities();
 $latest = array_slice(posts(), 0, 6, true);
 
