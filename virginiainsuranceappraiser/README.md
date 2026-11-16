@@ -13,7 +13,7 @@ template; the copy, URL slugs and design are new.
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@virginiainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | not set yet (`GTM_ID = ""` in `build.py`) |
+| Google Tag Manager | `GTM-KCHS28ZM` (owner-supplied snippet in `GTM_SNIPPET`, plus the noscript iframe) |
 
 Until the nameservers point to Hostinger the real domain won’t resolve and SSL can’t be issued, so live checks
 run on the preview URL. Hostinger serves its own Googlebot-blocking `robots.txt` on preview hosts. That’s expected.

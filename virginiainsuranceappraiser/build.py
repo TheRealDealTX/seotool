@@ -35,11 +35,19 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261114a"   # CSS/JS cache-buster
+VER = "20261116a"   # CSS/JS cache-buster
 FAV = "1"           # icon cache-buster
 
 # Google Tag Manager: leave empty until a container ID is provided (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+GTM_ID = "GTM-KCHS28ZM"
+# The tag snippet exactly as provided by the site owner. When set, it is used in <head> instead of the
+# standard GTM loader; gtm_body() still adds the noscript iframe for GTM_ID.
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KCHS28ZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Google Search Console HTML-file verification. Written byte-for-byte to the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -246,6 +254,8 @@ def footer():
 
 
 def gtm_head():
+    if GTM_SNIPPET:
+        return GTM_SNIPPET + "\n"
     if not GTM_ID:
         return ""
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
