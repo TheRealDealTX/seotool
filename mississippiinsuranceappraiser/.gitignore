@@ -1,0 +1,4 @@
+__pycache__/
+_private/
+mia-config.php
+*.log
