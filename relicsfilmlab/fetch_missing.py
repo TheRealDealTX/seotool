@@ -176,3 +176,51 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def reuse_siblings():
+    """For products still without a photo, reuse an approved photo of the same series (cameras)
+    or the same category (books, prints, bags...), labelled representative / illustrative."""
+    import shutil
+    extra = json.load(open(EXTRA)) if os.path.exists(EXTRA) else {}
+    allc = {}
+    for f in ("image_credits.json", "image_credits_extra.json"):
+        allc.update({k: v for k, v in json.load(open(os.path.join(ROOT, "data", f))).items() if not k.startswith("_") and not k.startswith("site:")})
+    allc = {k: v for k, v in allc.items() if os.path.exists(os.path.join(OUT, k + ".webp"))}
+    prods = catalog.products()
+    bycat = {}
+    for p in prods:
+        bycat.setdefault(p["cat"], []).append(p["slug"])
+    def fam_of(slug):
+        return next(((pre, lab) for pre, qq, lab in FAMILY if slug.startswith(pre)), None)
+    n = 0
+    for i, p in enumerate(prods):
+        slug, cat = p["slug"], p["cat"]
+        if os.path.exists(os.path.join(OUT, slug + ".webp")):
+            continue
+        src, kind, label = None, None, None
+        fam = fam_of(slug)
+        if fam:
+            sib = [k for k in allc if k != slug and k.startswith(fam[0]) and allc[k].get("kind") in (None, "exact", "representative")]
+            if not sib and "-" in fam[0]:   # widen to brand + type, e.g. any Minolta compact
+                b = slug.split("-")[0]
+                sib = [k for k in allc if k.startswith(b + "-") and next((q["cat"] for q in prods if q["slug"] == k), "") == cat and allc[k].get("kind") in (None, "exact", "representative")]
+                label = f"{b.title()} {catalog.CATEGORIES[cat][0].lower()}" if sib else None
+            if sib:
+                src, kind, label = sib[i % len(sib)], "representative", label or fam[1]
+        if not src:
+            sib = [k for k in allc if k in bycat.get(cat, []) and k != slug]
+            if sib:
+                src = sib[i % len(sib)]
+                kind = "illustrative"   # different model/brand: never claim it represents this product
+                label = None
+        if src:
+            shutil.copy(os.path.join(OUT, src + ".webp"), os.path.join(OUT, slug + ".webp"))
+            c = {k: v for k, v in allc[src].items() if k not in ("kind", "family")}
+            extra[slug] = dict(c, kind=kind, **({"family": label} if kind == "representative" else {}))
+            n += 1
+            print("reuse", kind, slug, "<-", src)
+        else:
+            print("still missing", slug)
+    json.dump(extra, open(EXTRA, "w"), indent=1)
+    print("reused", n)

@@ -68,6 +68,8 @@ def kws(path, n=8):
 
 def brand_of(p):
     first = p["slug"].split("-")[0]
+    if first == "point":
+        first = "minolta"
     if first in ("canonn",):
         first = "canon"
     if first == "mamiyasekor":
