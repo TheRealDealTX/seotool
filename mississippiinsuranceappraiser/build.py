@@ -87,30 +87,30 @@ def photo_url(key):
 
 SVC_PHOTO = {
     "appraisal-demand-representation": P("consultation"), "home-insurance-appraisal": P("porch-home", "brick-ranch"),
-    "commercial-hoa-appraisal": P("commercial-building", "apartment-complex"), "roof-hail-claim-appraisal": P("hail-damage", "roof-shingles"),
+    "commercial-hoa-appraisal": P("apartment-complex", "commercial-building"), "roof-hail-claim-appraisal": P("hail-damage", "roof-shingles"),
     "tornado-wind-damage-appraisal": P("tornado-damage", "tornado-roof"), "hurricane-named-storm-appraisal": P("hurricane-damage", "hurricane-debris"),
     "water-plumbing-loss-appraisal": P("water-damage"), "fire-smoke-loss-appraisal": P("house-fire"),
-    "fallen-tree-claim-appraisal": P("tree-on-house"), "ice-storm-freeze-appraisal": P("ice-storm"),
+    "fallen-tree-claim-appraisal": P("fallen-tree"), "ice-storm-freeze-appraisal": P("ice-storm"),
     "carrier-estimate-review": P("estimate-laptop", "calculator"), "neutral-umpire-services": P("clipboard", "consultation"),
 }
 LOC_PHOTO = {
-    "jackson-hinds-county": P("jackson-capitol", "jackson-skyline", "brick-ranch"), "gulfport-harrison-county": P("gulfport-beach", "raised-coastal-home"),
-    "biloxi-harrison-county": P("biloxi-lighthouse", "gulfport-beach", "hurricane-damage"), "hattiesburg-forrest-county": P("hattiesburg", "pine-forest"),
-    "southaven-desoto-county": P("brick-ranch", "hero-home"), "tupelo-lee-county": P("tupelo", "tornado-roof"),
-    "meridian-lauderdale-county": P("meridian", "porch-home"), "oxford-lafayette-county": P("oxford", "storm-clouds"),
-    "pascagoula-jackson-county": P("raised-coastal-home", "hurricane-debris"), "vicksburg-warren-county": P("vicksburg-river"),
-    "columbus-lowndes-county": P("columbus", "natchez", "church"), "greenville-washington-county": P("delta-farmland", "metal-roof"),
+    "jackson-hinds-county": P("jackson-capitol"), "gulfport-harrison-county": P("gulf-coast-harbor"),
+    "biloxi-harrison-county": P("gulf-pier-sunset"), "hattiesburg-forrest-county": P("pine-forest"),
+    "southaven-desoto-county": P("brick-ranch"), "tupelo-lee-county": P("tupelo-elvis-birthplace"),
+    "meridian-lauderdale-county": P("porch-home"), "oxford-lafayette-county": P("storm-supercell"),
+    "pascagoula-jackson-county": P("coastal-home"), "vicksburg-warren-county": P("mississippi-river"),
+    "columbus-lowndes-county": P("church"), "greenville-washington-county": P("delta-plowed-field"),
 }
 TOOL_PHOTO = {
     "appraisal-payoff-estimator": P("calculator"), "holdback-recovery-calculator": P("estimate-laptop"),
     "roof-pitch-squares-calculator": P("roof-shingles", "roof-inspector"), "named-storm-deductible-calculator": P("storm-clouds"),
     "claim-calendar-builder": P("calendar", "clipboard"), "appraisal-readiness-checkup": P("clipboard"),
-    "wind-water-split-estimator": P("flood-home", "flooded-street", "hurricane-damage"),
+    "wind-water-split-estimator": P("flood-home"),
 }
 POST_PHOTO = {
-    "wind-vs-water-after-katrina": P("hurricane-debris", "hurricane-damage"), "mississippi-appraisal-clause-guide": P("consultation"),
-    "coast-hurricane-deductibles-explained": P("raised-coastal-home", "gulfport-beach"), "documenting-tornado-damage": P("tornado-roof", "tornado-damage"),
-    "ice-storm-tree-claims-north-mississippi": P("ice-storm", "tree-on-house"), "line-by-line-estimate-reading": P("estimate-laptop", "calculator"),
+    "wind-vs-water-after-katrina": P("hurricane-boat"), "mississippi-appraisal-clause-guide": P("consultation"),
+    "coast-hurricane-deductibles-explained": P("coastal-home"), "documenting-tornado-damage": P("tornado-roof", "tornado-damage"),
+    "ice-storm-tree-claims-north-mississippi": P("ice-storm"), "line-by-line-estimate-reading": P("estimate-laptop", "calculator"),
 }
 HERO = P("hero-home", "porch-home")
 
@@ -488,22 +488,22 @@ def hero_form():
 REGIONS = [
     ("Gulf Coast", "Hancock · Harrison · Jackson counties", ["Named storms", "Wind vs. flood", "Wind-driven rain", "MWUA policies"],
      "Camille in 1969, Katrina in 2005, Nate and Zeta since. Coastal claims turn on named-storm deductibles, split wind and flood policies and how much of the damage each storm’s wind actually caused.",
-     "Bay St. Louis · Gulfport · Biloxi · Ocean Springs · Pascagoula", P("gulfport-beach", "raised-coastal-home")),
+     "Bay St. Louis · Gulfport · Biloxi · Ocean Springs · Pascagoula", P("gulf-coast-harbor")),
     ("Pine Belt", "Hattiesburg · Laurel · Columbia", ["Tornadoes", "Falling pines", "Inland hurricane wind", "Hail"],
      "Tall loblolly pines meet spring tornado tracks. The 2013 Hattiesburg tornado and the 2020 Easter outbreak showed how fast roof, tree and contents claims stack up here.",
-     "Hattiesburg · Petal · Laurel · Columbia · Purvis", P("pine-forest", "tree-on-house")),
+     "Hattiesburg · Petal · Laurel · Columbia · Purvis", P("pine-forest")),
     ("Capital Region", "Hinds · Madison · Rankin counties", ["Hail", "Frozen pipes", "Water losses", "Straight-line wind"],
      "Historic Belhaven and Fondren homes, brick ranches and fast-growing suburbs. Freeze events and water-system trouble add plumbing losses to the usual hail and wind claims.",
-     "Jackson · Brandon · Madison · Ridgeland · Clinton · Pearl", P("jackson-capitol", "jackson-skyline", "brick-ranch")),
+     "Jackson · Brandon · Madison · Ridgeland · Clinton · Pearl", P("jackson-capitol")),
     ("The Delta", "Greenville · Greenwood · Clarksdale", ["Tornadoes", "Metal buildings", "Straight-line wind", "Hail"],
      "Flat, open ground lets storms build and run. Farm shops, grain bins and metal buildings sit beside older homes — the Rolling Fork tornado in 2023 hit both.",
-     "Greenville · Cleveland · Greenwood · Clarksdale · Yazoo City", P("delta-farmland", "metal-roof")),
+     "Greenville · Cleveland · Greenwood · Clarksdale · Yazoo City", P("delta-farmland")),
     ("North Mississippi", "Oxford · Tupelo · Southaven · Columbus", ["Ice storms", "Tornadoes", "Hail", "Tree damage"],
      "The 1994 ice storm, the 2014 Tupelo and Louisville tornadoes and the 2019 Columbus tornado. Hill-country hardwoods and fast-growing DeSoto County subdivisions keep claims varied.",
-     "Southaven · Olive Branch · Oxford · Tupelo · Starkville · Columbus", P("ice-storm", "storm-clouds")),
+     "Southaven · Olive Branch · Oxford · Tupelo · Starkville · Columbus", P("lightning")),
     ("Southwest & East Central", "Vicksburg · Natchez · Meridian", ["Historic homes", "Tornadoes", "Tree damage", "River flooding"],
      "Antebellum and Victorian homes along the river bluffs, plus Meridian’s older neighborhoods. Period materials and ordinance-or-law questions make these estimates harder to get right.",
-     "Vicksburg · Natchez · McComb · Brookhaven · Meridian · Philadelphia", P("vicksburg-river", "porch-home")),
+     "Vicksburg · Natchez · McComb · Brookhaven · Meridian · Philadelphia", P("mississippi-swamp")),
 ]
 
 
@@ -731,11 +731,11 @@ def location_pages():
 <p>The same policy wording plays out very differently on a raised house in Pass Christian, a 1960s ranch in Pearl and a Victorian in Columbus.</p>
 <div class="regions regions-2" data-stagger>{regions}</div>"""
     body = page_hero(trail, "Statewide coverage", "Insurance Appraisal in All 82 Mississippi Counties",
-                     f"From DeSoto County to Hancock County, {BRAND} inspects on site. Start with your city, or call if yours isn’t listed — we cover the whole state.", P("vicksburg-river", "delta-farmland")) + \
+                     f"From DeSoto County to Hancock County, {BRAND} inspects on site. Start with your city, or call if yours isn’t listed — we cover the whole state.", P("mississippi-river")) + \
         layout(article, call_box() + link_box("Resources", RES_LINKS)) + band("Don’t see your town?", "We cover every Mississippi county. Call and tell us where the property is.")
     write(LOC_BASE, document(LOC_BASE, "Mississippi Counties & Cities We Serve | Claim Appraisal",
                              "Insurance claim appraisal in all 82 Mississippi counties, with local pages for Jackson, Gulfport, Biloxi, Hattiesburg, Tupelo, Oxford and more.",
-                             body, [crumbs_schema(trail), {"@type": "CollectionPage"}, itemlist(items)], photo=P("vicksburg-river", "delta-farmland")), 0.9)
+                             body, [crumbs_schema(trail), {"@type": "CollectionPage"}, itemlist(items)], photo=P("mississippi-river")), 0.9)
 
 
 # ---------------------------------------------------------------- tools
@@ -842,7 +842,7 @@ def learn_pages():
         f'<div class="card-b"><small class="meta">{date.fromisoformat(p["date"]).strftime("%b %-d, %Y")} · {p["read"]} read</small><h2><a href="{POST_BASE}{p["slug"]}/">{e(p["title"])}</a></h2><p>{e(p["summary"])}</p></div></article>' for p in POSTS)
     items = [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]
     body = page_hero(trail, "Guides", "Mississippi Insurance Claim Advice and Guides",
-                     "Practical guides on Coast deductibles, wind vs. water, tornado and ice-storm documentation, policy language and reading an estimate.", P("hurricane-debris", "hurricane-damage"), cta=False) + \
+                     "Practical guides on Coast deductibles, wind vs. water, tornado and ice-storm documentation, policy language and reading an estimate.", P("hurricane-debris"), cta=False) + \
         f'<section class="sec"><div class="wrap"><div class="cards cards-3" data-stagger>{cards}</div></div></section>' + band()
     write(path, document(path, "Insurance Claim Advice for Mississippi Property Owners",
                          "Insurance claim advice for Mississippi owners: wind vs. water, Coast hurricane deductibles, tornado and ice-storm claims, and estimates.",

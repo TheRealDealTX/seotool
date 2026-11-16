@@ -372,6 +372,7 @@
     set("[data-o=windamt]", money(res.wind), r); set("[data-o=wdedamt]", money(res.wded), r); set("[data-o=windpay]", money(res.windPay), r);
     set("[data-o=floodamt]", money(res.flood), r); set("[data-o=floodpay]", money(res.floodPay), r); set("[data-o=gap]", money(res.gap), r);
     set("[data-o=both]", money(res.both), r);
+    set("[data-o=moved]", money(Math.min(total * 0.1, res.flood)), r);
     set("[data-o=swing]", (up.both - res.both >= 0 ? "+" : "") + money(up.both - res.both), r);
     widths($(".bar", r), [res.windPay, res.floodPay, res.gap], total);
     set("[data-o=msg]", !total ? "Enter the total damage to see the split." : nf ? "With no flood policy, every dollar attributed to flood is unpaid — documenting wind damage carefully matters a great deal." : res.gap > total * 0.25 ? "A large share is left unpaid at this split. Deductibles and limits drive much of it; evidence about causation drives the rest." : "At this split, most of the damage is paid by one policy or the other. Small shifts in the split still move real money.", r);

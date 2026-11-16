@@ -520,7 +520,7 @@ a.card:hover,.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);col
 @media (max-width:720px){
   body{font-size:16px;padding-bottom:62px}
   .sec{padding:68px 0}
-  .wrap{padding:0 16px}
+  .wrap{padding-left:16px;padding-right:16px}
   :root{--head-h:66px}
   .brand .mark{width:38px;height:38px}
   .brand-t b{font-size:1.16rem}

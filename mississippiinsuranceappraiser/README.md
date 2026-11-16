@@ -152,4 +152,46 @@ All photos are CC0 or public domain (PDM). Most were found through the Openverse
 with backoff, reviewed on labelled contact sheets and saved as 1200px and 640px WebP with `srcset`/`sizes` and width/height.
 Decorative backgrounds use `alt=""`. The full record (direct URL, landing page, creator, license) is in `src/photos.json`:
 
-PHOTO_TABLE
+| Key | Source | License | Creator | Landing page |
+| --- | --- | --- | --- | --- |
+| `hero-home` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5922678/photo-image-public-domain-house-home |
+| `porch-home` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5920474/photo-image-public-domain-plants-blue |
+| `hurricane-damage` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/8726632/photo-image-public-domain-nature-water |
+| `ice-storm` | stocksnap | CC0 1.0 | Leeroy | https://stocksnap.io/photo/branch-frozen-11B839F504 |
+| `flood-home` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/8723819/photo-image-border-public-domain |
+| `house-fire` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/9658029/image-people-fire-smoke |
+| `hail-damage` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/6073937/hail-storm_auburn |
+| `storm-clouds` | stocksnap | CC0 1.0 | Skitter Photo | https://stocksnap.io/photo/fields-storm-165B043394 |
+| `lightning` | stocksnap | CC0 1.0 | Brandon Morgan | https://stocksnap.io/photo/lightning-storm-3EPA01FY99 |
+| `roof-inspector` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/11515783/photo-image-person-public-domain-man |
+| `metal-roof` | stocksnap | CC0 1.0 | Bob Richards | https://stocksnap.io/photo/metal-roofing-WLATRYMBTU |
+| `commercial-building` | stocksnap | CC0 1.0 | Verne Ho | https://stocksnap.io/photo/office-building-7HRFNYC7GU |
+| `apartment-complex` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/6041979/apartment-complex-free-public-domain-cc0-photo |
+| `church` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3094228/free-photo-image-architecture-america-building |
+| `consultation` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5927609/photo-image-background-public-domain-hands |
+| `estimate-laptop` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5974308/photo-image-laptop-work-macbook |
+| `calculator` | stocksnap | CC0 1.0 | Tevarak | https://stocksnap.io/photo/calculator-calendar-RFVHCUGML3 |
+| `clipboard` | stocksnap | CC0 1.0 | Design by Matt | https://stocksnap.io/photo/clipboard-desk-VXAISJRBH9 |
+| `calendar` | stocksnap | CC0 1.0 | Jeff Sheldon | https://stocksnap.io/photo/calendar-display-ZI905NZJY1 |
+| `roof-shingles` | wordpress | CC0 1.0 | Topher | https://wordpress.org/photos/photo/6456862d81/ |
+| `tornado-damage` | rawpixel | CC0 1.0 | U.S. Forest Service (source) | https://www.rawpixel.com/image/8728258/photo-image-public-domain-nature-landscape |
+| `delta-farmland` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/422083/free-photo-image-cotton-plant-field |
+| `storm-supercell` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5963929/free-public-domain-cc0-photo |
+| `gulf-coast-harbor` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/434485/free-photo-image-mexico-carol-highsmith-america |
+| `gulf-pier-sunset` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/434484/free-photo-image-mexico-mississippi-gulf |
+| `mississippi-river` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/6076905/hernando-soto-bridge |
+| `pine-forest` | stocksnap | CC0 1.0 | Matt Bango | https://stocksnap.io/photo/trees-looking-KIE8N0FO1E |
+| `delta-plowed-field` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/434613/free-photo-image-soil-harvest-plantation |
+| `tupelo-elvis-birthplace` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3094077/free-photo-image-carol-highsmith-america |
+| `mississippi-swamp` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3094354/free-photo-image-america-carol-highsmith-cc0 |
+| `church-coastal` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/434487/free-photo-image-church-carol-highsmith-architecture |
+| `hurricane-boat` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3092038/free-photo-image-old-boat-fishing-america |
+| `hurricane-debris` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/8723809/photo-image-palm-tree-public-domain |
+| `tornado-roof` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5941865/free-public-domain-cc0-photo |
+| `brick-ranch` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5924285/photo-image-public-domain-house-home |
+| `coastal-home` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/6024590/photo-image-public-domain-house-palm-tree |
+| `water-damage` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5945339/free-public-domain-cc0-photo |
+| `fallen-tree` | rawpixel | CC0 1.0 | Unknown | https://www.rawpixel.com/image/5943772/free-public-domain-cc0-photo |
+| `jackson-capitol` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3092816/free-photo-image-america-carol-highsmith |
+
+Flickr (FEMA/NOAA/USDA public-domain sets) returned HTTP 403 from the build environment and Wikimedia asked for contact details in the User-Agent, so the final set comes from rawpixel (public-domain/CC0 originals, many Library of Congress Carol M. Highsmith photos), StockSnap and the WordPress photo directory. Watermarked rawpixel `image_1300` files were rejected. Most originals are 960–1024px wide, so the "1200" WebP files keep the original width (≥ 960). There's no blue-tarp photo; `coastal-home`, `fallen-tree`, `water-damage` and `mississippi-river` (Hernando de Soto Bridge) stand in for closer matches that weren't available as CC0/PD.

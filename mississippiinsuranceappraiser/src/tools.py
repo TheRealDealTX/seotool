@@ -226,7 +226,8 @@ SPLIT = f"""
 <div><dt>Flood portion of the damage</dt><dd data-o="floodamt">$0</dd></div>
 <div><dt>Flood policy payment</dt><dd data-o="floodpay">$0</dd></div>
 <div><dt>Left unpaid</dt><dd data-o="gap">$0</dd></div>
-<div><dt>Each 10% shift toward wind changes the total by</dt><dd data-o="swing">$0</dd></div>
+<div><dt>Moved between policies by a 10% shift</dt><dd data-o="moved">$0</dd></div>
+<div><dt>Net change in total from +10% wind</dt><dd data-o="swing">$0</dd></div>
 </dl>
 <p class="verdict" data-o="msg"></p>
 </div></div></div>"""
