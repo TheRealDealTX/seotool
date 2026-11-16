@@ -237,8 +237,8 @@ def header(active=None):
 </div></div>
 <header class="site-header"><div class="wrap header-in">
 <a class="logo" href="/" aria-label="{BIZ['name']} home">{LOGO}<span class="logo-text"><strong>Policyholder Appraiser</strong><em>Texas</em></span></a>
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr">Menu</span><span></span><span></span><span></span></button>
-<nav class="site-nav" id="site-nav" aria-label="Primary"><div class="nav-head"><span class="nav-head-title">Menu</span><button class="nav-close" type="button" aria-label="Close menu">&#10005;</button></div><ul>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Claim Review</a></nav>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-label">Menu</span></button>
+<nav class="site-nav" id="site-nav" aria-label="Primary"><ul>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Claim Review</a></nav>
 </div></header>
 <main id="main">
 """

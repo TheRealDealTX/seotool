@@ -14,11 +14,13 @@
     var setOpen = function (open) {
       nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', String(open));
+      var label = toggle.querySelector('.nav-label');
+      if (label) label.textContent = open ? 'Close' : 'Menu';
       document.body.style.overflow = open ? 'hidden' : '';
     };
     toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
     nav.addEventListener('click', function (e) {
-      if (e.target.closest('a') || e.target.closest('.nav-close')) setOpen(false);
+      if (e.target.closest('a')) setOpen(false);
     });
     window.addEventListener('resize', function () { if (window.innerWidth > 1100 && nav.classList.contains('open')) setOpen(false); });
     document.addEventListener('keydown', function (e) {
