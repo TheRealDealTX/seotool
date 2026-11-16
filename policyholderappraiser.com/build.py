@@ -226,19 +226,14 @@ def header(active=None):
     for label, href in NAV:
         cur = ' aria-current="page"' if href == active else ""
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
-    areas = "".join(f'<li><a href="{c["path"]}">{kw_title(c)}</a></li>' for c in CITIES)
     return f"""<div class="topbar"><div class="wrap topbar-in">
-<button class="areas-toggle" type="button" aria-expanded="false" aria-controls="areas-panel"><span class="areas-burger" aria-hidden="true"><i></i><i></i><i></i></span>Insurance Appraiser Service Areas</button>
+<span><strong>Independent appraisers for Texas policyholders</strong> &middot; Certified appraiser &amp; umpire &middot; Statewide Texas</span>
 <span class="topbar-links"><a href="tel:{TEL}">Call {PHONE}</a><a href="sms:{TEL}">Text {PHONE}</a></span>
-</div></div>
-<div class="areas-panel" id="areas-panel" hidden><div class="wrap">
-<div class="areas-head"><strong>Insurance appraiser service areas</strong><a href="/service-areas/">All Texas service areas &rarr;</a></div>
-<ul class="areas-list">{areas}</ul>
 </div></div>
 <header class="site-header"><div class="wrap header-in">
 <a class="logo" href="/" aria-label="{BIZ['name']} home">{LOGO}<span class="logo-text"><strong>Policyholder Appraiser</strong><em>Texas</em></span></a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-label">Menu</span></button>
-<nav class="site-nav" id="site-nav" aria-label="Primary"><ul>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Claim Review</a></nav>
+<nav class="site-nav" id="site-nav" aria-label="Primary"><ul><li class="areas-item"><a class="areas-link" href="/service-areas/"{' aria-current="page"' if active == "/service-areas/" else ''}><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Insurance Appraiser Service Areas</a></li>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Review</a></nav>
 </div></header>
 <main id="main">
 """

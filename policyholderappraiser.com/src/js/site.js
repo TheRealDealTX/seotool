@@ -22,21 +22,10 @@
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) setOpen(false);
     });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1100 && nav.classList.contains('open')) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1200 && nav.classList.contains('open')) setOpen(false); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('open')) toggle.click();
     });
-  }
-
-  var areasBtn = document.querySelector('.areas-toggle');
-  var areasPanel = document.getElementById('areas-panel');
-  if (areasBtn && areasPanel) {
-    var setAreas = function (open) { areasPanel.hidden = !open; areasBtn.setAttribute('aria-expanded', String(open)); };
-    areasBtn.addEventListener('click', function () { setAreas(areasPanel.hidden); });
-    document.addEventListener('click', function (e) {
-      if (!areasPanel.hidden && !areasPanel.contains(e.target) && !areasBtn.contains(e.target)) setAreas(false);
-    });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !areasPanel.hidden) setAreas(false); });
   }
 
   document.querySelectorAll('form[data-contact]').forEach(function (form) {

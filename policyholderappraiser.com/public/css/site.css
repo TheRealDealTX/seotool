@@ -89,7 +89,7 @@ section { padding: clamp(56px, 7vw, 88px) 0; scroll-margin-top: 90px; }
 .nav-toggle[aria-expanded="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
 .nav-toggle[aria-expanded="true"] .bars { display: none; }
 .site-header { position: sticky; top: 0; z-index: 50; }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .nav-toggle { display: inline-flex; }
   .site-nav { position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 76px); overflow-y: auto; -webkit-overflow-scrolling: touch; flex-direction: column; align-items: stretch; gap: 0; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 20px 40px rgba(15,28,43,.16); padding: 6px 20px 24px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s, transform .18s, visibility 0s .18s; z-index: 60; }
   .site-nav.open { opacity: 1; visibility: visible; transform: none; transition: opacity .18s, transform .18s; }
@@ -314,22 +314,13 @@ textarea { min-height: 120px; resize: vertical; }
 .footer-cities a { color: #aeb9c6; text-decoration: none; }
 .footer-cities a:hover { color: var(--brass-2); }
 
-/* Insurance Appraiser Service Areas: hamburger in the top bar + full-width panel */
-.areas-toggle { display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 0; color: #fff; font: 700 .86rem/1 var(--font); letter-spacing: .02em; padding: 6px 0; cursor: pointer; }
-.areas-toggle:hover, .areas-toggle[aria-expanded="true"] { color: var(--brass-2); }
-.areas-burger { display: inline-flex; flex-direction: column; gap: 3px; width: 18px; }
-.areas-burger i { display: block; height: 2px; background: currentColor; border-radius: 2px; }
-.areas-panel { background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 14px 30px rgba(15,28,43,.10); position: relative; z-index: 55; }
-.areas-panel[hidden] { display: none; }
-.areas-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 0 10px; border-bottom: 1px solid var(--line); font-size: .9rem; }
-.areas-head strong { font-family: var(--head); text-transform: uppercase; letter-spacing: .12em; font-size: .76rem; color: var(--brass-ink); }
-.areas-head a { color: var(--ink); font-weight: 700; text-decoration: none; }
-.areas-head a:hover { color: var(--brass-ink); }
-.areas-list { list-style: none; margin: 0; padding: 12px 0 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px 18px; }
-.areas-list a { display: block; padding: 7px 0; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .92rem; border-bottom: 1px solid transparent; }
-.areas-list a:hover { color: var(--brass-ink); }
-@media (max-width: 900px) { .areas-list { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .areas-toggle { font-size: .8rem; } .topbar-in { justify-content: space-between; } }
+/* "Insurance Appraiser Service Areas" link in the main nav */
+.site-nav .areas-link { display: inline-flex; align-items: center; gap: 9px; background: var(--sand); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-weight: 700; color: var(--ink); }
+.site-nav .areas-link .bars { display: inline-flex; flex-direction: column; gap: 3px; width: 16px; }
+.site-nav .areas-link .bars i { display: block; height: 2px; background: currentColor; border-radius: 2px; }
+.site-nav .areas-link:hover, .site-nav .areas-link[aria-current] { background: var(--brass-pale); border-color: var(--brass); color: var(--brass-ink); }
+@media (min-width: 1201px) { .site-nav a { font-size: .84rem; padding: 7px 6px; } .site-nav ul { gap: 0; } .site-nav { gap: 8px; } .site-nav .areas-link { padding: 7px 12px; } .site-nav .nav-cta { padding: .7em .95em; } }
+@media (max-width: 1200px) { .site-nav .areas-item { border-bottom: 0; padding: 10px 0 6px; } .site-nav .areas-link { padding: 12px 16px; font-size: 1rem; border-radius: 14px; } }
 .callout .label + * , p.callout .label { display: block; }
 .faq-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .faq-links a { display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; font: 700 1rem var(--head); color: var(--ink); text-decoration: none; }
