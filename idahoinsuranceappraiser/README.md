@@ -10,8 +10,8 @@ builds it, and a tiny PHP guard plus front controller serve it on a Hostinger Ag
 | Preview URL | https://darkturquoise-cod-820153.hostingersite.com |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@idahoinsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | Not set. `GTM_ID` in `build.py` is empty, so no GTM code is output |
+| Email / form inbox | info@idahoinsuranceappraiser.com (mailbox created Nov 2026; SMTP config pending upload) |
+| Google Tag Manager | `GTM-59XMLJNC`: the owner's snippet in `<head>` exactly as provided, plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -216,14 +216,20 @@ and check that the log line shows `"via":"smtp"`. Keep any local copy outside th
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty, so nothing is output. Set it (e.g. `GTM-XXXXXXX`) to output the standard head
-snippet and the `<noscript>` iframe right after `<body>`; if a full snippet is provided, use it exactly.
+`GTM_ID = "GTM-59XMLJNC"`. `GTM_HEAD_SNIPPET` holds the owner's head snippet exactly as provided; it's output
+right after `<meta charset>` on every page, and the standard `<noscript>` iframe goes right after `<body>`.
+Set `GTM_ID` to `""` to remove all tag output.
 
 ## Going live checklist
+
+Status on Nov 16, 2026: steps 1–3 done and verified on the live domain. Step 4: mailbox created and GTM
+added in the build; both are waiting on a redeploy and the SMTP config upload.
 
 1. Point the domain's nameservers to `nova.dns-parking.com` and `cosmos.dns-parking.com`.
 2. Confirm SSL covers both `idahoinsuranceappraiser.com` and `www.idahoinsuranceappraiser.com`
    (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if not.
+   As of Nov 16, 2026 the server presents a valid certificate for each hostname (the bare domain, and
+   `www` via `*.idahoinsuranceappraiser.com` / `www` SAN), both valid until Dec 16, 2026 and auto-renewed.
 3. Check http/www/`index.php` 301s on the homepage and interior pages, every sitemap URL returns 200, no
    `X-Robots-Tag` on the real domain and our own `robots.txt` is served. If a www URL returns 200 with
    `x-hcdn-cache-status: HIT`, clear the cache and recheck.
