@@ -1,0 +1,12 @@
+{
+  "name": "Vermont Insurance Appraiser",
+  "short_name": "VT Appraiser",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf5",
+  "theme_color": "#154734",
+  "icons": [
+    {"src": "/favicon-192.png?v=1", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/favicon-512.png?v=1", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
