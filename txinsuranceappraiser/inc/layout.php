@@ -105,9 +105,41 @@ function site_header(string $path): void
       <a class="btn btn-gold nav-cta" href="/contact-us/" data-popup>Free Claim Review</a>
     </nav>
     <a class="btn btn-gold header-cta" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 18) ?><span>Call Now</span></a>
-    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><?= icon('menu', 26) ?></button>
+<button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><?= icon('menu', 28) ?></button>
   </div>
 </header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="mnav-top">
+    <a href="/" class="mnav-logo"><img src="<?= SITE['logo'] ?>" alt="TX Insurance Appraiser" width="140" height="56"></a>
+    <button class="mnav-close" type="button" aria-label="Close menu"><?= icon('x', 26) ?><span>Close</span></button>
+  </div>
+  <nav class="mnav-body" aria-label="Mobile navigation">
+    <ul class="mnav-list">
+    <?php foreach (NAV as $i => [$label, $url, $kids]):
+        $active = ($url === '/' ? $path === '/' : str_starts_with($path, $url)); ?>
+      <li class="mnav-item<?= $active ? ' is-active' : '' ?>">
+        <div class="mnav-row">
+          <a href="<?= $url ?>"><?= e($label) ?></a>
+          <?php if ($kids): ?><button type="button" class="mnav-toggle" aria-expanded="false" aria-controls="msub<?= $i ?>" aria-label="Show <?= e($label) ?> links"><?= icon('chev', 22) ?></button><?php endif; ?>
+        </div>
+        <?php if ($kids): ?>
+        <ul class="mnav-sub" id="msub<?= $i ?>" hidden>
+          <?php foreach ($kids as [$kl, $ku]): ?><li><a href="<?= $ku ?>"><?= e($kl) ?></a></li><?php endforeach; ?>
+        </ul>
+        <?php endif; ?>
+      </li>
+    <?php endforeach; ?>
+    </ul>
+  </nav>
+  <div class="mnav-foot">
+    <a class="btn btn-gold btn-block btn-lg" href="/contact-us/" data-popup>Free Claim Review</a>
+    <div class="mnav-contact">
+      <a class="btn btn-navy" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 18) ?> Call</a>
+      <a class="btn btn-ghost" href="sms:<?= SITE['phone_href'] ?>"><?= icon('chat', 18) ?> Text</a>
+    </div>
+    <p><?= e(SITE['phone']) ?> · <?= e(SITE['hours']) ?></p>
+  </div>
+</div>
 <?php
 }
 
@@ -190,9 +222,9 @@ function site_footer(): void
   </div>
 </footer>
 <div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title" hidden>
-  <div class="modal-backdrop" data-close></div>
+  <div class="modal-backdrop"></div>
   <div class="modal-box">
-    <button class="modal-x" type="button" aria-label="Close" data-close><?= icon('x', 22) ?></button>
+    <button class="modal-x" type="button" aria-label="Close"><?= icon('x', 22) ?></button>
     <div class="modal-head">
       <img src="<?= SITE['photo'] ?>" alt="Joseph Dittman" width="64" height="64" loading="lazy">
       <div><span class="eyebrow" style="margin:0 0 4px">Free claim review</span><h2 id="lead-modal-title">Was your claim underpaid?</h2></div>
