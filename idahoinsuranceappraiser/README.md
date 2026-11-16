@@ -10,7 +10,7 @@ builds it, and a tiny PHP guard plus front controller serve it on a Hostinger Ag
 | Preview URL | https://darkturquoise-cod-820153.hostingersite.com |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@idahoinsuranceappraiser.com (mailbox created Nov 2026; SMTP config uploaded but **auth failing**, see checklist step 4) |
+| Email / form inbox | info@idahoinsuranceappraiser.com (mailbox created Nov 2026; SMTP verified Nov 16, 2026) |
 | Google Tag Manager | `GTM-59XMLJNC`: the owner's snippet in `<head>` exactly as provided, plus the noscript iframe after `<body>` (live since Nov 16, 2026) |
 
 ## Layout
@@ -223,10 +223,8 @@ Set `GTM_ID` to `""` to remove all tag output.
 ## Going live checklist
 
 Status on Nov 16, 2026 (after the GTM redeploy): steps 1–3 done and re-verified on the live domain; GTM is live.
-Step 4 is **not finished**: the SMTP config was uploaded to `public_html/api/_private/config.php` (returns 404 with
-0 bytes), but the test submission logged `"via":"smtp-failed"`, `err` `535 5.7.8 Authentication failed`, and the
-PHP `mail()` fallback also failed, so leads currently reach only `leads.log.php`. Re-upload the config with the
-correct mailbox password, then send one more labelled test and confirm `"via":"smtp"`.
+Step 4 done: the SMTP config is in `public_html/api/_private/config.php` (returns 404 with 0 bytes), and a
+labelled test submission logged `"via":"smtp"` at 05:07 UTC. Step 5 (Search Console) is the owner's.
 
 1. Point the domain's nameservers to `nova.dns-parking.com` and `cosmos.dns-parking.com`.
 2. Confirm SSL covers both `idahoinsuranceappraiser.com` and `www.idahoinsuranceappraiser.com`
