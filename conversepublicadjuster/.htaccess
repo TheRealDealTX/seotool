@@ -1,0 +1,45 @@
+# San Antonio Public Adjuster (conversepublicadjuster.com)
+# NOTE: the Hostinger Agency (H5G) platform the site runs on does not process .htaccess; the live
+# redirects are in wp-content/db.php. This file is kept so the build works unchanged on any Apache /
+# LiteSpeed host that does.
+Options -MultiViews
+DirectoryIndex index.html home.html index.php
+RewriteEngine On
+
+# Force HTTPS and non-www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://conversepublicadjuster.com%{REQUEST_URI} [L,R=301]
+
+# Homepage file
+RewriteRule ^(home|index)(\.html)?/?$ / [R=301,L]
+RewriteRule ^$ /home.html [L]
+
+# Old flat pages -> new directory pages
+RewriteRule ^about(\.html)?$ /about/ [R=301,L]
+RewriteRule ^contact(\.html)?$ /contact/ [R=301,L]
+RewriteRule ^blog(\.html|/index(\.html)?)?$ /blog/ [R=301,L]
+
+# Old Converse / storm-dated URLs -> closest evergreen page
+RewriteRule ^converse-hail-storm-september-2026(\.html)?/?$ /services/hail-damage-claims/ [R=301,L]
+RewriteRule ^blog/how-to-get-insurance-to-pay-for-roof-replacement-after-the-converse-hail-storm(\.html)?/?$ /blog/how-to-get-insurance-to-pay-for-a-roof-replacement-in-san-antonio/ [R=301,L]
+RewriteRule ^blog/hail-damage-roof-inspection-converse-before-the-heat-bakes-it-in(\.html)?/?$ /blog/hail-damage-roof-inspection-san-antonio/ [R=301,L]
+RewriteRule ^blog/seven-line-items-missing-from-your-hail-roof-estimate(\.html)?/?$ /blog/line-items-missing-from-san-antonio-roof-estimates/ [R=301,L]
+RewriteRule ^blog/door-knockers-in-converse-what-texas-law-lets-a-roofer-do(\.html)?/?$ /blog/door-knocking-roofers-texas-law/ [R=301,L]
+RewriteRule ^blog/appraisal-clause-explained-for-bexar-county-homeowners(\.html)?/?$ /blog/appraisal-clause-explained-san-antonio/ [R=301,L]
+RewriteRule ^blog/acv-vs-rcv-why-the-first-check-is-smaller-than-the-estimate(\.html)?/?$ /blog/acv-vs-rcv-insurance-check-explained/ [R=301,L]
+RewriteRule ^blog/hail-history-of-converse-and-northeast-bexar-county(\.html)?/?$ /blog/san-antonio-hail-history/ [R=301,L]
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>

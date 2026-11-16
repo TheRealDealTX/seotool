@@ -1,0 +1,23 @@
+# Netlify / Cloudflare Pages format. Not used on the current Hostinger host (see wp-content/db.php).
+/home.html  /  301
+/about  /about/  301
+/about.html  /about/  301
+/contact  /contact/  301
+/contact.html  /contact/  301
+/blog.html  /blog/  301
+/converse-hail-storm-september-2026  /services/hail-damage-claims/  301
+/converse-hail-storm-september-2026.html  /services/hail-damage-claims/  301
+/blog/how-to-get-insurance-to-pay-for-roof-replacement-after-the-converse-hail-storm  /blog/how-to-get-insurance-to-pay-for-a-roof-replacement-in-san-antonio/  301
+/blog/how-to-get-insurance-to-pay-for-roof-replacement-after-the-converse-hail-storm.html  /blog/how-to-get-insurance-to-pay-for-a-roof-replacement-in-san-antonio/  301
+/blog/hail-damage-roof-inspection-converse-before-the-heat-bakes-it-in  /blog/hail-damage-roof-inspection-san-antonio/  301
+/blog/hail-damage-roof-inspection-converse-before-the-heat-bakes-it-in.html  /blog/hail-damage-roof-inspection-san-antonio/  301
+/blog/seven-line-items-missing-from-your-hail-roof-estimate  /blog/line-items-missing-from-san-antonio-roof-estimates/  301
+/blog/seven-line-items-missing-from-your-hail-roof-estimate.html  /blog/line-items-missing-from-san-antonio-roof-estimates/  301
+/blog/door-knockers-in-converse-what-texas-law-lets-a-roofer-do  /blog/door-knocking-roofers-texas-law/  301
+/blog/door-knockers-in-converse-what-texas-law-lets-a-roofer-do.html  /blog/door-knocking-roofers-texas-law/  301
+/blog/appraisal-clause-explained-for-bexar-county-homeowners  /blog/appraisal-clause-explained-san-antonio/  301
+/blog/appraisal-clause-explained-for-bexar-county-homeowners.html  /blog/appraisal-clause-explained-san-antonio/  301
+/blog/acv-vs-rcv-why-the-first-check-is-smaller-than-the-estimate  /blog/acv-vs-rcv-insurance-check-explained/  301
+/blog/acv-vs-rcv-why-the-first-check-is-smaller-than-the-estimate.html  /blog/acv-vs-rcv-insurance-check-explained/  301
+/blog/hail-history-of-converse-and-northeast-bexar-county  /blog/san-antonio-hail-history/  301
+/blog/hail-history-of-converse-and-northeast-bexar-county.html  /blog/san-antonio-hail-history/  301
