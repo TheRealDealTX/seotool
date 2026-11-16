@@ -28,7 +28,15 @@ WRITTEN = {}   # url path -> title (for sitemap / validation)
 esc = lambda s: html.escape(str(s), quote=True)
 
 # ---------------------------------------------------------------- helpers
+# Verified Amazon product matches (query -> ASIN), built from data/amazon_asins.json.
+# Anything without a verified match falls back to a tagged Amazon search.
+_ASIN_FILE = os.path.join(ROOT, "data", "amazon_asins.json")
+ASINS = json.load(open(_ASIN_FILE)) if os.path.exists(_ASIN_FILE) else {}
+
 def amz(q):
+    a = ASINS.get(q)
+    if a:
+        return f"https://www.amazon.com/dp/{a['asin']}?tag={C.AMZ_TAG}"
     return "https://www.amazon.com/s?" + urllib.parse.urlencode({"k": q, "tag": C.AMZ_TAG})
 
 def amz_link(label, q, cls="btn", extra=""):
@@ -359,7 +367,9 @@ def product_page(p):
 
     is_cam = cat in ("ps", "slr", "instant", "mf", "movie", "pocket", "digital")
     # buybox
-    btn_label = "Shop on Amazon" if not special else special.get("btn", "Shop on Amazon")
+    _bq = special['q'] if special else q
+    btn_label = ("Buy on Amazon" if _bq in ASINS else "See all listings on Amazon") if not special else (
+        "Buy on Amazon" if _bq in ASINS else special.get("btn", "Shop on Amazon"))
     buy = f"""<div class="buybox">
 <div class="mono muted">Available from independent sellers on Amazon</div>
 <div class="buybox__row">{amz_link(ICON['cart'] + " " + btn_label, special['q'] if special else q, 'btn btn--block')}</div>

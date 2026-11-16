@@ -66,6 +66,7 @@ def main():
                 rel = os.path.relpath(os.path.join(d, f), os.path.join(PUB, "_p"))[:-5]
                 pages.append("/" if rel == "home" else "/" + rel)
         titles, links = {}, set()
+        amz_dp = amz_s = 0
         for p in pages:
             st, loc, body = fetch(p)
             if st != 200:
@@ -82,7 +83,9 @@ def main():
             for href in re.findall(r'href="([^"#]*)"', body):
                 if href.startswith("/") and not href.startswith("//"):
                     links.add(href.split("?")[0])
-                if "amazon.com/s?" in href and "tag=relicsfilmlab-20" not in href:
+                if "amazon.com/dp/" in href: amz_dp += 1
+                elif "amazon.com/s?" in href: amz_s += 1
+                if "amazon.com/" in href and "tag=relicsfilmlab-20" not in href:
                     errors.append(f"{p}: amazon link missing tag")
             for src in re.findall(r'src="(/[^"]+)"', body):
                 links.add(src.split("?")[0])
@@ -101,6 +104,7 @@ def main():
         if st != 301:
             errors.append("trailing slash not redirected")
         print(f"pages: {len(pages)}, internal links checked: {len(links)}")
+        print(f"amazon links: {amz_dp} direct product (/dp/), {amz_s} search fallback")
     finally:
         srv.terminate()
     for e in errors[:80]:
