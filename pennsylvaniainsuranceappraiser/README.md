@@ -13,11 +13,11 @@ palette, fonts, photos and homepage structure are new and differ from every sist
 | Preview URL | https://lightgreen-alligator-527245.hostingersite.com |
 | Nameservers to set at the registrar | `orbit.dns-parking.com`, `horizon.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@pennsylvaniainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@pennsylvaniainsuranceappraiser.com (mailbox created Nov 16, 2026) |
+| Google Tag Manager | `GTM-N9FKFMPJ` (owner-supplied head snippet, used verbatim, + noscript iframe after `<body>`) |
 
-Until the nameservers point to Hostinger the real domain won't resolve and SSL can't be issued, so live checks
-run on the preview URL. Hostinger serves its own Googlebot-blocking `robots.txt` on preview URLs (expected), and
+Nameservers now point to Hostinger (Nov 16, 2026): the domain resolves, SSL is active on both the bare domain and `www`,
+and the www/http/index.php redirects were verified live on the homepage and interior pages. Hostinger serves its own Googlebot-blocking `robots.txt` on preview URLs (expected), and
 our guard adds `X-Robots-Tag: noindex, nofollow` on any host other than the real domain.
 
 ## Layout

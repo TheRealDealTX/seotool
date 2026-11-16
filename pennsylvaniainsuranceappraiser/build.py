@@ -38,7 +38,7 @@ VER = "20261114a"   # CSS/JS cache-buster
 FAV = "1"           # icon cache-buster
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-N9FKFMPJ"
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -204,10 +204,15 @@ def item_list(items):
 
 # ---------------------------------------------------------------- GTM
 def gtm_head():
+    """Head snippet exactly as supplied by the site owner (Nov 16, 2026)."""
     if not GTM_ID:
         return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\n"
-            f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            "<script>\n"
+            "  window.dataLayer = window.dataLayer || [];\n"
+            "  function gtag(){dataLayer.push(arguments);}\n"
+            "  gtag('js', new Date());\n"
+            "</script>\n")
 
 
 def gtm_body():
