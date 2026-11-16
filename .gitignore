@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 dist/
+
+# built deploy archive (regenerate with: cd public && zip -r ../policyholderappraiser-site.zip .)
+policyholderappraiser.com/*.zip
