@@ -32,6 +32,7 @@ esc = lambda s: html.escape(str(s), quote=True)
 # Anything without a verified match falls back to a tagged Amazon search.
 _ASIN_FILE = os.path.join(ROOT, "data", "amazon_asins.json")
 ASINS = json.load(open(_ASIN_FILE)) if os.path.exists(_ASIN_FILE) else {}
+SLUG_ASIN = {v["for"]: v for v in ASINS.values() if v.get("for")}
 
 def amz(q):
     a = ASINS.get(q)
@@ -368,6 +369,8 @@ def product_page(p):
     is_cam = cat in ("ps", "slr", "instant", "mf", "movie", "pocket", "digital")
     # buybox
     _bq = special['q'] if special else q
+    if slug in SLUG_ASIN:            # matched by product, independent of the query wording
+        ASINS[_bq] = SLUG_ASIN[slug]
     btn_label = ("Buy on Amazon" if _bq in ASINS else "See all listings on Amazon") if not special else (
         "Buy on Amazon" if _bq in ASINS else special.get("btn", "Shop on Amazon"))
     buy = f"""<div class="buybox">

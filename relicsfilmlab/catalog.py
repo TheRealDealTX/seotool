@@ -268,7 +268,7 @@ nba-tote-bag|NBA Photo Tote Bag|tote||Photo-print canvas tote|
 petri-flex-v|Petri Flex V|slr|1960s|35mm SLR · Petri mount|
 the-ansel-adams-basic-techniques-of-photography|Ansel Adams: Basic Techniques of Photography|book||Photography technique book|
 the-complete-kodak-book-of-photography|The Complete Kodak Book of Photography|book||Photography book|
-the-disappearance-of-photography-photography-at-the-end-of-the-analog-era|The Disappearance of Photography|book||Photo book|
+the-disappearance-of-photography-photography-at-the-end-of-the-analog-era|The Disappearance of Darkness: Photography at the End of the Analog Era|book|2012|Robert Burley photo book|
 vivitar-ez-motor|Vivitar EZ Motor|ps|1990s|35mm · motorised|
 vivitar-spree-plus|Vivitar Spree Plus|ps|1990s|35mm · focus free|
 konica-hi-precision-zoom-compact|Konica Hi-Precision Zoom Compact|ps|1990s|35mm · zoom · autofocus|

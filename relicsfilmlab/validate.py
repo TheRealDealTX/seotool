@@ -85,7 +85,7 @@ def main():
                     links.add(href.split("?")[0])
                 if "amazon.com/dp/" in href: amz_dp += 1
                 elif "amazon.com/s?" in href: amz_s += 1
-                if "amazon.com/" in href and "tag=relicsfilmlab-20" not in href:
+                if ("amazon.com/dp/" in href or "amazon.com/s?" in href) and "tag=relicsfilmlab-20" not in href:
                     errors.append(f"{p}: amazon link missing tag")
             for src in re.findall(r'src="(/[^"]+)"', body):
                 links.add(src.split("?")[0])
