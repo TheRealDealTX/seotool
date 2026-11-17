@@ -447,3 +447,25 @@ p{margin:0 0 1.1em}
   .toolbar:not(:has(#brand)) .fsel--sort{grid-column:1/-1}
   .toolbar .count{grid-column:1/-1;margin-left:0}
 }
+
+/* ---------- product page: 2-column top on mobile ---------- */
+.pdp__mprice{display:none}
+@media (max-width:640px){
+  .pdp{grid-template-columns:48% minmax(0,1fr);column-gap:14px;row-gap:0;padding:14px 0 40px;align-items:start}
+  .pdp__media{grid-column:1;grid-row:1 / span 3;position:static}
+  .pdp__frame{border-radius:14px}
+  .pdp__frame .ph{font-size:1.1rem;padding:12px}
+  .pdp__credit{font-size:.6rem;line-height:1.35;margin-top:6px}
+  .pdp__info{display:contents}
+  .pdp__info>*{grid-column:1 / -1}
+  .pdp__info>.eyebrow{grid-column:2;grid-row:1;font-size:.6rem;letter-spacing:.1em;margin:0 0 8px;flex-wrap:wrap}
+  .pdp__info>.eyebrow::before{display:none}
+  .pdp__info>h1{grid-column:2;grid-row:2;font-size:clamp(1.45rem,6.4vw,1.9rem);line-height:1.05;margin:0 0 10px}
+  .pdp__info>.pdp__mprice{grid-column:2;grid-row:3;display:flex;flex-direction:column;gap:3px;align-self:start}
+  .pdp__mprice b{font:400 1.45rem/1 var(--f-display);color:var(--amber-2)}
+  .pdp__mprice span{font:600 .56rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .pdp__info>.specline{margin:18px 0 12px}
+  .pdp__info>.lede{font-size:1rem}
+  .buybox__price{display:none}
+  .buybox{margin:16px 0 0}
+}

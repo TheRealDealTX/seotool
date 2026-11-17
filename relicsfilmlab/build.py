@@ -534,6 +534,7 @@ def product_page(p):
 <div class="pdp__info">
 <div class="eyebrow">{esc(catlabel)}{(" · " + esc(brand)) if brand else ""}</div>
 <h1>{esc(title_core)}</h1>
+{f'<div class="pdp__mprice"><b>{PR.fmt(_pr)}</b><span>typical price</span></div>' if _pr else ""}
 <div class="specline">{chips}</div>
 <p class="lede">{intro}</p>
 {alias_html}
