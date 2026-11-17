@@ -7,12 +7,12 @@ canonical-host guard) follows the Georgia template. The content, URL slugs and d
 | | |
 | --- | --- |
 | Hostinger website UID | `P50Jr3L6H` (Agency Growth, order 1008744732, php-fpm, PHP 8.3; created with the Boston datacenter code, served from `us-phx-h5g-node3.hstgr.io`) |
-| Domain | `mississippiinsuranceappraiser.com` (attached at creation) |
+| Domain | https://mississippiinsuranceappraiser.com — live since Nov 17, 2026; Let's Encrypt certificate covers the apex and `www` (expires 2027-02-14); `www` and http 301 to it |
 | Preview URL | https://darkturquoise-lark-455119.hostingersite.com (Hostinger serves its own noindex `robots.txt` here; our guard also sends `X-Robots-Tag: noindex, nofollow` on any non-canonical host) |
 | Nameservers to set at the registrar | `lunar.dns-parking.com`, `solar.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@mississippiinsuranceappraiser.com |
-| Google Tag Manager | `GTM_ID` in `build.py`, empty until a container ID is provided |
+| Google Tag Manager | `GTM-K5H7XKC9` — client-supplied head snippet (`GTM_HEAD` in `build.py`, used verbatim) plus the noscript iframe after `<body>` on every page |
 
 ## Layout
 
@@ -124,11 +124,7 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@mississippiinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives:
-1. Upload the config.
-2. Confirm `/api/_private/config.php` returns 404 with 0 bytes.
-3. Send one form submission labelled TEST.
-4. Confirm the log line shows `"via":"smtp"`.
+**Status (Nov 17, 2026): wired and verified.** The config was uploaded to `public_html/api/_private/config.php`, which returns 404 with 0 bytes, and the local copy was deleted. One submission labelled TEST was sent, and the log recorded `"via":"smtp"` with no error. To change the password, upload a new config the same way (via `agency-hosting_files_generate-upload-url`) and repeat the TEST check. Read the log with `GET {url-without-/tus}/raw/public_html/api/_private/leads.log.php` and the two auth headers.
 
 ## SEO rules enforced by validate.py
 
@@ -195,3 +191,15 @@ Decorative backgrounds use `alt=""`. The full record (direct URL, landing page, 
 | `jackson-capitol` | rawpixel | CC0 1.0 | Carol M Highsmith | https://www.rawpixel.com/image/3092816/free-photo-image-america-carol-highsmith |
 
 Flickr (FEMA/NOAA/USDA public-domain sets) returned HTTP 403 from the build environment and Wikimedia asked for contact details in the User-Agent, so the final set comes from rawpixel (public-domain/CC0 originals, many Library of Congress Carol M. Highsmith photos), StockSnap and the WordPress photo directory. Watermarked rawpixel `image_1300` files were rejected. Most originals are 960–1024px wide, so the "1200" WebP files keep the original width (≥ 960). There's no blue-tarp photo; `coastal-home`, `fallen-tree`, `water-damage` and `mississippi-river` (Hernando de Soto Bridge) stand in for closer matches that weren't available as CC0/PD.
+
+## Go-live record (Nov 17, 2026)
+
+- `ssl_cert.names` lists both `mississippiinsuranceappraiser.com` and `www.mississippiinsuranceappraiser.com`, and SSL status is `active`.
+- On the homepage and four interior pages, `http://`, `http://www.` and `https://www.` all 301 to `https://mississippiinsuranceappraiser.com/<page>/`,
+  and `/<page>/index.php` 301s to `/<page>/`.
+- All 51 `sitemap.xml` URLs return 200 with no `X-Robots-Tag`. The real domain serves our own `robots.txt`.
+- `/googlecccfbf2f7e9e5ae4.html` returns 200, no `X-Robots-Tag`, body byte-identical to the verification line.
+
+Remaining for the owner: click **Verify** in Search Console for the URL-prefix property `https://mississippiinsuranceappraiser.com/`
+(HTML-file verification doesn't work for a Domain property), then submit `https://mississippiinsuranceappraiser.com/sitemap.xml`.
+Keep the verification file on the server permanently.
