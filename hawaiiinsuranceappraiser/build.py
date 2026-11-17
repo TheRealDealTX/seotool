@@ -33,7 +33,7 @@ TEL = "+18445371427"
 EMAIL = "info@" + HOST
 HOURS = "Mon–Fri 7am–5pm HST"
 TODAY = date.today().isoformat()
-VER = "20261117a"
+VER = "20261117b"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
 GTM_ID = ""
@@ -97,8 +97,8 @@ def img(key, cls="", sizes="100vw", lazy=True, alt=None, extra=""):
 SVC_PHOTO = {
     "appraisal-clause-representation": "consultation", "homeowner-claim-appraisal": "oahu-suburb",
     "condo-aoao-commercial-appraisal": "condo-towers", "roof-hail-claim-appraisal": "metal-roof",
-    "kona-storm-high-wind-claims": "wind-palms", "hurricane-claim-appraisal": "hurricane-satellite",
-    "water-damage-claim-appraisal": "water-ceiling", "fire-smoke-claim-appraisal": "fire-damage",
+    "kona-storm-high-wind-claims": "fallen-tree", "hurricane-claim-appraisal": "hurricane-satellite",
+    "water-damage-claim-appraisal": "flood-street", "fire-smoke-claim-appraisal": "fire-damage",
     "wildfire-claim-appraisal": "wildfire", "volcanic-ashfall-lava-claims": "lava-flow",
     "carrier-estimate-review": "laptop-calculator", "umpire-services": "calculator-documents",
 }
@@ -110,14 +110,14 @@ LOC_PHOTO = {
 }
 TOOL_PHOTO = {
     "claim-gap-fee-estimator": "calculator-documents", "rcv-acv-holdback-calculator": "laptop-calculator",
-    "roof-pitch-squares-estimator": "roof-shingles", "hurricane-deductible-calculator": "storm-surf",
+    "roof-pitch-squares-estimator": "roof-damage", "hurricane-deductible-calculator": "storm-surf",
     "claim-timeline-builder": "inspection-clipboard", "appraisal-readiness-check": "consultation",
     "condo-deductible-share-calculator": "condo-towers",
 }
 POST_PHOTO = {
     "hurricane-deductibles-in-hawaii": "hurricane-satellite", "condo-master-policy-vs-ho6": "condo-towers",
     "documenting-wildfire-smoke-damage": "wildfire", "salt-air-corrosion-vs-storm-damage": "metal-roof",
-    "general-excise-tax-and-freight-in-estimates": "calculator-documents",
+    "general-excise-tax-and-freight-in-estimates": "roof-shingles",
 }
 
 # ---------------------------------------------------------------- icons
