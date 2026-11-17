@@ -36,8 +36,15 @@ VER = "20261116a"
 FAV = "1"
 HOURS = "Mon–Fri 8am–6pm PT"
 
-# Google Tag Manager: leave empty until a container ID is provided (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+# Google Tag Manager: empty = no tag. When set, GTM_HEAD (exactly as provided by the owner) goes in <head>
+# and the noscript iframe goes right after <body>.
+GTM_ID = "GTM-5QHSTX3L"
+GTM_HEAD = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5QHSTX3L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Google Search Console HTML-file verification. Written byte-for-byte to the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -249,14 +256,13 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\n"
-            f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_HEAD + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():
     if not GTM_ID:
         return ""
-    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n')
+    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\nheight="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n')
 
 
 PAGE_TYPES = ("WebPage", "AboutPage", "ContactPage", "CollectionPage")

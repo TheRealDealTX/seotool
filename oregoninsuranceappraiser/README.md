@@ -8,13 +8,13 @@ Engineering was copied from `georgiainsuranceappraiser/` (generator, `validate.p
 | | |
 | --- | --- |
 | Hostinger website UID | `k9Oyg28hx` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, datacenter Phoenix) |
-| Domain | https://oregoninsuranceappraiser.com (attached at creation; nameservers not pointed yet) |
-| Preview URL | https://azure-elephant-476462.hostingersite.com (use for all checks until DNS points here) |
-| Nameservers to set at the registrar | `aurora.dns-parking.com`, `nebula.dns-parking.com` |
+| Domain | https://oregoninsuranceappraiser.com — live, SSL active for apex + www (expires 2027-02-14); www and http 301 to it |
+| Preview URL | https://azure-elephant-476462.hostingersite.com (noindex via the guard) |
+| Nameservers | `aurora.dns-parking.com`, `nebula.dns-parking.com` (pointed Nov 2026) |
 | Server | us-phx-h5g-node3.hstgr.io · 72.60.128.114 |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@oregoninsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | not set (`GTM_ID = ""` in `build.py`) |
+| Email / form inbox | info@oregoninsuranceappraiser.com — form delivers over SMTP (verified `"via":"smtp"`) |
+| Google Tag Manager | `GTM-5QHSTX3L` (owner-provided snippet in `<head>` + noscript iframe after `<body>`) |
 
 ## Layout
 
@@ -205,12 +205,21 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled TEST, and confirm the log
 line shows `"via":"smtp"`. Keep any local copy outside the repo and delete it after upload.
 
+Done on Nov 17, 2026: config uploaded (local copy deleted), config URL 404 / 0 bytes, one TEST lead sent, log shows
+`"via":"smtp","err":null`. To change the password, re-upload the file above.
+
 ## Google Tag Manager
 
-Set `GTM_ID` in `build.py` (e.g. `"GTM-XXXXXXX"`) and rebuild: the head snippet and the `<noscript>` iframe after
-`<body>` are emitted on every page. Empty by default, so nothing is output.
+`build.py` holds `GTM_ID = "GTM-5QHSTX3L"` and `GTM_HEAD`, the owner's snippet copied exactly. When `GTM_ID` is set,
+the snippet goes in `<head>` and the `<noscript>` iframe right after `<body>` on every page; set it to `""` to remove both.
 
-## When the nameservers point here
+## Go-live checks (done Nov 17, 2026)
+
+All passed on the live domain: http, www and `/index.php` variants 301 to `https://oregoninsuranceappraiser.com/page/`
+on the homepage and four interior pages; all 51 sitemap URLs 200 with no `X-Robots-Tag`; our robots.txt served; GSC file
+200, 53 bytes, exact match, no `X-Robots-Tag`; Playwright suite passes on the domain. The steps below are kept for reference.
+
+## When the nameservers point here (reference)
 
 1. Check `agency-hosting_websites_get` → `ssl_cert.names` covers both the domain and `www.`; reissue with
    `agency-hosting_ssl_reinstall-website` if `www` is missing.
