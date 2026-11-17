@@ -176,4 +176,46 @@ All photos are **CC0 or public domain only** (no attribution required), found th
 `srcset`/`sizes` and width/height. Decorative backgrounds use `alt=""`. There is deliberately no public
 credits page; this list is for our internal records (the full manifest is `src/photos.json`).
 
-PHOTO_TABLE
+| Key | Title | Creator | License | Source |
+| --- | --- | --- | --- | --- |
+| `hero-storm-home` | Supercell | NOAA NSSL | Public Domain Mark | [flickr](https://www.flickr.com/photos/47838549@N08/48039373157) |
+| `supercell` | Supercell thunderstorm | NOAA NSSL | Public Domain Mark | [flickr](https://www.flickr.com/photos/47838549@N08/48044614641) |
+| `lightning` | Lightning Storm | Brandon Morgan | CC0 | [stocksnap](https://stocksnap.io/photo/lightning-storm-3EPA01FY99) |
+| `tornado-damage` | Tornado aftermath can be seen | U.S. Department of Defense | CC0 | [rawpixel](https://www.rawpixel.com/image/3315443/free-photo-image-aftermath-cc0-countryside) |
+| `tornado-debris` | aerial view tornado damage Moore | U.S. Forest Service (source) | CC0 | [rawpixel](https://www.rawpixel.com/image/8728258/photo-image-public-domain-nature-landscape) |
+| `hailstones` | Hailstorm (NOAA/NSSL Collection) | pingnews.com | Public Domain Mark | [flickr](https://www.flickr.com/photos/39735679@N00/426155154) |
+| `flood-street` | stop sign stands flooded street | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/8723819/photo-image-border-public-domain) |
+| `icicles-house` | A random view snow thickness on roof and icicles formation | Tinjure20 | CC0 | [wordpress](https://wordpress.org/photos/photo/45063bddda/) |
+| `snow-roof` | snow covered house staircase hills | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/3291573/free-photo-image-blizzard-cc0-creative-commons) |
+| `ice-storm-trees` | Ice Storm Tree Damage | David Kitto | CC0 | [flickr](https://www.flickr.com/photos/43371449@N00/52665605113) |
+| `fallen-tree` | Fallen Trees | U.S. Fish & Wildlife Service Southwest R | Public Domain Mark | [flickr](https://www.flickr.com/photos/51896441@N04/37330421606) |
+| `roofer` | Cyrus Brame cleaning gutters | U. S. Fish and Wildlife Service - Northe | Public Domain Mark | [flickr](https://www.flickr.com/photos/43322816@N08/6086748364) |
+| `victorian-home` | Dr. D. D. Hooper House, Sylva, NC | w_lemay | CC0 | [flickr](https://www.flickr.com/photos/59081381@N03/31741901727) |
+| `farm-barn` | The Red Barn on the Farm | *MMM2* | CC0 | [flickr](https://www.flickr.com/photos/14493178@N07/5615076236) |
+| `commercial-building` | Strip Mall, Watertown, New York 02 | Lallint | CC0 | [flickr](https://www.flickr.com/photos/194250376@N05/52111756820) |
+| `apartment-condo` | Modern apartment building | DennisM2 | CC0 | [flickr](https://www.flickr.com/photos/14674348@N04/14996764996) |
+| `consultation` | Team Meeting | Startup Stock Photos | CC0 | [stocksnap](https://stocksnap.io/photo/team-meeting-69TMH4ITIE) |
+| `documents-review` | Writing Papers | Helloquence | CC0 | [stocksnap](https://stocksnap.io/photo/writing-papers-Y01VDYAX63) |
+| `calculator` | Calculator Numbers | Negative Space | CC0 | [stocksnap](https://stocksnap.io/photo/calculator-numbers-GIDMT5TDUF) |
+| `laptop-spreadsheet` |  | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/5974308/photo-image-laptop-work-macbook) |
+| `indiana-cornfield` | Cornfields Farming | Skitter Photo | CC0 | [stocksnap](https://stocksnap.io/photo/cornfields-farming-420322FE63) |
+| `fire-damage` | Tilstone House Fire | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/7433149/photo-image-public-domain-city) |
+| `smoke-interior` | DSC08838 | callum.darragh | Public Domain Mark | [flickr](https://www.flickr.com/photos/191009661@N02/50657208663) |
+| `brick-home` | new roof 2 | City of Detroit Gov | Public Domain Mark | [flickr](https://www.flickr.com/photos/126249508@N04/49503228767) |
+| `shingle-roof` | Moss growing on a shingled roof, with a brick wall in the background. | Topher | CC0 | [wordpress](https://wordpress.org/photos/photo/6456862d81/) |
+| `suburban-home` | Simple home exterior design photo | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/5912682/image-public-domain-house-home) |
+| `hail-roof` | Tarp | USFWS/Southeast | Public Domain Mark | [flickr](https://www.flickr.com/photos/41464593@N02/36443859574) |
+| `water-ceiling` | Water damage to Timberline Lodge, Mt. Hood National Forest | Forest Service Pacific Northwest Region | Public Domain Mark | [flickr](https://www.flickr.com/photos/135886671@N08/53666631661) |
+| `carmel` | House | unknown | CC0 | [rawpixel](https://www.rawpixel.com/image/9658269/house) |
+| `fort-wayne` | Fort wayne skyline as viewed from promenade park | Monster Wedge | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=153476425) |
+| `jeffersonville` | Big Four Bridge | Huskydaddy | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=145202976) |
+| `lafayette` | Limestone pillars purdue | Guilherme Garbino | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=169344128) |
+| `bloomington` | Monroe County Courthouse, Bloomington, IN, December 2018 | TheCatalyst31 | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=143664441) |
+| `south-bend` | File:South Bend Tribune street view 2015.JPG | Ian Havens | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=41333485) |
+| `hammond` | shoreline Indiana Dunes State Park | Carol M Highsmith | CC0 | [rawpixel](https://www.rawpixel.com/image/2346707/photo-image-cloud-plant-tree) |
+| `kokomo` | Kokomo, Indiana skyline | JJIndiana | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=146435264) |
+| `evansville` | Northwest side of Old Vanderburgh County Courthouse, Evansville, IN | TheCatalyst31 | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=146364824) |
+| `terre-haute` | Dobbs Park, Terre Haute Indiana | Samdamanfr | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=185759345) |
+| `indianapolis-skyline` | Indianapolis Skyline and Canal 2025-10-14 | TheWxResearcher | CC0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=176831931) |
+
+Stand-ins: `carmel` (generic new neighborhood), `lafayette` (Purdue campus, West Lafayette), `hammond` (Indiana Dunes shoreline), `terre-haute` (Dobbs Park), `hail-roof` (storm-damaged roof being tarped). Most Flickr/rawpixel/StockSnap originals are only 960–1024px wide, so those WebPs are served at their native width (never upscaled).

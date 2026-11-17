@@ -317,5 +317,115 @@
     "fw": 1024,
     "fh": 681,
     "desc": "Row of new craftsman-style homes with front porches, brick column bases and young trees in a new neighborhood."
+  },
+  "fort-wayne": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Fort_wayne_skyline_as_viewed_from_promenade_park.jpg/1280px-Fort_wayne_skyline_as_viewed_from_promenade_park.jpg",
+    "title": "Fort wayne skyline as viewed from promenade park",
+    "creator": "Monster Wedge",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=153476425",
+    "fw": 1200,
+    "fh": 800,
+    "desc": "Downtown Fort Wayne skyline viewed from Promenade Park across the St. Marys River, with terraced riverbank seating."
+  },
+  "jeffersonville": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Big_Four_Bridge.jpg/1280px-Big_Four_Bridge.jpg",
+    "title": "Big Four Bridge",
+    "creator": "Huskydaddy",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=145202976",
+    "fw": 1200,
+    "fh": 675,
+    "desc": "Aerial view of the Big Four pedestrian bridge spanning the Ohio River between Louisville, Kentucky and Jeffersonville, Indiana."
+  },
+  "lafayette": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Limestone_pillars_purdue.jpg/1280px-Limestone_pillars_purdue.jpg",
+    "title": "Limestone pillars purdue",
+    "creator": "Guilherme Garbino",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=169344128",
+    "fw": 1200,
+    "fh": 675,
+    "desc": "Limestone gateway pillars and a paved walkway leading onto the tree-shaded Purdue University campus in West Lafayette."
+  },
+  "bloomington": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Monroe_County_Courthouse%2C_Bloomington%2C_IN%2C_December_2018.jpg/1280px-Monroe_County_Courthouse%2C_Bloomington%2C_IN%2C_December_2018.jpg",
+    "title": "Monroe County Courthouse, Bloomington, IN, December 2018",
+    "creator": "TheCatalyst31",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=143664441",
+    "fw": 1200,
+    "fh": 800,
+    "desc": "Monroe County Courthouse in Bloomington, a white limestone Beaux-Arts building with a dome, under a deep blue winter sky."
+  },
+  "south-bend": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/South_Bend_Tribune_street_view_2015.JPG/1280px-South_Bend_Tribune_street_view_2015.JPG",
+    "title": "File:South Bend Tribune street view 2015.JPG",
+    "creator": "Ian Havens",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=41333485",
+    "fw": 1200,
+    "fh": 800,
+    "desc": "Historic red-brick South Bend Tribune building in downtown South Bend with a vertical 'Tribune' sign and traffic signals."
+  },
+  "hammond": {
+    "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTA4L3BkNTFiYXRjaDktMjQuanBn.jpg",
+    "title": "shoreline Indiana Dunes State Park",
+    "creator": "Carol M Highsmith",
+    "license": "cc0",
+    "source": "rawpixel",
+    "landing": "https://www.rawpixel.com/image/2346707/photo-image-cloud-plant-tree",
+    "fw": 1024,
+    "fh": 682,
+    "desc": "Sandy Lake Michigan beach and shoreline at Indiana Dunes State Park under a blue sky."
+  },
+  "kokomo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Kokomo%2C_Indiana_skyline.png/1280px-Kokomo%2C_Indiana_skyline.png",
+    "title": "Kokomo, Indiana skyline",
+    "creator": "JJIndiana",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=146435264",
+    "fw": 1048,
+    "fh": 590,
+    "desc": "Elevated view over downtown Kokomo, Indiana with low-rise buildings, a tree-lined street and a radio tower."
+  },
+  "evansville": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Northwest_side_of_Old_Vanderburgh_County_Courthouse%2C_Evansville%2C_IN.jpg/1280px-Northwest_side_of_Old_Vanderburgh_County_Courthouse%2C_Evansville%2C_IN.jpg",
+    "title": "Northwest side of Old Vanderburgh County Courthouse, Evansville, IN",
+    "creator": "TheCatalyst31",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=146364824",
+    "fw": 1200,
+    "fh": 800,
+    "desc": "Old Vanderburgh County Courthouse in Evansville, a domed Beaux-Arts limestone building with a central clock tower."
+  },
+  "terre-haute": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Dobbs_Park%2C_Terre_Haute_Indiana.jpg/1280px-Dobbs_Park%2C_Terre_Haute_Indiana.jpg",
+    "title": "Dobbs Park, Terre Haute Indiana",
+    "creator": "Samdamanfr",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=185759345",
+    "fw": 1200,
+    "fh": 800,
+    "desc": "Pond in Dobbs Park, Terre Haute, with trees reflected in the water at dusk."
+  },
+  "indianapolis-skyline": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Indianapolis_Skyline_and_Canal_2025-10-14.jpg/1280px-Indianapolis_Skyline_and_Canal_2025-10-14.jpg",
+    "title": "Indianapolis Skyline and Canal 2025-10-14",
+    "creator": "TheWxResearcher",
+    "license": "cc0",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=176831931",
+    "fw": 1200,
+    "fh": 675,
+    "desc": "Downtown Indianapolis skyline seen across a canal and park lawn with a fountain, under a bright sun with lens flare."
   }
 }
