@@ -409,3 +409,25 @@ p{margin:0 0 1.1em}
   .icon-btn{width:40px;height:40px}
 }
 @media (max-width:380px){.logo small{display:none}.hdr__tools{gap:2px}.icon-btn{width:38px;height:38px}}
+
+/* ---------- mobile: hero gutter + 2-column product grids ---------- */
+.hero__in{padding-left:24px;padding-right:24px}
+@media (max-width:640px){
+  .hero__in{padding:110px 16px 56px}
+  .wrap{padding:0 16px}
+  .grid,.fgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card{border-radius:14px}
+  .card__tag{top:8px;left:8px;font-size:.54rem;padding:5px 7px}
+  .card__body{padding:10px 11px 12px;gap:4px}
+  .card__title{font-size:.88rem;line-height:1.25}
+  .card__spec{font-size:.72rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .card__foot{padding-top:6px;gap:6px}
+  .card__price{font-size:.9rem}.card__price small{font-size:.55rem}
+  .heart{width:30px;height:30px;flex:none}.heart svg{width:13px;height:13px}
+  .fcard__box{padding:10px}.fcard__iso{font-size:1.8rem;top:8px;right:10px}.fcard__name{font-size:.92rem}
+  .fcard__body{padding:10px 11px 12px;gap:8px}.fcard__body p{font-size:.78rem}
+  .fcard__tags{display:none}
+  .fcard__body .btn{width:100%;justify-content:center;padding:9px 10px;font-size:.78rem}
+  .toolbar .chip{padding:8px 12px;font-size:.8rem}
+}
+@media (max-width:640px){.hero .eyebrow{flex-wrap:wrap;row-gap:4px;font-size:.64rem;letter-spacing:.1em}.hero .eyebrow .rec{white-space:nowrap}}

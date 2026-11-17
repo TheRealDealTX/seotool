@@ -306,7 +306,7 @@ def build_home(ctx):
     body = f"""
 <section class="hero"><div class="hero__bg"><img src="{site_img('hero')}" alt="Vintage 35mm film camera and film" fetchpriority="high"></div><span class="leak a"></span><span class="leak b"></span>
 <div class="wrap hero__in">
-<div class="eyebrow"><span class="rec">Relics Film Lab</span> · The film camera shop</div>
+<div class="eyebrow"><span class="rec">Relics Film Lab</span><span style="white-space:nowrap">· The film camera shop</span></div>
 <h1><span class="line"><span>Shop vintage</span></span><span class="line"><span><em>film cameras</em></span></span><span class="line"><span>&amp; fresh film.</span></span></h1>
 <p class="hero__lead">Point-and-shoots, SLRs, Polaroids, medium format and Super 8 — plus the film, batteries and accessories to go with them. Every camera hand-picked, with an honest buying guide.</p>
 <div class="hero__cta"><a class="btn" href="/collections/all-film-cameras">Shop film cameras {ICON['arrow']}</a><a class="btn btn--ghost" href="/tools/camera-finder">Find your camera</a></div>
