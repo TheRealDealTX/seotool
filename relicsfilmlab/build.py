@@ -155,7 +155,7 @@ def header(active=""):
     mega = "".join(f'<div class="mega__col"><div class="mega__h">{h}</div>' + "".join(
         f'<a href="{u}"{" class=dup" if dup else ""}>{t}<small>{d}</small></a>' for u, t, d, dup in links) + "</div>" for h, links in NAV_MEGA)
     items = "".join(f'<li><a href="{u}"{" class=is-active" if active == k else ""}>{t}</a></li>' for u, t, k in NAV_MAIN)
-    return f"""<div class="ticker" aria-hidden="true"><div class="ticker__track">{"".join(f"<span>{t}</span>" for t in ["Curated film cameras", "Real buying advice", "Shop securely on Amazon", "Free film tools", "Long Beach born", "New picks every month"] * 4)}</div></div>
+    return f"""<div class="ticker" aria-hidden="true"><div class="ticker__track">{"".join(f"<span>{t}</span>" for t in ["Curated film cameras", "Real buying advice", "Secure checkout", "Free film tools", "Long Beach born", "New picks every month"] * 4)}</div></div>
 <header class="hdr"><div class="wrap hdr__in">
 <a class="logo" href="/" aria-label="Relics Film Lab home"><span class="logo__mark" aria-hidden="true"></span>Relics<small>FILM LAB</small></a>
 <ul class="nav" id="nav">

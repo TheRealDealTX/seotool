@@ -287,11 +287,11 @@ def build_home(ctx):
     body = f"""
 <section class="hero"><div class="hero__bg"><img src="{site_img('hero')}" alt="Vintage 35mm film camera and film" fetchpriority="high"></div><span class="leak a"></span><span class="leak b"></span>
 <div class="wrap hero__in">
-<div class="eyebrow"><span class="rec">Relics Film Lab</span> · Long Beach born</div>
-<h1><span class="line"><span>Film cameras,</span></span><span class="line"><span>chosen by a</span></span><span class="line"><span>real <em>film lab</em>.</span></span></h1>
-<p class="hero__lead">Shop vintage film cameras, fresh film and the gear to go with them — curated by people who developed, scanned and repaired them for years. Honest buying advice on every model, then buy securely on Amazon.</p>
+<div class="eyebrow"><span class="rec">Relics Film Lab</span> · The film camera shop</div>
+<h1><span class="line"><span>Shop vintage</span></span><span class="line"><span><em>film cameras</em></span></span><span class="line"><span>&amp; fresh film.</span></span></h1>
+<p class="hero__lead">Point-and-shoots, SLRs, Polaroids, medium format and Super 8 — plus the film, batteries and accessories to go with them. Every camera hand-picked, with an honest buying guide.</p>
 <div class="hero__cta"><a class="btn" href="/collections/all-film-cameras">Shop film cameras {ICON['arrow']}</a><a class="btn btn--ghost" href="/tools/camera-finder">Find your camera</a></div>
-<div class="hero__meta"><div><b class="counter" data-to="{n_cams}" data-suffix="+">{n_cams}+</b>Film cameras covered</div><div><b>6</b>Film formats</div><div><b class="counter" data-to="{len(PRODUCTS)}">{len(PRODUCTS)}</b>Products &amp; guides</div><div><b>LBC</b>Long Beach, CA</div></div>
+<div class="hero__meta"><div><b class="counter" data-to="{n_cams}" data-suffix="+">{n_cams}+</b>Film cameras covered</div><div><b>6</b>Film formats</div><div><b class="counter" data-to="{len(PRODUCTS)}">{len(PRODUCTS)}</b>Products to shop</div><div><b>7</b>Free film tools</div></div>
 </div></section>
 <div class="strip" aria-hidden="true"><div class="strip__track">{strip}</div></div>
 <section class="section"><div class="wrap">
