@@ -8,7 +8,7 @@ URL scheme and design are new, and they differ from all 36 sister `*insuranceapp
 | | |
 | --- | --- |
 | Hostinger website UID | `3S90GANgM` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter selected) |
-| Domain | https://connecticutinsuranceappraiser.com (live since Nov 17, 2026; SSL covers the bare and `www` hosts; www and http 301 to https) |
+| Domain | https://connecticutinsuranceappraiser.com (live since Nov 17, 2026; http and http://www 301 to https. **Open issue:** https://www does not yet serve a valid certificate, see Go-live) |
 | Preview URL | https://dodgerblue-crow-274676.hostingersite.com (Hostinger sends its own noindex robots.txt here; our guard adds `X-Robots-Tag: noindex`) |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Server | us-phx-h5g-node3.hstgr.io, IPv4 72.60.128.114 |
@@ -214,8 +214,12 @@ add Service, FAQPage, ItemList, WebApplication, BlogPosting, HowTo or DefinedTer
 ## Go-live (done Nov 17, 2026)
 
 1. ~~Nameservers pointed to Hostinger~~ — the domain resolves to the website.
-2. ~~SSL~~ — first certificate covered only the bare domain; reissued with `agency-hosting_ssl_reinstall-website`,
-   now `ssl_cert.names` lists both `connecticutinsuranceappraiser.com` and `www.connecticutinsuranceappraiser.com`.
+2. **SSL — open issue with Hostinger.** The first certificate covered only the bare domain. It was reissued twice with
+   `agency-hosting_ssl_reinstall-website` (Nov 17, 01:36 and 02:21 UTC). The API now reports `ssl_cert.names` with both
+   names, status `active`, and no running process. But SSL Labs shows the server still presenting the Nov 16 bare-domain
+   certificate, and `www` falls back to Hostinger's default `*.hstgr.io` certificate, so `https://www.` gives a browser
+   warning. DNS is correct (`www` CNAME to the apex, 72.60.128.114). All 3 certificate setups for this 7-day window are
+   used. Needs Hostinger support to deploy the issued certificate to the server, or another reissue after the window resets.
 3. ~~Canonical redirects~~ — checked on the homepage and four interior pages: `http://`, `http://www.` and
    `/index.php` all 301 to `https://connecticutinsuranceappraiser.com/page/`; no `X-Robots-Tag` on the real domain;
    all 51 sitemap URLs return 200; GSC file returns 200 and matches byte for byte.
