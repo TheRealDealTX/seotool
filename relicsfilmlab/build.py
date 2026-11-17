@@ -33,6 +33,9 @@ esc = lambda s: html.escape(str(s), quote=True)
 _ASIN_FILE = os.path.join(ROOT, "data", "amazon_asins.json")
 ASINS = json.load(open(_ASIN_FILE)) if os.path.exists(_ASIN_FILE) else {}
 SLUG_ASIN = {v["for"]: v for v in ASINS.values() if v.get("for")}
+# Closest similar model for products whose exact model isn't on Amazon: slug -> {asin, title, note, level}
+_SIM_FILE = os.path.join(ROOT, "data", "amazon_similar.json")
+SIMILAR = json.load(open(_SIM_FILE)) if os.path.exists(_SIM_FILE) else {}
 
 def amz(q):
     a = ASINS.get(q)
@@ -373,9 +376,18 @@ def product_page(p):
         ASINS[_bq] = SLUG_ASIN[slug]
     btn_label = ("Buy on Amazon" if _bq in ASINS else "See all listings on Amazon") if not special else (
         "Buy on Amazon" if _bq in ASINS else special.get("btn", "Shop on Amazon"))
+    sim = SIMILAR.get(slug) if slug not in SLUG_ASIN else None
+    if sim:
+        sim_url = f"https://www.amazon.com/dp/{sim['asin']}?tag={C.AMZ_TAG}"
+        rel_txt = {"series": "from the same series", "brand": f"from {esc(brand) or 'the same maker'}", "comparable": "a comparable model"}.get(sim.get("level"), "a similar model")
+        buy_row = (f'<div class="buybox__sim"><b>This exact model isn\'t on Amazon right now.</b> Closest match ({rel_txt}): {esc(sim["note"])}.</div>'
+                   f'<div class="buybox__row"><a class="btn btn--block" href="{esc(sim_url)}" target="_blank" rel="sponsored nofollow noopener" data-amz="{esc(sim["asin"])}">{ICON["cart"]} Shop the closest match on Amazon</a></div>'
+                   f'<p class="buybox__alt">Prefer the exact model? {amz_link("Search Amazon for the " + esc(name) + " →", _bq, "")}</p>')
+    else:
+        buy_row = f'<div class="buybox__row">{amz_link(ICON["cart"] + " " + btn_label, _bq, "btn btn--block")}</div>'
     buy = f"""<div class="buybox">
 <div class="mono muted">Available from independent sellers on Amazon</div>
-<div class="buybox__row">{amz_link(ICON['cart'] + " " + btn_label, special['q'] if special else q, 'btn btn--block')}</div>
+{buy_row}
 <div class="buybox__row"><button class="heart" data-slug="{slug}" aria-pressed="false">{ICON['heart']} Save to wishlist</button></div>
 <p class="buybox__note">We link to live Amazon listings so you always see current prices, condition and seller ratings. Relics earns a small commission at no extra cost to you.</p>
 <div class="trust"><div><b>Checkout</b>Secure on Amazon</div><div><b>Returns</b>Amazon return policy</div><div><b>Advice</b>Written by film shooters</div></div>
@@ -433,7 +445,10 @@ def product_page(p):
                       "movie": "Yes, if you can use a camcorder you can shoot Super 8. Use the built-in meter and keep shots short — a 50ft cartridge lasts about 3 minutes at 18fps.",
                       }.get(cat, "Yes — it is straightforward to use.")))
         faqs.append(("Where can I get my film developed?", 'Any lab that processes the format will do — see our guide to <a href="/order-now">where to develop film</a>, or learn to <a href="/blogs/guides/how-to-develop-film-at-home">develop film at home</a>.'))
-        faqs.append((f"Where can I buy a {name}?", f'Vintage cameras are sold by independent sellers on Amazon. Use the “Shop on Amazon” button above to see current listings, prices and conditions for the {esc(name)}.'))
+        _sim = SIMILAR.get(slug) if slug not in SLUG_ASIN else None
+        faqs.append((f"Where can I buy a {name}?",
+                     (f'The {esc(name)} isn\'t listed on Amazon right now, so our button links to the closest match we found — {esc(_sim["note"])} — and the link under it searches Amazon for the {esc(name)} itself, as independent sellers list copies from time to time.') if _sim else
+                     f'Vintage cameras are sold by independent sellers on Amazon. Use the “Buy on Amazon” button above to see the current listing, price and condition for the {esc(name)}.'))
     faq_h, faq_ld = faq_html(faqs) if faqs else ("", None)
 
     # kit (aside)
