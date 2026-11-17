@@ -29,7 +29,7 @@ ob_start(); ?>
           <span class="pill"><?= e($p['category'] ?? '') ?></span>
           <h2 style="font-size:1.15rem"><a href="/<?= $p['slug'] ?>/" style="text-decoration:none;color:inherit"><?= e($p['h1']) ?></a></h2>
           <p><?= e($p['excerpt'] ?? '') ?></p>
-          <p class="meta"><?= e(nice_date($p['updated'] ?? $p['published'])) ?> · <?= reading_minutes($p['body_html']) ?> min read</p>
+          <p class="meta"><?= e(nice_date($p['published'] ?? '')) ?> · <?= reading_minutes($p['body_html']) ?> min read</p>
         </div>
       </article>
       <?php endforeach; ?>

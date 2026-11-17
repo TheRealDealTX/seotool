@@ -24,7 +24,7 @@ ob_start(); ?>
     <h1 class="anim" style="max-width:920px"><?= e($p['h1']) ?></h1>
     <div class="post-meta anim">
       <span class="author-chip"><img class="av" src="<?= SITE['photo'] ?>" alt="Joseph Dittman" width="38" height="38"> <span>By <a href="/about-us/" style="color:#fff">Joseph Dittman</a></span></span>
-      <span><?= icon('calendar', 16) ?> Updated <time datetime="<?= e(substr($upd, 0, 10)) ?>"><?= e(nice_date($upd)) ?></time></span>
+      <span><?= icon('calendar', 16) ?> Published <time datetime="<?= e(substr($pub, 0, 10)) ?>"><?= e(nice_date($pub)) ?></time></span>
       <span><?= icon('clock', 16) ?> <?= $mins ?> min read</span>
     </div>
   </div>
