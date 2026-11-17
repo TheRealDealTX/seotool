@@ -412,7 +412,9 @@ img.av{object-fit:cover;padding:0;background:none}
 .hero .anim{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
 .hero .anim:nth-child(2){animation-delay:.1s}.hero .anim:nth-child(3){animation-delay:.2s}.hero .anim:nth-child(4){animation-delay:.3s}.hero .anim:nth-child(5){animation-delay:.4s}
 @keyframes rise{to{opacity:1;transform:none}}
-.typed::after{content:"|";margin-left:2px;color:var(--gold-2);animation:blink 1s steps(1) infinite}
+.typed::after{content:"|";margin-left:2px;color:var(--gold-2);-webkit-text-fill-color:var(--gold-2);animation:blink 1s steps(1) infinite}
+/* the rotating phrase always sits on its own single line, so typing never changes the headline height */
+.typed-line{display:block;white-space:nowrap}
 @keyframes blink{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -512,3 +514,23 @@ body.modal-open{overflow:hidden}
   .mnav-contact{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .mnav-foot p{margin:0;text-align:center;font-size:.85rem;color:var(--ink-2)}
 }
+
+/* 16px minimum on form fields stops iOS Safari from zooming on focus */
+input,select,textarea,.fl input,.fl select,.fl textarea,.tool input,.tool select,.search-box input{font-size:16px}
+@media (max-width:380px){.hero h1{font-size:1.85rem}.tb-label{display:none}}
+/* popup: centered within the visible viewport, two-column fields on phones */
+.modal{min-height:100vh;min-height:100dvh}
+.modal-box{max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px)}
+@media (max-width:640px){
+  .modal{padding:12px;align-items:center}
+  .modal-box{padding:20px 16px 16px;border-radius:18px}
+  .modal-head{margin-bottom:6px}
+  .modal-head img{width:48px;height:48px}
+  .modal-sub{font-size:.88rem;margin-bottom:12px}
+  .modal .lead-form{gap:10px}
+  .modal .compact .fgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .modal .fl{font-size:.8rem;gap:4px}
+  .modal .fl input,.modal .fl textarea{padding:10px 12px}
+  .modal .consent{font-size:.7rem;line-height:1.4}
+}
+@media (max-width:380px){.modal-sub{display:none}.modal-head .eyebrow{display:none}.modal-head h2{font-size:1.15rem}}

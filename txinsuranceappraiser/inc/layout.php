@@ -88,7 +88,7 @@ function site_header(string $path): void
   <div class="wrap topbar-in">
     <span class="tb-item"><?= icon('shield', 16) ?> Policyholder-side appraisers serving all of Texas</span>
     <span class="tb-item hide-sm"><?= icon('clock', 16) ?> <?= e(SITE['hours']) ?></span>
-    <a class="tb-item tb-phone" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 16) ?> Call a Professional Now: <strong><?= e(SITE['phone']) ?></strong></a>
+    <a class="tb-item tb-phone" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 16) ?> <span class="tb-label">Call a Professional Now:</span> <strong><?= e(SITE['phone']) ?></strong></a>
   </div>
 </div>
 <header class="site-header" id="top">
@@ -280,7 +280,7 @@ function lead_form(string $variant = 'full', string $source = ''): string
       <select name="loss_type"><option value="">Select…</option><option>Hail</option><option>Wind / Tornado</option><option>Hurricane</option><option>Water / Plumbing</option><option>Fire / Smoke</option><option>Freeze</option><option>Other</option></select>
     </label>
     <?php endif; ?>
-    <label class="fl full"><span>How can we help?</span><textarea name="message" rows="<?= $variant === 'compact' ? 3 : 4 ?>" placeholder="Briefly describe your claim and where it stands."></textarea></label>
+    <label class="fl full"><span>How can we help?</span><textarea name="message" rows="<?= $source === 'popup' ? 2 : ($variant === 'compact' ? 3 : 4) ?>" placeholder="Briefly describe your claim and where it stands."></textarea></label>
   </div>
   <label class="consent"><input type="checkbox" name="sms_consent" value="yes"> <span>I agree to receive text messages from TX Insurance Appraisals LLC about my appraisal, including scheduling, status updates and invoices. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of service. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-conditions/">Terms &amp; Conditions</a>.</span></label>
   <button class="btn btn-gold btn-block" type="submit">Request My Free Claim Review <?= icon('arrow', 18) ?></button>

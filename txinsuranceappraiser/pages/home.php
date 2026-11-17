@@ -31,7 +31,7 @@ ob_start(); ?>
   <div class="wrap hero-in">
     <div>
       <span class="eyebrow anim">TX Insurance Appraiser</span>
-      <h1 class="anim">Texas Insurance Appraiser for <span class="text-gold"><span class="typed" data-words="Hail|Wind|Hurricane|Water|Fire|Freeze">Hail</span> Claims</span></h1>
+      <h1 class="anim">Texas Insurance Appraiser for <span class="typed-line text-gold"><span class="typed" data-words="Hail|Wind|Hurricane|Water|Fire|Freeze">Hail</span> Claims</span></h1>
       <p class="lead anim">When your insurance company agrees the damage is covered but lowballs the amount, TX Insurance Appraiser steps in as your policyholder-side appraiser — inspecting every line item, documenting the loss in 3D, and negotiating a fair award under your policy’s appraisal clause.</p>
       <div class="hero-actions anim">
         <a class="btn btn-gold btn-lg" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 20) ?> Call <?= e(SITE['phone_short']) ?></a>
