@@ -268,5 +268,38 @@
   "source": "Flickr",
   "w": 646,
   "h": 646
+ },
+ "kodak-ultramax-400": {
+  "title": "File:Loading 35mm film into old SLR camera.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Loading_35mm_film_into_old_SLR_camera.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=62439445",
+  "artist": "Kotivalo",
+  "license": "CC0",
+  "source": "Wikimedia",
+  "w": 1138,
+  "h": 854,
+  "kind": "illustrative"
+ },
+ "kodak-ektar-100": {
+  "title": "File:Loading 35mm film into old SLR camera.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Loading_35mm_film_into_old_SLR_camera.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=62439445",
+  "artist": "Kotivalo",
+  "license": "CC0",
+  "source": "Wikimedia",
+  "w": 1138,
+  "h": 854,
+  "kind": "illustrative"
+ },
+ "4lr44-px28-6v": {
+  "title": "Camera battery 245 2CR5 6v",
+  "url": "https://live.staticflickr.com/8223/29595439721_ea9f279a91_b.jpg",
+  "page": "https://www.flickr.com/photos/25797459@N06/29595439721",
+  "artist": "zaphad1",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 737,
+  "h": 737,
+  "kind": "illustrative"
  }
 }
