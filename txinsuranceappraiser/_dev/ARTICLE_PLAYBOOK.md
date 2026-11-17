@@ -23,6 +23,8 @@ php -S 127.0.0.1:8090 _dev/router.php &    # local preview, needed by the valida
 
 Read 2–3 existing posts in `content/posts/` to match tone and structure, and `BLOG_SPEC` rules below.
 
+Optional but recommended: use the DataForSEO connector to check current volume/KD for the topic's primary and secondary keywords and to pull 3–5 related questions (use them as H2s or FAQs).
+
 ## 2. Write the article (content/posts/<slug>.json)
 
 **Length & keywords**
@@ -126,4 +128,4 @@ Rules: pick clusters where (a) the site already gets Search Console impressions 
 no cannibalisation, and (d) the topic fits a Texas property-insurance appraisal firm. The original data files are no longer
 available in a fresh session, so reuse the `evidence` style. Good sources of new angles: Texas cities with area pages,
 claim types (wind, water, freeze, fire, smoke, theft), claim process steps, and policy terms (ACV, RCV, O&P, matching, ordinance & law).
-If Semrush or Search Console tools are connected and have credits, use them to confirm volume and KD.
+The routine has the **DataForSEO** connector: use it (e.g. Labs keyword overview / bulk keyword difficulty / keyword ideas, location United States, language English) to confirm search volume and KD before adding topics, and to find related low-KD questions. Prefer KD ≤ 25 and volume ≥ 50/month. Keep DataForSEO usage light — a few calls per run.
