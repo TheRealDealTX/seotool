@@ -35,8 +35,16 @@ EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
 VER = "20261116a"
 FAV = "1"
-# Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM output.
-GTM_ID = ""
+# Google Tag Manager container ID. Empty = no GTM output.
+GTM_ID = "GTM-KLF45QVX"
+# Head snippet exactly as supplied by the site owner (Nov 17, 2026). If it is ever cleared, the standard
+# GTM container snippet below is used instead.
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KLF45QVX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 # Google Search Console HTML-file verification. Written byte-for-byte to the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
 GSC_BODY = "google-site-verification: googlecccfbf2f7e9e5ae4.html"
@@ -288,6 +296,8 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_SNIPPET:
+        return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});"
             "var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;"
             f"f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")

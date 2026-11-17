@@ -8,12 +8,12 @@ was adapted from the Georgia site; the copy, URL structure, palette, fonts and l
 | | |
 | --- | --- |
 | Hostinger website UID | `BU6JAuqzl` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter) |
-| Domain | `vermontinsuranceappraiser.com` (attached at creation; not resolving until nameservers are set) |
+| Live domain | https://vermontinsuranceappraiser.com (live Nov 17, 2026; SSL on apex and www; www and http 301 to it) |
 | Preview URL | https://aliceblue-spider-233953.hostingersite.com (Hostinger serves its own noindex `robots.txt` here) |
 | Nameservers to set at the registrar | `hermes.dns-parking.com`, `artemis.dns-parking.com` (from `agency-hosting_websites_get`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@vermontinsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | `GTM_ID` in `build.py`, empty for now (no GTM output until set) |
+| Email / form inbox | info@vermontinsuranceappraiser.com (form delivers over SMTP, verified Nov 17, 2026) |
+| Google Tag Manager | `GTM-KLF45QVX`: owner-supplied head snippet (`GTM_SNIPPET` in `build.py`, used verbatim) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -192,12 +192,15 @@ were upscaled slightly to 1200px. Photos are illustrative and do not show client
 | `lightning-houses` | Lightning tonight | Dingus Nugget | flickr | Public domain mark | https://www.flickr.com/photos/185078984@N02/51437890743 |
 | `treasury-house` | Treasury Inn, neoclassical home built | Carol M Highsmith | rawpixel | CC0 1.0 | https://www.rawpixel.com/image/8071718/photo-image-public-domain-city-united-states |
 
-## Going live (to do)
+## Going live (done Nov 17, 2026)
 
-1. Point the domain's nameservers to `hermes.dns-parking.com` and `artemis.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if needed.
-3. Check http/www/https-www and `/page/index.php` 301s on the homepage and interior pages; every sitemap URL 200; no
-   `X-Robots-Tag` on the real domain; our own `robots.txt`; the GSC file returns 200 with exact bytes.
-4. Create the mailbox, upload `api/_private/config.php`, send a test lead, confirm `"via":"smtp"`.
-5. Add the GTM container ID to `GTM_ID`, rebuild, validate, redeploy, clear cache.
-6. Click Verify in Search Console for the URL-prefix property `https://vermontinsuranceappraiser.com/`, then submit `/sitemap.xml`.
+1. ~~Nameservers pointed~~: domain resolves to the website. `https://` and `https://www.` both present valid certificates
+   (the API's `ssl_cert.names` lists `www`; the apex is served its own certificate), so no reissue was needed.
+2. ~~Canonical host~~: on the homepage and four interior pages, `http://`, `http://www.` and `https://www.` all 301 to
+   `https://vermontinsuranceappraiser.com/<page>/`, and `/<page>/index.php` 301s to `/<page>/`. All 51 sitemap URLs return 200
+   with no `X-Robots-Tag`; our own `robots.txt` is served; the GSC file returns 200 (53 bytes, exact) with no `X-Robots-Tag`.
+3. ~~SMTP~~: `api/_private/config.php` uploaded (local copy deleted); it and the log return 404 with 0 bytes; a TEST submission
+   was logged with `"via":"smtp"`.
+4. ~~GTM~~: `GTM-KLF45QVX` added, `validate.py` OK, redeployed, cache cleared.
+5. Owner to do: click **Verify** in Search Console for the URL-prefix property `https://vermontinsuranceappraiser.com/`, then submit
+   `https://vermontinsuranceappraiser.com/sitemap.xml`. Keep `googlecccfbf2f7e9e5ae4.html` on the server permanently.
