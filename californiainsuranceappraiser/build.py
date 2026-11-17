@@ -33,8 +33,14 @@ EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
 VER = "20261116a"
 FAV = "1"
-# Google Tag Manager: leave empty until a container ID is provided (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+# Google Tag Manager: container ID, and the head snippet exactly as provided by the site owner.
+GTM_ID = "GTM-KRLKWZKJ"
+GTM_HEAD = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KRLKWZKJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 # Google Search Console verification file: written verbatim at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
 GSC_BODY = "google-site-verification: googlecccfbf2f7e9e5ae4.html"
@@ -236,11 +242,7 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n"
-            "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
-            "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_HEAD + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():

@@ -8,13 +8,13 @@ Georgia template; content, URL slugs and design are new.
 | | |
 | --- | --- |
 | Hostinger website UID | `fsNH7cfZ4` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain (attached at creation) | `californiainsuranceappraiser.com` |
+| Domain (attached at creation) | `californiainsuranceappraiser.com` — live; nameservers pointed Nov 17, 2026; SSL covers the apex and `www.` (reissued Nov 17, 2026) |
 | Preview URL | https://lawngreen-clam-940848.hostingersite.com (Hostinger serves its own Googlebot-blocking robots.txt here; every page also sends `X-Robots-Tag: noindex, nofollow` off-domain) |
 | Nameservers to set at the registrar | `pixel.dns-parking.com`, `byte.dns-parking.com` |
 | Server | `us-phx-h5g-node3.hstgr.io`, IPv4 72.60.128.114 |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@californiainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | not set (`GTM_ID = ""` in `build.py`) |
+| Email / form inbox | info@californiainsuranceappraiser.com — form delivers over authenticated SMTP (verified with a labeled test submission, log shows `"via":"smtp"`) |
+| Google Tag Manager | `GTM-KRLKWZKJ` — head snippet exactly as provided (`GTM_HEAD` in `build.py`) + `<noscript>` iframe after `<body>` |
 
 ## Layout
 
@@ -202,10 +202,12 @@ Then: confirm the config URL returns 404 with 0 bytes, send one submission label
 
 ## Going live checklist
 
-1. Point the domain's nameservers to `pixel.dns-parking.com` / `byte.dns-parking.com`.
-2. Confirm SSL covers both `californiainsuranceappraiser.com` and `www.` (`agency-hosting_websites_get` → `ssl_cert.names`);
-   reissue with `agency-hosting_ssl_reinstall-website` if www is missing.
-3. Check www/http → https 301s, `/page/index.php` → `/page/` 301s and no `X-Robots-Tag` on the real domain; clear the cache again if a
-   www URL returns a cached 200 (`x-hcdn-cache-status: HIT`).
-4. Create the mailbox and wire SMTP (above); add GTM if provided (`GTM_ID`).
+1. ~~Point the nameservers~~ — done.
+2. ~~SSL on apex and `www.`~~ — the first certificate covered only the apex; reissued with `agency-hosting_ssl_reinstall-website`
+   on Nov 17, 2026 and `ssl_cert.names` now lists both.
+3. ~~Canonical-host checks on the live domain~~ — `http://`, `http://www.` → 301 to `https://californiainsuranceappraiser.com/<page>/`,
+   `/<page>/index.php` → 301 to `/<page>/`, all 51 sitemap URLs 200 with no `X-Robots-Tag`, our robots.txt served, Search Console file
+   200 with exact bytes. If a www URL ever returns a cached 200 (`x-hcdn-cache-status: HIT`), clear the cache again.
+4. ~~Mailbox + SMTP and GTM~~ — done.
 5. In Search Console, verify the URL-prefix property `https://californiainsuranceappraiser.com/`, then submit `/sitemap.xml`.
+   Keep `googlecccfbf2f7e9e5ae4.html` on the server permanently.
