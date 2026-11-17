@@ -10,11 +10,11 @@
   function camCard(c, why) {
     var buy = c.ax === 1 ? "Buy on Amazon" : c.ax === 2 ? "Closest match on Amazon" : "See listings on Amazon";
     return '<article class="tres">' + (c.i ? '<img src="' + c.i + '" alt="" loading="lazy">' : '<i class="tres__ph"></i>') +
-      '<div><h3><a href="/products/' + c.s + '">' + esc(c.n) + "</a></h3><p>" + esc(c.sp) + "</p>" + (why ? '<p class="tres__why">' + esc(why) + "</p>" : "") +
+      '<div><h3><a href="/products/' + c.s + '">' + esc(c.n) + "</a></h3><p>" + esc(c.sp) + "</p>" + (c.pr ? '<p class="tres__price">' + c.pr + ' <small>typical</small></p>' : "") + (why ? '<p class="tres__why">' + esc(why) + "</p>" : "") +
       '<div class="tres__btns"><a class="btn btn--sm" href="' + c.a + '" ' + AMZ + ">" + buy + '</a><a class="btn btn--ghost btn--sm" href="/products/' + c.s + '">Buying guide</a></div></div></article>';
   }
   function filmCard(f) {
-    return '<article class="tres tres--film"><i class="tres__film fcard--' + f.br + '"><b>' + f.iso + "</b></i><div><h3>" + esc(f.n) + "</h3><p>" + esc(f.fl) + " · ISO " + f.iso + "</p><p class=\"tres__why\">" + esc(f.d) +
+    return '<article class="tres tres--film"><i class="tres__film fcard--' + f.br + '"><b>' + f.iso + "</b></i><div><h3>" + esc(f.n) + "</h3><p>" + esc(f.fl) + " · ISO " + f.iso + (f.pr ? ' · <b class="tres__price">' + f.pr + "</b>" : "") + "</p><p class=\"tres__why\">" + esc(f.d) +
       '</p><div class="tres__btns"><a class="btn btn--sm" href="' + f.a + '" ' + AMZ + ">Buy on Amazon</a></div></div></article>";
   }
 

@@ -265,7 +265,26 @@ def build_pages(ctx):
 def build_home(ctx):
     write, site_img, img_path, esc, ICON, product_card, amz_link, faq_html, PRODUCTS, rank_of, SITE = (ctx[k] for k in
         ("write", "site_img", "img_path", "esc", "ICON", "product_card", "amz_link", "faq_html", "PRODUCTS", "rank_of", "SITE"))
-    best = [p for p in sorted(PRODUCTS, key=rank_of) if img_path(p["slug"]) and p["cat"] in ("ps", "slr", "instant", "mf", "movie")][:8]
+    import tools as TL, prices as PR
+    ranked = [p for p in sorted(PRODUCTS, key=rank_of) if img_path(p["slug"])]
+    best = [p for p in ranked if p["cat"] in ("ps", "slr", "instant", "mf", "movie")][:12]
+    used = {p["slug"] for p in best}
+    def pick(cond, n):
+        out = [p for p in ranked if cond(p) and p["slug"] not in used][:n]
+        used.update(p["slug"] for p in out)
+        return out
+    rails = [("Pocket 35mm", "Point &amp; shoot <em>picks</em>", "/collections/point-shoot-cameras", "All point &amp; shoots", pick(lambda p: p["cat"] == "ps", 8)),
+             ("Learn properly", "35mm <em>SLRs</em>", "/collections/slr-cameras", "All SLR cameras", pick(lambda p: p["cat"] == "slr", 8)),
+             ("Instant joy", "Polaroid &amp; <em>instant</em>", "/collections/polaroid-cameras", "All instant cameras", pick(lambda p: p["cat"] == "instant", 4)),
+             ("Easy on the wallet", "Great cameras <em>under $75</em>", "/collections/point-shoot-cameras", "Shop more", pick(lambda p: p["cat"] in ("ps", "slr", "pocket") and (PR.price_range(p) or (999, 999))[1] <= 75, 8)),
+             ("Bigger negatives", "Medium <em>format</em>", "/collections/medium-format-cameras", "All medium format", pick(lambda p: p["cat"] == "mf", 4))]
+    rails_html = "".join(f'''<section class="section" style="padding-top:0"><div class="wrap">
+<div class="head-row reveal"><div><div class="eyebrow">{eb}</div><h2>{h}</h2></div><a class="btn btn--ghost btn--sm" href="{u}">{ut}</a></div>
+<div class="grid">{"".join(product_card(p, i) for i, p in enumerate(items))}</div></div></section>''' for eb, h, u, ut, items in rails if items)
+    film_picks = [f for f in TL.FILM_SHOP if f[0] in ("Kodak Gold 200", "Kodak Portra 400", "Ilford HP5 Plus 400", "CineStill 800T", "Polaroid 600 Color", "Instax Wide (twin pack)", "Kodak Portra 400 (120)", "Kodak Vision3 200T Super 8")]
+    film_html = f'''<section class="section" style="padding-top:0"><div class="wrap">
+<div class="head-row reveal"><div><div class="eyebrow">Load up</div><h2>Fresh <em>film</em></h2></div><a class="btn btn--ghost btn--sm" href="/collections/film">All film &amp; batteries</a></div>
+<div class="fgrid">{"".join(TL.film_card(f, amz_link, esc) for f in film_picks)}</div></div></section>'''
     strip_imgs = [img_path(p["slug"]) for p in sorted(PRODUCTS, key=rank_of) if img_path(p["slug"])][:16]
     strip = "".join(f'<img src="{u}" alt="" loading="lazy" width="255" height="170">' for u in strip_imgs * 2)
     tiles = [("point-shoot-cameras", "Point &amp; Shoot", "point-shoot", "Pocket 35mm"), ("slr-cameras", "SLR Cameras", "slr", "Learn properly"),
@@ -300,6 +319,8 @@ def build_home(ctx):
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="head-row reveal"><div><div class="eyebrow">Most loved</div><h2>The cameras people <em>search for</em></h2></div><a class="btn btn--ghost btn--sm" href="/collections/all-film-cameras">All film cameras</a></div>
 <div class="grid">{"".join(product_card(p, i) for i, p in enumerate(best))}</div></div></section>
+{rails_html}
+{film_html}
 <div class="stocks"><div class="stocks__track">{stock_html}</div></div>
 <section class="section"><div class="wrap split">
 <figure class="split__media reveal"><img src="{site_img('darkroom')}" alt="Film being developed in a darkroom" loading="lazy"><figcaption>Fig 1.1 — The lab</figcaption></figure>

@@ -3,7 +3,7 @@
 All tools run client-side (src/tools.js) on data written to /assets/tools-data.json.
 """
 import json, os, re, html
-import catalog, content as C
+import catalog, content as C, prices as PR
 
 # ---------------------------------------------------------------- film shop data
 # (name, amazon query, format, iso, kind, looks, light, blurb, brand colour)
@@ -81,10 +81,11 @@ def build_data(ctx):
         a = (f"https://www.amazon.com/dp/{build.SLUG_ASIN[slug]['asin']}?tag={C.AMZ_TAG}" if exact else
              f"https://www.amazon.com/dp/{sim['asin']}?tag={C.AMZ_TAG}" if sim else build.amz(build.amz_query(p)))
         bat = C.BATTERIES.get(slug)
-        cams.append(dict(s=slug, n=p["name"], c=p["cat"], sp=p["spec"], y=p["year"], i=ctx["img_path"](slug) or "", r=i, a=a,
+        _pr = PR.price_range(p)
+        cams.append(dict(pr=PR.fmt(_pr) if _pr else "", s=slug, n=p["name"], c=p["cat"], sp=p["spec"], y=p["year"], i=ctx["img_path"](slug) or "", r=i, a=a,
                          ax=1 if exact else (2 if sim else 0), t=camera_traits(p),
                          b=("none" if bat == "none" else C.BATTERY_KIT[bat][0] if bat else ""), ba=(build.amz(C.BATTERY_KIT[bat][1]) if bat and bat != "none" else "")))
-    films = [dict(n=n, f=f, fl=FORMAT_LABEL[f], iso=iso, k=k, lk=lk, li=li, d=d, br=br, a=build.amz(q)) for n, q, f, iso, k, lk, li, d, br in FILM_SHOP]
+    films = [dict(n=n, f=f, fl=FORMAT_LABEL[f], iso=iso, k=k, lk=lk, li=li, d=d, br=br, a=build.amz(q), pr=PR.fmt(PR.FILM_PRICES[n]) if n in PR.FILM_PRICES else "") for n, q, f, iso, k, lk, li, d, br in FILM_SHOP]
     bats = [dict(n=n, d=d, a=build.amz(q)) for n, q, d in BATTERY_SHOP]
     out = os.path.join(build.PUB, "assets", "tools-data.json")
     json.dump(dict(cams=cams, films=films, bats=bats), open(out, "w"), separators=(",", ":"))
@@ -94,6 +95,7 @@ def film_card(f, amz_link, esc):
     return (f'<article class="fcard fcard--{br} reveal"><div class="fcard__box"><span class="fcard__iso">{iso}</span><span class="fcard__fmt">{esc(FORMAT_LABEL[fmt])}</span>'
             f'<span class="fcard__name">{esc(n)}</span></div><div class="fcard__body"><p>{esc(blurb)}</p>'
             f'<div class="fcard__tags">' + "".join(f"<span>{esc(t)}</span>" for t in ([("B&W" if kind == "bw" else "Colour")] + looks[:2])) + "</div>"
+            + (f'<div class="fcard__price">{PR.fmt(PR.FILM_PRICES[n])}<small>typical price</small></div>' if n in PR.FILM_PRICES else "")
             + amz_link("Buy on Amazon →", q, "btn btn--sm") + "</div></article>")
 
 def build_film_page(ctx):
@@ -104,7 +106,7 @@ def build_film_page(ctx):
         items = [f for f in FILM_SHOP if f[2] == key or f[2].startswith(key + "-")]
         secs += f'<section class="fshelf" id="{key}"><div class="head-row"><h2>{title}</h2></div><div class="fgrid">' + "".join(film_card(f, amz_link, esc) for f in items) + "</div></section>"
     bats = "".join(f'<article class="fcard fcard--battery reveal"><div class="fcard__box"><span class="fcard__fmt">Battery</span><span class="fcard__name">{esc(n)}</span></div>'
-                   f'<div class="fcard__body"><p>{esc(d)}</p>{amz_link("Buy on Amazon →", q, "btn btn--sm")}</div></article>' for n, q, d in BATTERY_SHOP)
+                   f'<div class="fcard__body"><p>{esc(d)}</p>' + (f'<div class="fcard__price">{PR.fmt(PR.FILM_PRICES[n])}<small>typical price</small></div>' if n in PR.FILM_PRICES else "") + f'{amz_link("Buy on Amazon →", q, "btn btn--sm")}</div></article>' for n, q, d in BATTERY_SHOP)
     secs += f'<section class="fshelf" id="batteries"><div class="head-row"><h2>Camera batteries</h2><a class="btn btn--ghost btn--sm" href="/tools/battery-finder">Which battery does my camera take?</a></div><div class="fgrid">{bats}</div></section>'
     jump = "".join(f'<a class="chip" href="#{k}">{t}</a>' for t, k in groups + [("Batteries", "batteries")])
     cr_h, cr_ld = crumbs([("/collections/all", "Shop"), (None, "Film &amp; Batteries")])

@@ -123,7 +123,7 @@
     chips.forEach(function (ch) { ch.addEventListener("click", function () { brand = ch.dataset.brand; chips.forEach(function (x) { x.classList.toggle("is-on", x === ch); }); apply(); }); });
     if (sort) sort.addEventListener("change", function () { var v = sort.value;
       cards.sort(function (a, b) { if (v === "az") return a.dataset.name.localeCompare(b.dataset.name); if (v === "za") return b.dataset.name.localeCompare(a.dataset.name);
-        if (v === "old") return (+a.dataset.year || 9999) - (+b.dataset.year || 9999); if (v === "new") return (+b.dataset.year || 0) - (+a.dataset.year || 0); return (+a.dataset.rank) - (+b.dataset.rank); });
+        if (v === "lo") return (+a.dataset.price) - (+b.dataset.price); if (v === "hi") return ((+b.dataset.price === 99999 ? -1 : +b.dataset.price) - (+a.dataset.price === 99999 ? -1 : +a.dataset.price)); if (v === "old") return (+a.dataset.year || 9999) - (+b.dataset.year || 9999); if (v === "new") return (+b.dataset.year || 0) - (+a.dataset.year || 0); return (+a.dataset.rank) - (+b.dataset.rank); });
       cards.forEach(function (c) { grid.appendChild(c); }); });
     apply();
   }

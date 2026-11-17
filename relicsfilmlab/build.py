@@ -9,7 +9,7 @@ at its exact old Shopify URL (no trailing slash). See README.md.
 import hashlib, html, json, os, re, shutil, urllib.parse
 from datetime import date
 import sys
-import catalog, content as C, pages as PG, guides as GD, tools as TL
+import catalog, content as C, pages as PG, guides as GD, tools as TL, prices as PR
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(ROOT, "public")
@@ -161,6 +161,8 @@ def header(active=""):
 <ul class="nav" id="nav">
 <li class="nav__mega"><button aria-haspopup="true">Shop all ▾</button><div class="nav__drop mega">{mega}</div></li>
 {items}
+<li class="nav__m nav__m--all"><a href="/collections/all">Shop all →</a></li>
+<li class="nav__more"><a href="/collections/all-film-cameras">All cameras</a><a href="/collections/prints">Prints</a><a href="/collections/books">Books</a><a href="/blogs/guides">Guides</a></li>
 </ul>
 <div class="hdr__tools">
 <button class="icon-btn js-search" aria-label="Search the shop">{ICON["search"]}</button>
@@ -270,11 +272,13 @@ def product_card(p, i=0):
     alt = p["name"] + (" — representative photo" if kind == "representative" else "") if kind != "illustrative" else ""
     media = (f'<img src="{im}" alt="{esc(alt)}" loading="lazy" width="500" height="500">' if im
              else f'<div class="ph">{esc(p["name"])}</div>')
-    return f"""<article class="card reveal" data-brand="{esc(b[0] if b else 'Other')}" data-name="{esc(p['name'])}" data-year="{esc(re.sub(r'[^0-9]', '', p['year'])[:4])}" data-rank="{i}">
+    pr = PR.price_range(p)
+    price_html = f'<span class="card__price">{PR.fmt(pr)}<small>typical price</small></span>' if pr else '<span class="card__price card__price--na">See guide</span>'
+    return f"""<article class="card reveal" data-brand="{esc(b[0] if b else 'Other')}" data-name="{esc(p['name'])}" data-year="{esc(re.sub(r'[^0-9]', '', p['year'])[:4])}" data-rank="{i}" data-price="{pr[0] if pr else 99999}">
 <div class="card__img">{media}<span class="card__tag">{label}</span></div>
 <div class="card__body"><h3 class="card__title"><a href="/products/{p['slug']}">{esc(p['name'])}</a></h3>
 <div class="card__spec">{esc(p['spec'])}</div>
-<div class="card__foot"><span class="card__cta">View &amp; shop →</span><button class="heart" data-slug="{p['slug']}" aria-label="Save {esc(p['name'])} to wishlist" aria-pressed="false">{ICON['heart']}</button></div></div></article>"""
+<div class="card__foot">{price_html}<button class="heart" data-slug="{p['slug']}" aria-label="Save {esc(p['name'])} to wishlist" aria-pressed="false">{ICON['heart']}</button></div></div></article>"""
 
 def grid(items, filters=True):
     items = sorted(items, key=rank_of)
@@ -282,7 +286,7 @@ def grid(items, filters=True):
     if filters and len(items) > 6:
         brands = sorted({(brand_of(p) or ("Other",))[0] for p in items})
         chips = '<button class="chip is-on" data-brand="all">All</button>' + "".join(f'<button class="chip" data-brand="{esc(b)}">{esc(b)}</button>' for b in brands if len(brands) > 1)
-        tb = f"""<div class="toolbar">{chips}<select id="sort" aria-label="Sort"><option value="pop">Most popular</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="old">Oldest first</option><option value="new">Newest first</option></select><span class="count"></span></div>"""
+        tb = f"""<div class="toolbar">{chips}<select id="sort" aria-label="Sort"><option value="pop">Most popular</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="old">Oldest first</option><option value="new">Newest first</option></select><span class="count"></span></div>"""
     return tb + '<div class="grid" id="pgrid">' + "".join(product_card(p, i) for i, p in enumerate(items)) + "</div>"
 
 # ---------------------------------------------------------------- product pages
@@ -414,8 +418,11 @@ def product_page(p):
                    f'<p class="buybox__alt">Prefer the exact model? {amz_link("Search Amazon for the " + esc(name) + " →", _bq, "")}</p>')
     else:
         buy_row = f'<div class="buybox__row">{amz_link(ICON["cart"] + " " + btn_label, _bq, "btn btn--block")}</div>'
+    _pr = PR.price_range(p)
+    price_box = (f'<div class="buybox__price"><span>Typical price</span><b>{PR.fmt(_pr)}</b>'
+                 f'<small>{"Typical new price" if slug.startswith("fujifilm-instax") or cat in ("book", "print", "carprint", "tote", "bag", "strap", "collect", "film") else "Typical used price for a working example"} — prices change, so check Amazon for today\'s price.</small></div>') if _pr else ""
     buy = f"""<div class="buybox">
-<div class="mono muted">Available from independent sellers on Amazon</div>
+{price_box}<div class="mono muted">Available from independent sellers on Amazon</div>
 {buy_row}
 <div class="buybox__row"><button class="heart" data-slug="{slug}" aria-pressed="false">{ICON['heart']} Save to wishlist</button></div>
 <p class="buybox__note">We link to live Amazon listings so you always see current prices, condition and seller ratings. Relics earns a small commission at no extra cost to you.</p>
