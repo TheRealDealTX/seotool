@@ -380,8 +380,15 @@ def product_page(p):
     if sim:
         sim_url = f"https://www.amazon.com/dp/{sim['asin']}?tag={C.AMZ_TAG}"
         rel_txt = {"series": "from the same series", "brand": f"from {esc(brand) or 'the same maker'}", "comparable": "a comparable model"}.get(sim.get("level"), "a similar model")
-        buy_row = (f'<div class="buybox__sim"><b>This exact model isn\'t on Amazon right now.</b> Closest match ({rel_txt}): {esc(sim["note"])}.</div>'
-                   f'<div class="buybox__row"><a class="btn btn--block" href="{esc(sim_url)}" target="_blank" rel="sponsored nofollow noopener" data-amz="{esc(sim["asin"])}">{ICON["cart"]} Shop the closest match on Amazon</a></div>'
+        if sim.get("level") == "film":
+            sim_msg = (f'<b>No Super 8 cameras are listed on Amazon right now.</b> Already have a camera, or found one elsewhere? '
+                       f'This links to the film it shoots: {esc(sim["note"])}.')
+            sim_btn = "Shop Super 8 film on Amazon"
+        else:
+            sim_msg = f'<b>This exact model isn\'t on Amazon right now.</b> Closest match ({rel_txt}): {esc(sim["note"])}.'
+            sim_btn = "Shop the closest match on Amazon"
+        buy_row = (f'<div class="buybox__sim">{sim_msg}</div>'
+                   f'<div class="buybox__row"><a class="btn btn--block" href="{esc(sim_url)}" target="_blank" rel="sponsored nofollow noopener" data-amz="{esc(sim["asin"])}">{ICON["cart"]} {sim_btn}</a></div>'
                    f'<p class="buybox__alt">Prefer the exact model? {amz_link("Search Amazon for the " + esc(name) + " →", _bq, "")}</p>')
     else:
         buy_row = f'<div class="buybox__row">{amz_link(ICON["cart"] + " " + btn_label, _bq, "btn btn--block")}</div>'
@@ -447,6 +454,7 @@ def product_page(p):
         faqs.append(("Where can I get my film developed?", 'Any lab that processes the format will do — see our guide to <a href="/order-now">where to develop film</a>, or learn to <a href="/blogs/guides/how-to-develop-film-at-home">develop film at home</a>.'))
         _sim = SIMILAR.get(slug) if slug not in SLUG_ASIN else None
         faqs.append((f"Where can I buy a {name}?",
+                     (f'Super 8 cameras aren\'t listed on Amazon right now, so our button links to the film it shoots ({esc(_sim["note"])}). The link under it searches Amazon for the {esc(name)} itself — sellers list vintage Super 8 cameras from time to time — and specialist used-camera shops and auction sites usually have copies.') if _sim and _sim.get("level") == "film" else
                      (f'The {esc(name)} isn\'t listed on Amazon right now, so our button links to the closest match we found — {esc(_sim["note"])} — and the link under it searches Amazon for the {esc(name)} itself, as independent sellers list copies from time to time.') if _sim else
                      f'Vintage cameras are sold by independent sellers on Amazon. Use the “Buy on Amazon” button above to see the current listing, price and condition for the {esc(name)}.'))
     faq_h, faq_ld = faq_html(faqs) if faqs else ("", None)
