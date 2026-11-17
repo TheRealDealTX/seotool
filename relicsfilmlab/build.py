@@ -8,7 +8,8 @@ at its exact old Shopify URL (no trailing slash). See README.md.
 """
 import hashlib, html, json, os, re, shutil, urllib.parse
 from datetime import date
-import catalog, content as C, pages as PG, guides as GD
+import sys
+import catalog, content as C, pages as PG, guides as GD, tools as TL
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(ROOT, "public")
@@ -127,22 +128,39 @@ def rank_of(p):
     return -KW.get("/products/" + p["slug"], {}).get("traffic", 0)
 
 # ---------------------------------------------------------------- layout
-NAV_SHOP = [("point-shoot-cameras", "Point &amp; Shoot", "Pocket 35mm compacts"), ("slr-cameras", "SLR Cameras", "35mm, manual &amp; auto"),
-            ("polaroid-cameras", "Polaroid &amp; Instant", "Land, 600 &amp; Instax"), ("medium-format-cameras", "Medium Format", "120 film TLRs &amp; SLRs"),
-            ("super-8-collections", "Super 8 Cameras", "Home-movie magic"), ("all-film-cameras", "All Film Cameras", "Every camera we cover"),
-            ("accessories", "Lenses &amp; Accessories", "Bags, straps, glass"), ("prints", "Ready-to-Hang Prints", "Wall art &amp; totes"),
-            ("books", "Photo Books", "Technique &amp; monographs"), ("gift-guide", "Gift Guide", "For the film-obsessed")]
+# Top-level shop navigation (shopping first; film-lab/repair/guide pages live in the footer)
+NAV_MAIN = [("/collections/point-shoot-cameras", "Point &amp; Shoot", "ps"), ("/collections/slr-cameras", "SLR", "slr"),
+            ("/collections/polaroid-cameras", "Instant", "instant"), ("/collections/medium-format-cameras", "Medium Format", "mf"),
+            ("/collections/super-8-collections", "Super 8", "super8"), ("/collections/film", "Film", "film"),
+            ("/collections/accessories", "Accessories", "acc"), ("/collections/gift-guide", "Gifts", "gifts"), ("/tools", "Tools", "tools")]
+NAV_MEGA = [
+    ("Cameras", [("/collections/all-film-cameras", "All Film Cameras", "Every camera we cover", False),
+                 ("/collections/point-shoot-cameras", "Point &amp; Shoot", "Pocket 35mm compacts", True),
+                 ("/collections/slr-cameras", "SLR Cameras", "35mm, manual &amp; auto", True),
+                 ("/collections/polaroid-cameras", "Polaroid &amp; Instant", "Land, 600 &amp; Instax", True),
+                 ("/collections/medium-format-cameras", "Medium Format", "120 film TLRs &amp; SLRs", True),
+                 ("/collections/super-8-collections", "Super 8 Cameras", "Home-movie magic", True)]),
+    ("Film &amp; Gear", [("/collections/film", "Film &amp; Batteries", "35mm, 120, instant, Super 8", True),
+                         ("/collections/accessories", "Lenses &amp; Accessories", "Bags, straps, glass", True),
+                         ("/collections/film-lab", "Developing &amp; Scanning", "Home lab kits &amp; scanners", False),
+                         ("/tools", "Film Tools", "Calculators &amp; camera finder", True)]),
+    ("Gifts &amp; Wall Art", [("/collections/gift-guide", "Gift Guide", "For the film-obsessed", True),
+                              ("/collections/prints", "Ready-to-Hang Prints", "Wall art &amp; totes", False),
+                              ("/collections/car-collection", "Car Prints", "Porsche, rally &amp; more", False),
+                              ("/collections/books", "Photo Books", "Technique &amp; monographs", False),
+                              ("/collections/all", "Shop Everything", "The full catalogue", False)]),
+]
 
 def header(active=""):
-    drop = "".join(f'<a href="/collections/{s}">{t}<small>{d}</small></a>' for s, t, d in NAV_SHOP)
-    def a(href, label, key):
-        return f'<li><a href="{href}"{" class=is-active" if active == key else ""}>{label}</a></li>'
-    return f"""<div class="ticker" aria-hidden="true"><div class="ticker__track">{"".join(f"<span>{t}</span>" for t in ["Curated film cameras", "Real buying advice", "Shop securely on Amazon", "Film lab know-how since day one", "Long Beach born", "New guides every month"] * 4)}</div></div>
+    mega = "".join(f'<div class="mega__col"><div class="mega__h">{h}</div>' + "".join(
+        f'<a href="{u}"{" class=dup" if dup else ""}>{t}<small>{d}</small></a>' for u, t, d, dup in links) + "</div>" for h, links in NAV_MEGA)
+    items = "".join(f'<li><a href="{u}"{" class=is-active" if active == k else ""}>{t}</a></li>' for u, t, k in NAV_MAIN)
+    return f"""<div class="ticker" aria-hidden="true"><div class="ticker__track">{"".join(f"<span>{t}</span>" for t in ["Curated film cameras", "Real buying advice", "Shop securely on Amazon", "Free film tools", "Long Beach born", "New picks every month"] * 4)}</div></div>
 <header class="hdr"><div class="wrap hdr__in">
 <a class="logo" href="/" aria-label="Relics Film Lab home"><span class="logo__mark" aria-hidden="true"></span>Relics<small>FILM LAB</small></a>
 <ul class="nav" id="nav">
-<li><button aria-haspopup="true">Shop ▾</button><div class="nav__drop">{drop}</div></li>
-{a("/collections/film-lab", "Film Lab", "lab")}{a("/camera-repairs", "Repairs", "repair")}{a("/blogs/guides", "Guides", "guides")}{a("/pages/the-relics-standard", "Why Relics?", "why")}
+<li class="nav__mega"><button aria-haspopup="true">Shop all ▾</button><div class="nav__drop mega">{mega}</div></li>
+{items}
 </ul>
 <div class="hdr__tools">
 <button class="icon-btn js-search" aria-label="Search the shop">{ICON["search"]}</button>
@@ -151,11 +169,15 @@ def header(active=""):
 </div></div></header>"""
 
 def footer():
-    cols = [("Shop", [("/collections/point-shoot-cameras", "Point &amp; Shoots"), ("/collections/slr-cameras", "SLR Cameras"), ("/collections/polaroid-cameras", "Polaroid Cameras"),
-                       ("/collections/medium-format-cameras", "Medium Format"), ("/collections/super-8-collections", "Super 8 Cameras"), ("/collections/all", "Shop All")]),
-            ("Film Lab", [("/film-services", "Film Services"), ("/order-now", "Where to Develop Film"), ("/products/develop-only", "Develop Only"), ("/products/scan-only", "Scan Only"),
-                          ("/camera-repairs", "Camera Repairs"), ("/pages/basic-camera-cleaning", "Camera Cleaning")]),
-            ("Relics", [("/pages/the-relics-standard", "The Relics Standard"), ("/pages/about-us", "About Us"), ("/blogs/guides", "Guides"), ("/pages/faqs", "FAQs"),
+    cols = [("Shop", [("/collections/point-shoot-cameras", "Point &amp; Shoots"), ("/collections/slr-cameras", "SLR Cameras"), ("/collections/polaroid-cameras", "Polaroid &amp; Instant"),
+                       ("/collections/medium-format-cameras", "Medium Format"), ("/collections/super-8-collections", "Super 8 Cameras"), ("/collections/film", "Film &amp; Batteries"),
+                       ("/collections/accessories", "Accessories"), ("/collections/prints", "Prints"), ("/collections/books", "Photo Books"), ("/collections/gift-guide", "Gift Guide"), ("/collections/all", "Shop All")]),
+            ("Tools", [("/tools/camera-finder", "Camera Finder"), ("/tools/exposure-calculator", "Exposure Calculator"), ("/tools/film-stock-finder", "Film Stock Finder"),
+                       ("/tools/battery-finder", "Battery Finder"), ("/tools/cost-per-shot-calculator", "Cost per Shot"), ("/tools/depth-of-field-calculator", "Depth of Field"),
+                       ("/tools/super-8-calculator", "Super 8 Calculator")]),
+            ("Film Lab", [("/collections/film-lab", "The Film Lab"), ("/film-services", "Film Services"), ("/order-now", "Where to Develop Film"), ("/products/develop-only", "Develop Only"),
+                          ("/products/scan-only", "Scan Only"), ("/camera-repairs", "Camera Repairs"), ("/pages/basic-camera-cleaning", "Camera Cleaning"), ("/blogs/guides", "Guides")]),
+            ("Relics", [("/pages/the-relics-standard", "Why Relics?"), ("/pages/about-us", "About Us"), ("/pages/faqs", "FAQs"),
                         ("/pages/contact", "Contact"), ("/pages/store-help", "Store Help")])]
     cols_html = "".join(f'<div><h4>{h}</h4><ul>{"".join(f"<li><a href={u!r}>{t}</a></li>" for u, t in links)}</ul></div>' for h, links in cols)
     return f"""<footer class="ftr"><div class="wrap">
@@ -174,7 +196,7 @@ def footer():
 
 CSS_V = JS_V = "1"
 
-def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=None, robots="index,follow"):
+def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=None, robots="index,follow", scripts=None):
     canonical = SITE + (path if path != "/" else "/")
     full_title = title if "Relics" in title else f"{title} | Relics Film Lab"
     og = SITE + (ogimg or site_img("hero"))
@@ -207,7 +229,7 @@ def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=
 {body}
 </main>
 {footer()}
-<script src="/assets/site.js?v={JS_V}" defer></script>
+<script src="/assets/site.js?v={JS_V}" defer></script>{"".join(f'<script src="{u}?v={JS_V}" defer></script>' for u in (scripts or []))}
 </body></html>
 """
 
@@ -535,7 +557,7 @@ def main():
     if os.path.exists(PDIR):
         shutil.rmtree(PDIR)
     os.makedirs(os.path.join(PUB, "assets"), exist_ok=True)
-    for f in ("site.css", "site.js"):
+    for f in ("site.css", "site.js", "tools.js"):
         src = open(os.path.join(ROOT, "src", f)).read()
         open(os.path.join(PUB, "assets", f), "w").write(src)
     CSS_V = hashlib.md5(open(os.path.join(PUB, "assets", "site.css"), "rb").read()).hexdigest()[:8]
@@ -549,6 +571,9 @@ def main():
         collection_page(slug, c)
     PG.build_pages(ctx)
     GD.build_guides(ctx)
+    ctx["build"] = sys.modules[__name__]
+    TL.build_film_page(ctx)
+    TL.build_tools(ctx)
     PG.build_home(ctx)
     PG.build_sitemap_page(ctx, WRITTEN)
 
@@ -556,6 +581,8 @@ def main():
     idx = [dict(s=p["slug"], n=p["name"], c=catalog.CATEGORIES[p["cat"]][0], u="/products/" + p["slug"], i=img_path(p["slug"]) or "",
                 k=" ".join(k for k, v, pos in kws("/products/" + p["slug"], 4))) for p in sorted(PRODUCTS, key=rank_of)]
     idx += [dict(s="", n=re.sub("<.*?>", "", html.unescape(c["h1"])), c="Collection", u="/collections/" + s, i="") for s, c in C.COLLECTIONS.items()]
+    idx += [dict(s="", n="Film & Batteries", c="Collection", u="/collections/film", i="", k="35mm 120 polaroid instax super 8 film battery")]
+    idx += [dict(s="", n=t, c="Tool", u="/tools/" + s, i="", k=sh) for s, t, d, sh in TL.TOOLS]
     json.dump(idx, open(os.path.join(PUB, "assets", "search.json"), "w"), separators=(",", ":"))
 
     # redirects + router

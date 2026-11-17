@@ -270,7 +270,7 @@ def build_home(ctx):
     strip = "".join(f'<img src="{u}" alt="" loading="lazy" width="255" height="170">' for u in strip_imgs * 2)
     tiles = [("point-shoot-cameras", "Point &amp; Shoot", "point-shoot", "Pocket 35mm"), ("slr-cameras", "SLR Cameras", "slr", "Learn properly"),
              ("polaroid-cameras", "Polaroid", "polaroids", "Instant joy"), ("medium-format-cameras", "Medium Format", "medium-format", "120 film"),
-             ("super-8-collections", "Super 8", "super8", "Home movies"), ("collections/film-lab", "Film Lab", "darkroom", "Develop &amp; scan")]
+             ("super-8-collections", "Super 8", "super8", "Home movies"), ("collections/film", "Film &amp; Batteries", "film-rolls", "35mm · 120 · instant")]
     tiles_html = "".join(f'<a class="tile reveal reveal-d{i % 3}" href="/{s if s.startswith("collections/") else "collections/" + s}"><img src="{site_img(im)}" alt="" loading="lazy"><div><div class="mono">{sub}</div><h3>{t}</h3></div><span class="tile__arrow">{ICON["arrow"]}</span></a>'
                          for i, (s, t, im, sub) in enumerate(tiles))
     stocks = [("Portra 400", "Kodak Portra 400 35mm film"), ("HP5 Plus", "Ilford HP5 Plus 35mm film"), ("Gold 200", "Kodak Gold 200 35mm film"), ("Tri-X 400", "Kodak Tri-X 400 35mm film"),
@@ -289,8 +289,8 @@ def build_home(ctx):
 <div class="wrap hero__in">
 <div class="eyebrow"><span class="rec">Relics Film Lab</span> · Long Beach born</div>
 <h1><span class="line"><span>Film cameras,</span></span><span class="line"><span>chosen by a</span></span><span class="line"><span>real <em>film lab</em>.</span></span></h1>
-<p class="hero__lead">Shop film cameras, film and lab gear curated by the people who developed, scanned and repaired them for years. Honest buying advice on every model — then buy securely on Amazon.</p>
-<div class="hero__cta"><a class="btn" href="/collections/all-film-cameras">Shop film cameras {ICON['arrow']}</a><a class="btn btn--ghost" href="/collections/film-lab">Visit the film lab</a></div>
+<p class="hero__lead">Shop vintage film cameras, fresh film and the gear to go with them — curated by people who developed, scanned and repaired them for years. Honest buying advice on every model, then buy securely on Amazon.</p>
+<div class="hero__cta"><a class="btn" href="/collections/all-film-cameras">Shop film cameras {ICON['arrow']}</a><a class="btn btn--ghost" href="/tools/camera-finder">Find your camera</a></div>
 <div class="hero__meta"><div><b class="counter" data-to="{n_cams}" data-suffix="+">{n_cams}+</b>Film cameras covered</div><div><b>6</b>Film formats</div><div><b class="counter" data-to="{len(PRODUCTS)}">{len(PRODUCTS)}</b>Products &amp; guides</div><div><b>LBC</b>Long Beach, CA</div></div>
 </div></section>
 <div class="strip" aria-hidden="true"><div class="strip__track">{strip}</div></div>
@@ -313,15 +313,24 @@ def build_home(ctx):
 <div class="step reveal reveal-d1"><h3>Shop on Amazon</h3><p>Compare live listings, condition and seller ratings — buy with Amazon's protection.</p></div>
 <div class="step reveal reveal-d2"><h3>Load &amp; shoot</h3><p>Every page lists the film and batteries it needs, linked and ready.</p></div>
 <div class="step reveal reveal-d3"><h3>Develop</h3><p>Send it to a lab or develop at home with our step-by-step guides.</p></div></div></div></section>
+
+<section class="section" style="padding-top:0"><div class="wrap">
+<div class="head-row reveal"><div><div class="eyebrow">Free tools</div><h2>Shop smarter with our <em>film tools</em></h2></div><a class="btn btn--ghost btn--sm" href="/tools">All tools</a></div>
+<div class="toolgrid">
+<a class="toolcard reveal" href="/tools/camera-finder"><span class="toolcard__ico">◎</span><h3>Camera finder</h3><p>Four questions, six cameras that suit you.</p><span class="card__cta">Find my camera →</span></a>
+<a class="toolcard reveal reveal-d1" href="/tools/film-stock-finder"><span class="toolcard__ico">▤</span><h3>Film stock finder</h3><p>The right film for your camera, light and look.</p><span class="card__cta">Pick my film →</span></a>
+<a class="toolcard reveal reveal-d2" href="/tools/battery-finder"><span class="toolcard__ico">⚡</span><h3>Battery finder</h3><p>Which battery does your camera take?</p><span class="card__cta">Look it up →</span></a>
+<a class="toolcard reveal reveal-d3" href="/tools/exposure-calculator"><span class="toolcard__ico">☀</span><h3>Exposure calculator</h3><p>Sunny 16 made easy, for any light.</p><span class="card__cta">Calculate →</span></a>
+</div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap">
+<div class="head-row reveal"><div><div class="eyebrow">Guides</div><h2>Learn from the <em>lab</em></h2></div><a class="btn btn--ghost btn--sm" href="/blogs/guides">All guides</a></div>
+<div class="posts">{posts_html}</div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap prose" style="max-width:860px"><div class="eyebrow">FAQ</div><h2>Questions, <em>answered</em></h2>{fh}</div></section>
 <section class="section" style="padding-top:0"><div class="wrap split split--rev">
 <figure class="split__media reveal"><img src="{site_img('long-beach', 'film-rolls')}" alt="Long Beach, California" loading="lazy"><figcaption>33.77° N / 118.19° W</figcaption></figure>
 <div class="reveal reveal-d1"><div class="eyebrow">Long Beach roots</div><h2>Once the <em>film store</em> in Long Beach. Now everywhere.</h2>
 <p>For years Relics was the camera store and film lab Long Beach photographers relied on — the place to buy a refurbished camera, drop off a roll or learn to develop. The storefront and drop boxes have closed, but the know-how moved online so film shooters anywhere can use it.</p>
 <p>Looking for a film camera shop near Los Angeles? Start with our <a href="/collections/slr-cameras">SLR</a> and <a href="/collections/point-shoot-cameras">point-and-shoot</a> collections, or read <a href="/order-now">where to develop film</a>.</p></div></div></section>
-<section class="section" style="padding-top:0"><div class="wrap">
-<div class="head-row reveal"><div><div class="eyebrow">Guides</div><h2>Learn from the <em>lab</em></h2></div><a class="btn btn--ghost btn--sm" href="/blogs/guides">All guides</a></div>
-<div class="posts">{posts_html}</div></div></section>
-<section class="section" style="padding-top:0"><div class="wrap prose" style="max-width:860px"><div class="eyebrow">FAQ</div><h2>Questions, <em>answered</em></h2>{fh}</div></section>
 <section class="section" style="padding-top:0"><div class="wrap"><div class="band reveal"><div class="eyebrow">The Relics list</div><h2>New guides, film deals &amp; camera picks — <em>monthly</em>.</h2>
 <form class="newsletter js-news"><input type="email" required placeholder="you@example.com" aria-label="Email address"><button class="btn" type="submit">Join the list</button></form></div></div></section>"""
     write("/", "Relics Film Lab — Shop Film Cameras, Film & Lab Gear", "Relics Film Lab: the Long Beach film lab turned online film photography shop. Shop film cameras, 35mm & 120 film and lab gear with honest buying guides.",

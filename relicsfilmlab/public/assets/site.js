@@ -21,7 +21,7 @@
     nav.classList.toggle("is-open", open); burger.classList.toggle("is-open", open);
     burger.setAttribute("aria-expanded", open); burger.setAttribute("aria-label", open ? "Close menu" : "Menu");
     burger.innerHTML = open ? ICO_X : ICO_MENU;
-    d.body.style.overflow = open ? "hidden" : "";
+    d.documentElement.style.overflow = open ? "hidden" : "";
   }
   if (burger && nav) {
     burger.addEventListener("click", function () { setNav(!nav.classList.contains("is-open")); });
@@ -102,8 +102,8 @@
     wlPage.innerHTML = items.length ? items.map(function (p) { return '<div class="search__res">' + card(p) + "</div>"; }).join("") : '<p class="muted">Your wishlist is empty. Tap the heart on any camera to save it here.</p>'; });
 
   var ov = $(".search"), inp = ov && $("input", ov), res = ov && $(".search__res", ov);
-  function openSearch() { if (!ov) return; ov.classList.add("is-open"); d.body.style.overflow = "hidden"; setTimeout(function () { inp.focus(); }, 30); loadIdx(function () { }); }
-  function closeSearch() { if (!ov) return; ov.classList.remove("is-open"); d.body.style.overflow = ""; }
+  function openSearch() { if (!ov) return; ov.classList.add("is-open"); d.documentElement.style.overflow = "hidden"; setTimeout(function () { inp.focus(); }, 30); loadIdx(function () { }); }
+  function closeSearch() { if (!ov) return; ov.classList.remove("is-open"); d.documentElement.style.overflow = ""; }
   $$(".js-search").forEach(function (b) { b.addEventListener("click", openSearch); });
   if (ov) {
     ov.addEventListener("click", function (e) { if (e.target === ov) closeSearch(); });
