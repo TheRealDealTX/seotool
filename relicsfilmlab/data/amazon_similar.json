@@ -1,4 +1,53 @@
 {
+ "28-85mm-lens": {
+  "asin": "B000IVRJDC",
+  "level": "comparable",
+  "note": "Nikon AF Zoom-Nikkor 28-85mm f/3.5-4.5 (Nikon F mount)",
+  "source": "search",
+  "title": "Nikon 28-85/3.5-4.5 AF Zoom-Nikkor Wide Angle to Telephoto Nikon Camera Lens"
+ },
+ "28mm-lens": {
+  "asin": "B00005LE71",
+  "level": "comparable",
+  "note": "Nikon AF 28mm f/2.8D (Nikon F mount, film-era)",
+  "source": "search",
+  "title": "Nikon 1922 AF FX NIKKOR 28mm f/2.8D Lens with for DSLR Cameras, Black"
+ },
+ "35mm-film-canister-c": {
+  "asin": "B0813RP7Q8",
+  "level": "comparable",
+  "note": "Empty 35mm film canisters (20-pack, black)",
+  "source": "search",
+  "title": "Golden Pearl 35mm Caliber Plastic Film Canisters -20pcs\uff08Black \uff09"
+ },
+ "agfa-optima-500": {
+  "asin": "B08JM6MK9V",
+  "level": "brand",
+  "note": "AgfaPhoto reusable 35mm compact camera",
+  "source": "search",
+  "title": "Agfa AG603002 35mm analge Photo Camera Brown"
+ },
+ "agfa-silette-sl": {
+  "asin": "B08JM6MK9V",
+  "level": "brand",
+  "note": "AgfaPhoto reusable 35mm viewfinder camera",
+  "source": "search",
+  "title": "Agfa AG603002 35mm analge Photo Camera Brown"
+ },
+ "autumn-vintage-strap": {
+  "asin": "B07GBVDXXZ",
+  "level": "comparable",
+  "note": "MegaGear Sierra vintage brown leather camera strap",
+  "source": "search",
+  "title": "MegaGear Sierra Genuine Full-Grain Leather Camera Strap \u2014 Vintage Shoulder & Neck Strap for Canon, Sony, Fuji, Leica, Nikon, Olympus DSLR & Mirrorless \u2014 39-47 in Adjustable, Hand-Stitched, Brown"
+ },
+ "black-and-white-film-developing-workshop": {
+  "asin": "B07VTSBJZM",
+  "level": "comparable",
+  "note": "Home darkroom film developing kit (35mm/120, B&W)",
+  "source": "search",
+  "title": "Darkroom Developing Equipment Kit Film Processing 120 135 35mm Color B&W Film"
+ },
  "canon-a35-f-40mm-lens": {
   "asin": "B0CNJBVTW2",
   "level": "brand",
@@ -41,12 +90,26 @@
   "source": "sibling:canon-canonet-ql-17-giii-1",
   "title": "Canon Canonet QL17 GIII 35MM Rangefinder Film camera with Auto shutter and speed settings as well as manual mode. (Renewed)"
  },
+ "canon-elph-sport": {
+  "asin": "B00000JDH2",
+  "level": "series",
+  "note": "Canon Elph Jr. APS compact",
+  "source": "search",
+  "title": "Elph Jr. APS Camera"
+ },
  "canon-eos-rebel": {
   "asin": "B0BTMRMMQB",
   "level": "brand",
   "note": "Canon EOS Rebel XS",
   "source": "sibling:canon-eos-rebel-xs",
   "title": "Black Canon EOS REBEL X S 35mm FILM SLR Camera Body & Lens (Renewed)"
+ },
+ "canon-snappy-20": {
+  "asin": "B0CYHGXB4S",
+  "level": "series",
+  "note": "Canon Snappy Q 35mm compact",
+  "source": "search",
+  "title": "Snappy Q / Sketchbook 35mm Point And Shoot Film Camera Fully Automatic (Renewed)"
  },
  "canon-snappy-lx": {
   "asin": "B0CNHS29ZR",
@@ -90,6 +153,27 @@
   "source": "sibling:canon-at-1",
   "title": "AT-1 Chrome 35mm SLR Film Camera With Zoom FD mount lens. (Renewed)"
  },
+ "develop-scan-ecn-2-motion-picture-film": {
+  "asin": "B00PIRJV46",
+  "level": "comparable",
+  "note": "Kodak Vision3 50D ECN-2 motion picture film (Super 8)",
+  "source": "search",
+  "title": "Super 8 Color Negative VISION3 50D 7203/50' Cartridge"
+ },
+ "ds-max-hc-2000": {
+  "asin": "B0H3TKXDFQ",
+  "level": "comparable",
+  "note": "Kodak EC35 focus-free 35mm compact",
+  "source": "search",
+  "title": "EC35 35mm Film Camera 35mm, Reusable, Focus-Free, Built-in Flash, Slide Cover, Beginner Friendly (Film & AA Battery are not Included) (Single, Midnight Black)"
+ },
+ "fuji-blimp-inflated": {
+  "asin": "B09S6VY6MQ",
+  "level": "comparable",
+  "note": "Fujifilm Fujicolor 200 35mm film",
+  "source": "search",
+  "title": "Fujicolor 200 Color Negative 35mm Roll Film, 36 Exposures"
+ },
  "fuji-discovery-1000-zoom": {
   "asin": "B00004TWMG",
   "level": "series",
@@ -111,6 +195,181 @@
   "source": "sibling:fuji-discovery",
   "title": "Discovery 290 38-90mm Zoom Date 35mm Camera"
  },
+ "fuji-fujica-st-605": {
+  "asin": "B00KPZ6194",
+  "level": "comparable",
+  "note": "Mamiya/Sekor 1000DTL M42 manual SLR",
+  "source": "search",
+  "title": "Mamiya/Sekor 1000DTL with 55mm Lens"
+ },
+ "fuji-gs645-s": {
+  "asin": "B08N8FYQHL",
+  "level": "comparable",
+  "note": "Mamiya M645J 6x4.5 medium format",
+  "source": "search",
+  "title": "Mamiya M645J Medium Format 645J Camera Body"
+ },
+ "fujica-dl-100": {
+  "asin": "B00004TWMG",
+  "level": "brand",
+  "note": "Fujifilm Discovery 290 35mm compact",
+  "source": "search",
+  "title": "Discovery 290 38-90mm Zoom Date 35mm Camera"
+ },
+ "hasselblad-503cx": {
+  "asin": "B00B0PBIAA",
+  "level": "series",
+  "note": "Hasselblad 500C/M kit (V-system 6x6)",
+  "source": "search",
+  "title": "500 C/M Camera Kit"
+ },
+ "kareem-abdul-jabbar-postup-tote-bag": {
+  "asin": "B0H4X34F6D",
+  "level": "comparable",
+  "note": "Officially licensed NBA player canvas tote",
+  "source": "search",
+  "title": "NBA Player Canvas Tote Bag, 14 x 15 in"
+ },
+ "kareem-abdul-jabbar-tote-bag": {
+  "asin": "B0H4X34F6D",
+  "level": "comparable",
+  "note": "Officially licensed NBA player canvas tote",
+  "source": "search",
+  "title": "NBA Player Canvas Tote Bag, 14 x 15 in"
+ },
+ "keystone-easy-shot-500": {
+  "asin": "B0H3TKXDFQ",
+  "level": "comparable",
+  "note": "Kodak EC35 focus-free 35mm compact",
+  "source": "search",
+  "title": "EC35 35mm Film Camera 35mm, Reusable, Focus-Free, Built-in Flash, Slide Cover, Beginner Friendly (Film & AA Battery are not Included) (Single, Midnight Black)"
+ },
+ "kiev-6c-with-65mm-lens": {
+  "asin": "B00B0PBIAA",
+  "level": "comparable",
+  "note": "Hasselblad 500C/M 6x6 SLR",
+  "source": "search",
+  "title": "Hasselblad 500 C/M Camera Kit"
+ },
+ "kinon-5050": {
+  "asin": "B0CNHYMHLZ",
+  "level": "comparable",
+  "note": "Canon Sure Shot Zoom-S 1990s 35mm compact",
+  "source": "search",
+  "title": "Canon Sure Shot Zoom-S 35mm Point and Shoot Film Camera SAF Canon with Zoom Lens 38-60mm. Built-in Flash and film rewinder as well as counter. (Renewed)"
+ },
+ "kodak-cameo-focus-free": {
+  "asin": "B0H3TKXDFQ",
+  "level": "brand",
+  "note": "Kodak EC35 focus-free 35mm compact",
+  "source": "search",
+  "title": "EC35 35mm Film Camera 35mm, Reusable, Focus-Free, Built-in Flash, Slide Cover, Beginner Friendly (Film & AA Battery are not Included) (Single, Midnight Black)"
+ },
+ "kodak-cameo-motor-ex": {
+  "asin": "B0H3V8S5T1",
+  "level": "brand",
+  "note": "Kodak EC35 focus-free 35mm compact",
+  "source": "search",
+  "title": "EC35 35mm Film Camera 35mm, Reusable, Focus-Free, Built-in Flash, Slide Cover, Beginner Friendly (Film & AA Battery are not Included) (Single, Avocado Green)"
+ },
+ "kodak-cameo-zoom-plus": {
+  "asin": "B0CNJ88HDM",
+  "level": "comparable",
+  "note": "Canon Sure Shot 60 Zoom (1990s 35mm AF zoom compact)",
+  "source": "search",
+  "title": "Canon Sure Shot 60 Zoom SAF 35mm Point and Shoot Film Camera w/Canon Zoom Lens 38-60mm. Built-in flash and film rewinder. (Renewed)"
+ },
+ "kodak-fisher-price": {
+  "asin": "B000050ZE6",
+  "level": "brand",
+  "note": "Kodak Star 110 pocket camera",
+  "source": "search",
+  "title": "Kodak 110 Star Camera( Uses 110 Film)"
+ },
+ "kodak-kb-28": {
+  "asin": "B0H3V8S5T1",
+  "level": "brand",
+  "note": "Kodak EC35 focus-free 35mm with flash",
+  "source": "search",
+  "title": "EC35 35mm Film Camera 35mm, Reusable, Focus-Free, Built-in Flash, Slide Cover, Beginner Friendly (Film & AA Battery are not Included) (Single, Avocado Green)"
+ },
+ "kodak-s300md": {
+  "asin": "B0G1Y93QNN",
+  "level": "brand",
+  "note": "Kodak Snapic A1 35mm compact",
+  "source": "search",
+  "title": "Snapic A1 35mm Film Camera 35mm, Reusable, 2-Zone Focus, Lightweight, Compact (Ivory White) (Film & AAA Battery are not Included)"
+ },
+ "konica-autoreflex-t3": {
+  "asin": "B0CSQQPVXX",
+  "level": "comparable",
+  "note": "Minolta SRT-101 35mm manual SLR",
+  "source": "search",
+  "title": "SRT-101/ SRT-100 35mm SLR Film Camera w/ 50mm Manual Focus Lens (Renewed)"
+ },
+ "konica-autoreflex-tc": {
+  "asin": "B07ZMFXVTR",
+  "level": "comparable",
+  "note": "Canon AE-1 (1976 shutter-priority 35mm SLR)",
+  "source": "search",
+  "title": "Vintage Canon AE-1 35mm SLR Camera with 50mm 1:1.8 Lens (Renewed)"
+ },
+ "konica-hi-precision-zoom-compact": {
+  "asin": "B00002MZ7N",
+  "level": "brand",
+  "note": "Konica Z-Up 120VP 35mm AF zoom compact",
+  "source": "search",
+  "title": "Konica Z-Up 120VP Zoom 35mm Camera"
+ },
+ "konica-z-up-140-super": {
+  "asin": "B00002MZ7N",
+  "level": "series",
+  "note": "Konica Z-Up 120VP zoom compact",
+  "source": "search",
+  "title": "Konica Z-Up 120VP Zoom 35mm Camera"
+ },
+ "kyocera-samurai-x3-0-red-35mm-half-frame-film-camera": {
+  "asin": "B0D7C449ZB",
+  "level": "comparable",
+  "note": "Pentax 17 half-frame 35mm film camera",
+  "source": "search",
+  "title": "17 35mm Film Camera, Half-Frame Format"
+ },
+ "mamiya-c220-professional": {
+  "asin": "B07YR5N5VB",
+  "level": "comparable",
+  "note": "Yashica Mat-124 G 6x6 TLR",
+  "source": "search",
+  "title": "MAT 124 G TLR Medium Format Vintage Film Camera with 80MM Lens + Strap/Cap/NEW Battery Working Meter Like NEW Mint"
+ },
+ "mamiya-c330-with-80mm-lens": {
+  "asin": "B07L11PWSW",
+  "level": "comparable",
+  "note": "Lubitel 166 Universal 6x6 TLR",
+  "source": "search",
+  "title": "LUBITEL 166 Universal USSR MEDIUM FORMAT TLR Film Camera//Soviet Camera//Vintage"
+ },
+ "mamiya-rb67-pro-sd": {
+  "asin": "B01BUAFS9Q",
+  "level": "series",
+  "note": "Mamiya RB67 Pro with 90mm lens",
+  "source": "search",
+  "title": "Mamiya RB67 Pro w/ Sekor C 90mm f/3.8 lens Medium Format Film Camera"
+ },
+ "mamiyasekor-msx-500": {
+  "asin": "B00KPZ6194",
+  "level": "series",
+  "note": "Mamiya/Sekor 1000DTL (M42 SLR)",
+  "source": "search",
+  "title": "Mamiya/Sekor 1000DTL with 55mm Lens"
+ },
+ "minolta-110-zoom-date": {
+  "asin": "B07P1YDP3L",
+  "level": "comparable",
+  "note": "Rollei E110 110 pocket camera",
+  "source": "search",
+  "title": "Rollei E110 Film Camera Set"
+ },
  "minolta-af-tel": {
   "asin": "B005LDUOC0",
   "level": "brand",
@@ -124,6 +383,13 @@
   "note": "Minolta Freedom Zoom 160 Date",
   "source": "sibling:minolta-freedom-zoom-160-date",
   "title": "Freedom Zoom 160 Date 35mm Camera Kit w/bag"
+ },
+ "minolta-camera-bag-with-strap": {
+  "asin": "B00PXRQ1HG",
+  "level": "comparable",
+  "note": "Kattee vintage leather/canvas camera shoulder bag",
+  "source": "search",
+  "title": "Kattee Vintage Leather Canvas DSLR SLR Camera Bags for Men"
  },
  "minolta-freedom-action-zoom": {
   "asin": "B0000631YZ",
@@ -223,6 +489,13 @@
   "source": "sibling:minolta-hi-matic-af-2",
   "title": "Hi-Matic AF2 Auto Focus 35mm Film Flash Camera w/ Minolta Lens 38mm 1:2.8 (46mm)"
  },
+ "minolta-minoltina-p": {
+  "asin": "B0CYM56YWM",
+  "level": "brand",
+  "note": "Minolta Hi-Matic AF2 (renewed) 35mm compact",
+  "source": "search",
+  "title": "Hi Matic AF Minolta Hi-Matic AF2 35mm Film Camera w/ 38mm f2.8 Lens and Flash (Renewed)"
+ },
  "minolta-silver-streak-zoom": {
   "asin": "B0000631YZ",
   "level": "brand",
@@ -286,6 +559,13 @@
   "source": "sibling:nikon-fg-black-with-50mm-lens",
   "title": "Nikon FG 35MM SLR Film Camera With F Mount AI Lens, Built-in Light Meter and Hot Shoe Flash (Renewed)"
  },
+ "nikon-fun-touch-6": {
+  "asin": "B00001R3W5",
+  "level": "brand",
+  "note": "Nikon Lite Touch 35mm compact",
+  "source": "search",
+  "title": "Lite Touch 35mm Camera"
+ },
  "nikon-l35-af": {
   "asin": "B0049CSO1C",
   "level": "brand",
@@ -299,6 +579,13 @@
   "note": "Nikon One Touch Zoom 90s",
   "source": "sibling:nikon-one-touch-zoom-90s",
   "title": "One Touch 90s QD Zoom Date 35mm Camera"
+ },
+ "nikon-lite-touch-zoom-110-panorama": {
+  "asin": "B0D9R45TD3",
+  "level": "brand",
+  "note": "Nikon One Touch Zoom 90 AF 35mm zoom compact",
+  "source": "search",
+  "title": "One Touch Zoom 90 AF 35mm Film Camera w/ Nikon Zoom Lens 38-90mm Macro Lens (Renewed)"
  },
  "nikon-nikkormat-black-with-24mm-wide-angle-lens": {
   "asin": "B0DRVR1JVZ",
@@ -341,6 +628,13 @@
   "note": "Nikon One Touch Zoom 90s",
   "source": "sibling:nikon-one-touch-zoom-90s",
   "title": "One Touch 90s QD Zoom Date 35mm Camera"
+ },
+ "olympus-35-rc": {
+  "asin": "B0GN2LLH86",
+  "level": "brand",
+  "note": "Olympus Trip 35 compact",
+  "source": "search",
+  "title": "Olympus Trip 35 Black Leather 35mm Film Camera"
  },
  "olympus-infinity-super-zoom-300": {
   "asin": "B000RBRBGI",
@@ -391,6 +685,13 @@
   "source": "sibling:olympus-infinity-superzoom-330",
   "title": "Infinity Super Zoom 330 Camera"
  },
+ "olympus-quick-shooter-tele": {
+  "asin": "B00008O2YQ",
+  "level": "brand",
+  "note": "Olympus Stylus 120 35mm zoom compact",
+  "source": "search",
+  "title": "OLYMPUS Stylus 120 35mm Camera w/ Zoom"
+ },
  "olympus-superzoom-760": {
   "asin": "B000RBRBGI",
   "level": "brand",
@@ -411,6 +712,13 @@
   "note": "Olympus XA2",
   "source": "sibling:olympus-xa2-original-case-a11-electronic-flash",
   "title": "XA2 35mm Film Camera with D-Zuiko 35mm Lens - Made in Japan, Flash ASA 25-400, Electronic Flash A11 Attachment (Black)"
+ },
+ "pentax-auto-110-film-camera": {
+  "asin": "B00LGBEQVG",
+  "level": "comparable",
+  "note": "Rollei A110 110 pocket camera",
+  "source": "search",
+  "title": "Rollei A110 Compact 110 Film Camera"
  },
  "pentax-espio-738": {
   "asin": "B00006780D",
@@ -446,6 +754,27 @@
   "note": "Pentax Zoom 70-R",
   "source": "sibling:pentax-zoom-70-r",
   "title": "Zoom 70-r 35mm Film Camera Point & Shoot Camera Black Color"
+ },
+ "petri-flex-7": {
+  "asin": "B0CSQQPVXX",
+  "level": "comparable",
+  "note": "Minolta SRT-101 1960s manual 35mm SLR",
+  "source": "search",
+  "title": "Minolta SRT-101/ SRT-100 35mm SLR Film Camera w/ 50mm Manual Focus Lens (Renewed)"
+ },
+ "petri-flex-v": {
+  "asin": "B094YTS75P",
+  "level": "comparable",
+  "note": "Pentax Spotmatic 1960s manual 35mm SLR",
+  "source": "search",
+  "title": "Asahi Pentax Spotmatic SLR Professional 35MM Film Camera Honeywell - Lens Bundle (Renewed)"
+ },
+ "point-and-shoot-a-m-minolta-hi-matic-s": {
+  "asin": "B005LDUOC0",
+  "level": "series",
+  "note": "Minolta Hi-Matic AF2",
+  "source": "search",
+  "title": "Hi-Matic AF2 Auto Focus 35mm Film Flash Camera w/ Minolta Lens 38mm 1:2.8 (46mm)"
  },
  "polaroid-252-bv": {
   "asin": "B0F4DND4NV",
@@ -495,6 +824,97 @@
   "note": "Polaroid 600 OneStep Rainbow",
   "source": "sibling:polaroid-600-one-step-rainbow-instant-camera",
   "title": "One-Step 600 Instant Camera"
+ },
+ "quantaray-dakota-rz-2000": {
+  "asin": "B0CNHYMHLZ",
+  "level": "comparable",
+  "note": "Canon Sure Shot Zoom-S (1990s 35mm AF zoom compact)",
+  "source": "search",
+  "title": "Canon Sure Shot Zoom-S 35mm Point and Shoot Film Camera SAF Canon with Zoom Lens 38-60mm. Built-in Flash and film rewinder as well as counter. (Renewed)"
+ },
+ "ricoh-ff-3-af-super": {
+  "asin": "B0CNHX2VYH",
+  "level": "comparable",
+  "note": "Canon AF35M (Sure Shot) AF compact",
+  "source": "search",
+  "title": "AF35M 35mm Point & Shoot Film Camera CAFS Self-Timer Pre Focus w/Canon 38mm 1:2.8 Lens, Manual ISO Settings. Uses Color or B&W film. (Renewed)"
+ },
+ "ricoh-kr-10m": {
+  "asin": "B0106QXTQE",
+  "level": "series",
+  "note": "Ricoh KR-5 Super II (K-mount SLR)",
+  "source": "search",
+  "title": "Vintage Ricoh KR-5 Super II 35mm SLR Film Camera w/ Rikenon 1:2 50mm Lens"
+ },
+ "ricoh-shotmaster-zoom": {
+  "asin": "B00GF5MRK0",
+  "level": "comparable",
+  "note": "Olympus Stylus Zoom 35-70mm AF compact",
+  "source": "search",
+  "title": "Stylus Zoom Black Colored 35mm Film Camera W/olympus Lens Zoom 35-70mm 35mm Film Camera (Black Color Version)"
+ },
+ "samsung-evoca-140s-quartz-date": {
+  "asin": "B00005B9F7",
+  "level": "brand",
+  "note": "Samsung Maxima 105 GL zoom compact",
+  "source": "search",
+  "title": "Samsung Maxima 105 GL QD Zoom Date 35mm Camera"
+ },
+ "samsung-maxima-1450af": {
+  "asin": "B00002NDTP",
+  "level": "series",
+  "note": "Samsung Maxima Zoom 130GL QD",
+  "source": "search",
+  "title": "Maxima Zoom 130GLQD Date 35mm Camera"
+ },
+ "samsung-maxima-60xl": {
+  "asin": "B0001GKYQS",
+  "level": "series",
+  "note": "Samsung Maxima 80Ti QD",
+  "source": "search",
+  "title": "Maxima 80TI QD 35mm Camera"
+ },
+ "samsung-maxima-zoom-105": {
+  "asin": "B00005B9F7",
+  "level": "series",
+  "note": "Samsung Maxima Zoom 105 GL QD",
+  "source": "search",
+  "title": "Maxima 105 GL QD Zoom Date 35mm Camera"
+ },
+ "samsung-maxima-zoom-105-xl": {
+  "asin": "B00005B9F7",
+  "level": "series",
+  "note": "Samsung Maxima 105 GL zoom compact",
+  "source": "search",
+  "title": "Samsung Maxima 105 GL QD Zoom Date 35mm Camera"
+ },
+ "samsung-maxima-zoom-70-xl": {
+  "asin": "B00005B9F7",
+  "level": "series",
+  "note": "Samsung Maxima 105 GL zoom compact",
+  "source": "search",
+  "title": "Samsung Maxima 105 GL QD Zoom Date 35mm Camera"
+ },
+ "sony-handycam-ccd-sc5": {
+  "asin": "B0017QCJBE",
+  "level": "series",
+  "note": "Sony Handycam Video8 camcorder",
+  "source": "search",
+  "title": "Sony Handycam Video 8"
+ },
+ "the-darkroom-book": {
+  "asin": "0394724682",
+  "level": "comparable",
+  "note": "The Darkroom Handbook by Michael Langford (darkroom technique book)",
+  "source": "search",
+  "title": "The Darkroom Handbook"
+ },
+ "vintage-kodak-leather-camera-bag": {
+  "asin": "B071GC2BF5",
+  "level": "comparable",
+  "note": "Vintage-style genuine leather camera satchel",
+  "source": "search",
+  "title": "Leather Messenger Bag for Camera - Vintage Shoulder Satchel Camera Bag for DSLR, Canon, Nikon, Fuji Cameras - Travel, Portable Photography Bag"
  },
  "vivitar-357pz-quartz-date": {
   "asin": "B0052UFFLW",
@@ -552,6 +972,20 @@
   "source": "sibling:vivitar-big-view-bv35",
   "title": "BIG VIEW (35mm) Camera"
  },
+ "vivitar-v3000s": {
+  "asin": "B00005K2R0",
+  "level": "series",
+  "note": "Vivitar V3800N (K-mount manual SLR)",
+  "source": "search",
+  "title": "V3800N 35mm SLR Camera w/ 28-70mm Lens"
+ },
+ "yashica-35-me-1973": {
+  "asin": "B00IW8763Q",
+  "level": "brand",
+  "note": "Yashica Electro 35 GSN rangefinder",
+  "source": "search",
+  "title": "Yashica Electro 35 GSN 35mm Camera with Yashinon DX f/1.7 45mm Lens"
+ },
  "yashica-a": {
   "asin": "B01J4GZ2GW",
   "level": "brand",
@@ -565,5 +999,33 @@
   "note": "Yashica Electro 35 GSN",
   "source": "sibling:yashica-electro-35-gsn",
   "title": "Yashica Electro 35 GSN 35mm Camera with Yashinon DX f/1.7 45mm Lens"
+ },
+ "yashica-j-3": {
+  "asin": "B00M3FBP5O",
+  "level": "brand",
+  "note": "Yashica FR-II 35mm SLR (C/Y mount)",
+  "source": "search",
+  "title": "Yashica FR-II 35mm SLR Professional Film Camera"
+ },
+ "yashica-zoom-image-70": {
+  "asin": "B0002DDVGK",
+  "level": "series",
+  "note": "Yashica Microtec Zoom 90",
+  "source": "search",
+  "title": "Microtec Zoom 90 (Micro Elite) 35mm Camera Graphite Color"
+ },
+ "zeiss-ikon-contaflex-with-original-leather-case1953": {
+  "asin": "B00KPZ6194",
+  "level": "comparable",
+  "note": "Mamiya/Sekor 1000DTL vintage 35mm SLR",
+  "source": "search",
+  "title": "Mamiya/Sekor 1000DTL with 55mm Lens"
+ },
+ "zeiss-ikon-contessa-lk-1963": {
+  "asin": "B00L5NSMRE",
+  "level": "comparable",
+  "note": "Yashica Electro 35 (1960s fixed-lens 35mm)",
+  "source": "search",
+  "title": "Yashica Electro 35 Rangefinder Film Camera w/ Yashinon DX 1:1.7 f=45mm Lens"
  }
 }
