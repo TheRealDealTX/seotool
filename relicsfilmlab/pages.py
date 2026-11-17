@@ -1,5 +1,5 @@
 """Hand-written pages for Relics Film Lab: home, film-lab/service products, info & legal pages."""
-import html, os, re
+import html, json, os, re
 import content as C
 
 STATIC_REDIRECTS = {
@@ -200,8 +200,9 @@ def build_pages(ctx):
 
     # photo credits
     rows = []
-    for k, c in sorted(ctx["CRED"].items()):
-        label = ("Site image: " + k[5:]) if k.startswith("site:") else (BY[k]["name"] if k in BY else k)
+    _film = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "image_credits_film.json"))) if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "image_credits_film.json")) else {}
+    for k, c in sorted(list(ctx["CRED"].items()) + [("film:" + k, v) for k, v in _film.items()]):
+        label = ("Site image: " + k[5:]) if k.startswith("site:") else ("Film & Batteries: " + k[5:].replace("-", " ").title()) if k.startswith("film:") else (BY[k]["name"] if k in BY else k)
         link = ("/products/" + k) if k in BY else None
         rows.append(f'<tr><td>{f"<a href={link!r}>{esc(label)}</a>" if link else esc(label)}</td><td><a href="{esc(c["page"])}" rel="nofollow noopener" target="_blank">{esc(c["title"][:70])}</a></td><td>{esc(c["artist"])}</td><td>{esc(c["license"])}</td></tr>')
     cr_h, cr_ld = crumbs([(None, "Photo Credits")])
