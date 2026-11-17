@@ -8,13 +8,13 @@ URL scheme and design are new, and they differ from all 36 sister `*insuranceapp
 | | |
 | --- | --- |
 | Hostinger website UID | `3S90GANgM` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter selected) |
-| Domain | https://connecticutinsuranceappraiser.com (attached at creation) |
+| Domain | https://connecticutinsuranceappraiser.com (live since Nov 17, 2026; SSL covers the bare and `www` hosts; www and http 301 to https) |
 | Preview URL | https://dodgerblue-crow-274676.hostingersite.com (Hostinger sends its own noindex robots.txt here; our guard adds `X-Robots-Tag: noindex`) |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Server | us-phx-h5g-node3.hstgr.io, IPv4 72.60.128.114 |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@connecticutinsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | `GTM_ID` in `build.py` (empty: no GTM output yet) |
+| Email / form inbox | info@connecticutinsuranceappraiser.com (form delivers over SMTP; config only on the server) |
+| Google Tag Manager | `GTM-NJGTDPZV`: owner-supplied head snippet (`GTM_HEAD` in `build.py`, used verbatim) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -211,10 +211,16 @@ Each JSON-LD graph contains the ProfessionalService (logo, contact point, CT and
 catalog), the WebSite and one page node linked to its BreadcrumbList, primary image and main entity. Pages
 add Service, FAQPage, ItemList, WebApplication, BlogPosting, HowTo or DefinedTermSet where they apply.
 
-## Going live checklist
+## Go-live (done Nov 17, 2026)
 
-1. Point the domain's nameservers to `nova.dns-parking.com` / `cosmos.dns-parking.com`.
-2. Confirm SSL covers both the bare and `www` hosts. If `www` is missing, reissue it with `agency-hosting_ssl_reinstall-website`.
-3. Recheck the canonical redirects on the live domain, on the homepage and at least three interior pages.
-4. Add the GTM container ID (`GTM_ID`) and wire up SMTP once the mailbox exists.
-5. Verify the URL-prefix property in Search Console, then submit `https://connecticutinsuranceappraiser.com/sitemap.xml`.
+1. ~~Nameservers pointed to Hostinger~~ — the domain resolves to the website.
+2. ~~SSL~~ — first certificate covered only the bare domain; reissued with `agency-hosting_ssl_reinstall-website`,
+   now `ssl_cert.names` lists both `connecticutinsuranceappraiser.com` and `www.connecticutinsuranceappraiser.com`.
+3. ~~Canonical redirects~~ — checked on the homepage and four interior pages: `http://`, `http://www.` and
+   `/index.php` all 301 to `https://connecticutinsuranceappraiser.com/page/`; no `X-Robots-Tag` on the real domain;
+   all 51 sitemap URLs return 200; GSC file returns 200 and matches byte for byte.
+4. ~~GTM~~ — `GTM-NJGTDPZV` on every page.
+5. ~~SMTP~~ — `api/_private/config.php` uploaded (returns 404, 0 bytes); a submission labelled TEST logged `"via":"smtp"`.
+6. To do (owner): verify the URL-prefix property `https://connecticutinsuranceappraiser.com/` in Search Console,
+   then submit `https://connecticutinsuranceappraiser.com/sitemap.xml`. Keep `googlecccfbf2f7e9e5ae4.html` on the
+   server permanently.

@@ -31,11 +31,11 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261116b"
+VER = "20261117a"
 FAV = "1"
 
 # Google Tag Manager: leave empty until a container ID is supplied (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+GTM_ID = "GTM-NJGTDPZV"
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -298,19 +298,27 @@ def footer():
 
 
 # ---------------------------------------------------------------- document
+# The head snippet is used exactly as supplied by the site owner.
+GTM_HEAD = """<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NJGTDPZV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- End Google Tag Manager -->
+"""
+
+
 def gtm_head():
-    if not GTM_ID:
-        return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return GTM_HEAD if GTM_ID else ""
 
 
 def gtm_body():
     if not GTM_ID:
         return ""
-    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\n'
-            'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n')
+    return (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}" height="0" width="0" '
+            'style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>\n')
 
 
 PAGE_TYPES = ("WebPage", "AboutPage", "ContactPage", "CollectionPage")
