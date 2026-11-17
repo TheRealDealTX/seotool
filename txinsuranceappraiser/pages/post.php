@@ -31,7 +31,7 @@ ob_start(); ?>
 </section>
 <div class="wrap post-layout">
   <article>
-    <figure class="post-feature" style="margin:0 0 34px"><img src="<?= e($img) ?>" alt="<?= e($p['h1']) ?>" width="1400" height="788" fetchpriority="high"></figure>
+    <figure class="post-feature" style="margin:0 0 34px"><img src="<?= e($img) ?>" alt="<?= e($p['image_alt'] ?? $p['h1']) ?>" width="1400" height="788" fetchpriority="high"><?php if (!empty($p['image_credit'])): ?><figcaption class="feature-credit"><?= $p['image_credit'] ?></figcaption><?php endif; ?></figure>
     <?php if (!empty($p['key_takeaways'])): ?>
     <div class="takeaways">
       <h2><?= icon('zap', 20) ?> Key takeaways</h2>

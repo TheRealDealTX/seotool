@@ -534,3 +534,11 @@ input,select,textarea,.fl input,.fl select,.fl textarea,.tool input,.tool select
   .modal .consent{font-size:.7rem;line-height:1.4}
 }
 @media (max-width:380px){.modal-sub{display:none}.modal-head .eyebrow{display:none}.modal-head h2{font-size:1.15rem}}
+
+/* photos inside articles */
+.prose figure{margin:2em 0;border-radius:var(--radius);overflow:hidden;background:var(--mist);border:1px solid var(--line)}
+.prose figure img{width:100%;height:auto;max-height:620px;object-fit:cover}
+.prose figcaption{padding:12px 16px;font-size:.88rem;color:var(--ink-2);line-height:1.5}
+.prose figcaption .credit,.feature-credit{display:block;font-size:.75rem;color:#8a95a1;margin-top:4px}
+.prose figcaption .credit a,.feature-credit a{color:inherit}
+.post-feature .feature-credit{padding:8px 14px;background:var(--mist);margin:0}

@@ -1,0 +1,187 @@
+{
+  "_about": "Publishing queue for the biweekly article routine. Topics come from the site's own Semrush positions export (volume/KD) and Google Search Console (impressions/position), prioritised for low keyword difficulty, solid volume and no existing page that already targets the cluster. The routine publishes the first entry with status 'queued', then sets it to 'published' with the date. When the queue runs low, add new entries using the same rules (see ARTICLE_PLAYBOOK.md).",
+  "cadence_days": 14,
+  "topics": [
+    {
+      "slug": "what-does-date-of-loss-mean",
+      "title": "What Does Date of Loss Mean on an Insurance Claim?",
+      "primary_keyword": "date of loss",
+      "secondary_keywords": ["date of loss meaning", "what does date of loss mean on insurance claim", "date of loss definition", "date of loss insurance", "meaning of day of loss in insurance claims", "date loss"],
+      "evidence": "Semrush: date of loss meaning 170/KD13, date of loss 140/KD0, date of loss definition 70/KD0, what does date of loss mean on insurance claim 70/KD0, date of loss insurance 50/KD0. GSC: 113 + 72 + 58 impressions, ranking 10-65 via /notice-of-loss-insurance-definition/.",
+      "category": "Insurance Basics",
+      "status": "published",
+      "published": "2026-11-17"
+    },
+    {
+      "slug": "when-is-hail-season-in-texas",
+      "title": "When Is Hail Season in Texas? A Region-by-Region Guide",
+      "primary_keyword": "when is hail season in texas",
+      "secondary_keywords": ["hail season texas", "when is hail season", "when does it hail in texas", "when is texas hail season", "when is hail season in north texas"],
+      "evidence": "Semrush: when is hail season in texas 210/KD3, when is hail season 110/KD13, hail season texas 90/KD7, when does it hail in texas 50/KD4, when is texas hail season 40/KD8. GSC: 101 + 93 + 52 + 35 impressions at positions 37-71 (only Dallas-specific pages exist today). Make it statewide: Panhandle, DFW, Central, Hill Country, Coast, RGV, West Texas.",
+      "category": "Texas Weather & Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "statement-of-no-loss",
+      "title": "What Is a Statement of No Loss (No Known Loss Letter)?",
+      "primary_keyword": "statement of no loss",
+      "secondary_keywords": ["what is a statement of no loss", "insurance no known loss letter", "no known loss letter insurance", "no known loss", "no known or reported loss", "no known or reported losses"],
+      "evidence": "Semrush: what is a statement of no loss 90/KD0, insurance no known loss letter 50/KD0, no known loss letter insurance 50/KD0, no known loss 40/KD0, no known or reported loss(es) 40+40/KD0. GSC: 63 + 61 + 61 impressions at positions 56-63.",
+      "category": "Insurance Basics",
+      "status": "queued"
+    },
+    {
+      "slug": "what-is-symbility",
+      "title": "What Is Symbility? Estimating Software for Insurance Claims Explained",
+      "primary_keyword": "symbility",
+      "secondary_keywords": ["symbility estimating software", "symbility estimating", "symbility download", "symbility vs xactimate", "corelogic symbility"],
+      "evidence": "Semrush: symbility 1,000/KD20 (pos 27), symbility download 50/KD10, symbility estimating 30. GSC: symbility estimating software 132, symbility estimating 125, symbility 92 impressions at positions 24-27. Informational guide; link to /services/symbility-estimate/.",
+      "category": "Estimating & Technology",
+      "status": "queued"
+    },
+    {
+      "slug": "non-recoverable-depreciation",
+      "title": "Non-Recoverable Depreciation: What It Means on Your Roof Claim",
+      "primary_keyword": "non recoverable depreciation",
+      "secondary_keywords": ["what is recoverable depreciation on a roof claim", "recoverable depreciation roof", "how to get depreciation back from insurance", "non-recoverable depreciation roof"],
+      "evidence": "Semrush: non recoverable depreciation 140/KD5 (pos 84), how to get depreciation back from insurance 70/KD0. GSC: what is recoverable depreciation on a roof claim 45, recoverable depreciation roof 40 impressions at positions 78-87. Roof-specific angle so it complements /recoverable-depreciation-explained/.",
+      "category": "Roof Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "what-is-considered-a-large-loss-insurance-claim",
+      "title": "What Is Considered a Large Loss Insurance Claim?",
+      "primary_keyword": "what is considered a large loss insurance claim",
+      "secondary_keywords": ["large loss claims", "large loss insurance claim", "large loss adjuster", "large loss threshold"],
+      "evidence": "Semrush: large loss claims 110/KD5 (pos 53), what is considered a large loss insurance claim 90/KD2 (pos 62). GSC: large loss claims 102 impressions at position 44. Definition-focused; link to /large-loss-insurance-appraisal-texas/.",
+      "category": "Commercial Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "cause-of-loss-insurance",
+      "title": "Cause of Loss in Insurance: Named Perils, Open Perils and Exclusions",
+      "primary_keyword": "cause of loss insurance",
+      "secondary_keywords": ["cause of loss", "named perils vs open perils", "covered cause of loss", "cause of loss form"],
+      "evidence": "Semrush: cause of loss insurance 70/KD6 (pos 13-23 on a section of the notice-of-loss post). A dedicated page can win the cluster.",
+      "category": "Insurance Basics",
+      "status": "queued"
+    },
+    {
+      "slug": "commercial-smoke-damage-claim",
+      "title": "Commercial Smoke Damage Claims: How to Document and Recover",
+      "primary_keyword": "commercial smoke damage claim",
+      "secondary_keywords": ["commercial fire damage assessment", "commercial property fire damage", "smoke damage insurance claim", "fire damage inspection texas"],
+      "evidence": "GSC: commercial fire damage assessment 171, commercial property fire damage 87, commercial smoke damage claim 54, fire damage inspection texas 43 impressions at positions 23-49. Smoke-specific angle complements the commercial fire post.",
+      "category": "Commercial Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "property-damage-valuation",
+      "title": "Property Damage Valuation for Insurance Claims: How Losses Are Valued",
+      "primary_keyword": "damage valuation services",
+      "secondary_keywords": ["property insurance valuation services", "property damage valuation", "property damage appraisal", "how insurance values property damage"],
+      "evidence": "GSC: damage valuation services 201 impressions at position 17, property insurance valuation services 102 at position 62. Semrush: property insurance valuation services 40/KD11, property damage appraisal 40/KD8.",
+      "category": "Appraisal Process",
+      "status": "queued"
+    },
+    {
+      "slug": "texas-insurance-appraisal-attorney",
+      "title": "Do You Need an Attorney for an Insurance Appraisal in Texas?",
+      "primary_keyword": "texas insurance appraisal attorney",
+      "secondary_keywords": ["insurance appraisal dispute attorney texas", "appraisal vs lawsuit texas", "insurance appraisal lawyer"],
+      "evidence": "Semrush: texas insurance appraisal attorney 40/KD0, insurance appraisal dispute attorney texas 40/KD0 (both ranking 58-92 on unrelated pages). Explain when appraisal alone works and when to involve a lawyer; no legal advice.",
+      "category": "Appraisal Process",
+      "status": "queued"
+    },
+    {
+      "slug": "insurance-assessor-vs-appraiser",
+      "title": "Insurance Assessor vs. Insurance Appraiser: What's the Difference?",
+      "primary_keyword": "insurance assessor",
+      "secondary_keywords": ["insurance assessors", "assessor insurance", "loss assessor", "insurance damage appraiser"],
+      "evidence": "GSC: insurance assessor 60 impressions (pos 39), insurance damage appraiser 71 (pos 53). Semrush: assessor insurance 30/KD4, insurance assessors 30.",
+      "category": "Insurance Basics",
+      "status": "queued"
+    },
+    {
+      "slug": "industrial-building-hail-damage",
+      "title": "Industrial Building Hail Damage: Roof Evaluation and Insurance Claims",
+      "primary_keyword": "industrial building hail damage",
+      "secondary_keywords": ["industrial roof insurance loss evaluation contractor", "commercial roof insurance loss evaluation contractor", "warehouse hail damage claim", "metal building hail damage"],
+      "evidence": "Semrush: industrial roof insurance loss evaluation contractor 40/KD7 (pos 19). GSC: industrial roof insurance loss evaluation contractor 55, commercial roof insurance loss evaluation contractor 47, industrial building hail damage 32 impressions at positions 22-53.",
+      "category": "Commercial Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "home-insurance-claims-killeen-tx",
+      "title": "Home Insurance Claims in Killeen, TX: A Local Homeowner's Guide",
+      "primary_keyword": "home insurance claims killeen tx",
+      "secondary_keywords": ["killeen insurance claim", "killeen hail damage claim", "fort cavazos homeowners insurance claim", "bell county insurance appraiser"],
+      "evidence": "GSC: home insurance claims killeen tx 157 impressions at position 36. Strengthens /areas/killeen-insurance-appraiser/ (link to it prominently).",
+      "category": "Texas Weather & Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "fort-bliss-home-insurance-claims",
+      "title": "Fort Bliss Home and Property Insurance Claims: Guide for Military Families",
+      "primary_keyword": "fort bliss texas home insurance",
+      "secondary_keywords": ["fort bliss texas property insurance", "el paso home insurance claim", "military renters insurance claim texas"],
+      "evidence": "GSC: fort bliss texas property insurance 99 impressions, fort bliss texas home insurance 87 impressions, both at position ~17. Link to /areas/fort-bliss-insurance-appraiser/ and /areas/el-paso-insurance-appraiser/.",
+      "category": "Texas Weather & Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "north-richland-hills-roof-insurance-claim",
+      "title": "Roof Insurance Claims in North Richland Hills: Hail, Wind and Appraisal",
+      "primary_keyword": "north richland hills insurance roof claim",
+      "secondary_keywords": ["north richland hills hail damage", "tarrant county roof claim", "nrh roof insurance claim"],
+      "evidence": "GSC: north richland hills insurance roof claim 60 impressions at position 24. Link to /areas/north-richland-hills-insurance-appraiser/.",
+      "category": "Roof Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "variables-that-affect-a-roofing-estimate",
+      "title": "9 Variables That Affect a Roofing Estimate on an Insurance Claim",
+      "primary_keyword": "variables that affect a roofing estimate",
+      "secondary_keywords": ["how to calculate roof waste", "roofing estimate factors", "roof pitch insurance estimate", "steep charges roofing"],
+      "evidence": "GSC: variables that affect a roofing estimate 37 impressions (pos 20), how to calculate roof waste 40 (pos 21). Link to /tools/roof-square-calculator/ and the waste-factor post.",
+      "category": "Roof Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "property-damage-claims-accounting",
+      "title": "Property Damage Insurance Claims Accounting for Texas Businesses",
+      "primary_keyword": "property damage claims accounting",
+      "secondary_keywords": ["accounting for insurance proceeds", "insurance claim accounting", "business property loss accounting"],
+      "evidence": "GSC: property damage claims accounting 44 impressions at position 72; no page targets it. General guidance only; advise consulting a CPA.",
+      "category": "Commercial Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "commercial-property-roof-damage",
+      "title": "Commercial Property Roof Damage: Signs, Claims and Repair vs. Replace",
+      "primary_keyword": "commercial property roof damage",
+      "secondary_keywords": ["commercial roof damage claim", "commercial hail damage insurance claim", "commercial roof storm damage"],
+      "evidence": "Semrush: commercial property roof damage 110/KD1 (pos 58), commercial hail damage insurance claim 110/KD1. Angle on all perils (wind, ponding, punctures), not only hail, to complement /commercial-roof-hail-damage-claims/.",
+      "category": "Commercial Claims",
+      "status": "queued"
+    },
+    {
+      "slug": "how-to-hire-a-home-insurance-appraiser",
+      "title": "How to Hire a Home Insurance Appraiser in Texas (Checklist)",
+      "primary_keyword": "home insurance appraiser",
+      "secondary_keywords": ["home damage appraiser", "insurance claim appraiser", "appraiser for insurance claim", "insurance damage appraiser"],
+      "evidence": "GSC: home insurance appraiser 122 impressions (pos 59), appraiser for insurance claim 54 (pos 49). Semrush: home damage appraiser 30/KD6, insurance claim appraiser 50/KD10.",
+      "category": "Appraisal Process",
+      "status": "queued"
+    },
+    {
+      "slug": "tornado-insurance-claim-texas",
+      "title": "How to File a Tornado Insurance Claim in Texas, Step by Step",
+      "primary_keyword": "tornado insurance claim",
+      "secondary_keywords": ["tornado damage claim texas", "tornado insurance claim process", "tornado season in dallas"],
+      "evidence": "GSC: tornado insurance claim 38 impressions at position 80. Semrush: tornado season in dallas 90/KD31. Process-focused how-to that complements /tornado-damage-insurance/ (coverage-focused).",
+      "category": "Texas Weather & Claims",
+      "status": "queued"
+    }
+  ]
+}
