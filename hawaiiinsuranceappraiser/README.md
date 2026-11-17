@@ -43,7 +43,7 @@ export HIA_FB_URL='…/api/tus' HIA_FB_AUTH='…' HIA_FB_REST='…'
 `DELETE {url-without-/tus}/resources/public_html/<path>`, sending the same `X-Auth` and `X-Auth-Rest` headers.
 Hostinger's placeholder `public_html/default.php` has already been deleted.
 
-Local preview: `cd public && php -S 127.0.0.1:8123 router.php`, using a router that mimics the host. Real files are served as-is,
+Local preview: `cd public && php -S 127.0.0.1:8123 ../tools/router.php`, using a router that mimics the host. Real files are served as-is,
 a directory's `index.php` is executed, and everything else goes to the root `index.php`.
 
 ## Pages (50 in sitemap, plus the 404)
