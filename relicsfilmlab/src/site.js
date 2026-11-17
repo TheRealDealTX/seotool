@@ -120,7 +120,10 @@
     var brand = "all";
     function apply() { var n = 0; cards.forEach(function (c) { var ok = brand === "all" || c.dataset.brand === brand; c.style.display = ok ? "" : "none"; if (ok) n++; });
       if (count) count.textContent = n + (n === 1 ? " item" : " items"); }
-    chips.forEach(function (ch) { ch.addEventListener("click", function () { brand = ch.dataset.brand; chips.forEach(function (x) { x.classList.toggle("is-on", x === ch); }); apply(); }); });
+    var bsel = $("#brand");
+    function setBrand(v) { brand = v; chips.forEach(function (x) { x.classList.toggle("is-on", x.dataset.brand === v); }); if (bsel) bsel.value = v; apply(); }
+    chips.forEach(function (ch) { ch.addEventListener("click", function () { setBrand(ch.dataset.brand); }); });
+    if (bsel) bsel.addEventListener("change", function () { setBrand(bsel.value); });
     if (sort) sort.addEventListener("change", function () { var v = sort.value;
       cards.sort(function (a, b) { if (v === "az") return a.dataset.name.localeCompare(b.dataset.name); if (v === "za") return b.dataset.name.localeCompare(a.dataset.name);
         if (v === "lo") return (+a.dataset.price) - (+b.dataset.price); if (v === "hi") return ((+b.dataset.price === 99999 ? -1 : +b.dataset.price) - (+a.dataset.price === 99999 ? -1 : +a.dataset.price)); if (v === "old") return (+a.dataset.year || 9999) - (+b.dataset.year || 9999); if (v === "new") return (+b.dataset.year || 0) - (+a.dataset.year || 0); return (+a.dataset.rank) - (+b.dataset.rank); });

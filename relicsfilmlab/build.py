@@ -285,8 +285,16 @@ def grid(items, filters=True):
     tb = ""
     if filters and len(items) > 6:
         brands = sorted({(brand_of(p) or ("Other",))[0] for p in items})
-        chips = '<button class="chip is-on" data-brand="all">All</button>' + "".join(f'<button class="chip" data-brand="{esc(b)}">{esc(b)}</button>' for b in brands if len(brands) > 1)
-        tb = f"""<div class="toolbar">{chips}<select id="sort" aria-label="Sort"><option value="pop">Most popular</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="old">Oldest first</option><option value="new">Newest first</option></select><span class="count"></span></div>"""
+        counts = {}
+        for p in items:
+            k = (brand_of(p) or ("Other",))[0]; counts[k] = counts.get(k, 0) + 1
+        chips = ""
+        brand_sel = ""
+        if len(brands) > 1:
+            chips = '<div class="chips"><button class="chip is-on" data-brand="all">All</button>' + "".join(f'<button class="chip" data-brand="{esc(b)}">{esc(b)}</button>' for b in brands) + "</div>"
+            brand_sel = (f'<label class="fsel"><span>Brand</span><select id="brand" aria-label="Filter by brand"><option value="all">All brands ({len(items)})</option>'
+                         + "".join(f'<option value="{esc(b)}">{esc(b)} ({counts[b]})</option>' for b in brands) + "</select></label>")
+        tb = f"""<div class="toolbar">{chips}{brand_sel}<label class="fsel fsel--sort"><span>Sort</span><select id="sort" aria-label="Sort"><option value="pop">Most popular</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="old">Oldest first</option><option value="new">Newest first</option></select></label><span class="count"></span></div>"""
     return tb + '<div class="grid" id="pgrid">' + "".join(product_card(p, i) for i, p in enumerate(items)) + "</div>"
 
 # ---------------------------------------------------------------- product pages
