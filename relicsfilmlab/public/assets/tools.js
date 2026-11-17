@@ -14,7 +14,7 @@
       '<div class="tres__btns"><a class="btn btn--sm" href="' + c.a + '" ' + AMZ + ">" + buy + '</a><a class="btn btn--ghost btn--sm" href="/products/' + c.s + '">Buying guide</a></div></div></article>';
   }
   function filmCard(f) {
-    return '<article class="tres tres--film"><i class="tres__film fcard--' + f.br + '"><b>' + f.iso + "</b></i><div><h3>" + esc(f.n) + "</h3><p>" + esc(f.fl) + " · ISO " + f.iso + (f.pr ? ' · <b class="tres__price">' + f.pr + "</b>" : "") + "</p><p class=\"tres__why\">" + esc(f.d) +
+    return '<article class="tres tres--film">' + (f.i ? '<img src="' + f.i + '" alt="" loading="lazy">' : '<i class="tres__film fcard--' + f.br + '"><b>' + f.iso + "</b></i>") + "<div><h3>" + esc(f.n) + "</h3><p>" + esc(f.fl) + " · ISO " + f.iso + (f.pr ? ' · <b class="tres__price">' + f.pr + "</b>" : "") + "</p><p class=\"tres__why\">" + esc(f.d) +
       '</p><div class="tres__btns"><a class="btn btn--sm" href="' + f.a + '" ' + AMZ + ">Buy on Amazon</a></div></div></article>";
   }
 

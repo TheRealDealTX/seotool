@@ -85,14 +85,26 @@ def build_data(ctx):
         cams.append(dict(pr=PR.fmt(_pr) if _pr else "", s=slug, n=p["name"], c=p["cat"], sp=p["spec"], y=p["year"], i=ctx["img_path"](slug) or "", r=i, a=a,
                          ax=1 if exact else (2 if sim else 0), t=camera_traits(p),
                          b=("none" if bat == "none" else C.BATTERY_KIT[bat][0] if bat else ""), ba=(build.amz(C.BATTERY_KIT[bat][1]) if bat and bat != "none" else "")))
-    films = [dict(n=n, f=f, fl=FORMAT_LABEL[f], iso=iso, k=k, lk=lk, li=li, d=d, br=br, a=build.amz(q), pr=PR.fmt(PR.FILM_PRICES[n]) if n in PR.FILM_PRICES else "") for n, q, f, iso, k, lk, li, d, br in FILM_SHOP]
+    films = [dict(n=n, f=f, fl=FORMAT_LABEL[f], iso=iso, k=k, lk=lk, li=li, d=d, br=br, a=build.amz(q), pr=PR.fmt(PR.FILM_PRICES[n]) if n in PR.FILM_PRICES else "", i=film_img(n) or "") for n, q, f, iso, k, lk, li, d, br in FILM_SHOP]
     bats = [dict(n=n, d=d, a=build.amz(q)) for n, q, d in BATTERY_SHOP]
     out = os.path.join(build.PUB, "assets", "tools-data.json")
     json.dump(dict(cams=cams, films=films, bats=bats), open(out, "w"), separators=(",", ":"))
 
+FILM_IMG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public", "assets", "img", "film")
+
+def film_key(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+def film_img(name):
+    k = film_key(name)
+    return f"/assets/img/film/{k}.webp" if os.path.exists(os.path.join(FILM_IMG_DIR, k + ".webp")) else None
+
 def film_card(f, amz_link, esc):
     n, q, fmt, iso, kind, looks, light, blurb, br = f
-    return (f'<article class="fcard fcard--{br} reveal"><div class="fcard__box"><span class="fcard__iso">{iso}</span><span class="fcard__fmt">{esc(FORMAT_LABEL[fmt])}</span>'
+    im = film_img(n)
+    box_cls = "fcard__box fcard__box--img" if im else "fcard__box"
+    img_tag = f'<img src="{im}" alt="{esc(n)}" loading="lazy" width="400" height="400">' if im else ""
+    return (f'<article class="fcard fcard--{br} reveal"><div class="{box_cls}">{img_tag}<span class="fcard__iso">{iso}</span><span class="fcard__fmt">{esc(FORMAT_LABEL[fmt])}</span>'
             f'<span class="fcard__name">{esc(n)}</span></div><div class="fcard__body"><p>{esc(blurb)}</p>'
             f'<div class="fcard__tags">' + "".join(f"<span>{esc(t)}</span>" for t in ([("B&W" if kind == "bw" else "Colour")] + looks[:2])) + "</div>"
             + (f'<div class="fcard__price">{PR.fmt(PR.FILM_PRICES[n])}<small>typical price</small></div>' if n in PR.FILM_PRICES else "")
@@ -105,7 +117,10 @@ def build_film_page(ctx):
     for title, key in groups:
         items = [f for f in FILM_SHOP if f[2] == key or f[2].startswith(key + "-")]
         secs += f'<section class="fshelf" id="{key}"><div class="head-row"><h2>{title}</h2></div><div class="fgrid">' + "".join(film_card(f, amz_link, esc) for f in items) + "</div></section>"
-    bats = "".join(f'<article class="fcard fcard--battery reveal"><div class="fcard__box"><span class="fcard__fmt">Battery</span><span class="fcard__name">{esc(n)}</span></div>'
+    def _bbox(n):
+        im = film_img(n)
+        return (f'<div class="fcard__box fcard__box--img"><img src="{im}" alt="{esc(n)} battery" loading="lazy" width="400" height="400">' if im else '<div class="fcard__box">')
+    bats = "".join(f'<article class="fcard fcard--battery reveal">{_bbox(n)}<span class="fcard__fmt">Battery</span><span class="fcard__name">{esc(n)}</span></div>'
                    f'<div class="fcard__body"><p>{esc(d)}</p>' + (f'<div class="fcard__price">{PR.fmt(PR.FILM_PRICES[n])}<small>typical price</small></div>' if n in PR.FILM_PRICES else "") + f'{amz_link("Buy on Amazon →", q, "btn btn--sm")}</div></article>' for n, q, d in BATTERY_SHOP)
     secs += f'<section class="fshelf" id="batteries"><div class="head-row"><h2>Camera batteries</h2><a class="btn btn--ghost btn--sm" href="/tools/battery-finder">Which battery does my camera take?</a></div><div class="fgrid">{bats}</div></section>'
     jump = "".join(f'<a class="chip" href="#{k}">{t}</a>' for t, k in groups + [("Batteries", "batteries")])
