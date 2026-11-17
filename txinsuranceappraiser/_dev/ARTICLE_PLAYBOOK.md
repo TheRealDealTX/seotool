@@ -89,6 +89,11 @@ python3 _dev/fetch_image.py get <id> <slug>-<short-name> "<alt text>" "<caption 
   Photos 2 and 3 go inside `body_html` as the printed `<figure>` blocks, placed after relevant sections.
 - Captions must describe what the photo actually shows.
 - If Wikimedia rate-limits downloads (429), wait a minute and retry, or pick another candidate.
+- **Search with short, generic photo terms.** Openverse matches photo titles, so words like "texas" or "insurance" return
+  mostly satellite maps and irrelevant pictures. Terms that return real photos: `hailstones`, `hailstorm`,
+  `hail damage car`, `supercell thunderstorm`, `tornado damage`, `hurricane harvey`, `flooded street`, `roof shingles`,
+  `roofer`, `house fire`, `water damage ceiling`, `burst pipe`, `ice storm`, `wildfire`, `commercial building`,
+  `warehouse`, `apartment complex`, `church building`, `calculator paperwork`. Run 3–5 terms in one search call.
 
 ## 4. Cross-link
 

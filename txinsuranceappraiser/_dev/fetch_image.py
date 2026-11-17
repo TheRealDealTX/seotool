@@ -32,7 +32,7 @@ def search(queries):
         for r in api(url).get('results', []):
             if (r.get('width') or 0) < 800:
                 continue
-            print(f"  {r['id']}  {r['license']:3s} {r.get('width')}x{r.get('height')} {r['source']:10s} | {r['title'][:60]} | {(r.get('creator') or '')[:24]}")
+            print(f"  {r['id']}  {r['license']:3s} {r.get('width')}x{r.get('height')} {r['source']:10s} | {(r.get('title') or '')[:60]} | {(r.get('creator') or '')[:24]}")
 
 
 def get(img_id, stem, alt, caption=''):
@@ -70,7 +70,7 @@ def get(img_id, stem, alt, caption=''):
     lic = LICENSE_NAMES[r['license']]
     lic_url = r.get('license_url') or ''
     landing = r.get('foreign_landing_url') or src
-    credit = f'Photo: <a href="{html.escape(landing)}" target="_blank" rel="noopener nofollow">{html.escape(r["title"][:80])}</a> by {html.escape(creator)}'
+    credit = f'Photo: <a href="{html.escape(landing)}" target="_blank" rel="noopener nofollow">{html.escape((r.get("title") or "Photo")[:80])}</a> by {html.escape(creator)}'
     credit += f', <a href="{html.escape(lic_url)}" target="_blank" rel="noopener nofollow">{lic}</a>' if lic_url else f', {lic}'
     cap = (html.escape(caption) + ' ') if caption else ''
     print(json.dumps({
