@@ -34,12 +34,20 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261117b"
+VER = "20261118a"
 FAV = "1"
 
 # Google Tag Manager: leave empty for none. When set (e.g. "GTM-XXXXXXX"), the head snippet and the
 # <noscript> iframe after <body> are output on every page.
-GTM_ID = ""
+GTM_ID = "GTM-T6LL4KDG"
+# Head snippet exactly as provided by the client. When set it is output verbatim instead of the
+# standard GTM loader; the <noscript> iframe after <body> still uses GTM_ID.
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T6LL4KDG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build:
 # one line, no wrapper, no trailing newline. Never rename, wrap or delete it (Google rechecks it).
@@ -219,6 +227,8 @@ def _groups():
 
 
 def gtm_head():
+    if GTM_SNIPPET:
+        return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
     if not GTM_ID:
         return ""
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});"

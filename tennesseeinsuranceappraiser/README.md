@@ -7,12 +7,12 @@ Engineering is adapted from `georgiainsuranceappraiser/`; content, URL slugs and
 | | |
 | --- | --- |
 | Hostinger website UID | `y1mAg5X8i` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter selected) |
-| Domain | https://tennesseeinsuranceappraiser.com (attached at creation; SSL issues once DNS points here) |
+| Domain | https://tennesseeinsuranceappraiser.com (live; SSL covers the domain and www, expires 2027-02-15) |
 | Preview URL | https://open-azure-meerkat-95.hostingersite.com |
 | Nameservers to set at the registrar | `hermes.dns-parking.com`, `artemis.dns-parking.com` |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Google Tag Manager | `GTM-T6LL4KDG` (client's head snippet verbatim + noscript iframe after `<body>`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@tennesseeinsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@tennesseeinsuranceappraiser.com (form delivers over SMTP, verified Nov 18, 2026) |
 
 ## Layout
 
@@ -202,15 +202,18 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@tennesseeinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-After upload: confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled
-as a test, and confirm the log line shows `"via":"smtp"`.
+Status: uploaded Nov 18, 2026. `/api/_private/config.php` returns 404 with 0 bytes, and a submission
+labelled as a test was logged with `"via":"smtp"` and no error. The local copy was deleted after upload.
+To change the password, re-upload this file with the new value and repeat those checks.
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty. Set it (e.g. `GTM-XXXXXXX`) to output the head snippet and the
-`<noscript>` iframe right after `<body>` on every page, then rebuild and redeploy.
+`GTM_ID = "GTM-T6LL4KDG"` and `GTM_SNIPPET` (the head snippet exactly as the client provided it) in
+`build.py`. The snippet is output verbatim in `<head>` and the `<noscript>` iframe right after `<body>`
+on every page. Set `GTM_SNIPPET = ""` to fall back to the standard GTM loader built from `GTM_ID`, or
+clear both to remove tracking.
 
-## Going live checklist
+## Going live checklist (steps 1–3 and 5 done Nov 18, 2026)
 
 1. Point the domain's nameservers to `hermes.dns-parking.com` and `artemis.dns-parking.com`.
 2. Confirm SSL covers both `tennesseeinsuranceappraiser.com` and `www.` (`agency-hosting_websites_get` →
