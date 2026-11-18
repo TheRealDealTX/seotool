@@ -6,12 +6,12 @@ front controller plus a canonical-host guard serve it on a Hostinger Agency Grow
 | | |
 | --- | --- |
 | Hostinger website UID | `664HJBPMN` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | https://hawaiiinsuranceappraiser.com (attached at creation; waiting for nameservers) |
+| Domain | https://hawaiiinsuranceappraiser.com (live since Nov 18, 2026; SSL certificate covers the apex and `www`) |
 | Preview URL | https://carefree-brown-shrew-19.hostingersite.com |
 | Nameservers to set at the registrar | `orbit.dns-parking.com`, `horizon.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@hawaiiinsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@hawaiiinsuranceappraiser.com (form delivers over SMTP; verified Nov 18, 2026) |
+| Google Tag Manager | `GTM-NP3C66Z4` (the supplied head snippet plus the `<noscript>` iframe after `<body>`, on every page; set by `GTM_ID` in `build.py`) |
 
 ## Layout
 
@@ -207,15 +207,19 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@hawaiiinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-After uploading:
-1. Confirm `/api/_private/config.php` returns 404 with 0 bytes.
-2. Send one submission labelled as a test.
-3. Check that the log line shows `"via":"smtp"`.
+This file is on the server (uploaded Nov 18, 2026). `/api/_private/config.php` returns 404 with 0 bytes, and a submission labelled as a test
+was logged with `"via":"smtp"` and no error. To change the password, upload a new copy of the file with the TUS API, then delete your local copy.
+This container can't reach port 465, so test a new password by sending a form submission and reading the log through the file API.
 
 ## Going-live checklist
 
-1. Point the domain's nameservers to `orbit.dns-parking.com` / `horizon.dns-parking.com`.
-2. Confirm that SSL covers both the apex and `www`. If `www` is missing, run `agency-hosting_ssl_reinstall-website`.
-3. Re-check the www and http 301s, the `index.php` 301, the sitemap URLs (all 200), that no `X-Robots-Tag` is sent, and the Search Console file on the real domain.
-4. Create the mailbox, upload the SMTP config, and run the test above.
+1. ~~Point the nameservers~~ — done.
+2. ~~SSL for the apex and `www`~~ — the first certificate covered only the apex, so it was reissued with `agency-hosting_ssl_reinstall-website` on Nov 18, 2026. Hostinger now records both names.
+3. ~~Live canonical-host checks~~ — done on the homepage and three interior pages:
+   - `http://` and `http://www.` 301 to `https://hawaiiinsuranceappraiser.com/…`
+   - `/page/index.php` 301s to `/page/`
+   - all 50 sitemap URLs return 200 with no `X-Robots-Tag`
+   - our own `robots.txt` is served
+   - the Search Console file matches byte for byte
+4. ~~Mailbox and SMTP~~ — done.
 5. In Search Console, verify the URL-prefix property `https://hawaiiinsuranceappraiser.com/`, then submit `/sitemap.xml`.

@@ -33,10 +33,10 @@ TEL = "+18445371427"
 EMAIL = "info@" + HOST
 HOURS = "Mon–Fri 7am–5pm HST"
 TODAY = date.today().isoformat()
-VER = "20261117b"
+VER = "20261118a"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-NP3C66Z4"
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
 GSC_BODY = "google-site-verification: googlecccfbf2f7e9e5ae4.html"
@@ -272,11 +272,15 @@ def footer():
 
 
 def gtm_head():
+    """The Google tag exactly as supplied for this site."""
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            '<script>\n'
+            '  window.dataLayer = window.dataLayer || [];\n'
+            '  function gtag(){dataLayer.push(arguments);}\n'
+            "  gtag('js', new Date());\n"
+            '</script>\n')
 
 
 def gtm_body():
