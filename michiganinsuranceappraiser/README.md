@@ -14,9 +14,14 @@ favicon/photo pipelines, canonical-host guard). Content, URL slugs and design ar
 | Preview URL | https://premium-teal-squirrel-38.hostingersite.com |
 | Nameservers to set at the registrar | `hermes.dns-parking.com`, `artemis.dns-parking.com` |
 | Server | requested the Boston datacenter; the API reports the site on `us-phx-h5g-node3.hstgr.io` (IP `72.60.128.114`) |
+| DNS / SSL | live since 2026-11-18; certificate covers `michiganinsuranceappraiser.com` and `www.michiganinsuranceappraiser.com` (expires 2027-02-15, auto-renewed by Hostinger) |
+| Google Tag Manager | `GTM-MNMHPK67`, owner-supplied snippet used verbatim |
+| Form delivery | SMTP via `info@michiganinsuranceappraiser.com`, verified with a labelled test submission (`"via":"smtp"`) |
 
-Until the nameservers point at Hostinger, the real domain won't resolve and SSL can't issue, so live checks run on the
-preview URL. Hostinger serves its own Googlebot-blocking `robots.txt` on preview hosts; that's expected. Our guard also
+Go-live checks (2026-11-18): `http://`, `http://www.` and `https://www.` versions of the homepage and four interior pages
+all 301 to `https://michiganinsuranceappraiser.com/...`; `/page/index.php` 301s to `/page/`; all 51 sitemap URLs return 200
+with no `X-Robots-Tag`; our own `robots.txt` is served; the Search Console file returns 200, byte-identical, with no
+`X-Robots-Tag`; `/api/_private/config.php` returns 404 with 0 bytes. Hostinger serves its own Googlebot-blocking `robots.txt` on preview hosts; that's expected. Our guard also
 sends `X-Robots-Tag: noindex, nofollow` on every host that isn't the real domain.
 
 ### Why pages are `dir/index.php` (the guard setup)
@@ -152,13 +157,16 @@ outside it. **Never commit credentials**: `_private/` is in `.gitignore`. Config
 return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465, 'smtp_user' => 'info@michiganinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox exists: upload the config, confirm `/api/_private/config.php` returns 404 with 0 bytes, send one
-submission labelled as a test, and confirm the log shows `"via":"smtp"`.
+Status: the config was uploaded on 2026-11-18 (local copy deleted), `/api/_private/config.php` returns 404 with 0 bytes, and a
+submission labelled as a test was logged with `"via":"smtp"`. To read the log, download
+`public_html/api/_private/leads.log.php` with the file API (`GET {url-without-/tus}/raw/public_html/api/_private/leads.log.php`).
+If the mailbox password changes, upload a new config the same way.
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty by default. When set, the head snippet is output (or `GTM_HEAD_SNIPPET` verbatim if the
-owner supplies one) plus the `<noscript>` iframe right after `<body>`.
+`GTM_ID` in `build.py` is set to `GTM-MNMHPK67`, and `GTM_HEAD_SNIPPET` holds the owner-supplied head snippet exactly as given
+(output right after `<meta charset>`); the `<noscript>` iframe for the same ID is output right after `<body>`. Set `GTM_ID = ""`
+to remove both.
 
 ## Photos (internal record — not published on the site)
 

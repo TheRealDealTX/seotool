@@ -38,9 +38,14 @@ FAV = "1"
 FONTS = "https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@600;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap"
 
 # Google Tag Manager: leave empty until a container ID is supplied (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+GTM_ID = "GTM-MNMHPK67"
 # If the owner supplies a full snippet, paste it here verbatim; otherwise the standard snippet is generated from GTM_ID.
-GTM_HEAD_SNIPPET = ""
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MNMHPK67"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Search Console verification file: written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
