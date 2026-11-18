@@ -36,7 +36,7 @@ FAV = "1"
 HOURS = "Mon–Fri 8am–6pm MT"
 
 # Google Tag Manager: leave empty until a container ID is supplied (e.g. "GTM-XXXXXXX").
-GTM_ID = ""
+GTM_ID = "GTM-MLHQJXFL"
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -237,14 +237,20 @@ def footer():
 <div class="call-bar"><a href="tel:{TEL}">{ic("phone")} Call now</a><a href="{CONTACT}">{ic("doc")} Free review</a></div>"""
 
 
+# Head snippet exactly as supplied by the site owner (do not reformat).
+GTM_HEAD = """<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MLHQJXFL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- End Google Tag Manager -->
+"""
+
+
 def gtm_head():
-    if not GTM_ID:
-        return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\n"
-            f"new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\n"
-            f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
-            f"'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return GTM_HEAD if GTM_ID else ""
 
 
 def gtm_body():
@@ -891,7 +897,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and evaluate your claim.</li><li>To provide services you ask for.</li><li>To keep the site secure and working properly.</li></ul>
 <p>We don’t sell your personal information. We share it only with people who need it to help with your claim (with your permission), with providers who host our site and email, or when the law requires it.</p>
 <h2>Claim tools</h2><p>Our calculators and planners run entirely in your browser. The numbers you enter aren’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add site analytics, this policy will be updated to describe it.</p>
+<h2>Cookies and analytics</h2><p>We use Google Tag Manager and Google’s measurement tags to understand how visitors use the site, such as which pages are viewed. These tools may set cookies and collect standard device and usage data under Google’s privacy policy. Fonts load from Google Fonts, which may log standard request data. You can limit cookies through your browser settings.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out at any time.</p>
 <h2>Your choices</h2><p>You can ask us to access, correct or delete personal information you’ve given us by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>"""),

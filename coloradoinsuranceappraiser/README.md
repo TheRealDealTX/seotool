@@ -9,12 +9,12 @@ design are new and differ from every sister state site.
 | | |
 | --- | --- |
 | Hostinger website UID | `Y6aPtGE0b` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | https://coloradoinsuranceappraiser.com (attached at creation) |
+| Domain | https://coloradoinsuranceappraiser.com (live; SSL for apex + www; www and http 301 to it) |
 | Preview URL | https://storied-darksalmon-crow-87.hostingersite.com |
 | Nameservers to set at the registrar | `helios.dns-parking.com`, `aster.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@coloradoinsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@coloradoinsuranceappraiser.com (SMTP delivery verified Nov 18, 2026) |
+| Google Tag Manager | `GTM-MLHQJXFL` (head snippet exactly as supplied + noscript iframe after `<body>`) |
 
 ## Layout
 
