@@ -12,8 +12,8 @@ tool logic, favicon/photo pipelines, canonical-host guard). Content, URL slugs a
 | Preview URL | https://inventive-powderblue-lyrebird-53.hostingersite.com |
 | Nameservers to set at the registrar | `orbit.dns-parking.com`, `horizon.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@indianainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | none yet (`GTM_ID = ""` in `build.py`) |
+| Email / form inbox | info@indianainsuranceappraiser.com (SMTP configured on the server; verified 2026-11-18) |
+| Google Tag Manager | `GTM-5MGHQLMK` (owner-supplied snippet in `GTM_SNIPPET`, `build.py`) |
 
 Until the nameservers point to Hostinger, the real domain won't resolve and SSL can't issue, so live
 checks run against the preview URL. Hostinger serves its own Googlebot-blocking `robots.txt` on
@@ -159,15 +159,15 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@indianainsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives: upload the config (keep any local copy outside the repo and delete it
-after), confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a
-test, and confirm the log shows `"via":"smtp"`.
+Configured 2026-11-18: the config was uploaded from outside the repo and the local copy deleted;
+`/api/_private/config.php` and `leads.log.php` return 404 with 0 bytes; one submission labelled as a test was
+sent and the log shows `"via":"smtp"`. To change the password, upload a new config the same way.
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty by default. When set (e.g. `"GTM-XXXXXXX"`), every page gets the standard
-head snippet and the `<noscript>` iframe right after `<body>`. If a full snippet is supplied, paste it
-into `gtm_head()` / `gtm_body()` exactly as provided.
+The owner supplied a Google tag snippet for `GTM-5MGHQLMK`; it is stored verbatim in `GTM_SNIPPET` in `build.py`
+and placed right after `<meta charset>` on every page. No `<noscript>` part was supplied, so none is added.
+If `GTM_SNIPPET` is emptied, setting `GTM_ID` falls back to the standard GTM head snippet plus the `<noscript>` iframe.
 
 ## Photos
 

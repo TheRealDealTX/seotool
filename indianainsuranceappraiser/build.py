@@ -35,7 +35,7 @@ TODAY = date.today().isoformat()
 VER = "20261117a"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM output.
-GTM_ID = ""
+GTM_ID = "GTM-5MGHQLMK"
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
 GSC_BODY = "google-site-verification: googlecccfbf2f7e9e5ae4.html"
@@ -259,7 +259,19 @@ def footer():
 <div class="callbar"><a href="tel:{TEL}">{ic("phone")} Call now</a><a href="{CONTACT}">{ic("mail")} Free review</a></div>"""
 
 
+# Google tag snippet exactly as supplied by the site owner (head only; no noscript part was supplied).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5MGHQLMK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+"""
+
+
 def gtm_head():
+    if GTM_SNIPPET:
+        return GTM_SNIPPET
     if not GTM_ID:
         return ""
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
@@ -268,7 +280,7 @@ def gtm_head():
 
 
 def gtm_body():
-    if not GTM_ID:
+    if GTM_SNIPPET or not GTM_ID:
         return ""
     return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\n'
             'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n')
