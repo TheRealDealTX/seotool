@@ -8,12 +8,12 @@ The engineering (generator, validator, deploy script, form handler, tool logic, 
 | | |
 | --- | --- |
 | Hostinger website UID | `mYtxbSNax` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter, server `us-phx-h5g-node3`) |
-| Domain | `kansasinsuranceappraiser.com` (attached at creation; waiting on nameservers) |
+| Live domain | https://kansasinsuranceappraiser.com (live Nov 18, 2026; SSL covers the domain and `www`, expires Feb 15, 2027 and auto-renews; www and http 301 to it) |
 | Preview URL | https://growing-olive-turkey-24.hostingersite.com (sends `X-Robots-Tag: noindex, nofollow`) |
 | Nameservers to set at the registrar | `helios.dns-parking.com`, `aster.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@kansasinsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@kansasinsuranceappraiser.com (form delivers over SMTP; verified Nov 18, 2026) |
+| Google Tag Manager | `GTM-MF386JDG` (owner-supplied head tag + noscript iframe on every page) |
 
 ## Layout
 
@@ -180,7 +180,9 @@ always appends a JSON line to `public_html/api/_private/leads.log.php` (which st
 header, so it returns 404 when requested). Hostinger’s file API can’t write outside `public_html`, which
 is why `_private/` lives there. `_private/` is in `.gitignore` — **never commit credentials**.
 
-Config file to upload once the mailbox exists (keep any local copy outside the repo and delete it after upload):
+The config is **on the server** (uploaded Nov 18, 2026; no copy kept anywhere else). It returns 404 with 0 bytes, and a
+labelled test submission logged `"via":"smtp"`. To change the password, re-upload a file in this shape (keep any local
+copy outside the repo and delete it after upload):
 
 ```php
 <?php
@@ -194,8 +196,10 @@ and confirm the log line shows `"via":"smtp"`.
 
 ## Google Tag Manager
 
-`GTM_ID = ""` in `build.py`. When set, every page gets the standard head snippet right after `<meta charset>`
-and the `<noscript>` iframe right after `<body>`. Use the container ID exactly as provided, rebuild, validate, deploy.
+`GTM_ID = "GTM-MF386JDG"` in `build.py`. `GTM_HEAD` holds the head tag exactly as the owner supplied it (an async
+`gtm.js` loader plus a `dataLayer`/`gtag('js')` init); it is output right after `<meta charset>` on every page, and the
+standard `<noscript>` iframe for the same container is output right after `<body>`. Empty `GTM_HEAD` falls back to the
+standard GTM snippet; empty `GTM_ID` outputs no tag at all.
 
 ## SEO rules enforced by validate.py
 
@@ -214,7 +218,7 @@ Kansas + 12 cities as areaServed, OfferCatalog of services), the WebSite and one
 AboutPage, ContactPage or CollectionPage) linked to its BreadcrumbList, primary image and main entity,
 plus Service, FAQPage, ItemList, WebApplication, BlogPosting, HowTo or DefinedTermSet where they apply.
 
-## After the nameservers point here
+## Go-live checks (done Nov 18, 2026)
 
 1. Confirm SSL covers `kansasinsuranceappraiser.com` **and** `www.` (`agency-hosting_websites_get` → `ssl_cert.names`);
    if `www` is missing, `agency-hosting_ssl_reinstall-website` and wait for `active`.
@@ -222,4 +226,9 @@ plus Service, FAQPage, ItemList, WebApplication, BlogPosting, HowTo or DefinedTe
    `https://kansasinsuranceappraiser.com/page/`, `/page/index.php` 301s to `/page/`, every sitemap URL is 200,
    no `X-Robots-Tag` on the real domain, our own `robots.txt` is served, and the GSC file matches byte for byte.
    A www URL returning 200 with `x-hcdn-cache-status: HIT` is a stale CDN copy: clear the cache and recheck.
-3. Verify the URL-prefix property in Search Console, then submit `https://kansasinsuranceappraiser.com/sitemap.xml`.
+3. Verify the URL-prefix property in Search Console, then submit `https://kansasinsuranceappraiser.com/sitemap.xml`
+   (owner action). Keep `googlecccfbf2f7e9e5ae4.html` on the server permanently.
+
+Steps 1–2 passed on Nov 18, 2026: SSL names include `www`, all redirects 301 correctly on the homepage and three
+interior pages, all 51 sitemap URLs return 200, the real domain sends no `X-Robots-Tag`, our `robots.txt` is served
+and the GSC file is byte-identical.

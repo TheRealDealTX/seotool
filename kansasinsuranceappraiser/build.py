@@ -35,7 +35,14 @@ VER = "20261117a"
 FAV = "1"
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-MF386JDG"
+# The head tag exactly as provided by the site owner. Leave GTM_HEAD empty to fall back to the standard GTM snippet.
+GTM_HEAD = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MF386JDG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -252,6 +259,8 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_HEAD:
+        return "<!-- Google Tag Manager -->\n" + GTM_HEAD + "\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});"
             "var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;"
             f"f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
