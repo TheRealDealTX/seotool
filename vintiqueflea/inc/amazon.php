@@ -15,7 +15,7 @@ const AMAZON_CACHE_MAX_AGE = 172800;
 
 function amazon_key(array $p): string
 {
-    return !empty($p['asin']) ? 'asin:' . $p['asin'] : 'q:' . strtolower(trim($p['q'] ?? $p['name']));
+    return 'q:' . strtolower(trim($p['q'] ?? $p['name']));
 }
 
 function amazon_cache(): array

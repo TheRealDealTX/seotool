@@ -20,6 +20,9 @@ require INC . '/config.php';
 require INC . '/data.php';
 require INC . '/photos.php';
 require INC . '/amazon.php';
+if (is_file(INC . '/asins.php')) {
+    require INC . '/asins.php';
+}
 require INC . '/layout.php';
 require INC . '/routes.php';
 

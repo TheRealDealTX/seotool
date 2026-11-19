@@ -10,6 +10,9 @@ define('DATA_DIR', dirname(__DIR__) . '/data');
 require INC . '/config.php';
 require INC . '/data.php';
 require INC . '/photos.php';
+if (is_file(INC . '/asins.php')) {
+    require INC . '/asins.php';
+}
 require INC . '/layout.php';
 require INC . '/amazon.php';
 
@@ -39,8 +42,8 @@ $cache = amazon_cache();
 $resources = ['Images.Primary.Large', 'ItemInfo.Title'];
 $ok = $fail = 0;
 foreach (all_products() as $key => $p) {
-    if (!empty($p['asin'])) {
-        $r = paapi_call('GetItems', ['ItemIds' => [$p['asin']], 'Resources' => $resources], $creds);
+    if ($asin = product_asin($p)) {
+        $r = paapi_call('GetItems', ['ItemIds' => [$asin], 'Resources' => $resources], $creds);
         $item = $r['ItemsResult']['Items'][0] ?? null;
     } else {
         $r = paapi_call('SearchItems', ['Keywords' => $p['q'], 'ItemCount' => 1, 'Resources' => $resources], $creds);

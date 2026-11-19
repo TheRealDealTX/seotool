@@ -12,10 +12,23 @@ function abs_url(string $path): string
     return SITE_URL . $path;
 }
 
+/** ASIN for a product: explicit 'asin', else the researched match in inc/asins.php. */
+function product_asin(array $p): ?string
+{
+    if (!empty($p['asin'])) {
+        return $p['asin'];
+    }
+    $k = 'q:' . strtolower(trim($p['q'] ?? $p['name']));
+    return defined('PRODUCT_ASINS') ? (PRODUCT_ASINS[$k] ?? null) : null;
+}
+
 function amazon_url(array $p): string
 {
     if (function_exists('amazon_item') && ($hit = amazon_item($p))) {
         return $hit['url'];
+    }
+    if ($asin = product_asin($p)) {
+        $p['asin'] = $asin;
     }
     if (!empty($p['asin'])) {
         return 'https://www.amazon.com/dp/' . rawurlencode($p['asin']) . '/?tag=' . AMAZON_TAG;
