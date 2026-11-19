@@ -37,7 +37,8 @@ $graph = array_merge([
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/wp-content/uploads/2026/01/cropped-Thought-Changer-Site-Icon-32x32.webp" sizes="32x32">
 <link rel="icon" href="/wp-content/uploads/2026/01/cropped-Thought-Changer-Site-Icon-192x192.webp" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-Thought-Changer-Site-Icon-180x180.webp">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#00B3D1">
 <link rel="alternate" type="application/rss+xml" title="<?= SITE_NAME ?> &raquo; Feed" href="<?= SITE_URL ?>/feed/">
 <link rel="preconnect" href="https://fonts.googleapis.com">

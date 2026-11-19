@@ -14,7 +14,7 @@ const AMAZON_TAG = 'thoughtchangerblog-20';
 const LOGO = '/wp-content/uploads/2026/01/Thought-Changer-Logo.webp';
 const LOGO_WHITE = '/wp-content/uploads/2026/01/Thought-Changer-Logo-Wh.webp';
 const SITE_ICON = '/wp-content/uploads/2026/01/cropped-Thought-Changer-Site-Icon-270x270.webp';
-const ASSET_VER = '20261119b';
+const ASSET_VER = '20261119c';
 
 define('APP', __DIR__);
 define('WEBROOT', dirname(__DIR__));
