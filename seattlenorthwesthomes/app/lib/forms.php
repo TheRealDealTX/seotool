@@ -109,15 +109,9 @@ function handle_submit(): void
     $lines[] = '';
     $lines[] = 'Submitted from: ' . abs_url($back);
     $lines[] = 'Time: ' . date('F j, Y g:i a T');
-    $host = parse_url(cfg('url'), PHP_URL_HOST);
-    $headers = [
-        'From: ' . cfg('name') . ' <no-reply@' . $host . '>',
-        'Reply-To: ' . $data['email'],
-        'Content-Type: text/plain; charset=UTF-8',
-    ];
     $name = trim(($data['first_name'] ?? '') . ' ' . ($data['last_name'] ?? ''));
-    @mail(cfg('email'), '=?UTF-8?B?' . base64_encode(FORM_LABELS[$form] . ($name ? ' — ' . $name : '')) . '?=',
-        implode("\n", $lines), implode("\r\n", $headers));
+    $sent = send_mail(cfg('email'), FORM_LABELS[$form] . ($name ? ' — ' . $name : ''), implode("\n", $lines), $data['email']);
+    if (!$sent) error_log('Lead email not sent (' . $form . '); it is still saved in storage.');
 
     redirect('/thank-you/?f=' . $form, 303);
 }

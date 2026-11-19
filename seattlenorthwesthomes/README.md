@@ -64,7 +64,7 @@ and canonicalise to `/homes-for-sale/`. `*.hostingersite.com` hosts send
 - 12 new Seattle posts (first-time buyers, closing costs, inspections, best time to sell,
   pricing, ADUs, neighborhoods, suburbs, light rail, maintenance, condo vs townhouse, moving
   from Texas), each with FAQ schema.
-- 12 listings and 12 neighborhood guides. **The listings are representative examples, not
+- 40 listings and 16 neighborhood guides. **The listings are representative examples, not
   live MLS inventory** — `listing_note` in `config.php` prints a disclaimer on every listing
   until you replace them with real homes (then set it to `''`).
 - Listing/post photography: Unsplash (free licence), credits in `tools/photo-credits.tsv`.
@@ -73,8 +73,14 @@ and canonicalise to `/homes-for-sale/`. `*.hostingersite.com` hosts send
 
 Buy, sell, contact, showing-request and newsletter forms post to `/submit/`. Stateless
 HMAC token (works through the CDN), honeypot, minimum fill time, 8-per-hour IP limit.
-Each lead is emailed to `config.php` `email` via PHP `mail()` and appended to
-`app/storage/leads-YYYY-MM.php` (guarded; read it in hPanel's file manager).
+Each lead is emailed to `config.php` `email` (info@seattlenorthwesthomes.com) through
+authenticated SMTP (`app/lib/mailer.php`, smtp.hostinger.com:465, sent from and to the info@
+mailbox, Reply-To set to the visitor) and appended to `app/storage/leads-YYYY-MM.php`
+(guarded; read it in hPanel's file manager).
+
+The SMTP password lives only in `app/secrets.php` on the server — git-ignored, never committed.
+To recreate it, copy the format from the header comment in `app/lib/mailer.php` and deploy it
+with `./deploy.sh app/secrets.php`. Without it the site falls back to PHP `mail()`.
 
 ## Local dev
 

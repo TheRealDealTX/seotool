@@ -5,7 +5,7 @@
 return [
     'name'        => 'Seattle Northwest Homes',
     'url'         => 'https://seattlenorthwesthomes.com',   // canonical origin, no trailing slash
-    'email'       => 'selena@seattlenorthwesthomes.com',    // shown on the site and receives form leads
+    'email'       => 'info@seattlenorthwesthomes.com',      // shown on the site and receives form leads (SMTP login in app/secrets.php)
     'phone'       => '',                                     // e.g. '(206) 555-0100' — leave blank to hide
     'agent'       => 'Selena',
     // Washington advertising rules require the licensed brokerage firm's name on

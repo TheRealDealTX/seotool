@@ -1,2 +1,3 @@
 storage/
 app/storage/
+app/secrets.php

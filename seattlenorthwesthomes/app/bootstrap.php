@@ -154,4 +154,5 @@ function not_found(): void
 }
 
 require APP . '/lib/schema.php';
+require APP . '/lib/mailer.php';
 require APP . '/lib/forms.php';
