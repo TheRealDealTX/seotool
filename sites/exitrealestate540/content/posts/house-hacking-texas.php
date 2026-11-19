@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['book-house-hacking', 'schlage-encode-lock', 'book-rental-property'],
     'tools'       => ['mortgage-calculator', 'rental-property-calculator'],
-    'related'     => ['how-to-analyze-a-rental-property', 'texas-homestead-exemption', 'first-time-home-buyer-texas'],
+    'related'     => ['how-to-analyze-a-rental-property', 'texas-homestead-exemption', 'fha-loan-requirements-texas'],
     'body'        => <<<'HTML'
 <p>House hacking means buying a home you live in and renting out part of it, such as the other side of a duplex, a garage apartment or spare bedrooms, so tenants cover some or all of your mortgage. Because you live there, you can use owner-occupied financing with a small down payment, which makes house hacking one of the most accessible ways to start investing in Texas real estate.</p>
 <p>It is not free money. Done right, though, it lowers your housing cost, builds equity and leaves you with a rental when you move out.</p>

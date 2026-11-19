@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['accordion-file-organizer', 'document-scanner', 'sentrysafe-fireproof'],
     'tools'       => ['seller-net-proceeds-calculator'],
-    'related'     => ['selling-a-house-as-is-texas', 'sell-fire-damaged-house-texas', 'buying-a-house-in-a-flood-zone-houston'],
+    'related'     => ['selling-a-house-as-is-texas', 'sell-fire-damaged-house-texas', 'sell-house-by-owner-texas'],
     'body'        => <<<'HTML'
 <p>The Texas seller disclosure notice is a written form that most home sellers must give buyers, describing what the seller knows about the property's condition. It is required by Texas Property Code Section 5.008 for resales of single-family homes, and it must be delivered on or before the contract's effective date. Here is what the form covers, how the flood questions work, who is exempt and what happens if a seller gets it wrong.</p>
 

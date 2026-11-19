@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['document-scanner', 'laser-measure', 'accordion-file-organizer'],
     'tools'       => ['insurance-claim-depreciation-calculator'],
-    'related'     => ['what-to-do-after-a-house-fire', 'hurricane-damage-insurance-claim-texas', 'water-damage-claim-denied'],
+    'related'     => ['what-to-do-after-a-house-fire', 'hurricane-damage-insurance-claim-texas', 'appraisal-clause-insurance'],
     'body'        => <<<'HTML'
 <p>The difference between a public adjuster vs insurance adjuster comes down to who hires them and who pays them. An insurance adjuster works for your insurance company. A public adjuster works for you, the policyholder, and is paid a share of your claim settlement. Both can be skilled and honest, but they sit on opposite sides of the table.</p>
 <p>This guide explains the three types of adjusters you may meet after a Texas property loss, how public adjusters are regulated and paid, and how to decide whether hiring one makes sense for your claim.</p>

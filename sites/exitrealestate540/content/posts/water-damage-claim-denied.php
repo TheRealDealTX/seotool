@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['govee-water-sensor', 'smart-water-shutoff', 'moisture-meter', 'document-scanner'],
     'tools'       => ['insurance-claim-depreciation-calculator'],
-    'related'     => ['public-adjuster-vs-insurance-adjuster', 'hurricane-damage-insurance-claim-texas', 'buying-a-house-in-a-flood-zone-houston'],
+    'related'     => ['public-adjuster-vs-insurance-adjuster', 'hurricane-damage-insurance-claim-texas', 'how-to-file-a-home-insurance-claim'],
     'body'        => <<<'HTML'
 <p>If your water damage claim was denied, the denial is not necessarily final. Most Texas water damage denials rest on a few predictable reasons: the damage was "gradual" instead of sudden, the water was "flood," the loss was caused by wear or poor maintenance, mold limits apply, or the claim was reported late. Each one can be challenged if the facts and the policy language support you.</p>
 <p>This guide explains why insurers deny water claims, what Texas law requires of them, and the practical steps Houston-area homeowners can take to get a claim reopened, reappraised or escalated.</p>

@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['quick-dam-flood-barrier', 'govee-water-sensor', 'midland-weather-radio', 'waterproof-document-bag'],
     'tools'       => ['hurricane-prep-checklist', 'mortgage-calculator'],
-    'related'     => ['first-time-home-buyer-texas', 'closing-costs-in-texas', 'texas-seller-disclosure-notice'],
+    'related'     => ['first-time-home-buyer-texas', 'closing-costs-in-texas', 'homeowners-insurance-texas'],
     'body'        => <<<'HTML'
 <p>Buying a house in a flood zone in Houston can work out fine, but only if you check the risk before your option period ends. That means reading the FEMA flood zone, studying the seller's flood disclosures, getting a flood insurance quote and, ideally, seeing an elevation certificate. Flood insurance can take 30 days to start, so line it up with your closing rather than leaving it to the last week.</p>
 <p>Here is how Houston buyers can size up flood risk and protect themselves from contract to closing.</p>

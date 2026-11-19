@@ -15,7 +15,7 @@ return [
     ],
     'products'    => ['midea-dehumidifier', 'midland-weather-radio', 'portable-power-station', 'moving-boxes-kit'],
     'tools'       => ['rent-vs-buy-calculator', 'texas-property-tax-calculator'],
-    'related'     => ['best-houston-suburbs-for-families', 'texas-homestead-exemption', 'protest-property-taxes-harris-county'],
+    'related'     => ['best-houston-suburbs-for-families', 'texas-homestead-exemption', 'cost-of-living-in-houston'],
     'body'        => <<<'HTML'
 <p>Moving to Houston means trading a state income tax for higher property taxes, getting used to long, humid summers, and learning to live with hurricanes, flood risk and a car-first city. In return you get a huge job market, a wide range of housing and some of the most diverse food and culture in the country.</p>
 <p>This guide covers what newcomers most often wish they had known: taxes, Houston's famous lack of zoning, weather, traffic, neighborhoods, cost of living and how to set up electricity. It ends with a practical relocation checklist.</p>

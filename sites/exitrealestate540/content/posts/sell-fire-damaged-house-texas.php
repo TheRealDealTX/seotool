@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['sentrysafe-fireproof', 'document-scanner', 'first-alert-smoke-co'],
     'tools'       => ['seller-net-proceeds-calculator', 'insurance-claim-depreciation-calculator'],
-    'related'     => ['what-to-do-after-a-house-fire', 'selling-a-house-as-is-texas', 'texas-seller-disclosure-notice'],
+    'related'     => ['what-to-do-after-a-house-fire', 'selling-a-house-as-is-texas', 'loss-of-use-coverage'],
     'body'        => <<<'HTML'
 <p>You can sell a fire damaged house in Texas three ways: repair it and list it on the open market, list it as-is with an agent, or sell it to a cash buyer or investor. The right choice depends on how bad the damage is, how much insurance money you have, what your lender requires and how fast you need to move. This guide walks through each option, the insurance and mortgage issues that trip sellers up, and the disclosure rules you cannot skip.</p>
 

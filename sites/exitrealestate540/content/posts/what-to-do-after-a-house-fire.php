@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['first-alert-smoke-co', 'sentrysafe-fireproof', 'document-scanner', 'fire-extinguisher-home'],
     'tools'       => ['insurance-claim-depreciation-calculator'],
-    'related'     => ['sell-fire-damaged-house-texas', 'public-adjuster-vs-insurance-adjuster', 'water-damage-claim-denied'],
+    'related'     => ['sell-fire-damaged-house-texas', 'public-adjuster-vs-insurance-adjuster', 'loss-of-use-coverage'],
     'body'        => <<<'HTML'
 <p>If you are wondering what to do after a house fire, start here: get everyone to safety, call your insurance company the same day, and document everything before you clean up or throw anything away. The choices you make in the first week shape how quickly you get back into a safe home and how much of your claim gets paid.</p>
 <p>This checklist walks Texas homeowners through the first 24 hours, the insurance claim, temporary housing, contents inventories and the payout math that trips up a lot of families.</p>

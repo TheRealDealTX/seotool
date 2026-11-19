@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['book-first-time-buyer', 'accordion-file-organizer', 'outlet-tester', 'schlage-encode-lock'],
     'tools'       => ['home-affordability-calculator', 'closing-cost-calculator'],
-    'related'     => ['closing-costs-in-texas', 'buying-a-house-in-a-flood-zone-houston', 'texas-homestead-exemption'],
+    'related'     => ['closing-costs-in-texas', 'buying-a-house-in-a-flood-zone-houston', 'fha-loan-requirements-texas'],
     'body'        => <<<'HTML'
 <p>If you are a first time home buyer in Texas, you have more help available than most people realize: two state agencies offer down payment assistance of up to 5% of your loan, and you can pair it with an FHA, VA, USDA or conventional loan. The rest comes down to knowing the Texas-specific steps, especially the option period, and budgeting for the costs that show up after the down payment.</p>
 <p>This guide walks through the programs, the loans, the buying process from pre-approval to keys, and the money you need at each stage.</p>

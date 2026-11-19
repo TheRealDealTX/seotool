@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['book-brrrr', 'book-rental-property', 'moisture-meter'],
     'tools'       => ['rental-property-calculator', 'refinance-calculator'],
-    'related'     => ['how-to-analyze-a-rental-property', 'house-hacking-texas', 'selling-a-house-as-is-texas'],
+    'related'     => ['how-to-analyze-a-rental-property', 'house-hacking-texas', '1031-exchange-texas'],
     'body'        => <<<'HTML'
 <p>The BRRRR method stands for buy, rehab, rent, refinance, repeat. You buy a property below its potential value, renovate it, rent it out, then refinance based on the new, higher value to pull out most or all of the cash you put in, and use that cash on the next deal. When it works, you build a rental portfolio while recycling the same pool of capital.</p>
 <p>When it does not, you end up with money trapped in a property that barely covers its mortgage. The difference is almost always in the numbers you run before you buy.</p>

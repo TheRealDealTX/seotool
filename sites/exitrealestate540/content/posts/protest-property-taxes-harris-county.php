@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['laser-measure', 'document-scanner', 'accordion-file-organizer'],
     'tools'       => ['texas-property-tax-calculator'],
-    'related'     => ['texas-homestead-exemption', 'houston-home-maintenance-checklist', 'closing-costs-in-texas'],
+    'related'     => ['texas-homestead-exemption', 'houston-home-maintenance-checklist', 'houston-property-tax-rate'],
     'body'        => <<<'HTML'
 <p>To protest property taxes in Harris County, file a protest of your appraised value with the Harris Central Appraisal District (HCAD) by May 15, or within 30 days of receiving your notice if that is later, then back it up with comparable sales, photos and repair estimates. Most homeowners can do the whole thing online through HCAD's iFile system, and many protests settle without ever sitting in front of the appraisal review board.</p>
 <p>Here is how the process works step by step, what evidence actually moves the number, and what to do if the first answer is no.</p>

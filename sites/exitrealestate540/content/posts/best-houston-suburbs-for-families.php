@@ -15,7 +15,7 @@ return [
     ],
     'products'    => ['moving-boxes-kit', 'schlage-encode-lock', 'quick-dam-flood-barrier'],
     'tools'       => ['home-affordability-calculator', 'texas-property-tax-calculator'],
-    'related'     => ['moving-to-houston', 'buying-a-house-in-a-flood-zone-houston', 'first-time-home-buyer-texas'],
+    'related'     => ['moving-to-houston', 'buying-a-house-in-a-flood-zone-houston', 'best-neighborhoods-in-houston'],
     'body'        => <<<'HTML'
 <p>The best Houston suburbs for families usually include Katy, Sugar Land, The Woodlands, Pearland, Cypress, Friendswood, League City, Kingwood and the Tomball and Fulshear corridor. Each offers established public school districts, plenty of parks and newer housing, but they differ sharply on commute, flood history and total tax rate.</p>
 <p>Below is a practical look at each area: what it feels like, which school districts serve it, how the commute works and what to check before you buy. We have avoided made-up rankings and statistics; verify school ratings and tax rates for the exact address you are considering.</p>

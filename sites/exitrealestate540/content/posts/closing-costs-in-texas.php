@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['accordion-file-organizer', 'document-scanner', 'book-first-time-buyer'],
     'tools'       => ['closing-cost-calculator', 'mortgage-calculator'],
-    'related'     => ['first-time-home-buyer-texas', 'texas-homestead-exemption', 'buying-a-house-in-a-flood-zone-houston'],
+    'related'     => ['first-time-home-buyer-texas', 'texas-homestead-exemption', 'down-payment-assistance-texas'],
     'body'        => <<<'HTML'
 <p>Closing costs in Texas typically land in the 2% to 5% range that Freddie Mac cites nationally, and on a buyer's side they are mostly lender fees, the lender's title policy, escrow and recording charges, a survey and prepaid taxes and insurance. Texas has two quirks that work in your favor: there is no transfer tax, and title insurance premiums are set by the state, so they cost the same at every title company.</p>
 <p>Here is what each charge is, who usually pays it, and where you have room to save.</p>

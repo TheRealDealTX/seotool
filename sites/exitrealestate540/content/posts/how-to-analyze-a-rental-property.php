@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['book-rental-property', 'book-millionaire-investor', 'laser-measure'],
     'tools'       => ['rental-property-calculator', 'texas-property-tax-calculator'],
-    'related'     => ['brrrr-method-explained', 'house-hacking-texas', 'protest-property-taxes-harris-county'],
+    'related'     => ['brrrr-method-explained', 'house-hacking-texas', 'short-term-rental-houston'],
     'body'        => <<<'HTML'
 <p>To analyze a rental property, estimate the rent it will actually collect, subtract every operating expense to get net operating income (NOI), then compare that NOI to the price (cap rate) and, after your mortgage payment, to the cash you invest (cash-on-cash return). Knowing how to analyze a rental property this way keeps you from buying on gut feel or a seller's pro forma.</p>
 <p>In Houston and the rest of Texas, the two expenses that sink most deals are property taxes and insurance. This guide walks through each metric, the quick rules of thumb and their limits, and a full worked example.</p>

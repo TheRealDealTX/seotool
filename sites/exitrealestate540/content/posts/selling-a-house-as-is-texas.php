@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['outlet-tester', 'moisture-meter', 'accordion-file-organizer'],
     'tools'       => ['seller-net-proceeds-calculator'],
-    'related'     => ['texas-seller-disclosure-notice', 'sell-fire-damaged-house-texas', 'closing-costs-in-texas'],
+    'related'     => ['texas-seller-disclosure-notice', 'sell-fire-damaged-house-texas', 'selling-a-house-with-foundation-problems'],
     'body'        => <<<'HTML'
 <p>Selling a house as-is in Texas means you sell it in its present condition, without agreeing to make repairs or give warranties beyond those in the contract. It does not mean the buyer cannot inspect or walk away, and it does not excuse you from the seller's disclosure notice. Here is how as-is works under Texas law and the standard contract, and how to decide whether it is the right move for you.</p>
 

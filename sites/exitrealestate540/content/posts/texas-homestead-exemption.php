@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['accordion-file-organizer', 'document-scanner', 'sentrysafe-fireproof'],
     'tools'       => ['texas-property-tax-calculator'],
-    'related'     => ['protest-property-taxes-harris-county', 'first-time-home-buyer-texas', 'closing-costs-in-texas'],
+    'related'     => ['protest-property-taxes-harris-county', 'first-time-home-buyer-texas', 'mud-tax-texas'],
     'body'        => <<<'HTML'
 <p>The Texas homestead exemption removes part of your home's value from property taxation, and as of 2026 it is bigger than it has ever been: $140,000 off your school district taxable value, or $200,000 if you are 65 or older or disabled. It costs nothing to file, you usually only file once, and in a high-tax area like Houston it can save a typical homeowner well over a thousand dollars a year.</p>
 <p>Below is what changed in 2025, who qualifies, how to apply with the Harris Central Appraisal District (HCAD) or your county's district, and a worked example of the savings.</p>

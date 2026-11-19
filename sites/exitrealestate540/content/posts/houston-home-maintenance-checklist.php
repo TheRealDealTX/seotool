@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['filtrete-air-filters', 'midea-dehumidifier', 'govee-water-sensor', 'smart-water-shutoff'],
     'tools'       => ['hurricane-prep-checklist'],
-    'related'     => ['hurricane-damage-insurance-claim-texas', 'water-damage-claim-denied', 'texas-homestead-exemption'],
+    'related'     => ['hurricane-damage-insurance-claim-texas', 'water-damage-claim-denied', 'homeowners-insurance-texas'],
     'body'        => <<<'HTML'
 <p>A good home maintenance checklist for Houston looks different from the generic lists online, because our homes fight humidity most of the year, hurricanes from June through November, expansive clay soil under the slab and the occasional hard freeze. Spend a few hours each season on the tasks below and you will head off the most common Houston repair bills and insurance claims before they start.</p>
 <p>Use this as a working list. Print it, put it in your phone's calendar, or hand it to a handyman.</p>

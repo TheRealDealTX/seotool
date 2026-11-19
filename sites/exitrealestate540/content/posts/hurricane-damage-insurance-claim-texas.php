@@ -16,7 +16,7 @@ return [
     ],
     'products'    => ['heavy-duty-tarp', 'waterproof-document-bag', 'midland-weather-radio', 'champion-inverter-generator'],
     'tools'       => ['hurricane-prep-checklist', 'insurance-claim-depreciation-calculator'],
-    'related'     => ['public-adjuster-vs-insurance-adjuster', 'buying-a-house-in-a-flood-zone-houston', 'water-damage-claim-denied'],
+    'related'     => ['public-adjuster-vs-insurance-adjuster', 'hail-damage-roof-insurance-claim', 'water-damage-claim-denied'],
     'body'        => <<<'HTML'
 <p>A hurricane insurance claim in Texas often means two or even three separate claims: one for wind, one for flood and sometimes one with the Texas Windstorm Insurance Association (TWIA) if you live on the coast. Report each loss quickly, document everything before repairs, and learn the Texas deadlines that control how fast you get paid and what you must do before you sue.</p>
 <p>This guide is written for Houston and Gulf Coast homeowners, landlords and investors who want to file correctly the first time.</p>
