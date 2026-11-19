@@ -1,0 +1,541 @@
+{
+  "books_heldmann": {
+    "asin": "1580178405",
+    "title": "Be Your Own House Contractor (Carl Heldmann)",
+    "rating": 4.4,
+    "votes": 343,
+    "category": "books"
+  },
+  "books_contracting_guide": {
+    "asin": "1440346011",
+    "title": "The Complete Guide to Contracting Your Home (Kent Lester)",
+    "rating": 4.5,
+    "votes": 691,
+    "category": "books"
+  },
+  "books_dummies": {
+    "asin": "1119796792",
+    "title": "Building Your Custom Home For Dummies",
+    "rating": 4.3,
+    "votes": 156,
+    "category": "books"
+  },
+  "books_code_check": {
+    "asin": "1641552158",
+    "title": "Code Check 10th Edition: Illustrated Guide to Building a Safe House",
+    "rating": 4.7,
+    "votes": 107,
+    "category": "books"
+  },
+  "books_code_check_electrical": {
+    "asin": "1641551674",
+    "title": "Code Check Electrical 9th Edition",
+    "rating": 4.7,
+    "votes": 198,
+    "category": "books"
+  },
+  "books_not_so_big": {
+    "asin": "1561581305",
+    "title": "The Not So Big House (Sarah Susanka)",
+    "rating": 4.4,
+    "votes": 227,
+    "category": "books"
+  },
+  "books_pattern_language": {
+    "asin": "0195019199",
+    "title": "A Pattern Language (Christopher Alexander)",
+    "rating": 4.7,
+    "votes": 1000,
+    "category": "books"
+  },
+  "books_get_house_right": {
+    "asin": "1402791038",
+    "title": "Get Your House Right: Architectural Elements to Use & Avoid",
+    "rating": 4.6,
+    "votes": 680,
+    "category": "books"
+  },
+  "books_rental_property": {
+    "asin": "099071179X",
+    "title": "The Book on Rental Property Investing (Brandon Turner)",
+    "rating": 4.7,
+    "votes": 8500,
+    "category": "investing"
+  },
+  "books_house_hacking": {
+    "asin": "1947200151",
+    "title": "The House Hacking Strategy (Craig Curelop)",
+    "rating": 4.7,
+    "votes": 732,
+    "category": "investing"
+  },
+  "books_set_for_life": {
+    "asin": "1947200801",
+    "title": "Set for Life (Scott Trench)",
+    "rating": 4.6,
+    "votes": 2200,
+    "category": "investing"
+  },
+  "books_millionaire_re": {
+    "asin": "0071446370",
+    "title": "The Millionaire Real Estate Investor (Gary Keller)",
+    "rating": 4.7,
+    "votes": 3200,
+    "category": "investing"
+  },
+  "books_estimating": {
+    "asin": "1118099419",
+    "title": "Estimating Building Costs for Residential and Light Commercial Construction",
+    "rating": 4.2,
+    "votes": 43,
+    "category": "books"
+  },
+  "books_tiny_house": {
+    "asin": "0615708188",
+    "title": "Tiny House Design & Construction Guide (Dan Louche)",
+    "rating": 4.3,
+    "votes": 161,
+    "category": "books"
+  },
+  "books_first_time_buyer": {
+    "asin": "1524763438",
+    "title": "100 Questions Every First-Time Home Buyer Should Ask (4th Ed.)",
+    "rating": 4.5,
+    "votes": 362,
+    "category": "books"
+  },
+  "books_home_maintenance": {
+    "asin": "047043063X",
+    "title": "Home Maintenance For Dummies",
+    "rating": 4.6,
+    "votes": 954,
+    "category": "books"
+  },
+  "laser_measure": {
+    "asin": "B0C76CPGC7",
+    "title": "Bosch Blaze GLM100-23 100 ft Laser Distance Measure",
+    "rating": 4.6,
+    "votes": 2700,
+    "category": "tools"
+  },
+  "tape_measure": {
+    "asin": "B00002PV66",
+    "title": "Stanley FatMax 25 ft Tape Measure (33-725)",
+    "rating": 4.6,
+    "votes": 8700,
+    "category": "tools"
+  },
+  "moisture_meter": {
+    "asin": "B00275F5O2",
+    "title": "General Tools MMD4E Pin-Type Moisture Meter",
+    "rating": 4.5,
+    "votes": 15200,
+    "category": "tools"
+  },
+  "stud_finder": {
+    "asin": "B0917VXLDK",
+    "title": "Franklin Sensors ProSensor M210 Stud Finder",
+    "rating": 4.6,
+    "votes": 6700,
+    "category": "tools"
+  },
+  "outlet_tester": {
+    "asin": "B01AKX8L0M",
+    "title": "Klein Tools RT210 GFCI Outlet Tester",
+    "rating": 4.8,
+    "votes": 8900,
+    "category": "tools"
+  },
+  "ir_thermometer": {
+    "asin": "B0B71HFH9K",
+    "title": "Etekcity Lasergrip 774 Infrared Thermometer",
+    "rating": 4.6,
+    "votes": 48900,
+    "category": "tools"
+  },
+  "thermal_camera": {
+    "asin": "B072J49BX7",
+    "title": "FLIR ONE Pro Thermal Imaging Camera for iPhone (Lightning)",
+    "rating": 4.4,
+    "votes": 2300,
+    "category": "tools"
+  },
+  "drill_combo": {
+    "asin": "B00IJ0ALYS",
+    "title": "DEWALT 20V MAX Drill and Impact Driver Combo Kit (DCK240C2)",
+    "rating": 4.7,
+    "votes": 61400,
+    "category": "tools"
+  },
+  "level": {
+    "asin": "B010P0JXUC",
+    "title": "Goldblatt 48 in. Box Beam Spirit Level",
+    "rating": 4.7,
+    "votes": 1300,
+    "category": "tools"
+  },
+  "headlamp": {
+    "asin": "B08D66HCXW",
+    "title": "LHKNL Rechargeable LED Headlamp",
+    "rating": 4.5,
+    "votes": 38000,
+    "category": "tools"
+  },
+  "hard_hat": {
+    "asin": "B07L6DZJB1",
+    "title": "Pyramex Ridgeline Full Brim Vented Hard Hat, 4-Point Ratchet",
+    "rating": 4.6,
+    "votes": 7900,
+    "category": "safety"
+  },
+  "safety_glasses": {
+    "asin": "B002IVTX8E",
+    "title": "DEWALT DPG94 Dominator Safety Glasses",
+    "rating": 4.6,
+    "votes": 11800,
+    "category": "safety"
+  },
+  "smart_thermostat": {
+    "asin": "B09XXS48P8",
+    "title": "ecobee Smart Thermostat Premium",
+    "rating": 4.3,
+    "votes": 4200,
+    "category": "smart-home"
+  },
+  "nest_thermostat": {
+    "asin": "B0D5BBYRJM",
+    "title": "Google Nest Learning Thermostat (4th Gen) with Temperature Sensor",
+    "rating": 4.4,
+    "votes": 2600,
+    "category": "smart-home"
+  },
+  "site_camera": {
+    "asin": "B0DK4MQBGL",
+    "title": "eufy SoloCam E30 2K Solar Security Camera",
+    "rating": 4.3,
+    "votes": 1300,
+    "category": "safety"
+  },
+  "smart_lock": {
+    "asin": "B07HXFKMYR",
+    "title": "Schlage Encode Smart WiFi Deadbolt (Century, Satin Nickel)",
+    "rating": 4.3,
+    "votes": 16700,
+    "category": "smart-home"
+  },
+  "video_doorbell": {
+    "asin": "B0FHJ7TKZM",
+    "title": "Ring Battery Doorbell 2K (Speckled Gray)",
+    "rating": 4.3,
+    "votes": 9200,
+    "category": "smart-home"
+  },
+  "radon_detector": {
+    "asin": "B00H2VOSP8",
+    "title": "Airthings Corentium Home 223 Radon Detector",
+    "rating": 4.6,
+    "votes": 10800,
+    "category": "safety"
+  },
+  "smoke_co": {
+    "asin": "B00O8MVW12",
+    "title": "First Alert SC9120B Hardwired Smoke & CO Detector",
+    "rating": 4.7,
+    "votes": 20000,
+    "category": "safety"
+  },
+  "water_leak": {
+    "asin": "B0C3BB2X9J",
+    "title": "Govee Smart Water Leak Detector 2 (4-Pack)",
+    "rating": 4.4,
+    "votes": 1900,
+    "category": "safety"
+  },
+  "fire_extinguisher": {
+    "asin": "B00002ND64",
+    "title": "First Alert FA110 Home Fire Extinguisher (1-A:10-B:C)",
+    "rating": 4.8,
+    "votes": 30700,
+    "category": "safety"
+  },
+  "kill_a_watt": {
+    "asin": "B00009MDBU",
+    "title": "P3 P4400 Kill A Watt Electricity Usage Monitor",
+    "rating": 4.6,
+    "votes": 9700,
+    "category": "energy"
+  },
+  "smart_plug": {
+    "asin": "B08LN3C7WK",
+    "title": "Kasa Smart Plug Mini with Energy Monitoring (KP115)",
+    "rating": 4.5,
+    "votes": 17700,
+    "category": "energy"
+  },
+  "led_bulbs": {
+    "asin": "B01CAL1F5K",
+    "title": "Philips LED A19 60W-Equivalent Daylight Bulbs (16-Pack)",
+    "rating": 4.6,
+    "votes": 3800,
+    "category": "energy"
+  },
+  "caulk_gun": {
+    "asin": "B0002CKG1O",
+    "title": "Dripless ETS2000 Composite Caulk Gun",
+    "rating": 4.6,
+    "votes": 3900,
+    "category": "tools"
+  },
+  "weatherstrip": {
+    "asin": "B08S3M2HKL",
+    "title": "Alien Draft Seal Door & Window Weather Stripping (49 ft)",
+    "rating": 4.5,
+    "votes": 9300,
+    "category": "energy"
+  },
+  "blackout_curtains": {
+    "asin": "B01CS31QE0",
+    "title": "NICETOWN Thermal Insulated Blackout Curtains (2 Panels, 42x84, Black)",
+    "rating": 4.6,
+    "votes": 134800,
+    "category": "apartment"
+  },
+  "white_noise": {
+    "asin": "B00HD0ELFK",
+    "title": "Yogasleep Dohm Classic White Noise Machine",
+    "rating": 4.6,
+    "votes": 41000,
+    "category": "apartment"
+  },
+  "acoustic_panels": {
+    "asin": "B0FLJYL5WV",
+    "title": "Acoustic Foam Panels 12x12x2 in (52-Pack)",
+    "rating": 4.2,
+    "votes": 2500,
+    "category": "apartment"
+  },
+  "area_rug": {
+    "asin": "B0CNL42H6Y",
+    "title": "Abani Regal Washable Area Rug, 5x7 (Dark Grey)",
+    "rating": 4.5,
+    "votes": 311,
+    "category": "apartment"
+  },
+  "door_sweep": {
+    "asin": "B08HR2L8RZ",
+    "title": "Everlasting Comfort Under Door Draft Stopper",
+    "rating": 4.3,
+    "votes": 10400,
+    "category": "apartment"
+  },
+  "under_bed_storage": {
+    "asin": "B089Q6FY5H",
+    "title": "Under Bed Storage Boxes with Wheels and Lids, 40 Qt (3-Pack)",
+    "rating": 4.4,
+    "votes": 155,
+    "category": "apartment"
+  },
+  "command_strips": {
+    "asin": "B073XR4X72",
+    "title": "Command Large Picture Hanging Strips (14 Pairs)",
+    "rating": 4.6,
+    "votes": 111700,
+    "category": "apartment"
+  },
+  "folding_desk": {
+    "asin": "B09TW72GQ9",
+    "title": "GreenForest Folding Desk, No Assembly",
+    "rating": 4.7,
+    "votes": 13000,
+    "category": "apartment"
+  },
+  "balcony_planter": {
+    "asin": "B005G19DMO",
+    "title": "Lechuza Balconera Self-Watering Railing Planter (31.5 in, White)",
+    "rating": 4.6,
+    "votes": 3400,
+    "category": "outdoor"
+  },
+  "futon": {
+    "asin": "B0FJS3FFRC",
+    "title": "CUBENTE 78.8 in Convertible Futon Sofa Bed (Boneless Couch)",
+    "rating": 4.2,
+    "votes": 603,
+    "category": "apartment"
+  },
+  "storage_ottoman": {
+    "asin": "B07JNFKYC3",
+    "title": "SONGMICS 43 in Folding Storage Ottoman Bench",
+    "rating": 4.6,
+    "votes": 21500,
+    "category": "apartment"
+  },
+  "string_lights": {
+    "asin": "B00RQHBZVS",
+    "title": "Brightown 29 ft G40 LED Outdoor String Lights",
+    "rating": 4.5,
+    "votes": 57500,
+    "category": "outdoor"
+  },
+  "grow_light": {
+    "asin": "B085CDPSMR",
+    "title": "Full Spectrum 6000K LED Grow Light for Indoor Plants",
+    "rating": 4.5,
+    "votes": 22200,
+    "category": "outdoor"
+  },
+  "pool_bag": {
+    "asin": "B06XCYF9F9",
+    "title": "Earth Pak Waterproof Roll-Top Dry Bag with Phone Case",
+    "rating": 4.7,
+    "votes": 33300,
+    "category": "outdoor"
+  },
+  "outdoor_rug": {
+    "asin": "B08NPDCFDL",
+    "title": "Reversible Waterproof Plastic Outdoor Rug, 5x8 ft",
+    "rating": 4.4,
+    "votes": 11800,
+    "category": "outdoor"
+  },
+  "pet_gate": {
+    "asin": "B001OC5UMQ",
+    "title": "Regalo Easy Step Pressure-Mount Pet & Baby Gate (29-38.5 in)",
+    "rating": 4.4,
+    "votes": 175500,
+    "category": "pets"
+  },
+  "pet_carrier": {
+    "asin": "B07JZ3SRJP",
+    "title": "Henkelion Soft-Sided Airline-Approved Pet Carrier (up to 15 lb)",
+    "rating": 4.6,
+    "votes": 53400,
+    "category": "pets"
+  },
+  "moving_boxes": {
+    "asin": "B00KP37XYS",
+    "title": "Bankers Box Classic Moving Box Kit with Handles (12-Pack)",
+    "rating": 4.7,
+    "votes": 14500,
+    "category": "moving"
+  },
+  "moving_blankets": {
+    "asin": "B07FD2MTNM",
+    "title": "WEN 72 x 80 in Heavy Duty Padded Moving Blankets (12-Pack)",
+    "rating": 4.6,
+    "votes": 7200,
+    "category": "moving"
+  },
+  "label_maker": {
+    "asin": "B09QXZ7ZRD",
+    "title": "Brother P-Touch PT-D210 Label Maker Bundle (4 Tapes)",
+    "rating": 4.6,
+    "votes": 4000,
+    "category": "moving"
+  },
+  "fireproof_safe": {
+    "asin": "B004QWZIMI",
+    "title": "SentrySafe 1170 Fireproof Document Box with Key Lock (0.61 cu ft)",
+    "rating": 4.6,
+    "votes": 16000,
+    "category": "moving"
+  },
+  "document_organizer": {
+    "asin": "B01B25NN64",
+    "title": "Amazon Basics Expanding Accordion File Organizer, 13 Pockets",
+    "rating": 4.6,
+    "votes": 51700,
+    "category": "moving"
+  },
+  "home_planner": {
+    "asin": "1655129961",
+    "title": "Room By Room Project Planner: Home Building & Renovation Organizer",
+    "rating": 4.5,
+    "votes": 373,
+    "category": "books"
+  },
+  "ev_charger": {
+    "asin": "B082LMVSLY",
+    "title": "Grizzl-E Classic Level 2 40A EV Charger (NEMA 14-50)",
+    "rating": 4.6,
+    "votes": 3400,
+    "category": "energy"
+  },
+  "graph_paper_notebook": {
+    "asin": "B01DN8TEA2",
+    "title": "Amazon Basics Hardcover Graph-Ruled Grid Notebook",
+    "rating": 4.6,
+    "votes": 17000,
+    "category": "books"
+  },
+  "portable_ev_charger": {
+    "asin": "B0C9CMXGWW",
+    "title": "EVDANCE Portable Level 1 & 2 EV Charger, 16A, 25 ft (J1772)",
+    "rating": 4.3,
+    "votes": 871,
+    "category": "energy"
+  },
+  "tool_bag": {
+    "asin": "B017SODKZ2",
+    "title": "WORKPRO 16 in Wide-Mouth Tool Bag with Waterproof Base",
+    "rating": 4.7,
+    "votes": 16900,
+    "category": "tools"
+  },
+  "first_aid": {
+    "asin": "B000069EYA",
+    "title": "First Aid Only 298-Piece Family First Aid Kit",
+    "rating": 4.8,
+    "votes": 77600,
+    "category": "safety"
+  },
+  "air_purifier": {
+    "asin": "B07VVK39F7",
+    "title": "Levoit Core 300 True HEPA Air Purifier",
+    "rating": 4.7,
+    "votes": 128800,
+    "category": "apartment"
+  },
+  "water_filter": {
+    "asin": "B01FXN3E74",
+    "title": "Brita Large 10-Cup Water Filter Pitcher",
+    "rating": 4.6,
+    "votes": 60200,
+    "category": "apartment"
+  },
+  "surge_protector": {
+    "asin": "B00TP1C51M",
+    "title": "Amazon Basics 6-Outlet Surge Protector Power Strip (790J, 6 ft)",
+    "rating": 4.8,
+    "votes": 46900,
+    "category": "apartment"
+  },
+  "dehumidifier": {
+    "asin": "B0B5V2YZPZ",
+    "title": "Waykar 80-Pint Energy Star Dehumidifier (up to 5,000 sq ft)",
+    "rating": 4.3,
+    "votes": 22800,
+    "category": "apartment"
+  },
+  "tool_set": {
+    "asin": "B00RF9J8DY",
+    "title": "CARTMAN 39-Piece Household Tool Set with Storage Case",
+    "rating": 4.7,
+    "votes": 38200,
+    "category": "tools"
+  },
+  "shower_curtain": {
+    "asin": "B082YLQ8RN",
+    "title": "Barossa Design Heavy Duty Shower Curtain Liner with Magnets, Clear 72x72",
+    "rating": 4.5,
+    "votes": 103000,
+    "category": "apartment"
+  },
+  "furniture_sliders": {
+    "asin": "B0CCP4G4C9",
+    "title": "X-Protector Felt Furniture Sliders for Hardwood Floors (4-Pack)",
+    "rating": 4.6,
+    "votes": 30000,
+    "category": "moving"
+  }
+}
