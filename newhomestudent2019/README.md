@@ -8,8 +8,8 @@ no database, no plugins, no build step. Every URL the old site had still works.
 | | |
 | --- | --- |
 | Hostinger Agency website UID | `orKz31Eb7` (php-fpm, PHP 8.3, Boston) |
-| Preview URL | https://utmost-olive-woodcock-71.hostingersite.com |
-| Old WordPress website | `7XTGiOm4A` (still holds the `newhomestudent2019.com` domain until cut-over) |
+| Live URL | https://newhomestudent2019.com (domain moved here 2026-11-19; the temporary utmost-olive-woodcock-71.hostingersite.com address was replaced) |
+| Old WordPress website | `7XTGiOm4A` — domain unlinked 2026-11-19; files and database kept on the plan as a fallback |
 
 The platform serves real files directly, **ignores `.htaccess`**, and sends every
 other request to `index.php`. So all routing, redirects and 404s live in `index.php`,
@@ -27,13 +27,13 @@ export NH_FB_URL=… NH_FB_AUTH=… NH_FB_REST=…   # from agency-hosting_files
 dev scripts. `storage/` exists on the server only: it holds `leads.php` (free-training
 sign-ups as CSV behind an `exit` line) and the form signing secret.
 
-### Cut-over checklist (not done yet)
+### Cut-over checklist (done 2026-11-19 except where noted)
 
 1. Detach `newhomestudent2019.com` from the WordPress website `7XTGiOm4A`.
 2. Attach it to `orKz31Eb7` as the primary domain and enable SSL.
 3. Clear the CDN cache; spot-check `/`, a post, `/feed/`, `/sitemap.xml`, an old `/wp-content/uploads/…` image URL.
-4. Resubmit `https://newhomestudent2019.com/sitemap.xml` in Google Search Console.
-5. Send a test sign-up from `/free-training/` and confirm the email arrives at jonathon@.
+4. **To do:** resubmit `https://newhomestudent2019.com/sitemap.xml` in Google Search Console.
+5. **To do:** send a test sign-up from `/free-training/` and confirm the email arrives at jonathon@.
 6. Keep the WordPress site (or a full backup of it) for a few weeks before deleting it.
 
 ## Layout
@@ -90,7 +90,7 @@ template), run `php validate.php`, deploy. The post appears on `/blog/`, its cat
   `apartment-living` are new. `/category/uncategorized/` → `/blog/`; old tags → closest page.
 - `/feed/`, `/sitemap.xml` are generated; `wp-sitemap*.xml`, `sitemap_index.xml`, `wp-admin`,
   `wp-json`, `?p=` and date-style permalinks all 301 to their new equivalents.
-- Old featured-image URLs (including `-300x200` size variants) 301 to the new WebP.
+- Old featured-image URLs: the 55 original files sit at their exact old paths under `wp-content/uploads/` (Hostinger serves file-extension URLs directly, so they can't be redirected from index.php). Resized variants like `-300x200` are not kept.
 
 ## Local preview
 
