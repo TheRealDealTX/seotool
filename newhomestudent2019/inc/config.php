@@ -11,6 +11,7 @@ const SITE = [
     'author'      => 'Jonathon',
     'region'      => 'Texas',
     'amazon_tag'  => 'newhomestudent2019-20',
+    'gtm_id'      => 'GTM-N59TH97L',          // Google Tag Manager container
     'lead_to'     => 'info@newhomestudent2019.com',   // where free-training sign-ups are emailed
     'mail_from'   => 'info@newhomestudent2019.com',
     'per_page'    => 12,

@@ -57,8 +57,15 @@ server (File Manager → public_html/storage/mail-config.php); it is deliberatel
 | `data/site.webmanifest.json` | Web app manifest, served at `/site.webmanifest` by index.php with the correct MIME type |
 | `data/legacy-images.php` | Old `/wp-content/uploads/…` featured-image paths → new WebP files |
 | `assets/` | CSS, JS (mobile menu only), images |
+| `googlecccfbf2f7e9e5ae4.html` | Google Search Console verification file — keep it |
 | `backup/` | WordPress REST export of all posts/pages/media + original images (not deployed) |
 | `CONTENT-SPEC.md` | Writing/format rules for posts |
+
+## Analytics
+
+Google Tag Manager container `GTM-N59TH97L` (`SITE['gtm_id']` in `inc/config.php`) is on every page:
+the standard GTM head snippet plus the `<noscript>` iframe after `<body>`, and a `gtag()` helper on
+`dataLayer`. Add GA4 and other tags inside GTM, not in the templates.
 
 ## Amazon affiliate links
 

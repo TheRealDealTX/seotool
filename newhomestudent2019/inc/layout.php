@@ -23,6 +23,14 @@ function render_page(array $m): never {
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','<?= e(SITE['gtm_id']) ?>');</script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['description']) ?>">
@@ -53,6 +61,9 @@ function render_page(array $m): never {
 <?= json_ld($schema) ?>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= e(SITE['gtm_id']) ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><div class="wrap">
   <span>Free owner-builder training: <a href="/free-training/">the 6 keys to building your own home &rarr;</a></span>
