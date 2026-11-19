@@ -59,7 +59,13 @@ python3 tools/validate.py                                # must end "0 errors"
 ```
 Check the post renders (`curl -s localhost:8080/<slug>/`), the body word count is ≥ 2,000, and that auto-interlinks look sensible.
 
-Deploy only the changed files with the Hostinger connector:
+**First, deploy any backlog:** if `tools/content-calendar.json` has entries with `"status": "ready-to-deploy"`,
+deploy their stored `files` lists (oldest first) together with today's files, then mark them `published`.
+
+Deploy only the changed files with the Hostinger connector (load its tools with ToolSearch "Hostinger_Connector";
+if the connector is not available in this session, skip the deploy: set the calendar entry to
+`"status": "ready-to-deploy", "files": "<the FILES string>"`, commit and push, and report that the article is
+written and committed but waiting for a deploy):
 1. `hosting_files_generate-upload-url` (username `u401386392`, domain `thoughtchangerblog.com`) → url, auth_key, rest_auth_key.
 2. `TC_FB_URL=<url> TC_FB_AUTH=<auth_key> TC_FB_REST=<rest_auth_key> FILES="<from add_post>" tools/deploy.sh production` → must report `fail=0`.
 3. `hosting_cache_clear` (domain `thoughtchangerblog.com`).
