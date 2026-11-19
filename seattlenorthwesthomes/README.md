@@ -3,9 +3,10 @@
 A hand-built PHP property-listing + blog site that replaces the WordPress/Elementor
 install. No database, no plugins, no framework: PHP 8 files, one CSS file, one JS file.
 
-**Staging:** https://wonderful-hotpink-mink-57.hostingersite.com (Hostinger Agency website
-`D5jnILeBy`, php-fpm, PHP 8.5). The live domain still points at the WordPress website
-`HSLdABjjL` until it is moved — see *Going live*.
+**Live:** https://seattlenorthwesthomes.com — Hostinger Agency website `D5jnILeBy` (php-fpm,
+PHP 8.5). The domain was moved here from the WordPress website `HSLdABjjL` on 2026-11-19;
+that website is untouched (files + database) and reachable at its preview domain
+silver-shrew-111207.hostingersite.com as a fallback. `force_canonical_host` is on.
 
 ## Layout
 
@@ -90,13 +91,13 @@ export SNW_FB_URL=… SNW_FB_AUTH=… SNW_FB_REST=…
 ./deploy.sh                 # or ./deploy.sh app   to push only app/
 ```
 
-## Going live (not done yet)
+## Launch checklist (domain moved 2026-11-19)
 
 1. Fill in `brokerage` (Washington requires the firm name on real estate ads) and `phone`
    in `app/config.php`; replace sample listings with real ones.
-2. Set `force_canonical_host` to `true`.
-3. Move `seattlenorthwesthomes.com` from WordPress website `HSLdABjjL` to `D5jnILeBy`
-   (hPanel → website → Domains), wait for SSL, clear the CDN cache.
+2. ~~Set `force_canonical_host` to `true`.~~ Done.
+3. ~~Move the domain to `D5jnILeBy`, SSL, clear CDN cache.~~ Done (Let's Encrypt cert valid to Jan 2027).
+   To roll back: unlink the domain from `D5jnILeBy` and link it to `HSLdABjjL`.
 4. Re-run `tools/validate.py https://seattlenorthwesthomes.com`, then submit
    `/sitemap.xml` in Google Search Console.
 5. Keep the WordPress website for a week or two as a fallback, then back it up and delete it.

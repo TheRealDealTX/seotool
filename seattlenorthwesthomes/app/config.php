@@ -19,8 +19,8 @@ return [
     // Shown under every listing until the data comes from a live MLS/IDX feed.
     // Set to '' once app/data/listings.php holds real, current inventory.
     'listing_note' => 'Featured homes are representative of properties we help clients buy and sell across Seattle. Availability, pricing and details change quickly — contact us for current status before making plans.',
-    // Canonical host enforcement. Leave false while testing on the *.hostingersite.com preview domain.
-    'force_canonical_host' => false,
+    // Canonical host enforcement: 301 http:// and any other hostname (www., preview) to 'url'.
+    'force_canonical_host' => true,
     // Where form submissions are stored: beside the web root when PHP may write there,
     // otherwise app/storage (every file there is a .php that exits immediately).
     'storage_dir' => dirname(PUBLIC_DIR) . '/snw-storage',
