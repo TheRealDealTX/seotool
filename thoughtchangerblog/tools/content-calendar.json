@@ -1,0 +1,214 @@
+{
+ "_how": "Weekly routine publishes the first entry with status 'pending', then sets status 'published' + date. Keywords come from tools/data/gsc-queries.json (GSC, May-Nov 2026): each entry targets a query cluster that already earns impressions but has no dedicated page, and links to its pillar post. When fewer than 3 entries are pending, add new ones the same way (cluster gsc-queries.json; never target a pillar's exact primary keyword).",
+ "posts": [
+  {
+   "slug": "time-is-fleeting-meaning",
+   "keyword": "time is fleeting meaning",
+   "title": "Time Is Fleeting Meaning: Where the Phrase Comes From and What It Asks of Us",
+   "supporting": [
+    "time is fleeting (1,756 impr)",
+    "fleeting time meaning (723)",
+    "time is fleeting meaning (5,352 @5.6)",
+    "what does fleeting mean (1,272)"
+   ],
+   "angle": "Origin (Longfellow 'A Psalm of Life': 'Art is long, and Time is fleeting'; Rocky Horror 'Time Warp'), meaning, why time feels faster, quotes, how to respond. Distinct from the pillar (life is fleeting).",
+   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "published",
+   "published": "2026-11-19"
+  },
+  {
+   "slug": "fleeting-moments-meaning",
+   "keyword": "fleeting moments meaning",
+   "title": "Fleeting Moments: What They Mean and How to Savor Them Before They Pass",
+   "supporting": [
+    "fleeting moment meaning (1,578)",
+    "fleeting moments meaning (345)",
+    "everything is fleeting (474)"
+   ],
+   "angle": "Definition, examples of fleeting moments, savoring research (Bryant's savoring concept, cited generally), photography/journaling practices, fleeting moments quotes.",
+   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "signs-youre-leveling-up",
+   "keyword": "signs you're leveling up",
+   "title": "15 Signs You're Leveling Up in Life (Even When It Doesn't Feel Like It)",
+   "supporting": [
+    "leveling up meaning (1,820)",
+    "what does leveling up mean (386)",
+    "leveled up meaning (636)",
+    "leveling up (1,065)"
+   ],
+   "angle": "Listicle of concrete signs, the uncomfortable middle, what leveling up is not, a self-check table.",
+   "pillar": "heres-what-it-means-to-level-up",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "what-are-the-formative-years",
+   "keyword": "formative years meaning",
+   "title": "What Are the Formative Years? Ages, Stages, and Why They Shape Who We Become",
+   "supporting": [
+    "formative years (894 @14.4)",
+    "formative years meaning (221 @16.2)",
+    "definition of formative years (123)",
+    "what are the formative years (119)"
+   ],
+   "angle": "Definition, which ages (early childhood vs adolescence vs early adulthood), what forms (attachment, habits, beliefs), how to revisit them as an adult. Cite general developmental psychology, no invented stats.",
+   "pillar": "lessons-from-the-formative-teen-years",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "albatross-meaning-in-love",
+   "keyword": "albatross meaning in love",
+   "title": "Albatross Meaning in Love: Why This Bird Became a Symbol of Lifelong Devotion",
+   "supporting": [
+    "albatross meaning in love (2,074 @7.3)",
+    "albatross vow meaning (71)",
+    "love albatross meaning (32)",
+    "albatross meaning (68)"
+   ],
+   "angle": "Lifelong pair bonds and courtship dances (well-documented natural history), albatross in culture (Coleridge's 'albatross around your neck' contrast), what it teaches about commitment.",
+   "pillar": "life-lessons-from-an-albatross",
+   "category": [
+    "General"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "seasoned-player-meaning",
+   "keyword": "seasoned player meaning",
+   "title": "Seasoned Player Meaning: What It Says About Experience in Sports, Work, and Life",
+   "supporting": [
+    "seasoned player meaning (681 @6.9)",
+    "seasoned person meaning (166)",
+    "seasoned manager meaning (157)",
+    "seasoned meaning (1,120)"
+   ],
+   "angle": "Usage in sports, work ('seasoned professional/manager'), compliments vs backhanded uses, how to become seasoned.",
+   "pillar": "becoming-seasoned",
+   "category": [
+    "General"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "inkling-vs-hunch-vs-intuition",
+   "keyword": "inkling vs hunch",
+   "title": "Inkling vs Hunch vs Intuition: What's the Difference and When to Trust Each",
+   "supporting": [
+    "have an inkling (1,108)",
+    "i have an inkling (962)",
+    "inkling feeling (433)",
+    "having an inkling (283)"
+   ],
+   "angle": "Word origins and nuance, examples in sentences, comparison table, how to test a hunch.",
+   "pillar": "meaning-begins-with-an-inkling",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "island-time-quotes",
+   "keyword": "island time quotes",
+   "title": "Island Time Quotes and Sayings to Help You Slow Down",
+   "supporting": [
+    "island time (669)",
+    "what is island time (302)",
+    "living on island time meaning (67)"
+   ],
+   "angle": "40+ original-or-correctly-attributed sayings grouped by theme, with short reflections; how to bring island time home.",
+   "pillar": "how-island-time-can-be-all-the-time",
+   "category": [
+    "General",
+    "Quotes"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "free-minded-vs-free-spirited",
+   "keyword": "free minded meaning",
+   "title": "Free-Minded vs Free-Spirited: What Each Really Means (and Which You Are)",
+   "supporting": [
+    "free minded meaning (445 @10.1)",
+    "free minded (439)",
+    "free minded person (171)",
+    "free-mindedly (214)"
+   ],
+   "angle": "Definitions, traits table, examples, how to cultivate each.",
+   "pillar": "how-to-be-free-in-mind-body-spirit",
+   "category": [
+    "General",
+    "Mindset"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "simple-but-significant-quotes",
+   "keyword": "simple but significant quotes",
+   "title": "Simple but Significant: Quotes and Captions About the Small Things That Matter",
+   "supporting": [
+    "simple but significant (885 @8.0)",
+    "simple but significant meaning (441)",
+    "make it simple but significant (123)"
+   ],
+   "angle": "Meaning of the phrase, quotes grouped by theme, caption ideas.",
+   "pillar": "focus-on-the-significance-of-simple",
+   "category": [
+    "General",
+    "Quotes"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "time-is-fleeting-quotes",
+   "keyword": "time is fleeting quotes",
+   "title": "Time Is Fleeting Quotes: 50 Reminders to Spend Your Days Well",
+   "supporting": [
+    "time is fleeting (1,756)",
+    "life is so fleeting (402)",
+    "fleetness of life (792)"
+   ],
+   "angle": "Correctly attributed quotes (Seneca, Longfellow, Marcus Aurelius, Annie Dillard etc.) grouped by theme with short reflections.",
+   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
+   "category": [
+    "General",
+    "Quotes"
+   ],
+   "status": "pending"
+  },
+  {
+   "slug": "down-in-the-dumps-origin",
+   "keyword": "down in the dumps origin",
+   "title": "Down in the Dumps: The Surprising Origin of the Phrase and How to Lift Your Mood",
+   "supporting": [
+    "what does it mean to be down in the dumps (100)",
+    "feeling down in the dumps meaning (108)",
+    "am often down in the dumps meaning (214)"
+   ],
+   "angle": "Etymology (16th-century 'dumps' = melancholy), usage examples, gentle mood lifts, when to seek help (no medical claims).",
+   "pillar": "rewriting-your-down-in-the-dumps",
+   "category": [
+    "General"
+   ],
+   "status": "pending"
+  }
+ ]
+}
