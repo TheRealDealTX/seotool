@@ -7,11 +7,11 @@ The file returns a PHP array. Use a nowdoc (`<<<'HTML'`) for the body so `$` and
 <?php defined('ERE') or exit;
 return [
     'title'       => 'What to Do After a House Fire: A Step-by-Step Recovery Checklist',  // H1, natural, contains keyword
-    'seo_title'   => 'What to Do After a House Fire: Step-by-Step Checklist',            // <title>, max 60 chars, keyword near the front (site name is appended automatically)
-    'description' => '...',            // meta description, 140-158 chars, includes keyword, ends with a reason to click
+    'seo_title'   => 'What to Do After a House Fire: Checklist',                         // <title>: 40-51 chars (hard max 51 so the ' | ERE540' brand fits in Google's ~580px), keyword at the front
+    'description' => '...',            // meta description: 120-145 chars (hard max 145), includes the keyword, ends with a reason to click
     'keyword'     => 'what to do after a house fire',
     'category'    => 'insurance-claims', // one of: buying, selling, investing, homeownership, insurance-claims, houston
-    'date'        => '2026-11-12',       // publish date, YYYY-MM-DD, between 2026-10-01 and 2026-11-18
+    'date'        => '2026-11-12',       // publish date, YYYY-MM-DD (use the date given in your brief)
     'excerpt'     => '...',              // 1-2 sentences for cards, max 200 chars
     'faq'         => [                   // 4-6 real questions people search; answers 40-90 words, plain text
         ['Question?', 'Answer.'],
@@ -47,12 +47,12 @@ HTML,
 mortgage-calculator, home-affordability-calculator, rent-vs-buy-calculator, closing-cost-calculator, seller-net-proceeds-calculator, rental-property-calculator, refinance-calculator, extra-payment-calculator, dti-calculator, texas-property-tax-calculator, insurance-claim-depreciation-calculator, hurricane-prep-checklist
 
 ## All post slugs (for related / internal links)
-buying: first-time-home-buyer-texas, closing-costs-in-texas, buying-a-house-in-a-flood-zone-houston
-selling: sell-fire-damaged-house-texas, texas-seller-disclosure-notice, selling-a-house-as-is-texas
-investing: how-to-analyze-a-rental-property, house-hacking-texas, brrrr-method-explained
-homeownership: texas-homestead-exemption, houston-home-maintenance-checklist, protest-property-taxes-harris-county
-insurance-claims: what-to-do-after-a-house-fire, hurricane-damage-insurance-claim-texas, public-adjuster-vs-insurance-adjuster, water-damage-claim-denied
-houston: best-houston-suburbs-for-families, moving-to-houston
+buying: first-time-home-buyer-texas, closing-costs-in-texas, buying-a-house-in-a-flood-zone-houston, home-inspection-checklist, down-payment-assistance-texas, fha-loan-requirements-texas
+selling: sell-fire-damaged-house-texas, texas-seller-disclosure-notice, selling-a-house-as-is-texas, capital-gains-tax-on-home-sale, selling-a-house-with-foundation-problems, sell-house-by-owner-texas
+investing: how-to-analyze-a-rental-property, house-hacking-texas, brrrr-method-explained, texas-eviction-process, 1031-exchange-texas, short-term-rental-houston
+homeownership: texas-homestead-exemption, houston-home-maintenance-checklist, protest-property-taxes-harris-county, homeowners-insurance-texas, mud-tax-texas, texas-hoa-laws
+insurance-claims: what-to-do-after-a-house-fire, hurricane-damage-insurance-claim-texas, public-adjuster-vs-insurance-adjuster, water-damage-claim-denied, loss-of-use-coverage, how-to-file-a-home-insurance-claim, hail-damage-roof-insurance-claim, appraisal-clause-insurance
+houston: best-houston-suburbs-for-families, moving-to-houston, cost-of-living-in-houston, best-neighborhoods-in-houston, houston-property-tax-rate
 
 ## Product keys
 See `content/products.php` (keys are the array keys).
