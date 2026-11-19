@@ -41,6 +41,9 @@ for f in pages:
     h1 = re.findall(r"<h1[\s>]", s)
     if len(h1) != 1:
         err(f, f"{len(h1)} <h1> tags")
+    nt = len(re.findall(r"<title[\s>]", s))
+    if nt != 1:
+        err(f, f"{nt} <title> tags (keep exactly one, in <head>)")
     t = re.search(r"<title>(.*?)</title>", s, re.S)
     d = re.search(r'<meta name="description" content="([^"]*)"', s)
     if not t or not t.group(1).strip():

@@ -910,13 +910,14 @@ def texas_map_svg(locations=None, width=640):
             anchor = "end" if x > width * 0.72 else "start"
             dx = -8 if anchor == "end" else 8
             label = f'<text x="{x + dx:.1f}" y="{y + 4:.1f}" text-anchor="{anchor}">{esc(name)}</text>'
-        circle = f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}"><title>{esc(name)}</title></circle>'
+        circle = f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}"/>'
         if name in have:
             dots.append(f'<a class="{cls}" href="{have[name]}" aria-label="{esc(name)}">{circle}{label}</a>')
         else:
-            dots.append(f'<g class="{cls}">{circle}{label}</g>')
-    return (f'<svg viewBox="0 0 {width} {height}" role="img" aria-labelledby="txmap-t"><title id="txmap-t">Map of Texas showing major markets served statewide</title>'
-            f'<path class="tx-shape" d="{d}"/>{"".join(dots)}</svg>')
+            dots.append(f'<g class="{cls}" aria-hidden="true">{circle}{label}</g>')
+    # No <title> elements inside the SVG: crawlers count them as extra page titles.
+    return (f'<svg viewBox="0 0 {width} {height}" role="group" aria-label="Map of Texas showing major markets served statewide">'
+            f'<path class="tx-shape" d="{d}" aria-hidden="true"/>{"".join(dots)}</svg>')
 
 
 # --------------------------------------------------------------------------

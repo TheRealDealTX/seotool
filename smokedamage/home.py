@@ -7,8 +7,7 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
-HOUSE_SVG = """<svg viewBox="0 0 560 420" role="img" aria-labelledby="hd-t hd-d">
-<title id="hd-t">How smoke can travel through a house</title>
+HOUSE_SVG = """<svg viewBox="0 0 560 420" role="img" aria-label="How smoke can travel through a house" aria-describedby="hd-d">
 <desc id="hd-d">Cross-section of a two-level house. Smoke moves from a kitchen fire origin into the adjacent room and hallway, is drawn into an HVAC return, passes through the air handler and ductwork in the attic, and can be distributed to other rooms and onto contents.</desc>
 <defs>
 <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FF6D1F"/></marker>
