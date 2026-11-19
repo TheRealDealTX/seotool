@@ -1,0 +1,4 @@
+public/app/config.local.php
+tc-config.php
+tc-submissions.log
+__pycache__/
