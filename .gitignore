@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 dist/
+newhomestudent2019/storage/*
+!newhomestudent2019/storage/index.php

@@ -1,0 +1,99 @@
+# newhomestudent2019.com — custom PHP rebuild
+
+Replaces the WordPress/Astra/Elementor site with a small hand-written PHP site:
+no database, no plugins, no build step. Every URL the old site had still works.
+
+## Hosting
+
+| | |
+| --- | --- |
+| Hostinger Agency website UID | `orKz31Eb7` (php-fpm, PHP 8.3, Boston) |
+| Preview URL | https://utmost-olive-woodcock-71.hostingersite.com |
+| Old WordPress website | `7XTGiOm4A` (still holds the `newhomestudent2019.com` domain until cut-over) |
+
+The platform serves real files directly, **ignores `.htaccess`**, and sends every
+other request to `index.php`. So all routing, redirects and 404s live in `index.php`,
+and there must never be an `index.html` in the web root.
+
+### Deploying
+
+```sh
+php validate.php          # must report 0 errors
+export NH_FB_URL=… NH_FB_AUTH=… NH_FB_REST=…   # from agency-hosting_files_generate-upload-url (website orKz31Eb7)
+./deploy.sh
+```
+
+`deploy.sh` uploads everything except `backup/`, `storage/`, Markdown files and the
+dev scripts. `storage/` exists on the server only: it holds `leads.php` (free-training
+sign-ups as CSV behind an `exit` line) and the form signing secret.
+
+### Cut-over checklist (not done yet)
+
+1. Detach `newhomestudent2019.com` from the WordPress website `7XTGiOm4A`.
+2. Attach it to `orKz31Eb7` as the primary domain and enable SSL.
+3. Clear the CDN cache; spot-check `/`, a post, `/feed/`, `/sitemap.xml`, an old `/wp-content/uploads/…` image URL.
+4. Resubmit `https://newhomestudent2019.com/sitemap.xml` in Google Search Console.
+5. Send a test sign-up from `/free-training/` and confirm the email arrives at jonathon@.
+6. Keep the WordPress site (or a full backup of it) for a few weeks before deleting it.
+
+## Layout
+
+| Path | What it is |
+| --- | --- |
+| `index.php` | Front controller: canonical host, legacy redirects, routing |
+| `inc/config.php` | Site name, contact details, Amazon tag, categories, nav, legacy redirects |
+| `inc/functions.php` | Post loader, body renderer (product markers, link hardening, TOC), JSON-LD |
+| `inc/products.php` | Amazon link builder and product cards |
+| `inc/layout.php` | `<head>`, header, footer |
+| `inc/views.php`, `inc/views-special.php` | Post, archive, page, home, free-training form, products hub, sitemap, RSS |
+| `content/posts/<slug>.php` | One file per blog post (URL = `/<slug>/`) |
+| `content/pages/<slug>.php` | Simple pages (about, contact, legal, resources, build-a-home-yourself, write-for-us) |
+| `data/product-meta.php` | Product catalog: name, blurb, group, fallback search query |
+| `data/asins.php` | Verified Amazon ASINs per product key |
+| `data/legacy-images.php` | Old `/wp-content/uploads/…` featured-image paths → new WebP files |
+| `assets/` | CSS, JS (mobile menu only), images |
+| `backup/` | WordPress REST export of all posts/pages/media + original images (not deployed) |
+| `CONTENT-SPEC.md` | Writing/format rules for posts |
+
+## Amazon affiliate links
+
+Tag: `newhomestudent2019-20` (in `inc/config.php`). Writers never paste Amazon URLs; in a
+post body use:
+
+- `<!--products:laser_measure,moisture_meter|Optional heading-->` → product card grid
+- `[[amz:books_heldmann|anchor text]]` → inline affiliate link
+
+Keys come from `data/product-meta.php`. A key with an ASIN in `data/asins.php` links to
+`amazon.com/dp/<ASIN>?tag=…`; one without falls back to an Amazon search link with the tag
+(still earns commission). Links carry `rel="sponsored nofollow noopener"`. Following Amazon's
+Associates rules, the site shows **no prices, star ratings or Amazon images** — only our own
+blurbs and a "Check price on Amazon" button — and carries the required disclosure in the
+footer, on every post with products, and at `/affiliate-disclosure/`.
+
+To add a product: add a row to `data/product-meta.php`, put its ASIN in `data/asins.php`,
+then reference the key from posts. The `/our-products/` hub lists every product automatically.
+
+## Adding a blog post
+
+Create `content/posts/<slug>.php` following `CONTENT-SPEC.md` (an existing post is the best
+template), run `php validate.php`, deploy. The post appears on `/blog/`, its category page,
+`/feed/` and `/sitemap.xml` automatically. A featured image is optional: drop a 1200px-wide
+`assets/img/posts/<slug>.webp`.
+
+## URLs and redirects
+
+- All 55 old post URLs and 8 page URLs are kept; content was rewritten and re-optimized.
+- 12 new posts added for new home builders (owner-builder guide, timeline, inspections,
+  costs, financing, floor plans, tools, books, smart home, subcontractors, punch list,
+  new-homeowner essentials).
+- Categories: `building-tips` and `tips` keep their old URLs; `real-estate-investing` and
+  `apartment-living` are new. `/category/uncategorized/` → `/blog/`; old tags → closest page.
+- `/feed/`, `/sitemap.xml` are generated; `wp-sitemap*.xml`, `sitemap_index.xml`, `wp-admin`,
+  `wp-json`, `?p=` and date-style permalinks all 301 to their new equivalents.
+- Old featured-image URLs (including `-300x200` size variants) 301 to the new WebP.
+
+## Local preview
+
+```sh
+php -S 127.0.0.1:8099 -t . dev-router.php
+```

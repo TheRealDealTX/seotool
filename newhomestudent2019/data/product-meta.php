@@ -1,0 +1,95 @@
+<?php defined('NHS') || exit;
+/*
+ * Product catalog for Amazon affiliate cards.
+ * key => [name, blurb, group, search query (fallback when no ASIN)]
+ * ASINs live in data/asins.php (generated from verified search results).
+ * Never add prices or star ratings here: Amazon's Associates rules forbid showing cached ones.
+ */
+return [
+    // Books — building & design
+    'books_heldmann'           => ['Be Your Own House Contractor (Carl Heldmann)', 'The classic owner-builder playbook: how to run subs, schedule the job and keep the builder\'s margin yourself.', 'books', 'be your own house contractor heldmann'],
+    'books_contracting_guide'  => ['The Complete Guide to Contracting Your Home', 'A step-by-step manual for managing your own build, with checklists, bid sheets and scheduling advice.', 'books', 'complete guide to contracting your home'],
+    'books_dummies'            => ['Building Your Custom Home For Dummies', 'A plain-English overview of the whole custom-home process, from budgeting and lots to builders and closing.', 'books', 'building your custom home for dummies'],
+    'books_code_check'         => ['Code Check: An Illustrated Guide to Building a Safe House', 'A spiral-bound field guide to the residential code items inspectors flag most often.', 'books', 'code check building illustrated guide'],
+    'books_code_check_electrical' => ['Code Check Electrical', 'A quick-reference guide to common residential electrical code requirements — handy before rough-in inspections.', 'books', 'code check electrical'],
+    'books_not_so_big'         => ['The Not So Big House (Sarah Susanka)', 'Design for how you actually live: smaller, better-planned rooms instead of square footage for its own sake.', 'books', 'the not so big house susanka'],
+    'books_pattern_language'   => ['A Pattern Language', 'The timeless reference on what makes rooms, homes and neighborhoods feel right. A must-read before you finalize plans.', 'books', 'a pattern language christopher alexander'],
+    'books_get_house_right'    => ['Get Your House Right', 'Visual do\'s and don\'ts for exterior proportions, trim, porches and rooflines so your home looks right for decades.', 'books', 'get your house right architectural elements'],
+    'books_estimating'         => ['Estimating Building Costs for Residential Construction', 'Learn how pros build a cost estimate line by line so you can check bids and build a realistic budget.', 'books', 'estimating building costs residential construction'],
+    'books_tiny_house'         => ['Tiny House Design & Construction Guide', 'Framing, systems, trailers and layouts for anyone seriously considering a tiny home.', 'books', 'tiny house design and construction guide'],
+    'books_first_time_buyer'   => ['100 Questions Every First-Time Home Buyer Should Ask', 'A practical Q&A guide that helps first-time buyers avoid the expensive surprises.', 'books', '100 questions every first-time home buyer should ask'],
+    'books_home_maintenance'   => ['Home Maintenance For Dummies', 'Seasonal checklists and how-tos for keeping a new house in like-new condition.', 'books', 'home maintenance for dummies'],
+    'home_planner'             => ['House Building Planner & Journal', 'A dedicated binder-style planner to track selections, bids, contacts and decisions during your build.', 'books', 'house building planner journal'],
+    'graph_paper_notebook'     => ['Graph Paper Notebook', 'Sketch room layouts, furniture plans and site notes to scale — low-tech but indispensable.', 'office', 'graph paper notebook'],
+    // Books — investing
+    'books_rental_property'    => ['The Book on Rental Property Investing', 'A comprehensive guide to finding, financing and managing rental properties.', 'investing', 'the book on rental property investing'],
+    'books_house_hacking'      => ['The House Hacking Strategy', 'How to live in one unit and rent the rest so your tenants cover the mortgage.', 'investing', 'the house hacking strategy curelop'],
+    'books_set_for_life'       => ['Set for Life (Scott Trench)', 'A savings-first roadmap to building wealth early, including house hacking.', 'investing', 'set for life scott trench'],
+    'books_millionaire_re'     => ['The Millionaire Real Estate Investor', 'Gary Keller\'s framework for thinking long-term about real estate wealth.', 'investing', 'the millionaire real estate investor'],
+    // Tools
+    'laser_measure'            => ['Bosch Laser Distance Measure', 'Verify room dimensions, ceiling heights and window openings against your plans in seconds.', 'tools', 'bosch blaze laser measure'],
+    'tape_measure'             => ['Stanley FatMax 25 ft Tape Measure', 'A rugged, long-standout tape that belongs in every owner-builder\'s pocket.', 'tools', 'stanley fatmax 25 ft tape measure'],
+    'level'                    => ['48-Inch Box Level', 'Check framing, door openings and cabinet installs for plumb and level.', 'tools', '48 inch box level'],
+    'moisture_meter'           => ['Pin-Type Moisture Meter', 'Catch wet framing or drywall before it gets closed in — a cheap insurance policy against mold.', 'tools', 'moisture meter wood drywall'],
+    'stud_finder'              => ['Franklin Sensors ProSensor Stud Finder', 'Multi-sensor stud finder that shows the full width of studs — great for hanging anything heavy.', 'tools', 'franklin sensors prosensor stud finder'],
+    'outlet_tester'            => ['Klein Tools GFCI Outlet Tester', 'Plug-in tester that flags wiring faults and verifies GFCI protection during walkthroughs.', 'tools', 'klein tools outlet tester gfci'],
+    'ir_thermometer'           => ['Infrared Thermometer Gun', 'Spot insulation gaps, duct leaks and HVAC problems by checking surface temperatures.', 'tools', 'infrared thermometer gun'],
+    'thermal_camera'           => ['Thermal Imaging Camera', 'See missing insulation, air leaks and hidden moisture that the naked eye misses.', 'tools', 'thermal imaging camera'],
+    'drill_combo'              => ['DEWALT 20V MAX Drill/Driver Combo Kit', 'A reliable cordless drill and impact driver combo for punch-list fixes and weekend projects.', 'tools', 'dewalt 20v max drill driver combo kit'],
+    'headlamp'                 => ['Rechargeable LED Headlamp', 'Hands-free light for attics, crawlspaces and pre-drywall inspections.', 'tools', 'rechargeable led headlamp'],
+    'hard_hat'                 => ['Vented Hard Hat (ANSI rated)', 'Basic head protection for site visits while framing and roofing crews are working.', 'safety', 'vented hard hat ansi'],
+    'safety_glasses'           => ['DEWALT Safety Glasses', 'Comfortable, anti-fog eye protection for site walks and DIY work.', 'safety', 'dewalt safety glasses'],
+    'tool_bag'                 => ['Tool Bag Organizer', 'Keeps your tape, meters, markers and notepad together for every site visit.', 'tools', 'tool bag organizer'],
+    'tool_set'                 => ['Household Tool Set', 'A starter kit of screwdrivers, pliers, hammer and wrenches every new homeowner needs.', 'tools', 'household tool set kit'],
+    'caulk_gun'                => ['Dripless Caulk Gun', 'For sealing gaps, trim and penetrations — one of the cheapest energy upgrades there is.', 'tools', 'dripless caulk gun'],
+    'first_aid'                => ['First Aid Kit', 'Keep one on the job site and one at home. Cuts and splinters happen.', 'safety', 'first aid kit home'],
+    // Smart home & security
+    'site_camera'              => ['Wireless Solar Security Camera', 'Monitor deliveries and deter theft on your job site without running power.', 'smart-home', 'wireless outdoor security camera solar'],
+    'smart_thermostat'         => ['ecobee Smart Thermostat Premium', 'Room sensors and smart scheduling help keep a Texas house comfortable without overcooling.', 'smart-home', 'ecobee smart thermostat premium'],
+    'nest_thermostat'          => ['Google Nest Learning Thermostat', 'Learns your schedule and adjusts automatically; pairs with many utility rebate programs.', 'smart-home', 'google nest learning thermostat'],
+    'smart_lock'               => ['Schlage Encode Smart Wi-Fi Deadbolt', 'Keyless entry with access codes you can give (and revoke) for subs, cleaners and guests.', 'smart-home', 'schlage encode smart wifi deadbolt'],
+    'video_doorbell'           => ['Ring Video Doorbell', 'See who\'s at the door and keep an eye on package deliveries from your phone.', 'smart-home', 'ring video doorbell'],
+    'water_leak'               => ['Wi-Fi Water Leak Detectors', 'Phone alerts the moment water hits the floor under sinks, water heaters and washers.', 'smart-home', 'govee water leak detector wifi'],
+    'smart_plug'               => ['Kasa Smart Plug with Energy Monitoring', 'Track what your appliances really cost to run and automate lamps and fans.', 'smart-home', 'kasa smart plug energy monitoring'],
+    'ev_charger'               => ['Level 2 Home EV Charger', 'A 240V charger for the garage — plan the circuit while walls are still open.', 'energy', 'level 2 ev charger home'],
+    'portable_ev_charger'      => ['Portable Level 1/Level 2 EV Charger', 'A flexible charger that works from a standard or 240V outlet — useful for renters.', 'energy', 'portable level 2 ev charger'],
+    // Safety
+    'radon_detector'           => ['Airthings Radon Detector', 'Continuous radon monitoring — the only way to know your levels.', 'safety', 'airthings radon detector'],
+    'smoke_co'                 => ['First Alert Smoke & CO Detector', 'Combination smoke and carbon monoxide alarm for bedrooms, hallways and every level.', 'safety', 'first alert smoke and carbon monoxide detector'],
+    'fire_extinguisher'        => ['First Alert Home Fire Extinguisher', 'Keep one in the kitchen and garage. Rated for common household fires.', 'safety', 'first alert home fire extinguisher'],
+    'fireproof_safe'           => ['SentrySafe Fireproof Document Box', 'Protects deeds, warranties, closing documents and passports.', 'safety', 'sentrysafe fireproof document box'],
+    // Energy
+    'kill_a_watt'              => ['P3 Kill A Watt Electricity Monitor', 'Plug-in meter that shows exactly how much power an appliance uses.', 'energy', 'p3 kill a watt'],
+    'led_bulbs'                => ['Philips LED Bulbs (60W equivalent)', 'Long-lasting, low-heat LED bulbs — a quick win in a hot Texas house.', 'energy', 'philips led bulbs 60w equivalent'],
+    'weatherstrip'             => ['Door Weatherstripping Kit', 'Seal drafty doors to cut cooling costs and keep dust and bugs out.', 'energy', 'door weather stripping'],
+    'dehumidifier'             => ['Home Dehumidifier', 'Controls humidity in Gulf Coast homes to protect finishes and prevent mold.', 'energy', 'dehumidifier for home'],
+    'air_purifier'             => ['LEVOIT HEPA Air Purifier', 'Cleans construction dust, pollen and pet dander from bedrooms and small apartments.', 'home', 'levoit air purifier'],
+    'water_filter'             => ['Water Filter Pitcher', 'Better-tasting tap water without plumbing changes — renter-friendly.', 'home', 'water filter pitcher'],
+    'surge_protector'          => ['Surge Protector Power Strip', 'Protect electronics from Texas storm surges and power blips.', 'home', 'surge protector power strip'],
+    // Apartment & home comfort
+    'blackout_curtains'        => ['NICETOWN Thermal Blackout Curtains', 'Block heat and light — helps bedrooms stay cool and dark in Texas summers.', 'home', 'nicetown blackout curtains thermal insulated'],
+    'white_noise'              => ['Yogasleep Dohm White Noise Machine', 'Natural fan-based white noise that masks neighbors, traffic and roommates.', 'home', 'yogasleep dohm white noise machine'],
+    'acoustic_panels'          => ['Sound-Absorbing Acoustic Panels', 'Tame echo in a bedroom or home office without permanent changes.', 'home', 'acoustic panels sound absorbing'],
+    'door_sweep'               => ['Under-Door Draft & Noise Stopper', 'Blocks drafts, light and some hallway noise; removable, so it\'s deposit-safe.', 'home', 'under door draft stopper soundproof'],
+    'area_rug'                 => ['Washable Area Rug', 'Instantly warms up a rental, protects floors and dampens footstep noise.', 'home', 'washable area rug 5x7'],
+    'command_strips'           => ['Command Picture Hanging Strips', 'Hang art and mirrors without nail holes — the renter\'s best friend.', 'home', 'command picture hanging strips'],
+    'under_bed_storage'        => ['Under-Bed Storage Containers', 'Turns dead space under the bed into a closet.', 'home', 'under bed storage containers'],
+    'folding_desk'             => ['Small Folding Desk', 'A compact workspace that folds away when you need the floor space back.', 'home', 'small folding desk'],
+    'futon'                    => ['Futon Sofa Bed', 'Seating by day, guest bed by night — ideal for studios and dorms.', 'home', 'futon sofa bed'],
+    'storage_ottoman'          => ['Storage Ottoman Bench', 'Seating, footrest and hidden storage in one piece.', 'home', 'storage ottoman bench'],
+    'shower_curtain'           => ['Shower Curtain Liner', 'A cheap, quick upgrade for any rental bathroom.', 'home', 'shower curtain liner'],
+    'furniture_sliders'        => ['Furniture Sliders', 'Move heavy furniture without scratching floors (or your back).', 'moving', 'furniture sliders'],
+    // Outdoor & balcony
+    'balcony_planter'          => ['Railing Planter Box', 'Hangs over a balcony rail to grow herbs and flowers without using floor space.', 'outdoor', 'railing planter box balcony'],
+    'grow_light'               => ['Indoor Plant Grow Light', 'Keeps herbs and houseplants thriving in low-light apartments.', 'outdoor', 'plant grow light indoor'],
+    'string_lights'            => ['Outdoor String Lights', 'Weatherproof patio lights that turn a balcony or backyard into a living space.', 'outdoor', 'outdoor string lights patio'],
+    'outdoor_rug'              => ['Reversible Outdoor Rug', 'Defines a patio or balcony and stands up to sun and rain.', 'outdoor', 'reversible outdoor rug patio'],
+    'pool_bag'                 => ['Waterproof Dry Bag', 'Keeps your phone, keys and towel dry at the pool or lake.', 'outdoor', 'waterproof dry bag'],
+    // Pets & moving
+    'pet_gate'                 => ['Pressure-Mount Pet Gate', 'Keeps pets contained during move-in day — no screws, no wall damage.', 'pets', 'pet gate pressure mount'],
+    'pet_carrier'              => ['Airline-Approved Pet Carrier', 'A soft-sided carrier for car trips, flights and vet visits.', 'pets', 'airline approved pet carrier'],
+    'moving_boxes'             => ['Heavy-Duty Moving Boxes with Handles', 'Sturdy boxes that stack well and survive a cross-state move.', 'moving', 'heavy duty moving boxes with handles'],
+    'moving_blankets'          => ['Moving Blankets', 'Protect furniture in the truck — and they double as sound dampeners later.', 'moving', 'moving blankets'],
+    'label_maker'              => ['Brother P-touch Label Maker', 'Label boxes, breaker panels, shut-off valves and storage bins.', 'moving', 'brother p-touch label maker'],
+    'document_organizer'       => ['Expanding File Organizer', 'One place for permits, contracts, lien waivers, receipts and warranties.', 'office', 'expanding file folder organizer'],
+];

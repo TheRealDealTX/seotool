@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /inc/
+Disallow: /content/
+Disallow: /data/
+Disallow: /storage/
+Disallow: /backup/
+
+Sitemap: https://newhomestudent2019.com/sitemap.xml
