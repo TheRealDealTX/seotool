@@ -2,7 +2,10 @@
 // Thought Changer — shared bootstrap: config, data access, helpers.
 declare(strict_types=1);
 
-const SITE_URL  = 'https://thoughtchangerblog.com';
+// Staging copy (staging.thoughtchangerblog.com) uses its own host and is never indexed.
+define('IS_STAGING', str_starts_with(strtolower($_SERVER['HTTP_HOST'] ?? ''), 'staging.'));
+define('SITE_URL', IS_STAGING ? 'https://staging.thoughtchangerblog.com' : 'https://thoughtchangerblog.com');
+if (IS_STAGING && !headers_sent()) header('X-Robots-Tag: noindex, nofollow');
 const SITE_NAME = 'Thought Changer';
 const SITE_TAGLINE = 'One Thought at a Time.';
 const SITE_EMAIL = 'info@thoughtchangerblog.com';
@@ -18,7 +21,7 @@ define('WEBROOT', dirname(__DIR__));
 
 /**
  * Secrets (SMTP password) live OUTSIDE the web root, never in git.
- * Looked up in order: ../tc-config.php (one level above public_html), app/config.local.php.
+ * Looked up in order: tc-config.php in private_dir() (the folder holding public_html), app/config.local.php.
  */
 function config(): array {
     static $cfg = null;
@@ -30,10 +33,17 @@ function config(): array {
         'smtp_pass' => '',
         'mail_to'   => SITE_EMAIL,
     ];
-    foreach ([dirname(WEBROOT) . '/tc-config.php', APP . '/config.local.php'] as $f) {
+    foreach ([private_dir() . '/tc-config.php', APP . '/config.local.php'] as $f) {
         if (is_file($f)) { $cfg = array_merge($cfg, (array) require $f); break; }
     }
     return $cfg;
+}
+
+/** First directory above the web root that is not itself web-served (handles staging inside public_html). */
+function private_dir(): string {
+    $d = dirname(WEBROOT);
+    while (basename($d) === 'public_html' || str_contains($d . '/', '/public_html/')) $d = dirname($d);
+    return $d;
 }
 
 function e(?string $s): string { return htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }

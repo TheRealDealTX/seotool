@@ -13,7 +13,7 @@ import json, re, sys, os, urllib.request, urllib.error, urllib.parse, html
 from collections import defaultdict
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080').rstrip('/')
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
-LIVE = 'https://thoughtchangerblog.com'
+LIVE = BASE if BASE.startswith('https://') else 'https://thoughtchangerblog.com'
 
 class NoRedir(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *a, **k): return None
@@ -28,7 +28,7 @@ def get(path):
         return e.code, e.headers.get('Location'), e.read().decode('utf-8', 'replace')
 
 def to_path(u):
-    p = urllib.parse.urlsplit(u)
+    p = urllib.parse.urlsplit(u.replace('https://thoughtchangerblog.com', ''))
     return urllib.parse.quote(p.path, safe="/%:@*_-.~♍") + ('?' + p.query if p.query else '')
 
 errors, warns = [], []

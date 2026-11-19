@@ -18,7 +18,7 @@ $graph = array_merge([
 <title><?= e($meta['title']) ?></title>
 <?php if (!empty($meta['description'])): ?><meta name="description" content="<?= e($meta['description']) ?>">
 <?php endif; ?>
-<meta name="robots" content="<?= e($meta['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1') ?>">
+<meta name="robots" content="<?= IS_STAGING ? 'noindex, nofollow' : e($meta['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1') ?>">
 <link rel="canonical" href="<?= e($canonical) ?>">
 <?php if (!empty($meta['prev'])): ?><link rel="prev" href="<?= e(SITE_URL . $meta['prev']) ?>">
 <?php endif; if (!empty($meta['next'])): ?><link rel="next" href="<?= e(SITE_URL . $meta['next']) ?>">

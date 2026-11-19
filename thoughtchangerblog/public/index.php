@@ -24,7 +24,7 @@ $host = strtolower($_SERVER['HTTP_HOST'] ?? 'thoughtchangerblog.com');
 $https = ($_SERVER['HTTPS'] ?? '') === 'on' || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https'
       || ($_SERVER['SERVER_PORT'] ?? '') === '443';
 $isLocal = str_starts_with($host, 'localhost') || str_starts_with($host, '127.0.0.1') || getenv('TC_DEV');
-if (!$isLocal && ($host !== 'thoughtchangerblog.com' || !$https)) redirect($uri);
+if (!$isLocal && (!in_array($host, ['thoughtchangerblog.com', 'staging.thoughtchangerblog.com'], true) || !$https)) redirect($uri);
 
 // 2. Legacy query-string URLs.
 if (isset($query['p']) && ctype_digit((string) $query['p'])) {

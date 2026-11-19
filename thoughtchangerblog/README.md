@@ -88,14 +88,24 @@ python3 tools/validate.py http://localhost:8080
 
 ## Deploying (Hostinger Cloud Enterprise)
 
-1. Back up the WordPress site (hPanel → Backups, or Files + DB export).
-2. Move the WordPress files out of `public_html` (keep them for rollback).
-3. Upload everything in `public/` into `public_html` (including `.htaccess`).
-4. Create `tc-config.php` above `public_html` as shown above.
-5. Clear LiteSpeed/CDN cache; run `python3 tools/validate.py https://thoughtchangerblog.com`.
-6. In Search Console: resubmit `sitemap_index.xml`, and use URL Inspection on the top pages.
+Hosting account `u401386392`, website `thoughtchangerblog.com`.
 
-Rollback = put the WordPress files back; the database is untouched.
+* **Password file:** `/home/u401386392/domains/thoughtchangerblog.com/tc-config.php`, which sits above
+  `public_html`. Both staging and production read it (see `private_dir()`). It is already in place.
+* **Staging:** https://staging.thoughtchangerblog.com is served from `public_html/staging/`. It sends
+  `noindex` headers, has a `Disallow: /` robots.txt, and returns 404 if requested through the main domain.
+  Deployed 2026-11-19, `validate.py` passed with 0 errors, and a test contact message was delivered.
+* **Upload:** `tools/deploy.sh staging|production` (TUS upload API; its header explains the credentials).
+
+Going live:
+1. Back up WordPress (hPanel → Backups → files + database).
+2. Move the WordPress files in `public_html` into a folder outside it (e.g. `../wp-backup/`), keeping `staging/`.
+3. `tools/deploy.sh production`, then clear the LiteSpeed cache and CDN cache.
+4. `python3 tools/validate.py https://thoughtchangerblog.com`
+5. Search Console: resubmit `sitemap_index.xml` and inspect the top pages.
+6. Remove the staging subdomain and `public_html/staging/`.
+
+Rollback = move the WordPress files back (the database is untouched).
 
 ## Adding a post
 

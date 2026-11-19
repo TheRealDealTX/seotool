@@ -51,7 +51,7 @@ function process_form(string $form): array {
     $ok = (new Mailer($cfg))->send($cfg['mail_to'], $subject, $body, $email, $name ?: null);
     if (!$ok) {
         // Never lose a submission: keep a private copy outside the web root.
-        @file_put_contents(dirname(WEBROOT) . '/tc-submissions.log', json_encode(['t' => date('c'), 'form' => $form, 'name' => $name, 'email' => $email, 'subject' => $subj, 'message' => $msg, 'page' => $page]) . "\n", FILE_APPEND | LOCK_EX);
+        @file_put_contents(private_dir() . '/tc-submissions.log', json_encode(['t' => date('c'), 'form' => $form, 'name' => $name, 'email' => $email, 'subject' => $subj, 'message' => $msg, 'page' => $page]) . "\n", FILE_APPEND | LOCK_EX);
         return ['ok' => false, 'message' => 'Sorry, something went wrong sending your message. Please email ' . SITE_EMAIL . ' directly.'];
     }
     return ['ok' => true, 'message' => $form === 'contact' ? 'Thank you — your message is on its way. We’ll reply soon.' : 'You’re in! Watch your inbox for the next thought.'];
