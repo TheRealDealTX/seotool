@@ -2,6 +2,7 @@
 // Imported from WordPress: /top-5-advantages-of-having-experts-when-you-want-to-buy-your-first-home/ (240 words)
 return [
     'title'       => 'Top 5 Advantages of Having Experts When You Want to Buy Your First Home',
+    'seo_title'   => '5 Advantages of Using an Agent for Your First Home',
     'slug'        => 'first-home-buyer-agent-advantages',
     'legacy_slug' => 'top-5-advantages-of-having-experts-when-you-want-to-buy-your-first-home',
     'description' => 'Top five advantages of working with real estate experts when buying your first home: pricing insight, negotiation, paperwork and peace of mind.',

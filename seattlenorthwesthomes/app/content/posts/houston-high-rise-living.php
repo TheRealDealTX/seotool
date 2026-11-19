@@ -2,6 +2,7 @@
 // Imported from WordPress: /discover-high-rise-living-in-houston-a-lifestyle-of-luxury-and-convenience/ (1279 words)
 return [
     'title'       => 'Discover High-Rise Living in Houston: A Lifestyle of Luxury and Convenience',
+    'seo_title'   => 'Houston High-Rise Living: Luxury and Convenience',
     'slug'        => 'houston-high-rise-living',
     'legacy_slug' => 'discover-high-rise-living-in-houston-a-lifestyle-of-luxury-and-convenience',
     'description' => 'Discover high-rise living in Houston: luxury towers, skyline views, concierge amenities and the neighborhoods where vertical living thrives.',

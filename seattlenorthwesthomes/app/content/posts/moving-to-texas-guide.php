@@ -2,6 +2,7 @@
 // Imported from WordPress: /everything-to-know-when-moving-to-texas-a-comprehensive-guide/ (603 words)
 return [
     'title'       => 'Everything to Know When Moving to Texas: A Comprehensive Guide',
+    'seo_title'   => 'Moving to Texas: Everything You Need to Know',
     'slug'        => 'moving-to-texas-guide',
     'legacy_slug' => 'everything-to-know-when-moving-to-texas-a-comprehensive-guide',
     'description' => 'Everything to know when moving to Texas: cost of living, no state income tax, property taxes, weather, cities and tips for settling in.',

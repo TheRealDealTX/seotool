@@ -2,9 +2,10 @@
 // Imported from WordPress: /coffee-rain-and-real-estate-living-the-dream-with-seattle-northwest-homes/ (933 words)
 return [
     'title'       => 'Coffee, Rain, and Real Estate: Living the Dream with Seattle Northwest Homes',
+    'seo_title'   => 'Living in Seattle: Coffee, Rain and Real Estate',
     'slug'        => 'living-in-seattle-coffee-rain-real-estate',
     'legacy_slug' => 'coffee-rain-and-real-estate-living-the-dream-with-seattle-northwest-homes',
-    'description' => 'Coffee, rain and real estate: what living in Seattle is really like, from neighborhood cafés and drizzly winters to finding your home in the Northwest.',
+    'description' => 'What living in Seattle is really like, from neighborhood cafés and drizzly winters to finding your home in the Pacific Northwest.',
     'keyword'     => 'living in seattle coffee rain real estate',
     'category'    => 'seattle-living',
     'date'        => '2025-04-20',

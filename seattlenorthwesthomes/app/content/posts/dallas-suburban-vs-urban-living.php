@@ -2,6 +2,7 @@
 // Imported from WordPress: /suburban-vs-urban-living-pros-and-cons-for-homebuyers-in-dallas/ (591 words)
 return [
     'title'       => 'Suburban vs. Urban Living: Pros and Cons for Homebuyers in Dallas',
+    'seo_title'   => 'Dallas Suburban vs. Urban Living: Pros and Cons',
     'slug'        => 'dallas-suburban-vs-urban-living',
     'legacy_slug' => 'suburban-vs-urban-living-pros-and-cons-for-homebuyers-in-dallas',
     'description' => 'Suburban vs. urban living in Dallas: pros and cons for homebuyers, comparing space, commute, schools, walkability and cost.',

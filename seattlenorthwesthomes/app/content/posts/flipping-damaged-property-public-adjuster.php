@@ -2,6 +2,7 @@
 // Imported from WordPress: /flipping-a-damaged-property-partner-with-a-public-adjuster-first/ (996 words)
 return [
     'title'       => 'Flipping a Damaged Property? Partner with a Public Adjuster First',
+    'seo_title'   => 'Flipping a Damaged Property? Call a Public Adjuster',
     'slug'        => 'flipping-damaged-property-public-adjuster',
     'legacy_slug' => 'flipping-a-damaged-property-partner-with-a-public-adjuster-first',
     'description' => 'Flipping a damaged property? Why partnering with a public adjuster first can maximize the insurance claim, fund repairs and protect your profit.',

@@ -5,8 +5,8 @@ render('home', [
     'featured' => array_slice($featured, 0, 6),
     'latest'   => array_slice(posts(), 0, 3),
 ], [
-    'title'       => 'Seattle Homes for Sale & Real Estate Experts | Seattle Northwest Homes',
-    'description' => 'Search Seattle homes for sale, explore neighborhood guides and get local help buying or selling a home in Ballard, Queen Anne, West Seattle and beyond.',
+    'title'       => 'Seattle Homes for Sale & Local Real Estate Experts',
+    'description' => 'Search Seattle homes for sale, explore neighborhood guides and get local help buying or selling in Ballard, Queen Anne, West Seattle and more.',
     'canonical'   => '/',
     'image'       => '/assets/img/brand/og-default.jpg',
     'schema'      => [],

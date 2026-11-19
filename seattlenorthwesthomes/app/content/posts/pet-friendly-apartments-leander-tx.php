@@ -2,6 +2,7 @@
 // Imported from WordPress: /8-cozy-pet-friendly-apartments-in-leander-tx-purr-fect-spots-for-you-and-your-pets/ (1019 words)
 return [
     'title'       => '8 Cozy, Pet-Friendly Apartments in Leander, TX: Purr-fect Spots for You and Your Pets!',
+    'seo_title'   => '8 Pet-Friendly Apartments in Leander, TX',
     'slug'        => 'pet-friendly-apartments-leander-tx',
     'legacy_slug' => '8-cozy-pet-friendly-apartments-in-leander-tx-purr-fect-spots-for-you-and-your-pets',
     'description' => 'Eight cozy, pet-friendly apartments in Leander, TX with dog parks, pet spas and green space — purr-fect spots for you and your furry friends.',

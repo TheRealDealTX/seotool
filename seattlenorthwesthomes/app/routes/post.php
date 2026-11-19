@@ -2,8 +2,8 @@
 $post = post($slug);
 if (!$post) { not_found(); return; }
 $cat = categories()[$post['category']] ?? ['name' => 'Articles'];
-$title = $post['title'];
-if (mb_strlen($title) < 45) $title .= ' | Seattle Northwest Homes';
+$title = $post['seo_title'] ?? $post['title'];
+if (mb_strlen($title . ' | Seattle Northwest Homes') <= 60) $title .= ' | Seattle Northwest Homes';
 render('post', ['post' => $post, 'cat' => $cat, 'related' => related_posts($post)], [
     'title'       => $title,
     'description' => $post['description'],

@@ -4,7 +4,7 @@ return [
     'title'       => 'The Most Wanted Features in Homes Today',
     'slug'        => 'most-wanted-home-features-buyers',
     'legacy_slug' => 'the-most-wanted-features-in-homes-today',
-    'description' => 'The home features buyers want most today, from open kitchens and home offices to energy efficiency, smart tech and outdoor space — and why they matter.',
+    'description' => 'The home features buyers want most, from open kitchens and home offices to energy efficiency, smart tech and outdoor space.',
     'keyword'     => 'most wanted home features buyers',
     'category'    => 'buying',
     'date'        => '2025-07-23',

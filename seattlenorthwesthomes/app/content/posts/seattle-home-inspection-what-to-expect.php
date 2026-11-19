@@ -2,7 +2,7 @@
 return [
     'title'       => 'Seattle Home Inspection: What to Expect and What to Watch',
     'slug'        => 'seattle-home-inspection-what-to-expect',
-    'description' => 'What a Seattle home inspection covers, from side sewer scopes and oil tanks to roof moss, crawlspaces, seismic concerns, older wiring, and pre-inspections.',
+    'description' => 'What a Seattle home inspection covers: side sewer scopes, oil tanks, roof moss, crawlspaces, seismic issues and older wiring.',
     'keyword'     => 'seattle home inspection',
     'category'    => 'buying',
     'date'        => '2026-08-27',

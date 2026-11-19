@@ -1,8 +1,9 @@
 <?php defined('SNW') || (http_response_code(404) && exit);
 return [
     'title'       => 'ADU Seattle Guide: Backyard Cottages, DADUs, and Resale Value',
+    'seo_title'   => 'ADU Seattle Guide: Backyard Cottages and DADUs',
     'slug'        => 'seattle-adu-dadu-guide',
-    'description' => 'Thinking about an ADU in Seattle? Learn how attached ADUs and backyard cottages differ, how permitting works, and what they mean for rental income and resale.',
+    'description' => 'Thinking about an ADU in Seattle? How attached ADUs and backyard cottages differ, how permitting works and what they mean for resale.',
     'keyword'     => 'adu seattle',
     'category'    => 'home-improvement',
     'date'        => '2026-09-10',

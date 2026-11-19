@@ -4,7 +4,7 @@ return [
     'title'       => 'Upgrades That Turn a Starter Home Into a Forever Home',
     'slug'        => 'starter-home-upgrades-forever-home',
     'legacy_slug' => 'upgrades-that-turn-a-starter-home-into-a-forever-home',
-    'description' => 'The upgrades that turn a starter home into a forever home: kitchen and bath updates, added space, energy efficiency and outdoor living that add value.',
+    'description' => 'Upgrades that turn a starter home into a forever home: kitchen and bath updates, added space, energy efficiency and outdoor living.',
     'keyword'     => 'starter home upgrades forever home',
     'category'    => 'home-improvement',
     'date'        => '2025-07-29',

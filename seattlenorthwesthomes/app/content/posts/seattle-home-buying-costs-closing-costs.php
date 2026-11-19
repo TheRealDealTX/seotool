@@ -2,7 +2,7 @@
 return [
     'title'       => 'Closing Costs in Seattle: What Buyers and Sellers Pay',
     'slug'        => 'seattle-home-buying-costs-closing-costs',
-    'description' => 'Closing costs in Seattle explained: escrow, title insurance, lender fees, prepaids, inspections, and the real estate excise tax, plus who customarily pays.',
+    'description' => 'Closing costs in Seattle explained: escrow, title insurance, lender fees, prepaids, inspections and Washington\'s real estate excise tax.',
     'keyword'     => 'closing costs in seattle',
     'category'    => 'buying',
     'date'        => '2026-10-22',

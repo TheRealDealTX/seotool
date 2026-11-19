@@ -4,7 +4,7 @@ return [
     'title'       => 'Renting for the First Time After College: A Quick Guide',
     'slug'        => 'first-apartment-after-college-guide',
     'legacy_slug' => 'renting-for-the-first-time-after-college-a-quick-guide',
-    'description' => 'Renting your first apartment after college? A quick guide to budgeting, finding a place, reading the lease, roommates and setting up your new home.',
+    'description' => 'Renting your first apartment after college? A quick guide to budgeting, finding a place, reading the lease and setting up your home.',
     'keyword'     => 'first apartment after college guide',
     'category'    => 'renting',
     'date'        => '2025-06-17',

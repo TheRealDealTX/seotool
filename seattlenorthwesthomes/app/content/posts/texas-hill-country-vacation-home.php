@@ -2,6 +2,7 @@
 // Imported from WordPress: /buying-a-vacation-home-in-the-texas-hill-country-what-you-need-to-know/ (590 words)
 return [
     'title'       => 'Buying a Vacation Home in the Texas Hill Country: What You Need to Know',
+    'seo_title'   => 'Buying a Texas Hill Country Vacation Home',
     'slug'        => 'texas-hill-country-vacation-home',
     'legacy_slug' => 'buying-a-vacation-home-in-the-texas-hill-country-what-you-need-to-know',
     'description' => 'Buying a vacation home in the Texas Hill Country: top towns, rental potential, water and land considerations, and what to know before buying.',

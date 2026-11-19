@@ -2,9 +2,10 @@
 // Imported from WordPress: /humble-tx-vs-other-houston-suburbs-which-offers-better-apartment-living/ (827 words)
 return [
     'title'       => 'Humble, TX vs. Other Houston Suburbs: Which Offers Better Apartment Living?',
+    'seo_title'   => 'Humble, TX vs. Houston Suburbs for Apartment Living',
     'slug'        => 'humble-tx-vs-houston-suburbs-apartments',
     'legacy_slug' => 'humble-tx-vs-other-houston-suburbs-which-offers-better-apartment-living',
-    'description' => 'Humble, TX vs. other Houston suburbs for apartment living: compare rent, commute, amenities, schools and lifestyle in Humble, Katy, Pearland and more.',
+    'description' => 'Humble, TX vs. other Houston suburbs for apartment living: rent, commute, amenities, schools and lifestyle in Humble, Katy and Pearland.',
     'keyword'     => 'humble tx vs houston suburbs apartments',
     'category'    => 'texas-real-estate',
     'date'        => '2025-06-04',

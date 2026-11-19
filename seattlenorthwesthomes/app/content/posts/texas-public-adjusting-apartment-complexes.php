@@ -2,6 +2,7 @@
 // Imported from WordPress: /texan-public-adjusting-for-apartment-complexes-why-it-matters-and-how-it-works/ (942 words)
 return [
     'title'       => 'Texan Public Adjusting for Apartment Complexes: Why It Matters and How It Works',
+    'seo_title'   => 'Texas Public Adjusting for Apartment Complexes',
     'slug'        => 'texas-public-adjusting-apartment-complexes',
     'legacy_slug' => 'texan-public-adjusting-for-apartment-complexes-why-it-matters-and-how-it-works',
     'description' => 'Texas public adjusting for apartment complexes: why it matters after hail, wind and flood damage, and how the claim process works for owners.',

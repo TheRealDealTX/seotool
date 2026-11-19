@@ -2,6 +2,7 @@
 // Imported from WordPress: /renovating-for-resale-boosting-your-homes-value-in-the-san-antonio-market/ (595 words)
 return [
     'title'       => 'Renovating for Resale: Boosting Your Home’s Value in the San Antonio Market',
+    'seo_title'   => 'Renovating for Resale in San Antonio: Boost Value',
     'slug'        => 'san-antonio-renovating-for-resale',
     'legacy_slug' => 'renovating-for-resale-boosting-your-homes-value-in-the-san-antonio-market',
     'description' => 'Renovating for resale in San Antonio: the projects that boost home value, what local buyers want and how to avoid over-improving.',

@@ -2,6 +2,7 @@
 // Imported from WordPress: /how-to-create-a-home-gym-in-your-apartment-with-minimal-equipment/ (998 words)
 return [
     'title'       => 'How to Create a Home Gym in Your Apartment with Minimal Equipment',
+    'seo_title'   => 'Apartment Home Gym Ideas with Minimal Equipment',
     'slug'        => 'apartment-home-gym-minimal-equipment',
     'legacy_slug' => 'how-to-create-a-home-gym-in-your-apartment-with-minimal-equipment',
     'description' => 'Create a home gym in your apartment with minimal equipment: space-saving gear, quiet workouts and setups that fit even the smallest floor plan.',

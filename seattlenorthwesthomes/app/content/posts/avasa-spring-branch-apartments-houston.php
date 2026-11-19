@@ -2,6 +2,7 @@
 // Imported from WordPress: /discover-luxury-living-at-avasa-spring-branch-apartments-in-houston-tx/ (1032 words)
 return [
     'title'       => 'Discover Luxury Living at Avasa Spring Branch Apartments in Houston, TX',
+    'seo_title'   => 'Avasa Spring Branch Apartments in Houston, TX: Review',
     'slug'        => 'avasa-spring-branch-apartments-houston',
     'legacy_slug' => 'discover-luxury-living-at-avasa-spring-branch-apartments-in-houston-tx',
     'description' => 'Discover luxury living at Avasa Spring Branch Apartments in Houston, TX: amenities, floor plans and the Spring Branch neighborhood lifestyle.',

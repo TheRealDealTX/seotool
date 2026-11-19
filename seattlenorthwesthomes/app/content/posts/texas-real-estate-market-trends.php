@@ -2,6 +2,7 @@
 // Imported from WordPress: /the-texas-real-estate-landscape-post-pandemic-trends-and-predictions/ (625 words)
 return [
     'title'       => 'The Texas Real Estate Landscape Post-Pandemic: Trends and Predictions',
+    'seo_title'   => 'Texas Real Estate Market Trends and Predictions',
     'slug'        => 'texas-real-estate-market-trends',
     'legacy_slug' => 'the-texas-real-estate-landscape-post-pandemic-trends-and-predictions',
     'description' => 'The Texas real estate landscape post-pandemic: trends in prices, inventory, migration and remote work, plus predictions for buyers and sellers.',

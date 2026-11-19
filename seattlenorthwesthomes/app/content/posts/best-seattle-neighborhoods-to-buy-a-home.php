@@ -2,7 +2,7 @@
 return [
     'title'       => 'Best Neighborhoods in Seattle to Buy a Home: 10 to Consider',
     'slug'        => 'best-seattle-neighborhoods-to-buy-a-home',
-    'description' => 'Looking for the best neighborhoods in Seattle to buy a home? Compare 10 areas by character, housing stock, and lifestyle fit before you start touring.',
+    'description' => 'The best neighborhoods in Seattle to buy a home, compared by character, housing stock and lifestyle, from Ballard to Columbia City.',
     'keyword'     => 'best neighborhoods in seattle to buy a home',
     'category'    => 'seattle-living',
     'date'        => '2026-11-05',

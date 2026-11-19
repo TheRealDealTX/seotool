@@ -33,7 +33,7 @@ return [
         'parking' => 'Attached 2-car garage', 'heating' => 'Forced air + A/C', 'hoa' => 0,
         'listed' => '2026-10-28', 'featured' => true,
         'images' => ['craftsman-home-twilight', 'open-living-wood-wall', 'white-modern-kitchen', 'dining-room-green-chairs'],
-        'summary' => 'Remodeled 1926 home on the south slope of Queen Anne with skyline, Space Needle and Mount Rainier views from the main living level and primary suite.',
+        'summary' => 'Remodeled 1926 home on Queen Anne\'s south slope with skyline, Space Needle and Mount Rainier views from the main level and primary suite.',
         'description' => [
             'Walls of windows frame the skyline from the living room, dining room and an expansive view deck. The chef\'s kitchen opens to a family room, and the main floor includes a powder room and a home office.',
             'Upstairs, the primary suite has its own view balcony, a walk-in closet and a spa bath with radiant floors. Two more bedrooms and a full bath complete the level, while the lower level adds a guest suite, media room and access to the two-car garage.',
@@ -49,7 +49,7 @@ return [
         'parking' => 'Alley-access parking pad', 'heating' => 'Heat pump', 'hoa' => 0,
         'listed' => '2026-10-15', 'featured' => true,
         'images' => ['farmhouse-wraparound-porch', 'warm-living-room', 'white-kitchen-range', 'minimal-reading-nook'],
-        'summary' => 'A 1908 farmhouse lovingly updated for today, with a wraparound porch, open kitchen and family room, and a short walk to Gas Works Park and N 45th Street.',
+        'summary' => 'A lovingly updated 1908 farmhouse with a wraparound porch and open kitchen, a short walk to Gas Works Park and N 45th Street.',
         'description' => [
             'The wraparound porch sets the tone for this welcoming Wallingford home. Inside, the main level flows from a formal living room with built-ins to an open kitchen and family room that opens onto a sunny back deck.',
             'Four bedrooms include a primary suite with vaulted ceilings and a walk-in closet. The basement is partially finished for a gym or rec room and offers generous storage.',
@@ -161,7 +161,7 @@ return [
         'parking' => 'Attached 1-car garage', 'heating' => 'Heat pump + A/C', 'hoa' => 95,
         'listed' => '2026-10-30', 'featured' => true,
         'images' => ['modern-wood-townhome', 'open-living-wood-wall', 'gray-living-room', 'white-modern-kitchen'],
-        'summary' => 'Fee-simple townhome built in 2021 with a rooftop deck, attached garage and a short walk to the Columbia City light rail station and historic main street.',
+        'summary' => '2021 fee-simple townhome with a rooftop deck and attached garage, a short walk to Columbia City light rail and the historic main street.',
         'description' => [
             'This modern townhome lives large across four levels. The main floor offers an open kitchen, dining and living area with a gas fireplace and a small balcony.',
             'The primary suite and second bedroom are on the third floor, with a flexible third bedroom or office at the entry level. The rooftop deck has views toward the Cascades.',
@@ -389,7 +389,7 @@ return [
         'parking' => 'Attached 2-car garage', 'heating' => 'Radiant + A/C', 'hoa' => 0,
         'listed' => '2026-11-13', 'featured' => true,
         'images' => ['modern-black-home-dusk', 'beamed-great-room', 'white-kitchen-island', 'dark-spa-bath'],
-        'summary' => 'Architect-designed 2017 home on Magnolia\'s bluff with Puget Sound and Olympic views, a great room with walls of glass and a primary suite with spa bath.',
+        'summary' => 'Architect-designed 2017 home on Magnolia\'s bluff with Puget Sound and Olympic views, a glass-walled great room and a spa-bath primary suite.',
         'description' => [
             'The great room opens to a view deck through wide sliding doors. The kitchen features a large island, pro-style range and walk-in pantry.',
             'Upstairs, the primary suite has its own view terrace and spa bath; two more bedrooms share a bath. The lower level adds a guest suite and media room. Discovery Park is minutes away.',

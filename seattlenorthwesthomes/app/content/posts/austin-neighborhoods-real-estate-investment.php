@@ -2,6 +2,7 @@
 // Imported from WordPress: /top-5-up-and-coming-neighborhoods-in-austin-for-real-estate-investment/ (571 words)
 return [
     'title'       => 'Top 5 Up-and-Coming Neighborhoods in Austin for Real Estate Investment',
+    'seo_title'   => '5 Up-and-Coming Austin Neighborhoods for Investors',
     'slug'        => 'austin-neighborhoods-real-estate-investment',
     'legacy_slug' => 'top-5-up-and-coming-neighborhoods-in-austin-for-real-estate-investment',
     'description' => 'Five up-and-coming Austin neighborhoods for real estate investment, with what is driving growth and what investors should watch for.',

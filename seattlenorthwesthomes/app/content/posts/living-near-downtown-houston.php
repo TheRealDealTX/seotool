@@ -2,6 +2,7 @@
 // Imported from WordPress: /finding-your-place-in-the-heart-of-houston-7-ways-to-get-near-downtown/ (627 words)
 return [
     'title'       => 'Finding Your Place in the Heart of Houston: 7 Ways to Get Near Downtown',
+    'seo_title'   => '7 Ways to Live Near Downtown Houston',
     'slug'        => 'living-near-downtown-houston',
     'legacy_slug' => 'finding-your-place-in-the-heart-of-houston-7-ways-to-get-near-downtown',
     'description' => 'Finding your place in the heart of Houston: seven ways to live near downtown, from Midtown and EaDo to the Heights and Montrose.',

@@ -2,7 +2,7 @@
 return [
     'title'       => 'Seattle Home Maintenance Checklist: A Season-by-Season Guide',
     'slug'        => 'pacific-northwest-home-maintenance-checklist',
-    'description' => 'Use this Seattle home maintenance checklist to protect your house through every season, from fall gutter cleaning and roof moss to winter moisture control.',
+    'description' => 'A season-by-season Seattle home maintenance checklist: fall gutters and roof moss, winter moisture, spring exteriors and summer projects.',
     'keyword'     => 'seattle home maintenance checklist',
     'category'    => 'home-improvement',
     'date'        => '2026-08-06',

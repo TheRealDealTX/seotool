@@ -4,7 +4,7 @@ return [
     'title'       => 'How to Boost Your Home’s Curb Appeal on a Budget',
     'slug'        => 'boost-curb-appeal-on-a-budget',
     'legacy_slug' => 'how-to-boost-your-homes-curb-appeal-on-a-budget',
-    'description' => 'Budget-friendly ways to boost your home\'s curb appeal: paint, landscaping, lighting, house numbers and quick fixes that make buyers stop and look.',
+    'description' => 'Budget-friendly ways to boost curb appeal: paint, landscaping, lighting, house numbers and quick fixes that make buyers stop and look.',
     'keyword'     => 'boost curb appeal on a budget',
     'category'    => 'selling',
     'date'        => '2025-03-16',

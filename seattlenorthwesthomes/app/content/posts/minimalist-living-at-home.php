@@ -2,6 +2,7 @@
 // Imported from WordPress: /how-minimalism-transformed-my-life-the-art-of-living-with-less/ (945 words)
 return [
     'title'       => 'How Minimalism Transformed My Life: The Art of Living with Less',
+    'seo_title'   => 'Minimalist Living: The Art of Living with Less',
     'slug'        => 'minimalist-living-at-home',
     'legacy_slug' => 'how-minimalism-transformed-my-life-the-art-of-living-with-less',
     'description' => 'How minimalism transformed my life: practical steps to declutter, live with less and create a calmer, more intentional home in any size space.',

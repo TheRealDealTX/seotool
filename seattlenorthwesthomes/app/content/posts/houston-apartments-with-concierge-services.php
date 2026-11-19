@@ -2,9 +2,10 @@
 // Imported from WordPress: /experience-vip-living-houston-apartments-with-premier-concierge-services/ (1340 words)
 return [
     'title'       => 'Experience VIP Living: Houston Apartments with Premier Concierge Services',
+    'seo_title'   => 'Houston Apartments with Premier Concierge Services',
     'slug'        => 'houston-apartments-with-concierge-services',
     'legacy_slug' => 'experience-vip-living-houston-apartments-with-premier-concierge-services',
-    'description' => 'Experience VIP living at Houston apartments with premier concierge services — luxury amenities, top communities and what to expect from full service.',
+    'description' => 'VIP living at Houston apartments with premier concierge services: luxury amenities, top communities and what full service includes.',
     'keyword'     => 'houston apartments with concierge services',
     'category'    => 'texas-real-estate',
     'date'        => '2024-11-08',

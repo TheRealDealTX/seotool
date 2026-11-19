@@ -11,8 +11,8 @@ $faq = [
     ['q' => 'Who is ' . $name . ' a good fit for?', 'a' => $hood['body'][2][1]],
 ];
 render('neighborhood', ['slug' => $slug, 'hood' => $hood, 'homes' => $homes, 'posts' => $posts, 'faq' => $faq], [
-    'title'       => $name . ' Homes for Sale & Neighborhood Guide | Seattle, WA',
-    'description' => excerpt('Explore ' . $name . ' homes for sale and our local guide to living in ' . $name . ', Seattle: housing, commute, parks and who the neighborhood suits.', 158),
+    'title'       => $name . ' Homes for Sale | Seattle Neighborhood Guide',
+    'description' => 'Explore ' . $name . ' homes for sale and our guide to living in ' . $name . ', Seattle: housing, commute, parks and who it suits.',
     'canonical'   => '/neighborhoods/' . $slug . '/',
     'image'       => photo($hood['image']),
     'schema'      => [

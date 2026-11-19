@@ -2,6 +2,7 @@
 // Imported from WordPress: /retirement-living-in-texas-downsizing-and-senior-housing-options/ (813 words)
 return [
     'title'       => 'Retirement Living in Texas: Downsizing and Senior Housing Options',
+    'seo_title'   => 'Texas Retirement: Downsizing and Senior Housing',
     'slug'        => 'texas-retirement-downsizing-senior-housing',
     'legacy_slug' => 'retirement-living-in-texas-downsizing-and-senior-housing-options',
     'description' => 'Retirement living in Texas: downsizing tips and senior housing options, from 55+ communities to independent and assisted living, explained.',

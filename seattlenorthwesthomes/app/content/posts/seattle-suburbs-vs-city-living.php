@@ -2,7 +2,7 @@
 return [
     'title'       => 'Seattle Suburbs vs City: Which Is Right for Your Next Home?',
     'slug'        => 'seattle-suburbs-vs-city-living',
-    'description' => 'Weighing Seattle suburbs vs city living? Compare Shoreline, Edmonds, Kirkland, Renton, and Lynnwood with in-city neighborhoods on commute, space, and lifestyle.',
+    'description' => 'Seattle suburbs vs city living: compare Shoreline, Edmonds, Kirkland, Renton and Lynnwood with in-city neighborhoods on commute and space.',
     'keyword'     => 'seattle suburbs vs city',
     'category'    => 'seattle-living',
     'date'        => '2026-10-08',

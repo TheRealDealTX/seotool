@@ -2,7 +2,7 @@
 return [
     'title'       => 'First Time Home Buyer Seattle Guide: Budget to Closing Day',
     'slug'        => 'seattle-first-time-home-buyer-guide',
-    'description' => 'A first time home buyer Seattle guide covering budgeting, pre-approval, down payment help, inspections, review dates, escalation clauses, and closing.',
+    'description' => 'First time home buyer in Seattle? Our guide covers budgeting, pre-approval, down payment help, inspections, offers and closing day.',
     'keyword'     => 'first time home buyer seattle',
     'category'    => 'buying',
     'date'        => '2026-11-12',

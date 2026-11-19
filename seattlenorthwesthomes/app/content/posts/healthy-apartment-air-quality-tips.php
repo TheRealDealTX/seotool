@@ -2,6 +2,7 @@
 // Imported from WordPress: /healthy-apartment-living-air-quality-plants-and-wellness-tips/ (444 words)
 return [
     'title'       => 'Healthy Apartment Living: Air Quality, Plants, and Wellness Tips',
+    'seo_title'   => 'Healthy Apartment Living: Air Quality and Wellness Tips',
     'slug'        => 'healthy-apartment-air-quality-tips',
     'legacy_slug' => 'healthy-apartment-living-air-quality-plants-and-wellness-tips',
     'description' => 'Healthy apartment living tips: improve air quality, choose air-purifying plants, manage humidity and build wellness habits in a small space.',

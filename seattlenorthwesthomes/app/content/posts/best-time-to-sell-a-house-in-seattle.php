@@ -2,7 +2,7 @@
 return [
     'title'       => 'Best Time to Sell a House in Seattle: A Seasonal Guide',
     'slug'        => 'best-time-to-sell-a-house-in-seattle',
-    'description' => 'The best time to sell a house in Seattle depends on season, competition, and your goals. Learn how spring, summer, fall, and winter compare, plus prep tips.',
+    'description' => 'The best time to sell a house in Seattle depends on season, competition and your goals. See how spring, summer, fall and winter compare.',
     'keyword'     => 'best time to sell a house in seattle',
     'category'    => 'selling',
     'date'        => '2026-09-30',

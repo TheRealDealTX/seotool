@@ -4,7 +4,7 @@ return [
     'title'       => 'Interior Design Trends for Seattle Homes in 2025',
     'slug'        => 'seattle-home-interior-design-trends',
     'legacy_slug' => 'interior-design-trends-for-seattle-homes-in-2025',
-    'description' => 'Interior design trends for Seattle homes: warm woods, natural light, moody PNW colors, cozy textures and sustainable materials suited to our climate.',
+    'description' => 'Seattle interior design trends: warm woods, natural light, moody PNW colors, cozy textures and sustainable materials for our climate.',
     'keyword'     => 'seattle home interior design trends',
     'category'    => 'seattle-living',
     'date'        => '2025-05-15',

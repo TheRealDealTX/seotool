@@ -2,7 +2,7 @@
 return [
     'title'       => 'Moving From Texas to Seattle: Taxes, Weather, and Housing',
     'slug'        => 'moving-from-texas-to-seattle',
-    'description' => 'Moving from Texas to Seattle? Compare taxes, weather, housing types, commuting, and neighborhoods that Texas transplants often love in the Pacific Northwest.',
+    'description' => 'Moving from Texas to Seattle? Compare taxes, weather, housing types and commutes, plus the neighborhoods Texas transplants often love.',
     'keyword'     => 'moving from texas to seattle',
     'category'    => 'seattle-living',
     'date'        => '2026-07-15',

@@ -4,7 +4,7 @@ return [
     'title'       => 'Home Staging Tips That Will Boost Your Property Value',
     'slug'        => 'home-staging-tips-increase-value',
     'legacy_slug' => 'home-staging-tips-that-will-boost-your-property-value',
-    'description' => 'Home staging tips that boost property value: declutter, neutralize, rearrange furniture and highlight key rooms so your home sells faster for more.',
+    'description' => 'Home staging tips that boost value: declutter, neutralize, rearrange furniture and highlight key rooms so your home sells faster.',
     'keyword'     => 'home staging tips increase value',
     'category'    => 'selling',
     'date'        => '2025-02-28',

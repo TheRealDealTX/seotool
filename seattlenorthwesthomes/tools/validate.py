@@ -138,9 +138,9 @@ def main():
                 errors.append(f'{path}: bad JSON-LD {e}')
         if not p.noindex and '?' not in path:
             t = p.title.strip()
-            if len(t) > 75:
+            if len(t) > 60:
                 warns.append(f'{path}: title {len(t)} chars')
-            if p.desc and not 50 <= len(p.desc) <= 165:
+            if p.desc and not 50 <= len(p.desc) <= 145:
                 warns.append(f'{path}: description {len(p.desc)} chars')
             titles.setdefault(t, []).append(path)
             descs.setdefault(p.desc, []).append(path)

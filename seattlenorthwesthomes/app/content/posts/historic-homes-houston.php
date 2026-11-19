@@ -2,6 +2,7 @@
 // Imported from WordPress: /historic-homes-of-houston-a-look-into-the-real-estate-time-capsules/ (623 words)
 return [
     'title'       => 'Historic Homes of Houston: A Look into the Real Estate Time Capsules',
+    'seo_title'   => 'Historic Homes of Houston: Real Estate Time Capsules',
     'slug'        => 'historic-homes-houston',
     'legacy_slug' => 'historic-homes-of-houston-a-look-into-the-real-estate-time-capsules',
     'description' => 'Historic homes of Houston: a look into the city\'s real estate time capsules in the Heights, Montrose, River Oaks and Third Ward.',

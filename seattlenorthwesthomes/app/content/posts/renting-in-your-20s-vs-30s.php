@@ -4,7 +4,7 @@ return [
     'title'       => 'Renting in Your 20s vs. 30s: What Changes?',
     'slug'        => 'renting-in-your-20s-vs-30s',
     'legacy_slug' => 'renting-in-your-20s-vs-30s-what-changes',
-    'description' => 'How renting changes from your 20s to your 30s: budgets, space, location priorities, roommates and when it makes sense to start thinking about buying.',
+    'description' => 'How renting changes from your 20s to your 30s: budgets, space, location, roommates and when it makes sense to think about buying.',
     'keyword'     => 'renting in your 20s vs 30s',
     'category'    => 'renting',
     'date'        => '2025-06-11',

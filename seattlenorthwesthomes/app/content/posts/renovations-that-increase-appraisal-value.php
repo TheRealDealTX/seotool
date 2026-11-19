@@ -4,7 +4,7 @@ return [
     'title'       => 'Does Your Renovation Increase Home Appraisal Value?',
     'slug'        => 'renovations-that-increase-appraisal-value',
     'legacy_slug' => 'does-your-renovation-increase-home-appraisal-value',
-    'description' => 'Which renovations actually increase home appraisal value? See the updates appraisers reward, the ones that rarely pay off, and how to document your work.',
+    'description' => 'Which renovations increase home appraisal value? The updates appraisers reward, the ones that rarely pay off and how to document work.',
     'keyword'     => 'renovations that increase appraisal value',
     'category'    => 'selling',
     'date'        => '2025-07-09',

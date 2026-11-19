@@ -4,7 +4,7 @@ return [
     'title'       => 'A Guide to Choosing Safe and Secure Apartment Homes',
     'slug'        => 'choosing-safe-secure-apartment',
     'legacy_slug' => 'a-guide-to-choosing-safe-and-secure-apartment-homes',
-    'description' => 'How to choose a safe and secure apartment: neighborhood research, building access, lighting, locks and the questions to ask before you sign a lease.',
+    'description' => 'How to choose a safe, secure apartment: neighborhood research, building access, lighting, locks and questions to ask before you sign.',
     'keyword'     => 'choosing safe secure apartment',
     'category'    => 'renting',
     'date'        => '2025-05-02',

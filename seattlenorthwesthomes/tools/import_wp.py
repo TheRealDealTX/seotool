@@ -45,6 +45,8 @@ for line in open(os.path.join(ROOT, 'tools', 'slugmap.tsv')):
 # Hand-written meta descriptions (WordPress only had truncated excerpts).
 DESCRIPTIONS = dict(l.rstrip('\n').split('\t') for l in open(os.path.join(ROOT, 'tools', 'descriptions.tsv')))
 
+SEO_TITLES = dict(l.rstrip('\n').split('\t') for l in open(os.path.join(ROOT, 'tools', 'seo-titles.tsv')))
+
 media_by_id = {m['id']: m for m in json.load(open(os.path.join(BK, 'api', 'media.json')))}
 legacy_media = {}   # '/wp-content/uploads/...' -> '/assets/img/blog/x.webp'
 
@@ -249,6 +251,8 @@ def main():
         ) % (p['slug'], words, php_str(title), php_str(new), php_str(p['slug']), php_str(desc),
              php_str(new.replace('-', ' ')), php_str(cat), php_str(p['date'][:10]),
              php_str(p['modified'][:10]), php_str(img), php_str(alt), body)
+        if new in SEO_TITLES:
+            src = src.replace("\n    'slug'        =>", "\n    'seo_title'   => " + php_str(SEO_TITLES[new]) + ",\n    'slug'        =>", 1)
         open(os.path.join(POSTS_OUT, new + '.php'), 'w').write(src)
     # every attachment, not just those used in posts, so old image URLs keep resolving
     for m in media_by_id.values():

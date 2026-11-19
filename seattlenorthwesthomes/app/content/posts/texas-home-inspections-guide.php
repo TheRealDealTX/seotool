@@ -2,6 +2,7 @@
 // Imported from WordPress: /the-role-of-home-inspections-in-texas-real-estate-transactions/ (680 words)
 return [
     'title'       => 'The Role of Home Inspections in Texas Real Estate Transactions',
+    'seo_title'   => 'Home Inspections in Texas Real Estate Deals',
     'slug'        => 'texas-home-inspections-guide',
     'legacy_slug' => 'the-role-of-home-inspections-in-texas-real-estate-transactions',
     'description' => 'The role of home inspections in Texas real estate: what inspectors check, the option period, repair negotiations and how buyers stay protected.',

@@ -58,6 +58,35 @@ function excerpt(string $html, int $len = 160): string
     return rtrim(mb_substr($cut, 0, (int) mb_strrpos($cut, ' ')), ',;:.—-') . '…';
 }
 
+/**
+ * Search-result safety nets: titles <= 60 chars (~580px), descriptions <= 145 chars.
+ * Titles drop trailing " | …" segments first; descriptions end at a sentence or clause when possible.
+ */
+function meta_title(string $t, int $max = 60): string
+{
+    while (mb_strlen($t) > $max && ($i = mb_strrpos($t, ' | ')) !== false) $t = mb_substr($t, 0, $i);
+    if (mb_strlen($t) <= $max) return $t;
+    $cut = mb_substr($t, 0, $max + 1);
+    return rtrim(mb_substr($cut, 0, (int) mb_strrpos($cut, ' ')), ' ,;:—-|&');
+}
+
+function meta_desc(string $d, int $max = 145): string
+{
+    $d = trim(preg_replace('/\s+/', ' ', $d));
+    if (mb_strlen($d) <= $max) return $d;
+    $cut = mb_substr($d, 0, $max);
+    foreach (['. ', '? ', '! '] as $sep) {
+        $i = mb_strrpos($cut, $sep);
+        if ($i !== false && $i >= 90) return mb_substr($cut, 0, $i + 1);
+    }
+    foreach ([', ', ' — ', '; ', ': '] as $sep) {
+        $i = mb_strrpos($cut, $sep);
+        if ($i !== false && $i >= 100) return mb_substr($cut, 0, $i) . '.';
+    }
+    $cut = mb_substr($d, 0, $max - 1);
+    return rtrim(mb_substr($cut, 0, (int) mb_strrpos($cut, ' ')), ' ,;:—-') . '…';
+}
+
 /* ---------- data access ---------- */
 
 function data(string $name): array

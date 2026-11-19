@@ -4,7 +4,7 @@ return [
     'title'       => 'The Best Home Layouts for Comfort and Functionality',
     'slug'        => 'best-home-layouts-floor-plans',
     'legacy_slug' => 'the-best-home-layouts-for-comfort-and-functionality',
-    'description' => 'Compare the best home layouts for comfort and function — open concept, split bedroom, single-level and flex floor plans — to find the right fit for you.',
+    'description' => 'Compare the best home layouts for comfort and function: open concept, split bedroom, single-level and flexible floor plans.',
     'keyword'     => 'best home layouts floor plans',
     'category'    => 'buying',
     'date'        => '2025-07-15',

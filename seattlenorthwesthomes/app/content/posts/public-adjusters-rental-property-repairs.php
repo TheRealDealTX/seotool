@@ -2,6 +2,7 @@
 // Imported from WordPress: /the-hidden-heroes-behind-repaired-rentals-meet-the-public-adjusters/ (994 words)
 return [
     'title'       => 'The Hidden Heroes Behind Repaired Rentals: Meet the Public Adjusters',
+    'seo_title'   => 'How Public Adjusters Help Repair Rental Properties',
     'slug'        => 'public-adjusters-rental-property-repairs',
     'legacy_slug' => 'the-hidden-heroes-behind-repaired-rentals-meet-the-public-adjusters',
     'description' => 'Meet the public adjusters behind repaired rentals: how they help property owners get fair insurance settlements and restore damaged units faster.',

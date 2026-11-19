@@ -2,7 +2,7 @@
 return [
     'title'       => 'Condo vs Townhouse Seattle: Which Home Type Fits You Best?',
     'slug'        => 'seattle-condo-vs-townhouse-vs-single-family',
-    'description' => 'Condo vs townhouse Seattle guide: compare HOA dues, reserves, ownership structures, maintenance, and where each home type is common, plus single-family homes.',
+    'description' => 'Condo vs townhouse in Seattle: compare HOA dues, reserves, ownership structures, upkeep and where each home type is most common.',
     'keyword'     => 'condo vs townhouse seattle',
     'category'    => 'buying',
     'date'        => '2026-06-10',

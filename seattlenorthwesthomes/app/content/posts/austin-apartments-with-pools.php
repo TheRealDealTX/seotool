@@ -2,6 +2,7 @@
 // Imported from WordPress: /cool-living-dive-into-austins-best-apartments-with-refreshing-pools/ (1063 words)
 return [
     'title'       => 'Cool Living: Dive Into Austin’s Best Apartments with Refreshing Pools',
+    'seo_title'   => 'Austin\'s Best Apartments with Pools to Beat the Heat',
     'slug'        => 'austin-apartments-with-pools',
     'legacy_slug' => 'cool-living-dive-into-austins-best-apartments-with-refreshing-pools',
     'description' => 'Dive into Austin\'s best apartments with refreshing pools — resort-style communities, amenities and neighborhoods to beat the Texas heat.',

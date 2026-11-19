@@ -4,7 +4,7 @@ return [
     'title'       => 'From Renter to Pro: The Insider’s Guide to Apartment Living',
     'slug'        => 'apartment-living-guide-for-renters',
     'legacy_slug' => 'from-renter-to-pro-the-insiders-guide-to-apartment-living',
-    'description' => 'From renter to pro: an insider\'s guide to apartment living, covering lease tips, neighbors, maintenance requests, storage and making a rental home.',
+    'description' => 'From renter to pro: an insider\'s guide to apartment living, with lease tips, neighbor etiquette, maintenance requests and storage ideas.',
     'keyword'     => 'apartment living guide for renters',
     'category'    => 'renting',
     'date'        => '2024-10-26',

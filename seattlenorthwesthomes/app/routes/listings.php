@@ -38,7 +38,7 @@ $filtered = (bool) array_filter($f, fn($v, $k) => $k !== 'sort' && $v, ARRAY_FIL
 
 render('listings', ['results' => $results, 'f' => $f, 'filtered' => $filtered], [
     'title'       => 'Seattle Homes for Sale | Houses, Condos & Townhomes',
-    'description' => 'Browse Seattle homes for sale: Craftsman houses, townhomes and condos in Ballard, Queen Anne, Capitol Hill, West Seattle and more. Filter by price and beds.',
+    'description' => 'Browse Seattle homes for sale: Craftsman houses, townhomes and condos in Ballard, Capitol Hill, West Seattle and more. Filter by price and beds.',
     'canonical'   => '/homes-for-sale/',
     'noindex'     => $filtered,     // filtered variants consolidate to the main listing page
     'schema'      => [schema_breadcrumbs([['Homes for Sale', '/homes-for-sale/']]),

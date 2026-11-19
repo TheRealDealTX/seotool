@@ -1,5 +1,7 @@
 <?php defined('SNW') || (http_response_code(404) && exit);
 $m = $meta + ['title' => cfg('name'), 'description' => cfg('tagline'), 'canonical' => '/', 'image' => '/assets/img/brand/og-default.jpg', 'type' => 'website', 'noindex' => false, 'schema' => []];
+$m['title'] = meta_title($m['title']);
+$m['description'] = meta_desc($m['description']);
 $current = '/' . trim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/') . '/';
 $nav = [
     '/homes-for-sale/' => 'Homes for Sale',

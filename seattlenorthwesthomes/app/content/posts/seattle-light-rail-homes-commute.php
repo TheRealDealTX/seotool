@@ -1,8 +1,9 @@
 <?php defined('SNW') || (http_response_code(404) && exit);
 return [
     'title'       => 'Homes Near Light Rail in Seattle: Where to Buy for Easy Commutes',
+    'seo_title'   => 'Homes Near Light Rail in Seattle: Where to Buy',
     'slug'        => 'seattle-light-rail-homes-commute',
-    'description' => 'Shopping for homes near light rail in Seattle? Explore station neighborhoods from Columbia City to Lynnwood and learn what to weigh before you buy.',
+    'description' => 'Homes near light rail in Seattle: explore station neighborhoods from Columbia City to Lynnwood and what to weigh before you buy.',
     'keyword'     => 'homes near light rail seattle',
     'category'    => 'seattle-living',
     'date'        => '2026-05-20',

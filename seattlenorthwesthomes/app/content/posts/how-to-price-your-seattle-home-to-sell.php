@@ -2,7 +2,7 @@
 return [
     'title'       => 'How to Price Your Home in Seattle to Sell With Confidence',
     'slug'        => 'how-to-price-your-seattle-home-to-sell',
-    'description' => 'Learn how to price your home in Seattle using a comparative market analysis, smart list price strategy, offer review dates, and early days-on-market signals.',
+    'description' => 'How to price your home in Seattle: comparative market analysis, list price strategy, offer review dates and what days on market tell you.',
     'keyword'     => 'how to price your home seattle',
     'category'    => 'selling',
     'date'        => '2026-07-01',
