@@ -22,7 +22,8 @@ return [
 <p>FHA loan requirements in Texas are the same national rules HUD sets everywhere: a 580 credit score for 3.5% down (500 to 579 with 10% down), a manageable debt-to-income ratio, upfront and annual mortgage insurance, a home you will live in, and a loan amount within your county's limit. For 2026, that limit is $541,287 for a single-family home in Harris County and the surrounding Houston counties.</p>
 <p>Below is each requirement in plain English, with the Texas and Houston details that affect your purchase.</p>
 
-<h2>FHA credit score and down payment requirements</h2>
+<h2>FHA credit score, down payment and DTI requirements</h2>
+<h3>Credit score and down payment</h3>
 <p>HUD ties your minimum down payment, which it calls the minimum required investment, to your credit score:</p>
 <table>
 <thead><tr><th>Credit score</th><th>Minimum down payment</th></tr></thead>
@@ -35,7 +36,7 @@ return [
 <p>Those are HUD's floors. Individual lenders often add stricter "overlays," so one lender may decline a 590 score that another approves. If your score is near a cutoff, talk to more than one lender.</p>
 <p>Your down payment can come from savings, a documented gift, or an approved assistance program. FHA accepts gifts from family members, your employer or union, a close friend with a documented interest in you, a charity, or a government agency or public entity with a homeownership program. Cash on hand that you cannot trace is not acceptable, and a donor must sign a gift letter. Our guide to <a href="/blog/down-payment-assistance-texas/">down payment assistance in Texas</a> covers the state and Houston-area programs that pair with FHA loans.</p>
 
-<h2>Debt-to-income ratio</h2>
+<h3>Debt-to-income ratio</h3>
 <p>FHA looks at two ratios: your housing payment divided by gross monthly income (front-end) and all monthly debts including the new mortgage divided by gross income (back-end).</p>
 <p>Most FHA loans are approved through FHA's automated underwriting scorecard, which can accept higher ratios when the rest of your file is strong. When a loan is manually underwritten, HUD's handbook sets these limits:</p>
 <ul>

@@ -31,7 +31,9 @@ return [
 </ul>
 <p>If you are new to the Texas process, our <a href="/blog/first-time-home-buyer-texas/">first time home buyer Texas guide</a> walks through where the option period fits between your offer and closing.</p>
 
-<h2>Exterior and roof checklist</h2>
+<h2>The home inspection checklist, area by area</h2>
+<p>Work through the house in this order. Each list covers what a good inspector checks and what you should ask about.</p>
+<h3>Exterior and roof</h3>
 <p>Start outside. Houston heat, hail and hurricane season are hard on roofs and siding, and water that gets past them causes most of the expensive problems inside.</p>
 <ul>
 <li>Missing, curled, cracked or granule-stripped shingles; soft spots; sagging ridgelines</li>
@@ -44,7 +46,7 @@ return [
 </ul>
 <p>Ask the inspector to estimate the roof's remaining life and note any signs of previous storm repairs. Your insurer will ask about the roof's age, and an older roof can raise your premium or limit coverage.</p>
 
-<h2>Foundation checklist: Houston clay soil</h2>
+<h3>Foundation checklist: Houston clay soil</h3>
 <p>Much of the Houston area sits on expansive clay that swells when wet and shrinks during drought. That movement is why slab foundation problems come up so often on Houston inspection reports.</p>
 <ul>
 <li>Diagonal cracks at the corners of doors and windows, inside and out</li>
@@ -56,7 +58,7 @@ return [
 </ul>
 <p>A general inspector can flag symptoms, but cannot tell you whether the foundation is performing as designed. If the report notes movement, hire a licensed structural engineer during the option period. Ask the seller for any prior foundation repair paperwork and transferable warranty, and compare it with what they disclosed on the <a href="/blog/texas-seller-disclosure-notice/">Texas seller's disclosure notice</a>.</p>
 
-<h2>Attic, insulation and ventilation</h2>
+<h3>Attic, insulation and ventilation</h3>
 <p>Texas attics get extremely hot, and many hold the HVAC unit, ductwork and water heater, so the attic tells you a lot about the house.</p>
 <ul>
 <li>Water stains on decking or rafters, which can point to roof leaks</li>
@@ -67,7 +69,7 @@ return [
 <li>Evidence of rodents, such as droppings or chewed wiring</li>
 </ul>
 
-<h2>Plumbing checklist: cast iron, polybutylene and leaks</h2>
+<h3>Plumbing checklist: cast iron, polybutylene and leaks</h3>
 <p>Plumbing problems are among the most expensive items buyers inherit, especially in older homes.</p>
 <ul>
 <li><strong>Drain lines.</strong> Many older Houston homes have cast iron drain pipes under the slab. Cast iron can corrode, crack and scale over time, and the damage is hidden under the floor. Slow drains, gurgling and sewage odors are warning signs.</li>
@@ -80,7 +82,6 @@ return [
 </ul>
 [[product:moisture-meter]]
 
-<h2>Electrical, HVAC and water heater</h2>
 <h3>Electrical</h3>
 <ul>
 <li>Panel brand, age and labeling; double-tapped breakers; signs of overheating</li>
@@ -103,7 +104,7 @@ return [
 <li>Drain pan, venting on gas units, and rust or leaks at the base</li>
 </ul>
 
-<h2>Windows, doors, interior and signs of past flood damage</h2>
+<h3>Windows, doors, interior and signs of past flood damage</h3>
 <p>Inside the house, look at how the home has been lived in and whether water has ever been a problem.</p>
 <ul>
 <li>Windows that open, close and lock; broken seals that fog double-pane glass</li>
@@ -115,7 +116,7 @@ return [
 </ul>
 <p>In the Houston area, check the flood history as well as the house. Review the seller's disclosure for flood questions, look the address up on FEMA's flood map, and get flood insurance quotes during the option period. Our guide to <a href="/blog/buying-a-house-in-a-flood-zone-houston/">buying a house in a flood zone in Houston</a> explains what to ask.</p>
 
-<h2>Pests and termites</h2>
+<h3>Pests and termites</h3>
 <p>Termites thrive in Houston's warm, humid climate, and a general inspector is not necessarily licensed to report on them.</p>
 <ul>
 <li>Mud tubes on the slab edge, piers or walls</li>
