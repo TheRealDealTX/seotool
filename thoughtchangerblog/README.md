@@ -97,15 +97,19 @@ Hosting account `u401386392`, website `thoughtchangerblog.com`.
   Deployed 2026-11-19, `validate.py` passed with 0 errors, and a test contact message was delivered.
 * **Upload:** `tools/deploy.sh staging|production` (TUS upload API; its header explains the credentials).
 
-Going live:
-1. Back up WordPress (hPanel → Backups → files + database).
-2. Move the WordPress files in `public_html` into a folder outside it (e.g. `../wp-backup/`), keeping `staging/`.
-3. `tools/deploy.sh production`, then clear the LiteSpeed cache and CDN cache.
-4. `python3 tools/validate.py https://thoughtchangerblog.com`
-5. Search Console: resubmit `sitemap_index.xml` and inspect the top pages.
-6. Remove the staging subdomain and `public_html/staging/`.
+**Live since 2026-11-19.** How it went live:
+1. The WordPress `index.php` and `.htaccess` were copied to `/home/u401386392/domains/thoughtchangerblog.com/wp-backup-20261119/public_html/`.
+2. `SKIP_MEDIA=1 tools/deploy.sh production` uploaded the new site. `wp-content/uploads/` was left in place: it holds all 1,186 original media files, so every old image URL still works.
+3. The rest of WordPress (core, `wp-config.php`, plugins, themes, LiteSpeed and upgrade folders) was moved into the same backup folder, outside the web root.
+4. The server and CDN caches were cleared, and `validate.py` was run against the live domain.
 
-Rollback = move the WordPress files back (the database is untouched).
+Kept in `public_html`: both Google Search Console verification files (`google*.html`),
+Hostinger's `.private/`, `staging/` and `wp-content/uploads/`. `llms.txt` is regenerated from `posts.json`.
+
+**Rollback:** move everything in `wp-backup-20261119/public_html/` back into `public_html/` (overwriting
+`index.php` and `.htaccess`), then clear the cache. The WordPress database was never touched.
+
+**Later updates:** `SKIP_MEDIA=1 tools/deploy.sh staging`, check it, then `SKIP_MEDIA=1 tools/deploy.sh production` and clear the cache.
 
 ## Adding a post
 
