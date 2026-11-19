@@ -19,6 +19,7 @@ define('DATA_DIR', __DIR__ . '/data');
 require INC . '/config.php';
 require INC . '/data.php';
 require INC . '/photos.php';
+require INC . '/amazon.php';
 require INC . '/layout.php';
 require INC . '/routes.php';
 

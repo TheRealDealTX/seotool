@@ -245,3 +245,10 @@ const EDITIONS = [
         'tips' => ['New year, new room: winter is the best time for big redecorating projects.', 'One admission covers both days, so scout Saturday and decide on Sunday.', 'Bring the kids. Little ones love the vintage toys and food trucks.'],
     ],
 ];
+
+const FOOD_TRUCK_PICKS = [
+    ['name' => 'Insulated Picnic Backpack', 'q' => 'insulated picnic backpack', 'note' => 'Pack drinks for a day of market-hopping.', 'icon' => '🎒', 'tier' => '$'],
+    ['name' => 'Retro Enamel Camp Mugs', 'q' => 'enamel camp mugs retro', 'note' => 'Vintage-style mugs for coffee on the go.', 'icon' => '☕', 'tier' => '$'],
+    ['name' => 'Texas Hot Sauce Sampler', 'q' => 'texas hot sauce gift set', 'note' => 'Bring the food truck heat home.', 'icon' => '🌶️', 'tier' => '$'],
+    ['name' => 'Insulated Tumbler', 'q' => 'insulated tumbler with lid', 'note' => 'Iced drinks that survive a Houston afternoon.', 'icon' => '🥤', 'tier' => '$'],
+];

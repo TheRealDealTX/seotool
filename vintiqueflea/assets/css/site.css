@@ -305,3 +305,6 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal); outline: 
 .product-grid .product:nth-child(4n+3) .product__art--photo { background-size: 230%; background-position: 10% 90%; }
 .product-grid .product:nth-child(4n+4) .product__art--photo { background-size: 230%; background-position: 90% 85%; }
 .product-grid .product:nth-child(n+5) .product__art--photo { background-size: 300%; }
+.product__art--img { display: grid; place-items: center; aspect-ratio: 4 / 3; background: #fff; padding: 14px; }
+.product__art--img img { width: 100%; height: 100%; object-fit: contain; padding: 0; mix-blend-mode: multiply; transition: transform .3s; }
+.product--amazon:hover .product__art--img img { transform: scale(1.04); }

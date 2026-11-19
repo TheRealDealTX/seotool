@@ -14,6 +14,9 @@ function abs_url(string $path): string
 
 function amazon_url(array $p): string
 {
+    if (function_exists('amazon_item') && ($hit = amazon_item($p))) {
+        return $hit['url'];
+    }
     if (!empty($p['asin'])) {
         return 'https://www.amazon.com/dp/' . rawurlencode($p['asin']) . '/?tag=' . AMAZON_TAG;
     }
@@ -47,9 +50,13 @@ function product_card(array $p): string
     $tier = $p['tier'] ?? '';
     $icon = $p['icon'] ?? '🛍️';
     $tierLabel = ['$' => 'Under $50', '$$' => '$50–$250', '$$$' => '$250+'][$tier] ?? '';
-    $h = '<article class="product">';
+    $hit = function_exists('amazon_item') ? amazon_item($p) : null;
+    if ($hit) {
+        $p['img'] = $hit['img'];
+    }
+    $h = '<article class="product' . ($hit ? ' product--amazon' : '') . '">';
     $h .= !empty($p['img'])
-        ? '<div class="product__art product__art--img"><img src="' . e($p['img']) . '" alt="' . e($p['name']) . '" loading="lazy"></div>'
+        ? amazon_link($p, '<img src="' . e($p['img']) . '" alt="' . e($hit['title'] ?? $p['name']) . '" loading="lazy" decoding="async"' . ($hit ? ' width="' . (int) $hit['w'] . '" height="' . (int) $hit['h'] . '"' : '') . '>', 'product__art product__art--img')
         : '<div class="product__art' . (!empty($p['bg']) && isset(PHOTOS[$p['bg']]) ? ' product__art--photo" style="background-image:url(/assets/img/photos/' . rawurlencode($p['bg']) . '-800.webp)' : '') . '" aria-hidden="true"><span class="product__icon">' . $icon . '</span></div>';
     $h .= '<div class="product__body"><h3 class="product__name">' . e($p['name']) . '</h3>';
     $h .= '<p class="product__note">' . e($p['note'] ?? '') . '</p>';

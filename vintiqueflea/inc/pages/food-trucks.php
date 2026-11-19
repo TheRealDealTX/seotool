@@ -6,12 +6,7 @@ page_start([
     'path' => '/food-trucks/',
     'image' => 'food-trucks',
 ]);
-$picks = [
-    ['name' => 'Insulated Picnic Backpack', 'q' => 'insulated picnic backpack', 'note' => 'Pack drinks for a day of market-hopping.', 'icon' => '🎒', 'tier' => '$'],
-    ['name' => 'Retro Enamel Camp Mugs', 'q' => 'enamel camp mugs retro', 'note' => 'Vintage-style mugs for coffee on the go.', 'icon' => '☕', 'tier' => '$'],
-    ['name' => 'Texas Hot Sauce Sampler', 'q' => 'texas hot sauce gift set', 'note' => 'Bring the food truck heat home.', 'icon' => '🌶️', 'tier' => '$'],
-    ['name' => 'Insulated Tumbler', 'q' => 'insulated tumbler with lid', 'note' => 'Iced drinks that survive a Houston afternoon.', 'icon' => '🥤', 'tier' => '$'],
-];
+$picks = FOOD_TRUCK_PICKS;
 $faq = [
     ['q' => 'Are there food trucks at Vintique Flea?', 'a' => 'Yes. Local food trucks are part of every Vintique Flea, along with beer and wine, so you can shop, eat and hang out all afternoon.'],
     ['q' => 'Can my food truck apply?', 'a' => 'Absolutely. Fill out the vendor application, choose "Food truck" as your category, and include your menu or Instagram link.'],
