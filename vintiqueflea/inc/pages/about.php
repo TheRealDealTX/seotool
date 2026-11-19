@@ -4,6 +4,7 @@ page_start([
     'title' => 'About Vintique Flea | Curated Indoor Vintage Market in Houston',
     'description' => 'Vintique Flea was founded by the creators of Rice Village Flea: a curated indoor market of vintage, mid-century, salvage and decor at Silver Street Studios.',
     'path' => '/about/',
+    'image' => 'antiques-collectibles',
 ]);
 add_schema(['@type' => 'AboutPage', 'name' => 'About Vintique Flea', 'url' => abs_url('/about/')]);
 ?>
@@ -13,6 +14,7 @@ add_schema(['@type' => 'AboutPage', 'name' => 'About Vintique Flea', 'url' => ab
     <h1>About Vintique Flea</h1>
     <p class="lede">The best curated indoor marketplace of interesting things in Houston, from the people who created Rice Village Flea.</p>
   </header>
+  <figure class="banner banner--wide"><?= photo('gramophone', 'An antique gramophone playing a vinyl record', '', true, '(max-width: 1180px) 100vw, 1140px') ?></figure>
   <div class="layout-2">
     <article class="prose">
       <h2>Our story</h2>

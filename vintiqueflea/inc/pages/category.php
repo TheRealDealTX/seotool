@@ -6,6 +6,7 @@ page_start([
     'description' => $cat['description'],
     'path' => "/shop/$slug/",
     'body_class' => 'cat-page cat-page--' . $cat['color'],
+    'image' => $slug,
 ]);
 $items = [];
 foreach ($cat['products'] as $i => $p) {
@@ -16,14 +17,15 @@ $guides = array_filter(load_guides(), fn($g) => in_array($slug, $g['shop'] ?? []
 ?>
 <div class="wrap">
   <?= breadcrumbs([['Shop', '/shop/'], [$cat['name'], "/shop/$slug/"]]) ?>
-  <header class="page-head page-head--icon">
-    <span class="page-head__icon" aria-hidden="true"><?= $cat['icon'] ?></span>
-    <div>
+  <header class="page-head page-hero">
+    <div class="page-hero__copy">
+      <p class="eyebrow"><span aria-hidden="true"><?= $cat['icon'] ?></span> Shop <?= e($cat['name']) ?></p>
       <h1><?= e($cat['title']) ?></h1>
       <p class="lede"><?= e($cat['intro']) ?></p>
     </div>
+    <div class="page-hero__img"><?= photo($slug, $cat['title'], '', true, '(max-width: 900px) 100vw, 520px') ?></div>
   </header>
-  <?= product_grid($cat['products']) ?>
+  <?= product_grid($cat['products'], $slug) ?>
   <?= disclosure() ?>
   <div class="layout-2">
     <article class="prose"><?= $cat['body'] ?></article>

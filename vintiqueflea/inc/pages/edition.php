@@ -5,16 +5,18 @@ page_start([
     'title' => $ed['seo_title'],
     'description' => $ed['description'],
     'path' => "/events/$slug/",
+    'image' => strtolower($ed['season']),
 ]);
 ?>
 <div class="wrap">
   <?= breadcrumbs([['Events', '/events/'], [$ed['name'], "/events/$slug/"]]) ?>
-  <header class="page-head page-head--icon">
-    <span class="page-head__icon" aria-hidden="true"><?= $ed['icon'] ?></span>
-    <div>
+  <header class="page-head page-hero">
+    <div class="page-hero__copy">
+      <p class="eyebrow"><span aria-hidden="true"><?= $ed['icon'] ?></span> Seasonal edition</p>
       <h1>Vintique Flea <?= e($ed['name']) ?>: <?= e($ed['season']) ?> vintage market in Houston</h1>
       <p class="lede"><?= e($ed['lede']) ?></p>
     </div>
+    <div class="page-hero__img"><?= photo(strtolower($ed['season']), $ed['season'] . ' market scene', '', true, '(max-width: 900px) 100vw, 520px') ?></div>
   </header>
   <div class="layout-2">
     <article class="prose">

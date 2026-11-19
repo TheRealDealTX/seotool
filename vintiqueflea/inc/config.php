@@ -13,7 +13,7 @@ const AMAZON_TAG  = 'josephrayditt-20';
 /** Where contact / vendor form messages are emailed. Must be a mailbox that exists. */
 const CONTACT_TO   = 'info@vintiqueflea.com';
 /** The From: address for outgoing form mail — must be on the vintiqueflea.com domain. */
-const CONTACT_FROM = 'no-reply@vintiqueflea.com';
+const CONTACT_FROM = 'info@vintiqueflea.com';
 
 const VENUE = [
     'name'     => 'Silver Street Studios',

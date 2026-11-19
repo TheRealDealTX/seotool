@@ -4,6 +4,7 @@ page_start([
     'title' => 'Houston Flea Market Dates | Vintique Flea at Silver Street Studios',
     'description' => 'Vintique Flea market dates, hours, admission and directions. A curated indoor vintage flea market at Silver Street Studios, 2000 Edwards St, Houston TX.',
     'path' => '/events/',
+    'image' => 'flea-market-gear',
 ]);
 foreach (UPCOMING_EVENTS as $ev) {
     $s = [
@@ -31,6 +32,7 @@ $mapQ = rawurlencode(VENUE['name'] . ', ' . VENUE['street'] . ', ' . VENUE['city
     <h1>Vintique Flea market dates &amp; visitor info</h1>
     <p class="lede">A curated indoor flea market in Houston's Washington Avenue Arts District, with mid-century modern, vintage clothing, architectural salvage, antiques, rustic decor, food trucks, beer and wine.</p>
   </header>
+  <figure class="banner banner--wide"><?= photo('flea-market-gear', 'Shoppers browsing vintage goods at a busy flea market', '', true, '(max-width: 1180px) 100vw, 1140px') ?></figure>
 
 <?php if (UPCOMING_EVENTS): ?>
   <div class="event-list">
@@ -58,8 +60,8 @@ $mapQ = rawurlencode(VENUE['name'] . ', ' . VENUE['street'] . ', ' . VENUE['city
     <div class="edition-grid">
 <?php foreach (EDITIONS as $slug => $ed): ?>
       <a class="edition" href="/events/<?= $slug ?>/">
-        <span class="edition__icon" aria-hidden="true"><?= $ed['icon'] ?></span>
-        <span class="edition__name"><?= e($ed['name']) ?></span>
+        <?= photo(strtolower($ed['season']), '', 'edition__img', false, '(max-width: 640px) 100vw, 360px') ?>
+        <span class="edition__name"><span aria-hidden="true"><?= $ed['icon'] ?></span> <?= e($ed['name']) ?></span>
         <span class="edition__lede"><?= e(mb_strimwidth($ed['lede'], 0, 140, '…')) ?></span>
       </a>
 <?php endforeach; ?>

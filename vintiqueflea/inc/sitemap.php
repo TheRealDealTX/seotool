@@ -3,7 +3,7 @@ defined('INC') || exit;
 /** Dynamic XML sitemap. */
 header('Content-Type: application/xml; charset=UTF-8');
 $today = date('Y-m-d');
-$urls = [['/', '1.0'], ['/events/', '0.9'], ['/shop/', '0.9'], ['/play/', '0.8'], ['/guides/', '0.8'], ['/food-trucks/', '0.7'], ['/vendors/', '0.7'], ['/about/', '0.6'], ['/contact/', '0.5'], ['/affiliate-disclosure/', '0.2'], ['/privacy-policy/', '0.2']];
+$urls = [['/photo-credits/', '0.1'], ['/', '1.0'], ['/events/', '0.9'], ['/shop/', '0.9'], ['/play/', '0.8'], ['/guides/', '0.8'], ['/food-trucks/', '0.7'], ['/vendors/', '0.7'], ['/about/', '0.6'], ['/contact/', '0.5'], ['/affiliate-disclosure/', '0.2'], ['/privacy-policy/', '0.2']];
 foreach (SHOP as $s => $_) $urls[] = ["/shop/$s/", '0.8'];
 foreach (EDITIONS as $s => $_) $urls[] = ["/events/$s/", '0.7'];
 foreach (GAMES as $s => $_) $urls[] = ["/play/$s/", '0.7'];

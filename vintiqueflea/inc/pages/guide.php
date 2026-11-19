@@ -6,6 +6,7 @@ page_start([
     'description' => $g['description'],
     'path' => "/guides/$slug/",
     'type' => 'article',
+    'image' => 'g-' . $slug,
 ]);
 add_schema([
     '@type' => 'Article',
@@ -16,7 +17,7 @@ add_schema([
     'mainEntityOfPage' => abs_url("/guides/$slug/"),
     'author' => ['@type' => 'Organization', 'name' => SITE_NAME, 'url' => SITE_URL . '/'],
     'publisher' => ['@id' => SITE_URL . '/#org'],
-    'image' => SITE_URL . '/assets/img/og-image.png',
+    'image' => photo_url('g-' . $slug),
 ]);
 $related = array_slice(array_filter($guides, fn($o, $k) => $k !== $slug && $o['category'] === $g['category'], ARRAY_FILTER_USE_BOTH), 0, 3, true);
 if (count($related) < 3) {
@@ -32,11 +33,12 @@ if (count($related) < 3) {
         <h1><?= e($g['h1']) ?></h1>
         <p class="lede"><?= e($g['intro']) ?></p>
       </header>
+      <figure class="banner"><?= photo('g-' . $slug, $g['h1'], '', true, '(max-width: 900px) 100vw, 760px') ?></figure>
       <?= $g['body'] ?>
 <?php if (!empty($g['products'])): ?>
       <section class="inline-picks">
         <h2>Gear we recommend</h2>
-        <?= product_grid(array_map(fn($p) => $p + ['icon' => '🛍️'], $g['products'])) ?>
+        <?= product_grid(array_map(fn($p) => $p + ['icon' => '🛍️'], $g['products']), 'g-' . $slug) ?>
         <?= disclosure() ?>
       </section>
 <?php endif; ?>

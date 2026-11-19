@@ -261,3 +261,47 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal); outline: 
 .footer-base p { margin: 0; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-about { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .wrap { padding: 0 16px; } .footer-grid { grid-template-columns: 1fr; } .section { padding: 44px 0; } }
+
+/* ---------- Photography ---------- */
+.hero__photo { position: absolute; inset: 14%; border-radius: 50%; overflow: hidden; border: 8px solid var(--card); box-shadow: 0 0 0 3px var(--ink), var(--shadow); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.burst::after { display: none; }
+.cat { padding: 0; overflow: hidden; }
+.cat__img { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 2px solid var(--ink); background: var(--paper-2); }
+.cat__img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.cat:hover .cat__img img { transform: scale(1.06); }
+.cat__name { padding: 14px 18px 0; }
+.cat__more { padding: 6px 18px 16px; }
+.guide-card { padding: 0 0 20px; overflow: hidden; }
+.guide-card > span { padding: 0 22px; }
+.guide-card__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; margin-bottom: 8px; }
+.guide-card:not(:has(.guide-card__img)) { padding-top: 20px; }
+.edition { padding: 0 0 20px; overflow: hidden; }
+.edition > span { padding: 0 22px; }
+.edition__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-bottom: 2px solid var(--ink); margin-bottom: 8px; }
+.visit__img { width: calc(100% + 60px); max-width: none; margin: -30px -30px 20px; aspect-ratio: 16 / 7; object-fit: cover; display: block; border-radius: var(--radius) var(--radius) 0 0; }
+.banner { margin: 0 0 1.6em; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--mustard); }
+.banner img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+.banner--wide img { aspect-ratio: 21 / 8; }
+@media (max-width: 640px) { .banner--wide img { aspect-ratio: 16 / 9; } }
+.page-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center; }
+.page-hero__img { border-radius: var(--radius); overflow: hidden; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--mustard); }
+.page-hero__img img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; }
+.page-hero__img--right { order: 2; }
+@media (max-width: 900px) { .page-hero { grid-template-columns: 1fr; gap: 20px; } .page-hero__img--right { order: 0; } }
+.shop-row__title a { display: inline-flex; align-items: center; gap: 14px; }
+.shop-row__thumb { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ink); flex: none; }
+.product__art--img { background: #fff; }
+.product__art--img img { max-height: 100%; width: auto; object-fit: contain; padding: 10px; }
+.product__art--photo { background-size: cover; background-position: center; position: relative; }
+.product__art--photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(43, 36, 32, .05), rgba(43, 36, 32, .35)); }
+.product__icon { position: relative; display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%; background: rgba(255, 250, 241, .94); box-shadow: 0 4px 14px rgba(0, 0, 0, .25); font-size: 2.6rem; }
+.product__art:not(.product__art--photo) .product__icon { background: transparent; box-shadow: none; font-size: 3.4rem; }
+.inline-picks .product__icon { width: 60px; height: 60px; font-size: 1.9rem; }
+.cat-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+@media (max-width: 480px) { .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; } .cat__name { font-size: 1rem; padding: 10px 12px 0; } .cat__more { padding: 4px 12px 12px; font-size: .8rem; } .cat { box-shadow: 3px 3px 0 var(--c, var(--teal)); } }
+.product-grid .product:nth-child(4n+1) .product__art--photo { background-size: 230%; background-position: 5% 25%; }
+.product-grid .product:nth-child(4n+2) .product__art--photo { background-size: 230%; background-position: 95% 30%; }
+.product-grid .product:nth-child(4n+3) .product__art--photo { background-size: 230%; background-position: 10% 90%; }
+.product-grid .product:nth-child(4n+4) .product__art--photo { background-size: 230%; background-position: 90% 85%; }
+.product-grid .product:nth-child(n+5) .product__art--photo { background-size: 300%; }

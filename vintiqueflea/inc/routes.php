@@ -9,6 +9,7 @@ const STATIC_PAGES = [
     'food-trucks'          => 'food-trucks',
     'affiliate-disclosure' => 'disclosure',
     'privacy-policy'       => 'privacy',
+    'photo-credits'        => 'credits',
 ];
 
 /** Old URLs worth keeping → rewritten, keyword-focused URLs (301). */

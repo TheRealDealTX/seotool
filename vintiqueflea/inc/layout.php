@@ -25,13 +25,32 @@ function amazon_link(array $p, string $label, string $class = ''): string
     return '<a class="' . e($class) . '" href="' . e(amazon_url($p)) . '" target="_blank" rel="sponsored nofollow noopener">' . $label . '</a>';
 }
 
+/** Responsive <img> for a self-hosted photo. */
+function photo(string $name, string $alt, string $class = '', bool $eager = false, string $sizes = '(max-width: 800px) 100vw, 800px'): string
+{
+    if (!isset(PHOTOS[$name])) {
+        return '';
+    }
+    [$w, $h] = PHOTOS[$name];
+    $b = '/assets/img/photos/' . rawurlencode($name);
+    return '<img class="' . e($class) . '" src="' . $b . '-1600.webp" srcset="' . $b . '-800.webp 800w, ' . $b . '-1600.webp ' . $w . 'w" sizes="' . e($sizes) . '" width="' . $w . '" height="' . $h . '" alt="' . e($alt) . '"'
+        . ($eager ? ' fetchpriority="high"' : ' loading="lazy"') . ' decoding="async">';
+}
+
+function photo_url(string $name): string
+{
+    return isset(PHOTOS[$name]) ? SITE_URL . '/assets/img/photos/' . rawurlencode($name) . '-1600.webp' : SITE_URL . '/assets/img/og-image.png';
+}
+
 function product_card(array $p): string
 {
     $tier = $p['tier'] ?? '';
     $icon = $p['icon'] ?? '🛍️';
     $tierLabel = ['$' => 'Under $50', '$$' => '$50–$250', '$$$' => '$250+'][$tier] ?? '';
     $h = '<article class="product">';
-    $h .= '<div class="product__art" aria-hidden="true">' . $icon . '</div>';
+    $h .= !empty($p['img'])
+        ? '<div class="product__art product__art--img"><img src="' . e($p['img']) . '" alt="' . e($p['name']) . '" loading="lazy"></div>'
+        : '<div class="product__art' . (!empty($p['bg']) && isset(PHOTOS[$p['bg']]) ? ' product__art--photo" style="background-image:url(/assets/img/photos/' . rawurlencode($p['bg']) . '-800.webp)' : '') . '" aria-hidden="true"><span class="product__icon">' . $icon . '</span></div>';
     $h .= '<div class="product__body"><h3 class="product__name">' . e($p['name']) . '</h3>';
     $h .= '<p class="product__note">' . e($p['note'] ?? '') . '</p>';
     $h .= '<div class="product__foot">';
@@ -43,8 +62,11 @@ function product_card(array $p): string
     return $h;
 }
 
-function product_grid(array $products): string
+function product_grid(array $products, ?string $bg = null): string
 {
+    if ($bg !== null) {
+        $products = array_map(fn($p) => $p + ['bg' => $bg], $products);
+    }
     return '<div class="product-grid">' . implode('', array_map('product_card', $products)) . '</div>';
 }
 
@@ -144,7 +166,7 @@ function page_start(array $m): void
 <meta property="og:title" content="<?= e($m['og_title'] ?? $title) ?>">
 <meta property="og:description" content="<?= e($desc) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
-<meta property="og:image" content="<?= e(SITE_URL) ?>/assets/img/og-image.png">
+<meta property="og:image" content="<?= e(isset($m['image']) ? photo_url($m['image']) : SITE_URL . '/assets/img/og-image.png') ?>">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c2552d">
@@ -233,6 +255,7 @@ function page_end(): void
         <li><a href="/contact/">Contact</a></li>
         <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
         <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/photo-credits/">Photo Credits</a></li>
       </ul>
     </div>
   </div>

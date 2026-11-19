@@ -22,6 +22,7 @@ function log_submission(string $file, array $row): void
 
 function send_form_mail(string $subject, array $fields, string $replyTo): bool
 {
+    require_once INC . '/mailer.php';
     $body = '';
     foreach ($fields as $k => $v) {
         $body .= ucfirst(str_replace('_', ' ', $k)) . ":\n" . $v . "\n\n";
@@ -34,6 +35,9 @@ function send_form_mail(string $subject, array $fields, string $replyTo): bool
         $headers[] = 'Reply-To: ' . $replyTo;
     }
     $subject = '=?UTF-8?B?' . base64_encode('[' . SITE_NAME . '] ' . preg_replace('/[\r\n]+/', ' ', $subject)) . '?=';
+    if ($smtp = smtp_config()) {
+        return smtp_send($smtp, CONTACT_TO, $subject, $body, $replyTo);
+    }
     return @mail(CONTACT_TO, $subject, $body, implode("\r\n", $headers));
 }
 
@@ -66,8 +70,8 @@ function process_form(string $kind, array $spec): array
     if ($errors) {
         return ['ok' => false, 'errors' => $errors, 'values' => $values];
     }
-    log_submission($kind . '.jsonl', $values);
-    send_form_mail(ucfirst($kind) . ' from ' . ($values['name'] ?? 'website'), $values, $values['email'] ?? '');
+    $mailed = send_form_mail(ucfirst($kind) . ' from ' . ($values['name'] ?? 'website'), $values, $values['email'] ?? '');
+    log_submission($kind . '.jsonl', $values + ['_mailed' => $mailed]);
     return ['ok' => true, 'errors' => [], 'values' => []];
 }
 

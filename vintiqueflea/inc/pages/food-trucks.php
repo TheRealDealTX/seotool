@@ -4,6 +4,7 @@ page_start([
     'title' => 'Houston Food Trucks at Vintique Flea | Eat, Drink & Shop',
     'description' => 'Local Houston food trucks, beer and wine at Vintique Flea in the Washington Avenue Arts District. Plus how food trucks can apply for a spot at the market.',
     'path' => '/food-trucks/',
+    'image' => 'food-trucks',
 ]);
 $picks = [
     ['name' => 'Insulated Picnic Backpack', 'q' => 'insulated picnic backpack', 'note' => 'Pack drinks for a day of market-hopping.', 'icon' => '🎒', 'tier' => '$'],
@@ -19,9 +20,10 @@ $faq = [
 ?>
 <div class="wrap">
   <?= breadcrumbs([['Food Trucks', '/food-trucks/']]) ?>
-  <header class="page-head page-head--icon">
-    <span class="page-head__icon" aria-hidden="true">🚚</span>
-    <div>
+  <header class="page-head page-hero">
+    <div class="page-hero__img page-hero__img--right"><?= photo('food-trucks', 'A food truck serving customers at dusk', '', true, '(max-width: 900px) 100vw, 520px') ?></div>
+    <div class="page-hero__copy">
+      <p class="eyebrow"><span aria-hidden="true">🚚</span> Eat &amp; drink</p>
       <h1>Local food trucks, beer &amp; wine</h1>
       <p class="lede">Treasure hunting works up an appetite. Every Vintique Flea brings local Houston food trucks to Silver Street Studios, plus beer and wine, so you can refuel and keep shopping.</p>
     </div>
@@ -55,7 +57,7 @@ $faq = [
   </div>
   <section class="section section--tight">
     <h2>Market-day essentials</h2>
-    <?= product_grid($picks) ?>
+    <?= product_grid($picks, 'food-trucks') ?>
     <?= disclosure() ?>
   </section>
   <?= faq_block($faq) ?>

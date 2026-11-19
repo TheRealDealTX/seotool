@@ -4,6 +4,7 @@ page_start([
     'title' => 'Shop Vintage-Inspired Finds: Curated Amazon Picks | Vintique Flea',
     'description' => 'Shop curated vintage-inspired finds: mid-century modern furniture, retro fashion, industrial salvage decor, rustic farmhouse pieces, vinyl gear and more.',
     'path' => '/shop/',
+    'image' => 'mid-century-modern',
 ]);
 $items = [];
 $pos = 1;
@@ -23,10 +24,10 @@ add_schema(['@type' => 'CollectionPage', 'name' => 'Shop Vintique Flea', 'url' =
 <section class="section section--tight">
   <div class="wrap">
     <div class="shop-row__head">
-      <h2><span aria-hidden="true"><?= $c['icon'] ?></span> <a href="/shop/<?= $slug ?>/"><?= e($c['name']) ?></a></h2>
+      <h2 class="shop-row__title"><a href="/shop/<?= $slug ?>/"><?= photo($slug, '', 'shop-row__thumb', false, '72px') ?><?= e($c['name']) ?></a></h2>
       <a class="link-more" href="/shop/<?= $slug ?>/">See all <?= e($c['name']) ?> <span aria-hidden="true">→</span></a>
     </div>
-    <?= product_grid(array_slice($c['products'], 0, 4)) ?>
+    <?= product_grid(array_slice($c['products'], 0, 4), $slug) ?>
   </div>
 </section>
 <?php endforeach; ?>

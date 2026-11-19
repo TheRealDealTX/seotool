@@ -24,6 +24,7 @@ ksort($byCat);
     <div class="guide-grid">
 <?php foreach ($list as $s => $g): ?>
       <a class="guide-card" href="/guides/<?= $s ?>/">
+        <?= photo('g-' . $s, '', 'guide-card__img', false, '(max-width: 640px) 100vw, 380px') ?>
         <span class="guide-card__cat"><?= (int) $g['read_minutes'] ?> min read</span>
         <span class="guide-card__title"><?= e($g['h1']) ?></span>
         <span class="guide-card__intro"><?= e($g['intro']) ?></span>

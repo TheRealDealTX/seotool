@@ -5,11 +5,12 @@ page_start([
     'description' => "Houston's curated indoor vintage market at Silver Street Studios: mid-century modern, vintage clothing, architectural salvage, rustic decor and food trucks.",
     'path' => '/',
     'body_class' => 'home',
+    'image' => 'hero',
 ]);
 // Featured picks: first two products of each category
 $featured = [];
 foreach (SHOP as $slug => $c) {
-    $featured[] = $c['products'][0] + ['cat' => $slug];
+    $featured[] = $c['products'][0] + ['bg' => $slug];
 }
 $wheel = [];
 foreach (SHOP as $slug => $c) {
@@ -34,9 +35,10 @@ add_schema([
         <a class="btn btn--ghost" href="/shop/">Shop curated finds</a>
       </div>
     </div>
-    <div class="hero__art" aria-hidden="true">
-      <div class="burst"></div>
-      <div class="hero__tags">
+    <div class="hero__art">
+      <div class="burst" aria-hidden="true"></div>
+      <div class="hero__photo"><?= photo('hero', 'Antique glassware, brass and pottery on a flea market table', '', true, '(max-width: 860px) 90vw, 460px') ?></div>
+      <div class="hero__tags" aria-hidden="true">
         <span class="tag tag--teal">🪑 Mid-Century</span>
         <span class="tag tag--rust">👗 Vintage Clothing</span>
         <span class="tag tag--olive">🏭 Salvage</span>
@@ -57,14 +59,14 @@ add_schema([
     <div class="cat-grid">
 <?php foreach (SHOP as $slug => $c): ?>
       <a class="cat cat--<?= e($c['color']) ?>" href="/shop/<?= $slug ?>/">
-        <span class="cat__icon" aria-hidden="true"><?= $c['icon'] ?></span>
-        <span class="cat__name"><?= e($c['name']) ?></span>
+        <span class="cat__img"><?= photo($slug, '', '', false, '(max-width: 600px) 50vw, 260px') ?></span>
+        <span class="cat__name"><span aria-hidden="true"><?= $c['icon'] ?></span> <?= e($c['name']) ?></span>
         <span class="cat__more">Explore <span aria-hidden="true">→</span></span>
       </a>
 <?php endforeach; ?>
       <a class="cat cat--olive" href="/food-trucks/">
-        <span class="cat__icon" aria-hidden="true">🚚</span>
-        <span class="cat__name">Local Food Trucks</span>
+        <span class="cat__img"><?= photo('food-trucks', '', '', false, '(max-width: 600px) 50vw, 260px') ?></span>
+        <span class="cat__name"><span aria-hidden="true">🚚</span> Local Food Trucks</span>
         <span class="cat__more">Explore <span aria-hidden="true">→</span></span>
       </a>
     </div>
@@ -95,6 +97,7 @@ add_schema([
 <section class="section">
   <div class="wrap visit">
     <div class="visit__card">
+      <?= photo('antiques-collectibles', 'Antique shop interior with clocks, lamps and framed art', 'visit__img', false, '(max-width: 820px) 100vw, 560px') ?>
       <h2>Visit the market</h2>
       <p>Vintique Flea has always called <strong>Silver Street Studios</strong> home, a converted warehouse in the heart of Houston's Washington Avenue Arts District. It's indoors, so rain or Houston heat never cancels the fun.</p>
       <dl class="facts">
@@ -152,6 +155,7 @@ add_schema([
     <div class="guide-grid">
 <?php foreach (array_slice($guides, 0, 6, true) as $gslug => $g): ?>
       <a class="guide-card" href="/guides/<?= $gslug ?>/">
+        <?= photo('g-' . $gslug, '', 'guide-card__img', false, '(max-width: 640px) 100vw, 380px') ?>
         <span class="guide-card__cat"><?= e($g['category']) ?></span>
         <span class="guide-card__title"><?= e($g['h1']) ?></span>
         <span class="guide-card__intro"><?= e($g['intro']) ?></span>

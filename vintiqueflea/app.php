@@ -18,6 +18,7 @@ define('DATA_DIR', __DIR__ . '/data');
 
 require INC . '/config.php';
 require INC . '/data.php';
+require INC . '/photos.php';
 require INC . '/layout.php';
 require INC . '/routes.php';
 
@@ -49,6 +50,13 @@ function render(string $page, array $vars = [], int $status = 200): never
     extract($vars, EXTR_SKIP);
     require INC . '/pages/' . $page . '.php';
     exit;
+}
+
+// --- Canonical host + scheme: www -> apex, http -> https (only when the proxy says the request was http) ---
+$host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+$proto = strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : ''));
+if (PHP_SAPI !== 'cli-server' && ($host === 'www.vintiqueflea.com' || ($host === 'vintiqueflea.com' && $proto === 'http'))) {
+    redirect(SITE_URL . $uri);
 }
 
 // --- Old WordPress query-string URLs (?p=123, ?replytocom=…, ?elementskit_template=…) ---
