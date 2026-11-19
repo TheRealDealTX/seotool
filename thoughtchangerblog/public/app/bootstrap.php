@@ -14,7 +14,7 @@ const AMAZON_TAG = 'thoughtchangerblog-20';
 const LOGO = '/wp-content/uploads/2026/01/Thought-Changer-Logo.webp';
 const LOGO_WHITE = '/wp-content/uploads/2026/01/Thought-Changer-Logo-Wh.webp';
 const SITE_ICON = '/wp-content/uploads/2026/01/cropped-Thought-Changer-Site-Icon-270x270.webp';
-const ASSET_VER = '20261119';
+const ASSET_VER = '20261119b';
 
 define('APP', __DIR__);
 define('WEBROOT', dirname(__DIR__));
@@ -156,4 +156,119 @@ function bookshelf_items(): array {
     $items = array_values($seen);
     usort($items, fn($a, $b) => [$b['count'], $a['title']] <=> [$a['count'], $b['title']]);
     return $items;
+}
+
+/** Posts getting the most clicks + impressions in Search Console (May–Nov 2026), best first. */
+const FEATURED = [
+    'life-is-fleeting-5-ways-to-slow-it-down', 'heres-what-it-means-to-level-up', 'stick-to-your-lane',
+    'becoming-seasoned', 'lessons-from-the-formative-teen-years', 'create-a-blind-side-vision-for-your-career-life',
+    'how-rainbow-thinking-can-catapult-your-career-improve-your-life', 'flip_the_switch_to_reveal_the_2019_word_of_the_year',
+    '11-signs-youre-stuck-in-complacency', 'how-to-love-the-rabbit-hole', 'meaning-begins-with-an-inkling',
+    'life-lessons-from-an-albatross', 'the-power-of-your-own-light', 'i-had-an-epiphany-the-courtship-of-an-idea',
+];
+
+function featured_posts(): array { return array_values(array_filter(array_map('post_by_slug', FEATURED))); }
+
+function search_terms(string $q): array {
+    $q = mb_strtolower(trim($q));
+    return array_values(array_filter(preg_split('/[^\p{L}\p{N}\']+/u', $q), fn($t) => mb_strlen($t) > 1));
+}
+
+/** Weighted search: every term must appear somewhere; title > headings > description > body. */
+function search_posts(string $q): array {
+    $terms = search_terms($q);
+    if (!$terms) return [];
+    $phrase = mb_strtolower(trim($q));
+    $hits = [];
+    foreach (posts() as $i => $p) {
+        $title = mb_strtolower($p['title']);
+        $desc = mb_strtolower($p['description'] . ' ' . implode(' ', $p['categories']));
+        $body = null; $score = 0;
+        foreach ($terms as $t) {
+            $s = 0;
+            if (preg_match('/\b' . preg_quote($t, '/') . '/u', $title)) $s += 10;
+            elseif (str_contains($title, $t)) $s += 6;
+            if (str_contains($desc, $t)) $s += 3;
+            if (!$s) {
+                $body ??= mb_strtolower(strip_tags(post_body($p)));
+                $n = substr_count($body, $t);
+                if ($n) $s += min(3, 1 + intdiv($n, 4));
+            }
+            if (!$s) { $score = 0; break; }
+            $score += $s;
+        }
+        if (!$score) continue;
+        if (count($terms) > 1 && str_contains($title, $phrase)) $score += 15;
+        $rank = array_search($p['slug'], FEATURED, true);
+        if ($rank !== false) $score += 2 - $rank * 0.1;           // gentle tie-break toward popular posts
+        $hits[] = [$score, $i, $p];
+    }
+    usort($hits, fn($a, $b) => [$b[0], $a[1]] <=> [$a[0], $b[1]]);
+    return array_map(fn($h) => $h[2], $hits);
+}
+
+/** Compact index for the as-you-type suggestions (fetched once by site.js). */
+function search_index(): array {
+    return array_map(function ($p) {
+        preg_match_all('#<h[23][^>]*>(.*?)</h[23]>#s', post_body($p), $m);
+        return ['t' => $p['title'], 'u' => '/' . $p['slug'] . '/', 'i' => str_replace('-768x512', '-300x200', thumb($p['image'])),
+                'c' => primary_cat($p), 'd' => $p['description'],
+                'h' => mb_substr(html_entity_decode(strip_tags(implode(' · ', $m[1])), ENT_QUOTES, 'UTF-8'), 0, 600),
+                'f' => (int) (array_search($p['slug'], FEATURED, true) !== false)];
+    }, posts());
+}
+
+/**
+ * Contextual internal links. Scans paragraph/list text (never headings, existing links, captions,
+ * tables or FAQ), collects every phrase match from content/interlinks.json, then links the best
+ * candidates: popular posts first (FEATURED), then more specific phrases. One link per target,
+ * one per paragraph, no self-links, nothing the article already links to, at most $max per article.
+ */
+function auto_interlink(string $html, string $selfSlug, int $max = 5): string {
+    static $map = null;
+    if ($map === null) {
+        $map = [];
+        foreach (json_decode((string) file_get_contents(WEBROOT . '/content/interlinks.json'), true) as $phrases => $slug) {
+            foreach (explode('|', $phrases) as $ph) $map[] = [$ph, $slug];
+        }
+    }
+    preg_match_all('#href="/([a-z0-9_-]+)/"#', $html, $m);
+    $used = array_flip($m[1]);
+    $used[$selfSlug] = true;
+    $parts = preg_split('#(<[^>]+>)#', $html, -1, PREG_SPLIT_DELIM_CAPTURE);
+    $stack = []; $block = -1; $blockId = 0; $cands = [];
+    foreach ($parts as $i => $part) {
+        if ($part === '') continue;
+        if ($part[0] === '<') {
+            if (preg_match('#^<(/?)(a|h[1-6]|p|li|figcaption|summary|table|blockquote)\b#i', $part, $t)) {
+                $tag = strtolower($t[2]); $close = $t[1] === '/';
+                if ($tag === 'p' || $tag === 'li') $block = $close ? -1 : ++$blockId;
+                else $close ? array_pop($stack) : $stack[] = $tag;
+            }
+            continue;
+        }
+        if ($block < 0 || $stack) continue;
+        foreach ($map as [$ph, $slug]) {
+            if (isset($used[$slug])) continue;
+            if (preg_match('/(?<![\p{L}\p{N}-])(' . preg_quote($ph, '/') . ')(?![\p{L}\p{N}-])/iu', $part, $mm, PREG_OFFSET_CAPTURE)) {
+                $rank = array_search($slug, FEATURED, true);
+                $prio = ($rank === false ? 0 : 30 - $rank) + mb_strlen($ph) / 2 - $i / 400;   // popular, specific, early
+                $cands[] = ['slug' => $slug, 'part' => $i, 'block' => $block, 'off' => $mm[1][1], 'txt' => $mm[1][0], 'prio' => $prio];
+            }
+        }
+    }
+    usort($cands, fn($a, $b) => $b['prio'] <=> $a['prio']);
+    $pick = []; $blocks = []; $parts_used = [];
+    foreach ($cands as $c) {
+        if (count($pick) >= $max) break;
+        if (isset($used[$c['slug']]) || isset($blocks[$c['block']]) || isset($parts_used[$c['part']])) continue;
+        if (!post_by_slug($c['slug'])) continue;
+        $pick[] = $c; $used[$c['slug']] = true; $blocks[$c['block']] = true; $parts_used[$c['part']] = true;
+    }
+    foreach ($pick as $c) {
+        $p = $parts[$c['part']]; $t = post_by_slug($c['slug']);
+        $parts[$c['part']] = substr($p, 0, $c['off']) . '<a href="/' . $c['slug'] . '/" class="ilink" title="' . e($t['title']) . '">'
+            . $c['txt'] . '</a>' . substr($p, $c['off'] + strlen($c['txt']));
+    }
+    return implode('', $parts);
 }

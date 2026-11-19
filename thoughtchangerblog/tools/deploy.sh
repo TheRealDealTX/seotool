@@ -6,6 +6,7 @@
 #   export TC_FB_URL='https://…/api/tus/public_html'  TC_FB_AUTH='…'  TC_FB_REST='…'
 #   tools/deploy.sh staging     # -> public_html/staging (staging.thoughtchangerblog.com, noindex)
 #   tools/deploy.sh production  # -> public_html (the live site)
+#   SKIP_MEDIA=1 tools/deploy.sh staging   # code-only update (skips wp-content/uploads)
 #
 # Files only ever get added/overwritten; nothing on the server is deleted.
 set -u
@@ -39,7 +40,7 @@ up() {
   echo "FAIL $c/$p $rel"
 }
 export -f up
-cd "$build" && find . -type f | sort | xargs -P 8 -I{} bash -c 'up "$@"' _ {} > /tmp/tc-deploy.log
+cd "$build" && find . -type f | { if [ -n "${SKIP_MEDIA:-}" ]; then grep -v '^./wp-content/'; else cat; fi; } | sort | xargs -P 8 -I{} bash -c 'up "$@"' _ {} > /tmp/tc-deploy.log
 echo "ok=$(grep -c '^OK' /tmp/tc-deploy.log) fail=$(grep -c '^FAIL' /tmp/tc-deploy.log)"
 grep '^FAIL' /tmp/tc-deploy.log | head
 rm -rf "$build"

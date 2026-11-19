@@ -63,11 +63,13 @@ $graph = array_merge([
         <a href="<?= $href ?>"<?= $cur === $href ? ' aria-current="page"' : '' ?>><?= $label ?></a>
       <?php endforeach; ?>
     </nav>
-    <form class="search" role="search" action="/" method="get">
-      <label class="sr-only" for="hs">Search</label>
-      <input id="hs" type="search" name="s" placeholder="Search" value="<?= e($_GET['s'] ?? '') ?>">
+    <form class="hsearch js-suggest" role="search" action="/" method="get" autocomplete="off">
+      <label class="sr-only" for="hs">Search articles</label>
+      <input id="hs" type="search" name="s" placeholder="Search articles…" value="<?= e($_GET['s'] ?? '') ?>" aria-autocomplete="list" aria-controls="hs-list" aria-expanded="false">
       <button type="submit" aria-label="Submit search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></button>
+      <div class="suggest" id="hs-list" role="listbox" hidden></div>
     </form>
+    <button class="search-toggle" type="button" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.32 12.9l5.39 5.4-1.41 1.4-5.4-5.39A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg></button>
     <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>

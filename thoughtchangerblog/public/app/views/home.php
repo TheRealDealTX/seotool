@@ -1,5 +1,5 @@
 <?php
-$featured = array_filter(array_map('post_by_slug', ['life-is-fleeting-5-ways-to-slow-it-down', 'heres-what-it-means-to-level-up', 'stick-to-your-lane']));
+$featured = featured_posts();
 view('head', ['meta' => [
     'title' => 'Thought Changer - One Thought at a Time.',
     'description' => 'Thought Changer is a space for reflection, perspective, and intentional living. Explore the everyday moments that shape how we think.',
@@ -27,17 +27,30 @@ view('head', ['meta' => [
   <p>Each piece you’ll find here is an invitation to think deeper, reflect longer, and carry something forward after you leave.</p>
 </section>
 
-<section class="featured">
+<section class="featured" id="featured">
   <div class="wrap">
-    <h2 class="section-title reveal">Most-Read Reflections</h2>
+    <span class="eyebrow center-block reveal">Readers’ favorites</span>
+    <h2 class="section-title reveal">Featured Articles</h2>
     <div class="feature-grid">
-      <?php foreach (array_values($featured) as $i => $p): ?>
+      <?php foreach (array_slice($featured, 0, 3) as $i => $p): ?>
       <a class="feature reveal<?= $i === 0 ? ' feature-lg' : '' ?>" href="/<?= e($p['slug']) ?>/">
         <img src="<?= e($i === 0 ? $p['image'] : thumb($p['image'])) ?>" srcset="<?= e(img_srcset($p['image'])) ?>" sizes="(max-width: 900px) 100vw, <?= $i === 0 ? '60vw' : '35vw' ?>" width="1536" height="1024" alt="<?= e($p['image_alt']) ?>" loading="lazy" decoding="async">
-        <span class="feature-text"><span class="card-tag"><?= e(primary_cat($p)) ?></span><strong><?= e($p['title']) ?></strong><span class="feature-desc"><?= e($p['description']) ?></span></span>
+        <span class="feature-rank" aria-hidden="true"><?= $i + 1 ?></span>
+        <span class="feature-text"><span class="card-tag"><?= e(primary_cat($p)) ?></span><strong><?= e($p['title']) ?></strong><span class="feature-desc"><?= e($p['description']) ?></span><span class="feature-more">Read article →</span></span>
       </a>
       <?php endforeach; ?>
     </div>
+    <ol class="ranked" start="4">
+      <?php foreach (array_slice($featured, 3, 8) as $i => $p): ?>
+      <li class="reveal">
+        <a href="/<?= e($p['slug']) ?>/">
+          <span class="ranked-n"><?= $i + 4 ?></span>
+          <img src="<?= e(str_replace('-768x512', '-300x200', thumb($p['image']))) ?>" width="300" height="200" alt="<?= e($p['image_alt']) ?>" loading="lazy" decoding="async">
+          <span class="ranked-body"><small><?= e(primary_cat($p)) ?> · <?= reading_time($p) ?> min</small><strong><?= e($p['title']) ?></strong></span>
+        </a>
+      </li>
+      <?php endforeach; ?>
+    </ol>
   </div>
 </section>
 

@@ -30,7 +30,10 @@ view('head', ['meta' => [
 <section class="page-hero">
   <div class="wrap-narrow">
     <h1 class="page-title reveal"><?= e($cfg['h1']) ?></h1>
-    <?php if ($page === 1): ?><p class="page-lede reveal"><?= e($cfg['intro']) ?></p><?php endif; ?>
+    <?php if ($page === 1): ?><p class="page-lede reveal"><?= e($cfg['intro']) ?></p>
+    <?php $top = array_slice(array_values(array_filter(featured_posts(), fn($p) => $kind === 'blog' || in_array($kind, $p['categories'], true))), 0, 3);
+    if ($top): ?><p class="most-read reveal"><span>Most read:</span> <?php foreach ($top as $j => $t): ?><?= $j ? ' · ' : '' ?><a href="/<?= e($t['slug']) ?>/"><?= e(preg_replace('/:.*$/', '', $t['title'])) ?></a><?php endforeach; ?></p><?php endif; ?>
+    <?php endif; ?>
     <?php if ($kind !== 'Mindset' && $kind !== 'Quotes'): ?>
     <div class="chips reveal"><a href="/blog/"<?= $kind === 'blog' ? ' aria-current="page"' : '' ?>>All</a><a href="/mindset/">Mindset</a><a href="/quotes/">Quotes</a><a href="/category/general/"<?= $kind === 'General' ? ' aria-current="page"' : '' ?>>General</a></div>
     <?php else: ?>

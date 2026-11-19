@@ -9,6 +9,18 @@ $products = $post['products'] ?? [];
 preg_match_all('#<h2 id="([^"]+)">(.*?)</h2>#s', $body, $hm, PREG_SET_ORDER);
 $toc = array_map(fn($m) => ['id' => $m[1], 'text' => trim(strip_tags($m[2]))], $hm);
 
+$body = auto_interlink($body, $post['slug']);
+$related = related_posts($post, 5);
+
+// "Read next" box before the second H2: two related posts, an early internal-link hop for readers.
+if (count($hm) >= 3) {
+    $rn = '<aside class="read-next reveal" aria-label="Read next"><span class="eyebrow">Read next</span><ul>';
+    foreach (array_slice($related, 3, 2) as $r) $rn .= '<li><a href="/' . e($r['slug']) . '/">' . e($r['title']) . '</a></li>';
+    $rn .= '</ul></aside>';
+    $pos = strpos($body, $hm[1][0]);
+    if ($pos !== false) $body = substr_replace($body, $rn . "\n", $pos, 0);
+}
+
 // Reader-pick spotlight before the middle H2 (skipped for posts without products).
 if ($products && count($hm) >= 4) {
     ob_start(); view('spotlight', ['pr' => $products[0]]); $spot = ob_get_clean();
@@ -121,7 +133,7 @@ $older = $all[$idx + 1] ?? null;
   <div class="wrap">
     <h2 class="section-title reveal">Keep Reading</h2>
     <div class="grid grid-3">
-      <?php foreach (related_posts($post) as $p) view('card', ['p' => $p]); ?>
+      <?php foreach (array_slice($related, 0, 3) as $p) view('card', ['p' => $p]); ?>
     </div>
   </div>
 </section>

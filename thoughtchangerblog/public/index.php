@@ -32,7 +32,7 @@ if (isset($query['p']) && ctype_digit((string) $query['p'])) {
     redirect(isset($ids[$query['p']]) ? '/' . $ids[$query['p']] . '/' : '/');
 }
 if (isset($query['m']) && count($query) === 1) redirect($path);              // Blogger ?m=1
-if (isset($query['s']) && $path === '/') { view('search', ['q' => trim((string) $query['s'])]); exit; }
+if (isset($query['s']) && ($path === '/' || $path === '/search/')) { view('search', ['q' => trim((string) $query['s'])]); exit; }
 
 // 3. Forms.
 if ($method === 'POST') { require APP . '/forms.php'; handle_form($path); exit; }
@@ -47,13 +47,19 @@ $static = [
     '/mindset/'             => fn() => view('archive', ['kind' => 'Mindset', 'page' => 1]),
     '/quotes/'              => fn() => view('archive', ['kind' => 'Quotes', 'page' => 1]),
     '/category/general/'    => fn() => view('archive', ['kind' => 'General', 'page' => 1]),
-    '/about-us/'            => fn() => view('page', ['slug' => 'about-us']),
+    '/about-us/'            => fn() => view('about'),
     '/contact-us/'          => fn() => view('contact'),
     '/privacy-policy/'      => fn() => view('page', ['slug' => 'privacy-policy']),
     '/terms-of-use/'        => fn() => view('page', ['slug' => 'terms-of-use']),
     '/affiliate-disclosure/'=> fn() => view('page', ['slug' => 'affiliate-disclosure']),
     '/recommended-reads/'   => fn() => view('bookshelf'),
     '/feed/'                => fn() => view('feed'),
+    '/search-index.json'    => function () {
+        header('Content-Type: application/json; charset=utf-8');
+        header('Cache-Control: public, max-age=3600');
+        header('X-Robots-Tag: noindex');
+        echo json_encode(search_index(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    },
     '/sitemap_index.xml'    => fn() => view('sitemap', ['which' => 'index']),
     '/post-sitemap.xml'     => fn() => view('sitemap', ['which' => 'post']),
     '/page-sitemap.xml'     => fn() => view('sitemap', ['which' => 'page']),

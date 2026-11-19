@@ -23,7 +23,7 @@ $labels = ['Mindset' => 'For a Stronger Mindset', 'Quotes' => 'Words Worth Keepi
 <?php foreach ($byTheme as $k => $list): if (!$list) continue; ?>
 <section class="band band-tight">
   <div class="wrap">
-    <?php view('products', ['products' => $list, 'heading' => $labels[$k], 'intro' => 'Recommended in our ' . ($k === 'General' ? 'reflections' : strtolower($k) . ' articles') . '.']); ?>
+    <?php view('products', ['products' => $list, 'heading' => $labels[$k], 'intro' => 'Recommended in our ' . ($k === 'General' ? 'reflections' : strtolower($k) . ' articles') . '.', 'showFrom' => true]); ?>
   </div>
 </section>
 <?php endforeach; ?>

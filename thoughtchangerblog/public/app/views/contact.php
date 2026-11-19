@@ -27,6 +27,11 @@ view('head', ['meta' => [
         <li>Topic suggestions</li>
         <li>Collaborations &amp; partnerships</li>
       </ul>
+      <h3 class="contact-sub">While you’re here</h3>
+      <ul class="contact-reads">
+        <?php foreach (array_slice(featured_posts(), 0, 4) as $p): ?><li><a href="/<?= e($p['slug']) ?>/"><?= e($p['title']) ?></a></li><?php endforeach; ?>
+      </ul>
+      <p class="contact-more">Learn more <a href="/about-us/">about Thought Changer</a> or browse the <a href="/blog/">full archive</a>.</p>
     </div>
     <form class="contact-form js-ajax reveal" id="contact" method="post" action="/contact-us/">
       <input type="hidden" name="form" value="contact">

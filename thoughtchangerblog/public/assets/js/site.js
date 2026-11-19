@@ -85,6 +85,101 @@
     Object.keys(map).forEach(function (id) { var h = document.getElementById(id); if (h) tio.observe(h); });
   }
 
+  /* Back to top (the header is sticky, so a plain #top jump would not move) */
+  if (toTop) toTop.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var first = document.querySelector('.brand'); if (first) first.focus({ preventScroll: true });
+  });
+
+  /* Mobile search toggle */
+  var sToggle = document.querySelector('.search-toggle');
+  if (sToggle) sToggle.addEventListener('click', function () {
+    var open = body.classList.toggle('search-open');
+    sToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    body.classList.remove('nav-open');
+    if (open) { var i = document.getElementById('hs'); if (i) i.focus(); }
+  });
+
+  /* Live search suggestions */
+  var index = null, loading = null;
+  function loadIndex() {
+    if (index) return Promise.resolve(index);
+    if (!loading) loading = fetch('/search-index.json').then(function (r) { return r.json(); }).then(function (d) {
+      index = d.map(function (p) { p._t = p.t.toLowerCase(); p._o = (p.d + ' ' + p.c + ' ' + p.h).toLowerCase(); return p; });
+      return index;
+    });
+    return loading;
+  }
+  function esc(s) { return s.replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function terms(q) { return q.toLowerCase().split(/[^\p{L}\p{N}']+/u).filter(function (t) { return t.length > 1; }); }
+  function search(q) {
+    var ts = terms(q), phrase = q.toLowerCase().trim();
+    if (!ts.length) return [];
+    var out = [];
+    index.forEach(function (p, i) {
+      var score = 0;
+      for (var k = 0; k < ts.length; k++) {
+        var t = ts[k], s = 0, at = p._t.indexOf(t);
+        if (at > -1) s += (at === 0 || /[^a-z0-9]/.test(p._t.charAt(at - 1))) ? 10 : 6;
+        if (p._o.indexOf(t) > -1) s += 2;
+        if (!s) return;
+        score += s;
+      }
+      if (ts.length > 1 && p._t.indexOf(phrase) > -1) score += 15;
+      score += p.f ? 1.5 : 0;
+      out.push({ p: p, s: score, i: i });
+    });
+    return out.sort(function (a, b) { return b.s - a.s || a.i - b.i; }).map(function (x) { return x.p; });
+  }
+  function highlight(text, ts) {
+    var h = esc(text);
+    ts.forEach(function (t) { h = h.replace(new RegExp('(' + esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); });
+    return h;
+  }
+  document.querySelectorAll('form.js-suggest').forEach(function (form) {
+    var input = form.querySelector('input[type=search]'), box = form.querySelector('.suggest'), active = -1, timer;
+    if (!input || !box) return;
+    function items() { return box.querySelectorAll('a'); }
+    function close() { box.hidden = true; input.setAttribute('aria-expanded', 'false'); active = -1; }
+    function setActive(n) {
+      var els = items(); if (!els.length) return;
+      active = (n + els.length) % els.length;
+      els.forEach(function (el, i) { el.classList.toggle('active', i === active); el.setAttribute('aria-selected', i === active ? 'true' : 'false'); });
+      els[active].scrollIntoView({ block: 'nearest' });
+    }
+    function render() {
+      var q = input.value.trim();
+      if (q.length < 2) { close(); return; }
+      loadIndex().then(function () {
+        if (input.value.trim() !== q) return;
+        var res = search(q), ts = terms(q), html = '';
+        var allUrl = '/?s=' + encodeURIComponent(q);
+        if (!res.length) {
+          html = '<div class="sg-empty">No articles match “' + esc(q) + '”. Press Enter to search the full text.</div>';
+        } else {
+          html = '<div class="suggest-head"><span>Articles</span><span>' + res.length + ' match' + (res.length === 1 ? '' : 'es') + '</span></div>';
+          res.slice(0, 6).forEach(function (p) {
+            html += '<a class="sg" role="option" href="' + p.u + '"><img src="' + p.i + '" alt="" loading="lazy" width="64" height="43"><span><small>' + esc(p.c) + '</small><strong>' + highlight(p.t, ts) + '</strong></span></a>';
+          });
+        }
+        html += '<a class="sg-all" role="option" href="' + allUrl + '">' + (res.length > 6 ? 'See all ' + res.length + ' results' : 'Search all articles') + ' for “' + esc(q) + '” →</a>';
+        box.innerHTML = html; box.hidden = false; input.setAttribute('aria-expanded', 'true'); active = -1;
+      });
+    }
+    input.addEventListener('focus', function () { loadIndex(); if (input.value.trim().length > 1) render(); });
+    input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(render, 90); });
+    input.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
+      else if (e.key === 'Escape') { close(); }
+      else if (e.key === 'Enter' && active > -1) { e.preventDefault(); window.location.href = items()[active].href; }
+    });
+    document.addEventListener('click', function (e) { if (!form.contains(e.target)) close(); });
+    form.addEventListener('submit', function (e) { if (!input.value.trim()) { e.preventDefault(); input.focus(); } });
+  });
+
   /* Copy link */
   var copy = document.querySelector('.copy-link');
   if (copy && navigator.clipboard) {
