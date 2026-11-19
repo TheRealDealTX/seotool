@@ -58,9 +58,9 @@
     { e: '🧥', n: 'Faded denim trucker jacket', c: 'Vintage Clothing', s: 'vintage-clothing', a: 85, flaw: 'missing button on the cuff' },
     { e: '🛒', n: 'Factory-cart coffee table', c: 'Architectural Salvage & Industrial', s: 'architectural-salvage-industrial', a: 420, flaw: 'wobbly caster wheel' },
     { e: '🪣', n: 'Galvanized farmhouse bucket trio', c: 'Rustic Home Decor', s: 'rustic-home-decor', a: 48, flaw: 'dent in the smallest bucket' },
-    { e: '🕰️', n: 'Art Deco mantel clock', c: 'Antiques & Collectibles', s: 'antiques-collectibles', a: 120, flaw: 'clock doesn\'t actually keep time' },
+    { e: '🕰️', keep: true, n: 'Art Deco mantel clock', c: 'Antiques & Collectibles', s: 'antiques-collectibles', a: 120, flaw: 'clock doesn\'t actually keep time' },
     { e: '💿', n: 'Crate of 1970s rock LPs', c: 'Vinyl Records & Retro', s: 'vinyl-records-retro', a: 60, flaw: 'a few sleeves with ring wear' },
-    { e: '🥣', n: 'Pyrex nesting bowl set', c: 'Vintage Kitchen & Barware', s: 'vintage-kitchen-barware', a: 95, flaw: 'dishwasher fading on one bowl' },
+    { e: '🥣', keep: true, n: 'Pyrex nesting bowl set', c: 'Vintage Kitchen & Barware', s: 'vintage-kitchen-barware', a: 95, flaw: 'dishwasher fading on one bowl' },
     { e: '🍸', n: 'Brass Hollywood Regency bar cart', c: 'Vintage Kitchen & Barware', s: 'vintage-kitchen-barware', a: 280, flaw: 'tarnish on the handles' },
     { e: '🍳', n: 'Cast-iron skillet, No. 8', c: 'Vintage Kitchen & Barware', s: 'vintage-kitchen-barware', a: 75, flaw: 'spot of surface rust' },
     { e: '🪟', n: 'Salvaged stained-glass window', c: 'Architectural Salvage & Industrial', s: 'architectural-salvage-industrial', a: 340, flaw: 'hairline crack in one pane' },
@@ -117,7 +117,7 @@
   function fill(s, extra) {
     return s.replace(/\{(\w+)\}/g, function (m, k) {
       if (k === 'P') return money(cur.P);
-      if (k === 'item') return cur.item.n.toLowerCase();
+      if (k === 'item') return cur.item.keep ? cur.item.n : cur.item.n.charAt(0).toLowerCase() + cur.item.n.slice(1);
       if (k === 'flaw') return cur.item.flaw;
       if (extra && extra[k] != null) return extra[k];
       return m;

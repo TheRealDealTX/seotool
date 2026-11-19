@@ -20,6 +20,7 @@
 .game *, .game *::before, .game *::after { box-sizing: border-box; }
 .game button, .game input, .game select { font: inherit; }
 .game img, .game svg { max-width: 100%; }
+.game [hidden] { display: none !important; }
 
 .game :where(button, a, input, select, [tabindex]):focus-visible {
   outline: none;
@@ -270,7 +271,7 @@
 }
 .g-decade__opt:hover:not([disabled]) { background: #f3dfa9; }
 .g-decade__opt:active:not([disabled]) { transform: translateY(3px); box-shadow: 0 1px 0 var(--g-ink); }
-.g-decade__opt[disabled] { cursor: default; }
+.g-decade__opt[disabled] { cursor: default; opacity: 1; color: var(--g-ink); }
 .g-decade__opt.is-right { background: var(--teal, #1f6f6b); color: var(--paper, #f6efe2); }
 .g-decade__opt.is-wrong { background: var(--rust, #c2552d); color: var(--paper, #f6efe2); text-decoration: line-through; }
 .g-decade__opt.is-dim { opacity: .45; }
