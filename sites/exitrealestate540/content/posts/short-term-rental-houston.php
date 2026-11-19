@@ -2,13 +2,13 @@
 return [
     'title'       => 'Short-Term Rental Houston Guide: The STR Ordinance, Hotel Taxes and Running the Numbers',
     'seo_title'   => 'Short Term Rental Houston: Rules, Taxes, Numbers',
-    'description' => 'Short term rental Houston guide: the city STR registration rules and fees, 17% hotel occupancy tax, HOA limits, insurance and STR vs long-term math.',
+    'description' => 'Short term rental Houston guide: city STR registration rules and fees, the 17% hotel occupancy tax, HOA limits, insurance and STR vs lease math.',
     'keyword'     => 'short term rental houston',
     'category'    => 'investing',
     'date'        => '2026-11-07',
     'excerpt'     => 'What it takes to run a legal short-term rental in Houston in 2026: city registration, hotel occupancy taxes, deed restrictions, insurance and an honest comparison with a long-term lease.',
     'faq'         => [
-        ['Do I need a permit for an Airbnb in Houston?', 'Yes, inside Houston city limits. Since January 1, 2026, any home or unit rented for less than 30 consecutive days needs a City of Houston short-term rental certificate of registration. You apply online, pay a $275 annual fee plus a city administrative fee, show hotel occupancy tax registration or platform remittance, complete human trafficking awareness training and list a 24/7 emergency contact. Platforms must remove listings the city flags as unregistered.'],
+        ['Do I need a permit for an Airbnb in Houston?', 'Yes, inside Houston city limits. Since January 1, 2026, any home or unit rented for less than 30 consecutive days needs a City of Houston short-term rental certificate of registration. You apply online, pay a $275 annual fee plus a city administrative fee, show hotel occupancy tax registration or platform remittance, complete human trafficking awareness training and list a 24/7 emergency contact. Starting January 1, 2027, the city says it will ask platforms to remove unregistered listings.'],
         ['What is the hotel tax on a short-term rental in Houston?', 'Inside Houston city limits, the combined hotel occupancy tax is 17%: 6% state, 7% City of Houston, 2% Harris County and 2% Harris County-Houston Sports Authority. Airbnb and Vrbo collect and remit the city tax for bookings on their platforms, and platforms may collect other portions too. For direct bookings or platforms that do not collect, you register, collect and file yourself with each agency.'],
         ['Can my HOA ban short-term rentals in Texas?', 'It depends on your deed restrictions. The Texas Supreme Court held in Tarr v. Timberwood Park (2018) that a covenant limiting homes to residential use did not, by itself, bar short-term rentals. But restrictions that expressly prohibit short-term or minimum-term leasing can be enforceable, and many Houston subdivisions and condo regimes have them. Houston\'s registration application requires the owner to declare the rental does not violate those restrictions.'],
         ['Is a short-term rental more profitable than a long-term rental in Houston?', 'Sometimes, but not automatically. A short-term rental can earn more gross revenue, but it also carries a 17% hotel tax that guests pay and you must track, platform fees, cleaning, furnishing, utilities, supplies, higher insurance and more of your time. Occupancy swings with seasons and events. Run both scenarios with real comparable data for the exact address before you choose.'],
@@ -22,14 +22,14 @@ return [
 <p>This guide covers the Houston STR ordinance, the 17% hotel tax, HOA and deed restriction issues, insurance and how to compare STR and long-term returns honestly.</p>
 
 <h2>Houston's short-term rental ordinance at a glance</h2>
-<p>Houston City Council adopted its first short-term rental ordinance (Ordinance No. 2025-322, Chapter 28, Article XXIII of the City Code) on April 16, 2025. Registration opened in fall 2025, compliance became mandatory on January 1, 2026, and the city began active enforcement in spring 2026. The <a href="https://www.houstontx.gov/ara/str.html">City of Houston short-term rental page</a> run by the Administration and Regulatory Affairs Department has the portal, rules and checklist.</p>
+<p>Houston City Council adopted its first short-term rental ordinance (Ordinance No. 2025-322, Chapter 28, Article XXIII of the City Code) on April 16, 2025. Registration opened in fall 2025, compliance became mandatory on January 1, 2026. The city says that starting January 1, 2027, it will begin notifying platforms to remove listings that lack a certificate of registration. The <a href="https://www.houstontx.gov/ara/str.html">City of Houston short-term rental page</a> run by the Administration and Regulatory Affairs Department has the portal, rules and checklist.</p>
 <p>The ordinance defines a short-term rental as a dwelling unit, or any part of one, rented or offered for rent for less than 30 consecutive days. Hotels, bed and breakfasts, boarding homes and seller leasebacks after a home sale are excluded. Each unit needs its own certificate, including individual condos and apartments in the same building.</p>
 <table>
 <thead><tr><th>Requirement</th><th>What the city asks for</th></tr></thead>
 <tbody>
 <tr><td>Certificate of registration</td><td>One per unit, valid for one year, renewed annually; not transferable to a buyer</td></tr>
 <tr><td>Fee</td><td>$275 per unit per year, non-refundable, plus a city administrative fee that adjusts annually ($33.10 in 2025)</td></tr>
-<tr><td>Hotel tax</td><td>Proof of HOT registration, or proof the platform remits HOT on your behalf</td></tr>
+<tr><td>Hotel tax</td><td>Proof of HOT registration or remittance for any listing outside Airbnb; the city says Airbnb-only listings do not need proof</td></tr>
 <tr><td>Emergency contact</td><td>Someone reachable by phone 24/7 who can respond within one hour of being notified</td></tr>
 <tr><td>Training</td><td>A pre-approved human trafficking awareness course</td></tr>
 <tr><td>Ownership and restrictions</td><td>Proof of ownership or owner authorization, plus a declaration that the rental does not violate HOA rules, deed restrictions or lease terms</td></tr>
@@ -43,7 +43,7 @@ return [
 <ul>
 <li><strong>Fines:</strong> $100 to $500 per violation, and each day a violation continues counts separately.</li>
 <li><strong>Revocation:</strong> for certain criminal convictions, repeated noise or nuisance violations, building code violations, false information or unpaid hotel tax. A revoked owner cannot reapply for a year, and if three or more of one owner's certificates are revoked within 24 months, the city can move against the rest.</li>
-<li><strong>Delisting:</strong> platforms must remove a listing within 10 business days after the city notifies them it lacks a valid registration.</li>
+<li><strong>Delisting:</strong> platforms must remove a listing within 10 business days after the city notifies them it lacks a valid registration. The city says those notices begin January 1, 2027.</li>
 <li><strong>Appeals:</strong> you can request a hearing within 20 days of a denial or revocation notice.</li>
 </ul>
 <p>These rules apply only inside Houston city limits. Suburbs such as Pasadena, Sugar Land or League City, and unincorporated Harris County, set their own rules, so check with the city or county where the property sits.</p>
