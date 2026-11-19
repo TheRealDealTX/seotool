@@ -41,7 +41,7 @@ return [
 <li><strong>Homes for Texas Heroes</strong> for full-time K-12 educators, peace officers, firefighters, EMS personnel, corrections officers and county jailers, public security officers, veterans, and nursing and allied health faculty.</li>
 <li><strong>Home Sweet Texas</strong> for low- and moderate-income buyers in any profession.</li>
 </ul>
-<p>As of 2026, TSAHC offers the assistance as either a grant that never has to be repaid or a forgivable second lien that is forgiven after three years if you do not sell, refinance or move out. There is also a no-assistance option with a lower interest rate. TSAHC lists a minimum credit score of 620 for government loans and 640 for conventional loans, requires a homebuyer education course, and does not always require you to be a first-time buyer.</p>
+<p>As of 2026, TSAHC offers the assistance three ways: a grant that never has to be repaid, a forgivable second lien that is forgiven after three years if you do not sell, refinance or move out, or a deferred repayable second lien that you pay back when you sell, refinance or pay off the first mortgage. There is also a no-assistance option with a lower interest rate. TSAHC lists a minimum credit score of 620 for government loans and 640 for conventional loans, requires a homebuyer education course, and does not always require you to be a first-time buyer.</p>
 
 <h2>Statewide programs: TDHCA</h2>
 <p>The Texas Department of Housing and Community Affairs runs the Texas Homebuyer Program through approved loan officers:</p>
