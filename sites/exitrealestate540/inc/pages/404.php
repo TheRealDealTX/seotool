@@ -1,8 +1,8 @@
 <?php
 defined('ERE') or exit;
 page_head([
-    'title' => 'Page not found | Exit Real Estate 540',
-    'description' => 'The page you were looking for could not be found.',
+    'title' => brand_title('Page Not Found'),
+    'description' => 'Sorry, we could not find that page. It may have moved when the site was rebuilt. Browse our Texas real estate guides and free calculators.',
     'path' => strtok($_SERVER['REQUEST_URI'] ?? '/', '?'),
     'robots' => 'noindex, follow',
 ]);

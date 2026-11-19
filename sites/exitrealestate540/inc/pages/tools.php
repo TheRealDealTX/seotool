@@ -4,8 +4,8 @@ $crumbs = [['Home', '/'], ['Free Tools', '/tools/']];
 $groups = [];
 foreach (tools() as $slug => $t) $groups[$t['group']][] = $slug;
 page_head([
-    'title' => 'Free Real Estate Calculators & Tools for Texas | Exit Real Estate 540',
-    'description' => '12 free real estate calculators: Texas mortgage, affordability, closing costs, property tax, rent vs buy, rental ROI, refinance, seller net and insurance claim depreciation.',
+    'title' => brand_title('Free Real Estate Calculators for Texas'),
+    'description' => '12 free calculators: Texas mortgage, affordability, closing costs, property tax, rent vs buy, rental ROI, refinance and claim depreciation.',
     'path' => '/tools/',
     'crumbs' => $crumbs,
     'schema' => [[

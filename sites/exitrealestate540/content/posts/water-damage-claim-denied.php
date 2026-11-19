@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Water Damage Claim Denied? Why It Happens and How Texas Homeowners Fight Back',
-    'seo_title'   => 'Water Damage Claim Denied? How to Fight Back in Texas',
-    'description' => 'Water damage claim denied? Learn the common reasons Texas insurers say no, the deadlines they must meet, and the exact steps to reopen, appeal or escalate.',
+    'seo_title'   => 'Water Damage Claim Denied? How to Fight Back',
+    'description' => 'Water damage claim denied? The common reasons Texas insurers say no, the deadlines they must meet, and the steps to reopen, appeal or escalate.',
     'keyword'     => 'water damage claim denied',
     'category'    => 'insurance-claims',
     'date'        => '2026-11-10',

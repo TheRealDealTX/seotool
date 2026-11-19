@@ -20,7 +20,7 @@ $pages = [
 <p>Some articles recommend products and link to Amazon. If you buy through those links we may earn a small commission at no extra cost to you. Recommendations are chosen because they are useful, not because of the commission - see our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
 <p>Questions, corrections or ideas? <a href="/contact/">Get in touch</a>.</p>
 HTML],
-'write-for-us' => ['Write for Us: Real Estate Guest Posts', 'Pitch a guest post to Exit Real Estate 540. We publish expert, Texas-focused articles on buying, selling, investing, property taxes and insurance claims.', <<<'HTML'
+'write-for-us' => ['Write for Us: Real Estate Guest Posts', 'Pitch a guest post to Exit Real Estate 540. We publish expert, Texas-focused articles on buying, selling, investing, taxes and claims.', <<<'HTML'
 <p>We accept a small number of guest articles from people with real, hands-on expertise: agents, lenders, title and escrow officers, inspectors, appraisers, property managers, contractors, licensed public adjusters, attorneys and experienced investors.</p>
 <h2>What we are looking for</h2>
 <ul>
@@ -39,7 +39,7 @@ HTML],
 <p>Send two or three headline ideas, a one-paragraph outline of each, a short bio with your license or credentials, and links to work you have published. Use our <a href="/contact/">contact form</a> and choose "Guest post / Write for us". We edit every accepted piece for accuracy, clarity and style, and may decline any submission.</p>
 <p>Accepted authors receive a byline with a short bio and one relevant link.</p>
 HTML],
-'affiliate-disclosure' => ['Affiliate Disclosure', 'How Exit Real Estate 540 earns money through the Amazon Associates program and how we choose the products we recommend.', <<<'HTML'
+'affiliate-disclosure' => ['Affiliate Disclosure', 'How Exit Real Estate 540 earns money through the Amazon Associates program and how we choose the products we recommend on this site.', <<<'HTML'
 <p>Exit Real Estate 540 is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
 <p><strong>As an Amazon Associate we earn from qualifying purchases.</strong> When you click a product link on this site and make a purchase on Amazon, we may receive a small commission. The price you pay is the same whether or not you use our link.</p>
 <h2>How we choose products</h2>
@@ -48,7 +48,7 @@ HTML],
 <p>We do not display prices, because they change constantly. Product prices and availability are accurate as of the date and time indicated on Amazon and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of the product.</p>
 <p>Questions about this policy? <a href="/contact/">Contact us</a>.</p>
 HTML],
-'privacy-policy' => ['Privacy Policy', 'How Exit Real Estate 540 collects, uses and protects information when you visit the site, use our calculators or contact us.', <<<'HTML'
+'privacy-policy' => ['Privacy Policy', 'How Exit Real Estate 540 collects, uses and protects information when you visit the site, use our free calculators or contact us.', <<<'HTML'
 <p><em>Last updated: November 19, 2026</em></p>
 <p>This policy explains what information Exit Real Estate 540 ("we", "us") collects when you use exitrealestate540.com and how we use it.</p>
 <h2>Calculators</h2>
@@ -64,7 +64,7 @@ HTML],
 <h2>Your choices</h2>
 <p>To ask us to delete a message you sent through the contact form, contact us using the same email address. We may update this policy from time to time; the date above shows the latest version.</p>
 HTML],
-'terms' => ['Terms of Use', 'Terms governing your use of Exit Real Estate 540, its articles and its free real estate calculators.', <<<'HTML'
+'terms' => ['Terms of Use', 'The terms that govern your use of Exit Real Estate 540, including its Texas real estate articles, checklists and free calculators.', <<<'HTML'
 <p><em>Last updated: November 19, 2026</em></p>
 <p>By using exitrealestate540.com you agree to these terms.</p>
 <h2>Educational content only</h2>
@@ -84,7 +84,7 @@ HTML],
 [$h1, $desc, $html] = $pages[$page];
 $crumbs = [['Home', '/'], [$h1, '/' . $page . '/']];
 page_head([
-    'title' => $h1 . ($page === 'about' ? '' : ' | Exit Real Estate 540'),
+    'title' => brand_title($h1),
     'description' => $desc,
     'path' => '/' . $page . '/',
     'crumbs' => $crumbs,

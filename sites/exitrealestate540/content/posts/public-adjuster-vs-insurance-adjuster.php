@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Public Adjuster vs Insurance Adjuster: Who Works for You and When to Hire One in Texas',
-    'seo_title'   => 'Public Adjuster vs Insurance Adjuster: Texas Guide',
-    'description' => 'Public adjuster vs insurance adjuster: who each works for, Texas licensing, the 10% fee cap, when hiring one pays off and how to verify a license first.',
+    'seo_title'   => 'Public Adjuster vs Insurance Adjuster (Texas)',
+    'description' => 'Public adjuster vs insurance adjuster: who each works for, Texas licensing, the 10% fee cap, when hiring one pays and how to verify a license.',
     'keyword'     => 'public adjuster vs insurance adjuster',
     'category'    => 'insurance-claims',
     'date'        => '2026-11-10',

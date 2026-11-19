@@ -1,7 +1,7 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Texas Homestead Exemption: 2026 Amounts, Rules and How to File',
-    'seo_title'   => 'Texas Homestead Exemption 2026: Amounts and How to File',
+    'seo_title'   => 'Texas Homestead Exemption 2026: How to File',
     'description' => 'The Texas homestead exemption now takes $140,000 off your school taxable value ($200,000 if 65+ or disabled). See who qualifies and how to file.',
     'keyword'     => 'texas homestead exemption',
     'category'    => 'homeownership',

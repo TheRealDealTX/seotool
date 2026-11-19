@@ -3,8 +3,8 @@ defined('ERE') or exit;
 $posts = array_values(all_posts());
 $crumbs = [['Home', '/'], ['Blog', '/blog/']];
 page_head([
-    'title' => 'Real Estate Blog: Texas Buying, Selling & Claims Guides | Exit Real Estate 540',
-    'description' => 'Every guide on Exit Real Estate 540: Texas home buying, selling, investing, property taxes, Houston living and home insurance claims - updated for ' . date('Y') . '.',
+    'title' => brand_title('Texas Real Estate Blog: Buying, Selling & Claims'),
+    'description' => 'Every Exit Real Estate 540 guide: Texas home buying, selling, investing, property taxes, Houston living and home insurance claims.',
     'path' => '/blog/',
     'crumbs' => $crumbs,
     'schema' => [[

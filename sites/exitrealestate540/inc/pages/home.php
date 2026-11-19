@@ -3,8 +3,8 @@ defined('ERE') or exit;
 $posts = array_values(all_posts());
 $c = cfg();
 page_head([
-    'title' => 'Exit Real Estate 540 | Texas Real Estate Guides & Free Calculators',
-    'description' => 'Houston and Texas real estate made simple: buying, selling, investing, property taxes and insurance claims - with free mortgage, affordability and claim calculators.',
+    'title' => 'Exit Real Estate 540: Texas Real Estate Guides & Tools',
+    'description' => 'Houston and Texas real estate made simple: buying, selling, investing, property taxes and claims, with free mortgage and affordability tools.',
     'path' => '/',
     'body_class' => 'home',
     'schema' => [[

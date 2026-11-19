@@ -306,3 +306,13 @@ function picture(string $slot, string $sizes, string $class = '', bool $eager = 
         . ($eager ? ' fetchpriority="high"' : ' loading="lazy"') . ' decoding="async">'
         . '</picture>';
 }
+
+/**
+ * Append the short brand to a page title only when the result still fits in
+ * Google's ~580px title width (kept to 60 characters).
+ */
+function brand_title(string $t): string
+{
+    $full = $t . ' | ' . cfg('short');
+    return mb_strlen($full) <= 60 ? $full : $t;
+}

@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'How to Protest Property Taxes in Harris County: A Step-by-Step Guide',
-    'seo_title'   => 'Protest Property Taxes in Harris County: Step-by-Step',
-    'description' => 'How to protest property taxes in Harris County: the May 15 deadline, HCAD iFile and iSettle, evidence that works, ARB hearings and appeals if you lose.',
+    'seo_title'   => 'How to Protest Property Taxes in Harris County',
+    'description' => 'Protest Harris County property taxes: the May 15 deadline, HCAD iFile and iSettle, evidence that works, ARB hearings and appeals if you lose.',
     'keyword'     => 'protest property taxes harris county',
     'category'    => 'homeownership',
     'date'        => '2026-11-11',

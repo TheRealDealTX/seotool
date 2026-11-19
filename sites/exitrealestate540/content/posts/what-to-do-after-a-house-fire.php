@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'What to Do After a House Fire: A Step-by-Step Recovery Checklist for Texas Homeowners',
-    'seo_title'   => 'What to Do After a House Fire: Step-by-Step Checklist',
-    'description' => 'What to do after a house fire in Texas: first 24 hours, calling your insurer, living expenses, inventory, board-up and getting paid. Use this checklist.',
+    'seo_title'   => 'What to Do After a House Fire: Checklist',
+    'description' => 'What to do after a house fire in Texas: the first 24 hours, calling your insurer, living expenses, inventory, board-up and getting paid.',
     'keyword'     => 'what to do after a house fire',
     'category'    => 'insurance-claims',
     'date'        => '2026-10-14',

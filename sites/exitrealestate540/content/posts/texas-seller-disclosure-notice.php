@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Texas Seller Disclosure Notice: What Sellers Must Disclose and When',
-    'seo_title'   => 'Texas Seller Disclosure Notice: What You Must Disclose',
-    'description' => 'The Texas seller disclosure notice explained: who must give it, what goes on the form, flood questions, exemptions and what happens if you skip it.',
+    'seo_title'   => 'Texas Seller Disclosure Notice Explained',
+    'description' => 'The Texas seller disclosure notice: who must give it, what goes on the form, the flood questions, exemptions and what happens if you skip it.',
     'keyword'     => 'texas seller disclosure notice',
     'category'    => 'selling',
     'date'        => '2026-10-21',

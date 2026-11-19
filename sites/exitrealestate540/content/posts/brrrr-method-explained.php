@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'The BRRRR Method Explained: Buy, Rehab, Rent, Refinance, Repeat (With Real Numbers)',
-    'seo_title'   => 'BRRRR Method Explained: Steps, Rules and Real Numbers',
-    'description' => 'The BRRRR method explained step by step: the 70% rule, refinance seasoning rules, DSCR loans, the risks, and a worked Houston example with a numbers table.',
+    'seo_title'   => 'BRRRR Method Explained: Steps & Real Numbers',
+    'description' => 'The BRRRR method step by step: the 70% rule, refinance seasoning, DSCR loans, the risks, and a worked Houston example with a full numbers table.',
     'keyword'     => 'brrrr method',
     'category'    => 'investing',
     'date'        => '2026-11-11',

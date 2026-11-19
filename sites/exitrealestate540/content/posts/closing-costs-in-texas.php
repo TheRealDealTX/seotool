@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Closing Costs in Texas: What Buyers Pay, Who Pays What and How to Lower Them',
-    'seo_title'   => 'Closing Costs in Texas: A Buyer\'s Breakdown for 2026',
-    'description' => 'Closing costs in Texas explained for buyers: lender fees, state-set title rates, escrow, survey, prepaids, who pays what and proven ways to lower your bill.',
+    'seo_title'   => 'Closing Costs in Texas: A 2026 Buyer Breakdown',
+    'description' => 'Texas closing costs for buyers: lender fees, state-set title rates, escrow, survey, prepaids, who pays what and proven ways to lower your bill.',
     'keyword'     => 'closing costs in texas',
     'category'    => 'buying',
     'date'        => '2026-11-04',

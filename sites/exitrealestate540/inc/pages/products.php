@@ -4,8 +4,8 @@ $crumbs = [['Home', '/'], ['Recommended Gear', '/recommended-products/']];
 $groups = [];
 foreach (products() as $k => $p) $groups[$p[1]][] = $k;
 page_head([
-    'title' => 'Best Home Safety, Storm Prep & Homeowner Gear for Texas | ERE540',
-    'description' => 'Our picks for Texas homeowners: hurricane and flood prep, leak detectors, smoke and CO alarms, fireproof safes, smart thermostats, moving supplies and real estate books.',
+    'title' => brand_title('Best Storm Prep & Home Safety Gear for Texas'),
+    'description' => 'Our picks for Texas homeowners: hurricane and flood prep, leak detectors, smoke and CO alarms, fireproof safes, smart thermostats and books.',
     'path' => '/recommended-products/',
     'crumbs' => $crumbs,
     'schema' => [[

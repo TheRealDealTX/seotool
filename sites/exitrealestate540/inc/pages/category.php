@@ -5,7 +5,7 @@ $crumbs = [['Home', '/'], ['Blog', '/blog/'], [$cat['name'], $cat['url']]];
 $relTools = [];
 foreach ($posts as $p) foreach ($p['tools'] ?? [] as $t) $relTools[$t] = true;
 page_head([
-    'title' => $cat['title'] . ' | Exit Real Estate 540',
+    'title' => brand_title($cat['title']),
     'description' => $cat['description'],
     'path' => $cat['url'],
     'crumbs' => $crumbs,

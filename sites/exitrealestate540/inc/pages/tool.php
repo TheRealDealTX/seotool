@@ -14,7 +14,7 @@ $schema = [[
 ]];
 if (!empty($tool['faq'])) $schema[] = schema_faq($tool['faq']);
 page_head([
-    'title' => $tool['title'] . ' | ' . cfg('short'),
+    'title' => brand_title($tool['title']),
     'description' => $tool['description'],
     'path' => $tool['url'],
     'crumbs' => $crumbs,

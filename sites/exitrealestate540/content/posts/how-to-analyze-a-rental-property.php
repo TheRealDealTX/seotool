@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'How to Analyze a Rental Property: NOI, Cap Rate and Cash Flow, With a Houston Example',
-    'seo_title'   => 'How to Analyze a Rental Property (Houston Example)',
-    'description' => 'How to analyze a rental property step by step: NOI, cap rate, cash-on-cash return and cash flow, with a worked Houston example using real Texas tax math.',
+    'seo_title'   => 'How to Analyze a Rental Property (Example)',
+    'description' => 'How to analyze a rental property: NOI, cap rate, cash-on-cash return and cash flow, with a worked Houston example using real Texas tax math.',
     'keyword'     => 'how to analyze a rental property',
     'category'    => 'investing',
     'date'        => '2026-10-14',

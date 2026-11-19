@@ -24,7 +24,7 @@ $schema = [[
 ]];
 if (!empty($post['faq'])) $schema[] = schema_faq($post['faq']);
 page_head([
-    'title' => $post['seo_title'] . ' | ' . cfg('short'),
+    'title' => brand_title($post['seo_title']),
     'og_title' => $post['title'],
     'description' => $post['description'],
     'path' => $post['url'],

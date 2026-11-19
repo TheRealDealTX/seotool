@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Selling a House As-Is in Texas: What It Means and When It Pays Off',
-    'seo_title'   => 'Selling a House As-Is in Texas: Rules, Risks and Math',
-    'description' => 'Selling a house as is in Texas? Learn what as-is means legally, how the TREC contract and option period work, what you still disclose, and how to do the math.',
+    'seo_title'   => 'Selling a House As-Is in Texas: Rules & Math',
+    'description' => 'Selling a house as-is in Texas? What it means legally, how the TREC contract and option period work, what you must still disclose, and the math.',
     'keyword'     => 'selling a house as is in texas',
     'category'    => 'selling',
     'date'        => '2026-11-11',

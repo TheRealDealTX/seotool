@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'How to Sell a Fire Damaged House in Texas: Repair, List or Sell As-Is',
-    'seo_title'   => 'Sell a Fire Damaged House in Texas: Your 3 Options',
-    'description' => 'Thinking about how to sell a fire damaged house in Texas? Compare repairing, listing as-is and cash offers, plus insurance, lender and disclosure rules.',
+    'seo_title'   => 'How to Sell a Fire Damaged House in Texas',
+    'description' => 'How to sell a fire damaged house in Texas: compare repairing, listing as-is and cash offers, plus the insurance, lender and disclosure rules.',
     'keyword'     => 'sell a fire damaged house',
     'category'    => 'selling',
     'date'        => '2026-11-04',

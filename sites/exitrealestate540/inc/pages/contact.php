@@ -38,8 +38,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     }
 }
 page_head([
-    'title' => 'Contact Exit Real Estate 540',
-    'description' => 'Questions, corrections, partnership or guest post ideas? Contact the Exit Real Estate 540 editorial team.',
+    'title' => brand_title('Contact Exit Real Estate 540'),
+    'description' => 'Questions, corrections, partnership or guest post ideas? Send the Exit Real Estate 540 editorial team a message and we will get back to you.',
     'path' => '/contact/',
     'crumbs' => $crumbs,
     'schema' => [['@type' => 'ContactPage', 'url' => abs_url('/contact/'), 'name' => 'Contact Exit Real Estate 540']],

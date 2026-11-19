@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'First Time Home Buyer Texas Guide: State Programs, Loans and Every Step to Closing',
-    'seo_title'   => 'First Time Home Buyer Texas: Programs, Loans & Steps',
-    'description' => 'First time home buyer in Texas? Compare TSAHC and TDHCA assistance, FHA, VA, USDA and conventional loans, the option period and real costs. Start here.',
+    'seo_title'   => 'First Time Home Buyer Texas: Programs & Steps',
+    'description' => 'First time home buyer in Texas? Compare TSAHC and TDHCA help, FHA, VA, USDA and conventional loans, the option period and the real costs.',
     'keyword'     => 'first time home buyer texas',
     'category'    => 'buying',
     'date'        => '2026-10-21',

@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Best Houston Suburbs for Families: An Honest Guide to 9 Top Areas',
-    'seo_title'   => 'Best Houston Suburbs for Families: 9 Areas Compared',
-    'description' => 'Comparing the best Houston suburbs for families: Katy, Sugar Land, The Woodlands, Pearland and more, with school districts, commutes and flood risks to check.',
+    'seo_title'   => 'Best Houston Suburbs for Families, Compared',
+    'description' => 'The best Houston suburbs for families: Katy, Sugar Land, The Woodlands, Pearland and more, with school districts, commutes and flood risk.',
     'keyword'     => 'best houston suburbs for families',
     'category'    => 'houston',
     'date'        => '2026-11-04',

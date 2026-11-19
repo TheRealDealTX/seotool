@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'How to File a Hurricane Insurance Claim in Texas: Wind, Flood, Deadlines and Your Rights',
-    'seo_title'   => 'Hurricane Insurance Claim Texas: Deadlines & Rights',
-    'description' => 'Filing a hurricane insurance claim in Texas? Learn wind vs flood, TWIA, NFIP, percentage deductibles, Chapter 542 deadlines and notice rules before you sue.',
+    'seo_title'   => 'Texas Hurricane Insurance Claims: Your Rights',
+    'description' => 'Filing a hurricane insurance claim in Texas? Wind vs flood, TWIA, NFIP, percentage deductibles, Chapter 542 deadlines and notice rules.',
     'keyword'     => 'hurricane insurance claim texas',
     'category'    => 'insurance-claims',
     'date'        => '2026-10-28',

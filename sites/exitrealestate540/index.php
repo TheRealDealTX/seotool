@@ -46,7 +46,7 @@ if ($trim !== '' && isset($legacy[$trim])) {
 }
 
 // Trailing slash on page routes.
-if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('#\.[a-z0-9]{2,5}$#i', $path)) {
+if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('#\.[a-z0-9]{2,12}$#i', $path)) {
     redirect($path . '/' . (($q = parse_url($uri, PHP_URL_QUERY)) ? '?' . $q : ''));
 }
 
@@ -87,6 +87,11 @@ switch (true) {
     case $path === '/sitemap.xml':
         require ROOT . '/inc/pages/sitemap.php';
         break;
+    case $path === '/site.webmanifest':
+        header('Content-Type: application/manifest+json; charset=utf-8');
+        header('Cache-Control: public, max-age=86400');
+        readfile(ROOT . '/inc/site.webmanifest');
+        exit;
     case $path === '/feed.xml':
         require ROOT . '/inc/pages/feed.php';
         break;

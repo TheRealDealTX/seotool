@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'House Hacking in Texas: How to Buy a Duplex, Fourplex or ADU and Let Rent Pay the Mortgage',
-    'seo_title'   => 'House Hacking in Texas: Duplexes, FHA and ADUs',
-    'description' => 'House hacking in Texas explained: FHA 3.5% down on a duplex or fourplex, ADUs, renting rooms, homestead rules and a worked Houston example with real numbers.',
+    'seo_title'   => 'House Hacking in Texas: Duplexes, FHA & ADUs',
+    'description' => 'House hacking in Texas: FHA 3.5% down on a duplex or fourplex, ADUs, renting rooms, homestead rules and a worked Houston example with numbers.',
     'keyword'     => 'house hacking',
     'category'    => 'investing',
     'date'        => '2026-10-28',

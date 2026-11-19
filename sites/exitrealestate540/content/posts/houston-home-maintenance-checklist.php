@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Houston Home Maintenance Checklist: A Season-by-Season Guide',
-    'seo_title'   => 'Home Maintenance Checklist for Houston: Season by Season',
-    'description' => 'A Houston home maintenance checklist for every season: humidity and mold, hurricane prep, freeze protection, foundation watering, HVAC, gutters and termites.',
+    'seo_title'   => 'Houston Home Maintenance Checklist by Season',
+    'description' => 'A Houston home maintenance checklist for every season: humidity and mold, hurricane prep, freezes, foundation watering, HVAC, gutters, termites.',
     'keyword'     => 'home maintenance checklist',
     'category'    => 'homeownership',
     'date'        => '2026-10-28',

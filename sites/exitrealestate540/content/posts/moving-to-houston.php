@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Moving to Houston: What to Know Before You Relocate (and a Checklist)',
-    'seo_title'   => 'Moving to Houston: What to Know Before You Relocate',
-    'description' => 'Moving to Houston? Get the honest picture on taxes, no zoning, heat, hurricanes, flooding, traffic and choosing electricity, plus a relocation checklist.',
+    'seo_title'   => 'Moving to Houston: What to Know Before You Go',
+    'description' => 'Moving to Houston? The honest truth on property taxes, no zoning, heat, hurricanes, flooding, traffic and electricity, plus a moving checklist.',
     'keyword'     => 'moving to houston',
     'category'    => 'houston',
     'date'        => '2026-11-14',

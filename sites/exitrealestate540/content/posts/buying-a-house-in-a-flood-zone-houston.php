@@ -1,8 +1,8 @@
 <?php defined('ERE') or exit;
 return [
     'title'       => 'Buying a House in a Flood Zone in Houston: Maps, Disclosures and Flood Insurance',
-    'seo_title'   => 'Buying a House in a Flood Zone in Houston: Buyer Guide',
-    'description' => 'Buying a house in a flood zone in Houston? Read FEMA maps and Texas seller flood disclosures, compare NFIP vs private flood insurance and avoid surprises.',
+    'seo_title'   => 'Buying a House in a Houston Flood Zone',
+    'description' => 'Buying a house in a Houston flood zone? Read FEMA maps and seller flood disclosures, compare NFIP vs private flood insurance and avoid surprises.',
     'keyword'     => 'buying a house in a flood zone houston',
     'category'    => 'buying',
     'date'        => '2026-11-11',

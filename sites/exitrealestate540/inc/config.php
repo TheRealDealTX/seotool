@@ -25,18 +25,18 @@ return [
         'selling' => [
             'name' => 'Home Selling',
             'title' => 'Selling a House in Texas',
-            'description' => 'How to sell a Texas home for the most money: pricing, disclosures, as-is sales and selling distressed or damaged property.',
+            'description' => 'How to sell a Texas home for the most money: pricing, disclosures, as-is sales, and selling distressed or fire-damaged property.',
             'icon' => 'tag',
         ],
         'investing' => [
             'name' => 'Investing',
-            'title' => 'Real Estate Investing Guides',
-            'description' => 'Rental analysis, house hacking, BRRRR and the numbers that matter for real estate investors in Houston and Texas.',
+            'title' => 'Real Estate Investing Guides (Texas)',
+            'description' => 'Rental analysis, house hacking, BRRRR and the numbers that matter for real estate investors in Houston and across Texas.',
             'icon' => 'chart',
         ],
         'homeownership' => [
             'name' => 'Homeownership',
-            'title' => 'Homeownership, Taxes & Maintenance',
+            'title' => 'Homeownership, Property Taxes & Upkeep',
             'description' => 'Keep your Texas home in shape and your property taxes in check: homestead exemptions, tax protests and seasonal maintenance.',
             'icon' => 'home',
         ],
@@ -48,7 +48,7 @@ return [
         ],
         'houston' => [
             'name' => 'Houston Living',
-            'title' => 'Living in Houston',
+            'title' => 'Living in Houston: Suburbs & Relocation',
             'description' => 'Neighborhood and suburb guides, relocation advice and local know-how for anyone moving to or living in the Houston area.',
             'icon' => 'pin',
         ],
