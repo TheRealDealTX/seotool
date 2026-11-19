@@ -177,6 +177,15 @@ function page_start(array $m): void
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TRGX9BG2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+</script>
+<!-- End Google Tag Manager -->
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($desc) ?>">
 <meta name="robots" content="<?= e($robots) ?>">
@@ -207,6 +216,7 @@ function page_start(array $m): void
 <?php endforeach; ?>
 </head>
 <body class="<?= e($m['body_class'] ?? '') ?>">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRGX9BG2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap site-header__inner">
