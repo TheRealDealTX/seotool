@@ -32,7 +32,7 @@ ok=0; fail=0
 while IFS= read -r f; do
   rel=${f#./}
   if put "$f" "$rel"; then ok=$((ok+1)); else fail=$((fail+1)); fi
-done < <(find . -type f ! -path './rollback/*' ! -name deploy.sh ! -name README.md ! -path './data/*.php' ! -path './wp-loader/*' \
+done < <(find . -type f ! -path './rollback/*' ! -name deploy.sh ! -name README.md ! -path './data/*.php' ! -path './wp-loader/*' ! -path './inc/site.webmanifest.bak' \
           ! -path './.htaccess' | sort)
 if [ "$fail" -eq 0 ]; then
   put .htaccess .htaccess && ok=$((ok+1)) || fail=$((fail+1))

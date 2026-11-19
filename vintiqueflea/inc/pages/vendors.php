@@ -17,7 +17,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 page_start([
     'title' => 'Become a Vendor: Sell Vintage in Houston | Vintique Flea',
-    'description' => 'Apply for a booth at Vintique Flea, a curated indoor vintage market in Houston. We welcome vintage dealers, salvage pros, makers and local food trucks.',
+    'description' => 'Apply for a booth at Vintique Flea, Houston\'s curated indoor vintage market. We welcome vintage dealers, salvage pros, makers and food trucks.',
     'path' => '/vendors/',
     'image' => 'vendors',
 ]);

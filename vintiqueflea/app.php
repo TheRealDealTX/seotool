@@ -12,7 +12,7 @@ if (PHP_SAPI === 'cli-server') {
     }
 }
 
-const ASSET_V = '20261119';
+const ASSET_V = '20261119c';
 define('INC', __DIR__ . '/inc');
 define('DATA_DIR', __DIR__ . '/data');
 
@@ -41,9 +41,11 @@ function render(string $page, array $vars = [], int $status = 200): never
 {
     http_response_code($status);
     if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'GET') {
-        header('Cache-Control: public, max-age=1800, s-maxage=1800');
+        header('Cache-Control: public, max-age=300, s-maxage=300');
+        header('X-LiteSpeed-Cache-Control: public,max-age=300');
     } else {
         header('Cache-Control: no-store');
+        header('X-LiteSpeed-Cache-Control: no-cache');
     }
     header('Content-Type: text/html; charset=UTF-8');
     header('X-Content-Type-Options: nosniff');
@@ -84,6 +86,14 @@ if (in_array($key, LEGACY_GONE, true) || preg_match(LEGACY_GONE_PATTERN, $key)) 
 // /some-old-post/feed/, /some-old-post/amp/, /page/2/ etc.
 if (preg_match('~^(.+?)/(feed|amp|embed|trackback)$~', $key, $mm)) {
     redirect(isset(LEGACY_REDIRECTS[$mm[1]]) ? LEGACY_REDIRECTS[$mm[1]] : '/' . $mm[1] . '/');
+}
+
+// --- Web app manifest (served here so it gets the right MIME type on nginx) ---
+if ($key === 'site.webmanifest') {
+    header('Content-Type: application/manifest+json; charset=UTF-8');
+    header('Cache-Control: public, max-age=86400');
+    readfile(INC . '/site.webmanifest');
+    exit;
 }
 
 // --- Canonical trailing slash for page URLs ---

@@ -2,7 +2,7 @@
 defined('INC') || exit;
 return [
   'title' => 'Things to Do in Houston This Weekend | Vintique Flea',
-  'description' => 'Plan a Houston weekend: markets, the Washington Avenue Arts District, parks, museums, food trucks, rainy-day ideas and kid-friendly picks for any season.',
+  'description' => 'Plan a Houston weekend: markets, the Washington Avenue Arts District, parks, museums, food trucks, rainy-day ideas and kid-friendly picks.',
   'h1' => 'Things to Do in Houston This Weekend: An Evergreen Planner',
   'keyword' => 'things to do in houston this weekend',
   'category' => 'Houston',

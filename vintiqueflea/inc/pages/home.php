@@ -2,7 +2,7 @@
 defined('INC') || exit;
 page_start([
     'title' => 'Vintique Flea | Houston Vintage Market & Curated Finds',
-    'description' => "Houston's curated indoor vintage market at Silver Street Studios: mid-century modern, vintage clothing, architectural salvage, rustic decor and food trucks.",
+    'description' => "Houston's curated indoor vintage market at Silver Street Studios: mid-century modern, vintage clothing, salvage, rustic decor and food trucks.",
     'path' => '/',
     'body_class' => 'home',
     'image' => 'hero',

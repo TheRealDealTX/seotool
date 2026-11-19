@@ -2,7 +2,7 @@
 defined('INC') || exit;
 return [
   'title' => 'Washington Avenue Arts District Guide | Vintique Flea',
-  'description' => 'Visit the Washington Avenue Arts District: artist studios, open studio days, Silver Street Studios, parking tips and how to pair a visit with Vintique Flea.',
+  'description' => 'Visit Houston\'s Washington Avenue Arts District: artist studios, open studio days, Silver Street Studios, parking tips and Vintique Flea.',
   'h1' => 'A Local\'s Guide to the Washington Avenue Arts District',
   'keyword' => 'washington avenue arts district',
   'category' => 'Houston',

@@ -1,8 +1,8 @@
 <?php
 defined('INC') || exit;
 page_start([
-    'title' => 'About Vintique Flea | Curated Indoor Vintage Market in Houston',
-    'description' => 'Vintique Flea was founded by the creators of Rice Village Flea: a curated indoor market of vintage, mid-century, salvage and decor at Silver Street Studios.',
+    'title' => 'About Vintique Flea | Houston Indoor Vintage Market',
+    'description' => 'Founded by the creators of Rice Village Flea, Vintique Flea is a curated indoor market of vintage, mid-century and salvage finds in Houston.',
     'path' => '/about/',
     'image' => 'antiques-collectibles',
 ]);

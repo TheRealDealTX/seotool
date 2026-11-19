@@ -2,7 +2,7 @@
 defined('INC') || exit;
 return [
   'title' => 'How to Identify Mid Century Modern Furniture Like a Pro',
-  'description' => 'How to identify mid century modern furniture: check joinery, woods like teak, walnut and rosewood, labels, tapered legs and reproductions vs originals.',
+  'description' => 'How to identify mid century modern furniture: joinery, teak, walnut and rosewood, maker labels, tapered legs and how to spot reproductions.',
   'h1' => 'How to Identify Mid Century Modern Furniture',
   'keyword' => 'how to identify mid century modern furniture',
   'category' => 'Shopping Tips',

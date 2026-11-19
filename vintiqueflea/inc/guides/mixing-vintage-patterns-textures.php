@@ -2,7 +2,7 @@
 defined('INC') || exit;
 return [
   'title' => 'Mixing Patterns and Textures in Small Vintage Spaces',
-  'description' => 'Mixing patterns and textures in a small space: rules for scale, color and contrast so your vintage rugs, textiles and furniture feel layered, not chaotic.',
+  'description' => 'Mixing patterns and textures in a small space: rules for scale, color and contrast so vintage rugs, textiles and furniture feel layered.',
   'h1' => 'Mixing Patterns and Textures With Vintage Finds in Small Spaces',
   'keyword' => 'mixing patterns and textures',
   'category' => 'Decorating',

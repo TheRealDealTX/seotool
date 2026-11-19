@@ -1,6 +1,6 @@
 <?php
 defined('INC') || exit;
-page_start(['title' => 'Photo Credits | Vintique Flea', 'description' => 'Credits and licenses for the photographs used on vintiqueflea.com.', 'path' => '/photo-credits/']);
+page_start(['title' => 'Photo Credits | Vintique Flea', 'description' => 'Credits and licenses for the public-domain and CC0 photographs used across the Vintique Flea website.', 'path' => '/photo-credits/']);
 $labels = ['cc0' => 'CC0 1.0 (public domain dedication)', 'pdm' => 'Public Domain Mark'];
 ?>
 <div class="wrap narrow">

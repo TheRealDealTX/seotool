@@ -2,7 +2,7 @@
 defined('INC') || exit;
 return [
   'title' => 'Flea Market Tips: How to Shop Like a Pro | Vintique Flea',
-  'description' => 'Flea market tips from prep to pickup: what to bring, when to arrive, polite haggling, how to inspect vintage pieces and how to get big finds home safely.',
+  'description' => 'Flea market tips from prep to pickup: what to bring, when to arrive, polite haggling, inspecting vintage pieces and getting big finds home.',
   'h1' => 'Flea Market Tips: How to Shop a Flea Market Like a Pro',
   'keyword' => 'flea market tips',
   'category' => 'Shopping Tips',

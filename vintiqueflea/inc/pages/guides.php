@@ -2,8 +2,8 @@
 defined('INC') || exit;
 /** @var array $guides */
 page_start([
-    'title' => 'Vintage Shopping, Decorating & Houston Guides | Vintique Flea',
-    'description' => 'Guides for vintage lovers: Houston vintage shopping, flea market tips, identifying mid-century modern furniture, decorating with salvage and more.',
+    'title' => 'Vintage Shopping & Decorating Guides | Vintique Flea',
+    'description' => 'Guides for vintage lovers: Houston vintage shopping, flea market tips, spotting mid-century modern furniture and decorating with salvage.',
     'path' => '/guides/',
 ]);
 $byCat = [];

@@ -15,7 +15,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 page_start([
     'title' => 'Contact Vintique Flea | Houston Vintage Market',
-    'description' => 'Contact Vintique Flea, the curated indoor vintage market at Silver Street Studios in Houston. Questions about market dates, vendors or partnerships.',
+    'description' => 'Contact Vintique Flea, the curated indoor vintage market at Silver Street Studios in Houston, about market dates, vendor booths or partnerships.',
     'path' => '/contact/',
 ]);
 add_schema(['@type' => 'ContactPage', 'name' => 'Contact Vintique Flea', 'url' => abs_url('/contact/')]);
