@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /subscribe/
+Disallow: /inc/
+Disallow: /data/
+
+Sitemap: https://vintiqueflea.com/sitemap.xml

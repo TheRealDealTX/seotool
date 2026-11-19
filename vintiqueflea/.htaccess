@@ -1,0 +1,46 @@
+# Vintique Flea — custom PHP site
+DirectoryIndex index.php
+Options -Indexes
+ErrorDocument 404 /index.php
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# www -> apex
+RewriteCond %{HTTP_HOST} ^www\.vintiqueflea\.com$ [NC]
+RewriteRule ^ https://vintiqueflea.com%{REQUEST_URI} [R=301,L]
+
+# Private code + data directories
+RewriteRule ^(inc|data)(/|$) - [F,L]
+RewriteRule (^|/)\. - [F,L]
+
+# Leftover WordPress files/paths: never execute, let the router answer (410/301)
+RewriteRule ^(wp-.*|xmlrpc\.php|readme\.html|license\.txt|wp-sitemap.*)$ index.php [L]
+
+# Everything that isn't a real file goes through the front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml application/json
+</IfModule>
