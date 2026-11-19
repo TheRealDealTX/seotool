@@ -58,7 +58,7 @@ HTML],
 <h2>Server logs</h2>
 <p>Like most websites, our hosting provider automatically records standard request data (IP address, browser type, pages requested, date and time) for security and performance. These logs are retained only as long as needed for those purposes.</p>
 <h2>Cookies and third parties</h2>
-<p>We do not set advertising cookies. Pages load fonts from Google Fonts, which may receive your IP address. When you click an Amazon link you leave our site, and Amazon's privacy notice and cookies apply; Amazon uses cookies to attribute qualifying purchases to our affiliate account.</p>
+<p>We use Google Tag Manager to load Google services that help us understand how visitors use the site (for example, which pages are read and how people arrive). These services may set cookies and receive information such as your IP address, browser and the pages you visit; see Google's privacy policy at policies.google.com/privacy for how Google uses that data. Pages also load fonts from Google Fonts, which may receive your IP address. When you click an Amazon link you leave our site, and Amazon's privacy notice and cookies apply; Amazon uses cookies to attribute qualifying purchases to our affiliate account.</p>
 <h2>Children</h2>
 <p>This site is intended for adults and is not directed to children under 13. We do not knowingly collect information from children.</p>
 <h2>Your choices</h2>

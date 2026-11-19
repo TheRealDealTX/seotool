@@ -30,6 +30,13 @@ function page_head(array $m): void
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (GTM-PNR2T89J) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PNR2T89J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['description']) ?>">
