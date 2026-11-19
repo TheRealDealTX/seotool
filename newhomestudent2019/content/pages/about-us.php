@@ -6,6 +6,8 @@ return [
     'description' => 'Meet New Home Investing Knowledge: a Texas-based training platform helping people design, build and invest in new homes — with or without a general contractor.',
     'lead' => 'We help people realize one of the biggest goals of their lives: designing and building a home they love.',
     'schema' => [['@type' => 'AboutPage', 'name' => 'About New Home Investing Knowledge', 'url' => 'https://newhomestudent2019.com/about-us/']],
+    'image' => '/assets/img/photos/about-us.webp',
+    'image_alt' => 'Builder in a hard hat cutting lumber in front of a two-story house being framed',
     'body' => <<<'HTML'
 <h2>Our story</h2>
 <p>Our business exists to help people realize their aspirations. Over more than a decade in and around Texas home construction, we've been trusted to help with homes of every size and style — and it's an honor to be part of one of the most significant decisions people make.</p>

@@ -145,6 +145,9 @@ function view_page(string $slug, array $pg): never {
     $crumbs = [['Home', '/'], [$pg['crumb'] ?? $pg['title'], '/' . $slug . '/']];
     $h = page_hero($pg['title'], $pg['lead'] ?? '', $crumbs);
     $body = render_body($pg['body']);
+    if (!empty($pg['image'])) {
+        $body = '<figure class="post-figure"><img src="' . e($pg['image']) . '" alt="' . e($pg['image_alt'] ?? '') . '" width="1024" height="576" fetchpriority="high"></figure>' . $body;
+    }
     if (!empty($pg['wide'])) {
         $h .= $body;
     } else {
@@ -155,6 +158,7 @@ function view_page(string $slug, array $pg): never {
         'title' => $pg['seo_title'],
         'description' => $pg['description'],
         'path' => '/' . $slug . '/',
+        'image' => $pg['image'] ?? '/assets/img/og-default.jpg',
         'body' => $h,
         'noindex' => $pg['noindex'] ?? false,
         'schema' => array_merge([breadcrumb_schema($crumbs)], $pg['schema'] ?? []),

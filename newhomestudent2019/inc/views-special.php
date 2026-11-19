@@ -29,19 +29,10 @@ function view_home(): never {
         <li><?= icon('check') ?> Launch your own home construction business</li>
       </ul>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 420 340" class="blueprint">
-        <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-opacity=".18"/></pattern></defs>
-        <rect width="420" height="340" rx="18" fill="url(#grid)"/>
-        <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
-          <path d="M60 170 210 60l150 110"/><path d="M85 152v128h250V152"/>
-          <rect x="120" y="190" width="60" height="50"/><rect x="240" y="190" width="60" height="90"/>
-          <path d="M150 190v50M120 215h60"/><path d="M300 60v40h-30V82"/>
-        </g>
-        <g stroke="currentColor" stroke-opacity=".6" stroke-dasharray="6 6" fill="none"><path d="M60 300h300"/><path d="M60 292v16M360 292v16"/></g>
-        <text x="210" y="326" text-anchor="middle" fill="currentColor" font-size="13" font-family="Inter, sans-serif" opacity=".75">YOUR DREAM HOME · SCALE 1/4" = 1'</text>
-      </svg>
-    </div>
+    <figure class="hero-photo">
+      <img src="/assets/img/photos/home-hero.webp" alt="White farmhouse-style new home with a wraparound front porch and green lawn" width="1024" height="576" fetchpriority="high">
+      <figcaption><?= icon('house') ?> Your dream home, built right</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -68,6 +59,8 @@ function view_home(): never {
       <p>Becoming an owner-builder means taking on that management role yourself. You don't need a construction degree. You need a plan, a budget, good subs and the right checklists — which is exactly what we teach.</p>
       <a class="btn" href="/free-training/">Learn the 6 keys in our free course</a>
     </div>
+    <div>
+    <img class="rounded-photo" src="/assets/img/photos/home-owner-builder.webp" alt="New wood-frame house under construction with sheathing and roof trusses in place" width="1024" height="576" loading="lazy">
     <ol class="steps">
       <li><strong>Plan &amp; design</strong> — pick a lot, a floor plan and a budget you can live with.</li>
       <li><strong>Finance &amp; permit</strong> — line up a construction loan and get your plans approved.</li>
@@ -75,6 +68,7 @@ function view_home(): never {
       <li><strong>Build &amp; inspect</strong> — manage each phase and pass every inspection.</li>
       <li><strong>Move in</strong> — complete the punch list and protect your investment.</li>
     </ol>
+    </div>
   </div>
 </section>
 
@@ -121,6 +115,7 @@ function view_home(): never {
         'title' => 'Build Your Dream Home: Owner-Builder Training & Resources',
         'description' => 'Free owner-builder training, guides and recommended tools to help you design and build your dream home in Texas — with or without a general contractor.',
         'path' => '/',
+        'image' => '/assets/img/photos/home-hero.webp',
         'body' => $h,
         'schema' => [['@type' => 'WebPage', '@id' => url('/#webpage'), 'url' => url('/'), 'name' => SITE['name'], 'isPartOf' => ['@id' => url('/#website')], 'about' => ['@id' => url('/#organization')]]],
     ]);
@@ -229,6 +224,7 @@ function view_free_training(): never {
 </div></section>
 
 <div class="wrap post-layout"><div class="prose">
+  <figure class="post-figure"><img src="/assets/img/photos/free-training.webp" alt="House construction plans held up inside a newly framed home" width="1024" height="576" loading="lazy"></figure>
   <h2>The secret of the owner-builder</h2>
   <p>The majority of people hire a general contractor to build their home. It looks like the simple, "safe" option — but ask anyone who's been through it. Too many people end up with a house that doesn't have the look they wanted, came in over budget and finished late.</p>
   <p>Hiring a general contractor isn't the only option, and it doesn't take a degree or years of construction experience to do it differently. <strong>"Owner-builder"</strong> simply means acting as your own general contractor.</p>
@@ -252,6 +248,7 @@ function view_free_training(): never {
         'title' => 'Free Owner-Builder Training: Build Your Own Home for Less',
         'description' => 'Free mini-course: learn the 6 keys to designing and building your own home as an owner-builder — save the general contractor markup without construction experience.',
         'path' => '/free-training/',
+        'image' => '/assets/img/photos/free-training.webp',
         'body' => $h,
         'schema' => [breadcrumb_schema($crumbs), [
             '@type' => 'Course', 'name' => 'How Can Anyone Design & Develop Their Own Home?',

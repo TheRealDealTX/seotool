@@ -5,6 +5,8 @@ return [
     'seo_title' => 'Build Your Own Home Without a General Contractor',
     'description' => 'Learn how to build your own house as an owner-builder: what a general contractor really does, how much you can save, the steps involved, and the resources to start.',
     'lead' => 'A home is likely the biggest investment you\'ll ever make. The best builder for your dream home may be closer than you think — it could be you.',
+    'image' => '/assets/img/photos/build-a-home-yourself.webp',
+    'image_alt' => 'Framer working on a new house with construction plans in the foreground',
     'body' => <<<'HTML'
 <p>Building a home is an essential part of life for many years to come. You want style and quality while staying within budget — which is why it's critical to have someone in charge who truly understands your vision. As an <strong>owner-builder</strong>, that person is you.</p>
 <h2>What "building it yourself" really means</h2>
