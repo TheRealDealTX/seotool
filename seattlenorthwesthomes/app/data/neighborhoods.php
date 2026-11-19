@@ -1,0 +1,163 @@
+<?php defined('SNW') || (http_response_code(404) && exit);
+/*
+ * Neighborhood guides: /neighborhoods/<slug>/
+ * 'intro' is the lead paragraph; 'body' is a list of [heading, paragraph] pairs.
+ */
+return [
+    'ballard' => [
+        'name'  => 'Ballard',
+        'area'  => 'Northwest Seattle',
+        'zip'   => '98107, 98117',
+        'image' => 'craftsman-bungalow-porch',
+        'intro' => 'Ballard blends its Nordic fishing-village roots with one of Seattle\'s liveliest dining and brewery scenes. Buyers find early-1900s Craftsman bungalows on quiet residential streets, newer townhomes near Market Street and condos along the Ballard Avenue historic district.',
+        'highlights' => ['Ballard Locks and the fish ladder', 'Sunday Ballard Farmers Market', 'Golden Gardens Park beach', 'Brewery district and Ballard Avenue dining'],
+        'body' => [
+            ['Housing in Ballard', 'West of 15th Avenue NW the streets are lined with Craftsman and Tudor-style homes, many with finished basements and detached garages that make good backyard-cottage candidates. Closer to the commercial core, three- and four-story townhomes and mid-rise condos give buyers a lower-maintenance option within walking distance of shops and restaurants.'],
+            ['Getting around', 'Ballard sits a short drive from downtown via the Ballard Bridge or Aurora Avenue, with RapidRide bus service along 15th Avenue NW. The Burke-Gilman Trail runs along the ship canal for cyclists heading toward Fremont and the University District.'],
+            ['Who loves it here', 'Ballard suits buyers who want neighborhood character with real walkability — young professionals, growing families who want a yard near parks, and downsizers who want a condo close to the water.'],
+        ],
+    ],
+    'queen-anne' => [
+        'name'  => 'Queen Anne',
+        'area'  => 'North of Downtown',
+        'zip'   => '98109, 98119',
+        'image' => 'brick-traditional-home',
+        'intro' => 'Perched on one of Seattle\'s tallest hills, Queen Anne is known for postcard skyline views from Kerry Park, grand early-1900s homes and a walkable village center along Queen Anne Avenue North.',
+        'highlights' => ['Kerry Park skyline and Mount Rainier views', 'Queen Anne Avenue shops and cafés', 'Close to Seattle Center and downtown', 'Historic Victorian and Craftsman homes'],
+        'body' => [
+            ['Housing in Queen Anne', 'Upper Queen Anne is a mix of stately Victorians, Craftsmans and mid-century homes, many positioned for city, Sound or mountain views. Lower Queen Anne, near Seattle Center, leans toward condos and apartment-style living with quick access to Climate Pledge Arena and downtown.'],
+            ['Getting around', 'Downtown and South Lake Union are minutes away by bus, bike or car, and the Elliott Avenue corridor connects quickly to Interbay and Ballard.'],
+            ['Who loves it here', 'Queen Anne appeals to buyers who want a classic, established neighborhood with views and a short commute — and who are comfortable with the hills.'],
+        ],
+    ],
+    'capitol-hill' => [
+        'name'  => 'Capitol Hill',
+        'area'  => 'Central Seattle',
+        'zip'   => '98102, 98112, 98122',
+        'image' => 'loft-condo-living-room',
+        'intro' => 'Capitol Hill is Seattle\'s energetic urban core east of downtown — home to the Pike/Pine corridor, Volunteer Park, Cal Anderson Park and a Link light rail station that makes car-free living realistic.',
+        'highlights' => ['Capitol Hill light rail station', 'Volunteer Park and conservatory', 'Pike/Pine restaurants and nightlife', 'Mix of condos, brick apartments and classic homes'],
+        'body' => [
+            ['Housing on Capitol Hill', 'Condos dominate the busier western slope, from vintage brick buildings to new construction with rooftop decks. North Capitol Hill near Volunteer Park holds some of the city\'s most impressive early-1900s homes on tree-lined streets.'],
+            ['Getting around', 'Light rail reaches downtown, the University of Washington and Sea-Tac Airport, and the First Hill Streetcar runs along Broadway. Many residents walk to work downtown.'],
+            ['Who loves it here', 'Capitol Hill suits buyers who prioritize walkability, transit, dining and culture — first-time condo buyers in particular.'],
+        ],
+    ],
+    'fremont' => [
+        'name'  => 'Fremont',
+        'area'  => 'North Seattle',
+        'zip'   => '98103',
+        'image' => 'modern-wood-townhome',
+        'intro' => 'Self-declared "Center of the Universe," Fremont is quirky, creative and compact, with the Fremont Troll, a Sunday market, waterfront trails and a strong mix of townhomes and hillside houses.',
+        'highlights' => ['Fremont Troll and public art', 'Burke-Gilman Trail along the ship canal', 'Fremont Sunday Market', 'Tech offices and cafés within walking distance'],
+        'body' => [
+            ['Housing in Fremont', 'Expect modern townhomes and small-lot homes near the commercial core, with Craftsman and Victorian houses climbing the hill toward Phinney Ridge. Many homes catch views of Lake Union or the Olympic Mountains.'],
+            ['Getting around', 'The Fremont Bridge links directly to Queen Anne and South Lake Union, Aurora Avenue is close by, and the Burke-Gilman makes bike commuting easy.'],
+            ['Who loves it here', 'Fremont is a natural fit for buyers who work in tech hubs nearby and want an artsy, walkable neighborhood with a little personality.'],
+        ],
+    ],
+    'wallingford' => [
+        'name'  => 'Wallingford',
+        'area'  => 'North Seattle',
+        'zip'   => '98103',
+        'image' => 'farmhouse-wraparound-porch',
+        'intro' => 'Wallingford is classic North Seattle: blocks of well-kept Craftsman homes with front porches, the N 45th Street business district and Gas Works Park on the north shore of Lake Union.',
+        'highlights' => ['Gas Works Park and Lake Union views', 'N 45th Street shops and restaurants', 'Craftsman homes with front porches', 'Between Fremont, Green Lake and the U District'],
+        'body' => [
+            ['Housing in Wallingford', 'Single-family Craftsman and four-square homes make up most of the neighborhood, many with basements, mature gardens and alley access. Townhomes and small condo buildings cluster along the arterials.'],
+            ['Getting around', 'I-5 is close, buses run frequently along 45th, and the U District light rail station is a short ride or bike away.'],
+            ['Who loves it here', 'Families and buyers who want a quiet, established single-family neighborhood with walkable amenities and quick access to downtown.'],
+        ],
+    ],
+    'green-lake' => [
+        'name'  => 'Green Lake',
+        'area'  => 'North Seattle',
+        'zip'   => '98103, 98115',
+        'image' => 'modern-wood-accent-home',
+        'intro' => 'Life in Green Lake centers on the lake itself — a roughly 2.8-mile loop busy with walkers, runners and paddleboarders — surrounded by charming homes and an easy-going village vibe.',
+        'highlights' => ['2.8-mile path around Green Lake', 'Swimming beaches and boat rentals', 'Close to Roosevelt light rail station', 'Woodland Park and the zoo nearby'],
+        'body' => [
+            ['Housing in Green Lake', 'Homes range from 1920s Craftsmans and Tudors to sleek modern rebuilds, plus condos and townhomes close to the lake and along Roosevelt Way.'],
+            ['Getting around', 'The Roosevelt light rail station sits just east of the lake, and I-5 and Aurora are both minutes away.'],
+            ['Who loves it here', 'Active buyers who want daily outdoor time without leaving the city, and families who like the parks and play areas.'],
+        ],
+    ],
+    'greenwood' => [
+        'name'  => 'Greenwood',
+        'area'  => 'North Seattle',
+        'zip'   => '98103, 98117',
+        'image' => 'white-cottage-red-roof',
+        'intro' => 'Greenwood offers a relaxed, neighborly feel with a busy strip of local shops along Greenwood Avenue North and a housing stock that is often a bit more attainable than nearby Ballard or Fremont.',
+        'highlights' => ['Greenwood Avenue local shops', 'Near Phinney Ridge and Woodland Park Zoo', 'Mix of bungalows and new townhomes', 'Good value for North Seattle'],
+        'body' => [
+            ['Housing in Greenwood', 'Expect 1920s–1950s bungalows and cottages on standard city lots, with a growing number of townhomes and backyard cottages adding density along the arterials.'],
+            ['Getting around', 'Frequent buses connect to downtown and the Northgate light rail station, and Aurora Avenue provides quick driving access.'],
+            ['Who loves it here', 'First-time buyers and families who want a yard and a real neighborhood main street without stretching to Ballard prices.'],
+        ],
+    ],
+    'west-seattle' => [
+        'name'  => 'West Seattle',
+        'area'  => 'Southwest Seattle',
+        'zip'   => '98116, 98126, 98136',
+        'image' => 'modern-dark-home-trees',
+        'intro' => 'West Seattle feels like a beach town inside the city, with Alki Beach, Lincoln Park, the Junction business district and a water taxi to downtown — plus sweeping Sound and Olympic views from many homes.',
+        'highlights' => ['Alki Beach and the skyline view', 'Lincoln Park trails and saltwater pool', 'West Seattle Junction shops', 'King County Water Taxi to downtown'],
+        'body' => [
+            ['Housing in West Seattle', 'The peninsula offers everything from Alki condos and view homes on the bluffs to mid-century ramblers and Craftsmans in Admiral, Fauntleroy and the Junction.'],
+            ['Getting around', 'The West Seattle Bridge connects to I-5 and SR-99, RapidRide C Line serves the Junction, and the water taxi from Seacrest Park is a scenic commute downtown.'],
+            ['Who loves it here', 'Buyers who want more space, beach access and a strong sense of community, and who don\'t mind a bridge commute.'],
+        ],
+    ],
+    'magnolia' => [
+        'name'  => 'Magnolia',
+        'area'  => 'Northwest Seattle',
+        'zip'   => '98199',
+        'image' => 'tudor-style-home',
+        'intro' => 'Magnolia is a quiet, residential peninsula bordered by Puget Sound and home to Discovery Park, Seattle\'s largest park, with bluff-top homes that look out to the Olympics and Elliott Bay.',
+        'highlights' => ['Discovery Park trails and lighthouse', 'Water and mountain views', 'Magnolia Village shops', 'Quiet streets close to downtown'],
+        'body' => [
+            ['Housing in Magnolia', 'Most of Magnolia is single-family: Tudors, mid-century homes and traditional brick houses on generous lots, with a small number of condos near the village and along the bluff.'],
+            ['Getting around', 'Three bridges connect Magnolia to Interbay, and downtown is typically a short drive along Elliott Avenue.'],
+            ['Who loves it here', 'Buyers who want space, privacy and nature close to the city — families and downsizers alike.'],
+        ],
+    ],
+    'columbia-city' => [
+        'name'  => 'Columbia City',
+        'area'  => 'Southeast Seattle',
+        'zip'   => '98118',
+        'image' => 'brick-home-evergreens',
+        'intro' => 'Columbia City pairs a historic main street along Rainier Avenue South with one of Seattle\'s most diverse communities, a light rail station and homes that often offer more space for the money.',
+        'highlights' => ['Historic Columbia City business district', 'Columbia City light rail station', 'Genesee Park and Lake Washington shoreline', 'Diverse food scene'],
+        'body' => [
+            ['Housing in Columbia City', 'Craftsman and Victorian homes sit near the historic core, with mid-century houses, townhomes and transit-oriented condos spreading toward the light rail station.'],
+            ['Getting around', 'Light rail runs north to downtown and Capitol Hill and south to the airport, and Lake Washington Boulevard is minutes away.'],
+            ['Who loves it here', 'Buyers who want character, community and transit access at a price point below many North Seattle neighborhoods.'],
+        ],
+    ],
+    'lake-city' => [
+        'name'  => 'Lake City',
+        'area'  => 'Northeast Seattle',
+        'zip'   => '98125',
+        'image' => 'stone-home-two-car-garage',
+        'intro' => 'Lake City in northeast Seattle is one of the city\'s more attainable places to buy, with larger lots, mid-century homes, new townhomes and quick access to Lake Washington and the Burke-Gilman Trail.',
+        'highlights' => ['More attainable North Seattle pricing', 'Thornton Creek and Matthews Beach nearby', 'Mid-century homes on larger lots', 'Close to Northgate light rail'],
+        'body' => [
+            ['Housing in Lake City', 'Ramblers, split-levels and daylight-basement homes from the 1940s–1960s are common, often on larger lots than the city average, alongside new townhome and apartment construction near Lake City Way.'],
+            ['Getting around', 'Lake City Way connects to I-5 and downtown, and Northgate light rail station is a short bus or drive away.'],
+            ['Who loves it here', 'First-time buyers and families who want more house and yard for their budget while staying inside city limits.'],
+        ],
+    ],
+    'south-lake-union' => [
+        'name'  => 'South Lake Union',
+        'area'  => 'Central Seattle',
+        'zip'   => '98109',
+        'image' => 'condo-living-room-view',
+        'intro' => 'South Lake Union transformed from a warehouse district into a modern neighborhood of glassy condo towers, tech campuses and Lake Union Park — the most walkable choice for buyers who work nearby.',
+        'highlights' => ['Lake Union Park and waterfront', 'Walk to major tech campuses', 'South Lake Union Streetcar', 'Amenity-rich condo buildings'],
+        'body' => [
+            ['Housing in South Lake Union', 'This is condo country: modern high-rises and mid-rises with concierge service, fitness centers and rooftop decks, plus a few older buildings and floating homes along the lake.'],
+            ['Getting around', 'Walk or bike to work, take the streetcar to Westlake, or hop on I-5 and SR-99 minutes away.'],
+            ['Who loves it here', 'Professionals who want a lock-and-leave home with a short commute and easy access to restaurants and the water.'],
+        ],
+    ],
+];

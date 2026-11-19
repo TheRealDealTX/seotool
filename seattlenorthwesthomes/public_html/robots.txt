@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /submit/
+Disallow: /thank-you/
+Disallow: /homes-for-sale/?*
+
+Sitemap: https://seattlenorthwesthomes.com/sitemap.xml
