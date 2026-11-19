@@ -81,7 +81,7 @@ page_head([
 
 <section class="section section--tint">
   <div class="wrap">
-    <div class="section__head"><h2>12 free real estate calculators</h2><a class="more" href="/tools/">See all tools <?= icon('arrow') ?></a></div>
+    <div class="section__head"><h2><?= count(tools()) ?> free real estate calculators &amp; tools</h2><a class="more" href="/tools/">See all tools <?= icon('arrow') ?></a></div>
     <div class="tool-grid">
 <?php foreach (tools() as $slug => $t) echo tool_card($slug); ?>
     </div>

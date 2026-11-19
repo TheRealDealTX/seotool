@@ -15,7 +15,7 @@ return [
         ['Who pays for title insurance when selling a house in Texas?', 'The contract decides. Paragraph 6 of the TREC resale contract has boxes for whether the seller or the buyer pays for the owner\'s title policy, so it is negotiable. The Texas Department of Insurance sets title insurance premium rates, so the premium for a given policy is the same at every title company. Escrow and other closing fees are not set by TDI and can vary.'],
     ],
     'products'    => ['ring-video-doorbell', 'laser-measure', 'accordion-file-organizer'],
-    'tools'       => ['seller-net-proceeds-calculator', 'closing-cost-calculator'],
+    'tools'       => ['price-per-square-foot-calculator', 'seller-net-proceeds-calculator'],
     'related'     => ['texas-seller-disclosure-notice', 'closing-costs-in-texas', 'selling-a-house-as-is-texas'],
     'body'        => <<<'HTML'
 <p>To sell a house by owner in Texas, you price the home, market it yourself or through a flat-fee MLS listing, negotiate with buyers using the standard TREC contract, give the buyer the seller's disclosure notice, and close through a Texas title company. It is legal and very doable. The trade-off is that you take on the pricing, paperwork, showings and negotiation an agent would normally handle.</p>

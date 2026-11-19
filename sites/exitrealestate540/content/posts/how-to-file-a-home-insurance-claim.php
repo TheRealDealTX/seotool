@@ -15,7 +15,7 @@ return [
         ['Will filing a claim raise my homeowners insurance rates?', 'It can. Claims history is one of the factors insurers may consider at renewal. That is why it often makes sense to compare the repair estimate with your deductible before filing. If the damage is close to or below the deductible, you may get little or nothing from the claim. When the damage is large, filing is usually the right call.'],
     ],
     'products'    => ['heavy-duty-tarp', 'document-scanner', 'laser-measure', 'moisture-meter'],
-    'tools'       => ['insurance-claim-depreciation-calculator'],
+    'tools'       => ['home-inventory-checklist', 'insurance-claim-depreciation-calculator'],
     'related'     => ['loss-of-use-coverage', 'public-adjuster-vs-insurance-adjuster', 'water-damage-claim-denied'],
     'body'        => <<<'HTML'
 <p>To file a home insurance claim, make the property safe, prevent further damage, document everything, read your policy, and report the loss to your insurer as soon as possible. From there, you work with the adjuster, review the estimate, submit any proof of loss, and track the payment against Texas deadlines.</p>

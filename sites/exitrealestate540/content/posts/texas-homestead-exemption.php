@@ -15,7 +15,7 @@ return [
         ['Does the homestead exemption freeze my property taxes?', 'Not for most owners. The general exemption lowers your taxable value, and the 10 percent appraisal cap limits how fast your taxable value can rise. A true school tax ceiling, sometimes called a freeze, applies only to owners who qualify for the over-65 or disability exemption. Some counties and cities also offer their own ceilings for those owners.'],
     ],
     'products'    => ['accordion-file-organizer', 'document-scanner', 'sentrysafe-fireproof'],
-    'tools'       => ['texas-property-tax-calculator'],
+    'tools'       => ['home-equity-calculator', 'texas-property-tax-calculator'],
     'related'     => ['protest-property-taxes-harris-county', 'first-time-home-buyer-texas', 'mud-tax-texas'],
     'body'        => <<<'HTML'
 <p>The Texas homestead exemption removes part of your home's value from property taxation, and as of 2026 it is bigger than it has ever been: $140,000 off your school district taxable value, or $200,000 if you are 65 or older or disabled. It costs nothing to file, you usually only file once, and in a high-tax area like Houston it can save a typical homeowner well over a thousand dollars a year.</p>

@@ -15,7 +15,7 @@ return [
         ['Can I sell a Houston rental and buy land or a commercial building?', 'Generally yes. Since 2018, like-kind exchanges are limited to real property, but real property held for investment or business use is broadly like-kind to other real property in the United States. A rental house can be exchanged for raw land, a fourplex, a warehouse or an interest in a Delaware Statutory Trust that holds real estate. U.S. and foreign real property are not like-kind.'],
     ],
     'products'    => ['book-millionaire-investor', 'book-rental-property', 'accordion-file-organizer'],
-    'tools'       => ['rental-property-calculator', 'seller-net-proceeds-calculator'],
+    'tools'       => ['1031-exchange-calculator', 'rental-property-calculator'],
     'related'     => ['how-to-analyze-a-rental-property', 'capital-gains-tax-on-home-sale', 'brrrr-method-explained'],
     'body'        => <<<'HTML'
 <p>A 1031 exchange lets a Texas investor sell a rental or other investment property and roll the proceeds into new investment real estate without paying federal tax on the gain at the time of sale. To get the full deferral, you must use a qualified intermediary, identify replacement property within 45 days, close within 180 days, and reinvest all of your net proceeds into property of equal or greater value.</p>

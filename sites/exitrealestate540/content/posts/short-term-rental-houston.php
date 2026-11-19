@@ -15,7 +15,7 @@ return [
         ['Does the Houston STR ordinance limit how many guests I can have?', 'No. According to the city\'s published answers to frequently asked questions, the ordinance sets no maximum occupancy limit and no cap on how many rentals a person can own. It does prohibit advertising a short-term rental as an event space, requires compliance with noise, trash, building and fire codes, and allows the city to revoke registrations for repeated violations or certain criminal convictions.'],
     ],
     'products'    => ['schlage-encode-lock', 'ring-video-doorbell', 'first-alert-smoke-co'],
-    'tools'       => ['rental-property-calculator'],
+    'tools'       => ['cap-rate-calculator', 'rental-property-calculator'],
     'related'     => ['how-to-analyze-a-rental-property', 'house-hacking-texas', 'texas-hoa-laws'],
     'body'        => <<<'HTML'
 <p>Running a short-term rental in Houston is legal, but since January 1, 2026, every property inside city limits that is rented for less than 30 consecutive days must be registered with the City of Houston, carry a current certificate and pay hotel occupancy taxes. On top of the city rules, your deed restrictions, insurance policy and the numbers themselves decide whether a short-term rental beats a regular lease.</p>

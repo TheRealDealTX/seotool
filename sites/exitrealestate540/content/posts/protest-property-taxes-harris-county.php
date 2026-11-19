@@ -15,7 +15,7 @@ return [
         ['What happens if I lose at the appraisal review board?', 'You can accept the decision or appeal. Homeowners can request regular binding arbitration through the Texas Comptroller within 60 days of receiving the board order, with a deposit that is mostly refunded if you win. You can also file a lawsuit in district court within 60 days. Either way, pay the undisputed portion of your taxes on time.'],
     ],
     'products'    => ['laser-measure', 'document-scanner', 'accordion-file-organizer'],
-    'tools'       => ['texas-property-tax-calculator'],
+    'tools'       => ['price-per-square-foot-calculator', 'texas-property-tax-calculator'],
     'related'     => ['texas-homestead-exemption', 'houston-home-maintenance-checklist', 'houston-property-tax-rate'],
     'body'        => <<<'HTML'
 <p>To protest property taxes in Harris County, file a protest of your appraised value with the Harris Central Appraisal District (HCAD) by May 15, or within 30 days of receiving your notice if that is later, then back it up with comparable sales, photos and repair estimates. Most homeowners can do the whole thing online through HCAD's iFile system, and many protests settle without ever sitting in front of the appraisal review board.</p>

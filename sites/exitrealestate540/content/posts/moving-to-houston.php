@@ -14,7 +14,7 @@ return [
         ['What is the best time of year to move to Houston?', 'Many people prefer to move in late fall, winter or early spring, when heat and humidity are lower and the Atlantic hurricane season, which runs from June 1 to November 30, is not underway. Summer moves are common but brutally hot. If you move during hurricane season, have a plan for storms and power outages from day one.'],
     ],
     'products'    => ['midea-dehumidifier', 'midland-weather-radio', 'portable-power-station', 'moving-boxes-kit'],
-    'tools'       => ['rent-vs-buy-calculator', 'texas-property-tax-calculator'],
+    'tools'       => ['moving-checklist', 'rent-vs-buy-calculator'],
     'related'     => ['best-houston-suburbs-for-families', 'texas-homestead-exemption', 'cost-of-living-in-houston'],
     'body'        => <<<'HTML'
 <p>Moving to Houston means trading a state income tax for higher property taxes, getting used to long, humid summers, and learning to live with hurricanes, flood risk and a car-first city. In return you get a huge job market, a wide range of housing and some of the most diverse food and culture in the country.</p>

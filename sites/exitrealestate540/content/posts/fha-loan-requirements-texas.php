@@ -16,7 +16,7 @@ return [
         ['Can I use down payment assistance with an FHA loan in Texas?', 'Yes. FHA allows gifts and assistance from government agencies and public entities with homeownership programs for low- to moderate-income or first-time buyers. TSAHC and TDHCA both pair their down payment assistance with FHA loans, and local programs such as the City of Houston Homebuyer Assistance Program work behind a first mortgage from a participating lender.'],
     ],
     'products'    => ['book-first-time-buyer', 'accordion-file-organizer', 'outlet-tester'],
-    'tools'       => ['mortgage-calculator', 'dti-calculator'],
+    'tools'       => ['fha-loan-calculator', 'mortgage-calculator'],
     'related'     => ['down-payment-assistance-texas', 'first-time-home-buyer-texas', 'closing-costs-in-texas'],
     'body'        => <<<'HTML'
 <p>FHA loan requirements in Texas are the same national rules HUD sets everywhere: a 580 credit score for 3.5% down (500 to 579 with 10% down), a manageable debt-to-income ratio, upfront and annual mortgage insurance, a home you will live in, and a loan amount within your county's limit. For 2026, that limit is $541,287 for a single-family home in Harris County and the surrounding Houston counties.</p>

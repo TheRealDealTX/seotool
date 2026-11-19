@@ -15,7 +15,7 @@ return [
         ['How much should I budget for repairs and capital expenses?', 'Many investors set aside 5% to 10% of gross rent for ordinary repairs and another 5% to 10% for big-ticket replacements such as roofs, HVAC systems and water heaters. Older Houston homes, homes with original plumbing and homes with aging HVAC systems in our heat deserve the higher end. Get an inspection and price the big systems before you choose a number.'],
     ],
     'products'    => ['book-rental-property', 'book-millionaire-investor', 'laser-measure'],
-    'tools'       => ['rental-property-calculator', 'texas-property-tax-calculator'],
+    'tools'       => ['cap-rate-calculator', 'rental-property-calculator'],
     'related'     => ['brrrr-method-explained', 'house-hacking-texas', 'short-term-rental-houston'],
     'body'        => <<<'HTML'
 <p>To analyze a rental property, estimate the rent it will actually collect, subtract every operating expense to get net operating income (NOI), then compare that NOI to the price (cap rate) and, after your mortgage payment, to the cash you invest (cash-on-cash return). Knowing how to analyze a rental property this way keeps you from buying on gut feel or a seller's pro forma.</p>

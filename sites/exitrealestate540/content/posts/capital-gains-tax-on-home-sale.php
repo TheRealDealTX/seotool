@@ -15,7 +15,7 @@ return [
         ['Can I use a 1031 exchange on my primary residence?', 'No. A 1031 exchange applies only to real property held for investment or for use in a business. Your personal home does not qualify. A former residence that you converted to a rental and held for investment may qualify, and in some cases owners combine a 1031 exchange with the Section 121 exclusion. That combination has strict rules, so work with a CPA and a qualified intermediary.'],
     ],
     'products'    => ['accordion-file-organizer', 'document-scanner'],
-    'tools'       => ['seller-net-proceeds-calculator'],
+    'tools'       => ['capital-gains-tax-calculator', 'seller-net-proceeds-calculator'],
     'related'     => ['1031-exchange-texas', 'closing-costs-in-texas', 'selling-a-house-as-is-texas'],
     'body'        => <<<'HTML'
 <p>Most Texas homeowners pay no capital gains tax on the sale of their home. Federal law lets you exclude up to $250,000 of profit, or $500,000 if you are married filing jointly, as long as you owned and lived in the house for at least two of the last five years. Texas has no state income tax, so the only possible tax is federal, and only on gain above the exclusion or gain that does not qualify.</p>

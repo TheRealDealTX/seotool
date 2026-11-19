@@ -15,7 +15,7 @@ return [
         ['What credit score do I need for Texas down payment assistance?', 'TSAHC and TDHCA list a 620 minimum score, and TSAHC lists 640 for conventional loans. The Harris County program lists a 580 minimum. Your lender may set a higher bar, and you still have to qualify for the first mortgage on its own terms, including debt-to-income limits.'],
     ],
     'products'    => ['book-first-time-buyer', 'accordion-file-organizer', 'document-scanner'],
-    'tools'       => ['home-affordability-calculator', 'closing-cost-calculator'],
+    'tools'       => ['down-payment-calculator', 'home-affordability-calculator'],
     'related'     => ['first-time-home-buyer-texas', 'fha-loan-requirements-texas', 'closing-costs-in-texas'],
     'body'        => <<<'HTML'
 <p>Down payment assistance in Texas comes from two statewide sources, TSAHC and TDHCA, which offer up to 5% of your loan amount, plus local programs that can be far larger. In the Houston area, the City of Houston offers up to $75,000 to eligible first-time buyers inside city limits, and Harris County lists up to $40,000 for homes in unincorporated areas, though the county program is limited right now.</p>

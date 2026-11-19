@@ -15,7 +15,7 @@ return [
         ['Is it cheaper to rent or buy in Houston?', 'It depends on how long you plan to stay, the home price, your down payment and mortgage rate. Owners pay property taxes, homeowners and often flood insurance, and maintenance, which renters avoid. Many newcomers rent for six to twelve months while they learn the city. A rent vs. buy calculator using your real numbers is the best way to decide.'],
     ],
     'products'    => ['nest-thermostat', 'filtrete-air-filters', 'midea-dehumidifier'],
-    'tools'       => ['rent-vs-buy-calculator', 'home-affordability-calculator'],
+    'tools'       => ['rent-affordability-calculator', 'rent-vs-buy-calculator'],
     'related'     => ['moving-to-houston', 'houston-property-tax-rate', 'best-neighborhoods-in-houston'],
     'body'        => <<<'HTML'
 <p>The cost of living in Houston is below the national urban average, mainly because housing costs much less than in other big metros. The Greater Houston Partnership, citing the C2ER Cost of Living Index for Q2 2026, puts Houston's overall living costs 6.3% below the national urban average and its housing costs 24.8% below it. The catch is that property taxes, insurance, summer electricity and car costs are higher than many newcomers expect.</p>

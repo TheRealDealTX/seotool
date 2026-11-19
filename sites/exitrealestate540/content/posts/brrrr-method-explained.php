@@ -15,7 +15,7 @@ return [
         ['What happens if the appraisal comes in low?', 'A low appraisal shrinks your refinance loan, which means more of your money stays trapped in the property. You may not be able to repay a short-term hard money loan in full without bringing cash to closing. Protect yourself by buying with a wide margin, keeping strong renovation records and comparable sales for the appraiser, and holding reserves for this exact scenario.'],
     ],
     'products'    => ['book-brrrr', 'book-rental-property', 'moisture-meter'],
-    'tools'       => ['rental-property-calculator', 'refinance-calculator'],
+    'tools'       => ['house-flipping-calculator', 'rental-property-calculator'],
     'related'     => ['how-to-analyze-a-rental-property', 'house-hacking-texas', '1031-exchange-texas'],
     'body'        => <<<'HTML'
 <p>The BRRRR method stands for buy, rehab, rent, refinance, repeat. You buy a property below its potential value, renovate it, rent it out, then refinance based on the new, higher value to pull out most or all of the cash you put in, and use that cash on the next deal. When it works, you build a rental portfolio while recycling the same pool of capital.</p>

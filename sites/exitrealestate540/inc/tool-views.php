@@ -398,6 +398,393 @@ function tool_view(string $slug): string
 <?php endforeach; ?>
 </div>
 <?php break;
+    case 'fha-loan-calculator': ?>
+<form class="calc" data-tool="fha-loan-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('price', 'Home price', 300000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('down', 'Down payment', 3.5, ['suf' => '%', 'step' => 0.5, 'min' => 3.5, 'help' => 'FHA minimum is 3.5% with a 580+ credit score.']) ?>
+    <?= fld('rate', 'Interest rate', 6.25, ['suf' => '%', 'step' => 0.125]) ?>
+    <?= sel('term', 'Loan term', [30 => '30 years', 15 => '15 years'], 30) ?>
+    <?= fld('tax', 'Property tax rate', 2.2, ['suf' => '%/yr', 'step' => 0.05]) ?>
+    <?= fld('ins', 'Homeowners insurance', 3000, ['pre' => '$', 'suf' => '/yr', 'step' => 50]) ?>
+    <?= fld('hoa', 'HOA dues', 0, ['pre' => '$', 'suf' => '/mo', 'step' => 5]) ?>
+    <?= fld('limit', 'County FHA loan limit', 541287, ['pre' => '$', 'step' => 1, 'help' => '2026 one-unit limit for Harris and surrounding counties.']) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('total', 'Estimated monthly payment', true) ?>
+    <div class="bars" data-out-bars="breakdown"></div>
+    <div class="stats">
+      <?= out('base', 'Base loan') ?>
+      <?= out('ufmip', 'Upfront MIP (1.75%)') ?>
+      <?= out('loan', 'Total loan with UFMIP') ?>
+      <?= out('miprate', 'Annual MIP rate') ?>
+      <?= out('mipdur', 'MIP lasts') ?>
+      <?= out('cash', 'Down payment') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'va-loan-calculator': ?>
+<form class="calc" data-tool="va-loan-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('price', 'Home price', 350000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('down', 'Down payment', 0, ['suf' => '%', 'step' => 0.5]) ?>
+    <?= fld('rate', 'Interest rate', 6.0, ['suf' => '%', 'step' => 0.125]) ?>
+    <?= sel('term', 'Loan term', [30 => '30 years', 15 => '15 years'], 30) ?>
+    <?= sel('use', 'VA loan use', ['first' => 'First use', 'subsequent' => 'After first use'], 'first') ?>
+    <?= sel('exempt', 'Funding fee exempt?', ['0' => 'No', '1' => 'Yes (VA disability, DIC, Purple Heart)'], '0') ?>
+    <?= fld('tax', 'Property tax rate', 2.2, ['suf' => '%/yr', 'step' => 0.05]) ?>
+    <?= fld('ins', 'Homeowners insurance', 3200, ['pre' => '$', 'suf' => '/yr', 'step' => 50]) ?>
+    <?= fld('hoa', 'HOA dues', 0, ['pre' => '$', 'suf' => '/mo', 'step' => 5]) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('total', 'Estimated monthly payment', true) ?>
+    <div class="bars" data-out-bars="breakdown"></div>
+    <div class="stats">
+      <?= out('feepct', 'Funding fee rate') ?>
+      <?= out('fee', 'Funding fee (financed)') ?>
+      <?= out('loan', 'Total loan') ?>
+      <?= out('pi', 'Principal & interest') ?>
+      <?= out('cash', 'Down payment') ?>
+      <?= out('pmi', 'Monthly mortgage insurance') ?>
+    </div>
+  </div>
+</form>
+<?php break;
+    case 'down-payment-calculator': ?>
+<form class="calc" data-tool="down-payment-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('price', 'Target home price', 320000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= sel('loan', 'Loan type', ['conv20' => 'Conventional, 20% (no PMI)', 'conv5' => 'Conventional, 5%', 'conv3' => 'Conventional, 3% (first-time)', 'fha' => 'FHA, 3.5%', 'va' => 'VA, 0%', 'usda' => 'USDA, 0%', 'custom' => 'Custom percentage'], 'fha') ?>
+    <?= fld('custom', 'Custom down payment', 10, ['suf' => '%', 'step' => 0.5]) ?>
+    <?= fld('closing', 'Closing costs', 3, ['suf' => '% of price', 'step' => 0.25]) ?>
+    <?= fld('assist', 'Assistance / gifts / seller credits', 0, ['pre' => '$', 'step' => 500]) ?>
+    <?= fld('saved', 'Saved so far', 8000, ['pre' => '$', 'step' => 500]) ?>
+    <?= fld('monthly', 'You can save each month', 750, ['pre' => '$', 'step' => 25]) ?>
+    <?= fld('ret', 'Savings interest rate', 4, ['suf' => '%/yr', 'step' => 0.25]) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('need', 'Cash you need at closing', true) ?>
+    <div class="stats">
+      <?= out('down', 'Down payment') ?>
+      <?= out('cc', 'Closing costs') ?>
+      <?= out('gap', 'Still to save') ?>
+      <?= out('time', 'Time to save') ?>
+      <?= out('date', 'Ready by') ?>
+      <?= out('loanamt', 'Loan amount') ?>
+    </div>
+    <div class="table-wrap" data-out-table="types"></div>
+  </div>
+</form>
+<?php break;
+    case 'rent-affordability-calculator': ?>
+<form class="calc" data-tool="rent-affordability-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('gross', 'Gross annual income', 60000, ['pre' => '$', 'step' => 1000, 'help' => 'Before taxes, all earners on the lease.']) ?>
+    <?= fld('net', 'Monthly take-home pay', 3900, ['pre' => '$', 'step' => 50]) ?>
+    <?= fld('debts', 'Monthly debt payments', 350, ['pre' => '$', 'step' => 25, 'help' => 'Car, student loans, minimum card payments.']) ?>
+    <?= fld('utils', 'Utilities you pay', 200, ['pre' => '$', 'suf' => '/mo', 'step' => 10, 'help' => 'Electric, water, internet, renters insurance.']) ?>
+    <?= fld('groceries', 'Groceries & essentials', 450, ['pre' => '$', 'suf' => '/mo', 'step' => 25]) ?>
+    <?= fld('multiple', 'Landlord income requirement', 3, ['suf' => 'x rent', 'step' => 0.5, 'min' => 1]) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('target', 'Comfortable rent target', true) ?>
+    <div class="stats">
+      <?= out('r30', '30% rule (incl. utilities)') ?>
+      <?= out('r503020', '50/30/20 budget') ?>
+      <?= out('rland', 'Landlord income test') ?>
+      <?= out('pct', 'Target as % of gross') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'home-equity-calculator': ?>
+<form class="calc" data-tool="home-equity-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('value', 'Home value', 400000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('balance', 'Mortgage balance(s)', 220000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('cltv', 'Max combined loan-to-value', 80, ['suf' => '%', 'step' => 1, 'max' => 100, 'help' => 'Texas homestead limit is 80%.']) ?>
+    <?= fld('draw', 'Amount you want to borrow', 50000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('rate', 'HELOC interest rate', 8.25, ['suf' => '%', 'step' => 0.125]) ?>
+    <?= fld('drawyrs', 'Draw period', 10, ['suf' => 'years', 'step' => 1, 'min' => 1]) ?>
+    <?= fld('repyrs', 'Repayment period', 20, ['suf' => 'years', 'step' => 1, 'min' => 1]) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('avail', 'You may be able to borrow up to', true) ?>
+    <div class="stats">
+      <?= out('equity', 'Total equity') ?>
+      <?= out('equitypct', 'Equity %') ?>
+      <?= out('io', 'Interest-only payment (draw)') ?>
+      <?= out('amort', 'Repayment-period payment') ?>
+      <?= out('newcltv', 'Combined LTV after draw') ?>
+      <?= out('totalint', 'Total interest (est.)') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'cash-out-refinance-calculator': ?>
+<form class="calc" data-tool="cash-out-refinance-calculator" novalidate>
+  <div class="calc__inputs">
+    <fieldset><legend>Today</legend>
+    <?= fld('value', 'Home value', 400000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('balance', 'Current loan balance', 220000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('currate', 'Current rate', 4.5, ['suf' => '%', 'step' => 0.125]) ?>
+    <?= fld('remaining', 'Years remaining', 24, ['step' => 1, 'min' => 1]) ?>
+    </fieldset>
+    <fieldset><legend>New loan</legend>
+    <?= fld('cash', 'Cash you want', 60000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('ltv', 'Max loan-to-value', 80, ['suf' => '%', 'step' => 1, 'help' => 'Texas homestead cash-out cap is 80%.']) ?>
+    <?= fld('newrate', 'New rate', 6.5, ['suf' => '%', 'step' => 0.125]) ?>
+    <?= sel('term', 'New term', [30 => '30 years', 20 => '20 years', 15 => '15 years'], 30) ?>
+    <?= fld('costs', 'Closing costs', 2.5, ['suf' => '% of loan', 'step' => 0.25]) ?>
+    </fieldset>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('cashout', 'Cash in hand', true) ?>
+    <div class="stats">
+      <?= out('maxcash', 'Maximum cash available') ?>
+      <?= out('newloan', 'New loan amount') ?>
+      <?= out('newpay', 'New payment (P&I)') ?>
+      <?= out('oldpay', 'Current payment (P&I)') ?>
+      <?= out('diff', 'Monthly change') ?>
+      <?= out('ltvafter', 'Loan-to-value') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'capital-gains-tax-calculator': ?>
+<form class="calc" data-tool="capital-gains-tax-calculator" novalidate>
+  <div class="calc__inputs">
+    <fieldset><legend>The sale</legend>
+    <?= fld('sale', 'Sale price', 550000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('sellcost', 'Selling costs', 35000, ['pre' => '$', 'step' => 500, 'help' => 'Commissions, title, fees, concessions.']) ?>
+    </fieldset>
+    <fieldset><legend>Your basis</legend>
+    <?= fld('purchase', 'Original purchase price', 240000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('buycost', 'Purchase closing costs (eligible)', 4000, ['pre' => '$', 'step' => 250]) ?>
+    <?= fld('improve', 'Capital improvements', 30000, ['pre' => '$', 'step' => 500]) ?>
+    <?= fld('dep', 'Depreciation claimed (rental / office)', 0, ['pre' => '$', 'step' => 500]) ?>
+    </fieldset>
+    <fieldset><legend>You</legend>
+    <?= sel('status', 'Filing status', ['single' => 'Single', 'mfj' => 'Married filing jointly', 'hoh' => 'Head of household', 'mfs' => 'Married filing separately'], 'mfj') ?>
+    <?= sel('qualify', 'Owned & lived in it 2 of last 5 years?', ['1' => 'Yes', '0' => 'No'], '1') ?>
+    <?= sel('held', 'Owned more than one year?', ['1' => 'Yes', '0' => 'No'], '1') ?>
+    <?= fld('income', 'Other taxable income', 120000, ['pre' => '$', 'step' => 1000, 'help' => 'Taxable income before this sale.']) ?>
+    </fieldset>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('tax', 'Estimated federal tax', true) ?>
+    <div class="stats">
+      <?= out('basis', 'Adjusted basis') ?>
+      <?= out('gain', 'Total gain') ?>
+      <?= out('excl', 'Excluded (Sec. 121)') ?>
+      <?= out('taxable', 'Taxable gain') ?>
+      <?= out('niit', 'Incl. 3.8% NIIT') ?>
+      <?= out('eff', 'Effective rate on gain') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'cap-rate-calculator': ?>
+<form class="calc" data-tool="cap-rate-calculator" novalidate>
+  <div class="calc__inputs">
+    <?= fld('price', 'Purchase price / value', 400000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('rent', 'Gross monthly rent', 3200, ['pre' => '$', 'step' => 25]) ?>
+    <?= fld('other', 'Other monthly income', 0, ['pre' => '$', 'step' => 10]) ?>
+    <?= fld('vacancy', 'Vacancy & credit loss', 6, ['suf' => '%', 'step' => 1]) ?>
+    <?= fld('tax', 'Property tax', 8800, ['pre' => '$', 'suf' => '/yr', 'step' => 100]) ?>
+    <?= fld('ins', 'Insurance', 3000, ['pre' => '$', 'suf' => '/yr', 'step' => 50]) ?>
+    <?= fld('mgmt', 'Management', 8, ['suf' => '% of rent', 'step' => 0.5]) ?>
+    <?= fld('maint', 'Repairs & reserves', 10, ['suf' => '% of rent', 'step' => 0.5]) ?>
+    <?= fld('opother', 'Other expenses (HOA, utilities)', 0, ['pre' => '$', 'suf' => '/yr', 'step' => 100]) ?>
+    <?= fld('target', 'Your target cap rate', 6.5, ['suf' => '%', 'step' => 0.25]) ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('cap', 'Cap rate', true) ?>
+    <div class="stats">
+      <?= out('noi', 'Net operating income') ?>
+      <?= out('egi', 'Effective gross income') ?>
+      <?= out('opex', 'Operating expenses') ?>
+      <?= out('ratio', 'Expense ratio') ?>
+      <?= out('value', 'Value at target cap rate') ?>
+      <?= out('vsprice', 'vs. price') ?>
+    </div>
+  </div>
+</form>
+<?php break;
+    case 'house-flipping-calculator': ?>
+<form class="calc" data-tool="house-flipping-calculator" novalidate>
+  <div class="calc__inputs">
+    <fieldset><legend>Deal</legend>
+    <?= fld('arv', 'After-repair value (ARV)', 360000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('price', 'Purchase price', 220000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('rehab', 'Rehab budget', 45000, ['pre' => '$', 'step' => 500]) ?>
+    <?= fld('contingency', 'Contingency', 10, ['suf' => '% of rehab', 'step' => 1]) ?>
+    <?= fld('months', 'Months held', 5, ['step' => 1, 'min' => 1]) ?>
+    </fieldset>
+    <fieldset><legend>Costs & financing</legend>
+    <?= fld('buyclose', 'Buying closing costs', 2, ['suf' => '% of price', 'step' => 0.25]) ?>
+    <?= fld('hold', 'Taxes, insurance, utilities', 650, ['pre' => '$', 'suf' => '/mo', 'step' => 25]) ?>
+    <?= fld('sellcost', 'Selling costs', 8, ['suf' => '% of ARV', 'step' => 0.25]) ?>
+    <?= fld('ltc', 'Loan amount', 85, ['suf' => '% of price+rehab', 'step' => 5, 'help' => 'Set to 0 for an all-cash deal.']) ?>
+    <?= fld('rate', 'Loan interest rate', 11, ['suf' => '%', 'step' => 0.25]) ?>
+    <?= fld('points', 'Loan points', 2, ['suf' => '%', 'step' => 0.25]) ?>
+    </fieldset>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('profit', 'Projected net profit', true) ?>
+    <div class="stats">
+      <?= out('mao', 'Max offer (70% rule)') ?>
+      <?= out('allin', 'All-in cost') ?>
+      <?= out('cash', 'Cash needed') ?>
+      <?= out('roi', 'Return on cash') ?>
+      <?= out('annual', 'Annualized return') ?>
+      <?= out('margin', 'Profit as % of ARV') ?>
+    </div>
+    <div class="table-wrap" data-out-table="lines"></div>
+  </div>
+</form>
+<?php break;
+    case '1031-exchange-calculator': ?>
+<form class="calc" data-tool="1031-exchange-calculator" novalidate>
+  <div class="calc__inputs">
+    <label class="fld"><span class="fld__label">Sale (relinquished property) closing date</span><span class="fld__input"><input type="date" name="closedate" id="f-closedate" value="<?= date('Y-m-d') ?>"></span></label>
+    <?= fld('sale', 'Sale price', 600000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('sellcost', 'Selling costs', 40000, ['pre' => '$', 'step' => 500]) ?>
+    <?= fld('basis', 'Adjusted basis (after depreciation)', 300000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('dep', 'Depreciation taken', 80000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('oldloan', 'Mortgage paid off at sale', 250000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('newprice', 'Replacement property price', 650000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('newloan', 'New mortgage on replacement', 330000, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('keep', 'Cash you keep (not reinvested)', 0, ['pre' => '$', 'step' => 1000]) ?>
+    <?= fld('cgrate', 'Your capital gains rate', 15, ['suf' => '%', 'step' => 1]) ?>
+    <?= sel('niit', 'Subject to 3.8% NIIT?', ['0' => 'No', '1' => 'Yes'], '0') ?>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('deferred', 'Estimated tax deferred', true) ?>
+    <div class="stats">
+      <?= out('day45', 'Identify by (day 45)') ?>
+      <?= out('day180', 'Close by (day 180)') ?>
+      <?= out('realized', 'Realized gain') ?>
+      <?= out('boot', 'Taxable boot') ?>
+      <?= out('taxnow', 'Tax due now (est.)') ?>
+      <?= out('taxsale', 'Tax with no exchange') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'price-per-square-foot-calculator': ?>
+<form class="calc calc--wide" data-tool="price-per-square-foot-calculator" novalidate>
+  <div class="calc__inputs calc__inputs--full">
+    <div class="row-2">
+      <?= fld('sqft', 'Your home\'s living area', 2100, ['suf' => 'sq ft', 'step' => 10]) ?>
+      <?= fld('compare', 'Value to compare (list price or appraisal district value)', 395000, ['pre' => '$', 'step' => 1000]) ?>
+    </div>
+    <div class="items items--comps" data-comps>
+      <div class="items__head" aria-hidden="true"><span>Comparable (address or note)</span><span>Sale price</span><span>Living sq ft</span><span>$/sq ft</span></div>
+<?php foreach ([['123 Oak St', 372000, 1980], ['456 Elm Dr', 401000, 2250], ['789 Pine Ln', 355000, 1900], ['', '', ''], ['', '', ''], ['', '', '']] as $c): ?>
+      <div class="items__row"><input type="text" aria-label="Comparable" placeholder="Address or note" value="<?= e($c[0]) ?>"><input type="number" inputmode="decimal" aria-label="Sale price" min="0" step="500" value="<?= e($c[1]) ?>"><input type="number" inputmode="decimal" aria-label="Living square feet" min="0" step="10" value="<?= e($c[2]) ?>"><output class="items__ppsf">-</output></div>
+<?php endforeach; ?>
+    </div>
+  </div>
+  <div class="calc__results" aria-live="polite">
+    <?= out('indicated', 'Value implied by median comp $/sq ft', true) ?>
+    <div class="stats">
+      <?= out('median', 'Median $/sq ft') ?>
+      <?= out('avg', 'Average $/sq ft') ?>
+      <?= out('yours', 'Your value per sq ft') ?>
+      <?= out('diff', 'Difference vs. your value') ?>
+    </div>
+    <p class="calc__note" data-out="note"></p>
+  </div>
+</form>
+<?php break;
+    case 'moving-checklist':
+        $lists = [
+            '6-8 weeks before' => [
+                'Set a moving budget and date; get at least three moving quotes',
+                'Check each mover\'s USDOT number (interstate) or Texas DMV registration (in-state)',
+                'Ask how movers cover damage: full value protection vs. minimum per-pound liability',
+                'Declutter: sell, donate or toss what you will not move',
+                'Request school records and find new doctors, dentists and vets',
+                'Start a moving folder for quotes, receipts and contracts',
+            ],
+            '3-4 weeks before' => [
+                'Book movers or a truck and reserve elevators or parking if needed',
+                'Buy boxes, tape, markers and furniture pads',
+                'Photograph valuables and electronics before packing (also great for insurance)',
+                'Submit a USPS change of address',
+                'Schedule utility shutoff at your old home and setup at your new one',
+                'Choose a retail electricity plan for the new address (Houston is a deregulated market)',
+                'Set up internet installation for move-in day',
+                'Update your homeowners or renters insurance to start at the new address',
+            ],
+            '1-2 weeks before' => [
+                'Pack room by room and label boxes with room and contents',
+                'Confirm the moving date, time and arrival window in writing',
+                'Refill prescriptions and pack an essentials box (meds, chargers, documents, snacks)',
+                'Update your address with banks, employer, subscriptions and insurers',
+                'Arrange childcare and pet care for moving day',
+                'Defrost and clean the refrigerator if you are moving it',
+            ],
+            'Moving day' => [
+                'Keep documents, keys, valuables and medications with you',
+                'Walk the movers through the home and point out fragile items',
+                'Read the inventory and bill of lading before signing',
+                'Do a final walk-through: closets, attic, garage, cabinets',
+                'Photograph the empty home and record meter readings',
+            ],
+            'First 30-90 days (Texas)' => [
+                'Inspect your belongings and file any damage claim with the mover promptly',
+                'Change or rekey the locks',
+                'Find the main water shutoff, breaker panel and gas shutoff',
+                'Test smoke and carbon monoxide alarms; replace HVAC filters',
+                'New to Texas: register your vehicle (generally within 30 days of moving)',
+                'New to Texas: get a Texas driver license (generally within 90 days)',
+                'Update your voter registration',
+                'Homeowners: file your homestead exemption with the county appraisal district',
+                'Homeowners: look up your MUD, HOA and flood zone details',
+                'Review your flood insurance needs (NFIP policies usually have a 30-day wait)',
+            ],
+        ];
+        $i = 0; ?>
+<div class="checklist" data-tool="moving-checklist">
+  <div class="checklist__progress"><div class="progress"><span data-progress-bar></span></div><p><strong data-progress-text>0 of 0</strong> tasks done <button type="button" class="linkbtn" data-reset>Reset</button> <button type="button" class="linkbtn" data-print>Print</button></p></div>
+<?php foreach ($lists as $head => $items): ?>
+  <fieldset class="checklist__group"><legend><?= e($head) ?></legend>
+<?php foreach ($items as $it): $i++; ?>
+    <label class="check"><input type="checkbox" data-id="m<?= $i ?>"><span><?= e($it) ?></span></label>
+<?php endforeach; ?>
+  </fieldset>
+<?php endforeach; ?>
+</div>
+<?php break;
+    case 'home-inventory-checklist': ?>
+<div class="inventory" data-tool="home-inventory-checklist">
+  <div class="inventory__bar">
+    <label class="fld"><span class="fld__label">Room</span><span class="fld__input"><select data-room>
+      <?php foreach (['Living room', 'Kitchen', 'Dining room', 'Primary bedroom', 'Bedroom 2', 'Bedroom 3', 'Bathrooms', 'Home office', 'Laundry', 'Garage', 'Attic / storage', 'Outdoor / patio', 'Closets', 'Other'] as $r): ?><option><?= e($r) ?></option><?php endforeach; ?>
+    </select></span></label>
+    <div class="inventory__actions">
+      <button type="button" class="btn btn--primary" data-add>+ Add item</button>
+      <button type="button" class="btn btn--ghost" data-csv>Export CSV</button>
+      <button type="button" class="btn btn--ghost" data-print>Print</button>
+      <button type="button" class="linkbtn" data-clear>Clear all</button>
+    </div>
+  </div>
+  <div class="inventory__summary" aria-live="polite"><div class="stat stat--big"><span class="stat__label">Total replacement value</span><output class="stat__value" data-total>$0</output></div><p><span data-count>0</span> items &middot; <span data-rooms>0</span> rooms</p></div>
+  <div class="table-wrap"><table class="inventory__table"><thead><tr><th>Room</th><th>Item</th><th>Brand / model</th><th>Serial #</th><th>Year bought</th><th class="num">Qty</th><th class="num">Replacement cost (each)</th><th></th></tr></thead><tbody data-rows></tbody></table></div>
+  <p class="inventory__empty" data-empty>No items yet. Pick a room and click <strong>Add item</strong>. Start with electronics, appliances, furniture, jewelry and tools.</p>
+  <div class="table-wrap"><table><thead><tr><th>Room</th><th class="num">Items</th><th class="num">Value</th></tr></thead><tbody data-byroom></tbody></table></div>
+  <p class="fine">Your inventory is saved only in this browser on this device. Export a CSV and store it in the cloud or email it to yourself.</p>
+</div>
+<?php break;
     }
     return ob_get_clean();
 }

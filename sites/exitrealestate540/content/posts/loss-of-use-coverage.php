@@ -15,7 +15,7 @@ return [
         ['Will a flood policy pay for a hotel?', 'Not if it is a National Flood Insurance Program policy. The Texas Department of Insurance notes that NFIP policies do not pay additional living expenses. Some private flood policies and some homeowners policies that include flood coverage may pay them, so check the loss of use section of the specific policy that covers the damage.'],
     ],
     'products'    => ['document-scanner', 'accordion-file-organizer', 'waterproof-document-bag'],
-    'tools'       => ['insurance-claim-depreciation-calculator'],
+    'tools'       => ['home-inventory-checklist', 'insurance-claim-depreciation-calculator'],
     'related'     => ['what-to-do-after-a-house-fire', 'how-to-file-a-home-insurance-claim', 'hurricane-damage-insurance-claim-texas'],
     'body'        => <<<'HTML'
 <p>Loss of use coverage pays the extra cost of living somewhere else when a covered loss, such as a fire, a burst pipe or storm damage, makes your home unlivable. It does not replace your normal budget. It covers the <em>increase</em> over what you would have spent at home, up to a limit that varies by policy.</p>

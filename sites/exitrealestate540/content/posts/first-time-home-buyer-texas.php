@@ -15,7 +15,7 @@ return [
         ['Can I use Texas down payment assistance with an FHA or VA loan?', 'Yes. TDHCA and TSAHC both pair their assistance with FHA, VA and USDA loans, and with certain conventional loans. You apply through a participating lender, not directly with the state, and you usually need to complete an approved homebuyer education course before closing. Rates on assisted loans can be slightly higher, so compare the total cost.'],
     ],
     'products'    => ['book-first-time-buyer', 'accordion-file-organizer', 'outlet-tester', 'schlage-encode-lock'],
-    'tools'       => ['home-affordability-calculator', 'closing-cost-calculator'],
+    'tools'       => ['down-payment-calculator', 'home-affordability-calculator'],
     'related'     => ['closing-costs-in-texas', 'buying-a-house-in-a-flood-zone-houston', 'fha-loan-requirements-texas'],
     'body'        => <<<'HTML'
 <p>If you are a first time home buyer in Texas, you have more help available than most people realize: two state agencies offer down payment assistance of up to 5% of your loan, and you can pair it with an FHA, VA, USDA or conventional loan. The rest comes down to knowing the Texas-specific steps, especially the option period, and budgeting for the costs that show up after the down payment.</p>

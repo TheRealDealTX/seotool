@@ -15,7 +15,7 @@ return [
         ['What is recoverable depreciation after a fire?', 'With replacement cost coverage, many insurers first pay actual cash value, which is the replacement cost minus depreciation for age and wear. The depreciation they held back is recoverable: you get it after you repair or replace the item and send proof. Policies often set a deadline to complete repairs and claim it, so check your policy terms.'],
     ],
     'products'    => ['first-alert-smoke-co', 'sentrysafe-fireproof', 'document-scanner', 'fire-extinguisher-home'],
-    'tools'       => ['insurance-claim-depreciation-calculator'],
+    'tools'       => ['home-inventory-checklist', 'insurance-claim-depreciation-calculator'],
     'related'     => ['sell-fire-damaged-house-texas', 'public-adjuster-vs-insurance-adjuster', 'loss-of-use-coverage'],
     'body'        => <<<'HTML'
 <p>If you are wondering what to do after a house fire, start here: get everyone to safety, call your insurance company the same day, and document everything before you clean up or throw anything away. The choices you make in the first week shape how quickly you get back into a safe home and how much of your claim gets paid.</p>
