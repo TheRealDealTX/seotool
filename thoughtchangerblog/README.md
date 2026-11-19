@@ -104,12 +104,15 @@ Hosting account `u401386392`, website `thoughtchangerblog.com`.
 4. The server and CDN caches were cleared, and `validate.py` was run against the live domain.
 
 Kept in `public_html`: both Google Search Console verification files (`google*.html`),
-Hostinger's `.private/`, `staging/` and `wp-content/uploads/`. `llms.txt` is regenerated from `posts.json`.
+Hostinger's `.private/` and `wp-content/uploads/`. `llms.txt` is regenerated from `posts.json`.
 
 **Rollback:** move everything in `wp-backup-20261119/public_html/` back into `public_html/` (overwriting
 `index.php` and `.htaccess`), then clear the cache. The WordPress database was never touched.
 
-**Later updates:** `SKIP_MEDIA=1 tools/deploy.sh staging`, check it, then `SKIP_MEDIA=1 tools/deploy.sh production` and clear the cache.
+The staging subdomain and `public_html/staging/` were removed on 2026-11-19. To preview a change later, re-create the
+subdomain (`hosting_websites_add-domain`, name `staging`, directory `staging`) and run `tools/deploy.sh staging`.
+
+**Later updates:** `SKIP_MEDIA=1 tools/deploy.sh production`, then clear the cache and run `validate.py` against the live site.
 
 ## Adding a post
 
