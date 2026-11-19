@@ -17,14 +17,14 @@ const SHOP = [
         'intro' => 'Clean lines, tapered legs, warm teak and walnut, and a little atomic-age optimism. Mid-century modern design (roughly 1945–1969) is the backbone of every Vintique Flea, and these are the pieces our shoppers ask about most.',
         'body'  => '<p>Mid-century modern works because it is honest: furniture built low and light, with visible joinery and woods chosen for their grain. Original pieces from Danish and American makers still turn up at markets, and good-quality reproductions fill the gaps for everything else.</p><h2>How to spot the real thing</h2><ul><li><strong>Joinery:</strong> dovetailed drawers and solid-wood frames beat staples and particleboard.</li><li><strong>Wood:</strong> teak, walnut and rosewood veneers with a consistent, deep grain.</li><li><strong>Marks:</strong> maker stamps or paper labels inside drawers and under seats.</li><li><strong>Proportions:</strong> low profiles, splayed or tapered legs, floating case pieces.</li></ul><p>Read our full guide to <a href="/guides/how-to-identify-mid-century-modern-furniture/">identifying mid-century modern furniture</a>, or try arranging a room in the <a href="/play/room-designer/">Mid-Century Room Designer</a>.</p>',
         'products' => [
-            ['name' => 'Eames-Style Lounge Chair & Ottoman', 'q' => 'eames style lounge chair and ottoman', 'note' => 'The icon. Molded plywood shells, leather cushions, endless comfort.', 'icon' => '🛋️', 'tier' => '$$$'],
+            ['name' => 'Mid-Century Lounge Chair & Ottoman', 'q' => 'eames style lounge chair and ottoman', 'note' => 'A swiveling mid-century-style lounger and ottoman. Kick back like it is 1958.', 'icon' => '🛋️', 'tier' => '$$$'],
             ['name' => 'Walnut Mid-Century Credenza', 'q' => 'mid century modern credenza walnut', 'note' => 'Sliding doors and tapered legs. Perfect for a record console or TV.', 'icon' => '🗄️', 'tier' => '$$$'],
             ['name' => 'Sunburst Wall Mirror', 'q' => 'sunburst wall mirror mid century', 'note' => 'An instant focal point above a sofa or entry table.', 'icon' => '☀️', 'tier' => '$$'],
             ['name' => 'Arc Floor Lamp', 'q' => 'mid century arc floor lamp', 'note' => 'Swoops over a sofa so you skip the ceiling fixture.', 'icon' => '💡', 'tier' => '$$'],
             ['name' => 'Starburst Atomic Wall Clock', 'q' => 'starburst atomic wall clock', 'note' => 'The Space Age in a single wall piece.', 'icon' => '🕰️', 'tier' => '$'],
             ['name' => 'Tulip Side Table', 'q' => 'tulip side table mid century', 'note' => 'One sculpted pedestal, zero leg clutter.', 'icon' => '🌷', 'tier' => '$$'],
             ['name' => 'Tapered Hairpin Furniture Legs', 'q' => 'mid century tapered furniture legs', 'note' => 'Give a flea-market slab or cabinet an instant MCM upgrade.', 'icon' => '🔩', 'tier' => '$'],
-            ['name' => 'Ceramic Mid-Century Planter on Stand', 'q' => 'mid century planter with stand', 'note' => 'Raise your fiddle leaf fig to eye level, 1962-style.', 'icon' => '🪴', 'tier' => '$'],
+            ['name' => 'Ceramic Planter on Wood Stand', 'q' => 'mid century planter with stand', 'note' => 'Raise your fiddle leaf fig to eye level, 1962-style.', 'icon' => '🪴', 'tier' => '$'],
         ],
     ],
     'vintage-clothing' => [
@@ -38,7 +38,7 @@ const SHOP = [
         'body'  => '<p>Shopping vintage clothing is half treasure hunt, half detective work. Check seams and underarms, look for metal zippers on older pieces, and always measure. Vintage sizes run small compared with modern labels.</p><h2>Care is everything</h2><p>A handheld steamer, cedar blocks and a gentle wool wash will keep a 50-year-old garment going for another 50. A fabric shaver brings pilled sweaters back to life.</p><p>Not sure what your look is? Take the <a href="/play/vintage-style-quiz/">What\'s Your Vintage Style? quiz</a>.</p>',
         'products' => [
             ['name' => 'Retro Cat-Eye Sunglasses', 'q' => 'retro cat eye sunglasses', 'note' => 'The fastest way to look like you stepped out of 1957.', 'icon' => '🕶️', 'tier' => '$'],
-            ['name' => 'High-Rise Vintage-Wash Jeans', 'q' => 'high rise vintage wash jeans', 'note' => 'A 90s silhouette that pairs with every thrifted tee.', 'icon' => '👖', 'tier' => '$$'],
+            ['name' => 'High-Rise Straight-Leg Jeans', 'q' => 'high rise vintage wash jeans', 'note' => 'A 90s silhouette that pairs with every thrifted tee.', 'icon' => '👖', 'tier' => '$$'],
             ['name' => 'Pearl Snap Western Shirt', 'q' => 'pearl snap western shirt', 'note' => 'Texas classic. Wear it to the market and fit right in.', 'icon' => '🤠', 'tier' => '$$'],
             ['name' => 'Leather Western Boots', 'q' => 'leather western boots', 'note' => 'Built to be broken in and passed down.', 'icon' => '👢', 'tier' => '$$$'],
             ['name' => 'Handheld Garment Steamer', 'q' => 'handheld garment steamer', 'note' => 'Wrinkle-free vintage without risking an iron on old fibers.', 'icon' => '♨️', 'tier' => '$'],
@@ -118,7 +118,7 @@ const SHOP = [
         'body'  => '<p>When you flip through bins at the market, check vinyl under good light for deep scratches and warps, and peek at the label for pressing details. Clean every new-to-you record before it touches your stylus. A basic brush and solution kit pays for itself in needle life.</p><p>Love the era? Drop a record player into your layout in the <a href="/play/room-designer/">Room Designer</a>.</p>',
         'products' => [
             ['name' => 'Belt-Drive Turntable', 'q' => 'belt drive turntable', 'note' => 'A proper entry turntable with an adjustable tonearm.', 'icon' => '💿', 'tier' => '$$'],
-            ['name' => 'Powered Bookshelf Speakers', 'q' => 'powered bookshelf speakers phono', 'note' => 'Plug-and-play sound with a built-in phono preamp.', 'icon' => '🔊', 'tier' => '$$'],
+            ['name' => 'Powered Bookshelf Speakers', 'q' => 'powered bookshelf speakers phono', 'note' => 'Warm, room-filling sound for any turntable with a preamp.', 'icon' => '🔊', 'tier' => '$$'],
             ['name' => 'Record Cleaning Kit', 'q' => 'vinyl record cleaning kit', 'note' => 'Brush plus solution: essential for flea-market vinyl.', 'icon' => '🧼', 'tier' => '$'],
             ['name' => 'Vinyl Record Storage Crate', 'q' => 'vinyl record storage crate wood', 'note' => 'Holds about 80 LPs, flip-through style.', 'icon' => '📦', 'tier' => '$'],
             ['name' => 'Outer Record Sleeves (100 pack)', 'q' => 'outer record sleeves 12 inch', 'note' => 'Protect vintage jackets from ring wear.', 'icon' => '🗂️', 'tier' => '$'],
@@ -138,7 +138,7 @@ const SHOP = [
         'body'  => '<p>Vintage glassware is everywhere at flea markets and is still affordable. Mix-and-match coupes look intentional on a bar cart. One caution: some older painted glassware and glazes contain lead, so use decorative pieces for display and choose newer or tested pieces for daily food and drink.</p><p>Pair a market haul with our <a href="/food-trucks/">food truck guide</a> and make a day of it.</p>',
         'products' => [
             ['name' => 'Gold-Rim Coupe Glasses', 'q' => 'gold rim coupe cocktail glasses', 'note' => 'Gatsby-era glamour for martinis and champagne.', 'icon' => '🥂', 'tier' => '$'],
-            ['name' => 'Mid-Century Bar Cart', 'q' => 'mid century bar cart brass', 'note' => 'Brass and glass. Rolls to wherever the party is.', 'icon' => '🛒', 'tier' => '$$'],
+            ['name' => 'Gold Three-Tier Bar Cart', 'q' => 'mid century bar cart brass', 'note' => 'Gold metal and glass. Rolls to wherever the party is.', 'icon' => '🛒', 'tier' => '$$'],
             ['name' => 'Retro Patterned Glass Tumblers', 'q' => 'retro patterned glass tumblers', 'note' => 'The 60s/70s highball look without the hunt.', 'icon' => '🥃', 'tier' => '$'],
             ['name' => 'Enamel Dutch Oven', 'q' => 'enameled cast iron dutch oven', 'note' => 'Colorful cookware that\'s been in style since the 1920s.', 'icon' => '🍲', 'tier' => '$$'],
             ['name' => 'Copper Cocktail Shaker Set', 'q' => 'copper cocktail shaker set', 'note' => 'Every tool a home bartender needs.', 'icon' => '🍹', 'tier' => '$'],
