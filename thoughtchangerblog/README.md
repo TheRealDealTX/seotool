@@ -92,7 +92,7 @@ Hosting account `u401386392`, website `thoughtchangerblog.com`.
 
 * **Password file:** `/home/u401386392/domains/thoughtchangerblog.com/tc-config.php`, which sits above
   `public_html`. Both staging and production read it (see `private_dir()`). It is already in place.
-* **Staging:** https://staging.thoughtchangerblog.com is served from `public_html/staging/`. It sends
+* **Staging (removed 2026-11-19; see below to re-create):** https://staging.thoughtchangerblog.com was served from `public_html/staging/`. It sent
   `noindex` headers, has a `Disallow: /` robots.txt, and returns 404 if requested through the main domain.
   Deployed 2026-11-19, `validate.py` passed with 0 errors, and a test contact message was delivered.
 * **Upload:** `tools/deploy.sh staging|production` (TUS upload API; its header explains the credentials).
