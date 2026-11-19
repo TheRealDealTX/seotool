@@ -49,7 +49,11 @@ function send_mail(string $to, string $subject, string $body, string $replyTo = 
             'Content-Transfer-Encoding: 8bit',
         ];
         if ($replyTo) $headers[] = "Reply-To: $replyTo";
-        $msg = implode("\r\n", $headers) . "\r\n\r\n" . preg_replace('/^\./m', '..', str_replace(["\r\n", "\r"], "\n", $body));
+        // Build with bare \n, then convert every line ending to CRLF exactly once.
+        // (Converting an already-CRLF string again produced \r\r\n and unreadable headers.)
+        $body = str_replace(["\r\n", "\r"], "\n", $body);
+        $msg = implode("\n", $headers) . "\n\n" . $body;
+        $msg = preg_replace('/^\./m', '..', $msg);          // SMTP dot-stuffing
         $cmd(str_replace("\n", "\r\n", $msg) . "\r\n.", [250]);
         $cmd('QUIT', [221]);
         fclose($fp);
