@@ -15,7 +15,9 @@ return [
     'region'      => 'WA',
     'geo'         => ['lat' => 47.6062, 'lng' => -122.3321],
     'tagline'     => 'Seattle homes for sale, neighborhood guides and local real estate advice.',
-    'social'      => [],                                     // ['https://www.facebook.com/…', …]
+    'social'      => [],
+    // Google Tag Manager container. Set to '' to remove the tag from every page.
+    'gtm_id'      => 'GTM-PSCQN66D',                                     // ['https://www.facebook.com/…', …]
     // Shown under every listing until the data comes from a live MLS/IDX feed.
     // Set to '' once app/data/listings.php holds real, current inventory.
     'listing_note' => 'Featured homes are representative of properties we help clients buy and sell across Seattle. Availability, pricing and details change quickly — contact us for current status before making plans.',

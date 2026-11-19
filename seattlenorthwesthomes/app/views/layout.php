@@ -16,6 +16,14 @@ $isActive = fn($href) => $href === '/' ? $current === '/' : str_starts_with($cur
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<?php if (cfg('gtm_id')): ?>
+<script async src="https://www.googletagmanager.com/gtm.js?id=<?= e(cfg('gtm_id')) ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<?php endif ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['description']) ?>">
