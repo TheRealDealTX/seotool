@@ -106,8 +106,9 @@ Hosting account `u401386392`, website `thoughtchangerblog.com`.
 Kept in `public_html`: both Google Search Console verification files (`google*.html`),
 Hostinger's `.private/` and `wp-content/uploads/`. `llms.txt` is regenerated from `posts.json`.
 
-**Rollback:** move everything in `wp-backup-20261119/public_html/` back into `public_html/` (overwriting
-`index.php` and `.htaccess`), then clear the cache. The WordPress database was never touched.
+**WordPress removed (2026-11-19):** its database `u401386392_qelMr` was deleted and the
+`wp-backup-20261119/` folder was deleted (it sits in the hPanel File Manager trash until that is emptied).
+There is no WordPress rollback any more. Media in `wp-content/uploads/` is kept because the new site serves it.
 
 The staging subdomain and `public_html/staging/` were removed on 2026-11-19. To preview a change later, re-create the
 subdomain (`hosting_websites_add-domain`, name `staging`, directory `staging`) and run `tools/deploy.sh staging`.
