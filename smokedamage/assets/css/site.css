@@ -546,3 +546,15 @@ fieldset.q-block { border: 0; border-bottom: 1px solid var(--line); margin: 0; p
 fieldset.q-block > legend { float: left; width: 100%; }
 fieldset.q-block > legend + * { clear: both; }
 @media (min-width: 900px) { .doc-groups { grid-template-columns: 2fr 1fr 1fr; } .doc-group:first-child .doc-grid { grid-template-columns: 1fr 1fr; } }
+
+/* --- contrast fixes: components placed inside .prose keep their own colors --- */
+.prose a.btn, .prose a.btn:hover { color: #1b1b1b; text-decoration: none; }
+.prose a.btn-dark, .prose a.btn-dark:hover { color: #fff; }
+.prose a.btn-outline { color: var(--charcoal); }
+.prose .cta-banner p, .prose .cta-banner li { color: rgba(255, 255, 255, .82); }
+.prose .cta-banner strong, .prose .cta-banner .cta-title { color: #fff; }
+.prose .cta-banner a:not(.btn) { color: #FFB386; }
+.prose .cta-banner a.btn-outline, .prose .cta-banner a.btn-outline:hover { color: #fff; }
+.prose .card p, .prose .card li { color: var(--ink-soft); }
+.site-footer a.btn, .site-footer a.btn:hover { color: #1b1b1b; }
+.timeline-h .t-num { color: var(--orange-ink); }
