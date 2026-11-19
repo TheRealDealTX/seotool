@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /inc/
+Disallow: /content/
+Disallow: /scripts/
+
+Sitemap: https://exitrealestate540.com/sitemap.xml
