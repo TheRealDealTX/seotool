@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Find a Summer Apartment for Students in Houston',
   'seo_title'   => 'Summer Apartments for Students in Houston: A Practical Guide',
-  'description' => 'Need a summer apartment for students in Houston? Learn which neighborhoods to target, where to search for short-term leases and how to avoid costly mistakes.',
+  'description' => 'Find a summer apartment for students in Houston: neighborhoods to target, where to find short-term leases and mistakes to avoid.',
   'keyword'     => 'summer apartment for students in Houston',
   'category'    => 'apartment-living',
   'date'        => '2025-06-06',

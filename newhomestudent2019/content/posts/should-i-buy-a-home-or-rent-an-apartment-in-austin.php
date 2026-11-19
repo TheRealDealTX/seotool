@@ -2,7 +2,7 @@
 return [
   'title'       => 'Should I Buy a Home or Rent an Apartment in Austin?',
   'seo_title'   => 'Buy a Home or Rent an Apartment in Austin? How to Decide',
-  'description' => 'Should you buy a home or rent an apartment in Austin? Compare costs, flexibility, taxes and timelines with a simple framework so you can decide confidently.',
+  'description' => 'Should you buy a home or rent an apartment in Austin? Compare costs, flexibility, taxes and timelines with a simple framework.',
   'keyword'     => 'buy a home or rent in Austin',
   'category'    => 'tips',
   'date'        => '2022-05-30',

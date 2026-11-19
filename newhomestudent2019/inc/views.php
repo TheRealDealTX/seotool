@@ -93,7 +93,7 @@ function view_archive(string $path, string $h1, string $lead, string $title, str
     if ($page < 1 || $page > $pages) view_404();
     $slice = array_slice($posts, ($page - 1) * $per, $per);
     $h = page_hero($h1, $lead, $crumbs, $extra);
-    $h .= '<section class="section"><div class="wrap"><div class="card-grid">';
+    $h .= '<section class="section"><div class="wrap"><h2 class="sr">' . ($page > 1 ? 'Articles — page ' . $page : 'Latest articles') . '</h2><div class="card-grid">';
     foreach ($slice as $p) $h .= post_card($p);
     $h .= '</div>' . pagination($page, $pages, $path) . '</div></section>' . cta_band();
     $canon = $page > 1 ? $path . 'page/' . $page . '/' : $path;
@@ -115,7 +115,7 @@ function view_blog(int $page): never {
     view_archive('/blog/', 'The New Home Builder\'s Blog',
         'Practical, plain-English guides on building, buying and investing in a home in Texas — plus the tools and books we recommend.',
         'New Home Building Blog: Tips, Guides & Checklists | NHIK',
-        'Guides for owner-builders and future homeowners: budgeting, building codes, construction timelines, inspections, buying, moving and real estate investing.',
+        'Guides for owner-builders and homeowners: budgets, building codes, construction timelines, inspections, buying, moving and investing.',
         all_posts(), $page, [['Home', '/'], ['Blog', '/blog/']], $chips);
 }
 
@@ -129,7 +129,7 @@ function view_author(int $page): never {
     $lead = 'Jonathon founded New Home Investing Knowledge to share what he learned over more than a decade of helping people design, build and invest in new homes across Texas. He writes for owner-builders, families hiring a builder, and new real estate investors.';
     view_archive('/author/jonathon/', 'Articles by Jonathon', e($lead),
         'Jonathon — Founder & Author | New Home Investing Knowledge',
-        'Guides on building a new home, owner-building, Texas building codes, buying and real estate investing by Jonathon, founder of New Home Investing Knowledge.',
+        'Guides on building a new home, owner-building, Texas building codes and real estate investing by Jonathon, founder of the site.',
         all_posts(), $page, [['Home', '/'], ['Authors', '/about-us/'], ['Jonathon', '/author/jonathon/']]);
 }
 
@@ -169,7 +169,7 @@ function view_page(string $slug, array $pg): never {
 
 function view_404(): never {
     $h = page_hero('Page not found', 'That page may have moved when we rebuilt the site. Try one of these instead:');
-    $h .= '<section class="section"><div class="wrap"><div class="card-grid">';
+    $h .= '<section class="section"><div class="wrap"><h2 class="sr">Popular guides</h2><div class="card-grid">';
     foreach (array_slice(all_posts(), 0, 6) as $p) $h .= post_card($p);
     $h .= '</div><p class="center"><a class="btn" href="/blog/">Browse all guides</a></p></div></section>';
     render_page(['title' => 'Page Not Found | ' . SITE['name'], 'description' => 'The page you were looking for could not be found.', 'path' => '/404', 'body' => $h, 'noindex' => true, 'status' => 404]);

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Build a Home or Buy an Already Built One? Weighing the Pros and Cons',
   'seo_title'   => 'Build or Buy a Home? Pros and Cons to Weigh in Texas',
-  'description' => 'Should you build a home or buy an already built one? Compare cost, timeline, customization and risk side by side, plus a simple test to decide which fits you.',
+  'description' => 'Build a home or buy one already built? Compare cost, timeline, customization and risk side by side, plus a simple test to decide.',
   'keyword'     => 'build or buy a home',
   'category'    => 'building-tips',
   'date'        => '2023-08-23',

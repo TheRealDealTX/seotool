@@ -2,7 +2,7 @@
 return [
   'title'       => 'Public Adjusters and Investment Planning: An Unexpected Connection',
   'seo_title'   => 'Public Adjusters and Investment Planning: How They Connect',
-  'description' => 'How public adjusters fit into investment planning: what they do, Texas licensing and fees, and how a fair insurance claim protects your real estate equity.',
+  'description' => 'How public adjusters fit into investment planning: what they do, Texas licensing, and how a fair claim protects your real estate equity.',
   'keyword'     => 'public adjusters and investment planning',
   'category'    => 'real-estate-investing',
   'date'        => '2025-05-27',

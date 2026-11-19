@@ -2,7 +2,7 @@
 return [
   'title'       => 'First Things to Buy for a New Home: A New Homeowner Checklist',
   'seo_title'   => 'First Things to Buy for a New Home: Essentials Checklist',
-  'description' => 'The first things to buy for a new home: safety gear, basic tools, leak and security protection, comfort upgrades and storage. A practical move-in checklist.',
+  'description' => 'The first things to buy for a new home: safety gear, basic tools, leak and security protection, comfort upgrades and storage.',
   'keyword'     => 'first things to buy for a new home',
   'category'    => 'tips',
   'date'        => '2026-11-19',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'How Property Condition Reports Impact Investment Value',
   'seo_title'   => 'How Property Condition Reports Impact Investment Value',
-  'description' => 'How property condition reports impact investment value: what a PCR covers, how buyers and lenders use it, and how to use findings to negotiate a better deal.',
+  'description' => 'How property condition reports impact investment value: what a PCR covers, how lenders use it and how to negotiate with the findings.',
   'keyword'     => 'property condition report',
   'category'    => 'real-estate-investing',
   'date'        => '2025-06-24',

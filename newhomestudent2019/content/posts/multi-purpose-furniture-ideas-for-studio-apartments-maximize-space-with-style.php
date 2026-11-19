@@ -2,7 +2,7 @@
 return [
   'title'       => 'Multi-Purpose Furniture Ideas for Studio Apartments: Maximize Space with Style',
   'seo_title'   => 'Multi-Purpose Furniture Ideas for Studio Apartments',
-  'description' => 'Multi-purpose furniture ideas for studio apartments: futons, fold-down desks, storage ottomans and more to make one room work for sleep, work and guests.',
+  'description' => 'Multi-purpose furniture ideas for studio apartments: futons, fold-down desks and storage ottomans that make one room do it all.',
   'keyword'     => 'multi-purpose furniture for studio apartments',
   'category'    => 'apartment-living',
   'date'        => '2024-10-27',

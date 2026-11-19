@@ -2,7 +2,7 @@
 return [
   'title'       => 'The Art of Home Design: Where Passion Meets Comfort',
   'seo_title'   => 'The Art of Home Design: Blend Passion, Style and Comfort',
-  'description' => 'The art of home design is making a house that reflects you and feels good to live in. Learn how to plan flow, light, materials and style for your new build.',
+  'description' => 'The art of home design: create a house that reflects you. Learn how to plan flow, light, materials and style for your new build.',
   'keyword'     => 'art of home design',
   'category'    => 'building-tips',
   'date'        => '2024-10-17',

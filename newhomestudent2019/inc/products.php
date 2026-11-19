@@ -47,7 +47,7 @@ function product_card(array $p): string {
     return '<div class="product">'
         . '<span class="product-icon">' . icon($iconName) . '</span>'
         . '<div class="product-body">'
-        . '<h4>' . e($p['name']) . '</h4>'
+        . '<h3 class="product-name">' . e($p['name']) . '</h3>'
         . '<p>' . e($p['blurb']) . '</p>'
         . '<a class="btn btn-amz" href="' . e($p['url']) . '" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a>'
         . '</div></div>';

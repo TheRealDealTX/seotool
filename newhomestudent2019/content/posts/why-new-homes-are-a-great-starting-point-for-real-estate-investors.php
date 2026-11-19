@@ -2,7 +2,7 @@
 return [
   'title'       => 'Why New Homes Are a Great Starting Point for Real Estate Investors',
   'seo_title'   => 'Why New Homes Are a Smart Start for Real Estate Investors',
-  'description' => 'Why new homes are a great starting point for real estate investors: fewer early repairs, builder warranties, tenant appeal, and the trade-offs to weigh.',
+  'description' => 'Why new homes are a smart start for real estate investors: fewer early repairs, builder warranties, tenant appeal and the trade-offs.',
   'keyword'     => 'new homes for real estate investors',
   'category'    => 'real-estate-investing',
   'date'        => '2025-05-18',

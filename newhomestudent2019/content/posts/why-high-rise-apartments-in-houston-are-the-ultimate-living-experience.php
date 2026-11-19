@@ -2,7 +2,7 @@
 return [
   'title'       => 'Why High-Rise Apartments in Houston Are Worth a Look',
   'seo_title'   => 'High-Rise Apartments in Houston: Pros, Costs and Tips',
-  'description' => 'Thinking about high-rise apartments in Houston? Learn the real pros and trade-offs, which neighborhoods to tour and what to ask before you sign a lease.',
+  'description' => 'Thinking about high-rise apartments in Houston? The real pros and trade-offs, neighborhoods to tour and what to ask before you sign.',
   'keyword'     => 'high-rise apartments in Houston',
   'category'    => 'apartment-living',
   'date'        => '2024-09-11',

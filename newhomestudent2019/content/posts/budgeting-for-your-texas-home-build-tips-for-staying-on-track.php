@@ -2,7 +2,7 @@
 return [
   'title'       => 'Budgeting for Your Texas Home Build: Tips for Staying on Track',
   'seo_title'   => 'Budgeting for a Texas Home Build: How to Stay on Track',
-  'description' => 'Budgeting for a home build in Texas starts before the slab. Learn what to include, how big a contingency to set, and how to stop overruns before they start.',
+  'description' => 'Budgeting for a Texas home build: what to include, how big a contingency to set and how to stop cost overruns before they start.',
   'keyword'     => 'budgeting for a home build',
   'category'    => 'building-tips',
   'date'        => '2023-09-06',

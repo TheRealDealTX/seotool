@@ -2,7 +2,7 @@
 return [
   'title'       => 'Building Your Texan Haven: Choosing the Ideal Home for a Family of Four',
   'seo_title'   => 'Best Home for a Family of Four in Texas: Styles and Layouts',
-  'description' => 'Choosing a home for a family of four in Texas? Compare ranch, two-story, farmhouse, Hill Country and more, plus layout tips that suit kids and the heat.',
+  'description' => 'Choosing a home for a family of four in Texas? Compare ranch, two-story and farmhouse styles, plus layouts that suit kids and heat.',
   'keyword'     => 'home for a family of four',
   'category'    => 'building-tips',
   'date'        => '2023-08-31',

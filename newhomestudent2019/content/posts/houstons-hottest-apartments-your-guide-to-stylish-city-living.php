@@ -2,7 +2,7 @@
 return [
   'title'       => 'Houston Apartments Worth Touring: A Guide to Stylish City Living',
   'seo_title'   => 'Stylish Houston Apartments: Communities Worth Touring',
-  'description' => 'Searching for stylish Houston apartments? Compare communities from the Energy Corridor to Memorial and north Houston, plus what to verify before you lease.',
+  'description' => 'Looking for stylish Houston apartments? Compare communities from the Energy Corridor to Memorial, plus what to verify before you lease.',
   'keyword'     => 'stylish Houston apartments',
   'category'    => 'apartment-living',
   'date'        => '2024-10-22',

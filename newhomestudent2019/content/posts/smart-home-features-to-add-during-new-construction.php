@@ -2,7 +2,7 @@
 return [
   'title'       => 'Smart Home Features to Add During New Construction',
   'seo_title'   => 'Smart Home Features for New Construction: Pre-Wire Guide',
-  'description' => 'Smart home features for new construction: what to pre-wire while walls are open (Cat6, conduit, PoE, EV circuit, surge) and which devices to add. Plan it now.',
+  'description' => 'Smart home features for new construction: what to pre-wire while walls are open (Cat6, PoE, EV circuit, surge) and which devices to add.',
   'keyword'     => 'smart home features for new construction',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

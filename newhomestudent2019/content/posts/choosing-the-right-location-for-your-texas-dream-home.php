@@ -2,7 +2,7 @@
 return [
   'title'       => 'Choosing the Right Location for Your Texas Dream Home',
   'seo_title'   => 'Choosing the Right Location for Your Texas Dream Home',
-  'description' => 'Choosing the right location for your home in Texas shapes cost, comfort and resale. Use this checklist on taxes, flood risk, schools, commute and utilities.',
+  'description' => 'Choosing the right location for your Texas home: a checklist on taxes, flood risk, schools, commute and utilities before you buy land.',
   'keyword'     => 'choosing the right location for your home',
   'category'    => 'building-tips',
   'date'        => '2023-09-04',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Understanding Building Codes in Houston, TX: What You Need to Know',
   'seo_title'   => 'Houston Building Codes: A Guide for New Home Builders',
-  'description' => 'Houston building codes explained: which codes apply, floodplain and wind rules, no-zoning realities, and how the Houston Permitting Center process works.',
+  'description' => 'Houston building codes explained: which codes apply, floodplain and wind rules, no-zoning realities and the permitting process.',
   'keyword'     => 'houston building codes',
   'category'    => 'building-tips',
   'date'        => '2024-12-03',

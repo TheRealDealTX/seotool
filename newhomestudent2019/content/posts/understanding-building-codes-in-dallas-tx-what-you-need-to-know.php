@@ -2,7 +2,7 @@
 return [
   'title'       => 'Understanding Building Codes in Dallas, TX: What You Need to Know',
   'seo_title'   => 'Dallas Building Codes: What New Home Builders Need',
-  'description' => 'Building in Dallas? Learn which codes apply to new homes, how zoning and expansive clay soils shape your plans, and how permits and inspections work.',
+  'description' => 'Building in Dallas? Which codes apply to new homes, how zoning and expansive clay soil shape plans, and how permits work.',
   'keyword'     => 'dallas building codes',
   'category'    => 'building-tips',
   'date'        => '2025-01-26',

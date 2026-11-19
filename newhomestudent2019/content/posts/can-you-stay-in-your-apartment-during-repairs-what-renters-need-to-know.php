@@ -2,7 +2,7 @@
 return [
   'title'       => 'Can You Stay in Your Apartment During Repairs? What Renters Need to Know',
   'seo_title'   => 'Can You Stay in Your Apartment During Repairs? Renter Guide',
-  'description' => 'Can you stay in your apartment during repairs? See which repairs make a unit unlivable, what Texas landlords generally must fix, and your housing options.',
+  'description' => 'Can you stay in your apartment during repairs? Which repairs make a unit unlivable, what Texas landlords must fix and your options.',
   'keyword'     => 'stay in apartment during repairs',
   'category'    => 'apartment-living',
   'date'        => '2025-03-31',

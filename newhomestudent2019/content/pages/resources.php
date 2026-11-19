@@ -3,7 +3,7 @@ return [
     'title' => 'Home building resources: guides, checklists & official links',
     'crumb' => 'Resources',
     'seo_title' => 'Home Building Resources: Guides, Checklists & Links',
-    'description' => 'Every guide, checklist and official resource you need to build a new home in Texas, organized by stage: plan, finance, permit, build, inspect and move in.',
+    'description' => 'Every guide, checklist and official resource for building a new home in Texas, organized by stage: plan, finance, permit, build, move in.',
     'lead' => 'Building beautiful homes: our guides, how-tos and the official sources we trust, organized by stage of your build.',
     'wide' => true,
     'body' => <<<'HTML'

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Relocating to Austin, Texas: Is It Worth It? (Updated Guide)',
   'seo_title'   => 'Relocating to Austin, Texas: Is It Worth It? (Updated)',
-  'description' => 'Relocating to Austin, Texas? Weigh jobs, housing costs, property taxes, traffic, heat and lifestyle in this updated guide to decide if the move fits you.',
+  'description' => 'Relocating to Austin, Texas? Weigh jobs, housing costs, property taxes, traffic and heat to decide if the move is right for you.',
   'keyword'     => 'relocating to Austin Texas',
   'category'    => 'tips',
   'date'        => '2023-08-24',

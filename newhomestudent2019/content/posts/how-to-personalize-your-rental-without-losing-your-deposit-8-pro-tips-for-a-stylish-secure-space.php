@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Personalize Your Rental Without Losing Your Deposit: 8 Pro Tips',
   'seo_title'   => 'Personalize Your Rental Without Losing Your Deposit: 8 Tips',
-  'description' => 'Learn how to personalize your rental without losing your deposit: 8 renter-friendly upgrades for walls, floors, lighting and storage that come off clean.',
+  'description' => 'Personalize your rental without losing your deposit: 8 renter-friendly upgrades for walls, floors, lighting and storage.',
   'keyword'     => 'personalize your rental without losing your deposit',
   'category'    => 'apartment-living',
   'date'        => '2024-10-26',

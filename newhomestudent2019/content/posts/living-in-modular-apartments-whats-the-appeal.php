@@ -2,7 +2,7 @@
 return [
   'title'       => 'Living in Modular Apartments: What\'s the Appeal?',
   'seo_title'   => 'Modular Apartments: Pros, Cons and What Renters Should Know',
-  'description' => 'Curious about modular apartments? Learn how they are built, the real pros and cons for renters and what modular living can teach you about building a home.',
+  'description' => 'Curious about modular apartments? How they\'re built, the pros and cons for renters, and what modular teaches you about building a home.',
   'keyword'     => 'modular apartments',
   'category'    => 'apartment-living',
   'date'        => '2024-11-27',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Crafting Comfort and Joy: The 6 Keys to a Great Home',
   'seo_title'   => 'The 6 Keys to a Great Home: Design for Comfort and Joy',
-  'description' => 'The 6 keys to a great home: function, comfort, personality, light, nature and gathering space. Learn how to design each into your new build from day one.',
+  'description' => 'The 6 keys to a great home: function, comfort, personality, light, nature and gathering space, and how to design each into your build.',
   'keyword'     => '6 keys to a great home',
   'category'    => 'building-tips',
   'date'        => '2023-08-29',

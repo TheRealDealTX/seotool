@@ -5,14 +5,14 @@ const SITE = [
     'short'       => 'New Home Investing Knowledge',
     'tagline'     => 'Training, tools & honest advice for building your dream home',
     'origin'      => 'https://newhomestudent2019.com',
-    'email'       => 'jonathon@newhomestudent2019.com',
+    'email'       => 'info@newhomestudent2019.com',
     'phone'       => '(832) 720-7978',
     'phone_href'  => '+18327207978',
     'author'      => 'Jonathon',
     'region'      => 'Texas',
     'amazon_tag'  => 'newhomestudent2019-20',
-    'lead_to'     => 'jonathon@newhomestudent2019.com',   // where free-training sign-ups are emailed
-    'mail_from'   => 'no-reply@newhomestudent2019.com',
+    'lead_to'     => 'info@newhomestudent2019.com',   // where free-training sign-ups are emailed
+    'mail_from'   => 'info@newhomestudent2019.com',
     'per_page'    => 12,
 ];
 

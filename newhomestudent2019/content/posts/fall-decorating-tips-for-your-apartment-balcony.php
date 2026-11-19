@@ -2,7 +2,7 @@
 return [
   'title'       => 'Fall Decorating Tips for Your Apartment Balcony',
   'seo_title'   => 'Fall Balcony Decorating Tips for Apartments (Renter-Safe)',
-  'description' => 'Fall decorating tips for your apartment balcony: seasonal plants, cozy textiles, warm lighting and fire-safe ideas that fit small spaces and lease rules.',
+  'description' => 'Fall decorating tips for your apartment balcony: seasonal plants, cozy textiles, warm lighting and fire-safe, lease-friendly ideas.',
   'keyword'     => 'fall apartment balcony decorating',
   'category'    => 'apartment-living',
   'date'        => '2024-11-21',

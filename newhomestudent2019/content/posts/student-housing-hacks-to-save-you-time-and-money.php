@@ -2,7 +2,7 @@
 return [
   'title'       => 'Student Housing Hacks to Save You Time and Money',
   'seo_title'   => 'Student Housing Hacks to Save Time and Money in College',
-  'description' => 'Student housing hacks that save time and money: pick the right lease, split bills fairly, cut utility costs, meal prep and organize a small room so it works.',
+  'description' => 'Student housing hacks that save time and money: the right lease, fair bill splitting, lower utilities, meal prep and small-room storage.',
   'keyword'     => 'student housing hacks',
   'category'    => 'apartment-living',
   'date'        => '2025-07-23',

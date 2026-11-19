@@ -2,7 +2,7 @@
 return [
   'title'       => 'Why Urban Living Might Be the Best Choice for Your Lifestyle (Updated Guide)',
   'seo_title'   => 'Urban Living Benefits: Is City Life Right for You?',
-  'description' => 'Weighing urban living against the suburbs? See the real benefits and trade-offs of city apartments and how to decide if city life fits your goals.',
+  'description' => 'Urban living vs. the suburbs: the real benefits and trade-offs of city apartments, and how to decide if city life fits your goals.',
   'keyword'     => 'urban living',
   'category'    => 'apartment-living',
   'date'        => '2024-10-14',

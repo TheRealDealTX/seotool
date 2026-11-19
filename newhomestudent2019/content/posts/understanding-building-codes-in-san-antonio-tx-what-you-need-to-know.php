@@ -2,7 +2,7 @@
 return [
   'title'       => 'Understanding Building Codes in San Antonio, TX: What You Need to Know',
   'seo_title'   => 'San Antonio Building Codes: Permits, Zoning & Inspections',
-  'description' => 'San Antonio building codes made simple: permits through BuildSA, zoning, inspections, floodplain and energy rules. Get your new home approved without delays.',
+  'description' => 'San Antonio building codes made simple: BuildSA permits, zoning, inspections, floodplain and energy rules for new homes.',
   'keyword'     => 'san antonio building codes',
   'category'    => 'building-tips',
   'date'        => '2025-02-16',

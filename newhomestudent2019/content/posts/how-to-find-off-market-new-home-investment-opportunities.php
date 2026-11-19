@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Find Off-Market New Home Investment Opportunities',
   'seo_title'   => 'How to Find Off-Market New Home Investment Deals',
-  'description' => 'Learn how to find off-market new home investment opportunities through builders, agents, land owners and direct outreach, plus how to vet each deal safely.',
+  'description' => 'How to find off-market new home investment deals through builders, agents, land owners and direct outreach, and how to vet each one.',
   'keyword'     => 'off-market new home investment opportunities',
   'category'    => 'real-estate-investing',
   'date'        => '2025-03-18',

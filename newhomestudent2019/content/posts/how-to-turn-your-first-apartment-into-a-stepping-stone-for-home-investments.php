@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Turn Your First Apartment into a Stepping Stone for Home Investments',
   'seo_title'   => 'Turn Your First Apartment Into a Home Investing Start',
-  'description' => 'Use your first apartment as a stepping stone to home investing: build credit and savings, learn maintenance, study leases and plan your first purchase.',
+  'description' => 'Use your first apartment as a stepping stone to home investing: build credit and savings, learn maintenance and plan your first buy.',
   'keyword'     => 'first apartment stepping stone to home investing',
   'category'    => 'real-estate-investing',
   'date'        => '2025-05-07',

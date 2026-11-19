@@ -14,7 +14,7 @@ foreach ($slugs as $s) {
     foreach (['title','seo_title','description','keyword','category','date','updated','excerpt','body','faq'] as $k) if (empty($p[$k])) $err[] = "$s: missing $k";
     if (!isset(CATEGORIES[$p['category'] ?? ''])) $err[] = "$s: bad category {$p['category']}";
     $tl = mb_strlen($p['seo_title'] ?? ''); if ($tl > 65 || $tl < 30) $warn[] = "$s: seo_title length $tl";
-    $dl = mb_strlen($p['description'] ?? ''); if ($dl > 165 || $dl < 110) $warn[] = "$s: description length $dl";
+    $dl = mb_strlen($p['description'] ?? ''); if ($dl > 145) $err[] = "$s: description $dl chars (max 145)"; elseif ($dl < 110) $warn[] = "$s: description only $dl chars";
     if (isset($titles[$p['seo_title']])) $err[] = "$s: duplicate seo_title"; $titles[$p['seo_title']] = 1;
     if (isset($descs[$p['description']])) $err[] = "$s: duplicate description"; $descs[$p['description']] = 1;
     $b = $p['body'];

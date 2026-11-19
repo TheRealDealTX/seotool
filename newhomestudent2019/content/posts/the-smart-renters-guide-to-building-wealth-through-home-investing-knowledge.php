@@ -2,7 +2,7 @@
 return [
   'title'       => 'The Smart Renter\'s Guide to Building Wealth Through Home Investing Knowledge',
   'seo_title'   => 'Smart Renter\'s Guide to Building Wealth Through Real Estate',
-  'description' => 'A smart renter\'s guide to building wealth: save with purpose, learn real estate basics, build credit, and get ready to buy or build when the numbers work.',
+  'description' => 'A smart renter\'s guide to building wealth: save with purpose, learn real estate basics, build credit and get ready to buy or build.',
   'keyword'     => 'building wealth as a renter',
   'category'    => 'real-estate-investing',
   'date'        => '2025-04-23',

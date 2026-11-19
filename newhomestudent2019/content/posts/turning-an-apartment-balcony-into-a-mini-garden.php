@@ -2,7 +2,7 @@
 return [
   'title'       => 'Turning an Apartment Balcony into a Mini Garden',
   'seo_title'   => 'How to Turn an Apartment Balcony into a Mini Garden',
-  'description' => 'Turn your apartment balcony into a mini garden: read your sunlight, pick lightweight containers, grow herbs and veggies vertically and keep it lease-friendly.',
+  'description' => 'Turn your apartment balcony into a mini garden: read your sunlight, pick light containers, grow vertically and stay lease-friendly.',
   'keyword'     => 'apartment balcony garden',
   'category'    => 'apartment-living',
   'date'        => '2025-06-18',

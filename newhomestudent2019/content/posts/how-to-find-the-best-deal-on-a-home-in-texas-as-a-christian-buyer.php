@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Find the Best Deal on a Home in Texas as a Christian Buyer',
   'seo_title'   => 'Best Deal on a Home in Texas: A Christian Buyer Guide',
-  'description' => 'How to find the best deal on a home in Texas as a Christian buyer: budget with stewardship, research prices, negotiate fairly and avoid overbuying. Read more.',
+  'description' => 'Find the best deal on a home in Texas as a Christian buyer: budget with stewardship, research prices, negotiate fairly, avoid overbuying.',
   'keyword'     => 'best deal on a home in Texas',
   'category'    => 'tips',
   'date'        => '2022-05-18',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Requirements When Building a New House in Austin, Texas',
   'seo_title'   => 'Requirements for Building a New House in Austin, TX',
-  'description' => 'Building a new house in Austin? See the zoning, permit, tree, utility and inspection requirements to plan for, plus how to avoid the most common delays.',
+  'description' => 'Building a new house in Austin? The zoning, permit, tree, utility and inspection requirements to plan for, and how to avoid delays.',
   'keyword'     => 'building a new house in austin texas',
   'category'    => 'building-tips',
   'date'        => '2023-08-28',

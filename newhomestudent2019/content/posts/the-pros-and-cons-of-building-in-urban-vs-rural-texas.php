@@ -2,7 +2,7 @@
 return [
   'title'       => 'The Pros and Cons of Building in Urban vs. Rural Texas',
   'seo_title'   => 'Building in Urban vs. Rural Texas: Pros, Cons and Costs',
-  'description' => 'Weighing building in urban vs. rural Texas? Compare lot costs, utilities, permits, commute and lifestyle so you pick land that fits your budget and your life.',
+  'description' => 'Building in urban vs. rural Texas? Compare lot costs, utilities, permits, commute and lifestyle to pick land that fits your life.',
   'keyword'     => 'building in urban vs rural Texas',
   'category'    => 'building-tips',
   'date'        => '2023-09-05',

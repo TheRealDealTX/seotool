@@ -2,7 +2,7 @@
 return [
   'title'       => 'Is Building a Tiny Home in Texas Worth It? (Updated Guide)',
   'seo_title'   => 'Is Building a Tiny Home in Texas Worth It? Updated Guide',
-  'description' => 'Is building a tiny home in Texas worth it? Weigh costs, zoning, financing, heat and lifestyle trade-offs, and see how premade plans can save you money.',
+  'description' => 'Is building a tiny home in Texas worth it? Weigh costs, zoning, financing, heat and lifestyle, and see how premade plans save money.',
   'keyword'     => 'building a tiny home in Texas',
   'category'    => 'building-tips',
   'date'        => '2023-08-10',

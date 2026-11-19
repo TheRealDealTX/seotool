@@ -25,7 +25,10 @@ export NH_FB_URL=… NH_FB_AUTH=… NH_FB_REST=…   # from agency-hosting_files
 
 `deploy.sh` uploads everything except `backup/`, `storage/`, Markdown files and the
 dev scripts. `storage/` exists on the server only: it holds `leads.php` (free-training
-sign-ups as CSV behind an `exit` line) and the form signing secret.
+sign-ups as CSV behind an `exit` line), the form signing secret, and
+`mail-config.php` — the SMTP login for info@newhomestudent2019.com that `inc/mailer.php` uses to
+email sign-ups (smtp.hostinger.com:465). If you change the mailbox password, update that file on the
+server (File Manager → public_html/storage/mail-config.php); it is deliberately not in git.
 
 ### Cut-over checklist (done 2026-11-19 except where noted)
 
@@ -33,7 +36,7 @@ sign-ups as CSV behind an `exit` line) and the form signing secret.
 2. Attach it to `orKz31Eb7` as the primary domain and enable SSL.
 3. Clear the CDN cache; spot-check `/`, a post, `/feed/`, `/sitemap.xml`, an old `/wp-content/uploads/…` image URL.
 4. **To do:** resubmit `https://newhomestudent2019.com/sitemap.xml` in Google Search Console.
-5. **To do:** send a test sign-up from `/free-training/` and confirm the email arrives at jonathon@.
+5. **To do:** send a test sign-up from `/free-training/` and confirm the email arrives at info@ (SMTP login verified from the server 2026-11-19; no test message sent).
 6. Keep the WordPress site (or a full backup of it) for a few weeks before deleting it.
 
 ## Layout
@@ -50,6 +53,8 @@ sign-ups as CSV behind an `exit` line) and the form signing secret.
 | `content/pages/<slug>.php` | Simple pages (about, contact, legal, resources, build-a-home-yourself, write-for-us) |
 | `data/product-meta.php` | Product catalog: name, blurb, group, fallback search query |
 | `data/asins.php` | Verified Amazon ASINs per product key |
+| `inc/mailer.php` | Authenticated SMTP sender for the free-training form (reads `storage/mail-config.php`) |
+| `data/site.webmanifest.json` | Web app manifest, served at `/site.webmanifest` by index.php with the correct MIME type |
 | `data/legacy-images.php` | Old `/wp-content/uploads/…` featured-image paths → new WebP files |
 | `assets/` | CSS, JS (mobile menu only), images |
 | `backup/` | WordPress REST export of all posts/pages/media + original images (not deployed) |

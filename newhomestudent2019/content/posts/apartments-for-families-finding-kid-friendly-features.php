@@ -2,7 +2,7 @@
 return [
   'title'       => 'Apartments for Families: How to Find Kid-Friendly Features',
   'seo_title'   => 'Kid-Friendly Apartments for Families: What to Look For',
-  'description' => 'Searching for kid-friendly apartments for families? Use this checklist for space, safety, play areas, schools and lease terms before you sign anything.',
+  'description' => 'Looking for kid-friendly apartments? Use this checklist for space, safety, play areas, schools and lease terms before you sign.',
   'keyword'     => 'kid-friendly apartments for families',
   'category'    => 'apartment-living',
   'date'        => '2024-11-17',

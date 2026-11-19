@@ -2,7 +2,7 @@
 return [
   'title'       => 'Moving in Texas with a Pet: A Complete Guide (Updated)',
   'seo_title'   => 'Moving in Texas with a Pet: Complete Guide (Updated)',
-  'description' => 'Moving in Texas with a pet? Plan vet visits, ID updates, heat-safe travel, pet-friendly housing and local rules with this updated step-by-step guide.',
+  'description' => 'Moving in Texas with a pet? Plan vet visits, ID updates, heat-safe travel and pet-friendly housing with this step-by-step guide.',
   'keyword'     => 'moving in Texas with a pet',
   'category'    => 'tips',
   'date'        => '2023-09-01',

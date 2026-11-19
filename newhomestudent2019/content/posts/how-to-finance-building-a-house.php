@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Finance Building a House: Construction Loans Explained',
   'seo_title'   => 'How to Finance Building a House: Loans, Draws, Tips',
-  'description' => 'How to finance building a house: construction-to-permanent loans, stand-alone and lot loans, draws, down payments and owner-builder hurdles. Know the options.',
+  'description' => 'How to finance building a house: construction-to-permanent loans, lot loans, draws, down payments and owner-builder hurdles.',
   'keyword'     => 'how to finance building a house',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

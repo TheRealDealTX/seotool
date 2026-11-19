@@ -2,7 +2,7 @@
 return [
   'title'       => 'How Much Does It Cost to Build a House in Texas?',
   'seo_title'   => 'Cost to Build a House in Texas: Drivers, Ranges, Tips',
-  'description' => 'What drives the cost to build a house in Texas: land, site work, foundation, finishes, utilities and fees, with rough ranges and how to get real bids.',
+  'description' => 'What drives the cost to build a house in Texas: land, site work, foundation, finishes and fees, with rough ranges and how to get bids.',
   'keyword'     => 'cost to build a house in texas',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

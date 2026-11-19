@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Choose a Floor Plan for Your New Home',
   'seo_title'   => 'How to Choose a Floor Plan for Your New Home in Texas',
-  'description' => 'How to choose a floor plan that fits how you live: lifestyle audit, room adjacencies, Texas sun, storage, aging in place and resale. Pick the right plan.',
+  'description' => 'How to choose a floor plan that fits how you live: room adjacencies, Texas sun, storage, aging in place and resale value.',
   'keyword'     => 'how to choose a floor plan',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Why Millennials and Gen Z Are Choosing Apartments Over Home Ownership',
   'seo_title'   => 'Why Millennials and Gen Z Choose Apartments Over Buying',
-  'description' => 'Why millennials and Gen Z choose apartments over home ownership: affordability, flexibility, amenities and lifestyle, and how renters can still build wealth.',
+  'description' => 'Why millennials and Gen Z choose apartments over buying: affordability, flexibility and lifestyle, and how renters can build wealth.',
   'keyword'     => 'millennials and gen z choosing apartments',
   'category'    => 'real-estate-investing',
   'date'        => '2024-11-01',

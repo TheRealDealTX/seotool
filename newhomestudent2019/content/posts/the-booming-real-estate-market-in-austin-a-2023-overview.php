@@ -2,7 +2,7 @@
 return [
   'title'       => 'The Austin Real Estate Market: What Fueled the Boom and What It Means Now (Updated)',
   'seo_title'   => 'Austin Real Estate Market: What Drove the Boom (Updated)',
-  'description' => 'What shaped the Austin real estate market during the boom, why it cooled, and what it means today for buyers, owner-builders and investors. Updated guide.',
+  'description' => 'What shaped the Austin real estate market boom, why it cooled, and what it means now for buyers, owner-builders and investors.',
   'keyword'     => 'Austin real estate market',
   'category'    => 'tips',
   'date'        => '2023-08-22',

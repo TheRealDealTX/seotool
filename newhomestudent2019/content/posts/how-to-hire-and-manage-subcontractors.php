@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Hire Subcontractors for Building a House (and Manage Them Well)',
   'seo_title'   => 'How to Hire Subcontractors for Building a House: Guide',
-  'description' => 'How to hire subcontractors for building a house: getting bids, writing scopes, checking insurance, lien waivers, payment schedules and keeping subs on track.',
+  'description' => 'How to hire subcontractors for building a house: bids, scopes of work, insurance, lien waivers, payment schedules and scheduling.',
   'keyword'     => 'how to hire subcontractors for building a house',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

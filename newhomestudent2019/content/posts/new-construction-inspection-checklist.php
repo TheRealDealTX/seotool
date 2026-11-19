@@ -2,7 +2,7 @@
 return [
   'title'       => 'New Construction Inspection Checklist: What to Check at Every Phase',
   'seo_title'   => 'New Construction Inspection Checklist by Build Phase',
-  'description' => 'A new construction inspection checklist for foundation, framing, pre-drywall, insulation and final, plus when to hire a third-party inspector. Read it now.',
+  'description' => 'A new construction inspection checklist for foundation, framing, pre-drywall, insulation and final, plus when to hire an inspector.',
   'keyword'     => 'new construction inspection checklist',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

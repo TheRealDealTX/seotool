@@ -2,7 +2,7 @@
 return [
   'title'       => 'EV-Friendly Apartments in Katy and Houston: Where to Look and What to Ask',
   'seo_title'   => 'EV-Friendly Apartments in Katy and Houston: What to Ask',
-  'description' => 'Driving an EV? See Katy and Houston apartments highlighted for EV charging, plus the questions to ask so you know exactly how and where you can charge.',
+  'description' => 'Driving an EV? See Katy and Houston apartments known for EV charging, plus the questions to ask about how and where you can charge.',
   'keyword'     => 'EV-friendly apartments in Katy and Houston',
   'category'    => 'apartment-living',
   'date'        => '2025-04-13',

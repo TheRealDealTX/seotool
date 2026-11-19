@@ -2,7 +2,7 @@
 return [
   'title'       => 'Essential Tools for Owner Builders: What You Actually Need on Site',
   'seo_title'   => 'Tools for Owner Builders: The Essential Site Kit',
-  'description' => 'The tools for owner builders who manage subs: measuring, inspection, safety, security and paperwork gear that catches costly mistakes early. See the list.',
+  'description' => 'Tools for owner builders who manage subs: measuring, inspection, safety and paperwork gear that catches costly mistakes early.',
   'keyword'     => 'tools for owner builders',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

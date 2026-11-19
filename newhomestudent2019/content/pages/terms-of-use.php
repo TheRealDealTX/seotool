@@ -16,6 +16,6 @@ return [
 <h2>Intellectual property</h2>
 <p>Site content is owned by New Home Investing Knowledge. You may share links and short quotes with attribution; please don't republish full articles without permission.</p>
 <h2>Contact</h2>
-<p>Questions about these terms: <a href="mailto:jonathon@newhomestudent2019.com">jonathon@newhomestudent2019.com</a>.</p>
+<p>Questions about these terms: <a href="mailto:info@newhomestudent2019.com">info@newhomestudent2019.com</a>.</p>
 HTML,
 ];

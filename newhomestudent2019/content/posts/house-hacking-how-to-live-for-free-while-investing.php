@@ -2,7 +2,7 @@
 return [
   'title'       => 'House Hacking: How to Live for Free (or Close to It) While Investing',
   'seo_title'   => 'House Hacking: How to Live for Free While You Invest',
-  'description' => 'House hacking explained: buy a duplex or rent rooms, let rent offset your mortgage, and build equity. Learn the math, loan options and Texas pitfalls first.',
+  'description' => 'House hacking explained: buy a duplex or rent rooms so rent offsets your mortgage. Learn the math, loan options and Texas pitfalls.',
   'keyword'     => 'house hacking',
   'category'    => 'real-estate-investing',
   'date'        => '2025-03-05',

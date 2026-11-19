@@ -2,7 +2,7 @@
 return [
   'title'       => 'The Best Books on Building Your Own Home (A Practical Reading List)',
   'seo_title'   => 'Best Books on Building Your Own Home: Reading List',
-  'description' => 'The best books on building your own home, from contracting and code to design and estimating, with who each one is for. Build your reading list first.',
+  'description' => 'The best books on building your own home, from contracting and code to design and estimating, with who each one is for.',
   'keyword'     => 'best books on building your own home',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

@@ -12,6 +12,7 @@ date_default_timezone_set('America/Chicago');
 require APP_ROOT . '/inc/config.php';
 require APP_ROOT . '/inc/functions.php';
 require APP_ROOT . '/inc/products.php';
+require APP_ROOT . '/inc/mailer.php';
 require APP_ROOT . '/inc/layout.php';
 require APP_ROOT . '/inc/views.php';
 require APP_ROOT . '/inc/views-special.php';
@@ -72,6 +73,12 @@ switch (true) {
         view_sitemap();
     case $path === '/feed/':
         view_feed();
+    case $path === '/site.webmanifest':
+        // Served from PHP so it gets the right MIME type (the host sends .webmanifest files as octet-stream).
+        header('Content-Type: application/manifest+json; charset=utf-8');
+        header('Cache-Control: public, max-age=86400');
+        readfile(APP_ROOT . '/data/site.webmanifest.json');
+        exit;
     case $path === '/free-training/':
         view_free_training();
     case $path === '/our-products/':

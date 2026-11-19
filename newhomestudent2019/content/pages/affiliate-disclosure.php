@@ -3,7 +3,7 @@ return [
     'title' => 'Affiliate disclosure',
     'crumb' => 'Affiliate Disclosure',
     'seo_title' => 'Affiliate Disclosure | New Home Investing Knowledge',
-    'description' => 'How New Home Investing Knowledge earns money: we participate in the Amazon Services LLC Associates Program and may earn commissions from qualifying purchases.',
+    'description' => 'How we earn money: we\'re in the Amazon Services LLC Associates Program and may earn commissions from qualifying purchases.',
     'no_cta' => true,
     'body' => <<<'HTML'
 <p>New Home Investing Knowledge is a participant in the <strong>Amazon Services LLC Associates Program</strong>, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>As an Amazon Associate we earn from qualifying purchases.</strong></p>
@@ -16,6 +16,6 @@ return [
 </ul>
 <h2>Other links</h2>
 <p>Some articles link to partner businesses and local resources. Where we have a business relationship with a linked company, those links are editorially chosen and relevant to the topic. Product links are marked with <code>rel="sponsored"</code>.</p>
-<p>Questions? Email <a href="mailto:jonathon@newhomestudent2019.com">jonathon@newhomestudent2019.com</a>.</p>
+<p>Questions? Email <a href="mailto:info@newhomestudent2019.com">info@newhomestudent2019.com</a>.</p>
 HTML,
 ];

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Energy-Efficient Home Building in the Texas Heat',
   'seo_title'   => 'Energy-Efficient Home Building in the Texas Heat: Guide',
-  'description' => 'Energy-efficient home building in Texas starts with the envelope. See which insulation, window, roofing and HVAC choices cut cooling bills the most.',
+  'description' => 'Energy-efficient home building in Texas starts with the envelope: the insulation, window, roof and HVAC choices that cut cooling bills.',
   'keyword'     => 'energy-efficient home building in Texas',
   'category'    => 'building-tips',
   'date'        => '2023-09-03',

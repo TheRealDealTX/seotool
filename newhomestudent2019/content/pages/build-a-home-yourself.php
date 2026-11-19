@@ -3,7 +3,7 @@ return [
     'title' => 'Build your perfect home without a general contractor — even with zero construction experience',
     'crumb' => 'Build a Home Yourself',
     'seo_title' => 'Build Your Own Home Without a General Contractor',
-    'description' => 'Learn how to build your own house as an owner-builder: what a general contractor really does, how much you can save, the steps involved, and the resources to start.',
+    'description' => 'How to build your own house as an owner-builder: what a general contractor really does, what you can save, the steps and where to start.',
     'lead' => 'A home is likely the biggest investment you\'ll ever make. The best builder for your dream home may be closer than you think — it could be you.',
     'image' => '/assets/img/photos/build-a-home-yourself.webp',
     'image_alt' => 'Framer working on a new house with construction plans in the foreground',

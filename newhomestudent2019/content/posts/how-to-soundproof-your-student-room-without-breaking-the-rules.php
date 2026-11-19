@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Soundproof Your Student Room Without Breaking the Rules',
   'seo_title'   => 'How to Soundproof a Student Room Without Breaking Rules',
-  'description' => 'Soundproof your student room without breaking dorm or lease rules: door sweeps, heavy curtains, rugs, removable panels and white noise that come off clean.',
+  'description' => 'Soundproof your student room without breaking dorm or lease rules: door sweeps, heavy curtains, rugs, panels and white noise.',
   'keyword'     => 'soundproof student room',
   'category'    => 'apartment-living',
   'date'        => '2025-07-30',

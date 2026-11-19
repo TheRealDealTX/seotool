@@ -2,7 +2,7 @@
 return [
   'title'       => 'Recognizing the Signs: Is It Time for a Full House Renovation?',
   'seo_title'   => 'Signs It\'s Time for a Full House Renovation (or a Rebuild)',
-  'description' => 'Do you need a full house renovation? Learn the warning signs, from wiring and plumbing to foundation and layout, and when building new makes more sense.',
+  'description' => 'Do you need a full house renovation? The warning signs, from wiring and plumbing to foundation, and when building new makes more sense.',
   'keyword'     => 'full house renovation',
   'category'    => 'tips',
   'date'        => '2023-08-25',

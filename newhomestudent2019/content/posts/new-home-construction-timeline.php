@@ -2,7 +2,7 @@
 return [
   'title'       => 'New Home Construction Timeline: A Phase-by-Phase Guide',
   'seo_title'   => 'New Home Construction Timeline: Phases & Typical Durations',
-  'description' => 'See a realistic new home construction timeline, phase by phase, from permits and site prep to final inspection, plus the Texas delays that stretch schedules.',
+  'description' => 'A realistic new home construction timeline, phase by phase, from permits and site prep to final inspection, plus common Texas delays.',
   'keyword'     => 'new home construction timeline',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',

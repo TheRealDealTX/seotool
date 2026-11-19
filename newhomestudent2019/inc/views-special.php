@@ -113,7 +113,7 @@ function view_home(): never {
     $h = ob_get_clean() . cta_band();
     render_page([
         'title' => 'Build Your Dream Home: Owner-Builder Training & Resources',
-        'description' => 'Free owner-builder training, guides and recommended tools to help you design and build your dream home in Texas — with or without a general contractor.',
+        'description' => 'Free owner-builder training, guides and tools to help you design and build your dream home in Texas, with or without a general contractor.',
         'path' => '/',
         'image' => '/assets/img/photos/home-hero.webp',
         'body' => $h,
@@ -170,8 +170,7 @@ function handle_signup(): array {
     @file_put_contents($file, $row, FILE_APPEND | LOCK_EX);
 
     $msg = "New free-training sign-up on newhomestudent2019.com\n\nName: $name\nEmail: $email\nPhone: $phone\nStage: $stage\nTime: " . date('r') . "\n";
-    $headers = 'From: ' . SITE['name'] . ' <' . SITE['mail_from'] . ">\r\nReply-To: " . $clean($email) . "\r\nContent-Type: text/plain; charset=utf-8";
-    @mail(SITE['lead_to'], 'New owner-builder training sign-up: ' . $clean($name), $msg, $headers);
+    send_mail(SITE['lead_to'], 'New owner-builder training sign-up: ' . $clean($name), $msg, $email);
     return ['ok' => true];
 }
 
@@ -246,7 +245,7 @@ function view_free_training(): never {
     $crumbs = [['Home', '/'], ['Free Training', '/free-training/']];
     render_page([
         'title' => 'Free Owner-Builder Training: Build Your Own Home for Less',
-        'description' => 'Free mini-course: learn the 6 keys to designing and building your own home as an owner-builder — save the general contractor markup without construction experience.',
+        'description' => 'Free mini-course: the 6 keys to designing and building your own home as an owner-builder and saving the general contractor markup.',
         'path' => '/free-training/',
         'image' => '/assets/img/photos/free-training.webp',
         'body' => $h,
@@ -286,7 +285,7 @@ function view_products_hub(): never {
         'itemListElement' => array_map(fn($p, $i) => ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $p['name'], 'url' => $p['url']], $items, array_keys($items))];
     render_page([
         'title' => 'Best Tools & Books for Owner-Builders and New Homeowners',
-        'description' => 'Our recommended books, inspection tools, smart-home gear and moving essentials for building a new home — hand-picked resources available on Amazon.',
+        'description' => 'Recommended books, inspection tools, smart-home gear and moving essentials for building a new home, hand-picked and available on Amazon.',
         'path' => '/our-products/',
         'body' => $h,
         'schema' => [breadcrumb_schema($crumbs), $list],

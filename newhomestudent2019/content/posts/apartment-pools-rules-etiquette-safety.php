@@ -2,7 +2,7 @@
 return [
   'title'       => 'Apartment Pools: Rules, Etiquette and Safety Every Resident Should Know',
   'seo_title'   => 'Apartment Pool Rules, Etiquette and Safety Tips',
-  'description' => 'Apartment pool rules, etiquette and safety explained: guest limits, no-glass policies, supervising kids and what to pack so pool days stay fun for everyone.',
+  'description' => 'Apartment pool rules, etiquette and safety: guest limits, no-glass policies, supervising kids and what to pack for a good pool day.',
   'keyword'     => 'apartment pool rules',
   'category'    => 'apartment-living',
   'date'        => '2025-06-12',

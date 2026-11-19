@@ -2,7 +2,7 @@
 return [
   'title'       => 'What Beginners Should Look for When Buying a House',
   'seo_title'   => 'What Beginners Should Look for When Buying a House',
-  'description' => 'What beginners should look for when buying a house: location, true monthly cost, layout, condition and resale. A practical Texas checklist before you offer.',
+  'description' => 'What beginners should look for when buying a house: location, true monthly cost, layout, condition and resale. A Texas checklist.',
   'keyword'     => 'what to look for when buying a house',
   'category'    => 'tips',
   'date'        => '2023-08-26',

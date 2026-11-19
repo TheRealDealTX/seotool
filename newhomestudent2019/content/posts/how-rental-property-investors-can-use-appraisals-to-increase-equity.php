@@ -2,7 +2,7 @@
 return [
   'title'       => 'How Rental Property Investors Can Use Appraisals to Increase Equity',
   'seo_title'   => 'How Rental Investors Use Appraisals to Increase Equity',
-  'description' => 'How rental investors use appraisals to increase equity: refinancing, value-add upgrades, challenging low values and protecting value after insurance losses.',
+  'description' => 'How rental investors use appraisals to increase equity: refinancing, value-add upgrades, challenging low values and insurance losses.',
   'keyword'     => 'rental property appraisal equity',
   'category'    => 'real-estate-investing',
   'date'        => '2025-07-10',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Allure Hermann Park Apartments: A Renter\'s Guide to the Area',
   'seo_title'   => 'Allure Hermann Park Apartments: Location and Touring Tips',
-  'description' => 'Considering Allure Hermann Park Apartments in Houston? See who the location suits, what is nearby and the questions to ask before you sign a lease.',
+  'description' => 'Considering Allure Hermann Park Apartments in Houston? Who the location suits, what\'s nearby and what to ask before you lease.',
   'keyword'     => 'Allure Hermann Park Apartments',
   'category'    => 'apartment-living',
   'date'        => '2024-09-12',

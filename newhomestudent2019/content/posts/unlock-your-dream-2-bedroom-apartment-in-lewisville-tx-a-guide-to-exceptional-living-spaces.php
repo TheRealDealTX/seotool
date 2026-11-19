@@ -2,7 +2,7 @@
 return [
   'title'       => '2-Bedroom Apartments in Lewisville, TX: Communities Worth Touring',
   'seo_title'   => '2-Bedroom Apartments in Lewisville TX: Where to Look',
-  'description' => 'Hunting for a 2-bedroom apartment in Lewisville, TX? Compare Old Town, Castle Hills and SH 121 communities, plus what to verify before you sign a lease.',
+  'description' => 'Looking for a 2-bedroom apartment in Lewisville, TX? Compare Old Town, Castle Hills and SH 121 communities before you sign.',
   'keyword'     => '2-bedroom apartment in Lewisville TX',
   'category'    => 'apartment-living',
   'date'        => '2024-10-13',

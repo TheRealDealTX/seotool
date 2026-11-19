@@ -2,7 +2,7 @@
 return [
   'title'       => 'Rebuilding Apartment Units: How Appraisal Works for Total Loss Claims',
   'seo_title'   => 'Appraisal for Total Loss Claims on Apartment Units',
-  'description' => 'How appraisal works for total loss claims on apartment units: the appraisal clause, when to invoke it, Texas licensing rules and how to plan the rebuild.',
+  'description' => 'How appraisal works for total loss claims on apartment units: the appraisal clause, when to invoke it and how to plan the rebuild.',
   'keyword'     => 'appraisal for total loss claims',
   'category'    => 'real-estate-investing',
   'date'        => '2025-07-04',

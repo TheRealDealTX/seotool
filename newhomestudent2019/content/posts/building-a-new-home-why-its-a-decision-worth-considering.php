@@ -2,7 +2,7 @@
 return [
   'title'       => 'Building a New Home: Why It\'s a Decision Worth Considering',
   'seo_title'   => 'Building a New Home: 7 Reasons It\'s Worth Considering',
-  'description' => 'Is building a new home worth it? See the real benefits, the honest trade-offs, and how to tell if a Texas new build fits your budget, timeline and life.',
+  'description' => 'Is building a new home worth it? The real benefits, the honest trade-offs and how to tell if a Texas new build fits your budget.',
   'keyword'     => 'building a new home',
   'category'    => 'building-tips',
   'date'        => '2023-08-30',

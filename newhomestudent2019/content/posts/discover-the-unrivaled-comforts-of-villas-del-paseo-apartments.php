@@ -2,7 +2,7 @@
 return [
   'title'       => 'Villas Del Paseo Apartments: What West Houston Renters Should Know',
   'seo_title'   => 'Villas Del Paseo Apartments Houston: Area and Renter Tips',
-  'description' => 'Looking at Villas Del Paseo Apartments in west Houston? Learn about the location, who it suits and what to confirm with the leasing office before you apply.',
+  'description' => 'Considering Villas Del Paseo Apartments in west Houston? The location, who it suits and what to confirm before you apply.',
   'keyword'     => 'Villas Del Paseo Apartments',
   'category'    => 'apartment-living',
   'date'        => '2024-09-13',

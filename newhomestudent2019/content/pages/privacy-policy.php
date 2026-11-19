@@ -22,7 +22,7 @@ return [
 <h2>Affiliate links and third parties</h2>
 <p>When you click an affiliate link (for example to Amazon), that site may set cookies to attribute your purchase to us. Their use of data is governed by their own privacy policies. We also load fonts from Google Fonts.</p>
 <h2>Your choices</h2>
-<p>To access, correct or delete the information you've given us, email <a href="mailto:jonathon@newhomestudent2019.com">jonathon@newhomestudent2019.com</a>.</p>
+<p>To access, correct or delete the information you've given us, email <a href="mailto:info@newhomestudent2019.com">info@newhomestudent2019.com</a>.</p>
 <h2>Children</h2>
 <p>This site is intended for adults and is not directed to children under 13.</p>
 <h2>Changes</h2>

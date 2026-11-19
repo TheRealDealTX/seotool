@@ -3,7 +3,7 @@ return [
     'title' => 'Write for us',
     'crumb' => 'Write for Us',
     'seo_title' => 'Write for Us: Home Building & Real Estate Guest Posts',
-    'description' => 'Contribute to New Home Investing Knowledge. We accept practical guest posts on building a new home, owner-building, homeownership and real estate investing.',
+    'description' => 'Write for New Home Investing Knowledge: we accept practical guest posts on building a home, owner-building and real estate investing.',
     'lead' => 'Have hands-on insight into building, buying or investing in homes? Share it with our readers.',
     'body' => <<<'HTML'
 <p>We're always looking for knowledgeable voices — builders, tradespeople, inspectors, lenders, investors, homeowners who've been through a build, and real estate writers — with practical advice that helps our readers make smart decisions about new homes and property.</p>
@@ -27,6 +27,6 @@ return [
 <li>We may edit for clarity, accuracy, length and style.</li>
 </ul>
 <h2>How to submit</h2>
-<p>Email your pitch or draft to <a href="mailto:jonathon@newhomestudent2019.com">jonathon@newhomestudent2019.com</a> with the subject line "Guest post". Include a short bio and links to one or two published samples.</p>
+<p>Email your pitch or draft to <a href="mailto:info@newhomestudent2019.com">info@newhomestudent2019.com</a> with the subject line "Guest post". Include a short bio and links to one or two published samples.</p>
 HTML,
 ];

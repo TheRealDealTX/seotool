@@ -2,7 +2,7 @@
 return [
   'title'       => 'Budget 1-Bedroom Houston Apartments: Where to Look for Under $1,000',
   'seo_title'   => '1-Bedroom Houston Apartments Under $1,000: Where to Look',
-  'description' => 'Hunting for a 1-bedroom Houston apartment under $1,000? See communities with a history of budget-friendly listings and how to verify current pricing.',
+  'description' => 'Hunting for a 1-bedroom Houston apartment under $1,000? See budget-friendly communities and how to verify current pricing.',
   'keyword'     => '1-bedroom Houston apartments under $1,000',
   'category'    => 'apartment-living',
   'date'        => '2024-11-11',

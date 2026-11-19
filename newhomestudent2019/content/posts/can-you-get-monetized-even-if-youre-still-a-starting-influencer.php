@@ -2,7 +2,7 @@
 return [
   'title'       => 'Can You Get Monetized as a Starting Influencer? A Guide for Home-Build and DIY Creators',
   'seo_title'   => 'Can You Get Monetized as a Starting Influencer? DIY Guide',
-  'description' => 'Can you get monetized as a starting influencer? Yes. Learn how small home-build and DIY creators earn with affiliate links, brand deals and platform programs.',
+  'description' => 'Can you get monetized as a starting influencer? Yes. How small home-build and DIY creators earn with affiliate links and brand deals.',
   'keyword'     => 'get monetized as a starting influencer',
   'category'    => 'tips',
   'date'        => '2023-08-10',

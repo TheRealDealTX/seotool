@@ -6,7 +6,7 @@ future home-building pros) training, resources and guidance. We do NOT sell our 
 products: we recommend other people's resources (books, tools, smart-home gear,
 apartment/moving gear) through **Amazon affiliate links**, and we publish practical tips.
 Author / founder: **Jonathon**. Base: Texas (Houston/Austin readers are common).
-Phone (832) 720-7978. Email jonathon@newhomestudent2019.com.
+Phone (832) 720-7978. Email info@newhomestudent2019.com.
 
 Audience framing for off-topic legacy posts (apartments, students, renting): many readers
 rent while they save for, plan, or wait on a home build. Tie those posts back to that
@@ -23,7 +23,7 @@ valid PHP and look exactly like this:
 return [
   'title'       => 'H1 shown on the page (natural, keyword-led, may differ from seo_title)',
   'seo_title'   => 'Title tag, 50-60 chars, primary keyword near the front',
-  'description' => 'Meta description, 140-158 chars, includes the keyword, ends with a reason to click.',
+  'description' => 'Meta description, 120-145 chars (hard max 145), includes the keyword, ends with a reason to click.',
   'keyword'     => 'primary keyword phrase',
   'category'    => 'building-tips',   // one of: building-tips | tips | real-estate-investing | apartment-living
   'date'        => '2023-09-06',      // ORIGINAL publish date for legacy posts (given to you); new posts: 2026-11-19

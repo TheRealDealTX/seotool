@@ -2,7 +2,7 @@
 return [
   'title'       => 'Affordable Furniture Ideas for Student Housing',
   'seo_title'   => 'Affordable Furniture Ideas for Student Housing on a Budget',
-  'description' => 'Affordable furniture ideas for student housing: multi-use pieces, secondhand finds, DIY upgrades and cheap storage to furnish a dorm without overspending.',
+  'description' => 'Affordable furniture ideas for student housing: multi-use pieces, secondhand finds, DIY upgrades and cheap storage that works.',
   'keyword'     => 'affordable furniture for student housing',
   'category'    => 'apartment-living',
   'date'        => '2025-07-17',

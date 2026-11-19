@@ -2,7 +2,7 @@
 return [
   'title'       => 'New Construction Walkthrough Checklist: A Room-by-Room Punch List',
   'seo_title'   => 'New Construction Walkthrough Checklist: Room-by-Room List',
-  'description' => 'Use this new construction walkthrough checklist for your blue-tape and 11-month warranty walkthroughs. Room-by-room punch list plus how to document issues.',
+  'description' => 'A new construction walkthrough checklist for blue-tape and 11-month warranty walkthroughs: a room-by-room punch list you can print.',
   'keyword'     => 'new construction walkthrough checklist',
   'category'    => 'tips',
   'date'        => '2026-11-19',

@@ -2,7 +2,7 @@
 return [
   'title'       => 'Understanding Building Codes in Austin, TX: What You Need to Know',
   'seo_title'   => 'Austin Building Codes: A Guide for New Home Builders',
-  'description' => 'A plain-English guide to Austin building codes: which codes apply to new homes, local amendments, green building, permits and inspections. Avoid costly redos.',
+  'description' => 'A plain-English guide to Austin building codes for new homes: local amendments, green building rules, permits and inspections.',
   'keyword'     => 'austin building codes',
   'category'    => 'building-tips',
   'date'        => '2025-02-23',

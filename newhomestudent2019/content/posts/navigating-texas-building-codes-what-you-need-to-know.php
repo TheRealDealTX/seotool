@@ -2,7 +2,7 @@
 return [
   'title'       => 'Navigating Texas Building Codes: What You Need to Know Before You Build',
   'seo_title'   => 'Texas Building Codes: What Home Builders Need to Know',
-  'description' => 'Texas building codes vary by city and county. Learn who sets the rules, what inspectors check, and how to get your new home permitted without costly delays.',
+  'description' => 'Texas building codes vary by city and county. Who sets the rules, what inspectors check and how to get your new home permitted.',
   'keyword'     => 'texas building codes',
   'category'    => 'building-tips',
   'date'        => '2023-09-02',

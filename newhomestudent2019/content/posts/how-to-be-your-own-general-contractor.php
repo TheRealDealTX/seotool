@@ -2,7 +2,7 @@
 return [
   'title'       => 'How to Be Your Own General Contractor When Building a House',
   'seo_title'   => 'How to Be Your Own General Contractor: Owner-Builder Guide',
-  'description' => 'Learn how to be your own general contractor: what the job involves, lender and insurance hurdles, permits, hiring subs and how much you can really save.',
+  'description' => 'How to be your own general contractor: what the job involves, loan and insurance hurdles, permits, hiring subs and real savings.',
   'keyword'     => 'how to be your own general contractor',
   'category'    => 'building-tips',
   'date'        => '2026-11-19',
