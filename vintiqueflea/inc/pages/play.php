@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start([
     'title' => 'Free Vintage Games & Design Tools | Play at Vintique Flea',
     'description' => 'Play free vintage-themed games: guess the decade, haggle with a flea market vendor, design a mid-century room, find your vintage style and more.',

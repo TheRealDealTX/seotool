@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** Dynamic XML sitemap. */
 header('Content-Type: application/xml; charset=UTF-8');
 $today = date('Y-m-d');

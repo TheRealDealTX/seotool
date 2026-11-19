@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /**
  * Catalog data: shop categories + curated Amazon picks, games, seasonal editions.
  * Each product links to an Amazon search tagged with AMAZON_TAG. To link a specific

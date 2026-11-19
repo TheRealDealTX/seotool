@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /**
  * Vintique Flea — site configuration.
  * Edit this file to change business details, event dates and the affiliate tag.

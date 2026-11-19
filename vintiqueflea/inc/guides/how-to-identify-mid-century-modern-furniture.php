@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'How to Identify Mid Century Modern Furniture Like a Pro',
   'description' => 'How to identify mid century modern furniture: check joinery, woods like teak, walnut and rosewood, labels, tapered legs and reproductions vs originals.',

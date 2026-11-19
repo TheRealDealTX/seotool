@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start(['title' => 'Affiliate Disclosure | Vintique Flea', 'description' => 'How Vintique Flea uses Amazon affiliate links and how we choose the products we recommend.', 'path' => '/affiliate-disclosure/']);
 ?>
 <div class="wrap narrow">

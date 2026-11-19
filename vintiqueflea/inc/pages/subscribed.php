@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** @var bool $ok */
 page_start(['title' => 'Thanks for subscribing | Vintique Flea', 'description' => 'Newsletter signup.', 'path' => '/subscribe/', 'robots' => 'noindex, follow']);
 ?>

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Vintage Shopping Houston: Neighborhood Guide | Vintique Flea',
   'description' => 'Vintage shopping in Houston, area by area: the Heights, Montrose, Rice Village, Washington Avenue and more, plus how flea markets like Vintique Flea fit in.',

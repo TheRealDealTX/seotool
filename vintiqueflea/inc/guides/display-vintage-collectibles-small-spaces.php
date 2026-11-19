@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'How to Display Collectibles in Small Spaces | Vintique Flea',
   'description' => 'How to display collectibles in a small home: shelving ideas, shadow boxes, grouping, rotation and conservation basics to keep vintage treasures looking great.',

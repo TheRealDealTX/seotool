@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Vintage Entryway Ideas: Mirrors, Hooks and Benches',
   'description' => 'Vintage entryway ideas that work hard: salvaged mirrors, hooks, benches, rugs and lighting to make a small foyer stylish, organized and welcoming.',

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start([
     'title' => 'Houston Flea Market Dates | Vintique Flea at Silver Street Studios',
     'description' => 'Vintique Flea market dates, hours, admission and directions. A curated indoor vintage flea market at Silver Street Studios, 2000 Edwards St, Houston TX.',

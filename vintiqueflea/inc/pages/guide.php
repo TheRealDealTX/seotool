@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** @var string $slug @var array $g @var array $guides */
 page_start([
     'title' => $g['title'],

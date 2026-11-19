@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Flea Market Tips: How to Shop Like a Pro | Vintique Flea',
   'description' => 'Flea market tips from prep to pickup: what to bring, when to arrive, polite haggling, how to inspect vintage pieces and how to get big finds home safely.',

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** Route tables and the legacy (WordPress) URL map. Keys have no leading/trailing slash. */
 
 const STATIC_PAGES = [

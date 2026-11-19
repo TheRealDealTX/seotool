@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start(['title' => 'Page Not Found | Vintique Flea', 'description' => 'This page could not be found.', 'path' => '/404/', 'robots' => 'noindex, follow']);
 ?>
 <div class="wrap narrow center">

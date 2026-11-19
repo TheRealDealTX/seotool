@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Things to Do in Houston This Weekend | Vintique Flea',
   'description' => 'Plan a Houston weekend: markets, the Washington Avenue Arts District, parks, museums, food trucks, rainy-day ideas and kid-friendly picks for any season.',

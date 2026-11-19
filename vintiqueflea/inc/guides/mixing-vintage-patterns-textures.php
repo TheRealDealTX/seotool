@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Mixing Patterns and Textures in Small Vintage Spaces',
   'description' => 'Mixing patterns and textures in a small space: rules for scale, color and contrast so your vintage rugs, textiles and furniture feel layered, not chaotic.',

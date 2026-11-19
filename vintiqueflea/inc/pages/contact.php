@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 require INC . '/forms.php';
 $state = ['ok' => false, 'errors' => [], 'values' => []];
 $sent = false;

@@ -1,9 +1,10 @@
 <?php
+defined('INC') || exit;
 require INC . '/forms.php';
 $state = ['ok' => false, 'errors' => [], 'values' => []];
 $sent = false;
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    $state = process_form('vendor application', [
+    $state = process_form('vendor', [
         'name' => ['name', true, 120, 'text'],
         'business' => ['business name', true, 160, 'text'],
         'email' => ['email', true, 200, 'email'],

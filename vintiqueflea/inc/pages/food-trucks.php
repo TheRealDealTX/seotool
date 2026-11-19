@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start([
     'title' => 'Houston Food Trucks at Vintique Flea | Eat, Drink & Shop',
     'description' => 'Local Houston food trucks, beer and wine at Vintique Flea in the Washington Avenue Arts District. Plus how food trucks can apply for a spot at the market.',

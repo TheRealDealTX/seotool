@@ -1,7 +1,7 @@
 # Vintique Flea — custom PHP site
-DirectoryIndex index.php
+DirectoryIndex index.php app.php
 Options -Indexes
-ErrorDocument 404 /index.php
+ErrorDocument 404 /app.php
 AddDefaultCharset UTF-8
 
 <IfModule mod_rewrite.c>
@@ -17,11 +17,11 @@ RewriteRule ^(inc|data)(/|$) - [F,L]
 RewriteRule (^|/)\. - [F,L]
 
 # Leftover WordPress files/paths: never execute, let the router answer (410/301)
-RewriteRule ^(wp-.*|xmlrpc\.php|readme\.html|license\.txt|wp-sitemap.*)$ index.php [L]
+RewriteRule ^(index\.php|wp-.*|xmlrpc\.php|readme\.html|license\.txt|wp-sitemap.*)$ app.php [L]
 
-# Everything that isn't a real file goes through the front controller
+# The front page and everything that isn't a real file goes through the front controller
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
+RewriteRule ^ app.php [L]
 </IfModule>
 
 <IfModule mod_headers.c>

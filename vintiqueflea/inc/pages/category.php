@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** @var string $slug @var array $cat */
 page_start([
     'title' => $cat['seo_title'],

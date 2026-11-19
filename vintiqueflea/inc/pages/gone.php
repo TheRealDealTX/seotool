@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start(['title' => 'Page Removed | Vintique Flea', 'description' => 'This page has been permanently removed.', 'path' => '/410/', 'robots' => 'noindex, follow']);
 ?>
 <div class="wrap narrow center">

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** Form handling: contact, vendor applications, newsletter. Submissions are emailed and logged to /data. */
 
 function clean_field(string $k, int $max = 2000): string
@@ -11,7 +12,12 @@ function clean_field(string $k, int $max = 2000): string
 function log_submission(string $file, array $row): void
 {
     $row = ['time' => date('c'), 'ip_hash' => substr(hash('sha256', ($_SERVER['REMOTE_ADDR'] ?? '') . app_secret()), 0, 16)] + $row;
-    @file_put_contents(DATA_DIR . '/' . $file, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX);
+    // Stored as *.php with an exit header so the log can't be downloaded even without .htaccess support.
+    $path = DATA_DIR . '/' . $file . '.php';
+    if (!is_file($path)) {
+        @file_put_contents($path, "<?php exit; ?>\n", LOCK_EX);
+    }
+    @file_put_contents($path, json_encode($row, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX);
 }
 
 function send_form_mail(string $subject, array $fields, string $replyTo): bool

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** @var array $guides */
 page_start([
     'title' => 'Vintage Shopping, Decorating & Houston Guides | Vintique Flea',

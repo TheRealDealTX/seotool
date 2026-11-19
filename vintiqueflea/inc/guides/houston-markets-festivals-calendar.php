@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 return [
   'title' => 'Houston Markets and Festivals by Season | Vintique Flea',
   'description' => 'A season-by-season guide to Houston markets and festivals, from flea and farmers markets to outdoor fests, and how the weather shapes each time of year.',

@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 /** Shared helpers, page head/header/footer. */
 
 function e(?string $s): string
@@ -260,16 +261,19 @@ function app_secret(): string
 {
     static $k = null;
     if ($k === null) {
-        $f = DATA_DIR . '/secret.key';
+        $f = DATA_DIR . '/secret.php';           // a PHP file, so it can never be read over the web
         if (!is_file($f)) {
-            @file_put_contents($f, bin2hex(random_bytes(32)), LOCK_EX);
+            @file_put_contents($f, "<?php return '" . bin2hex(random_bytes(32)) . "';\n", LOCK_EX);
         }
-        $k = (string) @file_get_contents($f) ?: hash('sha256', __FILE__ . php_uname());
+        $k = is_file($f) ? (string) (include $f) : '';
+        if ($k === '') {
+            $k = hash('sha256', __FILE__ . php_uname());
+        }
     }
     return $k;
 }
 
-/** Stateless CSRF token: timestamp + HMAC. Valid for 24h, no session needed. */
+/** Stateless CSRF token: timestamp + HMAC. Valid for 48h, no session needed. */
 function csrf_token(): string
 {
     $t = (string) time();
@@ -282,7 +286,7 @@ function csrf_valid(?string $tok): bool
         return false;
     }
     [$t, $sig] = explode('.', $tok, 2);
-    if (!ctype_digit($t) || (time() - (int) $t) > 86400 || (time() - (int) $t) < 2) {
+    if (!ctype_digit($t) || (time() - (int) $t) > 172800 || (time() - (int) $t) < 2) {
         return false; // expired, or submitted faster than a human could
     }
     return hash_equals(hash_hmac('sha256', $t, app_secret()), $sig);

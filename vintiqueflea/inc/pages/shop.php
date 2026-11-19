@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start([
     'title' => 'Shop Vintage-Inspired Finds: Curated Amazon Picks | Vintique Flea',
     'description' => 'Shop curated vintage-inspired finds: mid-century modern furniture, retro fashion, industrial salvage decor, rustic farmhouse pieces, vinyl gear and more.',

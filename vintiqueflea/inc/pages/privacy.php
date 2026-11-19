@@ -1,4 +1,5 @@
 <?php
+defined('INC') || exit;
 page_start(['title' => 'Privacy Policy | Vintique Flea', 'description' => 'How Vintique Flea collects, uses and protects information submitted through vintiqueflea.com.', 'path' => '/privacy-policy/']);
 ?>
 <div class="wrap narrow">
