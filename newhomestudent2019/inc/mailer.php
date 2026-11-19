@@ -1,6 +1,6 @@
 <?php defined('NHS') || exit;
 /*
- * Minimal authenticated SMTP sender (SSL, AUTH LOGIN).
+ * Minimal authenticated SMTP sender (SSL, AUTH PLAIN).
  * Credentials live ONLY on the server in storage/mail-config.php (never in git, never deployed):
  *   <?php return ['host' => 'smtp.hostinger.com', 'port' => 465, 'user' => 'info@…', 'pass' => '…'];
  * Falls back to PHP mail() when that file is missing.
@@ -18,7 +18,7 @@ function send_mail(string $to, string $subject, string $body, string $replyTo = 
     $c = require $cfgFile;
     $fp = @stream_socket_client('ssl://' . $c['host'] . ':' . (int) $c['port'], $errno, $errstr, 15);
     if (!$fp) { error_log("SMTP connect failed: $errstr"); return false; }
-    stream_set_timeout($fp, 15);
+    stream_set_timeout($fp, 20);
     $read = function () use ($fp) {
         $data = '';
         while (($line = fgets($fp, 515)) !== false) { $data .= $line; if (isset($line[3]) && $line[3] === ' ') break; }
@@ -33,9 +33,8 @@ function send_mail(string $to, string $subject, string $body, string $replyTo = 
     try {
         $cmd('', [220]);
         $cmd('EHLO ' . parse_url(SITE['origin'], PHP_URL_HOST), [250]);
-        $cmd('AUTH LOGIN', [334]);
-        $cmd(base64_encode($c['user']), [334]);
-        $cmd(base64_encode($c['pass']), [235]);
+        // AUTH PLAIN: Hostinger drops AUTH LOGIN connections intermittently after the username step.
+        $cmd('AUTH PLAIN ' . base64_encode("\0" . $c['user'] . "\0" . $c['pass']), [235]);
         $cmd("MAIL FROM:<$from>", [250]);
         $cmd('RCPT TO:<' . $clean($to) . '>', [250, 251]);
         $cmd('DATA', [354]);
