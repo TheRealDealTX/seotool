@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /submit/
+Disallow: /settings/
+Disallow: /search/
+Disallow: /report/
+Disallow: /forgot-password/
+Disallow: /reset-password/
+Disallow: /install/
+Disallow: /*?sort=
+Disallow: /*&sort=
+Disallow: /*?reply=
+Disallow: /app/
+
+Sitemap: https://my1secret.com/sitemap.xml
