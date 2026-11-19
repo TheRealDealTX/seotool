@@ -1,5 +1,5 @@
 {
- "_how": "Weekly routine publishes the first entry with status 'pending', then sets status 'published' + date. Keywords come from tools/data/gsc-queries.json (GSC, May-Nov 2026): each entry targets a query cluster that already earns impressions but has no dedicated page, and links to its pillar post. When fewer than 3 entries are pending, add new ones the same way (cluster gsc-queries.json; never target a pillar's exact primary keyword).",
+ "_how": "Weekly routine publishes the first entry with status 'pending'. Entries are chosen for realistic ranking: Data for SEO (US) volume >= 300/mo and keyword difficulty <= 20, page-1 SERP with several small/weak sites, topical fit with an existing pillar post; GSC clusters from tools/data/gsc-queries.json are a tiebreaker. Before writing, re-check the entry's numbers with Data for SEO and swap to a better close variant if one exists. When fewer than 4 entries are pending, research and append new ones the same way. Never target an existing post's exact primary keyword.",
  "posts": [
   {
    "slug": "time-is-fleeting-meaning",
@@ -21,194 +21,271 @@
    "published": "2026-11-19"
   },
   {
+   "status": "pending",
+   "slug": "amor-fati-meaning",
+   "keyword": "amor fati meaning",
+   "vol": 27100,
+   "kd": 5,
+   "title": "Amor Fati Meaning: How to Love Your Fate (Even the Hard Parts)",
+   "supporting": [
+    "amor fati",
+    "what does amor fati mean",
+    "amor fati stoicism",
+    "amor fati nietzsche",
+    "how to practice amor fati"
+   ],
+   "serp": "Weak page 1: wisdomlib, mindowl, happierhuman, elle-richards, breakingmuscle (checked 2026-11-19).",
+   "angle": "Latin meaning, Nietzsche (The Gay Science §276, Ecce Homo) vs Stoic roots (Epictetus Enchiridion 8, Marcus Aurelius), what it is NOT (resignation), daily practices, amor fati vs memento mori vs memento vivere table, tattoo/meaning FAQ.",
+   "pillar": "the-subtle-difference-between-giving-up-and-letting-go",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "this-too-shall-pass-meaning",
+   "keyword": "this too shall pass meaning",
+   "vol": 1300,
+   "kd": 4,
+   "title": "This Too Shall Pass Meaning: The Origin of the Phrase and Why It Still Helps",
+   "supporting": [
+    "this too shall pass",
+    "this too shall pass origin",
+    "is this too shall pass in the bible",
+    "this too shall pass meaning in relationship"
+   ],
+   "serp": "Page 1: Wikipedia, Reddit, St. Paul Center, small blogs (checked 2026-11-19).",
+   "angle": "Persian Sufi origin, the king-and-ring fable, FitzGerald 1852 and Lincoln 1859, not in the Bible (careful wording), meaning in hard AND good times, how to say it kindly, alternatives.",
+   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "glow-up-meaning",
+   "keyword": "glow up meaning",
+   "vol": 4400,
+   "kd": 12,
+   "title": "Glow Up Meaning: What a Real Glow-Up Looks Like (Inside and Out)",
+   "supporting": [
+    "what is a glow up",
+    "glow up definition",
+    "mental glow up",
+    "glow up vs level up"
+   ],
+   "serp": "Very weak page 1: postfity, Facebook, Brainly, glam.com, Medium (checked 2026-11-19).",
+   "angle": "Slang origin (AAVE, popularized online), appearance vs inner glow-up, glow up vs level up table, realistic glow-up habits, healthy vs unhealthy glow-up culture.",
+   "pillar": "heres-what-it-means-to-level-up",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "letting-go-quotes",
+   "keyword": "letting go quotes",
+   "vol": 5400,
+   "kd": 1,
+   "title": "Letting Go Quotes: 50 Gentle Reminders for Moving On and Finding Peace",
+   "supporting": [
+    "quotes about letting go",
+    "letting go and moving on quotes",
+    "letting go of the past quotes",
+    "letting go of someone you love quotes"
+   ],
+   "serp": "Beatable page 1: marcandangel, guided-meditation-site, template.net, Pinterest, lettercrafted (checked 2026-11-19).",
+   "angle": "Correctly attributed quotes only (Lao Tzu, Hesse, Kornfield, Rumi translations noted, Ann Landers) grouped by situation, each with a 1-2 line reflection; how to actually let go section.",
+   "pillar": "the-subtle-difference-between-giving-up-and-letting-go",
+   "category": [
+    "General",
+    "Quotes"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "what-is-an-epiphany",
+   "keyword": "what is an epiphany",
+   "vol": 6600,
+   "kd": 12,
+   "title": "What Is an Epiphany? Meaning, Examples, and How Aha Moments Happen",
+   "supporting": [
+    "epiphany meaning",
+    "epiphany examples",
+    "epiphany definition",
+    "having an epiphany"
+   ],
+   "angle": "Greek origin (epiphaneia), religious vs everyday meaning, famous examples (Archimedes legend labeled as legend, Newton apple story caveat), the science of insight in general terms, how to invite epiphanies.",
+   "pillar": "i-had-an-epiphany-the-courtship-of-an-idea",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "moon-quotes",
+   "keyword": "moon quotes",
+   "vol": 5400,
+   "kd": 3,
+   "title": "Moon Quotes: 50 Lines About Light, Change, and Quiet Nights",
+   "supporting": [
+    "quotes about the moon",
+    "full moon quotes",
+    "moon quotes short",
+    "beautiful moon quotes"
+   ],
+   "angle": "Correctly attributed quotes (Mark Twain, Rumi translation note, Shakespeare, Tahereh Mafi etc.) grouped by theme with reflections; moon phases as metaphor.",
+   "pillar": "the-moon-had-a-message-is-was-simple-and-profound",
+   "category": [
+    "General",
+    "Quotes"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "growth-mindset-quotes",
+   "keyword": "growth mindset quotes",
+   "vol": 5400,
+   "kd": 5,
+   "title": "Growth Mindset Quotes: 45 Reminders That You Can Still Grow",
+   "supporting": [
+    "quotes about growth mindset",
+    "growth mindset quotes for students",
+    "fixed vs growth mindset"
+   ],
+   "angle": "Carol Dweck framing (cited correctly), quotes grouped (effort, failure, learning), fixed vs growth table, journaling prompts.",
+   "pillar": "heres-what-it-means-to-level-up",
+   "category": [
+    "General",
+    "Quotes",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "rabbit-hole-meaning",
+   "keyword": "rabbit hole meaning",
+   "vol": 8100,
+   "kd": 13,
+   "title": "Rabbit Hole Meaning: What It Means to Go Down the Rabbit Hole",
+   "supporting": [
+    "go down the rabbit hole meaning",
+    "down the rabbit hole meaning",
+    "rabbit hole idiom"
+   ],
+   "angle": "Origin in Alice's Adventures in Wonderland (1865), modern meanings (curiosity, internet rabbit holes, conspiracy rabbit holes), healthy vs unhealthy rabbit holes, how to climb out.",
+   "pillar": "how-to-love-the-rabbit-hole",
+   "category": [
+    "General"
+   ]
+  },
+  {
+   "status": "pending",
    "slug": "fleeting-moments-meaning",
    "keyword": "fleeting moments meaning",
+   "vol": 720,
+   "kd": null,
    "title": "Fleeting Moments: What They Mean and How to Savor Them Before They Pass",
    "supporting": [
-    "fleeting moment meaning (1,578)",
-    "fleeting moments meaning (345)",
-    "everything is fleeting (474)"
+    "fleeting moment meaning (GSC 1,578 impr)",
+    "fleeting moment (880/mo)",
+    "everything is fleeting"
    ],
    "angle": "Definition, examples of fleeting moments, savoring research (Bryant's savoring concept, cited generally), photography/journaling practices, fleeting moments quotes.",
    "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
    "category": [
     "General",
     "Mindset"
-   ],
-   "status": "pending"
+   ]
   },
   {
-   "slug": "signs-youre-leveling-up",
-   "keyword": "signs you're leveling up",
-   "title": "15 Signs You're Leveling Up in Life (Even When It Doesn't Feel Like It)",
-   "supporting": [
-    "leveling up meaning (1,820)",
-    "what does leveling up mean (386)",
-    "leveled up meaning (636)",
-    "leveling up (1,065)"
-   ],
-   "angle": "Listicle of concrete signs, the uncomfortable middle, what leveling up is not, a self-check table.",
-   "pillar": "heres-what-it-means-to-level-up",
-   "category": [
-    "General",
-    "Mindset"
-   ],
-   "status": "pending"
-  },
-  {
+   "status": "pending",
    "slug": "what-are-the-formative-years",
-   "keyword": "formative years meaning",
+   "keyword": "what are the formative years",
+   "vol": 720,
+   "kd": 3,
    "title": "What Are the Formative Years? Ages, Stages, and Why They Shape Who We Become",
    "supporting": [
-    "formative years (894 @14.4)",
-    "formative years meaning (221 @16.2)",
-    "definition of formative years (123)",
-    "what are the formative years (119)"
+    "formative years meaning (1,000/mo)",
+    "formative years",
+    "definition of formative years"
    ],
    "angle": "Definition, which ages (early childhood vs adolescence vs early adulthood), what forms (attachment, habits, beliefs), how to revisit them as an adult. Cite general developmental psychology, no invented stats.",
    "pillar": "lessons-from-the-formative-teen-years",
    "category": [
     "General",
     "Mindset"
-   ],
-   "status": "pending"
+   ]
   },
   {
+   "status": "pending",
+   "slug": "enso-circle-meaning",
+   "keyword": "enso circle meaning",
+   "vol": 480,
+   "kd": 2,
+   "title": "Enso Circle Meaning: The Zen Symbol of an Imperfect, Complete Moment",
+   "supporting": [
+    "enso symbol",
+    "zen circle meaning",
+    "enso tattoo meaning"
+   ],
+   "angle": "Zen Buddhist origin, open vs closed enso, wabi-sabi link, drawing an enso as a practice.",
+   "pillar": "flip_the_switch_to_reveal_the_2019_word_of_the_year",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
+   "slug": "memento-mori-meaning",
+   "keyword": "memento mori meaning",
+   "vol": 60500,
+   "kd": 18,
+   "title": "Memento Mori Meaning: Why Remembering Death Helps You Live",
+   "supporting": [
+    "memento mori",
+    "what does memento mori mean",
+    "memento mori stoicism",
+    "memento mori vs carpe diem"
+   ],
+   "angle": "Latin meaning, Roman triumph legend (label as tradition), Stoics, art (vanitas), modern practice; ties the whole fleeting cluster together. Harder keyword — publish after the cluster has a few posts.",
+   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
+   "category": [
+    "General",
+    "Mindset"
+   ]
+  },
+  {
+   "status": "pending",
    "slug": "albatross-meaning-in-love",
    "keyword": "albatross meaning in love",
+   "vol": 170,
+   "kd": 5,
    "title": "Albatross Meaning in Love: Why This Bird Became a Symbol of Lifelong Devotion",
    "supporting": [
-    "albatross meaning in love (2,074 @7.3)",
-    "albatross vow meaning (71)",
-    "love albatross meaning (32)",
-    "albatross meaning (68)"
+    "GSC: albatross meaning in love 2,074 impr @7.3",
+    "albatross symbolism (720/mo)"
    ],
    "angle": "Lifelong pair bonds and courtship dances (well-documented natural history), albatross in culture (Coleridge's 'albatross around your neck' contrast), what it teaches about commitment.",
    "pillar": "life-lessons-from-an-albatross",
    "category": [
     "General"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "seasoned-player-meaning",
-   "keyword": "seasoned player meaning",
-   "title": "Seasoned Player Meaning: What It Says About Experience in Sports, Work, and Life",
-   "supporting": [
-    "seasoned player meaning (681 @6.9)",
-    "seasoned person meaning (166)",
-    "seasoned manager meaning (157)",
-    "seasoned meaning (1,120)"
-   ],
-   "angle": "Usage in sports, work ('seasoned professional/manager'), compliments vs backhanded uses, how to become seasoned.",
-   "pillar": "becoming-seasoned",
-   "category": [
-    "General"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "inkling-vs-hunch-vs-intuition",
-   "keyword": "inkling vs hunch",
-   "title": "Inkling vs Hunch vs Intuition: What's the Difference and When to Trust Each",
-   "supporting": [
-    "have an inkling (1,108)",
-    "i have an inkling (962)",
-    "inkling feeling (433)",
-    "having an inkling (283)"
-   ],
-   "angle": "Word origins and nuance, examples in sentences, comparison table, how to test a hunch.",
-   "pillar": "meaning-begins-with-an-inkling",
-   "category": [
-    "General",
-    "Mindset"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "island-time-quotes",
-   "keyword": "island time quotes",
-   "title": "Island Time Quotes and Sayings to Help You Slow Down",
-   "supporting": [
-    "island time (669)",
-    "what is island time (302)",
-    "living on island time meaning (67)"
-   ],
-   "angle": "40+ original-or-correctly-attributed sayings grouped by theme, with short reflections; how to bring island time home.",
-   "pillar": "how-island-time-can-be-all-the-time",
-   "category": [
-    "General",
-    "Quotes"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "free-minded-vs-free-spirited",
-   "keyword": "free minded meaning",
-   "title": "Free-Minded vs Free-Spirited: What Each Really Means (and Which You Are)",
-   "supporting": [
-    "free minded meaning (445 @10.1)",
-    "free minded (439)",
-    "free minded person (171)",
-    "free-mindedly (214)"
-   ],
-   "angle": "Definitions, traits table, examples, how to cultivate each.",
-   "pillar": "how-to-be-free-in-mind-body-spirit",
-   "category": [
-    "General",
-    "Mindset"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "simple-but-significant-quotes",
-   "keyword": "simple but significant quotes",
-   "title": "Simple but Significant: Quotes and Captions About the Small Things That Matter",
-   "supporting": [
-    "simple but significant (885 @8.0)",
-    "simple but significant meaning (441)",
-    "make it simple but significant (123)"
-   ],
-   "angle": "Meaning of the phrase, quotes grouped by theme, caption ideas.",
-   "pillar": "focus-on-the-significance-of-simple",
-   "category": [
-    "General",
-    "Quotes"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "time-is-fleeting-quotes",
-   "keyword": "time is fleeting quotes",
-   "title": "Time Is Fleeting Quotes: 50 Reminders to Spend Your Days Well",
-   "supporting": [
-    "time is fleeting (1,756)",
-    "life is so fleeting (402)",
-    "fleetness of life (792)"
-   ],
-   "angle": "Correctly attributed quotes (Seneca, Longfellow, Marcus Aurelius, Annie Dillard etc.) grouped by theme with short reflections.",
-   "pillar": "life-is-fleeting-5-ways-to-slow-it-down",
-   "category": [
-    "General",
-    "Quotes"
-   ],
-   "status": "pending"
-  },
-  {
-   "slug": "down-in-the-dumps-origin",
-   "keyword": "down in the dumps origin",
-   "title": "Down in the Dumps: The Surprising Origin of the Phrase and How to Lift Your Mood",
-   "supporting": [
-    "what does it mean to be down in the dumps (100)",
-    "feeling down in the dumps meaning (108)",
-    "am often down in the dumps meaning (214)"
-   ],
-   "angle": "Etymology (16th-century 'dumps' = melancholy), usage examples, gentle mood lifts, when to seek help (no medical claims).",
-   "pillar": "rewriting-your-down-in-the-dumps",
-   "category": [
-    "General"
-   ],
-   "status": "pending"
+   ]
   }
+ ],
+ "backlog_low_volume": [
+  "seasoned-player-meaning",
+  "inkling-vs-hunch-vs-intuition",
+  "island-time-quotes",
+  "free-minded-vs-free-spirited",
+  "simple-but-significant-quotes",
+  "time-is-fleeting-quotes",
+  "down-in-the-dumps-origin",
+  "signs-youre-leveling-up"
  ]
 }

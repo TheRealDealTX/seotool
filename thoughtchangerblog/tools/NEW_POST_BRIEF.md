@@ -2,12 +2,30 @@
 
 Everything happens in `/home/user/seotool/thoughtchangerblog` (git branch `claude/gallant-fermi-9ya39s`).
 
-## 1. Pick the topic
-Open `tools/content-calendar.json` and take the **first** entry with `"status": "pending"`. It names the
-slug, primary keyword, supporting queries (from Google Search Console, `tools/data/gsc-queries.json`),
-the angle, the pillar post to support, and categories. If fewer than 3 entries remain pending, append
-new ones the same way: cluster `gsc-queries.json` by theme, choose a query cluster with impressions but
-no dedicated post, and never target an existing post's exact primary keyword (check `public/content/posts.json`).
+## 1. Pick and validate the keyword (Data for SEO)
+Load the Data for SEO tools with ToolSearch ("Data_for_seo"). Large results are saved to a file; parse them
+with `python3 -I` + json (fields: `keyword`, `keyword_info.search_volume`, `keyword_properties.keyword_difficulty`,
+`search_intent_info.main_intent`). Location "United States", language "en".
+
+1. Open `tools/content-calendar.json` and take the **first** entry with `"status": "pending"`.
+2. Re-check it: `dataforseo_labs_google_keyword_overview` on the primary keyword plus 4–8 close variants
+   (e.g. "X meaning", "what does X mean", "X quotes", "X definition"). Choose as primary the variant with the
+   best volume among those with **KD ≤ 20** (realistic for this small site). Use the others as H2/H3 wording.
+   * If KD is missing/0 for a variant, treat it as unknown, not easy.
+   * Run `serp_organic_live_advanced` on the chosen primary. It is realistic if page 1 shows at least 3 results
+     from small blogs, forums (Reddit/Quora), social (Facebook/Pinterest/TikTok) or thin pages. If page 1 is all
+     major publishers/dictionaries, skip this entry (set `"status": "skipped"` with a note) and take the next.
+   * Read "People also ask" and related searches from that SERP and answer them in the article/FAQ.
+3. Record the final numbers in the entry (`keyword`, `vol`, `kd`, `serp`).
+4. **Keep the queue full:** if fewer than 4 entries remain pending, research new ones:
+   `dataforseo_labs_google_keyword_ideas` / `dataforseo_labs_google_related_keywords` seeded with this site's
+   themes (meanings of phrases and idioms, mindset, quotes, Stoic/Latin sayings, symbolism, intentional living),
+   filtered to volume ≥ 300 and KD ≤ 20, informational intent. Prefer topics that support an existing pillar post
+   (they help it rank). Never target an existing post's exact primary keyword (check `public/content/posts.json`
+   and the calendar). Append 4–6 entries in the same format (slug, keyword, vol, kd, title, supporting, angle,
+   pillar, category, status "pending").
+   Our own Search Console data (`tools/data/gsc-queries.json`) is a tiebreaker: themes that already earn
+   impressions are worth doubling down on.
 
 ## 2. Write the article → `tools/drafts/<slug>.html`
 * **2,000–2,600 words** of body text (FAQ not counted). No H1 (template prints it); no featured image in the body.
