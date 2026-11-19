@@ -13,7 +13,8 @@ page_head([
     ]],
 ]);
 ?>
-<section class="hero">
+<section class="hero<?= has_photo('home') ? ' hero--photo' : '' ?>">
+  <?= picture('home', '100vw', 'hero__bg', true, '') ?>
   <div class="wrap hero__inner">
     <div class="hero__copy">
       <p class="eyebrow">Houston &amp; Texas real estate, explained</p>

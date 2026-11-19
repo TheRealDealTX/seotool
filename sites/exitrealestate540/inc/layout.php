@@ -10,7 +10,7 @@ function page_head(array $m): void
 {
     $c = cfg();
     $canonical = abs_url($m['path'] ?? '/');
-    $image = $m['image'] ?? abs_url('/assets/img/og-default.png');
+    $image = $m['image'] ?? abs_url('/assets/img/og-default.jpg');
     $robots = $m['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1';
     $nodes = array_merge([schema_org(), schema_website()], $m['schema'] ?? []);
     if (!empty($m['crumbs'])) {
@@ -165,7 +165,9 @@ function post_card(array $p, bool $featured = false): string
 {
     $cat = category($p['category']);
     return '<article class="card' . ($featured ? ' card--featured' : '') . ' cat-' . e($p['category']) . '">'
-        . '<a class="card__art" href="' . e($p['url']) . '" tabindex="-1" aria-hidden="true">' . icon($cat['icon']) . '</a>'
+        . (has_photo($p['slug'])
+            ? '<a class="card__art card__art--photo" href="' . e($p['url']) . '" tabindex="-1" aria-hidden="true">' . picture($p['slug'], $featured ? '(max-width: 620px) 100vw, 480px' : '(max-width: 620px) 100vw, (max-width: 960px) 50vw, 380px', '', false, '') . '</a>'
+            : '<a class="card__art" href="' . e($p['url']) . '" tabindex="-1" aria-hidden="true">' . icon($cat['icon']) . '</a>')
         . '<div class="card__body">'
         . '<a class="card__cat" href="' . e($cat['url']) . '">' . e($cat['name']) . '</a>'
         . '<h3 class="card__title"><a href="' . e($p['url']) . '">' . e($p['title']) . '</a></h3>'

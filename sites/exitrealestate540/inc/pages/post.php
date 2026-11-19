@@ -4,14 +4,14 @@ $cat = category($post['category']);
 $crumbs = [['Home', '/'], ['Blog', '/blog/'], [$cat['name'], $cat['url']], [$post['title'], $post['url']]];
 $body = render_body($post['body']);
 $toc = toc($post['body']);
-$image = abs_url('/assets/img/og/' . $post['slug'] . '.png');
-if (!is_file(ROOT . '/assets/img/og/' . $post['slug'] . '.png')) $image = abs_url('/assets/img/og-default.png');
+$image = abs_url('/assets/img/og/' . $post['slug'] . '.jpg');
+if (!is_file(ROOT . '/assets/img/og/' . $post['slug'] . '.jpg')) $image = abs_url('/assets/img/og-default.jpg');
 $schema = [[
     '@type' => 'BlogPosting',
     '@id' => abs_url($post['url'] . '#article'),
     'headline' => $post['title'],
     'description' => $post['description'],
-    'image' => $image,
+    'image' => has_photo($post['slug']) ? [$image, abs_url(photo_url($post['slug'], 1600))] : $image,
     'datePublished' => date('c', strtotime($post['date'])),
     'dateModified' => date('c', strtotime($post['updated'])),
     'author' => ['@type' => 'Organization', 'name' => cfg('author'), 'url' => abs_url('/about/')],
@@ -52,6 +52,9 @@ $hasProducts = !empty($post['products']) || str_contains($post['body'], '[[produ
       </p>
     </div>
   </header>
+<?php if (has_photo($post['slug'])): ?>
+  <figure class="wrap post__hero"><?= picture($post['slug'], '(max-width: 1180px) 100vw, 1140px', '', true) ?></figure>
+<?php endif; ?>
   <div class="wrap post__layout">
     <aside class="post__aside">
 <?php if (count($toc) > 2): ?>

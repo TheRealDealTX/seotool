@@ -27,10 +27,20 @@ apple=Image.new('RGB',(180,180),NAVY); apple.paste(mark(180),(0,0),mark(180)); a
 mark(64).save('favicon.ico',sizes=[(16,16),(32,32),(48,48),(64,64)])
 open('favicon.svg','w').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><clipPath id="c"><rect width="64" height="64" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="64" height="64" fill="#0f2a44"/><rect y="55" width="64" height="9" fill="#d9482b"/></g><text x="32" y="38" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="25" fill="#fff" text-anchor="middle">540</text></svg>')
 
-def og(title, label, color, path):
-    W,H=1200,630; im=Image.new('RGB',(W,H),NAVY); d=ImageDraw.Draw(im)
-    for i,(rr,w) in enumerate([(420,3),(300,3),(180,3)]):
-        d.ellipse([W-260-rr,-120-rr+200,W-260+rr,-120+rr+200],outline=tuple(min(255,c+40) for c in NAVY),width=w)
+import os
+def og(title, label, color, path, photo=None):
+    W,H=1200,630; im=Image.new('RGB',(W,H),NAVY)
+    if photo and os.path.exists(photo):
+        ph=Image.open(photo).convert('RGB'); ph=ph.resize((W, round(W*ph.height/ph.width)))
+        top=(ph.height-H)//2; im.paste(ph.crop((0,top,W,top+H)),(0,0))
+        shade=Image.new('L',(W,H)); sd=ImageDraw.Draw(shade)
+        for x in range(W): sd.line([(x,0),(x,H)],fill=int(235-150*(x/W)))
+        im=Image.composite(Image.new('RGB',(W,H),(10,28,46)),im,shade)
+    else:
+        d=ImageDraw.Draw(im)
+        for rr in (420,300,180):
+            d.ellipse([W-260-rr,-120-rr+200,W-260+rr,-120+rr+200],outline=tuple(min(255,c+40) for c in NAVY),width=3)
+    d=ImageDraw.Draw(im)
     d.rectangle([0,0,18,H],fill=color)
     im.paste(mark(84),(70,64),mark(84))
     d.text((172,78),'Exit Real Estate 540',font=ImageFont.truetype(SERIF,34),fill=WHITE)
@@ -45,11 +55,11 @@ def og(title, label, color, path):
     y=290
     for l in lines: d.text((70,y),l,font=f,fill=WHITE); y+=int(size*1.22)
     d.rectangle([0,H-14,W,H],fill=ACCENT)
-    im.save(path,optimize=True)
+    im.save(path,'JPEG',quality=82,optimize=True,progressive=True)
 
-og('Texas real estate guides & free calculators for buyers, sellers, investors and homeowners','Houston & Texas',ACCENT,'assets/img/og-default.png')
+og('Texas real estate guides & free calculators for buyers, sellers, investors and homeowners','Houston & Texas',ACCENT,'assets/img/og-default.jpg','assets/img/photos/home-1200.jpg')
 data=json.loads(subprocess.check_output(['php','-r',"define('ERE',1);define('ROOT',getcwd());require 'inc/functions.php';echo json_encode(array_map(fn($p)=>[$p['title'],$p['category']],all_posts()));"]))
 cats=json.loads(subprocess.check_output(['php','-r',"define('ERE',1);define('ROOT',getcwd());require 'inc/functions.php';echo json_encode(array_map(fn($c)=>$c['name'],cfg('categories')));"]))
 for slug,(title,cat) in data.items():
-    og(title,cats[cat],CAT[cat],f'assets/img/og/{slug}.png')
+    og(title,cats[cat],CAT[cat],f'assets/img/og/{slug}.jpg',f'assets/img/photos/{slug}-1200.jpg')
 print('images:',len(data)+1)

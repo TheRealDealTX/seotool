@@ -264,3 +264,45 @@ function icon(string $name): string
     $p = $paths[$name] ?? $paths['home'];
     return '<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' . $p . '</svg>';
 }
+
+/* ----------------------------------------------------------------- photos */
+
+/** Photo registry (content/images.php): slot => [alt, source, license, landing]. */
+function photos(): array
+{
+    static $p = null;
+    if ($p === null) {
+        $f = ROOT . '/content/images.php';
+        $p = is_file($f) ? require $f : [];
+    }
+    return $p;
+}
+
+function has_photo(string $slot): bool
+{
+    return isset(photos()[$slot]) && is_file(ROOT . '/assets/img/photos/' . $slot . '-1600.jpg');
+}
+
+function photo_url(string $slot, int $w = 1600, string $ext = 'jpg'): string
+{
+    return '/assets/img/photos/' . $slot . '-' . $w . '.' . $ext;
+}
+
+/**
+ * Responsive <picture>. Every photo exists at 480/800/1200/1600 px wide in WebP and JPEG.
+ * $sizes is the CSS sizes attribute; $eager for above-the-fold images.
+ */
+function picture(string $slot, string $sizes, string $class = '', bool $eager = false, ?string $alt = null): string
+{
+    if (!has_photo($slot)) {
+        return '';
+    }
+    $alt = $alt ?? photos()[$slot]['alt'];
+    $set = fn(string $ext) => implode(', ', array_map(fn($w) => photo_url($slot, $w, $ext) . ' ' . $w . 'w', [480, 800, 1200, 1600]));
+    [$w, $h] = [1600, 900];
+    return '<picture' . ($class ? ' class="' . e($class) . '"' : '') . '>'
+        . '<source type="image/webp" srcset="' . $set('webp') . '" sizes="' . e($sizes) . '">'
+        . '<img src="' . photo_url($slot, 800) . '" srcset="' . $set('jpg') . '" sizes="' . e($sizes) . '" width="' . $w . '" height="' . $h . '" alt="' . e($alt) . '"'
+        . ($eager ? ' fetchpriority="high"' : ' loading="lazy"') . ' decoding="async">'
+        . '</picture>';
+}

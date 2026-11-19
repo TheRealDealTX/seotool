@@ -15,19 +15,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $error = 'Please enter your name, a valid email address and a message.';
     } else {
         $rec = ['time' => date('c'), 'name' => mb_substr($name, 0, 100), 'email' => $email, 'topic' => mb_substr($topic, 0, 60), 'message' => mb_substr($msg, 0, 5000), 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''];
-        // Stored as a PHP file that exits immediately, so it can never be read over HTTP
-        // (the host serves files in the web root directly and ignores .htaccess).
+        // Email it to the site mailbox over authenticated SMTP (see inc/mailer.php).
+        $mailed = false; $mailErr = 'no contact_email set';
+        if ($to = cfg('contact_email')) {
+            require_once ROOT . '/inc/mailer.php';
+            [$mailed, $mailErr] = smtp_send($to,
+                'Website message: ' . ($rec['topic'] ?: 'Contact form') . ' - ' . $rec['name'],
+                "New message from the exitrealestate540.com contact form.\n\n"
+                . "Name:  {$rec['name']}\nEmail: {$email}\nTopic: {$rec['topic']}\nSent:  " . date('F j, Y g:i a T') . "\n\n"
+                . "{$rec['message']}\n\n-- \nReply to this email to answer {$rec['name']} directly.",
+                $email);
+        }
+        $rec['mailed'] = $mailed;
+        if (!$mailed) $rec['mail_error'] = $mailErr;
+        // Every message is also kept in a PHP file that exits immediately, so it can never be
+        // read over HTTP (the host serves web-root files directly and ignores .htaccess).
         $file = ROOT . '/site-data/messages.php';
         if (!is_dir(dirname($file))) @mkdir(dirname($file), 0700, true);
         if (!is_file($file)) @file_put_contents($file, "<?php http_response_code(404); exit; ?>\n");
         $stored = @file_put_contents($file, json_encode($rec, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) . "\n", FILE_APPEND | LOCK_EX) !== false;
-        $mailed = false;
-        if ($to = cfg('contact_email')) {
-            $safeName = preg_replace('/[\r\n]+/', ' ', $rec['name']);
-            $mailed = @mail($to, '[ERE540] ' . ($rec['topic'] ?: 'Contact form') . ' - ' . $safeName,
-                "Name: {$rec['name']}\nEmail: {$email}\nTopic: {$rec['topic']}\n\n{$rec['message']}",
-                "From: no-reply@exitrealestate540.com\r\nReply-To: {$email}\r\nContent-Type: text/plain; charset=UTF-8");
-        }
         if ($stored || $mailed) $sent = true; else $error = 'Sorry, your message could not be sent right now. Please try again later.';
     }
 }

@@ -16,7 +16,8 @@ page_head([
     ]],
 ]);
 ?>
-<section class="page-head cat-<?= e($cat['slug']) ?>">
+<section class="page-head page-head--photo cat-<?= e($cat['slug']) ?>">
+  <?= picture('cat-' . $cat['slug'], '100vw', 'page-head__bg', true, '') ?>
   <div class="wrap">
     <?php breadcrumbs($crumbs); ?>
     <h1><?= e($cat['title']) ?></h1>

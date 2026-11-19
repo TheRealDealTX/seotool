@@ -8,9 +8,10 @@ return [
     'url'         => 'https://exitrealestate540.com',
     'description' => 'Practical guides and free calculators for Texas home buyers, sellers, investors and homeowners - from closing costs and property taxes to storm damage and insurance claims.',
     'amazon_tag'  => 'josephrayditt-20',
-    // Where contact-form messages are emailed. Leave empty to only store them
+    // Where contact-form messages are emailed (via SMTP, credentials in site-data/smtp.php
+    // on the server only). Messages are also always stored
     // in site-data/messages.php (a PHP file that refuses web access).
-    'contact_email' => '',
+    'contact_email' => 'info@exitrealestate540.com',
     'locale'      => 'en_US',
     'author'      => 'Exit Real Estate 540 Editorial Team',
 
