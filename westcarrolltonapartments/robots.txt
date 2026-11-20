@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /claim/
+Disallow: /checkout/
+Disallow: /app/
+Disallow: /content/
+
+Sitemap: https://westcarrolltonapartments.com/sitemap.xml
