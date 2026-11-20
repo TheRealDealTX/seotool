@@ -10,6 +10,12 @@ $user = current_user();
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NMDZMMXC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <?php if ($desc): ?><meta name="description" content="<?= e($desc) ?>"><?php endif; ?>
@@ -93,7 +99,7 @@ $user = current_user();
   <div class="wrap footer-grid">
     <div>
       <a class="logo logo-light" href="/"><img src="/assets/img/logo.svg" alt="" width="32" height="32"><span><strong>West Carrollton</strong> Apartments</span></a>
-      <p>An independent directory of apartment, townhome and senior communities in West Carrollton, Ohio 45449 and the surrounding Dayton area.</p>
+      <p>West Carrollton Apartments is an independent directory of apartment, townhome and senior communities in West Carrollton, Ohio 45449 and the surrounding Dayton area.</p>
       <p><a href="mailto:info@westcarrolltonapartments.com">info@westcarrolltonapartments.com</a></p>
     </div>
     <div>

@@ -2,9 +2,9 @@
 <section class="hero">
   <div class="hero-bg" style="background-image:url('/assets/img/photos/ext-1.webp')"></div>
   <div class="wrap hero-inner">
-    <p class="eyebrow">West Carrollton, Ohio · 45449</p>
-    <h1>Find your next apartment in West Carrollton, OH</h1>
-    <p class="lead">Compare <?= (int)$stats['count'] ?> apartment, townhome and senior communities in one place, with rents, floor plans, pet policies, amenities and a live map.</p>
+    <p class="eyebrow">West Carrollton Apartments · Ohio 45449</p>
+    <h1>West Carrollton Apartments: find your next home in West Carrollton, OH</h1>
+    <p class="lead">West Carrollton Apartments lets you compare <?= (int)$stats['count'] ?> apartment, townhome and senior communities in one place, with rents, floor plans, pet policies, amenities and a live map.</p>
     <form class="search-box" action="/apartments/" method="get" role="search">
       <label class="sr" for="hq">Search</label>
       <input id="hq" name="q" type="search" placeholder="Community name, street or amenity (e.g. pool)">
@@ -51,7 +51,7 @@
   <div class="wrap split">
     <div>
       <h2>See every community on the map</h2>
-      <p>West Carrollton sits along the Great Miami River just south of Dayton, with quick access to I-75, Cox Arboretum MetroPark and the Dayton Mall area. Our interactive map shows every listing so you can judge the commute and the neighborhood at a glance.</p>
+      <p>West Carrollton sits along the Great Miami River just south of Dayton, with quick access to I-75, Cox Arboretum MetroPark and the Dayton Mall area. The West Carrollton Apartments interactive map shows every listing so you can judge the commute and the neighborhood at a glance.</p>
       <p><a class="btn" href="/apartments/#map">Open the apartment map</a></p>
     </div>
     <a class="map-teaser" href="/apartments/#map" aria-label="Open the apartment map">
@@ -66,7 +66,7 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Play with our free renter tools</h2><a href="/tools/">All tools →</a></div>
+    <div class="section-head"><h2>Free renter tools from West Carrollton Apartments</h2><a href="/tools/">All tools →</a></div>
     <div class="tool-grid">
       <a class="tool-card" href="/tools/apartment-match-quiz/"><span>🎯</span><h3>Apartment Match Quiz</h3><p>Six questions, instant matches from real West Carrollton listings.</p></a>
       <a class="tool-card" href="/tools/rent-affordability-calculator/"><span>🧮</span><h3>Rent Affordability</h3><p>See what rent fits your paycheck using the 30% rule and 50/30/20.</p></a>
@@ -88,7 +88,7 @@
   <div class="wrap owners">
     <div>
       <p class="eyebrow">For owners &amp; property managers</p>
-      <h2>Is your community listed? Claim it for $<?= listing_price_cents() / 100 ?>.</h2>
+      <h2>Is your community on West Carrollton Apartments? Claim it for $<?= listing_price_cents() / 100 ?>.</h2>
       <p>Every listing starts with contact details hidden. Claim yours with a one-time $<?= listing_price_cents() / 100 ?> payment to show your phone, email and website, upload real photos, and update rents, specials and amenities whenever you like.</p>
       <ul class="checks">
         <li>Your phone, email &amp; website shown to renters</li>
@@ -107,7 +107,7 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Why renters choose West Carrollton</h2><a href="/west-carrollton-living-guide/">Read the living guide →</a></div>
+    <div class="section-head"><h2>Why renters search West Carrollton Apartments</h2><a href="/west-carrollton-living-guide/">Read the living guide →</a></div>
     <div class="feature-grid">
       <div><h3>🌳 Parks &amp; trails</h3><p>Wilson Park, Weidner Park and direct access to the paved Great Miami River Trail.</p></div>
       <div><h3>🚗 Easy commute</h3><p>Minutes to I-75 for downtown Dayton, Miamisburg, Kettering and Wright-Patterson.</p></div>
@@ -117,10 +117,18 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap narrow">
+    <h2>About West Carrollton Apartments</h2>
+    <p>West Carrollton Apartments is a free, independent guide to renting in West Carrollton, Ohio and nearby Moraine, Miamisburg, Miami Township and Kettering. Instead of digging through national rental sites that lump every Dayton suburb together, you can see each local community's rents, floor plans, pet policies and amenities side by side.</p>
+    <p>Whether you need a budget-friendly one-bedroom near I-75, a pet-friendly townhome close to Wilson Park, or a quiet 55+ community, West Carrollton Apartments helps you shortlist the right places, compare them and plan your move with our free tools.</p>
+  </div>
+</section>
+
 <?php if ($posts): ?>
 <section class="section alt">
   <div class="wrap">
-    <div class="section-head"><h2>From the renter blog</h2><a href="/blog/">All articles →</a></div>
+    <div class="section-head"><h2>From the West Carrollton Apartments blog</h2><a href="/blog/">All articles →</a></div>
     <div class="card-grid">
       <?php foreach ($posts as $p): ?>
       <article class="card post-card">
