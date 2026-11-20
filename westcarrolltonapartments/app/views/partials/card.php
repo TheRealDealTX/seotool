@@ -3,6 +3,7 @@
   <a class="card-img" href="<?= e($l['url']) ?>">
     <img src="<?= e(photo_url($l['photos'][0], true)) ?>" alt="<?= e($l['name']) ?> in <?= e($l['city']) ?>, OH" loading="lazy" width="640" height="427">
     <?php if ($l['claimed']): ?><span class="badge badge-verified">✓ Verified owner</span><?php elseif ($l['featured']): ?><span class="badge">Popular</span><?php endif; ?>
+    <?php if (!$l['has_photos']): ?><span class="photo-pending">📷 Photos coming soon</span><?php endif; ?>
   </a>
   <button class="fav-btn" type="button" data-fav="<?= (int)$l['id'] ?>" aria-label="Save <?= e($l['name']) ?>" aria-pressed="false">♥</button>
   <div class="card-body">

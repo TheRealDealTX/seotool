@@ -45,6 +45,7 @@ function listing_hydrate(array $l): array
 {
     $l['amenities'] = json_decode($l['amenities'] ?? '[]', true) ?: [];
     $l['photos'] = json_decode($l['photos'] ?? '[]', true) ?: [];
+    $l['has_photos'] = (bool)$l['photos'];
     if (!$l['photos']) $l['photos'] = default_photos((int)$l['id']);
     $l['url'] = '/apartments/' . $l['slug'] . '/';
     $l['claimed'] = !empty($l['owner_id']);
@@ -52,11 +53,10 @@ function listing_hydrate(array $l): array
     return $l;
 }
 
-/** Representative stock photos, varied per listing. */
+/** Placeholder illustration, varied per listing. */
 function default_photos(int $id): array
 {
-    $pick = fn(string $p, int $n, int $o) => $p . '-' . ((($id * 7 + $o) % $n) + 1);
-    return [$pick('ext', 6, 0), $pick('liv', 16, 0), $pick('kit', 4, 1), $pick('bed', 7, 2), $pick('bath', 3, 0), $pick('liv', 16, 5)];
+    return ['placeholder-' . (($id % 4) + 1)]; // illustration until the owner adds real photos
 }
 
 function listing_by_id(int $id): ?array

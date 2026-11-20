@@ -94,11 +94,8 @@ function account_edit_listing(): void
         csrf_check();
         [$d, $errors] = listing_from_post();
         // photos
-        $photos = array_values(array_filter($l['photos'], fn($p) => !in_array($p, (array)($_POST['remove_photos'] ?? []), true)));
-        if (!json_decode(db()->query('SELECT photos FROM listings WHERE id = ' . (int)$l['id'])->fetchColumn() ?: '[]', true)) {
-            // currently showing stock photos; drop them once the owner uploads their own
-            if (!empty(normalize_files($_FILES['photos'] ?? []))) $photos = [];
-        }
+        $raw = json_decode(db()->query('SELECT photos FROM listings WHERE id = ' . (int)$l['id'])->fetchColumn() ?: '[]', true) ?: [];
+        $photos = array_values(array_filter($raw, fn($p) => !in_array($p, (array)($_POST['remove_photos'] ?? []), true)));
         foreach (normalize_files($_FILES['photos'] ?? []) as $f) {
             if (count($photos) >= 12) break;
             if ($p = save_uploaded_photo($f)) $photos[] = $p; else $errors[] = 'One photo could not be used (JPG, PNG or WebP up to 6 MB).';

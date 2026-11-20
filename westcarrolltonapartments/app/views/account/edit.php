@@ -12,7 +12,7 @@
         <div class="photo-manage">
           <?php foreach ($uploaded as $p): ?><label><img src="<?= e($p) ?>" alt="" width="160" height="107"><span><input type="checkbox" name="remove_photos[]" value="<?= e($p) ?>"> Remove</span></label><?php endforeach; ?>
         </div>
-      <?php else: ?><p class="small muted">Your listing currently shows representative stock photos. Upload your own to replace them.</p><?php endif; ?>
+      <?php else: ?><p class="small muted">Your listing has no photos yet and shows a placeholder illustration. Upload your own photos below.</p><?php endif; ?>
       <label>Add photos (JPG, PNG or WebP, up to 6 MB each, 12 max)<input type="file" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple></label>
     </fieldset>
     <button class="btn btn-accent" type="submit">Save changes</button> <a href="<?= e($l['url']) ?>" target="_blank">Preview listing ↗</a>

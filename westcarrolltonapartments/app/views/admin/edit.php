@@ -26,7 +26,7 @@
       <legend>Photos</legend>
       <?php if ($photosRaw): ?>
       <div class="photo-manage"><?php foreach ($photosRaw as $p): ?><label><img src="<?= e(photo_url($p, true)) ?>" alt="" width="160" height="107"><span><input type="checkbox" name="remove_photos[]" value="<?= e($p) ?>"> Remove</span></label><?php endforeach; ?></div>
-      <?php else: ?><p class="small muted">Using automatic representative stock photos.</p><?php endif; ?>
+      <?php else: ?><p class="small muted">No photos: the listing shows a placeholder illustration and an "Add Photos" button.</p><?php endif; ?>
       <label>Upload photos<input type="file" name="photos[]" accept="image/jpeg,image/png,image/webp" multiple></label>
       <label>Import photos from URLs (one per line; JPG/PNG/WebP). Only use photos you own or have the owner's permission to use.<textarea name="photo_urls" rows="3" placeholder="https://example.com/photo1.jpg"></textarea></label>
       <label>Or stock photo keys, comma separated (e.g. ext-2, liv-5, kit-1) <input name="stock_photos" placeholder="ext-1, liv-3, kit-2, bed-4, bath-1"></label>

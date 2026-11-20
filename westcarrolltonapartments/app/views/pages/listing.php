@@ -1,5 +1,5 @@
 <?php defined('WCA') || exit;
-$stock = !str_starts_with($l['photos'][0], '/uploads/');
+$addPhotosUrl = $l['claimed'] ? '/account/listings/edit/?id=' . (int)$l['id'] : '/claim/' . $l['slug'] . '/';
 $landmarks = [
     ['Downtown Dayton', 39.7589, -84.1916], ['Cox Arboretum MetroPark', 39.6487, -84.2229], ['Dayton Mall', 39.6326, -84.2215],
     ['Wilson Park', 39.6625, -84.2370], ['Austin Landing', 39.5945, -84.2266], ['Wright-Patterson AFB', 39.7900, -84.0900],
@@ -18,10 +18,22 @@ $facts = array_filter([
 ?>
 <div class="wrap listing">
   <?php if ($l['status'] !== 'published'): ?><div class="alert alert-info">Preview: this listing is <strong><?= e($l['status']) ?></strong> and not visible to the public.</div><?php endif; ?>
+  <?php if (!$l['has_photos']): ?>
+  <section class="gallery gallery-empty">
+    <figure class="gallery-main">
+      <img src="<?= e(photo_url($l['photos'][0])) ?>" alt="Illustration – no photos of <?= e($l['name']) ?> yet" width="1200" height="720" fetchpriority="high">
+      <figcaption class="no-photos">
+        <span class="no-photos-icon" aria-hidden="true">📷</span>
+        <strong>No photos of <?= e($l['name']) ?> yet</strong>
+        <span>Own or manage this property? Add real photos so renters can see it.</span>
+        <a class="btn btn-accent" href="<?= e($addPhotosUrl) ?>" rel="nofollow">📷 Add Photos</a>
+      </figcaption>
+    </figure>
+  </section>
+  <?php else: ?>
   <section class="gallery" data-gallery>
     <figure class="gallery-main">
       <img src="<?= e(photo_url($l['photos'][0])) ?>" alt="<?= e($l['name']) ?> – photo 1" width="1200" height="800" data-gallery-main fetchpriority="high">
-      <?php if ($stock): ?><figcaption class="stock-note">Representative photos · owners can upload real photos after claiming</figcaption><?php endif; ?>
     </figure>
     <div class="gallery-thumbs">
       <?php foreach ($l['photos'] as $i => $p): ?>
@@ -29,6 +41,7 @@ $facts = array_filter([
       <?php endforeach; ?>
     </div>
   </section>
+  <?php endif; ?>
 
   <div class="listing-grid">
     <div class="listing-main">

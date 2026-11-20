@@ -78,7 +78,7 @@ $lps = landing_pages();
     <details><summary>How many apartment communities are in West Carrollton, OH?</summary><p>This page lists <?= count($listings) ?> communities<?= $landing ? ' that match this category' : ' in West Carrollton and nearby Moraine, Miamisburg, Miami Township and Kettering' ?>. We add new properties as owners submit them, and you can <a href="/list-your-property/">list a property</a> for free.</p></details>
     <?php if ($avgMin): ?><details><summary>What is a typical starting rent?</summary><p>Across these listings the average advertised starting rent is about <?= money($avgMin) ?> per month. Rents change often, so confirm current pricing and specials with the property.</p></details><?php endif; ?>
     <details><summary>Why are some phone numbers and websites hidden?</summary><p>Contact details appear once the owner or manager claims and verifies the listing. For unclaimed communities, search the community name to reach the leasing office, or <a href="/contact/">ask us</a> and we will point you in the right direction.</p></details>
-    <details><summary>Are the photos real?</summary><p>Photos uploaded by verified owners are real. Listings that have not been claimed use representative stock photos, clearly labeled on the listing page.</p></details>
+    <details><summary>Are the photos real?</summary><p>Photos on listings are added by verified owners and managers. Listings without photos yet show a placeholder illustration.</p></details>
   </div>
 </section>
 <script>window.WCA_LISTINGS = <?= json_encode(array_map('listing_public_json', $listings), JSON_HEX_TAG | JSON_UNESCAPED_SLASHES) ?>;</script>

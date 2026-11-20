@@ -126,7 +126,7 @@ $user = current_user();
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>&copy; <?= date('Y') ?> West Carrollton Apartments. Listing information is gathered from public sources and owners and may change; confirm details with the property. Photos marked "representative" are stock images.</p>
+    <p>&copy; <?= date('Y') ?> West Carrollton Apartments. Listing information is gathered from public sources and owners and may change; confirm details with the property.</p>
     <p class="small">As an Amazon Associate we earn from qualifying purchases. <a href="/affiliate-disclosure/">Affiliate disclosure</a> · <a href="/privacy-policy/">Privacy</a> · <a href="/terms-of-use/">Terms</a></p>
   </div>
 </footer>

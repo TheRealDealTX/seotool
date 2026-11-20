@@ -5,7 +5,7 @@
   <h2>Why we built it</h2>
   <p>Big national rental sites mix West Carrollton listings in with all of Dayton, and smaller communities often don't appear at all. We wanted one place where renters can see every option in town, compare them honestly and use simple tools to plan a move.</p>
   <h2>Where the information comes from</h2>
-  <p>Listings start from publicly available information such as property websites and public rental listings, and are then updated by verified owners and managers. Rents, specials and policies change often, so always confirm details with the property before applying. Listings without owner-provided photos use representative stock photography, labeled as such.</p>
+  <p>Listings start from publicly available information such as property websites and public rental listings, and are then updated by verified owners and managers. Rents, specials and policies change often, so always confirm details with the property before applying. Listings without owner-provided photos show a placeholder illustration until the owner adds real photos.</p>
   <h2>For owners and managers</h2>
   <p>Owners can <a href="/apartments/">claim an existing listing</a> or <a href="/list-your-property/">add a new property</a>. Verified owners can show their contact details and edit their listing anytime.</p>
   <h2>Affiliate links</h2>

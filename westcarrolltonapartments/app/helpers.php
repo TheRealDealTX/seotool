@@ -238,6 +238,7 @@ function amazon_url(string $query): string
 function photo_url(string $key, bool $small = false): string
 {
     if (str_starts_with($key, '/uploads/')) return $key; // owner-uploaded photo
+    if (str_starts_with($key, 'placeholder-')) return '/assets/img/placeholders/' . $key . '.svg';
     return '/assets/img/photos/' . $key . ($small ? '-sm' : '') . '.webp';
 }
 

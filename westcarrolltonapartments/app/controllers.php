@@ -102,7 +102,7 @@ function page_listing(string $slug): void
         'name' => $l['name'],
         'url' => url($l['url']),
         'description' => mb_substr($l['description'], 0, 300),
-        'image' => array_map(fn($p) => url(photo_url($p)), array_slice($l['photos'], 0, 4)),
+        'image' => $l['has_photos'] ? array_map(fn($p) => url(photo_url($p)), array_slice($l['photos'], 0, 4)) : url('/assets/img/og-default.webp'),
         'address' => ['@type' => 'PostalAddress', 'streetAddress' => $l['address'], 'addressLocality' => $l['city'], 'addressRegion' => $l['state'], 'postalCode' => $l['zip'], 'addressCountry' => 'US'],
         'petsAllowed' => is_pet_friendly($l),
     ];
@@ -116,7 +116,7 @@ function page_listing(string $slug): void
         'title' => $l['name'] . ' – ' . $bedsTxt . ' in ' . $l['city'] . ', OH',
         'description' => mb_substr($l['name'] . ' at ' . $l['address'] . ', ' . $l['city'] . ', OH. ' . $bedsTxt . ', ' . rent_label($l) . '. ' . pets_label($l) . '. See photos, amenities, map and details.', 0, 158),
         'canonical' => $l['url'],
-        'image' => photo_url($l['photos'][0]),
+        'image' => $l['has_photos'] ? photo_url($l['photos'][0]) : '/assets/img/og-default.webp',
         'schema' => [$schema, breadcrumb_schema([['Home', '/'], ['Apartments', '/apartments/'], [$l['name'], $l['url']]])],
         'breadcrumbs' => [['Home', '/'], ['Apartments', '/apartments/'], [$l['name'], null]],
         'robots' => $l['status'] === 'published' ? null : 'noindex, nofollow',
