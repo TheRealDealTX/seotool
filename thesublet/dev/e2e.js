@@ -1,7 +1,7 @@
 // End-to-end test against php -S on :8099 (SQLite). Run: node dev/e2e.js
 const { chromium, devices } = require('playwright');
 const path = require('path');
-const BASE = 'http://127.0.0.1:8099';
+const BASE = process.env.BASE || 'http://127.0.0.1:8099';
 const shots = process.env.SHOTS || '/tmp/claude-0/shots';
 require('fs').mkdirSync(shots, { recursive: true });
 let fails = 0;
@@ -42,7 +42,7 @@ const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++
 
   // 2. admin login + approve
   await page.goto(BASE + '/admin/login/');
-  await page.fill('input[name=user]', 'admin'); await page.fill('input[name=pass]', 'devpass12345');
+  await page.fill('input[name=user]', 'admin'); await page.fill('input[name=pass]', process.env.ADMIN_PASS || 'devpass12345');
   await page.click('button:has-text("Sign in")');
   await page.waitForURL(BASE + '/admin/');
   ok(/Pending review/.test(await page.textContent('.stat-grid')), 'admin dashboard loads');

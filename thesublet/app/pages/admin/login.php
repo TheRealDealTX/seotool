@@ -13,7 +13,7 @@ if (is_post()) {
             session_boot();
             session_regenerate_id(true);
             $_SESSION['admin'] = 1;
-            $_SESSION['admin_ip'] = client_ip();
+            $_SESSION['admin_ua'] = substr(hash('sha256', $_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 16);
             redirect('/admin/');
         }
         $err = 'Incorrect username or password.';

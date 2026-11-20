@@ -70,7 +70,7 @@ function is_admin(): bool
 {
     if (!isset($_COOKIE['ts_sess'])) return false;
     session_boot();
-    return !empty($_SESSION['admin']) && ($_SESSION['admin_ip'] ?? '') === client_ip();
+    return !empty($_SESSION['admin']) && hash_equals((string)($_SESSION['admin_ua'] ?? ''), substr(hash('sha256', $_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 16));
 }
 
 function require_admin(): void
