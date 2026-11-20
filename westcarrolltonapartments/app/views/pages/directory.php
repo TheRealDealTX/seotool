@@ -38,6 +38,9 @@ $lps = landing_pages();
       <label><input type="checkbox" data-f="income"> Income-based</label>
       <label><input type="checkbox" data-f="claimed"> Verified owner (contact shown)</label>
     </fieldset>
+    <label>City
+      <select data-f="city"><option value="">Any</option><?php $cities = array_unique(array_column($listings, 'city')); sort($cities); foreach ($cities as $c): ?><option><?= e($c) ?></option><?php endforeach; ?></select>
+    </label>
     <label>Type
       <select data-f="type"><option value="">Any</option><?php foreach (LISTING_TYPES as $k => $n): ?><option value="<?= $k ?>"><?= e($n) ?></option><?php endforeach; ?></select>
     </label>
@@ -72,7 +75,7 @@ $lps = landing_pages();
 <section class="section">
   <div class="wrap narrow faq">
     <h2>Frequently asked questions</h2>
-    <details><summary>How many apartment communities are in West Carrollton, OH?</summary><p>This page lists <?= count($listings) ?> communities<?= $landing ? ' that match this category' : ' in West Carrollton and the immediately surrounding 45449 area' ?>. We add new properties as owners submit them, and you can <a href="/list-your-property/">list a property</a> for free.</p></details>
+    <details><summary>How many apartment communities are in West Carrollton, OH?</summary><p>This page lists <?= count($listings) ?> communities<?= $landing ? ' that match this category' : ' in West Carrollton and nearby Moraine, Miamisburg, Miami Township and Kettering' ?>. We add new properties as owners submit them, and you can <a href="/list-your-property/">list a property</a> for free.</p></details>
     <?php if ($avgMin): ?><details><summary>What is a typical starting rent?</summary><p>Across these listings the average advertised starting rent is about <?= money($avgMin) ?> per month. Rents change often, so confirm current pricing and specials with the property.</p></details><?php endif; ?>
     <details><summary>Why are some phone numbers and websites hidden?</summary><p>Contact details appear once the owner or manager claims and verifies the listing. For unclaimed communities, search the community name to reach the leasing office, or <a href="/contact/">ask us</a> and we will point you in the right direction.</p></details>
     <details><summary>Are the photos real?</summary><p>Photos uploaded by verified owners are real. Listings that have not been claimed use representative stock photos, clearly labeled on the listing page.</p></details>

@@ -105,7 +105,7 @@
 
     function apply() {
       var q = f('q').value.trim().toLowerCase(), beds = f('beds').value, max = +f('max').value,
-        pets = f('pets').checked, inc = f('income').checked, claimed = f('claimed').checked, type = f('type').value,
+        pets = f('pets').checked, inc = f('income').checked, claimed = f('claimed').checked, type = f('type').value, city = f('city').value,
         ams = $$('[data-f="am"]:checked', dir).map(function (x) { return new RegExp(x.value, 'i'); });
       maxOut.textContent = max >= 3000 ? 'Any' : money(max);
       var n = 0, visible = [];
@@ -122,6 +122,7 @@
         if (inc && !d.income) ok = false;
         if (claimed && !d.claimed) ok = false;
         if (type && d.type !== type) ok = false;
+        if (city && d.city !== city) ok = false;
         ams.forEach(function (re) { if (!re.test(d.amen.join(' '))) ok = false; });
         c.hidden = !ok; if (ok) { n++; visible.push(d); }
       });

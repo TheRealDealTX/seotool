@@ -53,7 +53,7 @@ function page_directory(): void
     render('pages/directory', [
         'listings' => $all,
         'h1' => 'Apartments for Rent in West Carrollton, OH',
-        'intro' => 'Every apartment, townhome and senior community we know of in West Carrollton and the immediately surrounding 45449 area, in one searchable list. Filter by price, bedrooms and pets, see them on the map, save favorites and compare up to three side by side.',
+        'intro' => 'Every apartment, townhome and senior community we know of in West Carrollton and nearby Moraine, Miamisburg, Miami Township and Kettering, in one searchable list. Filter by price, bedrooms and pets, see them on the map, save favorites and compare up to three side by side.',
         'landing' => null,
     ], [
         'title' => 'Apartments for Rent in West Carrollton, OH (' . count($all) . ' Communities)',

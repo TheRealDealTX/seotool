@@ -132,7 +132,7 @@ function is_pet_friendly(array $l): bool
 function listing_public_json(array $l): array
 {
     return [
-        'id' => (int)$l['id'], 'name' => $l['name'], 'url' => $l['url'], 'type' => $l['type'],
+        'id' => (int)$l['id'], 'name' => $l['name'], 'url' => $l['url'], 'type' => $l['type'], 'city' => $l['city'],
         'address' => $l['address'] . ', ' . $l['city'] . ', ' . $l['state'] . ' ' . $l['zip'],
         'lat' => $l['lat'] !== null ? (float)$l['lat'] : null, 'lng' => $l['lng'] !== null ? (float)$l['lng'] : null,
         'bmin' => $l['beds_min'] !== null ? (int)$l['beds_min'] : null, 'bmax' => $l['beds_max'] !== null ? (int)$l['beds_max'] : null,
