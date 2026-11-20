@@ -1,0 +1,7 @@
+app/config.php
+dev/data/
+dev/*.sqlite
+dist/
+node_modules/
+dev/mail.log
+dev/server.log

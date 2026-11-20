@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /account/
+Disallow: /api/
+Disallow: /checkout/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /manage/
+Disallow: /renew/
+Disallow: /upgrade/
+Disallow: /listing/
+Disallow: /favorites/
+Disallow: /compare/
+Disallow: /cron/
+Disallow: /*?*sort=
+
+Sitemap: https://thesublet.com/sitemap.xml

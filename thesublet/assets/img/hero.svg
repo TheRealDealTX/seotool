@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Illustration of a sunny furnished room with a suitcase">
+<rect width="640" height="520" rx="28" fill="#e8f2ec"/>
+<rect x="60" y="60" width="200" height="170" rx="10" fill="#bfe0f2" stroke="#2f6f4f" stroke-width="6"/>
+<line x1="160" y1="60" x2="160" y2="230" stroke="#2f6f4f" stroke-width="5"/><line x1="60" y1="145" x2="260" y2="145" stroke="#2f6f4f" stroke-width="5"/>
+<circle cx="215" cy="100" r="22" fill="#ffd27a"/>
+<path d="M60 230 Q110 200 160 222 T260 210 V230 Z" fill="#cfe5d6"/>
+<rect x="40" y="380" width="560" height="10" fill="#c9b79c"/>
+<rect x="0" y="390" width="640" height="130" fill="#f2e6d6"/>
+<rect x="300" y="300" width="270" height="70" rx="14" fill="#2f6f4f"/>
+<rect x="300" y="250" width="40" height="120" rx="10" fill="#22533a"/>
+<rect x="340" y="282" width="215" height="40" rx="12" fill="#ffffff"/>
+<rect x="360" y="262" width="70" height="34" rx="12" fill="#f6d0c4"/>
+<rect x="300" y="370" width="16" height="22" fill="#22533a"/><rect x="554" y="370" width="16" height="22" fill="#22533a"/>
+<rect x="455" y="190" width="85" height="60" rx="6" fill="#fff7ef" stroke="#c9b79c" stroke-width="4"/>
+<path d="M470 235 l18-22 14 14 10-10 18 18" fill="none" stroke="#2f6f4f" stroke-width="4" stroke-linejoin="round"/>
+<rect x="90" y="300" width="110" height="140" rx="14" fill="#e46f4c"/>
+<rect x="120" y="275" width="50" height="30" rx="8" fill="none" stroke="#c8573a" stroke-width="8"/>
+<line x1="90" y1="345" x2="200" y2="345" stroke="#c8573a" stroke-width="6"/>
+<circle cx="110" cy="446" r="8" fill="#1d2a24"/><circle cx="180" cy="446" r="8" fill="#1d2a24"/>
+<rect x="128" y="360" width="34" height="22" rx="4" fill="#fff"/>
+<path d="M600 300 q-30 -40 0 -80 q30 40 0 80z" fill="#7fb89a"/><rect x="592" y="296" width="16" height="84" rx="4" fill="#c9b79c"/>
+<g font-family="system-ui,sans-serif" font-weight="700"><rect x="380" y="430" width="200" height="54" rx="27" fill="#ffffff" stroke="#2f6f4f" stroke-width="3"/><text x="480" y="464" text-anchor="middle" font-size="20" fill="#2f6f4f">1–12 months</text></g>
+</svg>
