@@ -44,6 +44,7 @@ function start_checkout(string $purpose, int $listingId, string $name, string $e
     $label = $purpose === 'claim' ? 'Claim & manage listing: ' : 'Featured owner listing: ';
     $session = stripe_request('POST', 'checkout/sessions', [
         'mode' => 'payment',
+        'allow_promotion_codes' => 'true',
         'customer_email' => $email,
         'client_reference_id' => (string)$paymentId,
         'line_items' => [[
@@ -68,7 +69,8 @@ function start_checkout(string $purpose, int $listingId, string $name, string $e
 /** Idempotently fulfil a paid Checkout session. Returns the payment row or null. */
 function fulfill_session(array $session): ?array
 {
-    if (($session['payment_status'] ?? '') !== 'paid') return null;
+    // 'no_payment_required' happens when a 100%-off promotion code is used
+    if (!in_array($session['payment_status'] ?? '', ['paid', 'no_payment_required'], true)) return null;
     $pdo = db();
     $st = $pdo->prepare('SELECT * FROM payments WHERE session_id = ?');
     $st->execute([$session['id']]);
@@ -77,8 +79,10 @@ function fulfill_session(array $session): ?array
     if ($p['status'] === 'paid') return $p;
 
     // Mark paid first (guards against double fulfilment from webhook + redirect)
-    $upd = $pdo->prepare("UPDATE payments SET status = 'paid', completed_at = ? WHERE id = ? AND status <> 'paid'");
-    $upd->execute([now(), $p['id']]);
+    $paidCents = isset($session['amount_total']) ? (int)$session['amount_total'] : (int)$p['amount'];
+    $upd = $pdo->prepare("UPDATE payments SET status = 'paid', completed_at = ?, amount = ? WHERE id = ? AND status <> 'paid'");
+    $upd->execute([now(), $paidCents, $p['id']]);
+    $p['amount'] = $paidCents;
     if ($upd->rowCount() === 0) return $p;
 
     $user = user_find_or_create($p['name'], $p['email']);

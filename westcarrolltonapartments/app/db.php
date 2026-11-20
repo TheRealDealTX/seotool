@@ -24,7 +24,7 @@ function db_is_sqlite(PDO $pdo): bool
     return $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite';
 }
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 function db_migrate(PDO $pdo): void
 {
@@ -125,6 +125,17 @@ function db_migrate(PDO $pdo): void
     if ($count === 0) {
         $seed = require APP_DIR . '/data/seed_listings.php';
         foreach ($seed as $l) listing_insert($pdo, $l);
+    }
+
+    // v2: additional researched listings (only inserted if the slug isn't already present)
+    if ($ver < 2 && is_file(APP_DIR . '/data/seed_listings_2.php')) {
+        $exists = $pdo->prepare('SELECT COUNT(*) FROM listings WHERE slug = ?');
+        foreach (require APP_DIR . '/data/seed_listings_2.php' as $l) {
+            $exists->execute([$l['slug']]);
+            if (!(int)$exists->fetchColumn()) {
+                try { listing_insert($pdo, $l, true); } catch (PDOException $e) { /* inserted by a concurrent request */ }
+            }
+        }
     }
 
     $pdo->prepare('REPLACE INTO settings (k, v) VALUES (?, ?)')->execute(['schema_version', (string)SCHEMA_VERSION]);

@@ -14,7 +14,7 @@
         <label>Email *<input type="email" name="email" required maxlength="190" value="<?= e(post('email')) ?>" autocomplete="email"><small class="muted">We'll send a verification link here to activate your owner account.</small></label>
         <label class="check"><input type="checkbox" name="confirm" value="1" required> I am the owner, manager or an authorized representative of <?= e($l['name']) ?>.</label>
         <button class="btn btn-accent btn-block" type="submit">Continue to secure payment – $<?= $price ?></button>
-        <p class="small muted center">Payments are processed by Stripe. We never see your card number.</p>
+        <p class="small muted center">Have a promo code? Enter it on the secure Stripe payment page. Payments are processed by Stripe; we never see your card number.</p>
       </form>
       <?php endif; ?>
     </div>

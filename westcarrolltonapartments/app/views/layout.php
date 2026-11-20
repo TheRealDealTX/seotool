@@ -50,6 +50,7 @@ $user = current_user();
       <?php else: ?>
       <div class="dropdown">
         <a href="/apartments/">Apartments</a>
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-label="Show apartment categories">▾</button>
         <div class="dropdown-menu">
           <a href="/apartments/">All apartments</a>
           <a href="/apartments/pet-friendly/">Pet-friendly</a>
@@ -65,7 +66,7 @@ $user = current_user();
       <a href="/tools/">Renter Tools</a>
       <a href="/west-carrollton-living-guide/">Living Guide</a>
       <a href="/blog/">Blog</a>
-      <a href="/compare/" class="fav-link" title="Saved & compare">♥ <span class="fav-count" hidden>0</span></a>
+      <a href="/compare/" class="fav-link" title="Saved & compare">♥<span class="fav-label"> Saved &amp; compare</span> <span class="fav-count" hidden>0</span></a>
       <?php if ($user): ?><a href="/account/">My Account</a><?php else: ?><a href="/account/login/">Owner Login</a><?php endif; ?>
       <a class="btn btn-sm" href="/list-your-property/">List Your Property</a>
       <?php endif; ?>

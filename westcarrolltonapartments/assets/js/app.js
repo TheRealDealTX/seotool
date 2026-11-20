@@ -14,6 +14,13 @@
   var tog = $('.nav-toggle'), nav = $('#nav');
   if (tog) tog.addEventListener('click', function () {
     var o = nav.classList.toggle('open'); tog.setAttribute('aria-expanded', o);
+    document.body.classList.toggle('nav-open', o);
+  });
+  $$('.sub-toggle').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var d = b.closest('.dropdown'), o = d.classList.toggle('open');
+      b.setAttribute('aria-expanded', o); b.textContent = o ? '▴' : '▾';
+    });
   });
 
   /* favorites */

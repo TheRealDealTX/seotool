@@ -104,6 +104,9 @@ function admin_edit_listing(): void
         foreach (normalize_files($_FILES['photos'] ?? []) as $f) {
             if ($p = save_uploaded_photo($f)) $photos[] = $p;
         }
+        foreach (array_slice(array_filter(array_map('trim', preg_split('/\s+/', post('photo_urls')))), 0, 15) as $pu) {
+            if ($p = import_photo_url($pu)) $photos[] = $p; else $errors[] = 'Could not import photo: ' . $pu;
+        }
         $stock = array_values(array_filter(array_map('trim', explode(',', post('stock_photos')))));
         if ($stock && !$photos) $photos = $stock;
         $d['photos'] = $photos;

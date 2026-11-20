@@ -7,9 +7,9 @@ const LISTING_FIELDS = ['slug', 'name', 'status', 'type', 'address', 'city', 'st
 
 const LISTING_TYPES = ['apartment' => 'Apartments', 'townhome' => 'Townhomes', 'senior' => 'Senior Living', 'duplex' => 'Duplex / Small Building'];
 
-function listing_insert(PDO $pdo, array $l): int
+function listing_insert(PDO $pdo, array $l, bool $exactSlug = false): int
 {
-    $l['slug'] = unique_slug($pdo, $l['slug'] ?? slugify($l['name']));
+    $l['slug'] = $exactSlug ? $l['slug'] : unique_slug($pdo, $l['slug'] ?? slugify($l['name']));
     foreach (['amenities', 'photos'] as $j) if (isset($l[$j]) && is_array($l[$j])) $l[$j] = json_encode(array_values($l[$j]));
     $cols = array_values(array_intersect(LISTING_FIELDS, array_keys($l)));
     $vals = array_map(fn($c) => $l[$c], $cols);
@@ -253,12 +253,36 @@ function amazon_products_for_listing(array $l): array
 function save_uploaded_photo(array $file): ?string
 {
     if (($file['error'] ?? 1) !== UPLOAD_ERR_OK || $file['size'] > 6 * 1024 * 1024) return null;
-    $info = @getimagesize($file['tmp_name']);
+    return save_photo_file($file['tmp_name']);
+}
+
+/** Download an image from a URL (admin import) and store it like an upload. */
+function import_photo_url(string $url): ?string
+{
+    if (!preg_match('#^https?://#i', $url)) return null;
+    $tmp = tempnam(sys_get_temp_dir(), 'wcaimg');
+    $fh = fopen($tmp, 'wb');
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [CURLOPT_FILE => $fh, CURLOPT_FOLLOWLOCATION => true, CURLOPT_MAXREDIRS => 3, CURLOPT_TIMEOUT => 20,
+        CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; WestCarrolltonApartments/1.0)', CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+        CURLOPT_NOPROGRESS => false, CURLOPT_PROGRESSFUNCTION => fn($c, $dt, $d) => $d > 12 * 1024 * 1024 ? 1 : 0]);
+    $ok = curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    fclose($fh);
+    $path = ($ok && $code < 400) ? save_photo_file($tmp) : null;
+    @unlink($tmp);
+    return $path;
+}
+
+function save_photo_file(string $tmp): ?string
+{
+    $info = @getimagesize($tmp);
     if (!$info || !in_array($info[2], [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_WEBP], true)) return null;
     $src = match ($info[2]) {
-        IMAGETYPE_JPEG => @imagecreatefromjpeg($file['tmp_name']),
-        IMAGETYPE_PNG => @imagecreatefrompng($file['tmp_name']),
-        IMAGETYPE_WEBP => @imagecreatefromwebp($file['tmp_name']),
+        IMAGETYPE_JPEG => @imagecreatefromjpeg($tmp),
+        IMAGETYPE_PNG => @imagecreatefrompng($tmp),
+        IMAGETYPE_WEBP => @imagecreatefromwebp($tmp),
     };
     if (!$src) return null;
     $w = imagesx($src); $h = imagesy($src);
