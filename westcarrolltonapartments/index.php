@@ -7,8 +7,9 @@ $path = rawurldecode(parse_url($uri, PHP_URL_PATH) ?: '/');
 $qs = parse_url($uri, PHP_URL_QUERY);
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-// Canonical host: strip www.
-if (str_starts_with($host, 'www.')) {
+// Canonical host + scheme: strip www., force https (TLS terminates at the CDN, which sets X-Forwarded-Proto)
+$forcedHttps = str_starts_with(cfg('site_url'), 'https://') && ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http';
+if (str_starts_with($host, 'www.') || $forcedHttps) {
     redirect(url($path . ($qs ? "?$qs" : '')), 301);
 }
 
