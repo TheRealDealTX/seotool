@@ -41,6 +41,20 @@ $months = $l['available_from'] && $l['available_to'] ? max(1, (int)round((strtot
 $bedsLabel = $l['beds'] === 'studio' ? 'Studio' : $l['beds'] . ' bed' . ($l['beds'] === '1' ? '' : 's');
 $bathsLabel = $l['baths'] === 'shared' ? 'Shared bath' : $l['baths'] . ' bath' . ($l['baths'] === '1' ? '' : 's');
 
+if (is_unclaimed($l)) {
+    $body = view('listing_directory', compact('l', 'crumbs', 'guide', 'cityUrl', 'similar'));
+    page([
+        'title' => $l['title'] . ' — ' . (property_types()[$l['property_type']] ?? 'Furnished housing') . ' in ' . $l['city'] . ', ' . $l['state'] . ' | The Sublet',
+        'description' => excerpt($l['title'] . ' in ' . $l['city'] . ', ' . $l['state'] . ': ' . (property_types()[$l['property_type']] ?? 'furnished housing') . ' for monthly and medium-term stays. Address, phone, website and owner claim on The Sublet.', 158),
+        'canonical' => $canonical,
+        'robots' => 'index, follow',
+        'body' => $body,
+        'h_extra' => leaflet_head(),
+        'schema' => [schema_breadcrumbs($crumbs), schema_business($l)],
+    ]);
+    exit;
+}
+
 ob_start(); ?>
 <div class="wrap listing-page">
   <?= breadcrumbs_html($crumbs) ?>
@@ -79,7 +93,7 @@ ob_start(); ?>
       </div>
 
       <section class="facts">
-        <div><span>Rent</span><strong><?= money($l['rent']) ?>/mo</strong><?= $l['utilities_included'] ? '<small>Utilities included</small>' : '<small>Utilities extra</small>' ?></div>
+        <div><span>Rent</span><strong><?= $l['rent'] > 0 ? money($l['rent']) . '/mo' : 'On request' ?></strong><?= $l['utilities_included'] ? '<small>Utilities included</small>' : '<small>Utilities extra</small>' ?></div>
         <div><span>Deposit</span><strong><?= $l['deposit'] ? money($l['deposit']) : 'None stated' ?></strong></div>
         <div><span>Available</span><strong><?= $l['available_from'] ? e(fmt_date($l['available_from'])) : 'Now' ?></strong><small>until <?= $l['available_to'] ? e(fmt_date($l['available_to'])) : 'flexible' ?></small></div>
         <div><span>Minimum stay</span><strong><?= (int)$l['min_stay'] ?> month<?= $l['min_stay'] > 1 ? 's' : '' ?></strong><?= $months ? '<small>up to ~' . $months . ' months</small>' : '' ?></div>
@@ -119,7 +133,7 @@ ob_start(); ?>
 
     <aside class="l-side">
       <div class="side-card">
-        <p class="side-price"><strong><?= money($l['rent']) ?></strong> / month</p>
+        <p class="side-price"><?= $l['rent'] > 0 ? '<strong>' . money($l['rent']) . '</strong> / month' : '<strong>Rates on request</strong>' ?></p>
         <?php if ($showContact): ?>
           <div class="contact-direct">
             <h2 class="h4">Contact <?= e($l['contact_name'] ?: 'the host') ?></h2>

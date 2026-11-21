@@ -2,6 +2,21 @@
 
 cache_public();
 $slug = $params[0];
+function credits_html(): string
+{
+    $h = '<p>Listing photos are uploaded by hosts, who confirm they own them or have permission to use them. We never copy photos from other rental sites or property websites. Claimable directory listings show an illustration until the property manager adds their own photos.</p>'
+       . '<p>Site, blog and city photos are royalty-free images (public domain / CC0) or Creative Commons photos used under their license terms, self-hosted as WebP. Illustrations and the logo are original artwork.</p>';
+    $rows = '';
+    foreach (photos() as $key => $p) {
+        $lic = e($p['license'] ?? '');
+        if (!empty($p['license_url'])) $lic = '<a href="' . e($p['license_url']) . '" rel="nofollow noopener" target="_blank">' . $lic . '</a>';
+        $rows .= '<tr><td><img src="' . e($p['file']) . '" alt="" width="96" height="54" loading="lazy" style="width:96px;height:54px;object-fit:cover;border-radius:6px"></td><td>' . e($p['alt'] ?? '') . '</td><td>'
+            . e(strip_tags((string)($p['credit'] ?? ''))) . (!empty($p['source']) ? ' / ' . e($p['source']) : '') . '</td><td>' . $lic . '</td><td>'
+            . (!empty($p['url']) ? '<a href="' . e($p['url']) . '" rel="nofollow noopener" target="_blank">Source</a>' : '') . '</td></tr>';
+    }
+    if ($rows) $h .= '<div class="table-scroll"><table class="tbl"><tr><th></th><th>Image</th><th>Creator / source</th><th>License</th><th></th></tr>' . $rows . '</table></div>';
+    return $h . '<p>If you believe an image infringes your rights, please <a href="/contact/">contact us</a> and we’ll review it promptly.</p>';
+}
 $price = e(price_label());
 $pages = [
 'about' => ['About The Sublet', 'About The Sublet — a nationwide directory of furnished sublets and 1–12 month rentals for interns, travel nurses, students and relocations.', <<<HTML
@@ -63,11 +78,7 @@ HTML],
 <h2>Your device</h2><p>Favorites, compare selections, the packing checklist and room planner are stored in your browser’s local storage, not on our servers. If enabled, Google Tag Manager/analytics may set cookies to measure site usage.</p>
 <h2>Retention &amp; choices</h2><p>Hosts can edit or delete listings from their dashboard, or ask us to delete their data via the <a href="/contact/">contact form</a>.</p>
 HTML],
-'credits' => ['Photo Credits', 'Image credits for The Sublet.', <<<'HTML'
-<p>Listing photos are uploaded by hosts, who confirm they own them or have permission to use them. We never copy photos from other rental sites or property websites.</p>
-<p>Site illustrations (logo, placeholder and hero artwork) are original drawings made for The Sublet.</p>
-<p>If you believe a photo on The Sublet infringes your rights, please <a href="/contact/">contact us</a> with the listing link and we’ll review it promptly.</p>
-HTML],
+'credits' => ['Photo Credits', 'Image credits and licenses for photos used on The Sublet.', credits_html()],
 ];
 [$title, $desc, $html] = $pages[$slug];
 $crumbs = [['The Sublet', '/'], [$title, "/$slug/"]];

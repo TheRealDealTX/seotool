@@ -46,13 +46,18 @@ $indexable = !$dir['filtered'] && ($filterKey ? $dir['total'] > 0 : ($guide || $
 $tips = $guide['tips'] ?? [];
 $tipLabels = ['interns' => ['💼', 'For interns'], 'nurses' => ['🩺', 'For travel nurses'], 'students' => ['🎓', 'For students'], 'seasonal' => ['📅', 'When demand peaks']];
 
+$cp = photo('city.' . $st . '/' . $slug) ?: photo('site.city');
 ob_start(); ?>
+<section class="page-hero city-hero"<?= $cp ? ' style="--hero:url(\'' . e($cp['file']) . '\')"' : '' ?>>
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="wrap page-hero-inner">
+    <?= breadcrumbs_html($crumbs) ?>
+    <h1 class="reveal"><?= e($h1) ?></h1>
+    <p class="lead reveal"><?= $guide ? e(html_entity_decode($guide['tagline'], ENT_QUOTES, 'UTF-8')) : 'Furnished rooms and apartments for 1–12 month stays in ' . e($name) . ', posted by hosts on The Sublet.' ?></p>
+  </div>
+  <?php if ($cp && !empty($cp['credit'])): ?><span class="photo-credit">Photo: <?= e(strip_tags($cp['credit'])) ?><?= !empty($cp['license']) ? ' · ' . e($cp['license']) : '' ?></span><?php endif; ?>
+</section>
 <div class="wrap">
-  <?= breadcrumbs_html($crumbs) ?>
-  <header class="page-head">
-    <h1><?= e($h1) ?></h1>
-    <p class="lead"><?= $guide ? e(html_entity_decode($guide['tagline'], ENT_QUOTES, 'UTF-8')) : 'Furnished rooms and apartments for 1–12 month stays in ' . e($name) . ', posted by hosts on The Sublet.' ?></p>
-  </header>
   <nav class="filter-links" aria-label="<?= e($name) ?> sublet types">
     <a href="<?= e($base) ?>"<?= !$filterKey ? ' aria-current="page"' : '' ?>>All</a>
     <?php foreach ($filters as $fk => $fd): ?><a href="<?= e($base . $fk . '/') ?>"<?= $fk === $filterKey ? ' aria-current="page"' : '' ?>><?= e($fd['short']) ?></a><?php endforeach; ?>
@@ -121,5 +126,6 @@ page([
     'robots' => $indexable ? 'index, follow' : 'noindex, follow',
     'body' => $body,
     'h_extra' => leaflet_head(),
+    'og_image' => $cp ? base_url($cp['file']) : null,
     'schema' => array_values(array_filter([schema_breadcrumbs($crumbs), schema_itemlist($dir['cards'], $h1), schema_faq($faqs)])),
 ]);

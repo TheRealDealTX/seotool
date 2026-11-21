@@ -25,10 +25,12 @@ function blog_category_icon(string $cat): string
 
 function blog_card(array $p): string
 {
-    return '<article class="post-card"><a href="/blog/' . e($p['slug']) . '/">'
-        . '<span class="post-cat">' . blog_category_icon($p['category']) . ' ' . e($p['category']) . '</span>'
+    $img = photo_img('blog.' . $p['slug'], 'post-card-img');
+    return '<article class="post-card reveal"><a href="/blog/' . e($p['slug']) . '/">'
+        . ($img ? '<span class="post-card-media">' . $img . '</span>' : '')
+        . '<span class="post-card-body"><span class="post-cat">' . blog_category_icon($p['category']) . ' ' . e($p['category']) . '</span>'
         . '<h3>' . e($p['title']) . '</h3><p>' . e(excerpt($p['description'], 130)) . '</p>'
-        . '<span class="small muted">' . e(fmt_date($p['date'])) . ' · ' . (int)($p['read_min'] ?? 6) . ' min read</span></a></article>';
+        . '<span class="small muted">' . e(fmt_date($p['date'])) . ' · ' . (int)($p['read_min'] ?? 6) . ' min read</span></span></a></article>';
 }
 
 function tools_list(): array

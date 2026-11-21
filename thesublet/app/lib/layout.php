@@ -1,6 +1,6 @@
 <?php defined('APP') || exit;
 
-const ASSET_V = '1';
+const ASSET_V = '2';
 
 function logo_svg(): string
 {
@@ -55,6 +55,9 @@ function page(array $p): void
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v=<?= ASSET_V ?>">
 <?= $p['h_extra'] ?? '' ?>
 <?php foreach ($schemas as $s): ?>
@@ -70,9 +73,9 @@ function page(array $p): void
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <a href="/sublets/">Find a sublet</a>
+      <a href="/hosts/">For hosts</a>
       <a href="/tools/">Tools</a>
       <a href="/blog/">Guides</a>
-      <a href="/safety/">Safety</a>
       <a href="/favorites/" class="nav-fav">♡ Saved <span class="fav-count" hidden></span></a>
       <a href="/account/">Host login</a>
       <a class="btn btn-sm nav-cta" href="/post-a-sublet/">List your place</a>
@@ -94,7 +97,7 @@ function page(array $p): void
     </div>
     <div>
       <h2 class="f-h">Hosts</h2>
-      <a href="/post-a-sublet/">List your place</a><a href="/pricing/">Free vs. verified</a><a href="/account/">Host dashboard</a><a href="/blog/how-to-write-a-sublet-listing-that-rents/">Listing tips</a><a href="/blog/short-term-rental-laws-what-hosts-should-know/">Rental laws</a>
+      <a href="/hosts/">Why host with us</a><a href="/post-a-sublet/">List your place</a><a href="/pricing/">Free vs. verified</a><a href="/account/">Host dashboard</a><a href="/blog/how-to-write-a-sublet-listing-that-rents/">Listing tips</a><a href="/blog/short-term-rental-laws-what-hosts-should-know/">Rental laws</a>
     </div>
     <div>
       <h2 class="f-h">The Sublet</h2>
@@ -142,4 +145,38 @@ function form_errors(array $err): string
     $h = '<div class="flash flash-err" role="alert"><strong>Please fix the following:</strong><ul>';
     foreach ($err as $m) $h .= '<li>' . e($m) . '</li>';
     return $h . '</ul></div>';
+}
+
+/** Royalty-free photo manifest (app/content/photos/*.php). */
+function photos(): array
+{
+    static $all = null;
+    if ($all !== null) return $all;
+    $all = [];
+    foreach (glob(APPDIR . '/content/photos/*.php') ?: [] as $f) {
+        $d = require $f;
+        if (is_array($d)) $all += $d;
+    }
+    return $all;
+}
+
+function photo(string $key): ?array
+{
+    $p = photos()[$key] ?? null;
+    if (!$p || !is_file(ROOT . $p['file'])) return null;
+    return $p;
+}
+
+function photo_img(string $key, string $class = '', bool $lazy = true, ?string $alt = null): string
+{
+    $p = photo($key);
+    if (!$p) return '';
+    return '<img src="' . e($p['file']) . '" alt="' . e($alt ?? $p['alt']) . '" width="' . (int)$p['w'] . '" height="' . (int)$p['h'] . '"'
+        . ($class ? ' class="' . e($class) . '"' : '') . ($lazy ? ' loading="lazy" decoding="async"' : ' fetchpriority="high"') . '>';
+}
+
+function photo_url(string $key, string $fallback = ''): string
+{
+    $p = photo($key);
+    return $p ? $p['file'] : $fallback;
 }

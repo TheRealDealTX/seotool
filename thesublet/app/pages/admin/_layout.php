@@ -5,13 +5,14 @@ function admin_page(string $title, string $body): void
     $nav = [
         '/admin/' => 'Dashboard', '/admin/listings/?status=pending' => 'Review queue', '/admin/listings/' => 'Listings',
         '/admin/owners/' => 'Owners', '/admin/payments/' => 'Payments', '/admin/messages/' => 'Messages',
-        '/admin/reports/' => 'Reports', '/admin/settings/' => 'Settings',
+        '/admin/claims/' => 'Claims', '/admin/reports/' => 'Reports', '/admin/settings/' => 'Settings',
     ];
     $pending = (int)val("SELECT COUNT(*) FROM listings WHERE status = 'pending'");
     $openReports = (int)val('SELECT COUNT(*) FROM reports WHERE resolved = 0');
+    $openClaims = (int)val("SELECT COUNT(*) FROM claims WHERE status = 'pending'");
     $h = '<div class="admin wrap"><nav class="admin-nav">';
     foreach ($nav as $u => $l) {
-        $badge = ($l === 'Review queue' && $pending) ? ' <span class="pill">' . $pending . '</span>' : (($l === 'Reports' && $openReports) ? ' <span class="pill">' . $openReports . '</span>' : '');
+        $badge = ($l === 'Review queue' && $pending) ? ' <span class="pill">' . $pending . '</span>' : (($l === 'Reports' && $openReports) ? ' <span class="pill">' . $openReports . '</span>' : (($l === 'Claims' && $openClaims) ? ' <span class="pill">' . $openClaims . '</span>' : ''));
         $h .= '<a href="' . e($u) . '">' . e($l) . $badge . '</a>';
     }
     $h .= '<a href="/admin/logout/">Log out</a></nav>' . flashes() . '<h1>' . e($title) . '</h1>' . $body . '</div>';

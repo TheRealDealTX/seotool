@@ -10,7 +10,7 @@ if (is_post()) {
     admin_guard_post();
     $do = post('do');
     if ($do === 'save') {
-        [$data, $err] = listing_from_input($_POST);
+        [$data, $err] = listing_from_input($_POST, !is_directory($l), is_directory($l));
         $d = array_merge($d, $_POST);
         if (!$err) {
             $data['slug'] = slugify($data['title'], 60);

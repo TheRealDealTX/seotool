@@ -28,6 +28,16 @@ function first_photo_ids(array $ids): array
     return $out;
 }
 
+function is_directory(array $l): bool
+{
+    return ($l['source'] ?? 'host') === 'directory';
+}
+
+function is_unclaimed(array $l): bool
+{
+    return is_directory($l) && empty($l['claimed_at']);
+}
+
 function is_verified(array $l): bool
 {
     return $l['tier'] === 'paid';
@@ -55,7 +65,10 @@ function listing_search(array $f, int $limit = 24, int $offset = 0): array
     if (!empty($f['state'])) { $w[] = 'state = ?'; $p[] = strtoupper($f['state']); }
     if (!empty($f['city'])) { $w[] = 'city_slug = ?'; $p[] = $f['city']; }
     if (!empty($f['min'])) { $w[] = 'rent >= ?'; $p[] = (int)$f['min']; }
-    if (!empty($f['max'])) { $w[] = 'rent <= ?'; $p[] = (int)$f['max']; }
+    if (!empty($f['max'])) { $w[] = 'rent <= ? AND rent > 0'; $p[] = (int)$f['max']; }
+    if (!empty($f['source'])) { $w[] = 'source = ?'; $p[] = $f['source']; }
+    // date-based filters only make sense for host listings with real dates
+    if (!empty($f['from']) || !empty($f['to']) || !empty($f['summer'])) $w[] = "source = 'host'";
     if (!empty($f['type']) && isset(property_types()[$f['type']])) { $w[] = 'property_type = ?'; $p[] = $f['type']; }
     if (!empty($f['furnished'])) $w[] = 'furnished = 1';
     if (!empty($f['pets'])) $w[] = "pets IN ('cats','dogs','yes','ask')";
@@ -82,10 +95,10 @@ function listing_search(array $f, int $limit = 24, int $offset = 0): array
     }
     $where = implode(' AND ', $w);
     $order = match ($f['sort'] ?? '') {
-        'price_asc' => 'rent ASC',
+        'price_asc' => 'CASE WHEN rent = 0 THEN 1 ELSE 0 END, rent ASC',
         'price_desc' => 'rent DESC',
         'available' => 'available_from ASC',
-        default => "CASE WHEN tier = 'paid' THEN 0 ELSE 1 END, published_at DESC",
+        default => "CASE WHEN source = 'host' AND tier = 'paid' THEN 0 WHEN source = 'host' THEN 1 WHEN claimed_at IS NOT NULL THEN 2 ELSE 3 END, rank_score DESC, published_at DESC",
     };
     $total = (int)val("SELECT COUNT(*) FROM listings WHERE $where", $p);
     $items = rows("SELECT * FROM listings WHERE $where ORDER BY $order LIMIT " . (int)$limit . ' OFFSET ' . (int)$offset, $p);
@@ -113,6 +126,8 @@ function listing_card_data(array $items): array
             'pets' => $l['pets'],
             'utilities' => (bool)$l['utilities_included'],
             'verified' => $l['tier'] === 'paid',
+            'directory' => ($l['source'] ?? 'host') === 'directory',
+            'unclaimed' => ($l['source'] ?? 'host') === 'directory' && empty($l['claimed_at']),
             'status' => $l['status'],
             'photo' => isset($photos[$l['id']]) ? '/photo/' . $photos[$l['id']] . '.webp' : null,
             'lat' => $l['lat'] !== null ? (float)$l['lat'] : null,
@@ -130,16 +145,23 @@ function listing_card_html(array $c): string
     $badges = '';
     if ($c['verified']) $badges .= '<span class="badge badge-verified" title="Paid listing with a verified email">✔ Verified host</span>';
     if ($c['status'] === 'rented') $badges .= '<span class="badge badge-muted">Rented</span>';
-    $meta = e($c['type']) . ' · ' . ($c['furnished'] ? 'Furnished' : 'Unfurnished') . ' · ' . e($c['beds']) . ' bd / ' . e($c['baths']) . ' ba';
+    if (!empty($c['unclaimed'])) $badges .= '<span class="badge badge-glass">Property directory</span>';
+    $meta = !empty($c['directory'])
+        ? e($c['type']) . ($c['furnished'] ? ' · Furnished' : '')
+        : e($c['type']) . ' · ' . ($c['furnished'] ? 'Furnished' : 'Unfurnished') . ' · ' . e($c['beds']) . ' bd / ' . e($c['baths']) . ' ba';
+    $price = $c['rent'] > 0
+        ? '<strong>' . money($c['rent']) . '</strong>/mo' . ($c['utilities'] ? ' <span class="muted">· utilities incl.</span>' : '')
+        : '<strong class="rate-req">Rates on request</strong>';
+    $dates = !empty($c['directory']) ? (!empty($c['unclaimed']) ? 'Owner? <span class="claim-link">Claim this listing →</span>' : 'Flexible stays — contact for availability') : e($c['from_h']) . ' → ' . e($c['to_h']);
     return '<article class="card" data-id="' . $c['id'] . '">'
         . '<a class="card-img" href="' . e($c['url']) . '">' . $img . '<span class="card-badges">' . $badges . '</span></a>'
         . '<button class="fav-btn" type="button" data-fav="' . $c['id'] . '" aria-label="Save to favorites" aria-pressed="false">♡</button>'
         . '<div class="card-body">'
-        . '<p class="card-price"><strong>' . money($c['rent']) . '</strong>/mo' . ($c['utilities'] ? ' <span class="muted">· utilities incl.</span>' : '') . '</p>'
+        . '<p class="card-price">' . $price . '</p>'
         . '<h3 class="card-title"><a href="' . e($c['url']) . '">' . e($c['title']) . '</a></h3>'
         . '<p class="card-loc">' . e(($c['neighborhood'] ? $c['neighborhood'] . ', ' : '') . $c['city'] . ', ' . $c['state']) . '</p>'
         . '<p class="card-meta">' . $meta . '</p>'
-        . '<p class="card-dates">' . e($c['from_h']) . ' → ' . e($c['to_h']) . '</p>'
+        . '<p class="card-dates">' . $dates . '</p>'
         . '<label class="cmp"><input type="checkbox" data-compare="' . $c['id'] . '"> Compare</label>'
         . '</div></article>';
 }
@@ -195,7 +217,7 @@ function publish_listing(int $id): void
 }
 
 /** Validate & normalise listing form input. Returns [data, errors]. */
-function listing_from_input(array $in, bool $requireContact = true): array
+function listing_from_input(array $in, bool $requireContact = true, bool $directory = false): array
 {
     $err = [];
     $s = fn($k, $max) => mb_substr(trim((string)($in[$k] ?? '')), 0, $max);
@@ -217,14 +239,14 @@ function listing_from_input(array $in, bool $requireContact = true): array
     if (!isset(property_types()[$d['property_type']])) $err['property_type'] = 'Choose a property type.';
     $d['furnished'] = !empty($in['furnished']) && $in['furnished'] !== '0' ? 1 : 0;
     $d['rent'] = (int)preg_replace('/[^0-9]/', '', (string)($in['rent'] ?? ''));
-    if ($d['rent'] < 100 || $d['rent'] > 50000) $err['rent'] = 'Monthly rent should be between $100 and $50,000.';
+    if (!($directory && $d['rent'] === 0) && ($d['rent'] < 100 || $d['rent'] > 50000)) $err['rent'] = 'Monthly rent should be between $100 and $50,000' . ($directory ? ' (or 0 for “rates on request”).' : '.');
     $d['deposit'] = min(100000, (int)preg_replace('/[^0-9]/', '', (string)($in['deposit'] ?? '')));
     $d['utilities_included'] = !empty($in['utilities_included']) ? 1 : 0;
     foreach (['available_from', 'available_to'] as $k) {
         $v = $s($k, 10);
         $d[$k] = preg_match('/^\d{4}-\d{2}-\d{2}$/', $v) && strtotime($v) ? $v : null;
     }
-    if (!$d['available_from']) $err['available_from'] = 'Choose the date it becomes available.';
+    if (!$d['available_from'] && !$directory) $err['available_from'] = 'Choose the date it becomes available.';
     if ($d['available_to'] && $d['available_from'] && $d['available_to'] <= $d['available_from']) $err['available_to'] = 'The end date must be after the start date.';
     if ($d['available_to'] && $d['available_to'] < date('Y-m-d')) $err['available_to'] = 'The end date is in the past.';
     $d['min_stay'] = max(1, min(12, (int)($in['min_stay'] ?? 1)));
@@ -292,6 +314,7 @@ function run_expiry_jobs(): array
     $soon = gmdate('Y-m-d H:i:s', time() + 5 * 86400);
     $sent = 0;
     foreach (rows("SELECT * FROM listings WHERE status = 'active' AND expires_at IS NOT NULL AND expires_at < ? AND reminder_sent_at IS NULL LIMIT 25", [$soon]) as $l) {
+        if (!valid_email((string)$l['contact_email'])) { update('listings', ['reminder_sent_at' => $now], 'id = ?', [(int)$l['id']]); continue; }
         $body = view('emails/expiry', ['l' => $l]);
         send_mail($l['contact_email'], 'Your sublet listing expires soon: ' . $l['title'], $body);
         update('listings', ['reminder_sent_at' => $now], 'id = ?', [(int)$l['id']]);
@@ -307,4 +330,38 @@ function maybe_run_cron(): void
     if ((int)setting('last_cron', 0) < time() - 3600) {
         try { run_expiry_jobs(); } catch (Throwable $e) { error_log('[cron] ' . $e->getMessage()); }
     }
+}
+
+/** Import claimable directory entries (from dev/directory/directory.json). Skips refs already present. */
+function import_directory(array $rows): array
+{
+    $guides = city_content();
+    $added = 0; $skipped = 0;
+    foreach ($rows as $r) {
+        $key = $r['key'] ?? '';
+        if (!isset($guides[$key]) || empty($r['ref'])) { $skipped++; continue; }
+        if (val('SELECT id FROM listings WHERE place_ref = ?', [(string)$r['ref']])) { $skipped++; continue; }
+        $g = $guides[$key];
+        [$st, $slug] = explode('/', $key);
+        $now = now();
+        insert('listings', [
+            'source' => 'directory', 'slug' => slugify($r['title'], 60), 'title' => mb_substr($r['title'], 0, 140),
+            'business_name' => mb_substr($r['title'], 0, 160), 'description' => '',
+            'city' => $g['name'], 'city_slug' => $slug, 'state' => strtoupper($st), 'zip' => (string)($r['zip'] ?? ''),
+            'neighborhood' => mb_substr((string)($r['borough'] ?? ''), 0, 80),
+            'address_line' => mb_substr((string)($r['address'] ?? ''), 0, 190), 'address_city' => mb_substr((string)($r['address_city'] ?? ''), 0, 80),
+            'website' => mb_substr((string)($r['url'] ?? ''), 0, 300), 'phone_public' => mb_substr((string)($r['phone'] ?? ''), 0, 40),
+            'category' => mb_substr((string)($r['category'] ?? ''), 0, 80), 'place_ref' => mb_substr((string)$r['ref'], 0, 64),
+            'rank_score' => (int)($r['score'] ?? 0),
+            'property_type' => $r['ptype'] ?? 'furnished_community', 'furnished' => (int)($r['furnished'] ?? 1),
+            'rent' => 0, 'deposit' => 0, 'min_stay' => 1, 'beds' => '1', 'baths' => '1',
+            'amenities' => implode(',', array_intersect((array)($r['amenities'] ?? []), array_keys(amenity_options()))),
+            'house_rules' => '', 'pets' => in_array($r['pets'] ?? 'ask', ['yes', 'ask'], true) ? $r['pets'] : 'ask',
+            'lat' => isset($r['lat']) ? round((float)$r['lat'], 5) : null, 'lng' => isset($r['lng']) ? round((float)$r['lng'], 5) : null,
+            'contact_name' => '', 'contact_email' => '', 'contact_phone' => '',
+            'tier' => 'free', 'status' => 'active', 'published_at' => $now, 'created_at' => $now, 'updated_at' => $now,
+        ]);
+        $added++;
+    }
+    return ['added' => $added, 'skipped' => $skipped];
 }

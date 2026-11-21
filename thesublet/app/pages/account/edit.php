@@ -12,7 +12,7 @@ if (is_post()) {
     else {
         $in = $_POST + ['contact_email' => $o['email']];
         $in['contact_email'] = $o['email'];
-        [$data, $err] = listing_from_input($in, false);
+        [$data, $err] = listing_from_input($in, false, is_directory($l));
         $d = array_merge($d, $_POST);
         if (!$err) {
             $data['slug'] = slugify($data['title'], 60);
@@ -24,7 +24,7 @@ if (is_post()) {
                 if ($l['city_slug'] !== $data['city_slug'] || $l['state'] !== $data['state']) { $data['_lat'] = null; $data['_lng'] = null; resolve_coords($data, (int)$l['id']); }
             }
             $data['updated_at'] = now();
-            if ($l['status'] === 'active') $data['expires_at'] = compute_expiry($data['available_to'], $l['published_at']);
+            if ($l['status'] === 'active' && !is_directory($l)) $data['expires_at'] = compute_expiry($data['available_to'], $l['published_at']);
             update('listings', $data, 'id = ?', [(int)$l['id']]);
             foreach ((array)($_POST['delete_photos'] ?? []) as $pid) q('DELETE FROM photos WHERE id = ? AND listing_id = ?', [(int)$pid, (int)$l['id']]);
             [$n, $pe] = photos_save_uploads((int)$l['id']);

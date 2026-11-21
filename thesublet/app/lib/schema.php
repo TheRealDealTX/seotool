@@ -123,6 +123,29 @@ function schema_article(array $post): array
         'mainEntityOfPage' => base_url('/blog/' . $post['slug'] . '/'),
         'author' => ['@type' => 'Organization', 'name' => 'The Sublet', 'url' => base_url('/')],
         'publisher' => ['@id' => base_url('/#org')],
-        'image' => base_url($post['image'] ?? '/assets/img/og-default.png'),
+        'image' => base_url(photo_url('blog.' . $post['slug'], '/assets/img/og-default.png')),
     ];
+}
+
+function schema_business(array $l): array
+{
+    $type = ['extended_stay' => 'Hotel', 'student_housing' => 'ApartmentComplex', 'furnished_community' => 'ApartmentComplex'][$l['property_type']] ?? 'LodgingBusiness';
+    $s = [
+        '@context' => 'https://schema.org',
+        '@type' => $type,
+        'name' => $l['title'],
+        'url' => base_url(listing_url($l)),
+        'address' => array_filter([
+            '@type' => 'PostalAddress',
+            'streetAddress' => $l['address_line'] ?: null,
+            'addressLocality' => $l['address_city'] ?: $l['city'],
+            'addressRegion' => $l['state'],
+            'postalCode' => $l['zip'] ?: null,
+            'addressCountry' => 'US',
+        ]),
+    ];
+    if ($l['phone_public']) $s['telephone'] = $l['phone_public'];
+    if ($l['website']) $s['sameAs'] = preg_replace('#[?].*$#', '', $l['website']);
+    if ($l['lat'] !== null) $s['geo'] = ['@type' => 'GeoCoordinates', 'latitude' => (float)$l['lat'], 'longitude' => (float)$l['lng']];
+    return $s;
 }

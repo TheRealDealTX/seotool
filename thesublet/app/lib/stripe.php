@@ -50,9 +50,9 @@ function stripe_api(string $method, string $path, array $params = []): array
 }
 
 /** Create a Checkout Session for a listing. $kind: new|upgrade */
-function stripe_checkout(array $listing, string $kind, string $email, string $name): string
+function stripe_checkout(array $listing, string $kind, string $email, string $name, array $meta = []): string
 {
-    $title = $kind === 'upgrade' ? 'Verified listing upgrade' : 'Verified sublet listing';
+    $title = $kind === 'upgrade' ? 'Verified listing upgrade' : ($kind === 'claim' ? 'Verified property claim' : 'Verified sublet listing');
     $session = stripe_api('POST', 'checkout/sessions', [
         'mode' => 'payment',
         'customer_email' => $email,
@@ -69,7 +69,7 @@ function stripe_checkout(array $listing, string $kind, string $email, string $na
                 ],
             ],
         ]],
-        'metadata' => ['listing_id' => (string)$listing['id'], 'kind' => $kind, 'name' => mb_substr($name, 0, 120)],
+        'metadata' => ['listing_id' => (string)$listing['id'], 'kind' => $kind, 'name' => mb_substr($name, 0, 120)] + $meta,
         'success_url' => base_url('/checkout/success/?session_id={CHECKOUT_SESSION_ID}'),
         'cancel_url' => base_url('/checkout/cancel/?listing=' . $listing['id']),
     ]);
@@ -133,6 +133,10 @@ function fulfil_checkout(array $s): ?int
     else insert('payments', $data + ['stripe_session_id' => $s['id'], 'kind' => $kind, 'currency' => 'usd', 'created_at' => now()]);
 
     update('listings', ['tier' => 'paid', 'owner_id' => $ownerId, 'updated_at' => now()], 'id = ?', [$listingId]);
+    if ($kind === 'claim') {
+        $claim = row('SELECT * FROM claims WHERE id = ?', [(int)($s['metadata']['claim_id'] ?? 0)]);
+        if ($claim) approve_claim($claim, true, $ownerId);
+    }
     if (in_array($l['status'], ['pending', 'pending_payment', 'expired', 'rejected'], true) || $l['status'] === 'active') {
         publish_listing($listingId);
     }
@@ -143,4 +147,33 @@ function fulfil_checkout(array $s): ?int
         view('emails/paid', ['l' => $l, 'o' => $o, 'link' => $link]));
     notify_admin('Paid listing #' . $listingId . ' (' . $kind . ')', '<p>' . e($l['title']) . ' — ' . e($email) . '</p><p><a href="' . e(base_url(listing_url($l))) . '">View listing</a></p>');
     return $ownerId;
+}
+
+/** Give a claimant control of a directory listing. $paid: verified via Stripe. */
+function approve_claim(array $c, bool $paid, ?int $ownerId = null): void
+{
+    $l = listing_get((int)$c['listing_id']);
+    if (!$l) return;
+    if (!$ownerId) {
+        $o = row('SELECT * FROM owners WHERE email = ?', [$c['email']]);
+        $ownerId = $o ? (int)$o['id'] : insert('owners', ['email' => $c['email'], 'name' => $c['name'], 'phone' => $c['phone'], 'created_at' => now()]);
+    }
+    $upd = [
+        'owner_id' => $ownerId, 'contact_name' => $c['name'], 'contact_email' => $c['email'], 'contact_phone' => $c['phone'],
+        'claimed_at' => now(), 'status' => 'active', 'updated_at' => now(), 'published_at' => $l['published_at'] ?: now(),
+    ];
+    if (trim((string)$l['description']) === '' ) {
+        $upd['description'] = $l['title'] . ' offers ' . strtolower(property_types()[$l['property_type']] ?? 'furnished housing') . ' in ' . $l['city'] . ', ' . $l['state'] . '. Contact us for current rates, minimum stays and availability.';
+    }
+    update('listings', $upd, 'id = ?', [(int)$l['id']]);
+    update('claims', ['status' => 'approved', 'decided_at' => now()], 'id = ?', [(int)$c['id']]);
+    // any other open claims on the same listing are closed
+    q("UPDATE claims SET status = 'superseded', decided_at = ? WHERE listing_id = ? AND id <> ? AND status IN ('pending','pending_payment')", [now(), (int)$l['id'], (int)$c['id']]);
+    if (!$paid) {
+        $l = listing_get((int)$l['id']);
+        send_mail($c['email'], 'Your claim for ' . $l['title'] . ' is approved',
+            '<p>Hi ' . e($c['name']) . ',</p><p>You now manage <strong>' . e($l['title']) . '</strong> on The Sublet. Sign in to add photos, monthly rates, availability and house rules:</p>'
+            . email_button(magic_link_create($ownerId), 'Open my dashboard')
+            . '<p>Want a Verified host badge, top placement and your contact details shown? <a href="' . e(upgrade_link($l)) . '">Upgrade for ' . e(price_label()) . '</a>.</p>');
+    }
 }

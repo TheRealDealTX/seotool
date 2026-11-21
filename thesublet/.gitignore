@@ -5,3 +5,5 @@ dist/
 node_modules/
 dev/mail.log
 dev/server.log
+dev/directory/raw-*.jsonl
+dev/directory/paths-*.txt

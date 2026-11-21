@@ -16,6 +16,7 @@ ob_start(); ?>
       <h1><?= e($p['title']) ?></h1>
       <p class="muted small">By The Sublet team · <?= e(fmt_date($p['date'])) ?> · <?= (int)($p['read_min'] ?? 6) ?> min read</p>
     </header>
+    <?php $cover = photo('blog.' . $p['slug']); if ($cover): ?><figure class="post-cover"><img src="<?= e($cover['file']) ?>" alt="<?= e($cover['alt']) ?>" width="<?= (int)$cover['w'] ?>" height="<?= (int)$cover['h'] ?>" fetchpriority="high"></figure><?php endif; ?>
     <div class="prose"><?= $p['body'] ?></div>
     <?= faq_html($p['faqs'] ?? []) ?>
     <?= amazon_block($amz, 'Useful gear for this') ?>
@@ -36,6 +37,7 @@ page([
     'description' => $p['description'],
     'canonical' => '/blog/' . $p['slug'] . '/',
     'og_type' => 'article',
+    'og_image' => ($cv = photo('blog.' . $p['slug'])) ? base_url($cv['file']) : null,
     'body' => ob_get_clean(),
     'schema' => array_values(array_filter([schema_article($p), schema_breadcrumbs($crumbs), schema_faq($p['faqs'] ?? [])])),
 ]);

@@ -101,6 +101,9 @@ function property_types(): array
         'shared_room'      => 'Shared room',
         'entire_apartment' => 'Entire apartment',
         'entire_house'     => 'Entire house',
+        'furnished_community' => 'Furnished / corporate apartments',
+        'extended_stay'    => 'Extended-stay suites',
+        'student_housing'  => 'Student housing',
     ];
 }
 

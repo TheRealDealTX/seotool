@@ -46,6 +46,8 @@ $routes = [
     ['ANY',  '#^/upgrade/(\d+)/$#', 'upgrade'],
     ['ANY',  '#^/renew/(\d+)/$#', 'renew'],
     ['ANY',  '#^/manage/(\d+)/$#', 'manage'],
+    ['ANY',  '#^/claim/(\d+)/$#', 'claim'],
+    ['GET',  '#^/hosts/$#', 'hosts'],
     ['ANY',  '#^/login/$#', 'account/login'],
     ['ANY',  '#^/auth/([a-f0-9]+)/$#', 'account/auth'],
     ['ANY',  '#^/logout/$#', 'account/logout'],
@@ -75,6 +77,7 @@ $routes = [
     ['GET',  '#^/admin/payments/$#', 'admin/payments'],
     ['GET',  '#^/admin/messages/$#', 'admin/messages'],
     ['ANY',  '#^/admin/reports/$#', 'admin/reports'],
+    ['ANY',  '#^/admin/claims/$#', 'admin/claims'],
     ['ANY',  '#^/admin/settings/$#', 'admin/settings'],
 ];
 

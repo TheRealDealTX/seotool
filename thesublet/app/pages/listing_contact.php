@@ -2,7 +2,7 @@
 
 cache_private();
 $l = listing_get((int)$params[0]);
-if (!$l || $l['status'] !== 'active') json_out(['ok' => false, 'error' => 'This listing is no longer accepting messages.'], 404);
+if (!$l || $l['status'] !== 'active' || is_unclaimed($l) || !valid_email((string)$l['contact_email'])) json_out(['ok' => false, 'error' => 'This listing is no longer accepting messages.'], 404);
 if ($err = form_guard()) json_out(['ok' => false, 'error' => $err], 400);
 if (!rate_limit('contact', 6, 3600) || !rate_limit('contact-day', 20, 86400)) {
     json_out(['ok' => false, 'error' => 'You’ve sent a lot of messages. Please try again later.'], 429);

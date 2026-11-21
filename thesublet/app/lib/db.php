@@ -1,6 +1,6 @@
 <?php defined('APP') || exit;
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 function db(): PDO
 {
@@ -164,6 +164,34 @@ function db_migrate(PDO $pdo): void
             // CREATE INDEX re-runs fail harmlessly when the index already exists
             if (stripos($sql, 'CREATE INDEX') !== 0) throw $e;
         }
+    }
+    // v2: directory (claimable) listings + claims
+    if ($v < 2) {
+        $cols = [
+            "source VARCHAR(12) NOT NULL DEFAULT 'host'",
+            "business_name VARCHAR(160) NOT NULL DEFAULT ''",
+            "address_line VARCHAR(190) NOT NULL DEFAULT ''",
+            "address_city VARCHAR(80) NOT NULL DEFAULT ''",
+            "website VARCHAR(300) NOT NULL DEFAULT ''",
+            "phone_public VARCHAR(40) NOT NULL DEFAULT ''",
+            "category VARCHAR(80) NOT NULL DEFAULT ''",
+            "place_ref VARCHAR(64) NOT NULL DEFAULT ''",
+            "rank_score INT NOT NULL DEFAULT 0",
+            "claimed_at {DT} NULL",
+        ];
+        foreach ($cols as $c) {
+            try { $pdo->exec('ALTER TABLE listings ADD COLUMN ' . strtr($c, $T)); } catch (PDOException $e) { /* exists */ }
+        }
+        foreach ([
+            "CREATE INDEX idx_listings_source ON listings (source, status)",
+            "CREATE INDEX idx_listings_place ON listings (place_ref)",
+        ] as $sql) { try { $pdo->exec($sql); } catch (PDOException $e) {} }
+        $pdo->exec(strtr("CREATE TABLE IF NOT EXISTS claims (
+            id {PK}, listing_id {FK} NOT NULL, name VARCHAR(120) NOT NULL, email VARCHAR(190) NOT NULL,
+            phone VARCHAR(40) NOT NULL DEFAULT '', role VARCHAR(40) NOT NULL DEFAULT '', message TEXT,
+            domain_match TINYINT NOT NULL DEFAULT 0, status VARCHAR(20) NOT NULL DEFAULT 'pending',
+            ip VARCHAR(64) NOT NULL DEFAULT '', created_at {DT} NOT NULL, decided_at {DT} NULL
+        ){ENG}", $T));
     }
     $st = $pdo->prepare($sqlite ? "INSERT OR REPLACE INTO settings (k, v) VALUES ('schema_version', ?)"
         : "REPLACE INTO settings (k, v) VALUES ('schema_version', ?)");
