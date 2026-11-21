@@ -28,7 +28,7 @@ $intro = [
   <div class="l-layout">
     <div class="l-main">
       <div class="g-empty g-dir reveal">
-        <?= placeholder_svg($l['property_type']) ?>
+        <?= placeholder_svg($l['property_type'], false, (int)$l['id']) ?>
         <div class="g-dir-cta">
           <strong>Manage this property?</strong>
           <span>Claim the listing to add photos, rates and availability.</span>

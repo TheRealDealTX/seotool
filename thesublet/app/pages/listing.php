@@ -85,7 +85,7 @@ ob_start(); ?>
           <a href="/photo/<?= (int)$p['id'] ?>.webp" class="g-item" target="_blank" rel="noopener"><img src="/photo/<?= (int)$p['id'] ?>.webp" alt="<?= e($l['title']) ?> — photo <?= $i + 1 ?>" width="<?= (int)$p['width'] ?>" height="<?= (int)$p['height'] ?>" <?= $i ? 'loading="lazy"' : 'fetchpriority="high"' ?>></a>
         <?php endforeach; else: ?>
           <div class="g-empty">
-            <?= placeholder_svg($l['property_type']) ?>
+            <?= placeholder_svg($l['property_type'], false, (int)$l['id']) ?>
             <p>The host hasn’t added photos yet. Ask for a live video tour before you commit.</p>
             <a class="btn btn-sm" href="/manage/<?= (int)$l['id'] ?>/">📷 Add Photos</a> <span class="small muted">(for the host)</span>
           </div>

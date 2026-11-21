@@ -57,10 +57,10 @@ ob_start(); ?>
 
 <section class="stats-strip">
   <div class="wrap stats-grid">
-    <div class="stat-x reveal"><strong data-count="<?= $liveCount ?>"><?= number_format($liveCount) ?></strong><span>live listings &amp; properties</span></div>
-    <div class="stat-x reveal"><strong data-count="<?= count($guides) ?>"><?= count($guides) ?></strong><span>local city guides</span></div>
-    <div class="stat-x reveal"><strong data-count="<?= $stateCount ?>"><?= $stateCount ?></strong><span>states &amp; DC covered</span></div>
-    <div class="stat-x reveal"><strong data-count="<?= count(blog_posts()) ?>"><?= count(blog_posts()) ?></strong><span>renter &amp; host guides</span></div>
+    <div class="stat-x reveal"><strong data-countup="<?= $liveCount ?>"><?= number_format($liveCount) ?></strong><span>live listings &amp; properties</span></div>
+    <div class="stat-x reveal"><strong data-countup="<?= count($guides) ?>"><?= count($guides) ?></strong><span>local city guides</span></div>
+    <div class="stat-x reveal"><strong data-countup="<?= $stateCount ?>"><?= $stateCount ?></strong><span>states &amp; DC covered</span></div>
+    <div class="stat-x reveal"><strong data-countup="<?= count(blog_posts()) ?>"><?= count(blog_posts()) ?></strong><span>renter &amp; host guides</span></div>
   </div>
 </section>
 

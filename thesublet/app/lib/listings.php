@@ -117,6 +117,7 @@ function listing_card_data(array $items): array
             'city' => $l['city'], 'state' => $l['state'], 'neighborhood' => $l['neighborhood'],
             'rent' => (int)$l['rent'],
             'type' => $types[$l['property_type']] ?? $l['property_type'],
+            'ptype' => $l['property_type'],
             'furnished' => (bool)$l['furnished'],
             'beds' => $l['beds'], 'baths' => $l['baths'],
             'from' => $l['available_from'], 'to' => $l['available_to'],
@@ -141,7 +142,7 @@ function listing_card_html(array $c): string
 {
     $img = $c['photo']
         ? '<img src="' . e($c['photo']) . '" alt="' . e($c['title']) . '" loading="lazy" width="480" height="320">'
-        : placeholder_svg($c['type'], true);
+        : placeholder_svg($c['ptype'] ?? '', true, $c['id']);
     $badges = '';
     if ($c['verified']) $badges .= '<span class="badge badge-verified" title="Paid listing with a verified email">✔ Verified host</span>';
     if ($c['status'] === 'rented') $badges .= '<span class="badge badge-muted">Rented</span>';
@@ -166,21 +167,50 @@ function listing_card_html(array $c): string
         . '</div></article>';
 }
 
-/** Friendly drawn placeholder when a listing has no photos. */
-function placeholder_svg(string $type = '', bool $small = false): string
+/** Friendly drawn placeholder when a listing has no photos (varies by property type and seed). */
+function placeholder_svg(string $type = '', bool $small = false, int $seed = 0): string
 {
-    $label = $small ? '' : '<text x="240" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#5b6b62">No photos yet</text>';
-    return '<svg class="ph" viewBox="0 0 480 320" role="img" aria-label="Illustration: no photos yet" xmlns="http://www.w3.org/2000/svg">'
-        . '<rect width="480" height="320" fill="#eef5f0"/>'
-        . '<circle cx="390" cy="70" r="28" fill="#ffd27a"/>'
-        . '<path d="M0 250 Q120 205 240 240 T480 225 V320 H0Z" fill="#cfe5d6"/>'
-        . '<rect x="150" y="135" width="180" height="115" rx="6" fill="#ffffff" stroke="#2f6f4f" stroke-width="4"/>'
-        . '<path d="M135 142 L240 70 L345 142" fill="none" stroke="#2f6f4f" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>'
-        . '<rect x="222" y="190" width="36" height="60" rx="3" fill="#e46f4c"/>'
-        . '<rect x="170" y="160" width="34" height="30" rx="3" fill="#bfe0f2" stroke="#2f6f4f" stroke-width="3"/>'
-        . '<rect x="276" y="160" width="34" height="30" rx="3" fill="#bfe0f2" stroke="#2f6f4f" stroke-width="3"/>'
-        . '<circle cx="250" cy="222" r="3" fill="#fff"/>'
-        . $label . '</svg>';
+    $pal = [['#eef5f0', '#cfe5d6', '#2f6f4f'], ['#eef3f8', '#cddcec', '#2c5a85'], ['#fbf1ea', '#f1d6c4', '#9a4d2c'], ['#f3f0f9', '#ddd4ef', '#5b4691'], ['#eef7f6', '#c7e8e3', '#0f7a6b']];
+    [$bg, $hill, $ink] = $pal[$seed % count($pal)];
+    $label = $small ? '' : '<text x="240" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#5b6b62">Photos coming soon</text>';
+    $sun = '<circle cx="' . (330 + ($seed % 5) * 20) . '" cy="62" r="24" fill="#ffd27a"/>';
+    $ground = '<path d="M0 255 Q120 215 240 245 T480 232 V320 H0Z" fill="' . $hill . '"/>';
+    $win = function (int $x0, int $y0, int $cols, int $rows, int $w, int $h, int $gx, int $gy) use ($ink, $seed) {
+        $o = '';
+        for ($r = 0; $r < $rows; $r++) for ($c = 0; $c < $cols; $c++) {
+            $lit = (($r * 7 + $c * 3 + $seed) % 5) === 0;
+            $o .= '<rect x="' . ($x0 + $c * $gx) . '" y="' . ($y0 + $r * $gy) . '" width="' . $w . '" height="' . $h . '" rx="2" fill="' . ($lit ? '#ffe39a' : '#bfe0f2') . '" stroke="' . $ink . '" stroke-width="2"/>';
+        }
+        return $o;
+    };
+    switch ($type) {
+        case 'furnished_community':
+            $art = '<rect x="140" y="70" width="110" height="185" rx="6" fill="#fff" stroke="' . $ink . '" stroke-width="4"/>' . $win(156, 88, 3, 6, 18, 16, 30, 26)
+                 . '<rect x="262" y="120" width="90" height="135" rx="6" fill="#fff" stroke="' . $ink . '" stroke-width="4"/>' . $win(276, 136, 2, 4, 22, 18, 36, 28)
+                 . '<rect x="181" y="222" width="28" height="33" rx="3" fill="#e46f4c"/>';
+            break;
+        case 'extended_stay':
+            $art = '<rect x="120" y="105" width="240" height="150" rx="8" fill="#fff" stroke="' . $ink . '" stroke-width="4"/>'
+                 . '<rect x="150" y="80" width="180" height="34" rx="8" fill="' . $ink . '"/><text x="240" y="103" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="15" fill="#fff">SUITES</text>'
+                 . $win(140, 128, 6, 3, 24, 18, 36, 30) . '<rect x="220" y="218" width="40" height="37" rx="3" fill="#e46f4c"/>';
+            break;
+        case 'student_housing':
+            $art = '<path d="M120 120 L240 70 L360 120 Z" fill="#fff" stroke="' . $ink . '" stroke-width="4" stroke-linejoin="round"/>'
+                 . '<rect x="130" y="120" width="220" height="135" fill="#fff" stroke="' . $ink . '" stroke-width="4"/>'
+                 . '<rect x="148" y="132" width="10" height="110" fill="' . $hill . '"/><rect x="322" y="132" width="10" height="110" fill="' . $hill . '"/>'
+                 . $win(172, 140, 4, 2, 24, 22, 38, 40) . '<rect x="222" y="215" width="36" height="40" rx="18" fill="#e46f4c"/>'
+                 . '<circle cx="240" cy="100" r="9" fill="#ffd27a" stroke="' . $ink . '" stroke-width="2"/>';
+            break;
+        default:
+            $art = '<rect x="150" y="135" width="180" height="115" rx="6" fill="#ffffff" stroke="' . $ink . '" stroke-width="4"/>'
+                 . '<path d="M135 142 L240 70 L345 142" fill="none" stroke="' . $ink . '" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>'
+                 . '<rect x="222" y="190" width="36" height="60" rx="3" fill="#e46f4c"/>'
+                 . '<rect x="170" y="160" width="34" height="30" rx="3" fill="#bfe0f2" stroke="' . $ink . '" stroke-width="3"/>'
+                 . '<rect x="276" y="160" width="34" height="30" rx="3" fill="#bfe0f2" stroke="' . $ink . '" stroke-width="3"/>';
+    }
+    $tree = '<circle cx="' . (70 + ($seed % 3) * 12) . '" cy="215" r="26" fill="' . $hill . '" stroke="' . $ink . '" stroke-width="2" opacity=".9"/><rect x="' . (67 + ($seed % 3) * 12) . '" y="235" width="6" height="22" fill="' . $ink . '"/>';
+    return '<svg class="ph" viewBox="0 0 480 320" role="img" aria-label="Illustration: photos coming soon" xmlns="http://www.w3.org/2000/svg">'
+        . '<rect width="480" height="320" fill="' . $bg . '"/>' . $sun . $ground . $tree . $art . $label . '</svg>';
 }
 
 /** Coarsen coordinates so the exact address is never public (~400–800 m jitter, stable per listing). */

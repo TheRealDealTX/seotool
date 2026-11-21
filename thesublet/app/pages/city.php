@@ -46,7 +46,7 @@ $indexable = !$dir['filtered'] && ($filterKey ? $dir['total'] > 0 : ($guide || $
 $tips = $guide['tips'] ?? [];
 $tipLabels = ['interns' => ['💼', 'For interns'], 'nurses' => ['🩺', 'For travel nurses'], 'students' => ['🎓', 'For students'], 'seasonal' => ['📅', 'When demand peaks']];
 
-$cp = photo('city.' . $st . '/' . $slug) ?: photo('site.city');
+$cp = photo('city.' . $st . '/' . $slug);
 ob_start(); ?>
 <section class="page-hero city-hero"<?= $cp ? ' style="--hero:url(\'' . e($cp['file']) . '\')"' : '' ?>>
   <div class="page-hero-bg" aria-hidden="true"></div>

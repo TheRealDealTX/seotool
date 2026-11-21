@@ -296,12 +296,12 @@
     setTimeout(function () { els.forEach(function (e) { var r = e.getBoundingClientRect(); if (r.top < innerHeight) e.classList.add('in'); }); }, 60);
   }
   // count-up numbers
-  var nums = Array.prototype.slice.call(d.querySelectorAll('[data-count]'));
+  var nums = Array.prototype.slice.call(d.querySelectorAll('[data-countup]'));
   if (nums.length && 'IntersectionObserver' in window && !reduce) {
     var cio = new IntersectionObserver(function (es) {
       es.forEach(function (en) {
         if (!en.isIntersecting) return; cio.unobserve(en.target);
-        var el = en.target, to = +el.getAttribute('data-count') || 0, t0 = performance.now(), dur = 1400;
+        var el = en.target, to = +el.getAttribute('data-countup') || 0, t0 = performance.now(), dur = 1400;
         (function step(t) { var p = Math.min(1, (t - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - p, 3))); el.textContent = v.toLocaleString('en-US'); if (p < 1) requestAnimationFrame(step); })(t0);
       });
     }, { threshold: 0.4 });
