@@ -295,7 +295,8 @@
  },
  "Ilford HP5 Plus 35mm film": {
   "asin": "B002IS0E76",
-  "title": "1574577 HP5 Plus, Black and White Print Film, 35 mm, ISO 400, 36 Exposures (Pack of 3)"
+  "for": "black-white-film",
+  "title": "Ilford 1574577 HP5 Plus, Black and White Print Film, 35 mm, ISO 400, 36 Exposures (Pack of 3)"
  },
  "Ilford ID-11": {
   "asin": "B00009R6AD",
@@ -967,5 +968,40 @@
  "precision screwdriver set camera": {
   "asin": "B07BYV6PF6",
   "title": "Vessel Precision Screwdriver Set TD-56S / +0, 00, 000, 0000, -0.7, -0.9"
+ },
+ "Pentax KM film camera": {
+  "asin": "B0DDJ67JK2",
+  "for": "pentax-km-35mm-film-camera-with-50mm-lens",
+  "title": "Pentax Asahi KM SLR Manual Focus Film Camera (Renewed)"
+ },
+ "35mm Film Canisters": {
+  "asin": "B01MRHXNEM",
+  "for": "35mm-film-canisters-tri-x",
+  "title": "Kodak Tri-X 400TX Professional Black & White Film ISO 400, 35mm, 24 Exposures (3 Pack)"
+ },
+ "Olympus Stylus Epic Zoom 170 film camera": {
+  "asin": "B00005ATZP",
+  "for": "olympus-stylus-epic-zoom-170",
+  "title": "OLYMPUS Stylus Epic Zoom 170 QD Date 35mm Camera"
+ },
+ "Kodak Guide to 35mm Photography book": {
+  "asin": "087985801X",
+  "for": "kodak-guide-to-35mm-photography",
+  "title": "Kodak Guide to 35mm Photography: Techniques for Better Pictures"
+ },
+ "Kodak Pocket Guide to 35mm Photography book": {
+  "asin": "0879857692",
+  "for": "kodak-pocket-guide-to-35mm-photography",
+  "title": "KODAK Pocket Guide To 35MM Photography"
+ },
+ "Kodak Workshop Series: The Art of Seeing book": {
+  "asin": "0879853050",
+  "for": "the-kodak-workshop-series-the-art-of-seeing",
+  "title": "The art of seeing (The Kodak workshop series)"
+ },
+ "Sony Cyber-shot DSC-WX350": {
+  "asin": "B00I8BIBB8",
+  "for": "sony-cyber-shot-dsc-wx350-white",
+  "title": "Sony DSCWX350 18 MP Digital Camera (White)"
  }
 }
