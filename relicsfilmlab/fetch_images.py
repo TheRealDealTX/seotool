@@ -225,6 +225,10 @@ if __name__ == "__main__":
 
 # ---- second pass: alternate names / relaxed matching for misses ----------------
 ALT = {
+    "mamiya-7-with-80mm-lens": ["Mamiya 7"], "pentax-km-35mm-film-camera-with-50mm-lens": ["Pentax KM"], "nikon-f-black-35mm-film-camera-with-35-70mm-lens": ["Nikon F black", "Nikon F"],
+    "werra": ["Werra camera", "Zeiss Werra"], "polaroid-pz2001": ["Polaroid PZ2001", "Polaroid PZ"], "olympus-infinity-zoom-2000": ["Olympus Infinity Zoom"],
+    "olympus-stylus-epic-zoom-170": ["Olympus mju zoom 170", "Olympus Stylus Epic Zoom"], "sony-cyber-shot-dsc-wx350-white": ["Sony WX350", "Sony Cyber-shot WX"],
+    "bell-amp-howell-bf-705-big-finder-motor": ["Bell Howell camera"], "premier-pc-80-with-50mm-lens": ["Premier PC-80"],
     "minolta-x-700-mps-with-50mm-lens": ["Minolta X-700"], "canon-eos-rebel-xs": ["Canon EOS 500"], "canon-sure-shot-z-115": ["Canon Prima Super 115", "Canon Sure Shot Z115"],
     "olympus-quick-shooter": ["Olympus Quick Shooter"], "pentax-iqzoom-160": ["Pentax Espio 160", "Pentax IQZoom 160"], "olympus-superzoom-760": ["Olympus Superzoom"],
     "canon-514xl-super-8-camera": ["Canon 514XL", "Canon 514"], "olympus-stylus-zoom-35-70mm": ["Olympus mju zoom", "Olympus Stylus Zoom"],

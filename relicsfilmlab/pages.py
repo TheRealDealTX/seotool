@@ -20,8 +20,27 @@ STATIC_REDIRECTS = {
     "/gift-cards": "/collections/gift-guide", "/collections/gift-cards": "/collections/gift-guide", "/collections/frontpage": "/collections/all",
     "/collections/ready-to-hang-prints": "/collections/prints", "/collections/camera-repair": "/camera-repairs",
     "/pages/camera-repair": "/camera-repairs", "/pages/film-lab": "/collections/film-lab", "/pages/why-relics": "/pages/the-relics-standard",
+    # GSC 404s (Nov 2026 audit)
+    "/pages/camera-repair-info": "/camera-repairs", "/pages/workshops": "/collections/workshops", "/about-us": "/pages/about-us",
+    "/pages/shipping-instructions": "/pages/store-help", "/pages/membership": "/collections/staff-picks", "/blogs/journal": "/blogs/guides",
+    "/relics-film-lab/p/develop-scan-print": "/film-services",
+    "/products/photodom.shop/product/pentax-iqzoom-115g-point-and-shoot-film-camera": "/collections/point-shoot-cameras", "/relics-film-lab/p/relics-serif-tee-black-film-camera-tshirt": "/collections/accessories",
+    "/blogs/guides/pentax-k1000-review-best-35mm-camera": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    "/blogs/guides/pentax-k1000-review-35mm-film": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    "/blogs/guides/pentax-k1000-35mm-camera": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    "/blogs/guides/pentax-k1000-best-35mm-film-camera": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    "/blogs/guides/pentax-k1000-why-still-the-best-35mm-film": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    "/blogs/guides/prices-specs-and-why-it-remains-the-best-value-35mm-camera-review-35mm-camera": "/blogs/guides/pentax-k1000-review-35mm-camera",
+    **{"/blogs/guides/" + s_: "/blogs/guides/why-are-my-film-photos-blank-common-mistakes" for s_ in (
+        "why-are-my-film-photos-blank-common-film-mistakes", "why-are-my-film-photos-blank", "why-are-my-film-blank-5-common-film-mistakes",
+        "why-are-my-film-blank-common-mistakes", "why-are-my-film-photos-blank-5-common-film-mistakes-and-how-to",
+        "why-are-my-film-photos-blank-5-common-film-mistakes-and-how-to-fix", "why-are-my-film-photos-blank-5-common-film-mistakes-and-how-to-fix-them",
+        "why-are-my-film-photos-blank-5-common-film-mistakes-and-how-to...", "why-are-my-film-photos-blank-and-how-to-fix-it")},
 }
 
+STAFF_PICKS = ["olympus-stylus", "olympus-trip-35", "pentax-k-1000-with-50mm-lens-1", "canon-ae-1-program", "minolta-x-700-mps-with-50mm-lens", "nikon-fm-with-50mm-lens",
+               "contax-t2", "nikon-l35-af", "canon-af-35-ml", "olympus-xa2-2", "mamiya-7-with-80mm-lens", "yashica-mat-124-g", "hasselblad-500cm",
+               "polaroid-one-step-land-camera", "fujifilm-instax-wide-300-instant-film-camera-black-silver", "canon-514xl-super-8-camera"]
 GIFT_PICKS = ["olympus-trip-35", "olympus-stylus", "canon-ae-1", "minolta-x-700-mps-with-50mm-lens", "polaroid-one-step-land-camera", "polaroid-600-sun-lms-instant-camera",
               "fujifilm-instax-wide-300-instant-film-camera-black-silver", "yashica-mat-124-g", "color-film", "analogue-photography-reference-manual-for-shooting-film",
               "the-ansel-adams-basic-techniques-of-photography", "vintage-kodak-leather-camera-bag", "autumn-vintage-strap", "35mm-film-canister-keychains",
@@ -75,6 +94,13 @@ SPECIAL_PRODUCTS = {
         intro="Not sure what is wrong with your film camera? Work through our diagnostic checklist before paying for a repair — many faults are dead batteries, dirty contacts or tired light seals.",
         body="""<h2>Five-minute camera diagnostic</h2><ol><li><strong>Fresh battery</strong> — and clean the contacts with a pencil eraser or isopropyl alcohol.</li><li><strong>Shutter</strong> — open the back, fire at 1 second and 1/500: you should see a clear difference.</li><li><strong>Light seals</strong> — sticky black foam around the door means light leaks; replacement kits are cheap.</li><li><strong>Lens</strong> — shine a torch through it to spot haze or fungus.</li><li><strong>Meter</strong> — compare readings with a phone light-meter app.</li></ol><p>For anything beyond that, read our <a href="/camera-repairs">camera repair guide</a>.</p>""",
         kit=[("Precision screwdriver set", "precision screwdriver set camera"), ("Light seal replacement kit", "camera light seal foam kit"), ("Lens spanner wrench", "lens spanner wrench"), ("Isopropyl alcohol 99%", "99% isopropyl alcohol"), ("Lens cleaning kit", "camera lens cleaning kit")]),
+    "black-white-film": dict(
+        q="Ilford HP5 Plus 35mm film", btn="Shop black & white film",
+        intro="Black &amp; white film is cheap, forgiving and easy to develop at home. These are the 35mm black &amp; white films we load most — from classic Ilford HP5 and Kodak Tri-X to ultra-fine-grain options.",
+        body="""<h2>Which black &amp; white film should I buy?</h2><table><tr><th>Film</th><th>Speed</th><th>Best for</th></tr><tr><td>Ilford HP5 Plus</td><td>400</td><td>All-round, pushes to 1600</td></tr><tr><td>Kodak Tri-X 400</td><td>400</td><td>Gritty classic photojournalism look</td></tr><tr><td>Ilford FP4 Plus</td><td>125</td><td>Fine grain in good light</td></tr><tr><td>Ilford XP2 Super</td><td>400</td><td>B&amp;W developed in standard colour chemistry</td></tr><tr><td>Kodak T-Max 400</td><td>400</td><td>Sharp, modern fine grain</td></tr></table>
+<p>Developing black &amp; white at home is easy — see our <a href="/products/black-white-film-processing">black &amp; white processing guide</a>.</p>""",
+        kit=[("Ilford HP5 Plus 400", "Ilford HP5 Plus 35mm film"), ("Kodak Tri-X 400", "Kodak Tri-X 400 35mm film"), ("Ilford FP4 Plus 125", "Ilford FP4 Plus 35mm film"), ("Ilford XP2 Super", "Ilford XP2 Super 400 35mm film")],
+        faq=[("What is the best black and white film for beginners?", "Ilford HP5 Plus 400: it is forgiving of exposure mistakes and easy to develop."), ("Can any lab develop black and white film?", "Many labs process B&W; if yours doesn't, Ilford XP2 Super develops in standard colour (C-41) chemistry anywhere.")]),
     "color-film": dict(
         q="35mm color film", btn="Shop 35mm colour film",
         intro="Colour negative film is the place to start: it is forgiving, widely available and developed by every lab. These are the 35mm colour films we load most often, from budget to professional.",
@@ -227,6 +253,7 @@ def build_pages(ctx):
 <tr><td>Hazy, low-contrast images</td><td>Lens haze or fungus</td><td>Lens cleaning by a technician</td></tr>
 <tr><td>Wrong exposures</td><td>Meter drift, wrong battery voltage</td><td>Correct battery or meter calibration</td></tr>
 <tr><td>Sticky aperture blades</td><td>Oil on the blades</td><td>Lens service</td></tr></table>
+<h2>Film camera CLA service</h2><p>A <strong>CLA</strong> (clean, lube, adjust) is the standard service for a vintage film camera: the technician cleans the shutter and mirror mechanism, re-lubricates the helicoids and transport, and calibrates shutter speeds and the light meter. Mechanical classics such as a <a href="/products/nikon-f-photomic">Nikon F</a> or <a href="/products/nikon-f2-with-50mm-lens">Nikon F2</a> respond especially well — a Nikon F CLA often restores accurate speeds after decades of storage. Expect to pay roughly $100–$200 for a film camera CLA and allow a few weeks; it is worth it for cameras you plan to use for years.</p>
 <h2>Start with a diagnostic</h2><p>Run our five-minute <a href="/products/camera-repair-diagnostic">camera repair diagnostic</a> before booking a repair. Then try <a href="/pages/basic-camera-cleaning">basic camera cleaning</a>.</p>
 <h2>Finding a repairer</h2><p>Look for a technician who specialises in your brand, publishes turnaround times and offers a warranty on work. Ask for a quote first: if a repair costs more than a replacement body, buying another may make more sense.</p>
 <div class="kit" style="max-width:520px">{amz_link("Precision screwdriver set <span>Amazon →</span>", "precision screwdriver set camera", "")}{amz_link("Light seal foam kit <span>Amazon →</span>", "camera light seal foam kit", "")}{amz_link("Lens spanner wrench <span>Amazon →</span>", "lens spanner wrench", "")}</div>
@@ -356,6 +383,20 @@ def build_home(ctx):
 <div class="reveal reveal-d1"><div class="eyebrow">Long Beach roots</div><h2>Once the <em>film store</em> in Long Beach. Now everywhere.</h2>
 <p>For years Relics was the camera store and film lab Long Beach photographers relied on — the place to buy a refurbished camera, drop off a roll or learn to develop. The storefront and drop boxes have closed, but the know-how moved online so film shooters anywhere can use it.</p>
 <p>Looking for a film camera shop near Los Angeles? Start with our <a href="/collections/slr-cameras">SLR</a> and <a href="/collections/point-shoot-cameras">point-and-shoot</a> collections, or read <a href="/order-now">where to develop film</a>.</p></div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap prose" style="max-width:900px">
+<div class="eyebrow">About Relics Film Lab</div><h2>Relics Film Lab: the film camera shop from <em>Long Beach</em></h2>
+<p>Relics Film Lab — known to many as <strong>Relics Long Beach</strong>, and to longtime customers as We Are Relics — began as a film lab and camera store in Long Beach, California. Today Relics Film Lab is an online film camera shop: every Relics camera listing comes with an honest buying guide, a typical price and a direct link to buy.</p>
+<h3>Why shop Relics Film Lab?</h3>
+<ul>
+<li><strong>Chosen by people who repaired them.</strong> Relics Film Lab has bench-tested and refurbished thousands of cameras, so every Relics camera page says what to check before you buy.</li>
+<li><strong>Every format.</strong> Relics Film Lab covers 35mm point-and-shoots and SLRs, Polaroid and Instax, 120 medium format and Super 8 — plus fresh film and batteries.</li>
+<li><strong>Typical prices up front.</strong> Relics Film Lab shows what each camera usually sells for, so you know a fair deal when you see one.</li>
+<li><strong>Free tools.</strong> The Relics Film Lab <a href="/tools/camera-finder">camera finder</a>, <a href="/tools/film-stock-finder">film stock finder</a> and <a href="/tools/battery-finder">battery finder</a> help you choose.</li>
+</ul>
+<h3>Relics Long Beach: from camera store to online shop</h3>
+<p>For years Relics Long Beach was the camera store and film lab local photographers relied on for film developing in Long Beach, refurbished cameras and Saturday workshops. Relics Film Lab no longer runs a walk-in counter, but the Relics Long Beach team's know-how lives on in every guide — from <a href="/order-now">where to develop film</a> to <a href="/camera-repairs">camera repairs</a>.</p>
+<p>New to Relics Film Lab? Start with our <a href="/collections/staff-picks">staff picks</a>, browse every <a href="/collections/all-film-cameras">Relics camera</a>, or read the Relics Film Lab <a href="/blogs/guides">guides</a>.</p>
+</div></section>
 <section class="section" style="padding-top:0"><div class="wrap"><div class="band reveal"><div class="eyebrow">The Relics list</div><h2>New guides, film deals &amp; camera picks — <em>monthly</em>.</h2>
 <form class="newsletter js-news"><input type="email" required placeholder="you@example.com" aria-label="Email address"><button class="btn" type="submit">Join the list</button></form></div></div></section>"""
     write("/", "Relics Film Lab — Shop Vintage Film Cameras & Film", "Shop vintage film cameras, 35mm & 120 film, Polaroid and Super 8 at Relics Film Lab — honest buying guides and typical prices for every model.",

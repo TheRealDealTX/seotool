@@ -50,6 +50,36 @@ ARTICLES = {
 <h2>5. Developing and scanning</h2><p>Vision3 Super 8 is ECN-2 film — send it to a lab that processes and scans Super 8, and ask for a 2K or higher scan with the full frame visible. See our <a href="/products/develop-scan-ecn-2-motion-picture-film">ECN-2 guide</a>.</p>
 <h2>Super 8 wedding checklist</h2><ol><li>Camera tested with fresh batteries</li><li>Spare batteries for the camera and meter</li><li>Film cartridges in a cool bag</li><li>A marker for labels</li><li>An LED light for the reception</li></ol>""",
 
+"why-are-my-film-photos-blank-common-mistakes": lambda a: f"""
+<p class="lede">You picked up your scans and there's nothing there — or the lab says the roll came back blank. It's one of the most common questions labs hear: <strong>why are my film photos blank?</strong> The good news is that blank film almost always has a simple, fixable cause. Here's how to read your negatives and find it.</p>
+<h2>First: what do your negatives look like?</h2>
+<p>The answer to "why are my film photos blank" depends on whether the negatives are <strong>clear</strong> or <strong>black</strong>. Hold the strip up to a window.</p>
+<table><tr><th>Negatives look…</th><th>Edge markings (frame numbers, brand)?</th><th>What it means</th></tr>
+<tr><td>Completely clear</td><td>Visible</td><td>The film never received light — a camera problem (unexposed)</td></tr>
+<tr><td>Completely clear</td><td>Missing</td><td>A development problem (fixer before developer, or exhausted chemistry)</td></tr>
+<tr><td>Completely black / very dark</td><td>Hard to see</td><td>The whole roll was exposed to light (fogged)</td></tr>
+<tr><td>Some frames fine, some blank</td><td>Visible</td><td>Intermittent shutter, flash or lens-cap issue</td></tr></table>
+<h2>Mistake 1: the film never advanced</h2>
+<p>The number-one reason people ask why their film photos are blank: the film leader slipped off the take-up spool, so the camera "shot" 36 frames on the same unmoved bit of film — or none at all. When you rewind, the rewind crank should feel resistance. If it spun freely the whole roll, the film never caught.</p>
+<p><strong>Fix:</strong> when loading, fire two blank frames with the back open and watch the sprocket holes engage. With the back closed, check the rewind knob turns as you wind on.</p>
+<h2>Mistake 2: the lens cap was on (or the shutter didn't open)</h2>
+<p>On rangefinders and compacts the viewfinder doesn't look through the lens, so a lens cap won't show — you'll only discover it when you wonder why your film photos are blank. A stuck shutter or dead battery in an electronic camera does the same thing.</p>
+<p><strong>Fix:</strong> open the back with no film and fire the shutter at a slow speed while looking through the lens. You should see a flash of light. If not, the shutter needs a service — see our <a href="/camera-repairs">camera repair guide</a> and <a href="/products/camera-repair-diagnostic">diagnostic checklist</a>.</p>
+<h2>Mistake 3: the back was opened mid-roll</h2>
+<p>Opening the back before rewinding exposes the film to light. The frames nearest the opening go black, and a fully opened back in daylight can fog the whole roll — another classic reason film photos come back blank (or black).</p>
+<p><strong>Fix:</strong> always rewind fully before opening the back. If you open it by accident, close it immediately: the frames deep in the canister usually survive.</p>
+<h2>Mistake 4: flash and exposure problems</h2>
+<p>Indoors at night without flash, frames can be so underexposed they look blank. A dead flash battery, or shooting beyond the flash's range (usually 3–4 metres for a compact), gives the same result.</p>
+<p><strong>Fix:</strong> use 400 or 800-speed film indoors, check the flash-ready light, and stay within range. Our <a href="/tools/exposure-calculator">exposure calculator</a> helps when your camera has no meter.</p>
+<h2>Mistake 5: a development error</h2>
+<p>If the negatives are clear <em>and</em> the edge markings are missing, it's the processing, not your camera. At home this usually means fixer was poured in before developer, or the developer was exhausted.</p>
+<p><strong>Fix:</strong> label your bottles, check developer times and temperatures, and run a test strip — see <a href="/blogs/guides/how-to-develop-film-at-home">how to develop film at home</a>.</p>
+<h2>Why are my film photos blank on a disposable camera?</h2>
+<p>With a disposable, blank photos usually mean the flash wasn't charged, you shot indoors in dim light, or the wind wheel wasn't turned fully between shots. Always wind until it stops, and hold the flash button until the light glows.</p>
+<div class="kit" style="max-width:560px">{a("Kodak Gold 200 35mm film <span>Amazon →</span>", "Kodak Gold 200 35mm film")}{a("Camera lens cleaning kit <span>Amazon →</span>", "camera lens cleaning kit")}{a("Camera light seal foam kit <span>Amazon →</span>", "camera light seal foam kit")}</div>
+<h2>Quick checklist</h2>
+<ol><li>Clear negatives + edge markings → camera didn't expose (advance, cap, shutter).</li><li>Clear negatives, no markings → development error.</li><li>Black negatives → light leak or back opened.</li><li>Only some frames blank → flash, battery or intermittent shutter.</li></ol>
+<p>Still wondering why your film photos are blank after all that? Run our <a href="/products/camera-repair-diagnostic">five-minute camera diagnostic</a>, or pick up a tested replacement from our <a href="/collections/point-shoot-cameras">point-and-shoot</a> and <a href="/collections/slr-cameras">SLR</a> collections.</p>""",
 "best-point-and-shoot-film-cameras": lambda a: f"""
 <p class="lede">A great point and shoot film camera fits in a pocket, focuses for you and still makes pictures you'll print. After years of selling and repairing them, these are the compacts we recommend — grouped by what you want to spend and how you shoot.</p>
 <h2>The best overall: Olympus Stylus Epic (mju-II)</h2><p>A fast, sharp 35mm f/2.8 lens, weather sealing, spot metering and a body the size of a bar of soap. It's the benchmark. <a href="{P('olympus-stylus')}">See the Olympus Stylus Epic →</a></p>

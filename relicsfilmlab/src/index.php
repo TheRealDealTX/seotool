@@ -29,6 +29,10 @@ if (preg_match('#^[a-z0-9][a-z0-9/_\-.]*$#', $file) && !str_contains($file, '..'
     exit;
 }
 
+// Old Shopify market prefixes: /en-ca/..., /en-us/..., /fr-ca/... -> same path without the prefix
+if (preg_match('#^/(?:[a-z]{2}-[a-z]{2})(/.*)?$#', $path, $m)) { go(($m[1] ?? '') === '' ? '/' : $m[1]); }
+// Old Shopify CDN media that no longer exists -> a real image (keeps image links from 404ing)
+if (preg_match('#^/cdn/shop/.+\.(jpe?g|png|webp|gif)$#i', $path) && !is_file(__DIR__ . $path)) { go('/assets/img/site/hero.webp'); }
 $R = require __DIR__ . '/_redirects.php';
 if (isset($R[$path])) { go($R[$path]); }
 // Shopify nested product URLs: /collections/<c>/products/<p>

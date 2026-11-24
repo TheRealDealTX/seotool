@@ -42,6 +42,10 @@ MANUAL = {
     "canon-514xl-super-8-camera": (120, 250), "canon-310xl-super-8-camera": (100, 220), "chinon-20-p-xl-direct-sound-super-8-camera": (60, 120),
     "bolex-580-super-8-camera": (100, 200), "minolta-110-zoom-date": (80, 160), "pentax-auto-110-film-camera": (100, 200), "kodak-fisher-price": (25, 60),
     "canon-powershot-a550": (40, 80), "sony-handycam-ccd-sc5": (60, 130),
+    # added Nov 2026 (GSC audit)
+    "mamiya-7-with-80mm-lens": (1800, 2600), "polaroid-pz2001": (40, 90), "premier-pc-80-with-50mm-lens": (40, 90), "bell-amp-howell-bf-705-big-finder-motor": (20, 45),
+    "pentax-km-35mm-film-camera-with-50mm-lens": (120, 220), "nikon-f-black-35mm-film-camera-with-35-70mm-lens": (300, 550), "werra": (60, 140),
+    "olympus-infinity-zoom-2000": (30, 60), "olympus-stylus-epic-zoom-170": (50, 100), "sony-cyber-shot-dsc-wx350-white": (120, 200), "black-white-film": (8, 15),
     # lenses & accessories
     "canon-lens-fd-50mm-118-chrome-nose": (40, 80), "canon": (40, 150), "28mm-lens": (40, 100), "28-85mm-lens": (40, 100),
     "35mm-film-canister-*": (8, 20), "fuji-blimp-inflated": (20, 50), "color-film": (10, 18),

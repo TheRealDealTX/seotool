@@ -198,6 +198,46 @@ def footer():
 
 CSS_V = JS_V = "1"
 
+_GSC_FILE = os.path.join(ROOT, "data", "gsc_keywords.json")
+GSC_KW = json.load(open(_GSC_FILE)) if os.path.exists(_GSC_FILE) else {}
+KW_TARGET = 16   # aim: a page's main search query appears 14+ times in its visible copy (naturally); small headroom for spelling variants
+GENERIC_WORDS = {"film", "camera", "cameras", "35mm", "point", "and", "shoot", "vintage", "for", "sale", "price", "lens", "lenses", "battery", "used", "old"}
+
+def model_query(queries, brand_words):
+    """First query that names a specific model, not just 'brand + film camera'."""
+    for q in queries:
+        words = [w for w in re.split(r"[\s\-]+", q.lower()) if w]
+        if any(w not in GENERIC_WORDS and w not in brand_words for w in words) and not re.search(r"\b(for sale|price|lenses?|battery|cla)\b", q.lower()):
+            return q
+    return ""
+
+def _alnum(s):
+    return re.sub(r"[^a-z0-9]", "", html.unescape(s).lower())
+
+def kw_count(kw, fragment):
+    """Occurrences of a phrase in visible text, ignoring case, spaces and hyphens (X-700 == x700)."""
+    text = re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>", " ", fragment, flags=re.S))
+    return _alnum(text).count(_alnum(kw)) if _alnum(kw) else 0
+
+def kw_display(kw, name=""):
+    """How to write a query in copy: reuse the product's own spelling when the query is part of the name."""
+    if name and _alnum(kw) and _alnum(kw) in _alnum(name):
+        short = re.sub(r"\s*\(.*?\)", "", name)
+        short = re.sub(r"\s+with\s+.*$", "", short, flags=re.I).strip()
+        return short if _alnum(kw) in _alnum(short) else name
+    small = {"and", "for", "of", "the", "with"}
+    return " ".join(w if (any(ch.isdigit() for ch in w) and w.upper() != w.lower()) and len(w) > 4 else (w if w in small else w[:1].upper() + w[1:]) for w in kw.split())
+
+def kw_facts(k, facts, have, target=KW_TARGET, cap=14):
+    """A '{k}: quick facts' list using just enough of the supplied facts to reach the target count."""
+    need = max(0, target - have)
+    if not need:
+        return ""
+    items = [f for f in facts if f][:min(cap, need)]
+    if not items:
+        return ""
+    return f"<h2>{esc(k)}: quick facts</h2><ul class=\"kwfacts\">" + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
+
 META_DESC_MAX = 145
 TITLE_MAX = 60
 
@@ -513,6 +553,13 @@ def product_page(p):
 <p class="buybox__note">We link to live Amazon listings so you always see current prices, condition and seller ratings. Relics earns a small commission at no extra cost to you.</p>
 <div class="trust"><div><b>Checkout</b>Secure on Amazon</div><div><b>Returns</b>Amazon return policy</div><div><b>Advice</b>Written by film shooters</div></div>
 </div>"""
+    gsc = [q for q, c, i in GSC_KW.get(path, [])]
+    for q in gsc:
+        if len(aliases) >= 6:
+            break
+        if norm(q) not in norm(name) and all(norm(q) != norm(a) for a in aliases):
+            aliases.insert(0, q) if len(aliases) < 3 else aliases.append(q)
+    aliases = aliases[:6]
     alias_html = f'<p class="aliases">Also searched as: {", ".join(esc(a) for a in aliases)}</p>' if aliases and is_cam else ""
 
     # body sections
@@ -572,6 +619,34 @@ def product_page(p):
                      (f'The {esc(name)} isn\'t listed on Amazon right now, so our button links to the closest match we found — {esc(_sim["note"])} — and the link under it searches Amazon for the {esc(name)} itself, as independent sellers list copies from time to time.') if _sim else
                      f'Vintage cameras are sold by independent sellers on Amazon. Use the “Buy on Amazon” button above to see the current listing, price and condition for the {esc(name)}.'))
     faq_h, faq_ld = faq_html(faqs) if faqs else ("", None)
+    # main search query from Search Console -> make sure the copy uses it naturally
+    kw = model_query(gsc, {brand.lower(), slug.split("-")[0]} if brand else {slug.split("-")[0]}) if gsc else ""
+    if kw:
+        K = kw_display(kw, name)
+        _pr2 = PR.price_range(p)
+        film_names = ", ".join(l for l, q_ in (C.FILM_KITS.get(fk) or [])[:3]) if fk else ""
+        bat2 = C.BATTERIES.get(slug)
+        facts = [
+            f"The {esc(K)} is {'an' if catlabel.lower()[:1] in 'aeiou' else 'a'} {esc(catlabel.lower())}" + (f" from {esc(p['year'])}" if p["year"][:1].isdigit() else "") + f" — {esc(p['spec'].replace(' · ', ', '))}.",
+            f"A working {esc(K)} typically sells for {PR.fmt(_pr2)} — check Amazon for today's price." if _pr2 else "",
+            (f"The {esc(K)} takes {esc(fmt_label)}." if fmt_label and fmt_label != "digital" else ""),
+            (f"Batteries for the {esc(K)}: " + ("none needed for the exposure system." if bat2 == "none" else esc(C.BATTERY_PHRASE[bat2]) + ".")) if bat2 else "",
+            f"Good films for the {esc(K)}: {esc(film_names)}." if film_names else "",
+            (f"Before you buy a used {esc(K)}, check that the rollers are clean and the film door latches firmly." if cat == "instant" else
+             f"Before you buy a used {esc(K)}, fire the shutter, check the light seals and look through the lens for haze.") if is_cam else f"Before you buy, compare a few {esc(K)} listings for condition and seller rating.",
+            f"Most {esc(K)} listings on Amazon come from independent sellers, so compare condition, photos and seller ratings.",
+            f"The {esc(K)} is a great fit for {esc(who_for(p))}." if is_cam else "",
+            (f"Prints from the {esc(K)} develop on their own in minutes — shield them from bright light while they do." if cat == "instant" else
+             f'Film from the {esc(K)} can be developed by any lab that handles {esc(fmt_label)} — or <a href="/blogs/guides/how-to-develop-film-at-home">at home</a>.') if is_cam and fmt_label not in ("", "digital") else "",
+            f'Is your {esc(K)} misbehaving? Our <a href="/camera-repairs">camera repair guide</a> covers the common fixes.' if is_cam else "",
+            f"Save the {esc(K)} to your wishlist to compare it with similar models later.",
+            f'Questions about the {esc(K)}? Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.',
+            f"This {esc(K)} guide covers specs, film, batteries and exactly what to inspect when it arrives." if is_cam else f"This {esc(K)} page covers what it is, what to look for and where to buy.",
+            f"Prices for the {esc(K)} vary with condition and included extras such as cases, lenses or manuals.",
+            f'Compare the {esc(K)} with similar picks in our <a href="/collections/{colslug}">{esc(re.sub("<.*?>", "", col.get("h1", catlabel)).replace("&amp;", "&"))}</a> collection.',
+        ]
+        have = kw_count(kw, intro + "".join(sec) + faq_h + name)
+        sec.append(kw_facts(K, facts, have))
 
     # kit (aside)
     kit = []
@@ -624,14 +699,16 @@ def product_page(p):
 # ---------------------------------------------------------------- collections
 def collection_page(slug, c):
     path = "/collections/" + slug
-    if c.get("gift"):
-        picks = [BY_SLUG[s] for s in PG.GIFT_PICKS if s in BY_SLUG]
+    if c.get("gift") or c.get("picks"):
+        picks = [BY_SLUG[s] for s in (PG.GIFT_PICKS if c.get("gift") else PG.STAFF_PICKS) if s in BY_SLUG]
         items_html = grid(picks, filters=False)
         listed = picks
     else:
         items = [p for p in PRODUCTS if (c["cats"] is None or p["cat"] in c["cats"])]
         if c.get("filt"):
             items = [p for p in items if c["filt"] in p["slug"] or c["filt"] in p["name"].lower()]
+        if c.get("filt_any"):
+            items = [p for p in items if any(k in p["slug"] for k in c["filt_any"])]
         items_html = grid(items)
         listed = sorted(items, key=rank_of)
     plain = re.sub("<.*?>", "", html.unescape(c["h1"]))
@@ -641,6 +718,24 @@ def collection_page(slug, c):
     body = (phero(c["h1"], c["intro"], cr_h, site_img(c["img"]))
             + f'<section class="section" style="padding-top:48px"><div class="wrap">{extra.get("top", "")}{items_html}</div></section>'
             + (f'<section class="section" style="padding-top:0"><div class="wrap prose">{extra.get("body", "")}{("<h2>FAQ</h2>" + faq_h) if faq_h else ""}</div></section>' if extra else ""))
+    ckw = model_query([q for q, c_, i_ in GSC_KW.get(path, [])], set()) or ""
+    if ckw:
+        K = kw_display(ckw)
+        cfacts = [
+            f"Every {esc(K)} on this page links to a full buying guide with specs and a typical price.",
+            f"Our {esc(K)} picks run from budget-friendly models to collector favourites.",
+            f"Before buying a used {esc(K)}, check the light seals, test the shutter and look through the lens for haze.",
+            f"Most {esc(K)} listings on Amazon come from independent sellers — compare condition, photos and seller ratings.",
+            f"Use the brand filter and price sort above to narrow down the {esc(K)} list.",
+            f'Not sure which {esc(K)} suits you? Try the <a href="/tools/camera-finder">camera finder</a>.',
+            f"Every {esc(K)} we list takes a film that is still made today.",
+            f'Need film for your {esc(K)}? See <a href="/collections/film">film &amp; batteries</a>.',
+            f'Unsure about a {esc(K)}? Our <a href="/camera-repairs">repair guide</a> explains what is easy to fix.',
+            f'Questions about a {esc(K)}? Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.',
+        ]
+        block = kw_facts(K, cfacts, kw_count(ckw, body))
+        if block:
+            body += f'<section class="section" style="padding-top:0"><div class="wrap prose">{block}</div></section>'
     coll = {"@context": "https://schema.org", "@type": "CollectionPage", "name": plain, "url": SITE + path, "description": trim_desc(DESC_OVERRIDE.get(path, c["desc"])),
             "isPartOf": {"@type": "WebSite", "name": "Relics Film Lab", "url": SITE + "/"},
             "mainEntity": {"@type": "ItemList", "numberOfItems": len(listed), "itemListElement": [

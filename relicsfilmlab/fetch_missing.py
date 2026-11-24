@@ -20,6 +20,9 @@ BAD_WORDS = ("shot with", "shot on", "taken with", "photo taken", "test roll", "
              "selfie", "sears", "advert", " ad ", "catalog", "1958", "lot of", "collection", "sunset", "landscape", "beach", "wedding", "flower", "tree", "sample", "expired", "roll ", "frame ", "#")
 
 FAMILY = [  # (slug prefix, family queries, family label)
+    ("mamiya-7", ["Mamiya 7", "Mamiya 6"], "Mamiya 6/7 rangefinder"), ("pentax-km", ["Pentax KM", "Pentax K1000"], "Pentax K-series"),
+    ("werra", ["Werra camera", "Carl Zeiss Jena camera"], "Carl Zeiss Jena"), ("premier", ["35mm SLR film camera"], "35mm manual SLR"),
+    ("bell-amp-howell", ["Bell Howell camera", "35mm compact camera"], "35mm compact"), ("sony", ["Sony Cyber-shot", "Sony digital camera"], "Sony Cyber-shot"),
     ("minolta-freedom", ["Minolta Freedom camera", "Minolta Riva", "Minolta compact camera"], "Minolta Freedom"),
     ("minolta-hi-matic", ["Minolta Hi-Matic AF2", "Minolta Hi-Matic"], "Minolta Hi-Matic"),
     ("minolta-af101r", ["Minolta compact camera"], "Minolta compact"), ("minolta-af-tel", ["Minolta AF-Tele", "Minolta compact camera"], "Minolta AF compact"),

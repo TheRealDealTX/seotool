@@ -123,7 +123,7 @@ vivitar-series-1-460pz|Vivitar Series 1 460PZ|ps|1990s|35mm · zoom · autofocus
 sony-handycam-ccd-sc5|Sony Handycam CCD-SC5|digital|1995|Hi8/8mm camcorder · compact palm design|
 nikon-l35-af|Nikon L35AF|ps|1983|35mm · Nikon 35mm f/2.8 · autofocus|The Nikon L35AF (Pikaichi) has one of the best lenses of any 80s point-and-shoot.
 samsung-evoca-140s-quartz-date|Samsung Evoca 140S Quartz Date|ps|1990s|35mm · 38–140mm zoom · autofocus|
-minolta-srt-200|Minolta SRT 200 / 201|slr|1975|35mm SLR · Minolta MC/MD mount · match-needle|
+minolta-srt-200|Minolta SRT 200 / 201 / 202|slr|1975|35mm SLR · Minolta MC/MD mount · match-needle|
 canon-t70-1|Canon T70|slr|1984|35mm SLR · Canon FD mount · multi-program|
 fuji-gs645-s|Fuji GS645S Professional|mf|1984|6×4.5 medium format rangefinder · 60mm f/4|The Fuji GS645S is a folding-free 6×4.5 rangefinder with a wide 60mm lens.
 minolta-hi-matic-af-2|Minolta Hi-Matic AF2|ps|1981|35mm · 38mm f/2.8 · autofocus|
@@ -317,6 +317,25 @@ joel-meyerowitz-tuscany|Joel Meyerowitz: Tuscany|book|2003|Photo book|
 wind-and-water-van-der-wal|Wind and Water (Van der Wal)|book||Photo book|
 scan-only|Scan Only (Film Scanning)|service||Film scanning guide|
 develop-only|Develop Only (Film Developing)|service||Film developing guide|
+mamiya-7-with-80mm-lens|Mamiya 7 with 80mm Lens|mf|1995|6×7 medium format rangefinder · Mamiya N 80mm f/4 · interchangeable lenses|The Mamiya 7 is the lightest 6×7 rangefinder ever made — a big-negative camera you can carry all day. With the sharp N 80mm f/4 lens it produces some of the most detailed images any film camera can make, which is why the Mamiya 7 is a favourite of landscape and travel photographers.
+polaroid-pz2001|Polaroid PZ2001|instant|2000|Polaroid 600 film · autofocus · built-in zoom flash|The Polaroid PZ2001 is a late 600-series autofocus instant camera with a zoom lens-style flash, made for crisp, well-exposed Polaroid 600 prints.
+premier-pc-80-with-50mm-lens|Premier PC-80 with 50mm Lens|slr|1980s|35mm SLR · K mount · manual focus|The Premier PC-80 is a simple, affordable manual 35mm SLR from the 1980s with a K-mount 50mm lens — a budget-friendly way to learn film photography.
+bell-amp-howell-bf-705-big-finder-motor|Bell & Howell BF-705 Big Finder Motor|ps|1980s|35mm · fixed focus · large viewfinder · motor advance|The Bell & Howell BF-705 Big Finder Motor is a motorised 35mm compact with an oversized viewfinder — a fun, simple snapshot camera.
+pentax-km-35mm-film-camera-with-50mm-lens|Pentax KM with 50mm Lens|slr|1975|35mm SLR · Pentax K mount · fully mechanical · match-needle|The Pentax KM is the better-equipped sibling of the K1000, with a self-timer and depth-of-field preview in the same mechanical, battery-optional body.
+nikon-f-black-35mm-film-camera-with-35-70mm-lens|Nikon F (Black) with 35–70mm Lens|slr|1960s|35mm SLR · Nikon F mount · fully mechanical|A black Nikon F — the professional SLR that defined the genre — paired with a versatile 35–70mm zoom.
+werra|Carl Zeiss Jena Werra|ps|1955|35mm viewfinder · Tessar 50mm f/2.8 · leaf shutter|The Werra is an elegant East German 35mm camera from Carl Zeiss Jena with a sharp Tessar lens and a distinctive minimalist body.
+olympus-infinity-zoom-2000|Olympus Infinity Zoom 2000|ps|1990s|35mm · zoom · autofocus · built-in flash|The Olympus Infinity Zoom 2000 is a capable autofocus zoom compact from Olympus's Infinity line — easy to use and great for everyday 35mm film.
+olympus-stylus-epic-zoom-170|Olympus Stylus Epic Zoom 170|ps|2003|35mm · 38–170mm zoom · weatherproof · autofocus|The Olympus Stylus Epic Zoom 170 packs a long 38–170mm zoom into a splash-proof pocket body — the longest-reaching Stylus Epic.
+kodak-pocket-guide-to-35mm-photography|Kodak Pocket Guide to 35mm Photography|book||Pocket photography guide|
+kodak-guide-to-35mm-photography|Kodak Guide to 35mm Photography|book||Classic Kodak photography handbook|
+the-kodak-workshop-series-the-art-of-seeing|Kodak Workshop Series: The Art of Seeing|book||Photography composition book|
+sony-cyber-shot-dsc-wx350-white|Sony Cyber-shot DSC-WX350 (White)|digital|2014|18MP digital compact · 20× zoom|
+black-white-film|35mm Black & White Film|film||Black & white film for 35mm cameras|
+35mm-film-canisters-tri-x|35mm Film Canisters (Tri-X)|collect||Kodak Tri-X film canister collectible|
+andre-agassi-kissing-net|Andre Agassi Kissing the Net Print|print||Tennis photo print|
+michael-jordan-breakaway-tote-bag|Michael Jordan Breakaway Tote Bag|tote||Photo-print canvas tote|
+1997-911-carrera-4s|1997 Porsche 911 Carrera 4S Print|carprint|1997|Automotive photo print|
+rally-racer-helmet-mud|Rally Racer Helmet (Mud) Print|print||Motorsport photo print|
 1997-911-carrera-cabriolet|1997 Porsche 911 Carrera Cabriolet Print|carprint|1997|Automotive photo print|
 1997-911-carrera-targa|1997 Porsche 911 Carrera Targa Print|carprint|1997|Automotive photo print|
 """
@@ -355,6 +374,26 @@ PRODUCT_REDIRECTS = {
     "relics-water-bottle": "/collections/accessories",
     "5kxb28ggrul56uexfcuk9ybe58qt30": "/collections/all-film-cameras",
     "wmq5ptkr88ldtwycgfqgbr88frhiw9": "/collections/all-film-cameras",
+    # GSC 404s (Nov 2026 audit)
+    "av092feu5nrxdtgd77c0c9i2yi2ofo-35gn4": "canon-ftb", "michael-olympus-stylus-epic-35mm-film-camera": "olympus-stylus",
+    "olympus-infinity-zoom-2000-35mm-film-camera": "olympus-infinity-zoom-2000", "olympus-om-10-35mm-film-camera-with-50mm-lens": "olympus-om-10",
+    "minolta-x-370-35mm-film-camera-with-50mm-lens-1984": "minolta-x-370", "mamiya-7-with-80mm_lens": "mamiya-7-with-80mm-lens",
+    "infinity-superzoom-330": "olympus-infinity-superzoom-330", "konica-autoreflex-t3-silver-35mm-film-camera-with-50mm-1-7-lens": "konica-autoreflex-t3",
+    "minolta-freedom-zoom-160": "minolta-freedom-zoom-160-date", "minolta-freedom-zoom-90-35mm-film-camera": "minolta-freedom-zoom-90",
+    "olympus-infinity-super-zoom-35mm-film-camera": "olympus-infinity-super-zoom-300", "olympus-infinity-superzoom-300": "olympus-infinity-super-zoom-300",
+    "olympus-infinity-super-zoom-300-35mm-film-camera": "olympus-infinity-super-zoom-300", "olympus-stylus-120-35mm-film-camera": "olympus-stylus-120",
+    "olympus-stylus-epic-35mm-film-camera": "olympus-stylus", "one-touch-200": "nikon-one-touch-200", "pentax-iqzoom-700": "pentax-iq-zoom-700",
+    "polaroid-600-sun-lms-instant-film-camera": "polaroid-600-sun-lms-instant-camera", "polaroid-sun-600-instant-camera": "polaroid-600-sun-lms-instant-camera",
+    "polaroid-sun-600-sun-lms-instant-camera": "polaroid-600-sun-lms-instant-camera", "polaroid-one-step-spirit-instant-camera": "polaroid-600-one-step-spirit-instant-camera",
+    "powershot-a550": "canon-powershot-a550", "ricoh-kr-10-m": "ricoh-kr-10m", "canon-310xl": "canon-310xl-super-8-camera",
+    "polaroid-600-onestep-close-up": "polaroid-600-onestep-close-up-instant-camera", "canon-canonet-ql17-g-iii": "canon-canonet-ql-17-giii-1",
+    "ompus-om-10-with-50mm-lens-black": "olympus-om-10-with-50mm-lens-black",
+    "basic-camera-cleaning": "/pages/basic-camera-cleaning", "private-1-1-session": "private-film-photography-group-workshop-with-drake-founder-of-relics",
+    "most-popular": "/collections/staff-picks", "amlyq0w49uhjzuqp871chowzm29rak": "/collections/all-film-cameras",
+    "relics-film-lab-gift-card": "/collections/gift-guide", "gift-card-25-00": "/collections/gift-guide", "gift-card-250-1": "/collections/gift-guide",
+    "relics-serif-tee-white": "/collections/accessories", "relics-serif-tee-black": "/collections/accessories", "relics-serif-tee-white-film-camera-t-shirt": "/collections/accessories",
+    "relics-serif-tee-black-film-camera-t-shirt": "/collections/accessories", "relics-box-logo-tee-black": "/collections/accessories",
+    "relics-box-logo-tee-black-film-camera-t-shirt": "/collections/accessories", "relics-box-logo-tee-white-film-camera-t-shirt": "/collections/accessories",
 }
 
 
