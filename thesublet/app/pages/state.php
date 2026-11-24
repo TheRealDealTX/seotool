@@ -33,8 +33,8 @@ ob_start(); ?>
 <?php
 $body = ob_get_clean();
 page([
-    'title' => 'Sublets in ' . $name . ' — Furnished Short-Term Rentals | The Sublet',
-    'description' => 'Find furnished sublets and 1–12 month rentals in ' . $name . ' on The Sublet: rooms, apartments and houses for interns, travel nurses, students and relocations.',
+    'title' => seo_title($name . ' Sublets & Furnished Monthly Rentals'),
+    'description' => 'Furnished sublets and 1–12 month rentals in ' . $name . ' on The Sublet: rooms, apartments and houses for interns, nurses, students and movers.',
     'canonical' => state_url($st),
     'robots' => (!$hasContent || $dir['filtered']) ? 'noindex, follow' : 'index, follow',
     'body' => $body,

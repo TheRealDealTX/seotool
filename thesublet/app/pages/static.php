@@ -57,7 +57,7 @@ HTML],
 </div>
 <p class="small muted">Payments are processed securely by Stripe. “Verified” means the host paid by card and verified their email; it is not an ID or background check. All listings must follow our <a href="/terms/">terms</a>, fair housing rules and local short-term-rental laws.</p>
 HTML],
-'terms' => ['Terms of Use', 'Terms of use for The Sublet (thesublet.com).', <<<'HTML'
+'terms' => ['Terms of Use', 'Terms of use for The Sublet (thesublet.com): listing rules, paid listings, the property directory, acceptable use and limits of liability.', <<<'HTML'
 <p><em>Last updated November 2026.</em></p>
 <p>By using thesublet.com (“The Sublet”, “we”) you agree to these terms.</p>
 <h2>1. What The Sublet is</h2><p>The Sublet is a listings directory. We are not a landlord, broker or party to any rental agreement, and we don’t collect rent or deposits. Agreements are solely between hosts and renters.</p>
@@ -70,7 +70,7 @@ HTML],
 <h2>8. Affiliate links</h2><p>Some links to Amazon are affiliate links; as an Amazon Associate we earn from qualifying purchases.</p>
 <h2>9. Contact</h2><p>info@thesublet.com · <a href="/contact/">Contact form</a></p>
 HTML],
-'privacy' => ['Privacy Policy', 'How The Sublet collects and uses information.', <<<'HTML'
+'privacy' => ['Privacy Policy', 'How The Sublet collects, uses and protects information from renters, hosts and property owners, including contact relays and payments.', <<<'HTML'
 <p><em>Last updated November 2026.</em></p>
 <h2>What we collect</h2><ul><li><strong>Hosts:</strong> name, email, optional phone, listing details and photos. Photos are re-encoded on upload, which removes embedded metadata such as GPS location.</li><li><strong>Renters who send messages:</strong> name, email and the message, which we relay to the host.</li><li><strong>Payments:</strong> handled by Stripe; we receive confirmation and your email, never your card number.</li><li><strong>Technical data:</strong> IP address (for rate-limiting and fraud prevention) and a session cookie for sign-in and form security.</li></ul>
 <h2>How it’s used</h2><p>To publish listings, relay messages, send account and listing emails (approval, sign-in links, expiry reminders), prevent abuse, and improve the site. We don’t sell personal information.</p>
@@ -78,12 +78,12 @@ HTML],
 <h2>Your device</h2><p>Favorites, compare selections, the packing checklist and room planner are stored in your browser’s local storage, not on our servers. If enabled, Google Tag Manager/analytics may set cookies to measure site usage.</p>
 <h2>Retention &amp; choices</h2><p>Hosts can edit or delete listings from their dashboard, or ask us to delete their data via the <a href="/contact/">contact form</a>.</p>
 HTML],
-'credits' => ['Photo Credits', 'Image credits and licenses for photos used on The Sublet.', credits_html()],
+'credits' => ['Photo Credits', 'Photo credits and licenses for the royalty-free and Creative Commons images used across The Sublet’s pages, city guides and blog.', credits_html()],
 ];
 [$title, $desc, $html] = $pages[$slug];
 $crumbs = [['The Sublet', '/'], [$title, "/$slug/"]];
 page([
-    'title' => $title . ' | The Sublet',
+    'title' => seo_title($title),
     'description' => $desc,
     'canonical' => "/$slug/",
     'body' => '<div class="wrap">' . breadcrumbs_html($crumbs) . '<article class="narrow prose section-sm"><h1>' . e($title) . '</h1>' . $html . '</article></div>',

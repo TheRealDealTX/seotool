@@ -33,7 +33,7 @@ ob_start(); ?>
 </div>
 <?php
 page([
-    'title' => $p['title'] . ' | The Sublet',
+    'title' => seo_title($p['title']),
     'description' => $p['description'],
     'canonical' => '/blog/' . $p['slug'] . '/',
     'og_type' => 'article',

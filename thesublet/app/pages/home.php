@@ -225,8 +225,8 @@ ob_start(); ?>
 <?php
 $body = ob_get_clean();
 page([
-    'title' => 'The Sublet — Furnished Sublets & Short-Term Rentals Across the US',
-    'description' => 'The Sublet is a nationwide marketplace for furnished sublets and 1–12 month rentals: summer sublets, travel nurse housing, intern housing and rooms for students.',
+    'title' => 'The Sublet: Furnished Sublets & Monthly Rentals in the US',
+    'description' => 'The Sublet is a US marketplace for furnished sublets and 1–12 month rentals: summer sublets, travel nurse and intern housing, and student rooms.',
     'canonical' => '/',
     'body' => $body,
     'body_class' => 'home',

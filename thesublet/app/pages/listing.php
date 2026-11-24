@@ -44,8 +44,8 @@ $bathsLabel = $l['baths'] === 'shared' ? 'Shared bath' : $l['baths'] . ' bath' .
 if (is_unclaimed($l)) {
     $body = view('listing_directory', compact('l', 'crumbs', 'guide', 'cityUrl', 'similar'));
     page([
-        'title' => $l['title'] . ' — ' . (property_types()[$l['property_type']] ?? 'Furnished housing') . ' in ' . $l['city'] . ', ' . $l['state'] . ' | The Sublet',
-        'description' => excerpt($l['title'] . ' in ' . $l['city'] . ', ' . $l['state'] . ': ' . (property_types()[$l['property_type']] ?? 'furnished housing') . ' for monthly and medium-term stays. Address, phone, website and owner claim on The Sublet.', 158),
+        'title' => seo_title($l['title'], ' – ' . $l['city'] . ', ' . $l['state']),
+        'description' => excerpt($l['title'] . ' in ' . $l['city'] . ', ' . $l['state'] . ': ' . (property_types()[$l['property_type']] ?? 'furnished housing') . ' for monthly stays. Address, phone, website and owner claim on The Sublet.', 150),
         'canonical' => $canonical,
         'robots' => 'index, follow',
         'body' => $body,
@@ -196,8 +196,8 @@ ob_start(); ?>
 <?php
 $body = ob_get_clean();
 page([
-    'title' => $l['title'] . ' — ' . money($l['rent']) . '/mo sublet in ' . $l['city'] . ', ' . $l['state'] . ' | The Sublet',
-    'description' => excerpt(($types[$l['property_type']] ?? '') . ' in ' . $l['city'] . ', ' . $l['state'] . ' for ' . money($l['rent']) . '/month' . ($l['available_from'] ? ', available ' . fmt_date($l['available_from']) : '') . '. ' . $l['description'], 158),
+    'title' => seo_title($l['title'], ' – ' . $l['city'] . ', ' . $l['state']),
+    'description' => excerpt(($types[$l['property_type']] ?? '') . ' in ' . $l['city'] . ', ' . $l['state'] . ' for ' . money($l['rent']) . '/month' . ($l['available_from'] ? ', available ' . fmt_date($l['available_from']) : '') . '. ' . $l['description'], 150),
     'canonical' => $canonical,
     'robots' => $l['status'] === 'active' && !$preview ? 'index, follow, max-image-preview:large' : 'noindex, follow',
     'og_image' => $photos ? base_url('/photo/' . $photos[0]['id'] . '.webp') : null,

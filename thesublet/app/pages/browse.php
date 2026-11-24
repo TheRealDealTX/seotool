@@ -49,7 +49,7 @@ ob_start(); ?>
 $body = ob_get_clean();
 page([
     'title' => 'Sublets & Short-Term Rentals Nationwide | The Sublet',
-    'description' => 'Browse furnished sublets and 1–12 month rentals across the US on The Sublet. Filter by price, dates, room type, furnished and pet-friendly; view on a map.',
+    'description' => 'Browse furnished sublets and 1–12 month rentals across the US on The Sublet. Filter by price, dates, room type and pets, or view them on a map.',
     'canonical' => '/sublets/',
     'robots' => $dir['filtered'] ? 'noindex, follow' : 'index, follow',
     'body' => $body,

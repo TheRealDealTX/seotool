@@ -83,7 +83,7 @@ ob_start(); ?>
 <?php
 page([
     'title' => 'List Your Sublet — Free or Verified | The Sublet',
-    'description' => 'Post your furnished room, apartment or house for 1–12 month stays on The Sublet. Free reviewed listings or ' . price_label() . ' verified listings that go live instantly.',
+    'description' => 'Post your furnished room, apartment or house for 1–12 month stays on The Sublet. Free reviewed listings or ' . price_label() . ' verified ones that go live now.',
     'canonical' => '/post-a-sublet/',
     'body' => ob_get_clean(),
     'h_extra' => leaflet_head(),

@@ -16,7 +16,7 @@ if ($slug === null) {
   <?php endforeach; ?></div>
 </div>
 <?php
-    page(['title' => 'Free Sublet Calculators & Planning Tools | The Sublet', 'description' => 'Free tools from The Sublet: sublet cost calculator, proration calculator, sublet vs. lease vs. hotel comparison, packing checklist, room planner and city quiz.',
+    page(['title' => 'Free Sublet Calculators & Planning Tools | The Sublet', 'description' => 'Free sublet tools from The Sublet: cost and proration calculators, sublet vs. lease vs. hotel, packing checklist, room planner and city quiz.',
         'canonical' => '/tools/', 'body' => ob_get_clean(), 'schema' => [schema_breadcrumbs($crumbs)]]);
     exit;
 }
@@ -37,7 +37,7 @@ ob_start(); ?>
 </div>
 <?php
 page([
-    'title' => $t['title'] . ' | The Sublet',
+    'title' => seo_title($t['title']),
     'description' => $i['meta'],
     'canonical' => "/tools/$slug/",
     'body' => ob_get_clean(),

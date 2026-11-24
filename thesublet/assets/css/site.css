@@ -18,10 +18,10 @@ h2{font-size:clamp(1.3rem,2.6vw,1.7rem)}
 h3,.h3{font-size:1.15rem}
 .h4{font-size:1.02rem}
 p{margin:0 0 1em}
-.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
 .narrow{max-width:760px;margin-left:auto;margin-right:auto}
 .narrow-lg{max-width:920px}
-.section{padding:48px 0}.section-sm{padding:28px 0}
+.section{padding-top:48px;padding-bottom:48px}.section-sm{padding-top:28px;padding-bottom:28px}
 .center{text-align:center}.mt{margin-top:1.5rem}
 .muted{color:var(--muted)}.small{font-size:.875rem}.mono{font-family:ui-monospace,Menlo,monospace}
 .lead{font-size:1.12rem;color:#34453c}

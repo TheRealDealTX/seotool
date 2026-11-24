@@ -287,3 +287,48 @@ function valid_email(string $e): bool
 {
     return (bool)filter_var($e, FILTER_VALIDATE_EMAIL) && strlen($e) <= 190;
 }
+
+/** Cut text to $max chars, preferring a natural break (": ", " — ", " | ") before a word break. No ellipsis. */
+function cut_title(string $s, int $max): string
+{
+    if (mb_strlen($s) <= $max) return $s;
+    $cut = mb_substr($s, 0, $max + 1);
+    foreach ([': ', ' — ', ' – ', ' | ', ' (', ', '] as $sep) {
+        $p = mb_strrpos($cut, $sep);
+        if ($p !== false && $p >= 25) return rtrim(mb_substr($s, 0, $p), ' ,.;:—–-');
+    }
+    $p = mb_strrpos($cut, ' ');
+    return trim_dangling(mb_substr($s, 0, $p ?: $max));
+}
+
+/** Remove trailing filler words/punctuation left by a cut ("…room near" → "…room"). */
+function trim_dangling(string $s): string
+{
+    $stop = 'a|an|and|or|the|of|in|on|at|to|for|from|by|with|near|vs\\.?|&|—|–|-';
+    do { $prev = $s; $s = preg_replace('/(?:\\s+(?:' . $stop . '))+$/iu', '', rtrim($s, ' ,.;:')); } while ($s !== $prev);
+    return $s;
+}
+
+/**
+ * Search-result-safe title (≤ 60 chars ≈ 580px): "$lead$tail | The Sublet", dropping the brand
+ * suffix and then shortening $lead when it doesn't fit. $tail (e.g. " – Austin, TX") is always kept.
+ */
+function seo_title(string $lead, string $tail = '', string $brand = ' | The Sublet', int $max = 60): string
+{
+    $lead = trim($lead);
+    if (mb_strlen($lead . $tail . $brand) <= $max) return $lead . $tail . $brand;
+    if (mb_strlen($lead . $tail) <= $max) return $lead . $tail;
+    return cut_title($lead, $max - mb_strlen($tail)) . $tail;
+}
+
+/** Meta description ≤ 150 chars: whole sentences when possible, else a word-boundary cut with an ellipsis. */
+function seo_desc(string $s, int $max = 150): string
+{
+    $s = trim(preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($s, ENT_QUOTES, 'UTF-8'))));
+    if (mb_strlen($s) <= $max) return $s;
+    $cut = mb_substr($s, 0, $max);
+    if (preg_match('/^(.{90,})[.!?](?=\s)/su', $cut . ' ', $m)) return $m[0];
+    $cut = mb_substr($s, 0, $max - 1);
+    $sp = mb_strrpos($cut, ' ');
+    return trim_dangling(mb_substr($cut, 0, $sp ?: $max - 1)) . '…';
+}

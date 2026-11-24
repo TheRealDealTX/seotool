@@ -32,4 +32,4 @@ ob_start(); ?>
   <?php endif; ?>
 </div>
 <?php
-page(['title' => 'Contact | The Sublet', 'description' => 'Contact The Sublet about listings, accounts or payments.', 'canonical' => '/contact/', 'body' => ob_get_clean()]);
+page(['title' => 'Contact | The Sublet', 'description' => 'Contact The Sublet about host listings, property directory claims, owner accounts, verified-listing payments or listing removal requests.', 'canonical' => '/contact/', 'body' => ob_get_clean()]);

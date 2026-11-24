@@ -114,14 +114,14 @@ ob_start(); ?>
 </div>
 <?php
 $body = ob_get_clean();
-$title = $filterKey ? $filters[$filterKey]['label'] . ' in ' . $name . ', ' . strtoupper($st) . ' | The Sublet'
-    : $name . ' Sublets & Furnished Short-Term Rentals | The Sublet';
+$title = $filterKey ? seo_title($filters[$filterKey]['label'] . ' in ' . $name . ', ' . strtoupper($st))
+    : seo_title($name . ', ' . strtoupper($st) . ' Sublets & Furnished Rentals');
 $desc = $filterKey
     ? $filters[$filterKey]['label'] . ' in ' . $name . ', ' . $stateName . '. Browse 1–12 month furnished rentals posted by real hosts on The Sublet, with live filters and a map.'
-    : 'Find sublets in ' . $name . ', ' . strtoupper($st) . ': furnished rooms and apartments for 1–12 months. Neighborhood guide, price tips and advice for interns, nurses and students.';
+    : 'Sublets in ' . $name . ', ' . strtoupper($st) . ': furnished rooms and apartments for 1–12 months, plus neighborhood, price and transit tips for interns and nurses.';
 page([
     'title' => $title,
-    'description' => mb_substr($desc, 0, 300),
+    'description' => $desc,
     'canonical' => $path,
     'robots' => $indexable ? 'index, follow' : 'noindex, follow',
     'body' => $body,

@@ -1,6 +1,6 @@
 <?php defined('APP') || exit;
 
-const ASSET_V = '2';
+const ASSET_V = '3';
 
 function logo_svg(): string
 {
@@ -22,7 +22,8 @@ function page(array $p): void
     header('Referrer-Policy: strict-origin-when-cross-origin');
     header('X-Frame-Options: SAMEORIGIN');
     $title = $p['title'] ?? 'The Sublet';
-    $desc = $p['description'] ?? '';
+    if (mb_strlen($title) > 60) $title = seo_title(preg_replace('/ \| The Sublet$/u', '', $title));
+    $desc = seo_desc((string)($p['description'] ?? ''));
     $canonical = isset($p['canonical']) ? base_url($p['canonical']) : null;
     $robots = $p['robots'] ?? 'index, follow, max-image-preview:large';
     $og = $p['og_image'] ?? base_url('/assets/img/og-default.png');
@@ -55,6 +56,7 @@ function page(array $p): void
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
