@@ -206,7 +206,7 @@ def build_pages(ctx):
         link = ("/products/" + k) if k in BY else None
         rows.append(f'<tr><td>{f"<a href={link!r}>{esc(label)}</a>" if link else esc(label)}</td><td><a href="{esc(c["page"])}" rel="nofollow noopener" target="_blank">{esc(c["title"][:70])}</a></td><td>{esc(c["artist"])}</td><td>{esc(c["license"])}</td></tr>')
     cr_h, cr_ld = crumbs([(None, "Photo Credits")])
-    write("/pages/photo-credits", "Photo Credits", "Credits and licences for the photographs used on Relics Film Lab.",
+    write("/pages/photo-credits", "Photo Credits", "Credits and licences for the photographs used on Relics Film Lab: Creative Commons and public-domain photos from Flickr and Wikimedia Commons.",
           phero("Photo <em>credits</em>", "Our product photos are real photographs of each camera, shared by photographers under open licences (Creative Commons and public domain) via Wikimedia Commons and Openverse. Thank you to every photographer below.", cr_h)
           + f'<section class="section" style="padding-top:40px"><div class="wrap prose" style="max-width:none"><table><tr><th>Used on</th><th>Photo</th><th>Author</th><th>Licence</th></tr>{"".join(rows)}</table></div></section>', schema=[cr_ld])
 
@@ -236,7 +236,7 @@ def build_pages(ctx):
     fh, fld = faq_html([("What film services does Relics offer?", "Relics ran a professional film lab in Long Beach. Today we publish free guides to developing, scanning and printing film, and recommend the kits to do it at home."),
                         ("What is the difference between C-41, E-6 and B&W?", "C-41 is the process for colour negative film, E-6 for colour slide film, and black & white film uses its own developers. ECN-2 is for motion-picture film."),
                         ("What scanner did the Relics lab use?", "A Fujifilm Frontier SP3000, famous for its warm skin tones, paired with Noritsu processing.")])
-    write("/film-services", "Film Services — Developing, Scanning & Printing Guide", "Film developing, scanning and printing explained by the team behind the Relics Long Beach film lab: C-41, black & white, ECN-2 and how to do it at home.",
+    write("/film-services", "Film Services — Developing, Scanning & Printing Guide", "Film developing, scanning and printing explained by the Relics film lab team: C-41, black & white and ECN-2, and how to do it all at home.",
           phero("Film <em>services</em>", "We spent years developing and scanning film for photographers across the US. Here's the whole process — and how to get lab-quality results yourself.", cr_h, site_img("negatives"))
           + f"""<section class="section" style="padding-top:48px"><div class="wrap">
 <div class="steps"><div class="step"><h3><a href="/products/develop-only">Develop only</a></h3><p>Negatives only — at a lab or with a home kit. Includes 110 &amp; 127.</p></div>
@@ -301,8 +301,11 @@ def build_home(ctx):
     posts_html = "".join(f'<a class="post reveal reveal-d{i}" href="/blogs/guides/{s}"><img src="{site_img(im)}" alt="" loading="lazy"><div><div class="mono muted">Guide</div><h3>{t}</h3><p>Read the guide →</p></div></a>' for i, (s, t, im) in enumerate(posts))
     fh, fld = faq_html(FAQ_MAIN[:6])
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "Relics Film Lab", "alternateName": "Relics", "url": SITE + "/",
-           "logo": SITE + "/apple-touch-icon.png", "email": C.EMAIL, "foundingLocation": {"@type": "Place", "name": "Long Beach, California"}}
-    web = {"@context": "https://schema.org", "@type": "WebSite", "name": "Relics Film Lab", "url": SITE + "/"}
+           "logo": {"@type": "ImageObject", "url": SITE + "/web-app-manifest-512x512.png", "width": 512, "height": 512}, "email": C.EMAIL,
+           "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": C.EMAIL, "availableLanguage": "English"},
+           "foundingLocation": {"@type": "Place", "name": "Long Beach, California"}}
+    web = {"@context": "https://schema.org", "@type": "WebSite", "name": "Relics Film Lab", "alternateName": "Relics", "url": SITE + "/", "inLanguage": "en-US",
+           "publisher": {"@type": "Organization", "name": "Relics Film Lab", "url": SITE + "/"}}
     n_cams = sum(1 for p in PRODUCTS if p["cat"] in ("ps", "slr", "instant", "mf", "movie", "pocket"))
     body = f"""
 <section class="hero"><div class="hero__bg"><img src="{site_img('hero')}" alt="Vintage 35mm film camera and film" fetchpriority="high"></div><span class="leak a"></span><span class="leak b"></span>
@@ -355,7 +358,7 @@ def build_home(ctx):
 <p>Looking for a film camera shop near Los Angeles? Start with our <a href="/collections/slr-cameras">SLR</a> and <a href="/collections/point-shoot-cameras">point-and-shoot</a> collections, or read <a href="/order-now">where to develop film</a>.</p></div></div></section>
 <section class="section" style="padding-top:0"><div class="wrap"><div class="band reveal"><div class="eyebrow">The Relics list</div><h2>New guides, film deals &amp; camera picks — <em>monthly</em>.</h2>
 <form class="newsletter js-news"><input type="email" required placeholder="you@example.com" aria-label="Email address"><button class="btn" type="submit">Join the list</button></form></div></div></section>"""
-    write("/", "Relics Film Lab — Shop Film Cameras, Film & Lab Gear", "Relics Film Lab: the Long Beach film lab turned online film photography shop. Shop film cameras, 35mm & 120 film and lab gear with honest buying guides.",
+    write("/", "Relics Film Lab — Shop Vintage Film Cameras & Film", "Shop vintage film cameras, 35mm & 120 film, Polaroid and Super 8 at Relics Film Lab — honest buying guides and typical prices for every model.",
           body, schema=[org, web, fld], preload=site_img("hero"))
 
 def build_sitemap_page(ctx, written):

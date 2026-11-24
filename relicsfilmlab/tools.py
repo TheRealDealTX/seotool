@@ -132,7 +132,7 @@ def build_film_page(ctx):
     body = (phero("Film &amp; <em>batteries</em>", "Fresh film for every camera we sell — 35mm, 120, Polaroid, Instax, Super 8 and 110 — plus the batteries vintage cameras need. Every card links straight to the product on Amazon.", cr_h, site_img("film-rolls"))
             + f'<section class="section" style="padding-top:36px"><div class="wrap"><div class="toolbar">{jump}</div>{secs}'
             + f'<div class="prose mt"><h2>FAQ</h2>{fh}</div></div></section>')
-    write("/collections/film", "Buy Film Online — 35mm, 120, Polaroid, Instax & Super 8 Film", "Shop film for vintage cameras: Kodak Portra, Gold, Ektar, Ilford HP5, CineStill, Polaroid 600 & SX-70, Instax Wide, Kodak Vision3 Super 8, 110 film and camera batteries.",
+    write("/collections/film", "Buy Film Online: 35mm, 120, Polaroid & Super 8", "Shop film for vintage cameras — Kodak Portra, Gold, Ilford HP5, CineStill, Polaroid, Instax Wide and Super 8 — plus camera batteries.",
           body, schema=[cr_ld, fld], preload=site_img("film-rolls"))
 
 # ---------------------------------------------------------------- tool pages
@@ -277,7 +277,7 @@ def build_tools(ctx):
              "depth-of-field-calculator": "↔", "super-8-calculator": "▶"}
     cards = "".join(f'<a class="toolcard reveal" href="/tools/{s}"><span class="toolcard__ico">{ICONS[s]}</span><h3>{esc(t)}</h3><p>{esc(d)}</p><span class="card__cta">Open tool →</span></a>' for s, t, d, _ in TOOLS)
     cr_h, cr_ld = crumbs([(None, "Tools")])
-    write("/tools", "Free Film Photography Tools & Calculators", "Free film photography tools: camera finder quiz, exposure calculator, film stock finder, battery finder, cost-per-shot, depth of field and Super 8 calculators.",
+    write("/tools", "Free Film Photography Tools & Calculators", "Free film photography tools: a camera finder quiz, exposure, depth of field, cost-per-shot and Super 8 calculators, plus film and battery finders.",
           phero("Film <em>tools</em>", "Free calculators and finders that help you choose, load and shoot the right camera and film.", cr_h, site_img("hero2"))
           + f'<section class="section" style="padding-top:40px"><div class="wrap"><div class="toolgrid">{cards}</div></div></section>', schema=[cr_ld], preload=site_img("hero2"))
     for slug, title, desc, short in TOOLS:

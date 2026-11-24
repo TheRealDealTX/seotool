@@ -136,5 +136,8 @@
     w.location.href = "mailto:info@relicsfilmlab.com?subject=" + encodeURIComponent("Join the Relics list") + "&body=" + encodeURIComponent("Please add " + em + " to the Relics Film Lab newsletter."); }); });
 
   // outbound affiliate click label (for analytics later)
-  d.addEventListener("click", function (e) { var a = e.target.closest("a[data-amz]"); if (a && w.gtag) w.gtag("event", "amazon_click", { item: a.dataset.amz }); });
+  // outbound Amazon clicks -> GTM dataLayer event "amazon_click" (use as a Custom Event trigger in Tag Manager)
+  d.addEventListener("click", function (e) { var a = e.target.closest('a[href*="amazon.com/"]'); if (!a) return;
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: "amazon_click", amazon_item: a.dataset.amz || "", amazon_url: a.href, page_path: location.pathname }); });
 })();

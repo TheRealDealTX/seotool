@@ -198,33 +198,97 @@ def footer():
 
 CSS_V = JS_V = "1"
 
-def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=None, robots="index,follow", scripts=None):
+META_DESC_MAX = 145
+TITLE_MAX = 60
+
+def trim_desc(d, n=META_DESC_MAX):
+    """Trim a meta description to <= n chars at a sentence (or word) boundary — never mid-word."""
+    d = re.sub(r"\s+", " ", html.unescape(d)).strip()
+    if len(d) <= n:
+        return d
+    cut = d[:n]
+    stop = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "))
+    if stop >= 70:
+        return cut[:stop + 1]
+    cut = cut[:cut.rfind(" ")].rstrip(" ,;:—–-&")
+    return cut + "…"
+
+def fit_title(t):
+    """Page title that stays within ~60 chars: add the brand when it fits, drop a ' — category' tail if needed."""
+    if "Relics" in t:
+        return t if len(t) <= TITLE_MAX + 15 else t
+    core = t.split(" — ")[0] if len(t) > TITLE_MAX - 8 and " — " in t else t
+    if len(core) > TITLE_MAX - 9 and ": " in core:
+        core = core.split(": ")[0]
+    for cand in (f"{t} | Relics Film Lab", f"{t} | Relics", f"{core} | Relics Film Lab", f"{core} | Relics", core):
+        if len(cand) <= TITLE_MAX:
+            return cand
+    return core
+
+def product_desc(p, name, catlabel, pr, special):
+    """<=145-char product meta description: name, key specs, typical price, what the page offers."""
+    specs = ", ".join(x.strip() for x in p["spec"].split("·")[:2] if x.strip())
+    yr = p["year"] if p["year"] and p["year"][0].isdigit() else ""
+    head = f"{name}" + (f" ({yr})" if yr and yr not in name else "")
+    if special:
+        first = re.split(r"(?<=[.!?])\s", re.sub("<.*?>", "", html.unescape(special["intro"])))[0]
+        return trim_desc(first + " Kits, steps and where to buy them." if len(first) < 100 else first)
+    parts = [f"{head}: {specs}." if specs else f"{head}."]
+    if pr:
+        parts.append(f"Typical price {PR.fmt(pr)}.")
+    for tail in ("Specs, buying checklist, film tips and where to buy.", "Specs, buying tips and where to buy.", "Buying guide and where to buy."):
+        if len(" ".join(parts + [tail])) <= META_DESC_MAX:
+            parts.append(tail); break
+    return trim_desc(" ".join(parts))
+
+GTM_ID = "GTM-PTCBCKQZ"
+
+def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=None, robots="index,follow", scripts=None, ogtype=None):
     canonical = SITE + (path if path != "/" else "/")
-    full_title = title if "Relics" in title else f"{title} | Relics Film Lab"
+    full_title = fit_title(title)
+    desc = trim_desc(desc)
     og = SITE + (ogimg or site_img("hero"))
     ld = ""
     for s in (schema or []):
         ld += f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>\n'
     pre = f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">' if preload else ""
+    if robots.startswith("index"):
+        robots = "index,follow,max-image-preview:large,max-snippet:-1"
+    ogt = ogtype or ("article" if path.startswith("/blogs/guides/") else "product" if path.startswith("/products/") else "website")
     return f"""<!doctype html>
 <html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  dataLayer.push({{'gtm.start': new Date().getTime(), event: 'gtm.js'}});
+</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="{robots}">
 <link rel="canonical" href="{canonical}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Relics Film Lab">
+<meta property="og:type" content="{ogt}"><meta property="og:site_name" content="Relics Film Lab"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{esc(full_title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{canonical}"><meta property="og:image" content="{og}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0d0c0b">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:url" content="{canonical}"><meta property="og:image" content="{og}"><meta property="og:image:alt" content="{esc(full_title)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(full_title)}">
+<meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og}">
+<meta name="theme-color" content="#0d0c0b"><meta name="application-name" content="Relics Film Lab"><meta name="apple-mobile-web-app-title" content="Relics">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 {pre}
 <link rel="stylesheet" href="/assets/site.css?v={CSS_V}">
 {ld}</head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip" href="#main">Skip to content</a>
 {header(active)}
 <main id="main">
@@ -235,7 +299,20 @@ def layout(path, title, desc, body, schema=None, active="", preload=None, ogimg=
 </body></html>
 """
 
+# Hand-written meta descriptions (<=145 chars) for pages whose generated copy runs long
+DESC_OVERRIDE = {
+    "/tools": "Free film photography tools: camera finder quiz, exposure, depth of field, cost-per-shot and Super 8 calculators, plus film and battery finders.",
+    "/blogs/guides/the-ultimate-guide-to-shooting-super-8-for-weddings-a-relics-film-lab-manual": "How to shoot Super 8 at a wedding: the right camera, which Kodak Vision3 film, exposure tips, how many cartridges to bring and scanning.",
+    "/blogs/guides/best-disposable-cameras-2026": "The best disposable cameras of 2026 — Kodak FunSaver, Fujifilm QuickSnap, Ilford XP2 — plus where to develop them and reusable alternatives.",
+    "/products/camera-basics-workshop": "Camera basics, self-guided: load film, read a light meter and master aperture, shutter speed and ISO — with the kit we used in class.",
+    "/collections/all-film-cameras": "Shop old film cameras and vintage cameras — 35mm SLRs, point-and-shoots, Polaroid, medium format and Super 8 — with typical prices and tips.",
+    "/collections/all": "Every film camera, lens, print, book and accessory at Relics Film Lab, with typical prices and honest buying advice for each.",
+    "/collections/film-lab": "Film lab essentials: film, home developing kits, film scanners and darkroom supplies, chosen by the team behind the Relics Long Beach lab.",
+    "/products/scan-only": "Scanning your own negatives: dedicated film scanners, flatbeds and DIY camera scanning for 35mm and 120, with tips for better scans.",
+}
+
 def write(path, title, desc, body, **kw):
+    desc = DESC_OVERRIDE.get(path, desc)
     f = "home" if path == "/" else path.lstrip("/")
     out = os.path.join(PDIR, f + ".html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -525,9 +602,7 @@ def product_page(p):
     title_core = name
     top = kwlist[0] if kwlist else ""
     meta_title = f"{name} — {catlabel}" if len(name) < 40 else name
-    desc = (f"{re.sub('<.*?>', '', html.unescape(intro))[:120].rstrip()}… Specs, film, buying checklist and current deals on Amazon.")
-    if top and norm(top) not in norm(desc):
-        desc = f"{name}: {re.sub('<.*?>', '', html.unescape(intro))[:100].rstrip()}… Specs, film & where to buy ({top})."
+    desc = product_desc(p, name, catlabel, PR.price_range(p), special)
     body = f"""<div class="wrap">{cr_h}
 <section class="pdp">
 <div class="pdp__media reveal"><div class="pdp__frame">{media}</div><p class="pdp__credit">{credit}</p></div>
@@ -552,11 +627,13 @@ def collection_page(slug, c):
     if c.get("gift"):
         picks = [BY_SLUG[s] for s in PG.GIFT_PICKS if s in BY_SLUG]
         items_html = grid(picks, filters=False)
+        listed = picks
     else:
         items = [p for p in PRODUCTS if (c["cats"] is None or p["cat"] in c["cats"])]
         if c.get("filt"):
             items = [p for p in items if c["filt"] in p["slug"] or c["filt"] in p["name"].lower()]
         items_html = grid(items)
+        listed = sorted(items, key=rank_of)
     plain = re.sub("<.*?>", "", html.unescape(c["h1"]))
     cr_h, cr_ld = crumbs([("/collections/all", "Shop"), (None, esc(plain))]) if slug != "all" else crumbs([(None, "Shop")])
     extra = PG.COLLECTION_EXTRA.get(slug, {})
@@ -564,7 +641,11 @@ def collection_page(slug, c):
     body = (phero(c["h1"], c["intro"], cr_h, site_img(c["img"]))
             + f'<section class="section" style="padding-top:48px"><div class="wrap">{extra.get("top", "")}{items_html}</div></section>'
             + (f'<section class="section" style="padding-top:0"><div class="wrap prose">{extra.get("body", "")}{("<h2>FAQ</h2>" + faq_h) if faq_h else ""}</div></section>' if extra else ""))
-    schema = [cr_ld] + ([faq_ld] if faq_ld else [])
+    coll = {"@context": "https://schema.org", "@type": "CollectionPage", "name": plain, "url": SITE + path, "description": trim_desc(DESC_OVERRIDE.get(path, c["desc"])),
+            "isPartOf": {"@type": "WebSite", "name": "Relics Film Lab", "url": SITE + "/"},
+            "mainEntity": {"@type": "ItemList", "numberOfItems": len(listed), "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "url": SITE + "/products/" + p["slug"], "name": p["name"]} for i, p in enumerate(listed)]}}
+    schema = [cr_ld, coll] + ([faq_ld] if faq_ld else [])
     write(path, c["title"], c["desc"], body, schema=schema, preload=site_img(c["img"]), ogimg=site_img(c["img"]))
 
 # ---------------------------------------------------------------- run
@@ -626,7 +707,7 @@ def main():
         fh.write(layout("/404", "Page not found", "This page could not be found.", body404, robots="noindex,follow"))
 
     # sitemap.xml + robots
-    urls = sorted(WRITTEN)
+    urls = sorted(u for u in WRITTEN if u not in ("/pages/wishlist",))
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE}{u if u != '/' else '/'}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n"
     open(os.path.join(PUB, "sitemap.xml"), "w").write(sm)

@@ -102,8 +102,8 @@ def build_guides(ctx):
         plain = re.sub("<.*?>", "", html.unescape(g["h1"]))
         cr_h, cr_ld = crumbs([("/blogs/guides", "Guides"), (None, esc(plain))])
         art = {"@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["desc"], "image": SITE + img,
-               "datePublished": "2026-01-15", "dateModified": TODAY, "author": {"@type": "Organization", "name": "Relics Film Lab"},
-               "publisher": {"@type": "Organization", "name": "Relics Film Lab", "logo": {"@type": "ImageObject", "url": SITE + "/apple-touch-icon.png"}},
+               "datePublished": "2026-01-15", "dateModified": TODAY, "author": {"@type": "Organization", "name": "Relics Film Lab", "url": SITE + "/pages/about-us"},
+               "publisher": {"@type": "Organization", "name": "Relics Film Lab", "logo": {"@type": "ImageObject", "url": SITE + "/web-app-manifest-512x512.png"}},
                "mainEntityOfPage": SITE + path}
         body = (phero(g["h1"], "", cr_h, img)
                 + f'<section class="section" style="padding-top:48px"><div class="wrap"><article class="prose">{ARTICLES[g["slug"]](a)}'
