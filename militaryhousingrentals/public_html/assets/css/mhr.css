@@ -1,0 +1,100 @@
+/* Listing add-on: claim box, verified badge, plans, owner dashboard and admin.
+   Uses the site's tokens from site.css so light/dark themes carry over. */
+
+.mhr-badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700;
+  color: var(--green); background: color-mix(in srgb, var(--green) 12%, transparent); border: 1px solid color-mix(in srgb, var(--green) 35%, transparent); white-space: nowrap; }
+.mhr-badge .icon { width: 14px; height: 14px; }
+.mhr-verified { margin: 6px 0 0; }
+
+.mhr-lock { margin: 4px 0 12px; padding: 16px; border-radius: var(--radius-sm); border: 1px dashed var(--line); background: var(--bg); }
+.mhr-lock-title { font-weight: 700; margin: 0 0 12px; line-height: 1.35; }
+.mhr-lock .fineprint { margin: 10px 0 0; }
+
+.mhr-check { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0; font-size: .95rem; cursor: pointer; }
+.mhr-check input { width: 18px; height: 18px; margin-top: 2px; flex: none; accent-color: var(--blue); }
+.mhr-price-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin: 18px 0 8px; }
+.mhr-price { font-size: 1.8rem; font-weight: 800; }
+
+.mhr-plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 18px 0 4px; }
+.mhr-plan { position: relative; display: block; cursor: pointer; }
+.mhr-plan input { position: absolute; opacity: 0; inset: 0; }
+.mhr-plan-body { display: grid; gap: 4px; height: 100%; padding: 16px; border: 2px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); transition: border-color .15s, box-shadow .15s; }
+.mhr-plan-price { font-size: 1.35rem; font-weight: 800; }
+.mhr-plan-price small { font-size: .75rem; font-weight: 600; color: var(--text-2); }
+.mhr-plan input:checked + .mhr-plan-body { border-color: var(--blue); box-shadow: 0 0 0 4px color-mix(in srgb, var(--blue) 15%, transparent); }
+.mhr-plan input:focus-visible + .mhr-plan-body { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.mhr-narrow { max-width: 560px; margin-inline: auto; }
+.mhr-wide { max-width: 1000px; margin-inline: auto; }
+.mhr-big-icon { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 12px; }
+.mhr-big-icon .icon { width: 30px; height: 30px; }
+.mhr-ok { background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); }
+.mhr-head-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.mhr-head-row h1 { margin: 0; }
+.form-card + .form-card, .card.form-card + .card.form-card { margin-top: 18px; }
+
+.mhr-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.mhr-list li { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.mhr-list li > div:first-of-type, .mhr-list li > img + div { flex: 1; min-width: 180px; }
+.mhr-list img { border-radius: 8px; object-fit: cover; }
+
+.mhr-editor fieldset { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 16px 6px; margin: 0 0 16px; min-width: 0; }
+.mhr-editor legend { font-weight: 800; padding: 0 6px; }
+.mhr-editor small.muted, .form small.muted { font-size: .8rem; }
+.mhr-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.mhr-photo { margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--bg); }
+.mhr-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.mhr-photo figcaption { display: flex; justify-content: space-between; gap: 6px; padding: 6px 8px; font-size: .8rem; }
+.mhr-photo label { display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }
+
+.mhr-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.mhr-table th, .mhr-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.mhr-table th { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--text-2); }
+.mhr-scroll { overflow-x: auto; }
+.mhr-pad { padding: 16px; }
+
+/* Admin */
+.mhr-admin { background: var(--bg); }
+.mhr-admin-bar { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 20; }
+.mhr-admin-bar-in { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; justify-content: space-between; padding-block: 12px; }
+.mhr-admin-brand { color: #fff; font-weight: 800; text-decoration: none; }
+.mhr-admin-brand span { color: var(--gold); }
+.mhr-admin-bar nav { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
+.mhr-admin-bar nav a, .mhr-linkbtn { color: #d6e0f0; text-decoration: none; font-weight: 600; font-size: .92rem; background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; }
+.mhr-admin-bar nav a[aria-current="page"], .mhr-admin-bar nav a:hover, .mhr-linkbtn:hover { color: #fff; text-decoration: underline; }
+.mhr-count { display: inline-block; min-width: 20px; padding: 0 6px; border-radius: 999px; background: var(--gold); color: var(--navy); font-size: .75rem; text-align: center; }
+.mhr-admin-main { padding-block: 24px 60px; }
+.mhr-admin-main h1 { margin: 0 0 16px; }
+.mhr-admin-main h2 { font-size: 1.1rem; margin: 18px 0 8px; }
+.mhr-admin-main .card h2:first-child { margin-top: 0; }
+.mhr-login { margin-top: 40px; }
+.mhr-inline { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; }
+.mhr-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.mhr-stat { display: grid; gap: 4px; padding: 16px; text-decoration: none; color: inherit; }
+.mhr-stat strong { font-size: 1.6rem; }
+.mhr-stat span { color: var(--text-2); font-size: .85rem; }
+.mhr-admin-grid { display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 18px; align-items: start; }
+.mhr-admin-grid > .card + .card { margin-top: 0; }
+@media (max-width: 900px) { .mhr-admin-grid { grid-template-columns: 1fr; } }
+.mhr-st { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.mhr-st-ok { background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); }
+.mhr-st-warn { background: color-mix(in srgb, var(--gold) 25%, transparent); color: #8a5a00; }
+.mhr-st-bad { background: color-mix(in srgb, var(--red) 14%, transparent); color: var(--red); }
+.mhr-st-muted { background: var(--bg); color: var(--text-2); border: 1px solid var(--line); }
+:root[data-theme="dark"] .mhr-st-warn { color: var(--gold); }
+.mhr-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.mhr-filter input, .mhr-filter select, .mhr-reject input, .mhr-admin textarea { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); font: inherit; }
+.mhr-filter input { flex: 1; min-width: 200px; }
+.mhr-admin textarea { width: 100%; }
+.mhr-sub-head { display: flex; flex-wrap: wrap; gap: 16px; }
+.mhr-sub-head img { border-radius: 10px; object-fit: cover; }
+.mhr-sub-head h2 { margin-top: 0; }
+.mhr-sub details { margin: 10px 0; }
+.mhr-sub .mhr-check, .mhr-danger .mhr-check { margin: 0; font-size: .85rem; }
+.mhr-danger { margin-top: 10px; }
+.mhr-msg { padding: 12px 16px; margin-bottom: 10px; }
+.mhr-msg summary { cursor: pointer; }
+.mhr-dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: .9rem; }
+.mhr-dl dt { font-weight: 700; color: var(--text-2); }
+.mhr-dl dd { margin: 0; overflow-wrap: anywhere; }
+.mhr-assign { margin-top: 10px; }

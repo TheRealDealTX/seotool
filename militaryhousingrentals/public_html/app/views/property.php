@@ -1,6 +1,9 @@
 <?php
 $l = $listing;
 $b = base($l['base']);
+// Listing add-on: contact details are already removed from $l when no owner has verified it.
+$mhr = $l['_mhr'] ?? null;
+$locked = $mhr && !$mhr['contact_visible'];
 $imgs = $l['images'] ?: [listing_image($l)];
 $similar = array_values(array_filter(listings(), fn($o) => $o['slug'] !== $l['slug'] && $o['base'] === $l['base']));
 foreach (newest_listings(12) as $o) if (count($similar) < 3 && $o['slug'] !== $l['slug'] && !in_array($o, $similar, true)) $similar[] = $o;
@@ -49,6 +52,7 @@ layout_start([
     'image' => $imgs[0]['src'],
     'nav' => '/properties/',
     'schema' => [$crumb_schema, $schema],
+    'head_extra' => function_exists('mhr_css_link') ? mhr_css_link() : '',
 ]);
 ?>
 <article class="listing" data-listing="<?= e($l['slug']) ?>">
@@ -62,6 +66,7 @@ layout_start([
           <span class="chip"><?= e($b['branch']) ?></span>
         </div>
         <h1><?= e($l['title']) ?></h1>
+        <?php if ($mhr && $mhr['verified']): ?><p class="mhr-verified"><span class="mhr-badge"><?= icon('check') ?> Verified owner</span></p><?php endif; ?>
         <p class="listing-addr"><?= icon('pin') ?> <?= e($l['address']) ?></p>
       </div>
       <div class="listing-price">
@@ -110,6 +115,9 @@ layout_start([
             <?php foreach ($details as $k => [$ic, $v]): ?>
               <div><dt><?= icon($ic) ?> <?= e($k) ?></dt><dd><?= $v ?></dd></div>
             <?php endforeach; ?>
+            <?php if ($locked): ?>
+              <div><dt><?= icon('phone') ?> Contact</dt><dd>🔒 Hidden until the owner verifies this listing. <a href="/claim/<?= e($l['slug']) ?>/" rel="nofollow">Own or manage it? Claim this listing</a></dd></div>
+            <?php endif; ?>
           </dl>
         </section>
 
@@ -149,6 +157,13 @@ layout_start([
       <aside class="listing-side">
         <div class="card contact-card" data-sticky>
           <p class="contact-price"><?= e(price_label($l)) ?></p>
+          <?php if ($locked): ?>
+          <div class="mhr-lock" role="note">
+            <p class="mhr-lock-title"><span aria-hidden="true">🔒</span> Contact details hidden until the owner verifies this listing</p>
+            <a class="btn btn-accent btn-block btn-lg" href="/claim/<?= e($l['slug']) ?>/" rel="nofollow"><?= icon('shield') ?> Claim this listing</a>
+            <p class="fineprint">Own or manage this property? Verify it to show your phone, email and website with a Verified owner badge.</p>
+          </div>
+          <?php else: ?>
           <p class="muted">Contact the community to check eligibility, waitlist times and move-in dates.</p>
           <?php if ($l['phone']): ?>
             <a class="btn btn-primary btn-block btn-lg" href="tel:<?= e(preg_replace('/[^0-9+]/', '', $l['phone'])) ?>"><?= icon('phone') ?> Call <?= e($l['phone']) ?></a>
@@ -156,6 +171,7 @@ layout_start([
             <a class="btn btn-primary btn-block btn-lg" href="<?= e(cfg('phone_href')) ?>"><?= icon('phone') ?> Call for more info</a>
           <?php endif; ?>
           <?php if ($l['website']): ?><a class="btn btn-outline btn-block" href="<?= e($l['website']) ?>" target="_blank" rel="noopener"><?= icon('globe') ?> Visit their website</a><?php endif; ?>
+          <?php endif; ?>
           <div class="contact-row">
             <button type="button" class="btn btn-light" data-fav="<?= e($l['slug']) ?>" aria-pressed="false"><?= icon('heart') ?> <span data-fav-label>Save</span></button>
             <button type="button" class="btn btn-light" data-share data-title="<?= e($l['title']) ?>"><?= icon('share') ?> Share</button>

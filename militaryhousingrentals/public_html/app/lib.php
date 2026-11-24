@@ -19,7 +19,9 @@ function data($name) {
 function e($s) { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function abs_url($path) { return rtrim(cfg('origin'), '/') . $path; }
 
-function listings() { return data('listings'); }
+// The listing add-on (app/mhr/) adds owner edits and new submissions, and removes
+// contact details from listings no owner has verified.
+function listings() { return function_exists('mhr_listings') ? mhr_listings(data('listings')) : data('listings'); }
 function bases() { return data('bases'); }
 function posts() { return data('posts'); }
 
@@ -164,7 +166,7 @@ function layout_start(array $page) {
         $active = ($href === '/' ? $current === '/' : str_starts_with($current, $href)); ?>
         <a href="<?= e($href) ?>"<?= $active ? ' aria-current="page"' : '' ?>><?= e($label) ?></a>
       <?php endforeach; ?>
-      <a class="btn btn-sm btn-accent nav-cta" href="/submit-property/">Submit Property</a>
+      <a class="btn btn-sm btn-accent nav-cta" href="/submit-property/">List Your Property</a>
     </nav>
     <div class="header-tools">
       <a class="icon-btn saved-link" href="/properties/?saved=1" aria-label="Saved listings" title="Saved listings"><?= icon('heart') ?><span class="badge" data-saved-count hidden>0</span></a>
@@ -209,7 +211,8 @@ function layout_end() {
         <li><a href="/properties/">All Listings</a></li>
         <li><a href="/feed/">Latest Listings &amp; Guides</a></li>
         <li><a href="/blog/">Blog</a></li>
-        <li><a href="/submit-property/">Submit a Property</a></li>
+        <li><a href="/submit-property/">List Your Property</a></li>
+        <li><a href="/account/" rel="nofollow">Owner Login</a></li>
         <li><a href="/contact-us/">Contact Us</a></li>
         <li><a href="/privacy-policy/">Privacy Policy</a></li>
         <li><a href="/terms-of-use/">Terms of Use</a></li>
@@ -345,8 +348,10 @@ function redirect($to, $code = 301) {
 }
 
 function csrf_token() {
+    if (function_exists('mhr_session_start')) mhr_session_start(); // secure, httponly, SameSite cookie
     if (session_status() !== PHP_SESSION_ACTIVE) session_start();
     return $_SESSION['csrf'] ??= bin2hex(random_bytes(16));
 }
 
 require APP . '/views/partials.php';
+if (is_file(APP . '/mhr/bootstrap.php')) require APP . '/mhr/bootstrap.php';

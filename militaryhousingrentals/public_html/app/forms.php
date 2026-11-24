@@ -34,10 +34,15 @@ function form_handle($kind, array $fields) {
     @file_put_contents("$dir/submissions.log", json_encode(['kind' => $kind, 'at' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? null] + $v, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX);
 
     $to = cfg('email');
-    $headers = 'From: ' . cfg('name') . ' <' . $to . ">\r\n" .
-               'Reply-To: ' . preg_replace('/[\r\n]+/', '', $v['email']) . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8\r\n";
-    @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-f' . $to);
+    // Listing add-on: keep a copy for the admin panel and send through SMTP.
+    if (function_exists('mhr_log_message')) mhr_log_message($kind, $v['name'] ?? '', $v['email'] ?? '', $v['phone'] ?? '', $kind === 'contact' ? ($v['topic'] ?? '') : $subject, array_diff_key($v, array_flip(['name', 'email', 'phone'])));
+    $sent = function_exists('mhr_mail') && mhr_cfg('smtp.pass') && mhr_mail(mhr_notify_email(), $subject, $body, $v['email']);
+    if (!$sent) {
+        $headers = 'From: ' . cfg('name') . ' <' . $to . ">\r\n" .
+                   'Reply-To: ' . preg_replace('/[\r\n]+/', '', $v['email']) . "\r\n" .
+                   "Content-Type: text/plain; charset=UTF-8\r\n";
+        @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-f' . $to);
+    }
     $_SESSION['last_submit'] = time();
     return ['ok' => true, 'values' => []];
 }

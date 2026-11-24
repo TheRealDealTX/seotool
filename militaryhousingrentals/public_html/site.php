@@ -22,6 +22,9 @@ if (isset($xml[$path])) { $sitemap = $xml[$path]; require APP . '/views/sitemap.
 if ($path === '/sitemap.xml' || $path === '/wp-sitemap.xml') redirect('/sitemap_index.xml');
 if ($path === '/llms.txt') { require APP . '/views/llms.php'; exit; }
 
+// Listing add-on (claims, owner accounts, checkout, admin, Stripe webhook): app/mhr/
+if (function_exists('mhr_route') && mhr_route($path)) exit;
+
 // RSS lives at /feed.xml. /feed/ is an HTML page (newest listings, guides and
 // the Fort Hood housing guide); feed readers that ask for XML there are sent on.
 if ($path === '/feed.xml') { require APP . '/views/feed.php'; exit; }
