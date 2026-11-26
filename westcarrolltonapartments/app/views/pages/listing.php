@@ -47,8 +47,9 @@ $facts = array_filter([
     <div class="listing-main">
       <header class="listing-head">
         <div class="badges">
+          <?php if ($l['paid_featured']): ?><span class="badge badge-featured">★ Featured</span><?php endif; ?>
           <?php if ($l['claimed']): ?><span class="badge badge-verified">✓ Verified owner</span><?php endif; ?>
-          <?php if ($l['featured']): ?><span class="badge">Popular</span><?php endif; ?>
+          <?php if ($l['featured'] && !$l['paid_featured']): ?><span class="badge">Popular</span><?php endif; ?>
           <?php if ($l['income_restricted']): ?><span class="badge badge-soft">Income-based</span><?php endif; ?>
           <?php if ($l['age_restriction']): ?><span class="badge badge-soft"><?= e($l['age_restriction']) ?> community</span><?php endif; ?>
         </div>

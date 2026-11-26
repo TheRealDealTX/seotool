@@ -22,7 +22,7 @@
           <span class="plan-tag">Most popular</span>
           <span class="plan-name">Owner listing</span>
           <span class="plan-price">$<?= $price ?> <small>one-time</small></span>
-          <ul><li><strong>Published instantly</strong></li><li>Phone, email &amp; website <strong>shown</strong></li><li>Owner account to edit &amp; manage</li><li>Verified owner badge</li></ul>
+          <ul><li><strong>Published instantly</strong></li><li>Phone, email &amp; website <strong>shown</strong></li><li>Owner account to edit &amp; manage</li><li><strong>★ Featured</strong>: prioritized in search results</li><li>Verified owner badge</li></ul>
           <small class="muted">Promo codes accepted at checkout</small>
         </span>
       </label>

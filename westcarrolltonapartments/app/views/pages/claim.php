@@ -25,7 +25,8 @@
         <li>An owner account (sign in by email link, no password to remember)</li>
         <li>Edit rents, floor plans, amenities, pet policy and description anytime</li>
         <li>Upload up to 12 real photos to replace the stock images</li>
-        <li>"Verified owner" badge and higher placement in results</li>
+        <li><strong>★ Featured</strong> placement: prioritized at the top of search results and category pages</li>
+        <li>"Verified owner" badge</li>
       </ul>
       <p class="small muted">One-time fee, no subscription. We may contact you to confirm you represent the property; listings claimed by someone without authority are removed and refunded.</p>
       <div class="card mini-listing">

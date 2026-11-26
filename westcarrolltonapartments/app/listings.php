@@ -49,6 +49,7 @@ function listing_hydrate(array $l): array
     if (!$l['photos']) $l['photos'] = default_photos((int)$l['id']);
     $l['url'] = '/apartments/' . $l['slug'] . '/';
     $l['claimed'] = !empty($l['owner_id']);
+    $l['paid_featured'] = $l['claimed'] && !empty($l['featured']);
     $l['show_contact'] = !empty($l['contact_visible']) && !empty($l['owner_id']);
     return $l;
 }
@@ -79,7 +80,7 @@ function listings_published(): array
 {
     static $all = null;
     if ($all !== null) return $all;
-    $rows = db()->query("SELECT * FROM listings WHERE status = 'published' ORDER BY featured DESC, (owner_id IS NOT NULL) DESC, name ASC")->fetchAll();
+    $rows = db()->query("SELECT * FROM listings WHERE status = 'published' ORDER BY (owner_id IS NOT NULL AND featured = 1) DESC, featured DESC, (owner_id IS NOT NULL) DESC, name ASC")->fetchAll();
     return $all = array_map('listing_hydrate', $rows);
 }
 

@@ -93,7 +93,8 @@
       <ul class="checks">
         <li>Your phone, email &amp; website shown to renters</li>
         <li>Owner dashboard to edit details and photos</li>
-        <li>"Verified owner" badge and priority placement</li>
+        <li><strong>★ Featured</strong> placement at the top of search results</li>
+        <li>"Verified owner" badge</li>
       </ul>
       <p><a class="btn" href="/apartments/">Find &amp; claim your listing</a> <a class="btn btn-ghost" href="/list-your-property/">Add a new property</a></p>
     </div>

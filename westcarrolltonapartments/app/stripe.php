@@ -90,7 +90,7 @@ function fulfill_session(array $session): ?array
 
     $listing = listing_by_id((int)$p['listing_id']);
     if ($listing) {
-        $pdo->prepare("UPDATE listings SET owner_id = ?, contact_visible = 1, status = 'published', updated_at = ? WHERE id = ?")
+        $pdo->prepare("UPDATE listings SET owner_id = ?, contact_visible = 1, featured = 1, status = 'published', updated_at = ? WHERE id = ?")
             ->execute([$user['id'], now(), $listing['id']]);
     }
 
