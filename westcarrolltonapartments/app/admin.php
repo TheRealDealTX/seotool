@@ -139,11 +139,39 @@ function admin_edit_listing(): void
 function listing_approved_email(?array $l): void
 {
     if (!$l || !$l['submitter_email']) return;
-    send_mail($l['submitter_email'], 'Your listing is live: ' . $l['name'],
-        '<p>Hi ' . e($l['submitter_name']) . ',</p><p>Good news: <strong>' . e($l['name']) . '</strong> has been approved and is now live on West Carrollton Apartments.</p>'
-        . email_button(url($l['url']), 'View your listing')
-        . '<p>Free listings are shown with contact details hidden. To display your phone, email and website and get an owner account to update photos, rents and amenities any time, claim it for a one-time $' . (listing_price_cents() / 100) . ':</p>'
-        . email_button(url('/claim/' . $l['slug'] . '/'), 'Claim & show my contact info'));
+    send_mail($l['submitter_email'], 'Your listing is live: ' . $l['name'], listing_approved_email_html($l));
+}
+
+function listing_approved_email_html(array $l): string
+{
+    $price = '$' . rtrim(rtrim(number_format(listing_price_cents() / 100, 2), '0'), '.');
+    $live = url($l['url']);
+    $claim = url('/claim/' . $l['slug'] . '/');
+    $first = trim(explode(' ', trim((string)$l['submitter_name']))[0]) ?: 'there';
+    $li = fn($t) => '<tr><td style="padding:4px 10px 4px 0;vertical-align:top;color:#1b7f4b;font-weight:bold">&#10003;</td><td style="padding:4px 0">' . $t . '</td></tr>';
+    return '<p style="margin:0 0 14px">Hi ' . e($first) . ',</p>'
+        . '<p style="margin:0 0 14px">Good news! Your listing <strong>' . e($l['name']) . '</strong> has been reviewed and is now <strong>live</strong> on West Carrollton Apartments.</p>'
+        . email_button($live, 'View your live listing')
+        . '<p style="margin:0 0 6px"><strong>Your listing includes:</strong></p>'
+        . '<table cellpadding="0" cellspacing="0" style="margin:0 0 18px;font-size:15px">'
+        . $li('Photos, rent, floor plans and amenities shown to renters')
+        . $li('A spot in our West Carrollton directory, map and category pages')
+        . '<tr><td style="padding:4px 10px 4px 0;vertical-align:top;color:#b42318;font-weight:bold">&#128274;</td><td style="padding:4px 0">Your phone, email and website are <strong>hidden</strong> on free listings</td></tr>'
+        . '</table>'
+        . '<table cellpadding="0" cellspacing="0" width="100%" style="background:#fff8f1;border:1px solid #fde3c8;border-radius:10px;margin:0 0 18px"><tr><td style="padding:20px">'
+        . '<p style="margin:0 0 4px;font-size:12px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#e36414">Upgrade for a one-time ' . $price . '</p>'
+        . '<p style="margin:0 0 10px;font-size:18px;font-weight:bold;color:#0a3540">Get more renters calling you</p>'
+        . '<table cellpadding="0" cellspacing="0" style="font-size:15px">'
+        . $li('<strong>Featured placement:</strong> your listing is prioritized at the top of search results and category pages')
+        . $li('<strong>Contact info made public:</strong> your phone, email and website shown on your listing')
+        . $li('<strong>Verified owner badge</strong> that builds trust with renters')
+        . $li('<strong>Owner account</strong> to update rents, specials, photos and amenities any time')
+        . '</table>'
+        . email_button($claim, 'Feature my listing for ' . $price)
+        . '<p style="margin:0;font-size:13px;color:#6b7280">One-time payment, no subscription. Secure checkout by Stripe; promo codes accepted.</p>'
+        . '</td></tr></table>'
+        . '<p style="margin:0 0 14px">Need to change something on your listing? Just reply to this email and we\'ll take care of it.</p>'
+        . '<p style="margin:0">Thanks for listing with us,<br><strong>The West Carrollton Apartments team</strong><br><a href="mailto:info@westcarrolltonapartments.com" style="color:#0f4c5c">info@westcarrolltonapartments.com</a></p>';
 }
 
 function admin_listing_action(): void

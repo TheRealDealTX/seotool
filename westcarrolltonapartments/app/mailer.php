@@ -88,8 +88,8 @@ function email_wrap(string $title, string $html): string
     $site = e(cfg('site_name'));
     $u = e(url('/'));
     return '<!doctype html><html><body style="margin:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;color:#1f2a37">'
-        . '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:24px">'
-        . '<table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#fff;border-radius:10px;overflow:hidden">'
+        . '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:16px">'
+        . '<table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#fff;border-radius:10px;overflow:hidden">'
         . '<tr><td style="background:#0f4c5c;color:#fff;padding:18px 24px;font-size:20px;font-weight:bold">' . $site . '</td></tr>'
         . '<tr><td style="padding:24px;font-size:15px;line-height:1.6">' . $html . '</td></tr>'
         . '<tr><td style="padding:16px 24px;background:#f9fafb;color:#6b7280;font-size:12px">West Carrollton, Ohio apartment directory &middot; <a href="' . $u . '" style="color:#0f4c5c">' . $u . '</a></td></tr>'
@@ -99,7 +99,7 @@ function email_wrap(string $title, string $html): string
 function email_button(string $href, string $label): string
 {
     return '<p style="margin:24px 0"><a href="' . e($href) . '" style="background:#e36414;color:#fff;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;display:inline-block">' . e($label) . '</a></p>'
-        . '<p style="font-size:12px;color:#6b7280">Or paste this link into your browser:<br>' . e($href) . '</p>';
+        . '<p style="font-size:12px;color:#6b7280;word-break:break-all">Or paste this link into your browser:<br>' . e($href) . '</p>';
 }
 
 function notify_admin(string $subject, string $html, ?string $replyTo = null): void
