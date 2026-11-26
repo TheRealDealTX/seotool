@@ -59,29 +59,39 @@ $hits[] = time();
 $hdr = fn($v) => preg_replace('/[\r\n]+/', ' ', $v);
 $name = $hdr($name); $email = $hdr($email);
 if ($subject === '') $subject = $form === 'newsletter' ? 'Subscribe me to Connected Renter updates' : 'Connected Renter website enquiry';
-$subject = '[Website] ' . $hdr($subject);
+$topic   = $subject;
+$subject = $form === 'newsletter' ? "New newsletter sign-up: $email" : "Website enquiry from $name: " . $hdr($topic);
 
 $lines = $form === 'newsletter'
-    ? ["New newsletter sign-up", "", "Email: $email"]
-    : ["New message from the connectedrenter.com contact form", "", "Name: $name", "Email: $email", "Topic: " . ($_POST['subject'] ?? 'General question'), "", "Message:", $message];
+    ? ["Someone signed up for Connected Renter updates on connectedrenter.com.", "", "Email: $email"]
+    : ["You have a new message from the contact form on connectedrenter.com.", "", "Name: $name", "Email: $email", "Topic: $topic", "", $message, "", "Reply to this email to answer $name directly."];
 $lines[] = "";
-$lines[] = "Sent " . gmdate('Y-m-d H:i') . " UTC from " . ($_SERVER['HTTP_REFERER'] ?? 'connectedrenter.com');
-$body = implode("\r\n", $lines);
+$lines[] = "-- ";
+$lines[] = "Connected Renter website, " . gmdate('F j, Y g:i A') . " UTC";
+$body = preg_replace('/\r\n|\r|\n/', "\r\n", implode("\r\n", $lines));
 
-$encName = fn($n) => '=?UTF-8?B?' . base64_encode($n) . '?=';
+// Encode only what needs it: plain ASCII stays readable, which spam filters prefer.
+$isAscii = fn($v) => !preg_match('/[^\x20-\x7E]/', $v);
+$encWord = fn($v) => $isAscii($v) ? $v : '=?UTF-8?B?' . base64_encode($v) . '?=';
+$encName = fn($n) => $isAscii($n) ? '"' . addcslashes($n, '"\\') . '"' : '=?UTF-8?B?' . base64_encode($n) . '?=';
 $domain  = substr(strrchr($cfg['user'], '@'), 1);
 $headers = [
     'Date: ' . date('r'),
-    'From: ' . $encName('Connected Renter Website') . ' <' . $cfg['user'] . '>',
-    'To: <' . $to . '>',
+    'From: "Connected Renter" <' . $cfg['user'] . '>',
+    'To: "Connected Renter" <' . $to . '>',
     'Reply-To: ' . ($name !== '' ? $encName($name) . ' ' : '') . '<' . $email . '>',
-    'Subject: ' . $encName($subject),
+    'Subject: ' . $encWord($subject),
     'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . $domain . '>',
     'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: base64',
+    'Content-Type: text/plain; charset=UTF-8; format=flowed',
+    'Content-Transfer-Encoding: ' . ($isAscii(str_replace(["\r", "\n"], '', $body)) ? '7bit' : 'quoted-printable'),
 ];
-$data = implode("\r\n", $headers) . "\r\n\r\n" . chunk_split(base64_encode($body));
+if ($isAscii(str_replace(["\r", "\n"], '', $body))) {
+    $enc = implode("\r\n", array_map(fn($l) => wordwrap($l, 76, " \r\n", false), explode("\r\n", $body)));
+} else {
+    $enc = quoted_printable_encode($body);
+}
+$data = implode("\r\n", $headers) . "\r\n\r\n" . $enc;
 
 // Minimal SMTP client (implicit TLS on 465, or STARTTLS on 587).
 function smtp_send($host, $port, $user, $pass, $from, $to, $data) {
