@@ -114,5 +114,13 @@ function notify_admin(string $subject, string $html): void
 
 function html_to_text(string $html): string
 {
-    return trim(html_entity_decode(strip_tags(preg_replace(['#<br\s*/?>#i', '#</p>#i', '#<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>#is'], ["\n", "\n\n", '$2 ($1)'], $html)), ENT_QUOTES, 'UTF-8'));
+    $html = preg_replace_callback('#<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>#is', function ($m) {
+        $label = trim(strip_tags($m[2]));
+        return html_entity_decode($label, ENT_QUOTES, 'UTF-8') === html_entity_decode($m[1], ENT_QUOTES, 'UTF-8') ? $m[1] : $label . ' (' . $m[1] . ')';
+    }, $html);
+    $html = preg_replace(['#<br\s*/?>#i', '#</(p|tr|h\d|div)>#i', '#</td>\s*<td[^>]*>#i'], ["\n", "\n\n", ': '], $html);
+    $text = html_entity_decode(strip_tags($html), ENT_QUOTES, 'UTF-8');
+    $text = preg_replace(['/[ \t]+/', '/ *\n */', '/\n{3,}/'], [' ', "\n", "\n\n"], $text);
+    $text = str_replace('✔: ', '• ', $text);
+    return trim($text);
 }
