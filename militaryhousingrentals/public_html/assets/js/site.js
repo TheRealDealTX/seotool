@@ -163,6 +163,8 @@
       });
       var key = { new: function (c) { return c.dataset.date; }, beds: function (c) { return +c.dataset.beds; }, sqft: function (c) { return +c.dataset.sqft; }, az: function (c) { return c.querySelector('.card-title').textContent; } }[sort];
       cards.slice().sort(function (a, b) {
+        // "Newest" keeps featured listings on top, as the server renders them
+        if (sort === 'new' && a.dataset.featured !== b.dataset.featured) return (+b.dataset.featured || 0) - (+a.dataset.featured || 0);
         var x = key(a), y = key(b);
         return sort === 'az' ? String(x).localeCompare(y) : (x < y ? 1 : x > y ? -1 : 0);
       }).forEach(function (c) { grid.appendChild(c); });

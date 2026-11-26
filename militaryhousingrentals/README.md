@@ -39,8 +39,11 @@ Not committed: `listings.json`, posts and the rest of the existing site (unchang
   "✓ Verified owner" badge. Fulfilment is idempotent (row lock + status) and runs from both `/checkout/success/` (retrieves
   the session) and the webhook `/stripe/webhook` (`checkout.session.completed`, signature verified).
 - **Submit:** `/submit-property/` (same URL/title/meta). Free → pending → admin approves → published with contact hidden
-  and an upgrade email. Paid → Stripe → published instantly with contact shown. A cancelled checkout keeps the submission
+  and the approval email (`app/mhr/emails.php`, HTML + plain text from the site mailbox: live URL and the paid upgrade). Paid → Stripe → published instantly with contact shown. A cancelled checkout keeps the submission
   as a free pending listing.
+- **Featured:** every paid listing (claim or paid submission) is Featured: badge, home-page Featured section,
+  `/bases/featured/`, and first in `/properties/` and base pages (server order and the "Newest" sort in `site.js`).
+  Admins can toggle Featured on any listing.
 - **Owners:** passwordless. One-time email links (30 min sign-in / 7 day verification, only a SHA-256 hash stored).
   Dashboard at `/account/` to edit listing details and photos. Photos are checked by content (JPEG/PNG/WebP/GIF), decoded
   with GD, resized to 1600px and re-encoded as WebP under random names.

@@ -43,7 +43,7 @@ function mhr_checkout_start($kind, $slug, $title, $owner, &$error = null) {
             'price_data' => [
                 'currency' => mhr_setting('currency', 'usd'),
                 'unit_amount' => mhr_price_cents(),
-                'product_data' => ['name' => mb_substr("$label: $title", 0, 250), 'description' => 'Shows your contact details on ' . cfg('name') . ' with a Verified owner badge.'],
+                'product_data' => ['name' => mb_substr("$label: $title", 0, 250), 'description' => 'Featured placement, your contact details shown and a Verified owner badge on ' . cfg('name') . '.'],
             ],
         ]],
         'allow_promotion_codes' => 'true',
@@ -90,7 +90,8 @@ function mhr_fulfil(array $s) {
                 $cols['published_at'] = mhr_now();
             }
             mhr_set_cols($slug, $cols);
-            if ($p['kind'] === 'submit' && $row['origin'] === 'db') mhr_save_fields($slug, ['date' => gmdate('Y-m-d')]);
+            // Paid listings are Featured (badge, Featured section, first in search results).
+            mhr_save_fields($slug, ['featured' => true] + ($p['kind'] === 'submit' && $row['origin'] === 'db' ? ['date' => gmdate('Y-m-d')] : []));
         }
         mhr_q("UPDATE mhr_payments SET status = 'fulfilled', stripe_session_id = ?, amount_total = ?, currency = ?, payment_status = ?, note = ?, fulfilled_at = ? WHERE id = ?",
             [$s['id'], $s['amount_total'] ?? null, $s['currency'] ?? null, $s['payment_status'], $note, mhr_now(), $pid]);
@@ -114,7 +115,7 @@ function mhr_after_fulfil(array $p, array $s) {
         $body = "Hi " . ($owner['name'] ?: 'there') . ",\n\nThanks for your payment. Here is your receipt.\n\n"
             . "Item: " . ($p['kind'] === 'submit' ? 'Verified listing' : 'Listing claim & verification') . "\nListing: $title\nAmount: $amount\n"
             . "Date: " . gmdate('F j, Y') . "\nReference: MHR-" . $p['id'] . "\n\n"
-            . ($p['note'] ? "We'll review this listing and be in touch shortly.\n\n" : "Your listing now shows your contact details and a Verified owner badge:\n$url\n\n")
+            . ($p['note'] ? "We'll review this listing and be in touch shortly.\n\n" : "Your listing is now Featured and shows your contact details and a Verified owner badge:\n$url\n\n")
             . "Manage your listing at " . abs_url('/account/') . "\n\n— " . cfg('name');
         mhr_mail($owner['email'], 'Receipt: ' . $title, $body);
         if (!$owner['email_verified_at']) mhr_send_login_link($owner, 'verify');

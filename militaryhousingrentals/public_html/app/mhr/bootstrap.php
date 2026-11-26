@@ -6,7 +6,7 @@
 // app/data/listings.json; this layer only adds to them.
 
 const MHR = __DIR__;
-const MHR_SCHEMA_VERSION = 1;
+const MHR_SCHEMA_VERSION = 2;
 
 require MHR . '/listings.php';
 require MHR . '/mailer.php';
@@ -15,6 +15,7 @@ require MHR . '/images.php';
 require MHR . '/routes.php';
 require MHR . '/submit.php';
 require MHR . '/editor.php';
+require MHR . '/emails.php';
 
 function mhr_cfg($key = null) {
     static $c;
@@ -73,9 +74,15 @@ function mhr_migrate(PDO $pdo) {
     $ver = (int)($pdo->query("SELECT v FROM mhr_settings WHERE k = 'schema_version'")->fetchColumn() ?: 0);
     if ($ver < 1) {
         foreach (explode(';', file_get_contents(MHR . '/schema.sql')) as $sql) if (trim($sql) !== '') $pdo->exec($sql);
-        $pdo->prepare("REPLACE INTO mhr_settings (k, v) VALUES ('schema_version', ?)")->execute([MHR_SCHEMA_VERSION]);
         mhr_import_message_log($pdo);
     }
+    if ($ver < 2) {
+        // Paid listings are Featured: apply to everyone who paid before this existed.
+        $paid = $pdo->query("SELECT DISTINCT p.listing_slug FROM mhr_payments p JOIN mhr_listings l ON l.slug = p.listing_slug AND l.owner_id = p.owner_id
+                             WHERE p.status = 'fulfilled' AND p.note IS NULL")->fetchAll(PDO::FETCH_COLUMN);
+        foreach ($paid as $slug) mhr_save_fields($slug, ['featured' => true]);
+    }
+    if ($ver < MHR_SCHEMA_VERSION) $pdo->prepare("REPLACE INTO mhr_settings (k, v) VALUES ('schema_version', ?)")->execute([MHR_SCHEMA_VERSION]);
     // First admin comes from the private config (a password hash, never a password).
     $boot = mhr_cfg('bootstrap_admin');
     if ($boot && !empty($boot['username']) && !empty($boot['password_hash'])

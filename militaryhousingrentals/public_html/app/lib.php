@@ -258,7 +258,7 @@ function listing_card($l, $extra_class = '') {
         'slug' => $l['slug'], 'base' => $l['base'], 'beds' => $l['beds'] ?? 0, 'baths' => $l['baths'] ?? 0,
         'sqft' => $l['sqft'] ?? 0, 'date' => $l['date'], 'branch' => strtolower($b['branch'] ?? ''),
         'q' => strtolower($l['title'] . ' ' . $l['address'] . ' ' . ($b['name'] ?? '') . ' ' . ($l['operator'] ?? '') . ' ' . implode(' ', $l['amenities'])),
-        'pets' => !empty($l['pets']) ? 1 : 0,
+        'pets' => !empty($l['pets']) ? 1 : 0, 'featured' => !empty($l['featured']) ? 1 : 0,
     ];
     $attrs = '';
     foreach ($data as $k => $v) $attrs .= ' data-' . $k . '="' . e($v) . '"';

@@ -1,13 +1,14 @@
 <?php
-// Minimal SMTP client: implicit TLS (port 465) with AUTH LOGIN, plain-text UTF-8
-// mail. Settings come from the private config ('smtp' => [...]). Every send is
+// Minimal SMTP client: implicit TLS (port 465) with AUTH LOGIN, UTF-8 mail
+// (plain text, optionally with an HTML part). Settings come from the private config ('smtp' => [...]). Every send is
 // written to the PHP error log on failure; nothing here ever echoes the password.
 
-function mhr_mail($to, $subject, $body, $reply_to = null, &$error = null) {
+// Optional $html adds an HTML part (multipart/alternative) next to the plain text.
+function mhr_mail($to, $subject, $body, $reply_to = null, &$error = null, $html = null) {
     $s = mhr_cfg('smtp') ?: [];
     $from = $s['from'] ?? cfg('email');
     $from_name = $s['from_name'] ?? cfg('name');
-    if (mhr_cfg('dev') && !empty($s['capture_dir'])) return mhr_mail_capture($s['capture_dir'], $to, $subject, $body);
+    if (mhr_cfg('dev') && !empty($s['capture_dir'])) return mhr_mail_capture($s['capture_dir'], $to, $subject, $body, $html);
     if (empty($s['pass'])) { $error = 'SMTP password is not set in the private config.'; error_log('mhr mail: ' . $error); return false; }
 
     $clean = fn($v) => preg_replace('/[\r\n]+/', ' ', (string)$v);
@@ -23,11 +24,21 @@ function mhr_mail($to, $subject, $body, $reply_to = null, &$error = null) {
         'Subject: ' . mhr_mime_header($subject),
         'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . (parse_url(cfg('origin'), PHP_URL_HOST) ?: 'localhost') . '>',
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
-        'Content-Transfer-Encoding: base64',
     ];
     if ($reply_to && filter_var($reply_to, FILTER_VALIDATE_EMAIL)) $headers[] = 'Reply-To: <' . $clean($reply_to) . '>';
-    $data = implode("\r\n", $headers) . "\r\n\r\n" . rtrim(chunk_split(base64_encode(str_replace("\n", "\r\n", str_replace("\r\n", "\n", $body))), 76, "\r\n"));
+    $b64 = fn($t) => rtrim(chunk_split(base64_encode(str_replace("\n", "\r\n", str_replace("\r\n", "\n", $t))), 76, "\r\n"));
+    if ($html === null) {
+        $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+        $headers[] = 'Content-Transfer-Encoding: base64';
+        $data = implode("\r\n", $headers) . "\r\n\r\n" . $b64($body);
+    } else {
+        $bd = 'mhr-' . bin2hex(random_bytes(12));
+        $headers[] = 'Content-Type: multipart/alternative; boundary="' . $bd . '"';
+        $data = implode("\r\n", $headers) . "\r\n\r\n"
+            . "--$bd\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n" . $b64($body) . "\r\n"
+            . "--$bd\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n" . $b64($html) . "\r\n"
+            . "--$bd--";
+    }
 
     $ctx = stream_context_create(['ssl' => ['verify_peer' => true, 'verify_peer_name' => true, 'peer_name' => $host]]);
     $fp = @stream_socket_client("ssl://$host:$port", $errno, $errstr, 15, STREAM_CLIENT_CONNECT, $ctx);
@@ -76,8 +87,10 @@ function mhr_mime_header($s) {
 }
 
 // Local development: write mail to files instead of sending.
-function mhr_mail_capture($dir, $to, $subject, $body) {
+function mhr_mail_capture($dir, $to, $subject, $body, $html = null) {
     if (!is_dir($dir)) mkdir($dir, 0700, true);
-    file_put_contents($dir . '/' . date('Ymd-His') . '-' . bin2hex(random_bytes(3)) . '.txt', "To: $to\nSubject: $subject\n\n$body");
+    $base = $dir . '/' . date('Ymd-His') . '-' . bin2hex(random_bytes(3));
+    file_put_contents("$base.txt", "To: $to\nSubject: $subject\n\n$body");
+    if ($html !== null) file_put_contents("$base.html", $html);
     return true;
 }

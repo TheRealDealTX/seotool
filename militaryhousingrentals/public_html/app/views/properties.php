@@ -11,7 +11,8 @@ $archive ??= [
     'crumbs' => [['Home', '/'], ['Listings', null]],
 ];
 $items = $archive['items'];
-usort($items, fn($a, $b) => strcmp($b['date'], $a['date']));
+// Featured listings first (paid/verified owners and hand-picked), then newest.
+usort($items, fn($a, $b) => (int)!empty($b['featured']) <=> (int)!empty($a['featured']) ?: strcmp($b['date'], $a['date']));
 $amen = [];
 foreach ($items as $l) foreach ($l['amenities'] as $a) $amen[$a] = ($amen[$a] ?? 0) + 1;
 arsort($amen);

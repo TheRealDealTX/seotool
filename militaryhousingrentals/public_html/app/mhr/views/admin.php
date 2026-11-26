@@ -114,13 +114,14 @@ function adm_listing_action($slug, $do) {
             $was_pending = $row && $row['status'] === 'pending';
             mhr_set_cols($slug, ['status' => 'published', 'published_at' => $row['published_at'] ?? mhr_now()]);
             if ($origin === 'db' && $was_pending) mhr_save_fields($slug, ['date' => gmdate('Y-m-d')]);
+            $mailed = '';
             if ($was_pending && $row['submitter_email'] && !$row['owner_id']) {
-                mhr_mail($row['submitter_email'], 'Your listing is live: ' . $title,
-                    "Hi " . ($row['submitter_name'] ?: 'there') . ",\n\nGood news: \"$title\" is now published on " . cfg('name') . ":\n" . abs_url('/properties/' . $slug . '/') . "\n\n"
-                    . "Your contact details are hidden for now. Verify the listing for " . mhr_price_label() . " to show your phone, email and website, add a Verified owner badge, and get an owner dashboard to edit details and photos:\n"
-                    . abs_url('/claim/' . $slug . '/') . "\n\n— " . cfg('name'));
+                [$subj, $text, $html] = mhr_email_approved((string)$row['submitter_name'], $title, $slug);
+                $mailed = mhr_mail($row['submitter_email'], $subj, $text, mhr_notify_email(), $merr, $html)
+                    ? ' Approval email sent to ' . $row['submitter_email'] . '.'
+                    : ' (Approval email could not be sent: ' . $merr . ')';
             }
-            mhr_flash(($was_pending ? 'Approved and published: ' : 'Published: ') . $title);
+            mhr_flash(($was_pending ? 'Approved and published: ' : 'Published: ') . $title . '.' . $mailed, $mailed && str_starts_with($mailed, ' (') ? 'err' : 'ok');
             break;
         case 'reject':
             mhr_set_cols($slug, ['status' => 'rejected']);

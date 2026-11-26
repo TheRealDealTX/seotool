@@ -49,7 +49,7 @@ $field = function ($name, $label, $type = 'text', $req = false, $extra = '', $hi
             <label class="mhr-plan">
               <input type="radio" name="plan" value="paid"<?= $plan === 'paid' ? ' checked' : '' ?>>
               <span class="mhr-plan-body"><strong>Verified listing</strong><span class="mhr-plan-price"><?= e($price) ?> <small>one-time</small></span>
-                <span class="muted">Published instantly with your phone, email and website, a Verified owner badge and an owner dashboard.</span></span>
+                <span class="muted">Published instantly as a Featured listing (shown first in search) with your phone, email and website, a Verified owner badge and an owner dashboard.</span></span>
             </label>
           </div>
           <label class="mhr-check mhr-paid-only"><input type="checkbox" name="authorized" value="1"> <span>For a verified listing: I'm the owner, property manager or an authorized representative.</span></label>
@@ -110,7 +110,7 @@ $field = function ($name, $label, $type = 'text', $req = false, $extra = '', $hi
         <ol class="mini-steps">
           <li>Submit your property details and photos.</li>
           <li><strong>Free:</strong> our team reviews it and publishes it with contact details hidden. Upgrade for <?= e($price) ?> any time.</li>
-          <li><strong>Verified (<?= e($price) ?>):</strong> pay securely via Stripe and your listing goes live instantly with your contact details.</li>
+          <li><strong>Verified (<?= e($price) ?>):</strong> pay securely via Stripe and your listing goes live instantly as a Featured listing with your contact details.</li>
         </ol>
         <p class="fineprint">Your contact details are used only for verification, confirmation and communication about your listing, never for anything else.</p>
         <p>Already listed? <a href="/account/">Owner login</a>. Need help? <a href="/contact-us/">Contact us</a> or call <a href="<?= e(cfg('phone_href')) ?>"><?= e(cfg('phone')) ?></a>.</p>

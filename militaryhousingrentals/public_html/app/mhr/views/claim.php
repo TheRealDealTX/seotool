@@ -34,7 +34,7 @@ mhr_page_start('Claim ' . $l['title'], '/claim/' . $slug . '/', ['nav' => '/prop
 ?>
 <section class="page-hero page-hero-sm">
   <div class="wrap"><?= $crumbs ?><p class="eyebrow">For owners &amp; managers</p><h1>Claim <?= e($l['title']) ?></h1>
-  <p class="lead">Verify that you own or manage this property to show your phone, email and website, and get a Verified owner badge.</p></div>
+  <p class="lead">Verify that you own or manage this property to feature it, show your phone, email and website, and get a Verified owner badge.</p></div>
 </section>
 <section class="section section-tight">
   <div class="wrap contact-layout">
@@ -63,6 +63,7 @@ mhr_page_start('Claim ' . $l['title'], '/claim/' . $slug . '/', ['nav' => '/prop
       <div class="card">
         <h3>What you get</h3>
         <ul class="checks">
+          <li><?= icon('check') ?> <strong>Featured</strong>: shown first in search results and in the Featured section</li>
           <li><?= icon('check') ?> Your phone, email and website shown on the listing</li>
           <li><?= icon('check') ?> A <span class="mhr-badge"><?= icon('check') ?> Verified owner</span> badge</li>
           <li><?= icon('check') ?> An owner dashboard to update details and photos</li>
