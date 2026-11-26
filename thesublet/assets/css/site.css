@@ -115,6 +115,7 @@ p{margin:0 0 1em}
 .fav-btn[aria-pressed=true],.fav-btn-lg[aria-pressed=true]{color:#fff;background:var(--coral)}
 .badge{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 8px;border-radius:99px;background:#fff;border:1px solid var(--line);color:var(--ink)}
 .badge-verified{background:var(--green);color:#fff;border-color:var(--green)}
+.badge-featured{background:linear-gradient(135deg,#f6b544,#e46f4c);color:#fff;border-color:transparent;box-shadow:0 2px 8px rgba(228,111,76,.35)}
 .badge-muted{background:#555;color:#fff;border-color:#555}
 
 /* first-listing CTA */

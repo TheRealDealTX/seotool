@@ -127,6 +127,7 @@ function listing_card_data(array $items): array
             'pets' => $l['pets'],
             'utilities' => (bool)$l['utilities_included'],
             'verified' => $l['tier'] === 'paid',
+            'featured' => $l['tier'] === 'paid' && ($l['source'] ?? 'host') === 'host',
             'directory' => ($l['source'] ?? 'host') === 'directory',
             'unclaimed' => ($l['source'] ?? 'host') === 'directory' && empty($l['claimed_at']),
             'status' => $l['status'],
@@ -144,6 +145,7 @@ function listing_card_html(array $c): string
         ? '<img src="' . e($c['photo']) . '" alt="' . e($c['title']) . '" loading="lazy" width="480" height="320">'
         : placeholder_svg($c['ptype'] ?? '', true, $c['id']);
     $badges = '';
+    if (!empty($c['featured'])) $badges .= '<span class="badge badge-featured" title="Featured: shown first in search results">★ Featured</span>';
     if ($c['verified']) $badges .= '<span class="badge badge-verified" title="Paid listing with a verified email">✔ Verified host</span>';
     if ($c['status'] === 'rented') $badges .= '<span class="badge badge-muted">Rented</span>';
     if (!empty($c['unclaimed'])) $badges .= '<span class="badge badge-glass">Property directory</span>';

@@ -27,7 +27,7 @@ $row = fn($k, $v) => '<tr><td style="padding:6px 0;color:#6b7b73;font-size:13px;
   <p style="margin:0 0 4px;font-size:12px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:#e46f4c">Optional upgrade</p>
   <p style="margin:0 0 10px;font-size:18px;font-weight:bold;color:#1d2a24">Get featured for <?= e(price_label()) ?> (one-time)</p>
   <table role="presentation" cellpadding="0" cellspacing="0" style="font-size:14px;line-height:1.5">
-    <tr><td style="padding:3px 8px 3px 0;vertical-align:top;color:#2f6f4f">✔</td><td style="padding:3px 0"><strong>Featured placement</strong>: shown above free listings in search results and on city pages</td></tr>
+    <tr><td style="padding:3px 8px 3px 0;vertical-align:top;color:#2f6f4f">✔</td><td style="padding:3px 0"><strong>★ Featured badge and top placement</strong>: shown above free listings in search results and on city pages</td></tr>
     <tr><td style="padding:3px 8px 3px 0;vertical-align:top;color:#2f6f4f">✔</td><td style="padding:3px 0"><strong>Your contact info shown publicly</strong>, so renters can call or email you directly</td></tr>
     <tr><td style="padding:3px 8px 3px 0;vertical-align:top;color:#2f6f4f">✔</td><td style="padding:3px 0"><strong>Verified host badge</strong> on your listing</td></tr>
     <tr><td style="padding:3px 8px 3px 0;vertical-align:top;color:#2f6f4f">✔</td><td style="padding:3px 0"><strong>Your own dashboard</strong> to edit, renew, add photos and mark it rented</td></tr>

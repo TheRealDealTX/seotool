@@ -66,6 +66,7 @@ ob_start(); ?>
       <h1><?= e($l['title']) ?></h1>
       <p class="l-loc"><?= e(($l['neighborhood'] ? $l['neighborhood'] . ', ' : '') . $l['city'] . ', ' . $l['state'] . ($l['zip'] ? ' ' . $l['zip'] : '')) ?></p>
       <p class="l-badges">
+        <?php if ($l['tier'] === 'paid' && ($l['source'] ?? 'host') === 'host'): ?><span class="badge badge-featured" title="Featured: shown first in search results">★ Featured</span><?php endif; ?>
         <?php if ($verified): ?><span class="badge badge-verified" title="Paid listing; host confirmed their email">✔ Verified host</span><?php endif; ?>
         <span class="badge"><?= e($types[$l['property_type']] ?? '') ?></span>
         <span class="badge"><?= $l['furnished'] ? 'Furnished' : 'Unfurnished' ?></span>

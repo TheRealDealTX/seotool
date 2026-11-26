@@ -1,6 +1,6 @@
 <?php defined('APP') || exit;
 
-const ASSET_V = '3';
+const ASSET_V = '4';
 
 function logo_svg(): string
 {

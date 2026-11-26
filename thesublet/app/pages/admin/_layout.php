@@ -32,7 +32,7 @@ function admin_listing_action(int $id, string $do, string $reason): void
         case 'approve':
             publish_listing($id);
             $l = listing_get($id);
-            if ($l['tier'] === 'free') send_mail($l['contact_email'], 'Your listing is live on The Sublet', view('emails/approved', ['l' => $l]));
+            if ($l['tier'] === 'free') send_mail($l['contact_email'], 'Your listing is live: ' . mb_strimwidth($l['title'], 0, 70, '…', 'UTF-8'), view('emails/approved', ['l' => $l]));
             break;
         case 'reject':
             update('listings', ['status' => 'rejected', 'reject_reason' => mb_substr($reason, 0, 500), 'updated_at' => now()], 'id = ?', [$id]);
