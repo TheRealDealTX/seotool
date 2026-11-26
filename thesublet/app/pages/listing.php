@@ -82,7 +82,7 @@ ob_start(); ?>
     <div class="l-main">
       <div class="gallery<?= count($photos) > 2 ? ' gallery-multi' : (count($photos) === 2 ? ' gallery-two' : '') ?>">
         <?php if ($photos): foreach ($photos as $i => $p): ?>
-          <a href="/photo/<?= (int)$p['id'] ?>.webp" class="g-item" target="_blank" rel="noopener"><img src="/photo/<?= (int)$p['id'] ?>.webp" alt="<?= e($l['title']) ?> — photo <?= $i + 1 ?>" width="<?= (int)$p['width'] ?>" height="<?= (int)$p['height'] ?>" <?= $i ? 'loading="lazy"' : 'fetchpriority="high"' ?>></a>
+          <a href="<?= photo_src((int)$p['id']) ?>" class="g-item" target="_blank" rel="noopener"><img src="<?= photo_src((int)$p['id']) ?>" alt="<?= e($l['title']) ?> — photo <?= $i + 1 ?>" width="<?= (int)$p['width'] ?>" height="<?= (int)$p['height'] ?>" <?= $i ? 'loading="lazy"' : 'fetchpriority="high"' ?>></a>
         <?php endforeach; else: ?>
           <div class="g-empty">
             <?= placeholder_svg($l['property_type'], false, (int)$l['id']) ?>
@@ -200,7 +200,7 @@ page([
     'description' => excerpt(($types[$l['property_type']] ?? '') . ' in ' . $l['city'] . ', ' . $l['state'] . ' for ' . money($l['rent']) . '/month' . ($l['available_from'] ? ', available ' . fmt_date($l['available_from']) : '') . '. ' . $l['description'], 150),
     'canonical' => $canonical,
     'robots' => $l['status'] === 'active' && !$preview ? 'index, follow, max-image-preview:large' : 'noindex, follow',
-    'og_image' => $photos ? base_url('/photo/' . $photos[0]['id'] . '.webp') : null,
+    'og_image' => $photos ? base_url(photo_src((int)$photos[0]['id'])) : null,
     'body' => $body,
     'h_extra' => leaflet_head(),
     'schema' => [schema_breadcrumbs($crumbs), schema_accommodation($l, $photos)],

@@ -130,7 +130,7 @@ function listing_card_data(array $items): array
             'directory' => ($l['source'] ?? 'host') === 'directory',
             'unclaimed' => ($l['source'] ?? 'host') === 'directory' && empty($l['claimed_at']),
             'status' => $l['status'],
-            'photo' => isset($photos[$l['id']]) ? '/photo/' . $photos[$l['id']] . '.webp' : null,
+            'photo' => isset($photos[$l['id']]) ? photo_src((int)$photos[$l['id']]) : null,
             'lat' => $l['lat'] !== null ? (float)$l['lat'] : null,
             'lng' => $l['lng'] !== null ? (float)$l['lng'] : null,
         ];

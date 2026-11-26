@@ -77,6 +77,12 @@ function photos_save_uploads(int $listingId, string $field = 'photos'): array
     return [$saved, $errors];
 }
 
+/** Public URL of an uploaded photo. No image extension: Hostinger's nginx answers *.webp/*.jpg itself and never reaches PHP. */
+function photo_src(int $id): string
+{
+    return '/photo/' . $id . '/';
+}
+
 function serve_photo(int $id): never
 {
     $p = row('SELECT p.data, p.created_at, l.status FROM photos p JOIN listings l ON l.id = p.listing_id WHERE p.id = ?', [$id]);

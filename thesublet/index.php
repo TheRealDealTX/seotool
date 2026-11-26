@@ -36,7 +36,7 @@ $routes = [
     ['GET',  '#^/sublet/([a-z0-9-]+)-([a-z]{2})/([a-z0-9-]+)-(\d+)/$#', 'listing'],
     ['POST', '#^/listing/(\d+)/contact/$#', 'listing_contact'],
     ['POST', '#^/listing/(\d+)/report/$#', 'listing_report'],
-    ['GET',  '#^/photo/(\d+)\.webp$#', 'photo'],
+    ['GET',  '#^/photo/(\d+)(?:/|\.webp)$#', 'photo'],
     ['ANY',  '#^/post-a-sublet/$#', 'submit'],
     ['GET',  '#^/post-a-sublet/thanks/$#', 'submit_thanks'],
     ['POST', '#^/checkout/start/(\d+)/$#', 'checkout_start'],

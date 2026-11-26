@@ -90,7 +90,7 @@ function schema_accommodation(array $l, array $photos): array
     if (is_numeric($l['beds'])) $acc['numberOfBedrooms'] = (int)$l['beds'];
     if (is_numeric($l['baths'])) $acc['numberOfBathroomsTotal'] = (float)$l['baths'];
     if ($l['lat'] !== null) $acc['geo'] = ['@type' => 'GeoCoordinates', 'latitude' => (float)$l['lat'], 'longitude' => (float)$l['lng']];
-    if ($photos) $acc['image'] = array_map(fn($p) => base_url('/photo/' . $p['id'] . '.webp'), array_slice($photos, 0, 5));
+    if ($photos) $acc['image'] = array_map(fn($p) => base_url(photo_src((int)$p['id'])), array_slice($photos, 0, 5));
     $offer = [
         '@context' => 'https://schema.org',
         '@type' => 'Offer',

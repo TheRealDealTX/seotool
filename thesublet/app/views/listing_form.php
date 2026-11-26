@@ -86,7 +86,7 @@ $photos = $photos ?? [];
     <?php if ($photos): ?>
       <div class="photo-admin">
         <?php foreach ($photos as $p): ?>
-          <label class="ph-item"><img src="/photo/<?= (int)$p['id'] ?>.webp" alt="" width="160" height="110" loading="lazy"><span><input type="checkbox" name="delete_photos[]" value="<?= (int)$p['id'] ?>"> Delete</span></label>
+          <label class="ph-item"><img src="<?= photo_src((int)$p['id']) ?>" alt="" width="160" height="110" loading="lazy"><span><input type="checkbox" name="delete_photos[]" value="<?= (int)$p['id'] ?>"> Delete</span></label>
         <?php endforeach; ?>
       </div>
     <?php endif; ?>
