@@ -26,7 +26,7 @@ SITE = "Connected Renter"
 TAGLINE = "Connecting Made Easy"
 PHONE = "210-903-9471"
 PHONE_HREF = "+12109039471"
-EMAIL = "iamjosephdittman@gmail.com"
+EMAIL = "info@connectedrenter.com"
 ADDRESS = ("2140 E Southlake Blvd", "Southlake", "TX", "76092")
 TODAY = date.today().isoformat()
 VER = TODAY.replace("-", "")
@@ -109,7 +109,7 @@ def footer():
 <div class="wrap foot-grid">
 <div class="foot-brand"><img src="/assets/img/connected-renter-logo-white.png" alt="{SITE}" width="524" height="139" loading="lazy">
 <p>The free resource hub for renters — finding a place, moving, utilities, insurance, credit and everything in between.</p>
-<form class="newsletter" data-mailto="{EMAIL}" data-subject="Subscribe me to Connected Renter updates"><label class="sr-only" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" placeholder="Your email" required><button class="btn gold sm" type="submit">Subscribe</button><div class="form-msg">Thanks! Your email app should open to confirm.</div></form>
+<form class="newsletter" action="/send.php" method="post" data-ajax data-subject="Subscribe me to Connected Renter updates"><input type="hidden" name="form" value="newsletter"><div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div><label class="sr-only" for="nl-email">Email address</label><input id="nl-email" type="email" name="email" placeholder="Your email" required><button class="btn gold sm" type="submit">Subscribe</button><div class="form-msg" role="status">Thanks! You're on the list.</div></form>
 </div>
 <div><h4>Moving Resources</h4><ul>{res}<li><a href="/landing/">Renter Roadmap</a></li></ul></div>
 <div><h4>Free Tools</h4><ul>{tl}</ul></div>
@@ -804,12 +804,13 @@ def build_contact():
 <div class="contact-item"><span class="ico">{icon("map-pin")}</span><div><strong>Mailing address</strong><br>{ADDRESS[0]}<br>{ADDRESS[1]}, {ADDRESS[2]} {ADDRESS[3]}, USA</div></div>
 </div>
 <div class="card reveal d1"><h3>Send us a message</h3>
-<form class="form-grid" data-mailto="{EMAIL}" data-subject="Connected Renter website enquiry">
+<form class="form-grid" action="/send.php" method="post" data-ajax data-subject="Connected Renter website enquiry">
+<input type="hidden" name="form" value="contact"><div class="hp" aria-hidden="true"><label for="cw">Leave this empty</label><input id="cw" type="text" name="website" tabindex="-1" autocomplete="off"></div>
 <div class="field"><label for="cn">Name</label><input id="cn" type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label for="ce">Email</label><input id="ce" type="email" name="email" autocomplete="email" required></div>
 <div class="field full"><label for="ct">Topic</label><select id="ct" name="subject"><option value="">General question</option><option>Moving resources</option><option>Courses</option><option>Partnership / listing</option><option>Report a problem</option></select></div>
 <div class="field full"><label for="cm">Message</label><textarea id="cm" name="message" required></textarea></div>
-<div class="full"><button class="btn" type="submit">{icon("send")} Send message</button><div class="form-msg">Your email app should open with your message ready to send.</div></div>
+<div class="full"><button class="btn" type="submit">{icon("send")} Send message</button><div class="form-msg" role="status">Thanks! Your message has been sent. We usually reply within one to two business days.</div></div>
 </form></div></div></section>"""
     page("/contact-us/", "Contact Us | Connected Renter", "Contact Connected Renter by phone, email or our contact form with questions about renter resources, courses or partnerships.",
          main, current="/contact-us/", schema=[crumbs_ld([("Home", "/"), ("Contact", "/contact-us/")]), {"@type": "ContactPage", "url": ORIGIN + "/contact-us/", "about": {"@id": ORIGIN + "/#org"}}])

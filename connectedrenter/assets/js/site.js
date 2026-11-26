@@ -214,15 +214,25 @@
   $$('input[type=range]').forEach(function (r) { paint(r); r.addEventListener('input', function () { paint(r); }); });
   w.CRpaint = paint;
 
-  /* contact + newsletter forms open the visitor's mail app (no server-side mail) */
-  $$('form[data-mailto]').forEach(function (f) {
+  /* contact + newsletter forms post to /send.php, which mails info@connectedrenter.com over SMTP */
+  $$('form[data-ajax]').forEach(function (f) {
+    var m = $('.form-msg', f), btn = $('button[type=submit]', f), okText = m ? m.textContent : '';
+    function show(text, err) { if (!m) return; m.textContent = text; m.classList.toggle('err', !!err); m.classList.add('show'); }
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!f.checkValidity()) { f.reportValidity(); return; }
-      var to = f.getAttribute('data-mailto'), fd = new FormData(f), lines = [], subj = f.getAttribute('data-subject') || 'Connected Renter enquiry';
-      fd.forEach(function (v, k) { if (k === 'subject' && v) subj = v; else if (v) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ': ' + v); });
-      w.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(lines.join('\n'));
-      var m = $('.form-msg', f); if (m) m.classList.add('show');
+      var fd = new FormData(f);
+      if (!fd.get('subject')) fd.set('subject', f.getAttribute('data-subject') || 'Connected Renter enquiry');
+      if (btn) btn.disabled = true;
+      if (m) m.classList.remove('show');
+      fetch(f.getAttribute('action'), { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (j) {
+          if (j && j.ok) { f.reset(); show(okText, false); }
+          else show((j && j.error) || 'Sorry, something went wrong. Please email info@connectedrenter.com.', true);
+        })
+        .catch(function () { show('Sorry, we could not send that. Please email info@connectedrenter.com.', true); })
+        .then(function () { if (btn) btn.disabled = false; });
     });
   });
 
