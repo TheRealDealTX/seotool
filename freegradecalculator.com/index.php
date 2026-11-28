@@ -16,6 +16,8 @@ function redirect(string $to, int $code = 301): never {
 // Canonical host (https/www are also handled in .htaccess / hPanel)
 $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
 if (str_starts_with($host, 'www.')) redirect($path . $qs);
+// Preview hosts (e.g. *.hostingersite.com) must never be indexed
+if ($host !== '' && $host !== 'freegradecalculator.com' && PHP_SAPI !== 'cli-server') header('X-Robots-Tag: noindex, nofollow');
 if (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http') redirect($path . $qs);
 
 // ---- Legacy URLs (old static site used .html) ----
